@@ -1,0 +1,764 @@
+.operands
+0000:A
+0001:B
+0010:C
+0011:H
+0100:L
+0101:ALU
+0110:FLAGS
+0111:MAR_H
+1000:MAR_L
+1001:MEM
+1010:PC_H
+1011:PC_L
+1100:STACK_H
+1101:STACK_L
+.end
+
+.functions
+00001:TSTATE_reset
+00010:CLOCK_halt
+00011:STK_inc
+00100:STK_dec
+00101:PC_inc
+00110:PC_dec
+00111:PC_MAR_transfer
+01000:STK_MAR_transfer
+01001:MAR_inc
+01010:FSET_z
+01011:FSET_c
+01100:FCLR_z
+01101:FCLR_c
+.end
+
+.instructions
+00:1:NOP
+01:1:MOV A,B
+02:1:MOV A,C
+03:1:MOV A,H
+04:1:MOV A,L
+05:1:MOV B,A
+06:1:MOV B,C
+07:1:MOV B,H
+08:1:MOV B,L
+09:1:MOV C,A
+0A:1:MOV C,B
+0B:1:MOV C,H
+0C:1:MOV C,L
+0D:1:MOV H,A
+0E:1:MOV H,B
+0F:1:MOV H,C
+10:1:MOV H,L
+11:1:MOV L,A
+12:1:MOV L,B
+13:1:MOV L,C
+14:1:MOV L,H
+15:1:MOV BC,HL
+16:1:MOV HL,BC
+17:2:MOV A,#value
+18:2:MOV B,#value
+19:2:MOV C,#value
+1A:2:MOV H,#value
+1B:2:MOV L,#value
+1C:3:MOV BC,#$value
+1D:3:MOV HL,#$value
+1E:3:MOV A,$address
+1F:3:MOV B,$address
+20:3:MOV C,$address
+21:3:MOV BC,$address
+22:3:MOV HL,$address
+23:3:MOV $address,A
+24:3:MOV $address,B
+25:3:MOV $address,C
+26:3:MOV $address,BC
+27:3:MOV $address,HL
+28:3:MOV A,($address)
+29:3:MOV B,($address)
+2A:3:MOV C,($address)
+2B:3:MOV BC,($address)
+2C:3:MOV ($address),A
+2D:3:MOV ($address),B
+2E:3:MOV ($address),C
+2F:3:MOV ($address),BC
+30:1:MOV A,(BC)
+31:1:MOV H,(BC)
+32:1:MOV L,(BC)
+33:1:MOV A,(HL)
+34:1:MOV B,(HL)
+35:1:MOV C,(HL)
+36:1:MOV (BC),A
+37:1:MOV (BC),H
+38:1:MOV (BC),L
+39:1:MOV (HL),A
+3A:1:MOV (HL),B
+3B:1:MOV (HL),C
+3C:1:PUSH A
+3D:1:PUSH B
+3E:1:PUSH C
+3F:1:PUSH H
+40:1:PUSH L
+41:1:PUSH BC
+42:1:PUSH HL
+43:1:PUSH F
+44:1:POP A
+45:1:POP B
+46:1:POP C
+47:1:POP H
+48:1:POP L
+49:1:POP BC
+4A:1:POP HL
+4B:1:POP F
+4C:1:ADD A
+4D:1:ADD B
+4E:1:ADD C
+4F:1:ADD H
+50:1:ADD L
+51:2:ADD #$value
+52:3:ADD $address
+53:3:ADD ($address)
+54:1:ADD (HL)
+55:1:ADC A
+56:1:ADC B
+57:1:ADC C
+58:1:ADC H
+59:1:ADC L
+5A:2:ADC #$value
+5B:3:ADC $address
+5C:3:ADC ($address)
+5D:1:ADC (HL)
+5E:1:SUB A
+5F:1:SUB B
+60:1:SUB C
+61:1:SUB H
+62:1:SUB L
+63:2:SUB #$value
+64:3:SUB $address
+65:3:SUB ($address)
+66:1:SUB (HL)
+67:1:SBC A
+68:1:SBC B
+69:1:SBC C
+6A:1:SBC H
+6B:1:SBC L
+6C:2:SBC #$value
+6D:3:SBC $address
+6E:3:SBC ($address)
+6F:1:SBC (HL)
+70:1:INC A
+71:1:INC B
+72:1:INC C
+73:1:INC H
+74:1:INC L
+75:1:INC BC
+76:1:INC HL
+77:1:DEC A
+78:1:DEC B
+79:1:DEC C
+7A:1:DEC H
+7B:1:DEC L
+7C:1:DEC BC
+7D:1:DEC HL
+7E:1:AND B
+7F:1:AND C
+80:1:AND H
+81:1:AND L
+82:2:AND #$value
+83:3:AND $address
+84:3:AND ($address)
+85:1:AND (HL)
+86:1:OR B
+87:1:OR C
+88:1:OR H
+89:1:OR L
+8A:2:OR #$value
+8B:3:OR $address
+8C:3:OR ($address)
+8D:1:OR (HL)
+8E:1:XOR B
+8F:1:XOR C
+90:1:XOR H
+91:1:XOR L
+92:2:XOR #$value
+93:3:XOR $address
+94:3:XOR ($address)
+95:1:XOR (HL)
+96:1:NOT A
+97:1:NOT B
+98:1:NOT C
+99:1:NOT H
+9A:1:NOT L
+9B:2:NOT #$value
+9C:3:NOT $address
+9D:3:NOT ($address)
+9E:1:NOT (HL)
+9F:1:SHL A
+A0:1:SHL B
+A1:1:SHL C
+A2:1:SHL H
+A3:1:SHL L
+A4:2:SHL #$value
+A5:3:SHL $address
+A6:3:SHL ($address)
+A7:1:SHL (HL)
+A8:1:SHR A
+A9:1:SHR B
+AA:1:SHR C
+AB:1:SHR H
+AC:1:SHR L
+AD:2:SHR #$value
+AE:3:SHR $address
+AF:3:SHR ($address)
+B0:1:SHR (HL)
+B1:1:ROL A
+B2:1:ROL B
+B3:1:ROL C
+B4:1:ROL H
+B5:1:ROL L
+B6:2:ROL #$value
+B7:3:ROL $address
+B8:3:ROL ($address)
+B9:1:ROL (HL)
+BA:1:ROR A
+BB:1:ROR B
+BC:1:ROR C
+BD:1:ROR H
+BE:1:ROR L
+BF:2:ROR #$value
+C0:3:ROR $address
+C1:3:ROR ($address)
+C2:1:ROR (HL)
+C3:1:CMP B
+C4:1:CMP C
+C5:1:CMP H
+C6:1:CMP L
+C7:2:CMP #$value
+C8:3:CMP $address
+C9:3:CMP ($address)
+CA:1:CMP (HL)
+CB:3:JMP $address
+CC:3:JC $address
+CD:3:JZ $address
+CE:3:JN $address
+CF:3:JO $address
+D0:3:JNC $address
+D1:3:JNZ $address
+D2:3:JP $address
+D3:3:JNO $address
+D4:3:CALL $address
+D5:3:CC $address
+D6:3:CZ $address
+D7:3:CN $address
+D8:3:CO $address
+D9:3:CNC $address
+DA:3:CNZ $address
+DB:3:CP $address
+DC:3:CNO $address
+DD:1:RET
+DE:1:RC
+DF:1:RZ
+E0:1:RN
+E1:1:RO
+E2:1:RNC
+E3:1:RNZ
+E4:1:RP
+E5:1:RNO
+E6:1:FSET C
+E7:1:FSET Z
+E8:1:FCLR C
+E9:1:FCLR Z
+EA:1:HALT
+.end
+
+.code
+
+  NOP
+    0:  TSTATE_reset	
+  .end
+
+  ###########
+  #   MOV   #
+  ###########
+
+  MOV r1,r2
+    0:  r2_out
+        r1_load
+    1:  TSTATE_reset
+  .end
+
+  MOV hl1,hl2
+    0:  h2_out
+        h1_load
+    1:  l2_out
+        l1_load
+    2:  TSTATE_reset
+  .end
+
+  MOV r1,data
+    0:  PC_MAR_transfer
+    		MEM_out
+        r1_load
+    1:  PC_inc
+        TSTATE_reset
+  .end
+
+  MOV r1,address    
+  .end
+
+  MOV address,r1
+  .end
+
+  MOV r1,(address)
+  .end
+
+  MOV (address),r1
+  .end
+
+  MOV r1,(hl1)
+  .end
+
+  MOV (hl1),r1
+  .end
+
+  ############
+  #   PUSH   #
+  ############
+
+  PUSH r1
+  .end
+
+  PUSH hl1
+  .end
+
+  PUSH F
+  .end
+
+  ###########
+  #   POP   #
+  ###########
+
+  POP r1
+  .end
+
+  POP hl1
+  .end
+
+  POP F
+  .end
+
+  ###########
+  #   ADD   #
+  ###########
+
+  ADD r1
+  .end
+
+  ADD data
+  .end
+
+  ADD address
+  .end
+
+  ADD (address)
+  .end
+
+  ADD (hl1)
+  .end
+
+  ###########
+  #   ADC   #
+  ###########
+
+  ADC r1
+  .end
+
+  ADC data
+  .end
+
+  ADC address
+  .end
+
+  ADC (address)
+  .end
+
+  ADC (hl1)
+  .end
+
+  ###########
+  #   SUB   #
+  ###########
+
+  SUB r1
+  .end
+
+  SUB data
+  .end
+
+  SUB address
+  .end
+
+  SUB (address)
+  .end
+
+  SUB (hl1)
+  .end
+
+  ###########
+  #   SBC   #
+  ###########
+
+  SBC r1
+  .end
+
+  SBC data
+  .end
+
+  SBC address
+  .end
+
+  SBC (address)
+  .end
+
+  SBC (hl1)
+  .end
+
+  ###########
+  #   INC   #
+  ###########
+
+  INC r1
+  .end
+
+  INC hl1
+  .end
+
+  ###########
+  #   DEC   #
+  ###########
+
+  DEC r1
+  .end
+
+  DEC hl1
+  .end
+
+  ###########
+  #   AND   #
+  ###########
+
+  AND r1
+  .end
+
+  AND data
+  .end
+
+  AND address
+  .end
+
+  AND (address)
+  .end
+
+  AND (hl1)
+  .end
+
+  ##########
+  #   OR   #
+  ##########
+
+  OR r1
+  .end
+
+  OR data
+  .end
+
+  OR address
+  .end
+
+  OR (address)
+  .end
+
+  OR (hl1)
+  .end
+
+  ###########
+  #   XOR   #
+  ###########
+
+  XOR r1
+  .end
+
+  XOR data
+  .end
+
+  XOR address
+  .end
+
+  XOR (address)
+  .end
+
+  XOR (hl1)
+  .end
+
+  ###########
+  #   NOT   #
+  ###########
+
+  NOT r1
+  .end
+
+  NOT data
+  .end
+
+  NOT address
+  .end
+
+  NOT (address)
+  .end
+
+  NOT (hl1)
+  .end
+
+  ###########
+  #   SHL   #
+  ###########
+
+  SHL r1
+  .end
+
+  SHL data
+  .end
+
+  SHL address
+  .end
+
+  SHL (address)
+  .end
+
+  SHL (hl1)
+  .end
+
+  ###########
+  #   SHR   #
+  ###########
+
+  SHR r1
+  .end
+
+  SHR data
+  .end
+
+  SHR address
+  .end
+
+  SHR (address)
+  .end
+
+  SHR (hl1)
+  .end
+
+  ###########
+  #   ROL   #
+  ###########
+
+  ROL r1
+  .end
+
+  ROL data
+  .end
+
+  ROL address
+  .end
+
+  ROL (address)
+  .end
+
+  ROL (hl1)
+  .end
+
+  ###########
+  #   ROR   #
+  ###########
+
+  ROR r1
+  .end
+
+  ROR data
+  .end
+
+  ROR address
+  .end
+
+  ROR (address)
+  .end
+
+  ROR (hl1)
+  .end
+
+  ###########
+  #   CMP   #
+  ###########
+
+  CMP r1
+  .end
+
+  CMP data
+  .end
+
+  CMP address
+  .end
+
+  CMP (address)
+  .end
+
+  CMP (hl1)
+  .end
+
+  ###########
+  #   JMP   #
+  ###########
+
+  JMP
+    0:  PC_MAR_transfer
+        PC_inc
+    1:  MEM_out
+        H_load
+    2:  PC_MAR_transfer
+    3:  MEM_out
+        L_load
+    4:  H_out
+        PC_H_load
+    5:  L_out
+        PC_L_load
+    6:  TSTATE_reset
+  .end
+
+  ########################
+  #   JMP (conditional)  #
+  ########################
+
+  JC [C=1]
+    0:  PC_MAR_transfer
+        PC_inc
+    1:  MEM_out
+        H_load
+    2:  PC_MAR_transfer
+    3:  MEM_out
+        L_load
+    4:  H_out
+        PC_H_load
+    5:  L_out
+        PC_L_load
+    6:  TSTATE_reset
+  .end
+
+  JZ [Z=1]
+  .end
+
+  JN [N=1]
+  .end
+
+  JO [O=1]
+  .end
+
+  JNC [C=0]
+  .end
+
+  JNZ [Z=0]
+
+  JP [N=0]
+  .end
+
+  JNO [O=0]
+  .end
+
+  ############
+  #   CALL   #
+  ############
+  
+  CALL
+  .end
+
+  ##########################
+  #   CALL (conditional)   #
+  ##########################
+
+  CC [C=1]
+  .end
+
+  CZ [Z=1]
+  .end
+
+  CN [N=1]
+  .end
+
+  CO [O=1]
+  .end
+
+  CNC [C=0]
+  .end
+
+  CNZ [Z=0]
+  .end
+
+  CP [N=0]
+  .end
+
+  CNO [O=0]
+  .end
+
+  ###########
+  #   RET   #
+  ###########
+
+  RET
+  .end
+
+  #########################
+  #   RET (conditional)   #
+  #########################
+
+  RC [C=1]
+  .end
+
+  RZ [Z=1]
+  .end
+
+  RN [N=1]
+  .end
+
+  RO [O=1]
+  .end
+
+  RNC [C=0]
+  .end
+
+  RNZ [Z=0]
+  .end
+
+  RP [N=0]
+  .end
+
+  RNO[O=0]
+  .end
+  
+  ###########
+  #   FSET  #
+  ###########
+
+  FSET flag
+  .end
+
+  ############
+  #   FCLR   #
+  ############
+
+  FCLR flag
+  .end
+
+  ############
+  #   HALT   #
+  ############
+
+  HALT
+  .end
+
+.end
