@@ -87,7 +87,7 @@ The following functions can be used in this operation:
 | STK_inc          | Increase the Stack Pointer by one                            | `00011` |
 | STK_dec          | Decrease the Stack Pointer by one                            | `00100` |
 | PC_inc           | Increase the Program Counter by one                          | `00101` |
-| PC_dec           | Decrease the Program Counter by one                          | `00110` |
+| ~PC_dec~         | ~Decrease the Program Counter by one~                        | `00110` |
 | PC_MAR_transfer  | Transfer the Program Counter value to the Memory Access Register | `00111` |
 | STK_MAR_transfer | Transfer the Stack Pointer value to the Memory Access Register | `01000` |
 | MAR_inc          | Increase the Memory Access Register by one                   | `01001` |

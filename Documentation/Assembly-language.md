@@ -44,6 +44,7 @@ The table below briefly describes the instructions that are support by the DM-02
 | [FCLR](#FCLR)                | Flag clear                                                   |
 | [NOP](#NOP)                  | No operation (do nothing)                                    |
 | [HALT](#HALT)                | Halt program execution                                       |
+| SP                           | *Initialize stack pointer*                                   |
 
 
 
