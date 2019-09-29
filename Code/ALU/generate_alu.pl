@@ -1,0 +1,241 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+use Data::Dumper;
+use Storable;
+
+# Script to generate the contents of the ALU ROM (and ROM image for Logisim)
+# (C) 2019 Warren Toomey, GPL3
+#
+# The ROM takes these 21 bits of input.
+# - bit 20-16, the ALU operation
+# - bit 15-8,  the A value
+# - bit 7-0,   the B value
+#
+# There are 13 bits of output.
+# - bit  12,   the divide-by-zero (D) bit, active high
+# - bit  11,   the negative       (N) bit, active high
+# - bit  10,   the zero           (Z) bit, active high
+# - bit   9,   the overflow       (V) bit, active high
+# - bit   8,   the carry          (C) bit, active high
+# - bit 7-0,   the result
+#
+# All other output bits are unused and not wired up.
+
+use constant DIVFLAG   => 0x1000; # The divide-by-zero flag
+use constant NEGFLAG   => 0x0800; # The negative flag
+use constant ZEROFLAG  => 0x0400; # The zero flag
+use constant OFLOWFLAG => 0x0200; # The overflow flag
+use constant CARRYFLAG => 0x0100; # The carry flag
+use constant CMASK     => 0x01ff; # Mask to keep carry bit from Perl operation
+
+# Global variables to make writing the anonymous subs easier
+our ($A, $B, $result);		# A and B inputs, and ALU result
+
+# The ROM contents to be generated
+my @ROM;
+
+# Lookup tables to convert BCD to 8-bit numbers and vice versa
+my @BCDtoNum;
+my @NumtoBCD;
+
+# Function to build the above two lookup tables
+sub init_bcd_tables {
+
+  foreach my $i (0x00 .. 0xff) {
+
+    # Firstly convert what might be two BCD digits to an 8-bit value.
+    # Any BCD digit above 9 is treated as 0.
+    my $topdigit= $i >> 4;
+    my $botdigit= $i & 0xf;
+    $topdigit=0 if ($topdigit > 9);
+    $botdigit=0 if ($botdigit > 9);
+
+    # Convert to an 8-bit value and store in the table
+    $BCDtoNum[$i]= $topdigit * 10 + $botdigit;
+
+    # Now do the opposite, take an 8-bit value and convert to two
+    # BCD digits. Any 8-bit value above 99 is changed to 0.
+    my $decimalnum= ($i>99) ? 0 : $i;
+    $topdigit= int($decimalnum/10);
+    $botdigit= $decimalnum%10;
+
+    # Convert to two BCD nibbles and store in the table
+    $NumtoBCD[$i]= ($topdigit<<4) + $botdigit;
+  }
+}
+
+# Some operations are complicated enough that they are in their own subroutine.
+# Rotate $A to the left $B times. Slow but works.
+sub ROL {
+  $result= $A;
+  for (my $i=0; $i < $B; $i++) {
+    my $msb= $result & 0x80;
+    $result= ($result << 1) & 0xff;
+    $result |= ($msb) ? 1 : 0;
+  }
+}
+
+# Rotate $A to the right $B times. Slow but works.
+sub ROR {
+  $result= $A;
+  for (my $i=0; $i < $B; $i++) {
+    my $lsb= $result & 0x1;
+    $result= $result >> 1;
+    $result |= ($lsb) ? 0x80 : 0;
+  }
+}
+
+# Arithmetic shift $A to the right $B times. Slow but works.
+sub ASR {
+  $result= $A;
+  my $msb= $result & 0x80;
+  for (my $i=0; $i < $B; $i++) {
+    $result= $result >> 1;
+    $result |= $msb;
+  }
+}
+
+# Two digit BCD addition of $A and $B.
+# Any result >100 is reduced by 100 and carry set.
+# Result is also two BCD digits.
+sub BCD_ADD {
+  # Convert both to 8-bit values
+  my $a= $BCDtoNum[ $A ];
+  my $b= $BCDtoNum[ $B ];
+
+  my $c=0;
+  $result= $a + $b;
+  if ($result > 99) {
+    $result -= 99;
+    $c= CARRYFLAG;	# This is active high at this point
+  }
+  $result= $NumtoBCD[ $result] + $c;
+}
+
+# Two digit BCD addition of $A and $B.
+# Any result <0 is incremented by 100 and carry set.
+# Result is also two BCD digits.
+sub BCD_SUB {
+  # Convert both to 8-bit values
+  my $a= $BCDtoNum[ $A ];
+  my $b= $BCDtoNum[ $B ];
+
+  my $c=0;
+  $result= $a - $b;
+  if ($result < 0) {
+    $result += 99;
+    $c= CARRYFLAG;	# This is active high at this point
+  }
+  $result= $NumtoBCD[ $result] + $c;
+}
+
+# Array of subroutines, some anonymous, which calculate the result
+# given the A and B values
+my @Opsub= (
+  sub { $result= 0 },					# 0
+  sub { $result= $A; },					# A
+  sub { $result= $B; },					# B
+  sub { $result= (-$A) & CMASK; },			# -A
+  sub { $result= (-$B) & CMASK; },			# -B
+  sub { $result= ($A+1) & CMASK; },			# A+1
+  sub { $result= ($B+1) & CMASK; },			# B+1
+  sub { $result= ($A-1) & CMASK; },			# A-1
+  sub { $result= ($B-1) & CMASK; },			# B-1
+  sub { $result= ($A+$B) & CMASK; },			# A+B
+  sub { $result= ($A+$B+1) & CMASK; },			# A+B+1
+  sub { $result= ($A-$B) & CMASK; },			# A-B
+  sub { $result= ($A-$B) & CMASK; },			# A-B special, op 12
+  sub { $result= ($B-$A) & CMASK; },			# B-A
+  sub { $result= ($A-$B-1) & CMASK; },			# A-B-1
+  sub { $result= ($B-$A-1) & CMASK; },			# B-A-1
+  sub { $result= ($A*$B) & 0xff; },			# A*B, low bits
+  sub { $result= ($A*$B) >> 8; },			# A*B, high bits
+  sub { $result= ($B==0) ? 0 : int($A/$B); },		# A/B
+  sub { $result= ($B==0) ? 0 : int($A%$B); },		# A%B
+  sub { $result= ($A<<$B) & CMASK; },			# A<<B
+  sub { $result= $A>>$B; },				# A>>B logical
+  \&ASR,						# A>>B arithmetic
+  \&ROL,						# A ROL B
+  \&ROR,						# A ROR B,
+  sub { $result= $A&$B; },				# A AND B
+  sub { $result= $A|$B; },				# A OR B
+  sub { $result= $A^$B; },				# A XOR B
+  sub { $result= (~$A) & 0xff; },			# NOT A
+  sub { $result= (~$B) & 0xff; },			# NOT B
+  \&BCD_ADD,						# BCD A + B
+  \&BCD_SUB,						# BCD A + B
+);
+
+### MAIN PROGRAM ###
+
+# Generate the BCD tables
+init_bcd_tables();
+
+# Loop across all possible ALU inputs
+foreach my $aluop (0x00 .. 0x1f) {
+
+  # Cache the ALU op subroutine and if it's a div or mod
+  my $opsub= $Opsub[$aluop];
+  my $isdivmod = ($aluop==18 || $aluop==19) ? 1 : 0;
+ 
+  foreach $A (0x00 .. 0xff) {
+
+    # Cache A's sign
+    my $asign= $A & 0x80;
+
+    foreach $B (0x00 .. 0xff) {
+      my $bsign= $B & 0x80;
+
+      # Run the subroutine to calculate the result
+      $opsub->();
+      my $rsign= $result & 0x80;
+
+      # At this point we have an active high carry flag in bit 8
+      # and an active high negative bit in bit 7
+
+      # Add on any zero flag
+      $result |= ZEROFLAG if (($result&0xff)==0);
+
+      # Flip the zero bit for special ALUop 12
+      $result ^= ZEROFLAG if ($aluop==12);
+
+      # Add on any active low negative flag
+      $result |= NEGFLAG if ($rsign);
+
+      # If A's sign is the same as B's sign, and the
+      # result sign is different, set the overflow flag
+      $result |= OFLOWFLAG if (($asign==$bsign) && ($asign != $rsign));
+
+      # Put in the divide-by-zero flag if B is zero and we did a DIV or MOD
+      $result |= DIVFLAG if ($isdivmod && $B==0);
+
+      # Put the result into the ROM
+      $ROM[ ($aluop<<16) | ($A<<8) | $B ] = $result;
+    }
+  }
+}
+
+# Write ROM out in hex for Verilog
+open( my $OUT, ">", "alu_logisim.img" ) || die("Can't write to alu_logisim.img: $!\n");
+  print($OUT "v2.0 raw\n");
+  for my $i ( 0 .. ( 2**21 - 1 ) ) {
+    printf( $OUT "%x ", $ROM[$i] ? $ROM[$i] : 0 );
+    print( $OUT "\n" ) if ( ( $i % 8 ) == 7 );
+  }
+close($OUT);
+
+# Write out eight minipro binary ROM file,
+# each of which has little-endian 16-bit values.
+my $offset= 0;
+my $lastposn= 2**18 - 1;
+foreach my $bank (0 .. 7) {
+  open($OUT, '>:raw', "alu$bank.rom") or die "Unable to open: $!";
+  for my $i ( $offset .. $lastposn ) {
+    print($OUT pack("v", $ROM[$i] ? $ROM[$i] : 0 ));
+  }
+  close($OUT);
+  $offset += 2**18; $lastposn += 2**18;
+}
+
+exit(0);
