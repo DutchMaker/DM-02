@@ -69,8 +69,8 @@ The following operands can be used in this operation:
 | MEM        | Memory                                   | `1001` |
 | PC_H       | Program Counter high byte                | `1010` |
 | PC_L       | Program Counter low byte                 | `1011` |
-| STACK_H    | Stack Pointer high byte                  | `1100` |
-| STACK_L    | Stack Pointer low byte                   | `1101` |
+| STK_H      | Stack Pointer high byte                  | `1100` |
+| STK_L      | Stack Pointer low byte                   | `1101` |
 | *not used* | *available for future use*               | `1110` |
 | *not used* | *available for future use*               | `1111` |
 
