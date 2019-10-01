@@ -5,14 +5,14 @@
 0011:H
 0100:L
 0101:ALU
-0110:FLAGS
+0110:F
 0111:MAR_H
 1000:MAR_L
 1001:MEM
 1010:PC_H
 1011:PC_L
-1100:STACK_H
-1101:STACK_L
+1100:STK_H
+1101:STK_L
 .end
 
 .functions
@@ -21,7 +21,6 @@
 00011:STK_inc
 00100:STK_dec
 00101:PC_inc
-00110:PC_dec
 00111:PC_MAR_transfer
 01000:STK_MAR_transfer
 01001:MAR_inc
@@ -29,6 +28,41 @@
 01011:FSET_c
 01100:FCLR_z
 01101:FCLR_c
+.end
+
+.alu
+00000:ZERO
+00001:A
+00010:B
+00011:-A
+00100:-B
+00101:A+1
+00110:B+1
+00111:A-1
+01000:B-1
+01001:A+B
+01010:A+B+1
+01011:A-B
+01100:A-Bs
+01101:B-A
+01110:A-B-1
+01111:B-A-1
+10000:A*B_H
+10001:A*B_L
+10010:A/B
+10011:A%B
+10100:A<<B
+10101:A>>B_A
+10110:A>>B_L
+10111:A_ROL_B
+11000:A_ROR_B
+11001:A_AND_B
+11010:A_OR_B
+11011:A_XOR_B
+11100:NOT_A
+11101:NOT_B
+11110:A+B_BCD
+11111:A-B_BCD
 .end
 
 .instructions
@@ -55,31 +89,31 @@
 14:1:MOV L,H
 15:1:MOV BC,HL
 16:1:MOV HL,BC
-17:2:MOV A,#value
-18:2:MOV B,#value
-19:2:MOV C,#value
-1A:2:MOV H,#value
-1B:2:MOV L,#value
-1C:3:MOV BC,#$value
-1D:3:MOV HL,#$value
-1E:3:MOV A,$address
-1F:3:MOV B,$address
-20:3:MOV C,$address
-21:3:MOV BC,$address
-22:3:MOV HL,$address
-23:3:MOV $address,A
-24:3:MOV $address,B
-25:3:MOV $address,C
-26:3:MOV $address,BC
-27:3:MOV $address,HL
-28:3:MOV A,($address)
-29:3:MOV B,($address)
-2A:3:MOV C,($address)
-2B:3:MOV BC,($address)
-2C:3:MOV ($address),A
-2D:3:MOV ($address),B
-2E:3:MOV ($address),C
-2F:3:MOV ($address),BC
+17:2:MOV A,value
+18:2:MOV B,value
+19:2:MOV C,value
+1A:2:MOV H,value
+1B:2:MOV L,value
+1C:3:MOV BC,value
+1D:3:MOV HL,value
+1E:3:MOV A,address
+1F:3:MOV B,address
+20:3:MOV C,address
+21:3:MOV BC,address
+22:3:MOV HL,address
+23:3:MOV address,A
+24:3:MOV address,B
+25:3:MOV address,C
+26:3:MOV address,BC
+27:3:MOV address,HL
+28:3:MOV A,(address)
+29:3:MOV B,(address)
+2A:3:MOV C,(address)
+2B:3:MOV BC,(address)
+2C:3:MOV (address),A
+2D:3:MOV (address),B
+2E:3:MOV (address),C
+2F:3:MOV (address),BC
 30:1:MOV A,(BC)
 31:1:MOV H,(BC)
 32:1:MOV L,(BC)
@@ -113,36 +147,36 @@
 4E:1:ADD C
 4F:1:ADD H
 50:1:ADD L
-51:2:ADD #$value
-52:3:ADD $address
-53:3:ADD ($address)
+51:2:ADD value
+52:3:ADD address
+53:3:ADD (address)
 54:1:ADD (HL)
 55:1:ADC A
 56:1:ADC B
 57:1:ADC C
 58:1:ADC H
 59:1:ADC L
-5A:2:ADC #$value
-5B:3:ADC $address
-5C:3:ADC ($address)
+5A:2:ADC value
+5B:3:ADC address
+5C:3:ADC (address)
 5D:1:ADC (HL)
 5E:1:SUB A
 5F:1:SUB B
 60:1:SUB C
 61:1:SUB H
 62:1:SUB L
-63:2:SUB #$value
-64:3:SUB $address
-65:3:SUB ($address)
+63:2:SUB value
+64:3:SUB address
+65:3:SUB (address)
 66:1:SUB (HL)
 67:1:SBC A
 68:1:SBC B
 69:1:SBC C
 6A:1:SBC H
 6B:1:SBC L
-6C:2:SBC #$value
-6D:3:SBC $address
-6E:3:SBC ($address)
+6C:2:SBC value
+6D:3:SBC address
+6E:3:SBC (address)
 6F:1:SBC (HL)
 70:1:INC A
 71:1:INC B
@@ -162,97 +196,97 @@
 7F:1:AND C
 80:1:AND H
 81:1:AND L
-82:2:AND #$value
-83:3:AND $address
-84:3:AND ($address)
+82:2:AND value
+83:3:AND address
+84:3:AND (address)
 85:1:AND (HL)
 86:1:OR B
 87:1:OR C
 88:1:OR H
 89:1:OR L
-8A:2:OR #$value
-8B:3:OR $address
-8C:3:OR ($address)
+8A:2:OR value
+8B:3:OR address
+8C:3:OR (address)
 8D:1:OR (HL)
 8E:1:XOR B
 8F:1:XOR C
 90:1:XOR H
 91:1:XOR L
-92:2:XOR #$value
-93:3:XOR $address
-94:3:XOR ($address)
+92:2:XOR value
+93:3:XOR address
+94:3:XOR (address)
 95:1:XOR (HL)
 96:1:NOT A
 97:1:NOT B
 98:1:NOT C
 99:1:NOT H
 9A:1:NOT L
-9B:2:NOT #$value
-9C:3:NOT $address
-9D:3:NOT ($address)
+9B:2:NOT value
+9C:3:NOT address
+9D:3:NOT (address)
 9E:1:NOT (HL)
 9F:1:SHL A
 A0:1:SHL B
 A1:1:SHL C
 A2:1:SHL H
 A3:1:SHL L
-A4:2:SHL #$value
-A5:3:SHL $address
-A6:3:SHL ($address)
+A4:2:SHL value
+A5:3:SHL address
+A6:3:SHL (address)
 A7:1:SHL (HL)
 A8:1:SHR A
 A9:1:SHR B
 AA:1:SHR C
 AB:1:SHR H
 AC:1:SHR L
-AD:2:SHR #$value
-AE:3:SHR $address
-AF:3:SHR ($address)
+AD:2:SHR value
+AE:3:SHR address
+AF:3:SHR (address)
 B0:1:SHR (HL)
 B1:1:ROL A
 B2:1:ROL B
 B3:1:ROL C
 B4:1:ROL H
 B5:1:ROL L
-B6:2:ROL #$value
-B7:3:ROL $address
-B8:3:ROL ($address)
+B6:2:ROL value
+B7:3:ROL address
+B8:3:ROL (address)
 B9:1:ROL (HL)
 BA:1:ROR A
 BB:1:ROR B
 BC:1:ROR C
 BD:1:ROR H
 BE:1:ROR L
-BF:2:ROR #$value
-C0:3:ROR $address
-C1:3:ROR ($address)
+BF:2:ROR value
+C0:3:ROR address
+C1:3:ROR (address)
 C2:1:ROR (HL)
 C3:1:CMP B
 C4:1:CMP C
 C5:1:CMP H
 C6:1:CMP L
-C7:2:CMP #$value
-C8:3:CMP $address
-C9:3:CMP ($address)
+C7:2:CMP value
+C8:3:CMP address
+C9:3:CMP (address)
 CA:1:CMP (HL)
-CB:3:JMP $address
-CC:3:JC $address
-CD:3:JZ $address
-CE:3:JN $address
-CF:3:JO $address
-D0:3:JNC $address
-D1:3:JNZ $address
-D2:3:JP $address
-D3:3:JNO $address
-D4:3:CALL $address
-D5:3:CC $address
-D6:3:CZ $address
-D7:3:CN $address
-D8:3:CO $address
-D9:3:CNC $address
-DA:3:CNZ $address
-DB:3:CP $address
-DC:3:CNO $address
+CB:3:JMP label
+CC:3:JC label
+CD:3:JZ label
+CE:3:JN label
+CF:3:JO label
+D0:3:JNC label
+D1:3:JNZ label
+D2:3:JP label
+D3:3:JNO label
+D4:3:CALL label
+D5:3:CC label
+D6:3:CZ label
+D7:3:CN label
+D8:3:CO label
+D9:3:CNC label
+DA:3:CNZ label
+DB:3:CP label
+DC:3:CNO label
 DD:1:RET
 DE:1:RC
 DF:1:RZ
@@ -280,24 +314,31 @@ EA:1:HALT
   ###########
 
   MOV r1,r2
-    0:  r2_out
+    0:  [data]
+        r2_out
         r1_load
-    1:  TSTATE_reset
+    1:  [function]
+        TSTATE_reset
   .end
 
   MOV hl1,hl2
-    0:  h2_out
+    0:  [data]
+        h2_out
         h1_load
-    1:  l2_out
+    1:  [data]
+        l2_out
         l1_load
-    2:  TSTATE_reset
+    2:  [function]
+        TSTATE_reset
   .end
 
-  MOV r1,data
-    0:  PC_MAR_transfer
-    		MEM_out
+  MOV r1,value
+    0:  [data]
+        PC_MAR_transfer
+        MEM_out
         r1_load
-    1:  PC_inc
+    1:  [function]
+        PC_inc
         TSTATE_reset
   .end
 
@@ -350,9 +391,13 @@ EA:1:HALT
   ###########
 
   ADD r1
+    0:  [data][A+B]
+        r1_out
+        ALU_load
+    1:  TSTATE_reset
   .end
 
-  ADD data
+  ADD value
   .end
 
   ADD address
@@ -371,7 +416,7 @@ EA:1:HALT
   ADC r1
   .end
 
-  ADC data
+  ADC value
   .end
 
   ADC address
@@ -390,7 +435,7 @@ EA:1:HALT
   SUB r1
   .end
 
-  SUB data
+  SUB value
   .end
 
   SUB address
@@ -409,7 +454,7 @@ EA:1:HALT
   SBC r1
   .end
 
-  SBC data
+  SBC value
   .end
 
   SBC address
@@ -448,7 +493,7 @@ EA:1:HALT
   AND r1
   .end
 
-  AND data
+  AND value
   .end
 
   AND address
@@ -467,7 +512,7 @@ EA:1:HALT
   OR r1
   .end
 
-  OR data
+  OR value
   .end
 
   OR address
@@ -486,7 +531,7 @@ EA:1:HALT
   XOR r1
   .end
 
-  XOR data
+  XOR value
   .end
 
   XOR address
@@ -505,7 +550,7 @@ EA:1:HALT
   NOT r1
   .end
 
-  NOT data
+  NOT value
   .end
 
   NOT address
@@ -524,7 +569,7 @@ EA:1:HALT
   SHL r1
   .end
 
-  SHL data
+  SHL value
   .end
 
   SHL address
@@ -543,7 +588,7 @@ EA:1:HALT
   SHR r1
   .end
 
-  SHR data
+  SHR value
   .end
 
   SHR address
@@ -562,7 +607,7 @@ EA:1:HALT
   ROL r1
   .end
 
-  ROL data
+  ROL value
   .end
 
   ROL address
@@ -581,7 +626,7 @@ EA:1:HALT
   ROR r1
   .end
 
-  ROR data
+  ROR value
   .end
 
   ROR address
@@ -600,7 +645,7 @@ EA:1:HALT
   CMP r1
   .end
 
-  CMP data
+  CMP value
   .end
 
   CMP address
