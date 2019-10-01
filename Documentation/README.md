@@ -48,8 +48,8 @@ DM-02 is (being) built with the following specifications in mind:
   - Simulating the controller module and thus test the interaction between modules.
   - Debug the computer while it’s running programs.
 
-
 <a name="high-level-architecture"></a>
+
 ## High-level architecture
 The DM-02 architecture is based on a mix of elements found in the 6502, 8085, 6800 and 8088 processor architectures. The following schematic illustrates the high-level architecture of the DM-02.
 
@@ -73,6 +73,7 @@ Jump to detailed documentation on:
 - [Assembly language reference](./Assembly-language.md)
 - [ALU and Flags register](./ALU-and-flags.md)
 - [Debugger module](./Debugger-module.md)
+- [Notes on all the modules](./Modules.md)
 - [Project status](./Project-status.md)
 
 <a name="resources"></a>

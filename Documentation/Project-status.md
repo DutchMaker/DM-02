@@ -6,6 +6,10 @@ This document is here to keep track of the project status.
 
 ## Project log
 
+### 2019-10-01:
+
+The Logisim design has all the modules done, except for the Controller. I'll probably build the Microcode Compiler first before starting design of the Controller.
+
 ### 2019-09-26:
 
 Started the project log. At this point in the project, countless hours have been put into research and thinking about problems and solutions (related to this computer...). The result of it all has been documented. *Nothing has actually been built yet at this point*.

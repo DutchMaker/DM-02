@@ -62,8 +62,8 @@ The following operands can be used in this operation:
 | C          | C register                               | `0010` |
 | H          | H register                               | `0011` |
 | L          | L register                               | `0100` |
-| ALU        | ALU result (output only)                 | `0101` |
-| FLAGS      | Flags register                           | `0110` |
+| ALU        | ALU result *(load only)*                 | `0101` |
+| F          | Flags register                           | `0110` |
 | MAR_H      | Memory Access Register address high byte | `0111` |
 | MAR_L      | Memory Access Register address low byte  | `1000` |
 | MEM        | Memory                                   | `1001` |
