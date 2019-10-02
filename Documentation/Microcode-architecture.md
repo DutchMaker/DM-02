@@ -34,12 +34,12 @@ each type of word has its own bit format:
 
 `0|xxxx|xxxx|x|xxxxx|0`
 `0|operand_out|operand_load|0|function|0`
-`0|operand_out|operand_load|1|alu_operation|0`
+`0|operand_out|operand_load|1|alu_function|0`
 
 > The *out* operation starts at rising CLOCK1
 > The *load* operation starts at rising CLOCK2
 > The *function* operation may start at rising CLOCK1 or CLOCK2, depending on the function
-> The *alu_operation* does not depend on a clock signal
+> The *alu_function* does not depend on a clock signal
 
 ### Function operation word format
 
@@ -96,9 +96,9 @@ The following functions can be used in this operation:
 | FCLR_z           | Clear the Zero flag                                          | `01100` |
 | FCLR_c           | Clear the Carry flag                                         | `01101` |
 
-### ALU operations
+### ALU functions
 
-Refer to the [ALU and Flags](./ALU-and-flags.md) documentation for the available ALU operations.
+Refer to the [ALU and Flags](./ALU-and-flags.md) documentation for the available ALU functions.
 
 ### Example
 
@@ -120,7 +120,7 @@ TSTATE_1:   PC_inc           # Misc. microinstruction
 
 When compiled, this will result in 2 microinstruction words (the fetch cycle is hard-wired, so only the code for t-state 0 and 1 are compiled into the ROM).
 
-The first microinstruction is a data operation, so according to the format (`0|operand_out|operand_load|0|function` or `0|operand_out|operand_load|1|alu_operation`), the compiled instruction word  will be:
+The first microinstruction is a data operation, so according to the format (`0|operand_out|operand_load|0|function` or `0|operand_out|operand_load|1|alu_function`), the compiled instruction word  will be:
 
 - `0100100000001110` 
   - `0` to indicate the microinstruction is a data operation.

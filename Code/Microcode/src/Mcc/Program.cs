@@ -8,12 +8,12 @@ namespace Mcc
         static void Main(string[] args)
         {
             Console.WriteLine();
-            Console.WriteLine("--------------------------------");
-            Console.WriteLine("74xx Computer Microcode Compiler");
-            Console.WriteLine("--------------------------------");
+            Console.WriteLine("---------------------------------");
+            Console.WriteLine("DM-02 Computer Microcode Compiler");
+            Console.WriteLine("---------------------------------");
             Console.WriteLine();
 
-            // args = new [] { @"/media/ruud/ntfs/Personal/Projects/Active/TTL-Computer/Code/Microcode/microcode.src" };
+            args = new [] { @"/media/ruud/ntfs/Personal/Projects/Active/DM-02/Code/Microcode/microcode.src" };
 
             if (args.Length == 0)
             {
@@ -24,7 +24,7 @@ namespace Mcc
             }
 
             string fileName = args[0];
-
+            
             if (!File.Exists(fileName))
             {
                 Console.WriteLine($"Could not find source file {fileName}");

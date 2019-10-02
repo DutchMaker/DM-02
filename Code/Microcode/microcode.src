@@ -43,7 +43,7 @@
 01001:A+B
 01010:A+B+1
 01011:A-B
-01100:A-Bs
+01100:A-B_S
 01101:B-A
 01110:A-B-1
 01111:B-A-1
@@ -269,24 +269,24 @@ C7:2:CMP value
 C8:3:CMP address
 C9:3:CMP (address)
 CA:1:CMP (HL)
-CB:3:JMP label
-CC:3:JC label
-CD:3:JZ label
-CE:3:JN label
-CF:3:JO label
-D0:3:JNC label
-D1:3:JNZ label
-D2:3:JP label
-D3:3:JNO label
-D4:3:CALL label
-D5:3:CC label
-D6:3:CZ label
-D7:3:CN label
-D8:3:CO label
-D9:3:CNC label
-DA:3:CNZ label
-DB:3:CP label
-DC:3:CNO label
+CB:3:JMP address
+CC:3:JC address
+CD:3:JZ address
+CE:3:JN address
+CF:3:JO address
+D0:3:JNC address
+D1:3:JNZ address
+D2:3:JP address
+D3:3:JNO address
+D4:3:CALL address
+D5:3:CC address
+D6:3:CZ address
+D7:3:CN address
+D8:3:CO address
+D9:3:CNC address
+DA:3:CNZ address
+DB:3:CP address
+DC:3:CNO address
 DD:1:RET
 DE:1:RC
 DF:1:RZ
@@ -342,16 +342,31 @@ EA:1:HALT
         TSTATE_reset
   .end
 
+  MOV hl1,value
+  .end
+
   MOV r1,address    
+  .end
+
+  MOV hl1,address    
   .end
 
   MOV address,r1
   .end
 
+  MOV address,hl1
+  .end
+
   MOV r1,(address)
   .end
 
+  MOV hl1,(address)
+  .end
+
   MOV (address),r1
+  .end
+
+  MOV (address),hl1
   .end
 
   MOV r1,(hl1)
@@ -406,7 +421,7 @@ EA:1:HALT
   ADD (address)
   .end
 
-  ADD (hl1)
+  ADD (HL)
   .end
 
   ###########
@@ -425,7 +440,7 @@ EA:1:HALT
   ADC (address)
   .end
 
-  ADC (hl1)
+  ADC (HL)
   .end
 
   ###########
@@ -444,7 +459,7 @@ EA:1:HALT
   SUB (address)
   .end
 
-  SUB (hl1)
+  SUB (HL)
   .end
 
   ###########
@@ -463,7 +478,7 @@ EA:1:HALT
   SBC (address)
   .end
 
-  SBC (hl1)
+  SBC (HL)
   .end
 
   ###########
@@ -502,7 +517,7 @@ EA:1:HALT
   AND (address)
   .end
 
-  AND (hl1)
+  AND (HL)
   .end
 
   ##########
@@ -521,7 +536,7 @@ EA:1:HALT
   OR (address)
   .end
 
-  OR (hl1)
+  OR (HL)
   .end
 
   ###########
@@ -540,7 +555,7 @@ EA:1:HALT
   XOR (address)
   .end
 
-  XOR (hl1)
+  XOR (HL)
   .end
 
   ###########
@@ -559,7 +574,7 @@ EA:1:HALT
   NOT (address)
   .end
 
-  NOT (hl1)
+  NOT (HL)
   .end
 
   ###########
@@ -578,7 +593,7 @@ EA:1:HALT
   SHL (address)
   .end
 
-  SHL (hl1)
+  SHL (HL)
   .end
 
   ###########
@@ -597,7 +612,7 @@ EA:1:HALT
   SHR (address)
   .end
 
-  SHR (hl1)
+  SHR (HL)
   .end
 
   ###########
@@ -616,7 +631,7 @@ EA:1:HALT
   ROL (address)
   .end
 
-  ROL (hl1)
+  ROL (HL)
   .end
 
   ###########
@@ -635,7 +650,7 @@ EA:1:HALT
   ROR (address)
   .end
 
-  ROR (hl1)
+  ROR (HL)
   .end
 
   ###########
@@ -654,14 +669,14 @@ EA:1:HALT
   CMP (address)
   .end
 
-  CMP (hl1)
+  CMP (HL)
   .end
 
   ###########
   #   JMP   #
   ###########
 
-  JMP
+  JMP address
     0:  PC_MAR_transfer
         PC_inc
     1:  MEM_out
@@ -673,6 +688,7 @@ EA:1:HALT
         PC_H_load
     5:  L_out
         PC_L_load
+        PC_inc
     6:  TSTATE_reset
   .end
 
@@ -680,7 +696,7 @@ EA:1:HALT
   #   JMP (conditional)  #
   ########################
 
-  JC [C=1]
+  JC address [C=1]
     0:  PC_MAR_transfer
         PC_inc
     1:  MEM_out
@@ -692,62 +708,112 @@ EA:1:HALT
         PC_H_load
     5:  L_out
         PC_L_load
+        PC_inc
     6:  TSTATE_reset
   .end
 
-  JZ [Z=1]
+  JC address [C=0]
   .end
 
-  JN [N=1]
+  JZ address [Z=1]
   .end
 
-  JO [O=1]
+  JZ address [Z=0]
   .end
 
-  JNC [C=0]
+  JN address [N=1]
   .end
 
-  JNZ [Z=0]
-
-  JP [N=0]
+  JN address [N=0]
   .end
 
-  JNO [O=0]
+  JO address [O=1]
+  .end
+
+  JO address [O=0]
+  .end
+
+  JNC address [C=0]
+  .end
+
+  JNC address [C=1]
+  .end
+
+  JNZ address [Z=0]
+  .end
+
+  JNZ address [Z=1]
+  .end
+
+  JP address [N=0]
+  .end
+
+  JP address [N=1]
+  .end
+
+  JNO address [O=0]
+  .end
+
+  JNO address [O=1]
   .end
 
   ############
   #   CALL   #
   ############
   
-  CALL
+  CALL address
   .end
 
   ##########################
   #   CALL (conditional)   #
   ##########################
 
-  CC [C=1]
+  CC address [C=1]
   .end
 
-  CZ [Z=1]
+  CC address [C=0]
   .end
 
-  CN [N=1]
+  CZ address [Z=1]
   .end
 
-  CO [O=1]
+  CZ address [Z=0]
   .end
 
-  CNC [C=0]
+  CN address [N=1]
   .end
 
-  CNZ [Z=0]
+  CN address [N=0]
   .end
 
-  CP [N=0]
+  CO address [O=1]
   .end
 
-  CNO [O=0]
+  CO address [O=0]
+  .end
+
+  CNC address [C=0]
+  .end
+
+  CNC address [C=1]
+  .end
+
+  CNZ address [Z=0]
+  .end
+
+  CNZ address [Z=1]
+  .end
+
+  CP address [N=0]
+  .end
+
+  CP address [N=1]
+  .end
+
+  CNO address [O=0]
+  .end
+
+  CNO address [O=1]
   .end
 
   ###########
@@ -764,39 +830,69 @@ EA:1:HALT
   RC [C=1]
   .end
 
+  RC [C=0]
+  .end
+
   RZ [Z=1]
+  .end
+
+  RZ [Z=0]
   .end
 
   RN [N=1]
   .end
 
+  RN [N=0]
+  .end
+
   RO [O=1]
+  .end
+
+  RO [O=0]
   .end
 
   RNC [C=0]
   .end
 
+  RNC [C=1]
+  .end
+
   RNZ [Z=0]
+  .end
+
+  RNZ [Z=1]
   .end
 
   RP [N=0]
   .end
 
+  RP [N=1]
+  .end
+
   RNO[O=0]
+  .end
+
+  RNO[O=1]
   .end
   
   ###########
   #   FSET  #
   ###########
 
-  FSET flag
+  FSET C
+  .end
+
+  FSET Z
   .end
 
   ############
   #   FCLR   #
   ############
 
-  FCLR flag
+  FCLR C
+  .end
+
+  FCLR Z
   .end
 
   ############

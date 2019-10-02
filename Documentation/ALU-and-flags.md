@@ -28,7 +28,7 @@
 | A+B               | ALU_A+B              | `01001` |
 | A+B+1             | ALU_A+B+1            | `01010` |
 | A-B               | ALU_A-B              | `01011` |
-| A-B (special?)    | ALU_A-Bs             | `01100` |
+| A-B (special?)    | ALU_A-B_S            | `01100` |
 | B-A               | ALU_B-A              | `01101` |
 | A-B-1             | ALU_A-B-1            | `01110` |
 | B-A-1             | ALU_B-A-1            | `01111` |
