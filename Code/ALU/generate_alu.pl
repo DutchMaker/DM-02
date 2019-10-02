@@ -216,7 +216,7 @@ foreach my $aluop (0x00 .. 0x1f) {
   }
 }
 
-# Write ROM out in hex for Verilog
+# Write ROM out in hex for Logisim (big-endian)
 open( my $OUT, ">", "alu_logisim.img" ) || die("Can't write to alu_logisim.img: $!\n");
   print($OUT "v2.0 raw\n");
   for my $i ( 0 .. ( 2**21 - 1 ) ) {

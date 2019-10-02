@@ -61,10 +61,30 @@ namespace Mcc.Models
 
         public string ToBits()
         {
-            return null;
-            //return $"{this.Negative}{this.Zero}{this.Overflow}{this.Carry}"
-            //    .Replace("True", "1")
-            //    .Replace("False", "0");
+            return $"{(this.Negative == null ? "x" : this.Negative.ToString())}{(this.Zero == null ? "x" : this.Zero.ToString())}{(this.Overflow == null ? "x" : this.Overflow.ToString())}{(this.Carry == null ? "x" : this.Carry.ToString())}"
+                .Replace("True", "1")
+                .Replace("False", "0");
+        }
+
+        public bool Match(int flags)
+        {
+            string bits = this.ToBits();
+            string compareBits = Convert.ToString(flags, 2).PadLeft(4, '0');
+
+            for (int i = 0; i < 4; i++)
+            {
+                if (bits[i] == 'x')
+                {
+                    continue;
+                }
+
+                if (bits[i] != compareBits[i])
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
     }
 }

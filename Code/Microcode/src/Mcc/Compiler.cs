@@ -32,12 +32,13 @@ namespace Mcc
 
         public static void Compile(string sourceFileName)
         {
-            string targetFileName = sourceFileName.Split('.', StringSplitOptions.RemoveEmptyEntries).First() + ".bin";
+            string romFileName = sourceFileName.Split('.', StringSplitOptions.RemoveEmptyEntries).First() + ".rom";
+            string logisimImageFileName = sourceFileName.Split('.', StringSplitOptions.RemoveEmptyEntries).First() + ".img";
             string source = File.ReadAllText(sourceFileName);
 
             _compiler = new Compiler(source);
             _compiler.Compile();
-            _compiler.Save(targetFileName);
+            _compiler.Save(romFileName, logisimImageFileName);
         }
 
         public Compiler(string source)
@@ -45,46 +46,92 @@ namespace Mcc
             this.source = source;
         }
 
+        public void Initialize()
+        {
+            this.CleanupSource();
+            this.LoadBitPatterns();
+        }
+
         /// <summary>
         /// Compiles the microcode and store the result in memory.
         /// </summary>
         public void Compile()
         {
-            this.CleanupSource();
-            this.LoadBitPatterns();
+            this.Initialize();
             this.LoadCode();
-
-
-            foreach (var c in this.MicrocodeSource)
-            {
-                for (int t = 0; t < c.TStates.Count; t++)
-                {
-                    for (int f = 0; f < 16; f++)
-                    {
-                        string instructionBits = c.Instruction.Bits;
-                        string tstateBits = Convert.ToString(t, 2).PadLeft(4, '0');
-                        string flagsBits = Convert.ToString(f, 2).PadLeft(4, '0');
-                        string addressBits = instructionBits + tstateBits + flagsBits;
-
-                        int address = Convert.ToInt32(addressBits, 2);
-                        this.microcode.Add(address, c.TStates[t].GetControlWord());
-                    }
-                }
-            }
-
-            //ProcessFlagsStates();       // Determine and add all possible flagg state for each t-state.
-
-            //ProcessControlWords();      // Generate control word for all of the t-states.
-
-            //CompileMicrocode();
+            this.CompileCode();
         }
 
         /// <summary>
         /// Saves the compiled microcode to disk.
         /// </summary>
-        public void Save(string fileName)
+        public void Save(string romFileName, string logisimImageFileName)
         {
-            //Console.Write(source);
+            var sw = Stopwatch.StartNew();
+            Console.Write("Writing data");
+
+            if (File.Exists(romFileName))
+            {
+                File.Delete(romFileName);
+            }
+
+            if (File.Exists(logisimImageFileName))
+            {
+                File.Delete(logisimImageFileName);
+            }
+
+            using (var writer = new BinaryWriter(File.Open(romFileName, FileMode.CreateNew)))
+            {
+                // ROM image for EPROM needs to be little-endian format.
+                // (low byte first, high byte second)
+                foreach (int address in this.microcode.Keys)
+                {
+                    Console.Write(".");
+
+                    byte high = (byte)(this.microcode[address] >> 8);
+                    byte low = (byte)(this.microcode[address] & 0xff);
+
+                    // The offset is calculated in bytes, our values are 2 bytes each.
+                    // Therefore we need to store at address*2.
+                    writer.Seek(address*2, SeekOrigin.Begin);
+                    writer.Write(low);
+                    writer.Write(high);
+                }
+            }
+
+            using (TextWriter writer = new StreamWriter(File.Open(logisimImageFileName, FileMode.CreateNew)))
+            {
+                // The Logisim image is written in a plain text format.
+                // It has 8 16-bit values per row, separated by space.
+                // Values are formatted big-endian.
+                writer.WriteLine("v2.0 raw\n");
+                int address = 0;
+
+                for (int row = 0; row < UInt16.MaxValue / 8; row++)
+                {
+                    Console.Write(".");
+
+                    string rowData = string.Empty;
+
+                    for (int col = 0; col < 8; col++)
+                    {
+                        if (this.microcode.ContainsKey(address))
+                        {
+                            rowData += $"{Converter.UIntToHex(this.microcode[address])} ";
+                        }
+                        else
+                        {
+                            rowData += "0000 ";
+                        }
+
+                        address++;
+                    }
+
+                    writer.WriteLine(rowData.Trim());
+                }
+            }
+
+            Console.WriteLine($"Done ({sw.ElapsedMilliseconds} ms)");
         }
 
         private void CleanupSource()
@@ -173,6 +220,9 @@ namespace Mcc
 
         private void LoadCode()
         {
+            var sw = Stopwatch.StartNew();
+            Console.Write("Loading code ");
+
             int cursor = this.source.IndexOf(SECTION_CODE, StringComparison.OrdinalIgnoreCase);
 
             if (cursor == -1)
@@ -234,6 +284,8 @@ namespace Mcc
                             {
                                 foreach (string hl2 in REGISTERS_PAIRS)
                                 {
+                                    Console.Write(".");
+
                                     string targetMnemonic = mnemonic.Replace("r1", r1).Replace("r2", r2)
                                         .Replace("hl1", hl1).Replace("hl2", hl2);
 
@@ -260,6 +312,40 @@ namespace Mcc
                 // Move cursor to next instruction.
                 cursor = this.source.IndexOf("\n", tstatesEnd) + 1;
             }
+
+            Console.WriteLine($"Done ({sw.ElapsedMilliseconds} ms)");
+        }
+
+        private void CompileCode()
+        {
+            var sw = Stopwatch.StartNew();
+            Console.Write("Compiling code ");
+
+            foreach (var c in this.MicrocodeSource)
+            {
+                for (int t = 0; t < c.TStates.Count; t++)
+                {
+                    for (int f = 0; f < 16; f++)
+                    {
+                        Console.Write(".");
+
+                        if (c.Flags != null && !c.Flags.Match(f))
+                        {
+                            continue;
+                        }
+
+                        string instructionBits = c.Instruction.Bits;
+                        string tstateBits = Convert.ToString(t, 2).PadLeft(4, '0');
+                        string flagsBits = Convert.ToString(f, 2).PadLeft(4, '0');
+                        string addressBits = instructionBits + tstateBits + flagsBits;
+
+                        int address = Convert.ToInt32(addressBits, 2);
+                        this.microcode.Add(address, c.TStates[t].GetControlWord());
+                    }
+                }
+            }
+
+            Console.WriteLine($"Done ({sw.ElapsedMilliseconds} ms)");
         }
 
         private void AddToMicrocodeSource(string mnemonic, FlagsState flags, string tstates)
@@ -371,138 +457,6 @@ namespace Mcc
             return result;
         }
         
-        // private void ProcessControlWords()
-        // {
-        //     var updatedMicrocode = new Dictionary<string, List<Dictionary<string, string>>>();
-
-        //     foreach (string mnemonic in microSourceCode.Keys)
-        //     {
-        //         var updatedTStates = new List<Dictionary<string, string>>();
-
-        //         foreach (Dictionary<string, string> tstate in microSourceCode[mnemonic])
-        //         {
-        //             var updatedFlags = new Dictionary<string, string>();
-
-        //             foreach (string flagsStateKey in tstate.Keys)
-        //             {
-        //                 string controlWord = new string('0', 48);
-
-        //                 tstate[flagsStateKey].Split(';', StringSplitOptions.RemoveEmptyEntries)
-        //                     .ToList()
-        //                     .ForEach(c =>
-        //                     {
-        //                         int index = controlLines.FindIndex(cl => cl == c);
-
-        //                         if (index == -1)
-        //                         {
-        //                             throw new CompilerException($"Undefined control line used in t-state: '{c}'");
-        //                         }
-
-        //                         controlWord = ReplaceCharAtIndex(controlWord, index, "1");
-        //                     });
-
-        //                 updatedFlags.Add(flagsStateKey, controlWord);
-        //             }
-
-        //             updatedTStates.Add(updatedFlags);
-        //         }
-
-        //         updatedMicrocode.Add(mnemonic, updatedTStates);
-        //     }
-
-        //     microSourceCode = updatedMicrocode;
-        // }
-
-        // private void CompileMicrocode()
-        // {
-        //     var sw = Stopwatch.StartNew();
-        //     Console.Write("Compiling microcode");
-
-        //     if (File.Exists(targetFileName))
-        //     {
-        //         File.Delete(targetFileName);
-        //     }
-
-        //     using (var writer = new BinaryWriter(File.Open(targetFileName, FileMode.CreateNew)))
-        //     {
-        //         foreach (string mnemonic in microSourceCode.Keys)
-        //         {
-        //             string instructionBits = instructions[mnemonic];
-
-        //             Console.Write(".");
-
-        //             for (byte tstate = 0; tstate < microSourceCode[mnemonic].Count; tstate++)
-        //             {
-        //                 // Remember that tstate 0 and 1 are hardwired in the CPU.
-        //                 // We need to increase our tstate by 2 before converting to binary.
-        //                 string tstateBits = Convert.ToString(tstate + 2, 2).PadLeft(5, '0');
-
-        //                 foreach (string flagsStateBits in microSourceCode[mnemonic][tstate].Keys)
-        //                 {
-        //                     string controlWord = microSourceCode[mnemonic][tstate][flagsStateBits];
-
-        //                     // Split the control word into 6 bytes.
-        //                     for (int bank = 0; bank < 6; bank++)
-        //                     {
-        //                         string bankBits = Convert.ToString(bank, 2).PadLeft(3, '0');
-
-        //                         // Construct ROM memory address:
-        //                         // 
-        //                         // [flags][instruction][t-state][bank]
-        //                         // [000][00000000][00000][000]
-        //                         string addressString = flagsStateBits + instructionBits + tstateBits + bankBits;
-        //                         string dataString = controlWord.Substring(bank * 8, 8);
-
-        //                         int address = Convert.ToInt32(addressString, 2);
-        //                         byte data = Convert.ToByte(dataString, 2);
-                                
-        //                         writer.Seek(address, SeekOrigin.Begin);
-        //                         writer.Write(data);
-        //                     }
-        //                 }
-        //             }
-        //         }
-        //     }
-
-        //     Console.WriteLine($"\r\nCompiled in {sw.ElapsedMilliseconds} ms!");
-        // }
-
-        // private void GenerateFlagsStates(string flagsStateKey, string flagsStateValue, Dictionary<string, string> store)
-        // {
-        //     for (int i = 0; i < flagsStateKey.Length; i++)
-        //     {
-        //         if (flagsStateKey[i] == 'x')
-        //         {
-        //             for (int s = 0; s <= 1; s++)
-        //             {
-        //                 string state = ReplaceCharAtIndex(flagsStateKey, i, s.ToString());
-
-        //                 if (!state.Contains('x') && !store.ContainsKey(state))
-        //                 {
-        //                     store.Add(state, flagsStateValue);
-        //                 }
-
-        //                 GenerateFlagsStates(state, flagsStateValue, store);
-        //             }
-        //         }
-        //     }
-        // }
-        
-        // private string ReplaceCharAtIndex(string input, int index, string replaceWith)
-        // {
-        //     if (index == 0)
-        //     {
-        //         return replaceWith + input.Substring(1);
-        //     }
-
-        //     if (index == input.Length - 1)
-        //     {
-        //         return input.Substring(0, input.Length - 1) + replaceWith;
-        //     }
-
-        //     return input.Substring(0, index) + replaceWith + input.Substring(index + 1);
-        // }
-
         private string ExtractSection(string sectionName)
         {
             int sectionStart = source.IndexOf(sectionName, StringComparison.OrdinalIgnoreCase);
