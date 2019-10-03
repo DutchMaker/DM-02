@@ -33,20 +33,20 @@ each type of word has its own bit format:
 ### Data operation word format
 
 `0|xxxx|xxxx|x|xxxxx|0`
-`0|operand_out|operand_load|0|function|0`
-`0|operand_out|operand_load|1|alu_function|0`
+`0|operand_out|operand_load|0|0|function|0`
+`0|operand_out|operand_load|1|alu_operation|0`
 
 > The *out* operation starts at rising CLOCK1
 > The *load* operation starts at rising CLOCK2
 > The *function* operation may start at rising CLOCK1 or CLOCK2, depending on the function
-> The *alu_function* does not depend on a clock signal
+> The *alu_operation* does not depend on a clock signal
 
 ### Function operation word format
 
-`1|xxxxx|xxxxx|xxxxx`
-`1|function|function|function`
+`1|xxxx|000000|xxxx|0`
+`1|function|000000|function|0`
 
-> Controls up to 3 lines at once
+> Controls up to 2 lines at once (we have room for one more in the control word, but takes an additional line decoder to use it).
 > Not all control lines may be combined in one operation word.
 
 ### Data operation operands
@@ -80,25 +80,27 @@ With the *function* in the microinstruction word, we control what control lines 
 
 The following functions can be used in this operation:
 
-| Control line     | Function                                                     | Bits    |
-| ---------------- | ------------------------------------------------------------ | ------- |
-| TSTATE_reset     | Reset t-state sequence (start new fetch cycle)               | `00001` |
-| CLOCK_halt       | Halt the clock until it's manually continued                 | `00010` |
-| STK_inc          | Increase the Stack Pointer by one                            | `00011` |
-| STK_dec          | Decrease the Stack Pointer by one                            | `00100` |
-| PC_inc           | Increase the Program Counter by one                          | `00101` |
-| ~PC_dec~         | ~Decrease the Program Counter by one~                        | `00110` |
-| PC_MAR_transfer  | Transfer the Program Counter value to the Memory Access Register | `00111` |
-| STK_MAR_transfer | Transfer the Stack Pointer value to the Memory Access Register | `01000` |
-| MAR_inc          | Increase the Memory Access Register by one                   | `01001` |
-| FSET_z           | Set the Zero flag                                            | `01010` |
-| FSET_c           | Set the Carry flag                                           | `01011` |
-| FCLR_z           | Clear the Zero flag                                          | `01100` |
-| FCLR_c           | Clear the Carry flag                                         | `01101` |
+| Control line     | Function                                                     | Bits   |
+| ---------------- | ------------------------------------------------------------ | ------ |
+| TSTATE_reset     | Reset t-state sequence (start new fetch cycle)               | `0001` |
+| CLOCK_halt       | Halt the clock until it's manually continued                 | `0010` |
+| STK_inc          | Increase the Stack Pointer by one                            | `0011` |
+| STK_dec          | Decrease the Stack Pointer by one                            | `0100` |
+| PC_inc           | Increase the Program Counter by one                          | `0101` |
+| PC_MAR_transfer  | Transfer the Program Counter value to the Memory Access Register | `0110` |
+| STK_MAR_transfer | Transfer the Stack Pointer value to the Memory Access Register | `0111` |
+| MAR_inc          | Increase the Memory Access Register by one                   | `1000` |
+| FSET_z           | Set the Zero flag                                            | `1001` |
+| FSET_c           | Set the Carry flag                                           | `1010` |
+| FCLR_z           | Clear the Zero flag                                          | `1011` |
+| FCLR_c           | Clear the Carry flag                                         | `1100` |
+| *not used*       | *available for future use*                                   | `1101` |
+| *not used*       | *available for future use*                                   | `1110` |
+| *not used*       | *available for future use*                                   | `1111` |
 
-### ALU functions
+### ALU operations
 
-Refer to the [ALU and Flags](./ALU-and-flags.md) documentation for the available ALU functions.
+Refer to the [ALU and Flags](./ALU-and-flags.md) documentation for the available ALU operations.
 
 ### Example
 
@@ -120,7 +122,7 @@ TSTATE_1:   PC_inc           # Misc. microinstruction
 
 When compiled, this will result in 2 microinstruction words (the fetch cycle is hard-wired, so only the code for t-state 0 and 1 are compiled into the ROM).
 
-The first microinstruction is a data operation, so according to the format (`0|operand_out|operand_load|0|function` or `0|operand_out|operand_load|1|alu_function`), the compiled instruction word  will be:
+The first microinstruction is a data operation, so according to the format (`0|operand_out|operand_load|0|function` or `0|operand_out|operand_load|1|alu_operation`), the compiled instruction word  will be:
 
 - `0100100000001110` 
   - `0` to indicate the microinstruction is a data operation.

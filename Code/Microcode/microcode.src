@@ -16,18 +16,18 @@
 .end
 
 .functions
-00001:TSTATE_reset
-00010:CLOCK_halt
-00011:STK_inc
-00100:STK_dec
-00101:PC_inc
-00111:PC_MAR_transfer
-01000:STK_MAR_transfer
-01001:MAR_inc
-01010:FSET_z
-01011:FSET_c
-01100:FCLR_z
-01101:FCLR_c
+0001:TSTATE_reset
+0010:CLOCK_halt
+0011:STK_inc
+0100:STK_dec
+0101:PC_inc
+0110:PC_MAR_transfer
+0111:STK_MAR_transfer
+1000:MAR_inc
+1001:FSET_z
+1010:FSET_c
+1011:FCLR_z
+1100:FCLR_c
 .end
 
 .alu
