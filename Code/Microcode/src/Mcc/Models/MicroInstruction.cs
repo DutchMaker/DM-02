@@ -6,9 +6,9 @@ namespace Mcc.Models
 {
     public class MicroInstruction
     {
-        private const string INSTRUCTION_FORMAT_DATA = "0|operand_out|operand_load|0|function|0";           // '|' will be removed
+        private const string INSTRUCTION_FORMAT_DATA = "0|operand_out|operand_load|0|0|function|0";           // '|' will be removed
         private const string INSTRUCTION_FORMAT_DATA_ALU = "0|operand_out|operand_load|1|alu_function|0";   
-        private const string INSTRUCTION_FORMAT_FUNCTION = "1|function0|function1|function2";
+        private const string INSTRUCTION_FORMAT_FUNCTION = "1|function0|000000|function1|0";
 
         public MicroInstructionType Type { get; set; }
 
@@ -43,7 +43,7 @@ namespace Mcc.Models
                     }
                     else
                     {
-                        result = result.Replace("function", "00000");
+                        result = result.Replace("function", "0000");
                     }
                 }
                 else
@@ -53,12 +53,12 @@ namespace Mcc.Models
             }
             else
             {
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 2; i++)
                 {
                     result = result.Replace($"function{i}", 
                         (this.ControlLines.Count - 1 >= i) 
                             ? this.ControlLines[i].Bits
-                            : "00000");
+                            : "0000");
                 }
             }
 

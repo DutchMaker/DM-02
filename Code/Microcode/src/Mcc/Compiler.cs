@@ -68,7 +68,7 @@ namespace Mcc
         public void Save(string romFileName, string logisimImageFileName)
         {
             var sw = Stopwatch.StartNew();
-            Console.Write("Writing data");
+            Console.Write("Writing data...");
 
             if (File.Exists(romFileName))
             {
@@ -86,8 +86,6 @@ namespace Mcc
                 // (low byte first, high byte second)
                 foreach (int address in this.microcode.Keys)
                 {
-                    Console.Write(".");
-
                     byte high = (byte)(this.microcode[address] >> 8);
                     byte low = (byte)(this.microcode[address] & 0xff);
 
@@ -109,8 +107,6 @@ namespace Mcc
 
                 for (int row = 0; row < UInt16.MaxValue / 8; row++)
                 {
-                    Console.Write(".");
-
                     string rowData = string.Empty;
 
                     for (int col = 0; col < 8; col++)
@@ -221,7 +217,7 @@ namespace Mcc
         private void LoadCode()
         {
             var sw = Stopwatch.StartNew();
-            Console.Write("Loading code ");
+            Console.Write("Loading code...");
 
             int cursor = this.source.IndexOf(SECTION_CODE, StringComparison.OrdinalIgnoreCase);
 
@@ -284,8 +280,6 @@ namespace Mcc
                             {
                                 foreach (string hl2 in REGISTERS_PAIRS)
                                 {
-                                    Console.Write(".");
-
                                     string targetMnemonic = mnemonic.Replace("r1", r1).Replace("r2", r2)
                                         .Replace("hl1", hl1).Replace("hl2", hl2);
 
@@ -319,7 +313,7 @@ namespace Mcc
         private void CompileCode()
         {
             var sw = Stopwatch.StartNew();
-            Console.Write("Compiling code ");
+            Console.Write("Compiling code...");
 
             foreach (var c in this.MicrocodeSource)
             {
@@ -327,8 +321,6 @@ namespace Mcc
                 {
                     for (int f = 0; f < 16; f++)
                     {
-                        Console.Write(".");
-
                         if (c.Flags != null && !c.Flags.Match(f))
                         {
                             continue;
