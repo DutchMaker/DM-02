@@ -317,8 +317,7 @@ EA:1:HALT
     0:  [data]
         r2_out
         r1_load
-    1:  [function]
-        TSTATE_reset
+    1:  TSTATE_reset
   .end
 
   MOV hl1,hl2

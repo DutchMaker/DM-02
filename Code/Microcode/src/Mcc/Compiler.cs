@@ -442,7 +442,7 @@ namespace Mcc
                 result.Add(microInstruction);
 
                 cursor = tstateEnd < tstates.Length 
-                    ? tstates.IndexOf(":", tstateEnd + 1)
+                    ? tstates.IndexOf(":", tstateEnd)
                     : -1;
             }
 
