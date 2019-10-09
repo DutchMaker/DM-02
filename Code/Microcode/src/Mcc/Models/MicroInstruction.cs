@@ -6,9 +6,9 @@ namespace Mcc.Models
 {
     public class MicroInstruction
     {
-        private const string INSTRUCTION_FORMAT_DATA = "0|operand_out|operand_load|0|0|function|0";           // '|' will be removed
-        private const string INSTRUCTION_FORMAT_DATA_ALU = "0|operand_out|operand_load|1|alu_function|0";   
-        private const string INSTRUCTION_FORMAT_FUNCTION = "1|function0|000000|function1|0";
+        private const string INSTRUCTION_FORMAT_DATA = "1|operand_out|operand_load|0|0|function|0";           // '|' will be removed
+        private const string INSTRUCTION_FORMAT_DATA_ALU = "1|operand_out|operand_load|1|alu_function|0";   
+        private const string INSTRUCTION_FORMAT_FUNCTION = "0|function0|000000|function1|0";
 
         public MicroInstructionType Type { get; set; }
 
