@@ -16,3 +16,6 @@ Code/Assembler/app/*
 !Code/Assembler/app/README.md
 
 .~lock
+.DS_Store
+.vscode
+*.code-workspace
