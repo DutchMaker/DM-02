@@ -2,45 +2,41 @@ namespace Emulator
 {
     public class Cpu
     {
-        public Register A { get; } = new Register();
-        public Register B { get; } = new Register();
-        public Register C { get; } = new Register();
-        public Register H { get; } = new Register();
-        public Register L { get; } = new Register();
-        public Register IR { get; } = new Register();
-        public FlagsRegister F { get; } = new FlagsRegister();
-        public Alu ALU { get; } = new Alu();
-        public Mar MAR { get; } = new Mar();
-        public Mem MEM { get; } = new Mem();
-        public Bus BUS { get; } = new Bus();
+        private bool running = true;
 
-        public Cpu()
+        public CpuModules Modules { get; } = new CpuModules();
+
+        public long Ticks { get; private set; }
+
+        public void Start()
         {
-            A.BUS = BUS;
-            B.BUS = BUS;
-            C.BUS = BUS;
-            H.BUS = BUS;
-            L.BUS = BUS;
-            IR.BUS = BUS;
-            F.BUS = BUS;
-            ALU.BUS = BUS;
-            MAR.BUS = BUS;
-            MEM.BUS = BUS;
-        }
-
-        public void Run()
-        {
-
+            running = true;
         }
         
         public void Stop()
         {
-
+            running = false;
         }
 
         public void Reset()
         {
+            Ticks = 0;
+        }
 
+        public void Step()
+        {
+
+        }
+
+        public void Tick()
+        {
+            if (!running)
+            {
+                return;
+            }
+
+            Ticks++;
+            Modules.Tick();
         }
     }
 }

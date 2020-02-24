@@ -7,18 +7,22 @@ namespace Emulator
 {
     public class Program
     {
+        private const int TICK_INTERVAL = 500;
+
         private static Cpu cpu = new Cpu();
 
-        private static Label labelTest;
-        private static Stopwatch sw = Stopwatch.StartNew();
+        private static Label labelTicks;
+
+        private static Label labelClockState;
 
         public static void Main(string[] args)
         {
             Application.Init();
 
-            Application.MainLoop.AddTimeout(TimeSpan.FromMilliseconds(10), UpdateCpuInfo);
+            Application.MainLoop.AddTimeout(TimeSpan.FromMilliseconds(TICK_INTERVAL), PerformCpuTick);
+            Application.MainLoop.AddTimeout(TimeSpan.FromMilliseconds(20), UpdateCpuInfo);
             Application.Top.Add(CreateWindow());
-            
+
             Application.Run();
         }
 
@@ -34,7 +38,7 @@ namespace Emulator
 
             window.Add(new Button("Quit")
             {
-                X = 21,
+                X = 31,
                 Y = Pos.Bottom(window) - 4,
                 Clicked = () => { Application.Top.Running = false; }
             });
@@ -49,7 +53,7 @@ namespace Emulator
             { 
                 if (run.Text == "Start")
                 {
-                    cpu.Run();
+                    cpu.Start();
                     run.Text = "Stop ";
                 }
                 else
@@ -63,22 +67,38 @@ namespace Emulator
 
             window.Add(new Button("Reset")
             {
-                X = 11,
+                X = 12,
                 Y = Pos.Bottom(window) - 4,
                 Clicked = cpu.Reset
             });
 
-            window.FocusLast();
+            window.Add(new Button("Step")
+            {
+                X = 22,
+                Y = Pos.Bottom(window) - 4,
+                Clicked = cpu.Step
+            });
 
-            labelTest = new Label(2, 2, "Test label...");
-            window.Add(labelTest);
+            labelTicks = new Label(2, 2, "Clock ticks: -");
+            labelClockState = new Label(2, 3, "Clock state: -");
+
+            window.Add(labelTicks);
+            window.Add(labelClockState);
 
             return window;
         }
 
         private static bool UpdateCpuInfo(MainLoop caller)
         {
-            labelTest.Text = sw.ElapsedTicks.ToString();
+            labelTicks.Text = $"Clock ticks: {cpu.Ticks}";
+            labelClockState.Text = $"Clock state: {cpu.Modules.CLOCK.State.ToString().PadRight(14, ' ')}";
+
+            return true;
+        }
+
+        private static bool PerformCpuTick(MainLoop caller)
+        {
+            cpu.Tick();
             return true;
         }
     }

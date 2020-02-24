@@ -1,6 +1,6 @@
 namespace Emulator
 {
-    public class Register
+    public class ArithmeticLogicUnit
     {
         public BusConnections BUS { get; set; }
 
@@ -9,8 +9,6 @@ namespace Emulator
         public UInt8Value Value { get; set; }
 
         public bool Load { get; set; }
-
-        public bool Out { get; set; }
 
         public void Tick()
         {

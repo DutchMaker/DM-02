@@ -2,7 +2,11 @@ namespace Emulator
 {
     public class FlagsRegister
     {
-        public Bus BUS { get; set; }
+        public BusConnections BUS { get; set; }
+
+        public Clock CLOCK { get; set; }
+
+        public bool Load { get; set; }
 
         public bool Carry { get; set; }
 
@@ -11,5 +15,9 @@ namespace Emulator
         public bool Zero { get; set; }
 
         public bool Negative { get; set; }
+
+        public void Tick()
+        {
+        }
     }
 }
