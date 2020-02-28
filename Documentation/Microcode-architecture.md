@@ -4,7 +4,7 @@
 
 
 
-DM-01 used 19 address lines for the microcode ROM and stored state of 48 control lines in 6 separate bytes. The linear approach is not very scalable and also made the control unit very complex, because it had to retrieve 6 bytes of data for each microinstruction; this approach is one of the main reasons the project failed.
+DM-01 used 19 address lines for the microcode ROM and stored state of 48 control lines in 6 separate bytes. The linear approach is not very scalable and also made the control unit very complex, because it had to retrieve 6 bytes of data for each microinstruction; this approach is the main reason the project failed.
 
 The big lesson I took from this is that the control line states need to be stored in encoded form in order to limit the amount of data stored and simplify the process of getting the data out of the ROM and into the control unit.
 

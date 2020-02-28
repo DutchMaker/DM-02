@@ -2,7 +2,7 @@
 
 The clock module of the DM-02 generates a 1 MHz clock that is essentially split into two phases (*see: [Clock phases](#clock-phases)*)
 
-There is no option for changing the clock speed (as opposed to what the DM-01 did), but there is a `CONTINUE` function that allows to resume program execution after a `HALT` instruction was executed.
+There is no option for changing the clock speed (as opposed to the DM-01), but there is a `CONTINUE` function that allows to resume program execution after a `HALT` instruction was executed.
 
 There is also a *single-step mode* that allows the user to manually pulse the clock.
 
