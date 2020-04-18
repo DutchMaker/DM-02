@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:Power-Clock-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -830,9 +831,9 @@ Wire Wire Line
 	6200 3500 6250 3500
 Text GLabel 6200 3500 0    60   Input ~ 0
 HALT
-Text GLabel 7350 4100 0    50   Output ~ 0
+Text GLabel 8250 4100 0    50   Output ~ 0
 ~CLOCK1
-Text GLabel 7350 4850 0    50   Output ~ 0
+Text GLabel 6450 4650 0    50   Output ~ 0
 CLOCK2
 Wire Wire Line
 	2450 5300 2250 5300
@@ -884,10 +885,10 @@ Wire Wire Line
 Text Notes 1800 3700 0    50   ~ 0
 When HALT is active (high), pushing the CONTINUE\nbutton once will cancel out the HALT signal:\n\nHigh (active) CONTINUE signal sets flip-flop.\nLow (inactive) HALT signal resets flip-flop.
 $Comp
-L 74xx-Computer-Symbols:NE555 U?
+L 74xx-Computer-Symbols:NE555 U2
 U 1 1 5DBC51EF
 P 5000 3900
-F 0 "U?" H 4950 3900 50  0000 L CNN
+F 0 "U2" H 4950 3900 50  0000 L CNN
 F 1 "555" H 5100 4250 50  0000 L CNN
 F 2 "Package_DIP:DIP-8_W7.62mm" H 5000 3900 50  0001 C CNN
 F 3 "" H 5000 3900 50  0001 C CNN
@@ -895,10 +896,10 @@ F 3 "" H 5000 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx-Computer-Symbols:R R?
+L 74xx-Computer-Symbols:R R3
 U 1 1 5DBC51F5
 P 3850 3500
-F 0 "R?" V 3930 3500 50  0000 C CNN
+F 0 "R3" V 3930 3500 50  0000 C CNN
 F 1 "5K" V 3750 3500 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3780 3500 50  0001 C CNN
 F 3 "" H 3850 3500 50  0001 C CNN
@@ -906,10 +907,10 @@ F 3 "" H 3850 3500 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L 74xx-Computer-Symbols:C C?
+L 74xx-Computer-Symbols:C C3
 U 1 1 5DBC5208
 P 4450 4300
-F 0 "C?" H 4475 4400 50  0000 L CNN
+F 0 "C3" H 4475 4400 50  0000 L CNN
 F 1 "10nF" H 4475 4200 50  0000 L CNN
 F 2 "Capacitor_THT:C_Rect_L4.6mm_W2.0mm_P2.50mm_MKS02_FKP02" H 4488 4150 50  0001 C CNN
 F 3 "" H 4450 4300 50  0001 C CNN
@@ -917,10 +918,10 @@ F 3 "" H 4450 4300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx-Computer-Symbols:R R?
+L 74xx-Computer-Symbols:R R4
 U 1 1 5DBC520E
 P 4300 3500
-F 0 "R?" V 4380 3500 50  0000 C CNN
+F 0 "R4" V 4380 3500 50  0000 C CNN
 F 1 "5K" V 4200 3500 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4230 3500 50  0001 C CNN
 F 3 "" H 4300 3500 50  0001 C CNN
@@ -965,25 +966,10 @@ Wire Wire Line
 Wire Wire Line
 	4300 4100 4500 4100
 $Comp
-L 74xx-Computer-Symbols:74LS04 U4
-U 4 1 5DBD1E43
-P 3400 3900
-F 0 "U4" H 3350 3900 50  0000 C CNN
-F 1 "74x04" H 3590 3775 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 3400 3900 50  0001 C CNN
-F 3 "" H 3400 3900 50  0001 C CNN
-	4    3400 3900
-	1    0    0    -1  
-$EndComp
-Text GLabel 1700 4050 0    60   Input ~ 0
-CONTINUE
-Text GLabel 2950 4100 0    60   Input ~ 0
-HALT
-$Comp
-L 74xx-Computer-Symbols:+5V #PWR?
+L 74xx-Computer-Symbols:+5V #PWR03
 U 1 1 5DBEABD3
 P 5100 3300
-F 0 "#PWR?" H 5100 3150 50  0001 C CNN
+F 0 "#PWR03" H 5100 3150 50  0001 C CNN
 F 1 "+5V" H 5100 3440 50  0000 C CNN
 F 2 "" H 5100 3300 50  0001 C CNN
 F 3 "" H 5100 3300 50  0001 C CNN
@@ -992,10 +978,10 @@ F 3 "" H 5100 3300 50  0001 C CNN
 $EndComp
 Connection ~ 5000 3300
 $Comp
-L 74xx-Computer-Symbols:GND #PWR?
+L 74xx-Computer-Symbols:GND #PWR04
 U 1 1 5DBEAC5C
 P 5500 4450
-F 0 "#PWR?" H 5500 4200 50  0001 C CNN
+F 0 "#PWR04" H 5500 4200 50  0001 C CNN
 F 1 "GND" H 5500 4300 50  0000 C CNN
 F 2 "" H 5500 4450 50  0001 C CNN
 F 3 "" H 5500 4450 50  0001 C CNN
@@ -1010,16 +996,13 @@ Wire Wire Line
 	5100 3300 5000 3300
 Wire Wire Line
 	5500 3700 6250 3700
-Wire Wire Line
-	2950 4100 4300 4100
-Connection ~ 4300 4100
 Text Notes 5700 3800 0    50   ~ 0
 CONTINUE
 $Comp
-L 74xx-Computer-Symbols:R R?
+L 74xx-Computer-Symbols:R R5
 U 1 1 5DD01CC6
 P 6250 3850
-F 0 "R?" V 6330 3850 50  0000 C CNN
+F 0 "R5" V 6330 3850 50  0000 C CNN
 F 1 "5K" V 6150 3850 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6180 3850 50  0001 C CNN
 F 3 "" H 6250 3850 50  0001 C CNN
@@ -1027,10 +1010,10 @@ F 3 "" H 6250 3850 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L 74xx-Computer-Symbols:GND #PWR?
+L 74xx-Computer-Symbols:GND #PWR05
 U 1 1 5DD01E72
 P 6250 4000
-F 0 "#PWR?" H 6250 3750 50  0001 C CNN
+F 0 "#PWR05" H 6250 3750 50  0001 C CNN
 F 1 "GND" H 6250 3850 50  0000 C CNN
 F 2 "" H 6250 4000 50  0001 C CNN
 F 3 "" H 6250 4000 50  0001 C CNN
@@ -1041,41 +1024,10 @@ Connection ~ 6250 3700
 Wire Wire Line
 	6250 3700 7150 3700
 $Comp
-L Switch:SW_Push SW?
-U 1 1 5DD0D901
-P 1500 3900
-F 0 "SW?" H 1500 4185 50  0000 C CNN
-F 1 "CONTINUE" H 1500 4094 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_Tactile_SKHH_Angled" H 1500 4100 50  0001 C CNN
-F 3 "" H 1500 4100 50  0001 C CNN
-	1    1500 3900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1700 4050 1950 4050
-Wire Wire Line
-	1950 4050 1950 3900
-Wire Wire Line
-	1950 3900 1700 3900
-Wire Wire Line
-	1950 3900 2950 3900
-Connection ~ 1950 3900
-$Comp
-L 74xx-Computer-Symbols:+5V #PWR?
-U 1 1 5DD319DB
-P 1300 3900
-F 0 "#PWR?" H 1300 3750 50  0001 C CNN
-F 1 "+5V" H 1300 4040 50  0000 C CNN
-F 2 "" H 1300 3900 50  0001 C CNN
-F 3 "" H 1300 3900 50  0001 C CNN
-	1    1300 3900
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR?
+L power:GND #PWR02
 U 1 1 5E9A37A5
 P 5100 2800
-F 0 "#PWR?" H 5100 2550 50  0001 C CNN
+F 0 "#PWR02" H 5100 2550 50  0001 C CNN
 F 1 "GND" V 5100 2600 50  0000 C CNN
 F 2 "" H 5100 2800 50  0001 C CNN
 F 3 "" H 5100 2800 50  0001 C CNN
@@ -1090,13 +1042,13 @@ Text GLabel 1200 1200 0    39   Input ~ 0
 ~CLOCK2
 $Comp
 L 74xx-Computer-Symbols:74LS04 U4
-U 1 1 5AD05D2F
+U 3 1 5AD05D2F
 P 6700 3100
 F 0 "U4" H 6650 3100 50  0000 C CNN
 F 1 "74x04" H 6700 3050 50  0001 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 6700 3100 50  0001 C CNN
 F 3 "" H 6700 3100 50  0001 C CNN
-	1    6700 3100
+	3    6700 3100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1109,50 +1061,25 @@ Wire Wire Line
 	6250 2650 6250 3100
 Connection ~ 6250 2650
 $Comp
-L 74xx-Computer-Symbols:74LS04 U?
-U 2 1 5E99EDD0
-P 8700 4850
-F 0 "U?" H 8650 4850 50  0000 C CNN
-F 1 "74x04" H 8890 4725 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 8700 4850 50  0001 C CNN
-F 3 "" H 8700 4850 50  0001 C CNN
-	2    8700 4850
-	-1   0    0    1   
-$EndComp
-$Comp
-L 74xx-Computer-Symbols:74LS04 U?
-U 2 1 5E9A86F6
-P 7800 4850
-F 0 "U?" H 7750 4850 50  0000 C CNN
-F 1 "74x04" H 8000 4950 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 7800 4850 50  0001 C CNN
-F 3 "" H 7800 4850 50  0001 C CNN
-	2    7800 4850
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:C_Small C?
+L Device:C_Small C4
 U 1 1 5E9AEE4F
-P 8250 5100
-F 0 "C?" H 8100 5100 50  0000 C CNN
-F 1 "68 nF" H 8100 5000 50  0000 C CNN
-F 2 "Capacitor_THT:C_Rect_L4.6mm_W3.0mm_P2.50mm_MKS02_FKP02" H 8250 5100 50  0001 C CNN
-F 3 "~" H 8250 5100 50  0001 C CNN
-	1    8250 5100
+P 8250 4900
+F 0 "C4" H 8100 4900 50  0000 C CNN
+F 1 "1nF" H 8100 4800 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L4.6mm_W3.0mm_P2.50mm_MKS02_FKP02" H 8250 4900 50  0001 C CNN
+F 3 "~" H 8250 4900 50  0001 C CNN
+	1    8250 4900
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	8250 5000 8250 4850
-Connection ~ 8250 4850
 $Comp
-L power:GND #PWR?
+L power:GND #PWR06
 U 1 1 5E9B5AEB
-P 8250 5200
-F 0 "#PWR?" H 8250 4950 50  0001 C CNN
-F 1 "GND" H 8250 5050 50  0000 C CNN
-F 2 "" H 8250 5200 50  0001 C CNN
-F 3 "" H 8250 5200 50  0001 C CNN
-	1    8250 5200
+P 8250 5000
+F 0 "#PWR06" H 8250 4750 50  0001 C CNN
+F 1 "GND" H 8250 4850 50  0000 C CNN
+F 2 "" H 8250 5000 50  0001 C CNN
+F 3 "" H 8250 5000 50  0001 C CNN
+	1    8250 5000
 	1    0    0    -1  
 $EndComp
 Text GLabel 1200 1300 0    50   Input ~ 0
@@ -1169,48 +1096,17 @@ F 3 "~" H 2750 1700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 2550 1000
-Text GLabel 7350 4650 0    50   Output ~ 0
+Text GLabel 6450 4450 0    50   Output ~ 0
 ~CLOCK2
 Wire Wire Line
-	7350 4650 8250 4650
-Wire Wire Line
-	8250 4650 8250 4850
-$Comp
-L 74xx-Computer-Symbols:74LS04 U?
-U 2 1 5E9E9831
-P 8700 4100
-F 0 "U?" H 8650 4100 50  0000 C CNN
-F 1 "74x04" H 8890 3975 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 8700 4100 50  0001 C CNN
-F 3 "" H 8700 4100 50  0001 C CNN
-	2    8700 4100
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	9150 4100 9150 4850
-$Comp
-L 74xx-Computer-Symbols:74LS04 U?
-U 2 1 5E9F0F8E
-P 7800 4300
-F 0 "U?" H 7750 4300 50  0000 C CNN
-F 1 "74x04" H 7990 4175 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 7800 4300 50  0001 C CNN
-F 3 "" H 7800 4300 50  0001 C CNN
-	2    7800 4300
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	7350 4100 8250 4100
-Wire Wire Line
-	8250 4300 8250 4100
-Connection ~ 8250 4100
-Text GLabel 7350 4300 0    50   Output ~ 0
+	9150 4100 9150 4300
+Text GLabel 8250 4300 0    50   Output ~ 0
 CLOCK1
 $Comp
-L Device:Polyfuse F?
+L Device:Polyfuse F1
 U 1 1 5EA0A4D1
 P 1850 7100
-F 0 "F?" V 1535 7100 50  0000 C CNN
+F 0 "F1" V 1535 7100 50  0000 C CNN
 F 1 "Polyfuse" V 1626 7100 50  0000 C CNN
 F 2 "Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm" H 1900 6900 50  0001 L CNN
 F 3 "~" H 1850 7100 50  0001 C CNN
@@ -1221,26 +1117,25 @@ $EndComp
 Wire Wire Line
 	1700 7400 2150 7400
 $Comp
-L 74xx-Computer-Symbols:74LS08 U?
-U 3 1 5EA24F80
+L 74xx-Computer-Symbols:74LS08 U5
+U 2 1 5EA24F80
 P 9750 4100
-F 0 "U?" H 9750 4150 50  0000 C CNN
+F 0 "U5" H 9750 4150 50  0000 C CNN
 F 1 "74x08" H 9750 4050 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 9750 4100 50  0001 C CNN
 F 3 "" H 9750 4100 50  0001 C CNN
-	3    9750 4100
+	2    9750 4100
 	-1   0    0    1   
 $EndComp
-Connection ~ 9150 4100
 Text GLabel 10400 4200 2    50   Input ~ 0
 CLOCK_ENABLE
 Wire Wire Line
 	10350 4000 10350 3500
 $Comp
-L Device:R R?
+L Device:R R6
 U 1 1 5EA37418
 P 10350 4500
-F 0 "R?" H 10200 4550 50  0000 C CNN
+F 0 "R6" H 10200 4550 50  0000 C CNN
 F 1 "5K" H 10200 4450 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 10280 4500 50  0001 C CNN
 F 3 "~" H 10350 4500 50  0001 C CNN
@@ -1248,10 +1143,10 @@ F 3 "~" H 10350 4500 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR07
 U 1 1 5EA3E422
 P 10350 4650
-F 0 "#PWR?" H 10350 4500 50  0001 C CNN
+F 0 "#PWR07" H 10350 4500 50  0001 C CNN
 F 1 "+5V" H 10300 4800 50  0000 L CNN
 F 2 "" H 10350 4650 50  0001 C CNN
 F 3 "" H 10350 4650 50  0001 C CNN
@@ -1263,4 +1158,111 @@ Wire Wire Line
 Wire Wire Line
 	10350 4350 10350 4200
 Connection ~ 10350 4200
+$Comp
+L 74xx-Computer-Symbols:74HC14 U9
+U 2 1 5E9B8AA4
+P 8700 4650
+F 0 "U9" H 8650 4650 50  0000 C CNN
+F 1 "74x14" H 8400 4800 50  0000 C CNN
+F 2 "" H 8700 4650 50  0001 C CNN
+F 3 "" H 8700 4650 50  0001 C CNN
+	2    8700 4650
+	-1   0    0    1   
+$EndComp
+Connection ~ 8250 4650
+Wire Wire Line
+	8250 4650 8250 4800
+$Comp
+L 74xx-Computer-Symbols:74HC14 U9
+U 3 1 5E9B9CEF
+P 7800 4650
+F 0 "U9" H 7750 4650 50  0000 C CNN
+F 1 "74x14" H 8000 4750 50  0000 C CNN
+F 2 "" H 7800 4650 50  0001 C CNN
+F 3 "" H 7800 4650 50  0001 C CNN
+	3    7800 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L 74xx-Computer-Symbols:74HC14 U9
+U 4 1 5E9C721B
+P 6900 4450
+F 0 "U9" H 6850 4450 50  0000 C CNN
+F 1 "74x14" H 7100 4550 50  0000 C CNN
+F 2 "" H 6900 4450 50  0001 C CNN
+F 3 "" H 6900 4450 50  0001 C CNN
+	4    6900 4450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6450 4650 7350 4650
+Wire Wire Line
+	7350 4650 7350 4450
+Connection ~ 7350 4650
+Wire Wire Line
+	8250 4300 9150 4300
+Connection ~ 9150 4300
+Wire Wire Line
+	9150 4300 9150 4650
+Connection ~ 9150 4100
+$Comp
+L 74xx-Computer-Symbols:74HC14 U9
+U 1 1 5E9B7892
+P 8700 4100
+F 0 "U9" H 8650 4100 50  0000 C CNN
+F 1 "74x14" H 8900 4200 50  0000 C CNN
+F 2 "" H 8700 4100 50  0001 C CNN
+F 3 "" H 8700 4100 50  0001 C CNN
+	1    8700 4100
+	-1   0    0    1   
+$EndComp
+Connection ~ 4300 4100
+Wire Wire Line
+	2950 4100 4300 4100
+$Comp
+L 74xx-Computer-Symbols:+5V #PWR01
+U 1 1 5DD319DB
+P 1300 3900
+F 0 "#PWR01" H 1300 3750 50  0001 C CNN
+F 1 "+5V" H 1300 4040 50  0000 C CNN
+F 2 "" H 1300 3900 50  0001 C CNN
+F 3 "" H 1300 3900 50  0001 C CNN
+	1    1300 3900
+	0    -1   -1   0   
+$EndComp
+Connection ~ 1950 3900
+Wire Wire Line
+	1950 3900 2950 3900
+Wire Wire Line
+	1950 3900 1700 3900
+Wire Wire Line
+	1950 4050 1950 3900
+Wire Wire Line
+	1700 4050 1950 4050
+$Comp
+L Switch:SW_Push SW5
+U 1 1 5DD0D901
+P 1500 3900
+F 0 "SW5" H 1500 4185 50  0000 C CNN
+F 1 "CONTINUE" H 1500 4094 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_Tactile_SKHH_Angled" H 1500 4100 50  0001 C CNN
+F 3 "" H 1500 4100 50  0001 C CNN
+	1    1500 3900
+	1    0    0    -1  
+$EndComp
+Text GLabel 2950 4100 0    60   Input ~ 0
+HALT
+Text GLabel 1700 4050 0    60   Input ~ 0
+CONTINUE
+$Comp
+L 74xx-Computer-Symbols:74LS04 U4
+U 1 1 5DBD1E43
+P 3400 3900
+F 0 "U4" H 3350 3900 50  0000 C CNN
+F 1 "74x04" H 3590 3775 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 3400 3900 50  0001 C CNN
+F 3 "" H 3400 3900 50  0001 C CNN
+	1    3400 3900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
