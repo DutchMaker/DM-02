@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 89)
+    (drawings 90)
     (tracks 769)
     (zones 0)
     (modules 11)
@@ -11,7 +11,7 @@
 
   (page A4)
   (layers
-    (0 F.Cu signal hide)
+    (0 F.Cu signal)
     (31 B.Cu signal)
     (32 B.Adhes user hide)
     (33 F.Adhes user hide)
@@ -27,10 +27,10 @@
     (43 Eco2.User user hide)
     (44 Edge.Cuts user)
     (45 Margin user)
-    (46 B.CrtYd user hide)
-    (47 F.CrtYd user hide)
+    (46 B.CrtYd user)
+    (47 F.CrtYd user)
     (48 B.Fab user hide)
-    (49 F.Fab user hide)
+    (49 F.Fab user)
   )
 
   (setup
@@ -1035,6 +1035,7 @@
       (net 16 "Net-(XA1-PadMISO)"))
   )
 
+  (gr_poly (pts (xy 129.54 38.1) (xy 123.13 38.08) (xy 123.19 25.4) (xy 129.54 25.4)) (layer F.SilkS) (width 0.1))
   (gr_text 2.36 (at 91.44 118.745 270) (layer F.SilkS) (tstamp 5E97D7EF)
     (effects (font (size 1 1) (thickness 0.15)) (justify right))
   )
