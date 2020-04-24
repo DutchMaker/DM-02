@@ -57,24 +57,23 @@ The following operands can be used in this operation:
 
 | Operand    | Description                              | Bits   |
 | ---------- | ---------------------------------------- | ------ |
-| A          | Accumulator                              | `0000` |
-| B          | B register                               | `0001` |
-| C          | C register                               | `0010` |
-| H          | H register                               | `0011` |
-| L          | L register                               | `0100` |
-| ALU        | ALU result *(load only)*                 | `0101` |
-| F          | Flags register                           | `0110` |
-| MAR_H      | Memory Access Register address high byte | `0111` |
-| MAR_L      | Memory Access Register address low byte  | `1000` |
-| MEM        | Memory                                   | `1001` |
-| PC_H       | Program Counter high byte                | `1010` |
-| PC_L       | Program Counter low byte                 | `1011` |
-| STK_H      | Stack Pointer high byte                  | `1100` |
-| STK_L      | Stack Pointer low byte                   | `1101` |
-| *not used* | *available for future use*               | `1110` |
+| A          | Accumulator                              | `0001` |
+| B          | B register                               | `0010` |
+| C          | C register                               | `0011` |
+| H          | H register                               | `0100` |
+| L          | L register                               | `0101` |
+| ALU        | ALU result *(load only)*                 | `0110` |
+| F          | Flags register                           | `0111` |
+| MAR_H      | Memory Access Register address high byte | `1000` |
+| MAR_L      | Memory Access Register address low byte  | `1001` |
+| MEM        | Memory                                   | `1010` |
+| PC_H       | Program Counter high byte                | `1011` |
+| PC_L       | Program Counter low byte                 | `1100` |
+| STK_H      | Stack Pointer high byte                  | `1101` |
+| STK_L      | Stack Pointer low byte                   | `1110` |
 | *not used* | *available for future use*               | `1111` |
 
-### Functions
+### Functions	
 
 With the *function* in the microinstruction word, we control what control lines (that are not used for output to or loading from the bus) are enabled.
 
@@ -94,7 +93,7 @@ The following functions can be used in this operation:
 | FSET_c           | Set the Carry flag                                           | `1010` |
 | FCLR_z           | Clear the Zero flag                                          | `1011` |
 | FCLR_c           | Clear the Carry flag                                         | `1100` |
-| *not used*       | *available for future use*                                   | `1101` |
+| CMP              | Compare function (only store ALU flags, not the result)      | `1101` |
 | *not used*       | *available for future use*                                   | `1110` |
 | *not used*       | *available for future use*                                   | `1111` |
 

@@ -19,3 +19,4 @@ Code/Assembler/app/*
 .DS_Store
 .vscode
 *.code-workspace
+*.sch-bak
