@@ -105,7 +105,7 @@
 24:3:MOV address,B
 25:3:MOV address,C
 26:3:MOV address,BC
-27:3:MOV address,HL
+# 27:3:MOV address,HL <<< Not implemented because it overwrites BC
 28:3:MOV A,(address)
 29:3:MOV B,(address)
 2A:3:MOV C,(address)
@@ -381,6 +381,31 @@ EA:1:HALT
   .end
 
   MOV hl1,address
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data]
+      MEM_out
+      h1_load
+    : MAR_inc
+    : [data]
+      MEM_out
+      l1_load
+    : [function]
+      PC_inc    
+      TSTATE_reset
   .end
 
   MOV address,r1
@@ -408,6 +433,31 @@ EA:1:HALT
   .end
 
   MOV address,hl1
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data]
+      h1_out
+      MEM_load
+    : MAR_inc
+    : [data]
+      l1_out
+      MEM_load
+    : [function]
+      PC_inc    
+      TSTATE_reset
   .end
 
   MOV r1,(address)
@@ -480,6 +530,15 @@ EA:1:HALT
   .end
 
   ADD value
+    : PC_MAR_transfer
+    : [data][A+B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
   ADD address
