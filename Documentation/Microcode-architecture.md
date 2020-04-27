@@ -93,7 +93,7 @@ The following functions can be used in this operation:
 | FSET_c           | Set the Carry flag                                           | `1010` |
 | FCLR_z           | Clear the Zero flag                                          | `1011` |
 | FCLR_c           | Clear the Carry flag                                         | `1100` |
-| CMP              | Compare function (only store ALU flags, not the result)      | `1101` |
+| *not used*       | *available for future use*                                   | `1101` |
 | *not used*       | *available for future use*                                   | `1110` |
 | *not used*       | *available for future use*                                   | `1111` |
 

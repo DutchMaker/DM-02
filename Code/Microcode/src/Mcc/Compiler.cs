@@ -346,7 +346,7 @@ namespace Mcc
             {
                 Instruction = this.Instructions.FirstOrDefault(i => i.Mnemonic.Equals(mnemonic, StringComparison.OrdinalIgnoreCase)),
                 Flags = flags,
-                TStates = this.ParseTStateCode(tstates)
+                TStates = this.ParseTStateCode(tstates, mnemonic)
             };
 
             if (instructionCode.Instruction == null)
@@ -357,13 +357,27 @@ namespace Mcc
             this.MicrocodeSource.Add(instructionCode);
         }
 
-        private List<MicroInstruction> ParseTStateCode(string tstates)
+        private List<MicroInstruction> ParseTStateCode(string tstates, string mnemonic)
         {
             var result = new List<MicroInstruction>();
 
             if (string.IsNullOrEmpty(tstates))
             {
                 return result;
+            }
+
+            if (tstates.IndexOf(">") > -1)
+            {
+                // Instruction doesn't define T-states, but instead refers to another instruction for the T-state definition.
+                string referredMnemonic = tstates.Substring(1).Trim();
+                var referredInstruction = this.MicrocodeSource.FirstOrDefault(m => m.Instruction.Mnemonic.Equals(referredMnemonic, StringComparison.OrdinalIgnoreCase));
+
+                if (referredInstruction == null)
+                {
+                    throw new CompilerException($"Could not find reference instruction '{referredMnemonic}' for instruction {mnemonic}");
+                }
+
+                return referredInstruction.TStates;
             }
 
             tstates = tstates.Replace(" ", string.Empty);
@@ -434,7 +448,7 @@ namespace Mcc
                         }
                         else
                         {
-                            throw new CompilerException($"Could not locate operand or function '{uinstructions[i]}' for tstate at position {cursor}");
+                            throw new CompilerException($"Could not locate operand or function '{uinstructions[i]}' for tstate at position {cursor} for instruction {mnemonic}");
                         }
                     }
                 }
@@ -444,6 +458,11 @@ namespace Mcc
                 cursor = tstateEnd < tstates.Length 
                     ? tstates.IndexOf(":", tstateEnd)
                     : -1;
+            }
+
+            if (result.Count > 16)
+            {
+                throw new CompilerException($"Maximum number of tstates exceeded ({result.Count}) for instruction {mnemonic}");
             }
 
             return result;

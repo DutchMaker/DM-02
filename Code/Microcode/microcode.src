@@ -28,7 +28,6 @@
 1010:FSET_c
 1011:FCLR_z
 1100:FCLR_c
-1101:CMP
 .end
 
 .alu
@@ -307,7 +306,7 @@ EA:1:HALT
 .code
 
   NOP
-    0:  TSTATE_reset	
+    : TSTATE_reset	
   .end
 
   ###########
@@ -315,43 +314,97 @@ EA:1:HALT
   ###########
 
   MOV r1,r2
-    0:  [data]
-        r2_out
-        r1_load
-    1:  TSTATE_reset
+    : [data]
+      r2_out
+      r1_load
+    : TSTATE_reset
   .end
 
   MOV hl1,hl2
-    0:  [data]
-        h2_out
-        h1_load
-    1:  [data]
-        l2_out
-        l1_load
-    2:  [function]
-        TSTATE_reset
+    : [data]
+      h2_out
+      h1_load
+    : [data]
+      l2_out
+      l1_load
+    : [function]
+      TSTATE_reset
   .end
 
   MOV r1,value
-    0:  [data]
-        PC_MAR_transfer
-        MEM_out
-        r1_load
-    1:  [function]
-        PC_inc
-        TSTATE_reset
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      r1_load
+    : [function]
+      PC_inc
+      TSTATE_reset
   .end
 
   MOV hl1,value
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      h1_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      l1_load
+    : [function]
+      PC_inc    
+      TSTATE_reset
   .end
 
-  MOV r1,address    
+  MOV r1,address
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data]
+      MEM_out
+      r1_load
+    : [function]
+      PC_inc    
+      TSTATE_reset
   .end
 
-  MOV hl1,address    
+  MOV hl1,address
   .end
 
   MOV address,r1
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data]
+      r1_out
+      MEM_load
+    : [function]
+      PC_inc    
+      TSTATE_reset
   .end
 
   MOV address,hl1
@@ -370,6 +423,17 @@ EA:1:HALT
   .end
 
   MOV r1,(hl1)
+    : [data]
+      h1_out
+      MAR_H_load
+    : [data]
+      l1_out
+      MAR_L_load
+    : [data]
+      MEM_out
+      r1_load
+    : [function]   
+      TSTATE_reset
   .end
 
   MOV (hl1),r1
@@ -406,13 +470,13 @@ EA:1:HALT
   ###########
 
   ADD r1
-    0:  [data][A+B]
-        r1_out
-        ALU_load
-    1:  [data]
-        ALU_out
-        A_load
-    2:  TSTATE_reset
+    : [data][A+B]
+      r1_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : TSTATE_reset
   .end
 
   ADD value
@@ -451,13 +515,13 @@ EA:1:HALT
   ###########
 
   SUB r1
-    0:  [data][A-B]
-        r1_out
-        ALU_load
-    1:  [data]
-        ALU_out
-        A_load
-    2:  TSTATE_reset
+    : [data][A-B]
+      r1_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : TSTATE_reset
   .end
 
   SUB value
@@ -687,23 +751,23 @@ EA:1:HALT
   ###########
 
   JMP address
-    0:  PC_MAR_transfer
-        PC_inc
-    1:  [data]
-        MEM_out
-        H_load
-    2:  PC_MAR_transfer
-    3:  [data]
-        MEM_out
-        L_load
-    4:  [data]
-        H_out
-        PC_H_load
-    5:  [data]
-        L_out
-        PC_L_load
-        PC_inc
-    6:  TSTATE_reset
+    : PC_MAR_transfer
+      PC_inc
+    : [data]
+      MEM_out
+      H_load
+    : PC_MAR_transfer
+    : [data]
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      PC_H_load
+    : [data]
+      L_out
+      PC_L_load
+      PC_inc
+    : TSTATE_reset
   .end
 
   ########################
@@ -711,71 +775,83 @@ EA:1:HALT
   ########################
 
   JC address [C=1]
-    0:  PC_MAR_transfer
-        PC_inc
-    1:  [data]
-        MEM_out
-        H_load
-    2:  PC_MAR_transfer
-    3:  [data]
-        MEM_out
-        L_load
-    4:  [data]
-        H_out
-        PC_H_load
-    5:  [data]
-        L_out
-        PC_L_load
-        PC_inc
-    6:  TSTATE_reset
+    > JMP address
   .end
 
   JC address [C=0]
-    0: PC_inc
-    1: PC_inc
-       TSTATE_reset
+    : PC_inc
+    : PC_inc
+      TSTATE_reset
   .end
 
   JZ address [Z=1]
+    > JMP address
   .end
 
   JZ address [Z=0]
+    : PC_inc
+    : PC_inc
+      TSTATE_reset
   .end
 
   JN address [N=1]
+    > JMP address
   .end
 
   JN address [N=0]
+    : PC_inc
+    : PC_inc
+      TSTATE_reset
   .end
 
   JO address [O=1]
+    > JMP address
   .end
 
   JO address [O=0]
+    : PC_inc
+    : PC_inc
+      TSTATE_reset
   .end
 
   JNC address [C=0]
+    > JMP address
   .end
 
   JNC address [C=1]
+    : PC_inc
+    : PC_inc
+      TSTATE_reset
   .end
 
   JNZ address [Z=0]
+    > JMP address
   .end
 
   JNZ address [Z=1]
+    : PC_inc
+    : PC_inc
+      TSTATE_reset
   .end
 
   JP address [N=0]
+    > JMP address
   .end
 
   JP address [N=1]
+    : PC_inc
+    : PC_inc
+      TSTATE_reset
   .end
 
   JNO address [O=0]
+    > JMP address
   .end
 
   JNO address [O=1]
+    : PC_inc
+    : PC_inc
+      TSTATE_reset
   .end
 
   ############
@@ -921,8 +997,8 @@ EA:1:HALT
   ############
 
   HALT
-    0: CLOCK_halt
-    1: TSTATE_reset
+    : CLOCK_halt
+    : TSTATE_reset
   .end
 
 .end
