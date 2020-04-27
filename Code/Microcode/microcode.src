@@ -132,181 +132,182 @@
 3F:1:MOV HL,(HL)
 40:1:MOV (HL),BC
 41:1:MOV (BC),HL
-42:1:PUSH A
-43:1:PUSH B
-44:1:PUSH C
-45:1:PUSH H
-46:1:PUSH L
-47:1:PUSH BC
-48:1:PUSH HL
-49:1:PUSH F
-4A:1:POP A
-4B:1:POP B
-4C:1:POP C
-4D:1:POP H
-4E:1:POP L
-4F:1:POP BC
-50:1:POP HL
-51:1:POP F
-52:1:ADD A
-53:1:ADD B
-54:1:ADD C
-55:1:ADD H
-56:1:ADD L
-57:2:ADD value
-58:3:ADD address
-59:3:ADD (address)
-5A:1:ADD (HL)
-5B:1:ADC A
-5C:1:ADC B
-5D:1:ADC C
-5E:1:ADC H
-5F:1:ADC L
-60:2:ADC value
-61:3:ADC address
-62:3:ADC (address)
-63:1:ADC (HL)
-64:1:SUB A
-65:1:SUB B
-66:1:SUB C
-67:1:SUB H
-68:1:SUB L
-69:2:SUB value
-6A:3:SUB address
-6B:3:SUB (address)
-6C:1:SUB (HL)
-6D:1:SBC A
-6E:1:SBC B
-6F:1:SBC C
-70:1:SBC H
-71:1:SBC L
-72:2:SBC value
-73:3:SBC address
-74:3:SBC (address)
-75:1:SBC (HL)
-76:1:INC A
-77:1:INC B
-78:1:INC C
-79:1:INC H
-7A:1:INC L
-7B:1:INC BC
-7C:1:INC HL
-7D:1:DEC A
-7E:1:DEC B
-7F:1:DEC C
-80:1:DEC H
-81:1:DEC L
-82:1:DEC BC
-83:1:DEC HL
-84:1:AND B
-85:1:AND C
-86:1:AND H
-87:1:AND L
-88:2:AND value
-89:3:AND address
-8A:3:AND (address)
-8B:1:AND (HL)
-8C:1:OR B
-8D:1:OR C
-8E:1:OR H
-8F:1:OR L
-90:2:OR value
-91:3:OR address
-92:3:OR (address)
-93:1:OR (HL)
-94:1:XOR B
-95:1:XOR C
-96:1:XOR H
-97:1:XOR L
-98:2:XOR value
-99:3:XOR address
-9A:3:XOR (address)
-9B:1:XOR (HL)
-9C:1:NOT A
-9D:1:NOT B
-9E:1:NOT C
-9F:1:NOT H
-A0:1:NOT L
-A1:2:NOT value
-A2:3:NOT address
-A3:3:NOT (address)
-A4:1:NOT (HL)
-A5:1:SHL A
-A6:1:SHL B
-A7:1:SHL C
-A8:1:SHL H
-A9:1:SHL L
-AA:2:SHL value
-AB:3:SHL address
-AC:3:SHL (address)
-AD:1:SHL (HL)
-AE:1:SHR A
-AF:1:SHR B
-B0:1:SHR C
-B1:1:SHR H
-B2:1:SHR L
-B3:2:SHR value
-B4:3:SHR address
-B5:3:SHR (address)
-B6:1:SHR (HL)
-B7:1:ROL A
-B8:1:ROL B
-B9:1:ROL C
-BA:1:ROL H
-BB:1:ROL L
-BC:2:ROL value
-BD:3:ROL address
-BE:3:ROL (address)
-BF:1:ROL (HL)
-C0:1:ROR A
-C1:1:ROR B
-C2:1:ROR C
-C3:1:ROR H
-C4:1:ROR L
-C5:2:ROR value
-C6:3:ROR address
-C7:3:ROR (address)
-C8:1:ROR (HL)
-C9:1:CMP B
-CA:1:CMP C
-CB:1:CMP H
-CC:1:CMP L
-CD:2:CMP value
-CE:3:CMP address
-CF:3:CMP (address)
-D0:1:CMP (HL)
-D1:3:JMP address
-D2:3:JC address
-D3:3:JZ address
-D4:3:JN address
-D5:3:JO address
-D6:3:JNC address
-D7:3:JNZ address
-D8:3:JP address
-D9:3:JNO address
-DA:3:CALL address
-DB:3:CC address
-DC:3:CZ address
-DD:3:CN address
-DE:3:CO address
-DF:3:CNC address
-E0:3:CNZ address
-E1:3:CP address
-E2:3:CNO address
-E3:1:RET
-E4:1:RC
-E5:1:RZ
-E6:1:RN
-E7:1:RO
-E8:1:RNC
-E9:1:RNZ
-EA:1:RP
-EB:1:RNO
-EC:1:FSET C
-ED:1:FSET Z
-EE:1:FCLR C
-EF:1:FCLR Z
-F0:1:HALT
+42:3:SP address
+43:1:PUSH A
+44:1:PUSH B
+45:1:PUSH C
+46:1:PUSH H
+47:1:PUSH L
+48:1:PUSH BC
+49:1:PUSH HL
+4A:1:PUSH F
+4B:1:POP A
+4C:1:POP B
+4D:1:POP C
+4E:1:POP H
+4F:1:POP L
+50:1:POP BC
+51:1:POP HL
+52:1:POP F
+53:1:ADD A
+54:1:ADD B
+55:1:ADD C
+56:1:ADD H
+57:1:ADD L
+58:2:ADD value
+59:3:ADD address
+5A:3:ADD (address)
+5B:1:ADD (HL)
+5C:1:ADC A
+5D:1:ADC B
+5E:1:ADC C
+5F:1:ADC H
+60:1:ADC L
+61:2:ADC value
+62:3:ADC address
+63:3:ADC (address)
+64:1:ADC (HL)
+65:1:SUB A
+66:1:SUB B
+67:1:SUB C
+68:1:SUB H
+69:1:SUB L
+6A:2:SUB value
+6B:3:SUB address
+6C:3:SUB (address)
+6D:1:SUB (HL)
+6E:1:SBC A
+6F:1:SBC B
+70:1:SBC C
+71:1:SBC H
+72:1:SBC L
+73:2:SBC value
+74:3:SBC address
+75:3:SBC (address)
+76:1:SBC (HL)
+77:1:INC A
+78:1:INC B
+79:1:INC C
+7A:1:INC H
+7B:1:INC L
+7C:1:INC BC
+7D:1:INC HL
+7E:1:DEC A
+7F:1:DEC B
+80:1:DEC C
+81:1:DEC H
+82:1:DEC L
+83:1:DEC BC
+84:1:DEC HL
+85:1:AND B
+86:1:AND C
+87:1:AND H
+88:1:AND L
+89:2:AND value
+8A:3:AND address
+8B:3:AND (address)
+8C:1:AND (HL)
+8D:1:OR B
+8E:1:OR C
+8F:1:OR H
+90:1:OR L
+91:2:OR value
+92:3:OR address
+93:3:OR (address)
+94:1:OR (HL)
+95:1:XOR B
+96:1:XOR C
+97:1:XOR H
+98:1:XOR L
+99:2:XOR value
+9A:3:XOR address
+9B:3:XOR (address)
+9C:1:XOR (HL)
+9D:1:NOT A
+9E:1:NOT B
+9F:1:NOT C
+A0:1:NOT H
+A1:1:NOT L
+A2:2:NOT value
+A3:3:NOT address
+A4:3:NOT (address)
+A5:1:NOT (HL)
+A6:1:SHL A
+A7:1:SHL B
+A8:1:SHL C
+A9:1:SHL H
+AA:1:SHL L
+AB:2:SHL value
+AC:3:SHL address
+AD:3:SHL (address)
+AE:1:SHL (HL)
+AF:1:SHR A
+B0:1:SHR B
+B1:1:SHR C
+B2:1:SHR H
+B3:1:SHR L
+B4:2:SHR value
+B5:3:SHR address
+B6:3:SHR (address)
+B7:1:SHR (HL)
+B8:1:ROL A
+B9:1:ROL B
+BA:1:ROL C
+BB:1:ROL H
+BC:1:ROL L
+BD:2:ROL value
+BE:3:ROL address
+BF:3:ROL (address)
+C0:1:ROL (HL)
+C1:1:ROR A
+C2:1:ROR B
+C3:1:ROR C
+C4:1:ROR H
+C5:1:ROR L
+C6:2:ROR value
+C7:3:ROR address
+C8:3:ROR (address)
+C9:1:ROR (HL)
+CA:1:CMP B
+CB:1:CMP C
+CC:1:CMP H
+CD:1:CMP L
+CE:2:CMP value
+CF:3:CMP address
+D0:3:CMP (address)
+D1:1:CMP (HL)
+D2:3:JMP address
+D3:3:JC address
+D4:3:JZ address
+D5:3:JN address
+D6:3:JO address
+D7:3:JNC address
+D8:3:JNZ address
+D9:3:JP address
+DA:3:JNO address
+DB:3:CALL address
+DC:3:CC address
+DD:3:CZ address
+DE:3:CN address
+DF:3:CO address
+E0:3:CNC address
+E1:3:CNZ address
+E2:3:CP address
+E3:3:CNO address
+E4:1:RET
+E5:1:RC
+E6:1:RZ
+E7:1:RN
+E8:1:RO
+E9:1:RNC
+EA:1:RNZ
+EB:1:RP
+EC:1:RNO
+ED:1:FSET C
+EE:1:FSET Z
+EF:1:FCLR C
+F0:1:FCLR Z
+F1:1:HALT
 .end
 
 .code
@@ -714,17 +715,59 @@ F0:1:HALT
       TSTATE_reset
   .end
 
+  ##########
+  #   SP   #
+  ##########
+
+  SP address
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      STK_H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      STK_L_load
+    : [function]
+      PC_inc    
+      TSTATE_reset
+  .end
+
   ############
   #   PUSH   #
   ############
 
   PUSH r1
+    : STK_MAR_transfer
+    : [data]
+      r1_out
+      MEM_load
+    : STK_dec    
+      TSTATE_reset
   .end
 
   PUSH hl1
+    : STK_MAR_transfer
+    : [data]
+      h1_out
+      MEM_load
+    : STK_dec
+    : STK_MAR_transfer
+    : [data]
+      l1_out
+      MEM_load
+    : STK_dec
+      TSTATE_reset
   .end
 
   PUSH F
+    : STK_MAR_transfer
+    : [data]
+      F_out
+      MEM_load
+    : STK_dec
+      TSTATE_reset
   .end
 
   ###########
@@ -732,9 +775,26 @@ F0:1:HALT
   ###########
 
   POP r1
+    : STK_inc
+    : STK_MAR_transfer
+    : [data]
+      MEM_out
+      r1_load
+    : TSTATE_reset
   .end
 
   POP hl1
+    : STK_inc
+    : STK_MAR_transfer
+    : [data]
+      MEM_out
+      l1_load
+    : STK_inc
+    : STK_MAR_transfer
+    : [data]
+      MEM_out
+      h1_load
+    : TSTATE_reset
   .end
 
   POP F

@@ -44,7 +44,7 @@ The table below briefly describes the instructions that are support by the DM-02
 | [FCLR](#FCLR)                | Flag clear                                                   |
 | [NOP](#NOP)                  | No operation (do nothing)                                    |
 | [HALT](#HALT)                | Halt program execution                                       |
-| SP                           | *Initialize stack pointer*                                   |
+| [SP](#SP)                    | Initialize stack pointer                                     |
 
 
 
@@ -82,25 +82,27 @@ Where DM-01 had many different mnemonics for data transfer, DM-02 mainly uses th
 
 Here are some examples of DM-01 instructions and how they are expressed in the DM-02 assembly language:
 
-| DM-01 instruction | DM-02 instruction |
-| ----------------- | ----------------- |
-| `MOV A B`         | `MOV A,B`         |
-| `MVI A 0xF8`      | `MOV A,#$F8`      |
-| `LD A 0xBF46`     | `MOV A,$BF46`     |
-| `ST A 0xBF46`     | `MOV $BF46,A`     |
-| `LDX A 0xBF46`    | `MOV A,($BF46)`   |
-| `LDR A`           | `MOV A,(HL)`      |
+| DM-01 instruction              | DM-02 instruction |
+| ------------------------------ | ----------------- |
+| `MOV A B`                      | `MOV A,B`         |
+| `MVI A 0xF8`                   | `MOV A,#$F8`      |
+| `MVI B 0xF8`<br />`MVI C 0xA2` | `MVI BC,#$F8A2`   |
+| `LD A 0xBF46`                  | `MOV A,$BF46`     |
+| `ST A 0xBF46`                  | `MOV $BF46,A`     |
+| `LDX A 0xBF46`                 | `MOV A,($BF46)`   |
+| `LDR A`                        | `MOV A,(HL)`      |
 
 **The DM-02 supports the following explicit addressing modes:**
 
-| Mode              | Example notation         | Description                                                  |
-| ----------------- | ------------------------ | ------------------------------------------------------------ |
-| Absolute register | A                        | Refers to a register to get data from or write data to       |
-| Immediate value   | #$FF                     | Defines immediate data                                       |
-| Absolute address  | $FA6C                    | Defines a memory address to get data from or write data to   |
-| Indirect address  | ($FA6C)                  | Defines a memory address, that contains the memory address to get data from or write data to |
-| Indirect register | (HL)                     | Refers to a register pair, that contains the memory address to get data from or write data to |
-| *Indexed modes*   | *$B47E+A<br>($B47E+A)*   | _**Currently not supported**, but may be implemented in the future_ |
+| Mode                   | Example notation       | Description                                                  |
+| ---------------------- | ---------------------- | ------------------------------------------------------------ |
+| Absolute register      | A                      | Refers to a register to get data from or write data to       |
+| Absolute register pair | BC                     | Refers to a register pair (BC or HL) to get data from or write data to |
+| Immediate value        | #$FF                   | Defines immediate data                                       |
+| Absolute address       | $FA6C                  | Defines a memory address to get data from or write data to   |
+| Indirect address       | ($FA6C)                | Defines a memory address, that contains the memory address to get data from or write data to |
+| Indirect register      | (HL)                   | Refers to a register pair, that contains the memory address to get data from or write data to |
+| *Indexed modes*        | *$B47E+A<br>($B47E+A)* | _**Currently not supported**, but may be implemented in the future_ |
 
 
 <a name="value-formats"></a>
@@ -120,12 +122,12 @@ Values for data or addresses may be expressed using different formats:
 <a name="memory-layout"></a>
 ## Memory layout
 
-| Start address | End address | Description |
-| ------------- | ----------- | ----------- |
-| 0000          | 3FFF        | ROM         |
-| 4000          | FEFF        | RAM         |
-| FEFF          | 4000        | Stack space |
-| FF00          | FFFF        | I/O         |
+| Start address | End address | Description             |
+| ------------- | ----------- | ----------------------- |
+| 0000          | 3FFF        | ROM                     |
+| 4000          | FEFF        | RAM                     |
+| FEFF          | 4000        | Stack space (suggested) |
+| FF00          | FFFF        | I/O                     |
 
 
 
@@ -133,7 +135,7 @@ Values for data or addresses may be expressed using different formats:
 - *Assembler must know memory offset (wether it runs from ROM or RAM)*
 - Stack space starts at the end of RAM and works its way back to the start when data is pushed onto it.
 - The entire RAM may be used for stack.
-- *MAR can increment by one - used when loading 16-bit data* 
+- MAR can increment by one - used when loading 16-bit data 
 
 
 <a name="instruction-reference"></a>
@@ -208,6 +210,14 @@ Values for data or addresses may be expressed using different formats:
 | MOV HL,(BC)                         |
 | MOV (HL),BC                         |
 | MPV (BC),HL                         |
+
+<a name="SP"></a>
+
+### SP
+
+|             |
+| ----------- |
+| SP $address |
 
 <a name="PUSH"></a>
 
