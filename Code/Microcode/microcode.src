@@ -104,8 +104,8 @@
 23:3:MOV address,A
 24:3:MOV address,B
 25:3:MOV address,C
-26:3:MOV address,BC
-# 27:3:MOV address,HL <<< Not implemented because it overwrites BC
+26:3:MOV address,BC 
+27:3:MOV address,HL
 28:3:MOV A,(address)
 29:3:MOV B,(address)
 2A:3:MOV C,(address)
@@ -126,181 +126,187 @@
 39:1:MOV (HL),A
 3A:1:MOV (HL),B
 3B:1:MOV (HL),C
-3C:1:PUSH A
-3D:1:PUSH B
-3E:1:PUSH C
-3F:1:PUSH H
-40:1:PUSH L
-41:1:PUSH BC
-42:1:PUSH HL
-43:1:PUSH F
-44:1:POP A
-45:1:POP B
-46:1:POP C
-47:1:POP H
-48:1:POP L
-49:1:POP BC
-4A:1:POP HL
-4B:1:POP F
-4C:1:ADD A
-4D:1:ADD B
-4E:1:ADD C
-4F:1:ADD H
-50:1:ADD L
-51:2:ADD value
-52:3:ADD address
-53:3:ADD (address)
-54:1:ADD (HL)
-55:1:ADC A
-56:1:ADC B
-57:1:ADC C
-58:1:ADC H
-59:1:ADC L
-5A:2:ADC value
-5B:3:ADC address
-5C:3:ADC (address)
-5D:1:ADC (HL)
-5E:1:SUB A
-5F:1:SUB B
-60:1:SUB C
-61:1:SUB H
-62:1:SUB L
-63:2:SUB value
-64:3:SUB address
-65:3:SUB (address)
-66:1:SUB (HL)
-67:1:SBC A
-68:1:SBC B
-69:1:SBC C
-6A:1:SBC H
-6B:1:SBC L
-6C:2:SBC value
-6D:3:SBC address
-6E:3:SBC (address)
-6F:1:SBC (HL)
-70:1:INC A
-71:1:INC B
-72:1:INC C
-73:1:INC H
-74:1:INC L
-75:1:INC BC
-76:1:INC HL
-77:1:DEC A
-78:1:DEC B
-79:1:DEC C
-7A:1:DEC H
-7B:1:DEC L
-7C:1:DEC BC
-7D:1:DEC HL
-7E:1:AND B
-7F:1:AND C
-80:1:AND H
-81:1:AND L
-82:2:AND value
-83:3:AND address
-84:3:AND (address)
-85:1:AND (HL)
-86:1:OR B
-87:1:OR C
-88:1:OR H
-89:1:OR L
-8A:2:OR value
-8B:3:OR address
-8C:3:OR (address)
-8D:1:OR (HL)
-8E:1:XOR B
-8F:1:XOR C
-90:1:XOR H
-91:1:XOR L
-92:2:XOR value
-93:3:XOR address
-94:3:XOR (address)
-95:1:XOR (HL)
-96:1:NOT A
-97:1:NOT B
-98:1:NOT C
-99:1:NOT H
-9A:1:NOT L
-9B:2:NOT value
-9C:3:NOT address
-9D:3:NOT (address)
-9E:1:NOT (HL)
-9F:1:SHL A
-A0:1:SHL B
-A1:1:SHL C
-A2:1:SHL H
-A3:1:SHL L
-A4:2:SHL value
-A5:3:SHL address
-A6:3:SHL (address)
-A7:1:SHL (HL)
-A8:1:SHR A
-A9:1:SHR B
-AA:1:SHR C
-AB:1:SHR H
-AC:1:SHR L
-AD:2:SHR value
-AE:3:SHR address
-AF:3:SHR (address)
-B0:1:SHR (HL)
-B1:1:ROL A
-B2:1:ROL B
-B3:1:ROL C
-B4:1:ROL H
-B5:1:ROL L
-B6:2:ROL value
-B7:3:ROL address
-B8:3:ROL (address)
-B9:1:ROL (HL)
-BA:1:ROR A
-BB:1:ROR B
-BC:1:ROR C
-BD:1:ROR H
-BE:1:ROR L
-BF:2:ROR value
-C0:3:ROR address
-C1:3:ROR (address)
-C2:1:ROR (HL)
-C3:1:CMP B
-C4:1:CMP C
-C5:1:CMP H
-C6:1:CMP L
-C7:2:CMP value
-C8:3:CMP address
-C9:3:CMP (address)
-CA:1:CMP (HL)
-CB:3:JMP address
-CC:3:JC address
-CD:3:JZ address
-CE:3:JN address
-CF:3:JO address
-D0:3:JNC address
-D1:3:JNZ address
-D2:3:JP address
-D3:3:JNO address
-D4:3:CALL address
-D5:3:CC address
-D6:3:CZ address
-D7:3:CN address
-D8:3:CO address
-D9:3:CNC address
-DA:3:CNZ address
-DB:3:CP address
-DC:3:CNO address
-DD:1:RET
-DE:1:RC
-DF:1:RZ
-E0:1:RN
-E1:1:RO
-E2:1:RNC
-E3:1:RNZ
-E4:1:RP
-E5:1:RNO
-E6:1:FSET C
-E7:1:FSET Z
-E8:1:FCLR C
-E9:1:FCLR Z
-EA:1:HALT
+3C:1:MOV BC,(BC)
+3D:1:MOV BC,(HL)
+3E:1:MOV HL,(BC)
+3F:1:MOV HL,(HL)
+40:1:MOV (HL),BC
+41:1:MOV (BC),HL
+42:1:PUSH A
+43:1:PUSH B
+44:1:PUSH C
+45:1:PUSH H
+46:1:PUSH L
+47:1:PUSH BC
+48:1:PUSH HL
+49:1:PUSH F
+4A:1:POP A
+4B:1:POP B
+4C:1:POP C
+4D:1:POP H
+4E:1:POP L
+4F:1:POP BC
+50:1:POP HL
+51:1:POP F
+52:1:ADD A
+53:1:ADD B
+54:1:ADD C
+55:1:ADD H
+56:1:ADD L
+57:2:ADD value
+58:3:ADD address
+59:3:ADD (address)
+5A:1:ADD (HL)
+5B:1:ADC A
+5C:1:ADC B
+5D:1:ADC C
+5E:1:ADC H
+5F:1:ADC L
+60:2:ADC value
+61:3:ADC address
+62:3:ADC (address)
+63:1:ADC (HL)
+64:1:SUB A
+65:1:SUB B
+66:1:SUB C
+67:1:SUB H
+68:1:SUB L
+69:2:SUB value
+6A:3:SUB address
+6B:3:SUB (address)
+6C:1:SUB (HL)
+6D:1:SBC A
+6E:1:SBC B
+6F:1:SBC C
+70:1:SBC H
+71:1:SBC L
+72:2:SBC value
+73:3:SBC address
+74:3:SBC (address)
+75:1:SBC (HL)
+76:1:INC A
+77:1:INC B
+78:1:INC C
+79:1:INC H
+7A:1:INC L
+7B:1:INC BC
+7C:1:INC HL
+7D:1:DEC A
+7E:1:DEC B
+7F:1:DEC C
+80:1:DEC H
+81:1:DEC L
+82:1:DEC BC
+83:1:DEC HL
+84:1:AND B
+85:1:AND C
+86:1:AND H
+87:1:AND L
+88:2:AND value
+89:3:AND address
+8A:3:AND (address)
+8B:1:AND (HL)
+8C:1:OR B
+8D:1:OR C
+8E:1:OR H
+8F:1:OR L
+90:2:OR value
+91:3:OR address
+92:3:OR (address)
+93:1:OR (HL)
+94:1:XOR B
+95:1:XOR C
+96:1:XOR H
+97:1:XOR L
+98:2:XOR value
+99:3:XOR address
+9A:3:XOR (address)
+9B:1:XOR (HL)
+9C:1:NOT A
+9D:1:NOT B
+9E:1:NOT C
+9F:1:NOT H
+A0:1:NOT L
+A1:2:NOT value
+A2:3:NOT address
+A3:3:NOT (address)
+A4:1:NOT (HL)
+A5:1:SHL A
+A6:1:SHL B
+A7:1:SHL C
+A8:1:SHL H
+A9:1:SHL L
+AA:2:SHL value
+AB:3:SHL address
+AC:3:SHL (address)
+AD:1:SHL (HL)
+AE:1:SHR A
+AF:1:SHR B
+B0:1:SHR C
+B1:1:SHR H
+B2:1:SHR L
+B3:2:SHR value
+B4:3:SHR address
+B5:3:SHR (address)
+B6:1:SHR (HL)
+B7:1:ROL A
+B8:1:ROL B
+B9:1:ROL C
+BA:1:ROL H
+BB:1:ROL L
+BC:2:ROL value
+BD:3:ROL address
+BE:3:ROL (address)
+BF:1:ROL (HL)
+C0:1:ROR A
+C1:1:ROR B
+C2:1:ROR C
+C3:1:ROR H
+C4:1:ROR L
+C5:2:ROR value
+C6:3:ROR address
+C7:3:ROR (address)
+C8:1:ROR (HL)
+C9:1:CMP B
+CA:1:CMP C
+CB:1:CMP H
+CC:1:CMP L
+CD:2:CMP value
+CE:3:CMP address
+CF:3:CMP (address)
+D0:1:CMP (HL)
+D1:3:JMP address
+D2:3:JC address
+D3:3:JZ address
+D4:3:JN address
+D5:3:JO address
+D6:3:JNC address
+D7:3:JNZ address
+D8:3:JP address
+D9:3:JNO address
+DA:3:CALL address
+DB:3:CC address
+DC:3:CZ address
+DD:3:CN address
+DE:3:CO address
+DF:3:CNC address
+E0:3:CNZ address
+E1:3:CP address
+E2:3:CNO address
+E3:1:RET
+E4:1:RC
+E5:1:RZ
+E6:1:RN
+E7:1:RO
+E8:1:RNC
+E9:1:RNZ
+EA:1:RP
+EB:1:RNO
+EC:1:FSET C
+ED:1:FSET Z
+EE:1:FCLR C
+EF:1:FCLR Z
+F0:1:HALT
 .end
 
 .code
@@ -432,7 +438,7 @@ EA:1:HALT
       TSTATE_reset
   .end
 
-  MOV address,hl1
+  MOV address,BC
     : [data]
       PC_MAR_transfer
       MEM_out
@@ -440,6 +446,190 @@ EA:1:HALT
     : PC_inc
     : [data]
       PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data]
+      B_out
+      MEM_load
+    : MAR_inc
+    : [data]
+      C_out
+      MEM_load
+    : [function]
+      PC_inc    
+      TSTATE_reset
+  .end
+
+  MOV address,HL
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      B_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      C_load
+    : [data]
+      B_out
+      MAR_H_load
+    : [data]
+      C_out
+      MAR_L_load
+    : [data]
+      H_out
+      MEM_load
+    : MAR_inc
+    : [data]
+      L_out
+      MEM_load
+    : [function]
+      PC_inc    
+      TSTATE_reset
+  .end
+
+  MOV r1,(address)
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data]
+      MEM_out
+      H_load
+    : MAR_inc
+    : [data]
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data]
+      MEM_out
+      r1_load
+    : [function]
+      PC_inc    
+      TSTATE_reset
+  .end
+
+  MOV hl1,(address)
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data]
+      MEM_out
+      H_load
+    : MAR_inc
+    : [data]
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data]
+      MEM_out
+      h1_load
+    : MAR_inc
+    : [data]
+      MEM_out
+      l1_load
+    : [function]
+      PC_inc    
+      TSTATE_reset
+  .end
+
+  MOV (address),r1
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data]
+      MEM_out
+      H_load
+    : MAR_inc
+    : [data]
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data]
+      r1_out
+      MEM_load
+    : [function]
+      PC_inc    
+      TSTATE_reset
+  .end
+
+  MOV (address),hl1
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data]
+      MEM_out
+      H_load
+    : MAR_inc
+    : [data]
       MEM_out
       L_load
     : [data]
@@ -460,18 +650,6 @@ EA:1:HALT
       TSTATE_reset
   .end
 
-  MOV r1,(address)
-  .end
-
-  MOV hl1,(address)
-  .end
-
-  MOV (address),r1
-  .end
-
-  MOV (address),hl1
-  .end
-
   MOV r1,(hl1)
     : [data]
       h1_out
@@ -487,6 +665,53 @@ EA:1:HALT
   .end
 
   MOV (hl1),r1
+    : [data]
+      h1_out
+      MAR_H_load
+    : [data]
+      l1_out
+      MAR_L_load
+    : [data]
+      r1_out
+      MEM_load
+    : [function]   
+      TSTATE_reset
+  .end
+
+  MOV hl1,(hl2)
+    : [data]
+      h2_out
+      MAR_H_load
+    : [data]
+      l2_out
+      MAR_L_load
+    : [data]
+      MEM_out
+      h1_load
+    : MAR_inc
+    : [data]
+      MEM_out
+      l1_load
+    : [function]   
+      TSTATE_reset
+  .end
+
+  MOV (hl1),hl2
+    : [data]
+      h1_out
+      MAR_H_load
+    : [data]
+      l1_out
+      MAR_L_load
+    : [data]
+      h2_out
+      MEM_load
+    : MAR_inc
+    : [data]
+      l2_out
+      MEM_load
+    : [function]   
+      TSTATE_reset
   .end
 
   ############

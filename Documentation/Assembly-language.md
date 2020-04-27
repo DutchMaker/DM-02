@@ -143,69 +143,74 @@ Values for data or addresses may be expressed using different formats:
 
 ### MOV
 
-|                                           |
-| ----------------------------------------- |
-| MOV A,B                                   |
-| MOV A,C                                   |
-| MOV A,H                                   |
-| MOV A,L                                   |
-| MOV B,A                                   |
-| MOV B,C                                   |
-| MOV B,H                                   |
-| MOV B,L                                   |
-| MOV C,A                                   |
-| MOV C,B                                   |
-| MOV C,H                                   |
-| MOV C,L                                   |
-| MOV H,A                                   |
-| MOV H,B                                   |
-| MOV H,C                                   |
-| MOV H,L                                   |
-| MOV L,A                                   |
-| MOV L,B                                   |
-| MOV L,C                                   |
-| MOV L,H                                   |
-| MOV   BC,HL                               |
-| MOV   HL,BC                               |
-| MOV   A,#$value                           |
-| MOV   B,#$value                           |
-| MOV   C,#$value                           |
-| MOV   H,#$value                           |
-| MOV   L,#$value                           |
-| MOV   BC,#$value                          |
-| MOV   HL,#$value                          |
-| MOV   A,$address                          |
-| MOV   B,$address                          |
-| MOV   C,$address                          |
-| MOV   BC,$address                         |
-| MOV   HL,$address                         |
-| MOV   $address,A                          |
-| MOV   $address,B                          |
-| MOV   $address,C                          |
-| MOV   $address,BC                         |
-| *MOV   $address,HL* <<<<< NOT IMPLEMENTED |
-| MOV   A,($address)                        |
-| MOV   B,($address)                        |
-| MOV   C,($address)                        |
-| MOV   BC,($address)                       |
-| MOV   ($address),A                        |
-| MOV   ($address),B                        |
-| MOV   ($address),C                        |
-| MOV   ($address),BC                       |
-| MOV   A,(BC)                              |
-| MOV   H,(BC)                              |
-| MOV   L,(BC)                              |
-| MOV A,(HL)                                |
-| MOV B,(HL)                                |
-| MOV C,(HL)                                |
-| MOV   (BC),A                              |
-| MOV   (BC),H                              |
-| MOV   (BC),L                              |
-| MOV (HL),A                                |
-| MOV (HL),B                                |
-| MOV (HL),C                                |
+|                                     |
+| ----------------------------------- |
+| MOV A,B                             |
+| MOV A,C                             |
+| MOV A,H                             |
+| MOV A,L                             |
+| MOV B,A                             |
+| MOV B,C                             |
+| MOV B,H                             |
+| MOV B,L                             |
+| MOV C,A                             |
+| MOV C,B                             |
+| MOV C,H                             |
+| MOV C,L                             |
+| MOV H,A                             |
+| MOV H,B                             |
+| MOV H,C                             |
+| MOV H,L                             |
+| MOV L,A                             |
+| MOV L,B                             |
+| MOV L,C                             |
+| MOV L,H                             |
+| MOV BC,HL                           |
+| MOV HL,BC                           |
+| MOV A,#$value                       |
+| MOV B,#$value                       |
+| MOV C,#$value                       |
+| MOV H,#$value                       |
+| MOV L,#$value                       |
+| MOV BC,#$value                      |
+| MOV HL,#$value                      |
+| MOV A,$address *(overwrites HL)*    |
+| MOV B,$address *(overwrites HL)*    |
+| MOV C,$address *(overwrites HL)*    |
+| MOV BC,$address *(overwrites HL)*   |
+| MOV HL,$address                     |
+| MOV $address,A *(overwrites HL)*    |
+| MOV $address,B *(overwrites HL)*    |
+| MOV $address,C *(overwrites HL)*    |
+| MOV $address,BC *(overwrites HL)*   |
+| MOV $address,HL *(overwrites BC)*   |
+| MOV A,($address) *(overwrites HL)*  |
+| MOV B,($address) *(overwrites HL)*  |
+| MOV C,($address) *(overwrites HL)*  |
+| MOV BC,($address) *(overwrites HL)* |
+| MOV ($address),A *(overwrites HL)*  |
+| MOV ($address),B *(overwrites HL)*  |
+| MOV ($address),C *(overwrites HL)*  |
+| MOV ($address),BC *(overwrites HL)* |
+| MOV A,(BC)                          |
+| MOV H,(BC)                          |
+| MOV L,(BC)                          |
+| MOV A,(HL)                          |
+| MOV B,(HL)                          |
+| MOV C,(HL)                          |
+| MOV (BC),A                          |
+| MOV (BC),H                          |
+| MOV (BC),L                          |
+| MOV (HL),A                          |
+| MOV (HL),B                          |
+| MOV (HL),C                          |
+| MOV BC,(HL)                         |
+| MOV HL,(BC)                         |
+| MOV (HL),BC                         |
+| MPV (BC),HL                         |
 
 <a name="PUSH"></a>
+
 ### PUSH
 
 |         |

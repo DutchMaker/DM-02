@@ -14,6 +14,7 @@ namespace Mcc
             Console.WriteLine();
 
             args = new [] { @"/Users/ruud/Projects/DM-02/Code/Microcode/microcode.src" };
+            args = new [] { @"D:\Projects\Active\DM-02\Code\Microcode\microcode.src" };
 
             if (args.Length == 0)
             {
