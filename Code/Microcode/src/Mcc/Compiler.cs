@@ -284,7 +284,7 @@ namespace Mcc
                                         .Replace("hl1", hl1).Replace("hl2", hl2);
 
                                     if (this.Instructions.Exists(i => i.Mnemonic.Equals(targetMnemonic, StringComparison.OrdinalIgnoreCase))
-                                        && !this.MicrocodeSource.Exists(c => c.Instruction.Mnemonic.Equals(targetMnemonic, StringComparison.OrdinalIgnoreCase)))
+                                        && !this.MicrocodeSource.Exists(c => c.Instruction.Mnemonic.Equals(targetMnemonic, StringComparison.OrdinalIgnoreCase) && c.Flags == flags))
                                     {
                                         string targetTstates = tstates.Replace("r1", r1).Replace("r2", r2)
                                             .Replace("hl1", hl1).Replace("hl2", hl2)

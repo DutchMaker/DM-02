@@ -94,18 +94,18 @@ Here are some examples of DM-01 instructions and how they are expressed in the D
 
 **The DM-02 supports the following explicit addressing modes:**
 
-| Mode                   | Example notation       | Description                                                  |
-| ---------------------- | ---------------------- | ------------------------------------------------------------ |
-| Absolute register      | A                      | Refers to a register to get data from or write data to       |
-| Absolute register pair | BC                     | Refers to a register pair (BC or HL) to get data from or write data to |
-| Immediate value        | #$FF                   | Defines immediate data                                       |
-| Absolute address       | $FA6C                  | Defines a memory address to get data from or write data to   |
-| Indirect address       | ($FA6C)                | Defines a memory address, that contains the memory address to get data from or write data to |
-| Indirect register      | (HL)                   | Refers to a register pair, that contains the memory address to get data from or write data to |
-| *Indexed modes*        | *$B47E+A<br>($B47E+A)* | _**Currently not supported**, but may be implemented in the future_ |
-
+| Mode                   | Example notation         | Description                                                  |
+| ---------------------- | ------------------------ | ------------------------------------------------------------ |
+| Absolute register      | A                        | Refers to a register to get data from or write data to       |
+| Absolute register pair | BC                       | Refers to a register pair (BC or HL) to get data from or write data to |
+| Immediate value        | #$FF                     | Defines immediate data                                       |
+| Absolute address       | $FA6C                    | Defines a memory address to get data from or write data to   |
+| Indirect address       | ($FA6C)                  | Defines a memory address, that contains the memory address to get data from or write data to |
+| Indirect register      | (HL)                     | Refers to a register pair, that contains the memory address to get data from or write data to |
+| *Indexed modes*        | *$B47E+A*<br>*($B47E+A)* | _**Currently not supported**, but may be implemented in the future_ |
 
 <a name="value-formats"></a>
+
 ## Value formats
 
 Values for data or addresses may be expressed using different formats:
@@ -223,90 +223,91 @@ Values for data or addresses may be expressed using different formats:
 
 ### PUSH
 
-|         |
-| ------- |
-| PUSH A  |
-| PUSH B  |
-| PUSH C  |
-| PUSH H  |
-| PUSH L  |
-| PUSH BC |
-| PUSH HL |
-| PUSH F  |
+| *Requires SP to be executed first* |
+| ---------------------------------- |
+| PUSH A                             |
+| PUSH B                             |
+| PUSH C                             |
+| PUSH H                             |
+| PUSH L                             |
+| PUSH BC                            |
+| PUSH HL                            |
+| PUSH F                             |
 
 <a name="POP"></a>
+
 ### POP
 
-|        |
-| ------ |
-| POP A  |
-| POP B  |
-| POP C  |
-| POP H  |
-| POP L  |
-| POP BC |
-| POP HL |
-| POP F  |
+| *Requires PUSH to be executed first* |
+| ------------------------------------ |
+| POP A                                |
+| POP B                                |
+| POP C                                |
+| POP H                                |
+| POP L                                |
+| POP BC                               |
+| POP HL                               |
+| POP F                                |
 
 <a name="ADD"></a>
 ### ADD
 
-|                  |
-| ---------------- |
-| ADD A            |
-| ADD B            |
-| ADD C            |
-| ADD H            |
-| ADD L            |
-| *ADD #$value*    |
-| *ADD $address*   |
-| *ADD ($address)* |
-| *ADD (HL)*       |
+|                                  |
+| -------------------------------- |
+| ADD A                            |
+| ADD B                            |
+| ADD C                            |
+| ADD H                            |
+| ADD L                            |
+| ADD #$value                      |
+| ADD $address *(overwrites HL)*   |
+| ADD ($address) *(overwrites HL)* |
+| ADD (HL)                         |
 
 <a name="ADC"></a>
 ### ADC
 
-|                  |
-| ---------------- |
-| ADC A            |
-| ADC B            |
-| ADC C            |
-| ADC H            |
-| ADC L            |
-| *ADC #$value*    |
-| *ADC $address*   |
-| *ADC ($address)* |
-| *ADC (HL)*       |
+|                                  |
+| -------------------------------- |
+| ADC A                            |
+| ADC B                            |
+| ADC C                            |
+| ADC H                            |
+| ADC L                            |
+| ADC #$value                      |
+| ADC $address *(overwrites HL)*   |
+| ADC ($address) *(overwrites HL)* |
+| ADC (HL)                         |
 
 <a name="SUB"></a>
 ### SUB
 
-|                  |
-| ---------------- |
-| SUB A            |
-| SUB B            |
-| SUB C            |
-| SUB H            |
-| SUB L            |
-| *SUB #$value*    |
-| *SUB $address*   |
-| *SUB ($address)* |
-| *SUB (HL)*       |
+|                                  |
+| -------------------------------- |
+| SUB A                            |
+| SUB B                            |
+| SUB C                            |
+| SUB H                            |
+| SUB L                            |
+| SUB #$value                      |
+| SUB $address *(overwrites HL)*   |
+| SUB ($address) *(overwrites HL)* |
+| SUB (HL)                         |
 
 <a name="SBC"></a>
 ### SBC
 
-|                  |
-| ---------------- |
-| SBC A            |
-| SBC B            |
-| SBC C            |
-| SBC H            |
-| SBC L            |
-| *SBC #$value*    |
-| *SBC $address*   |
-| *SBC ($address)* |
-| *SBC (HL)*       |
+|                                  |
+| -------------------------------- |
+| SBC A                            |
+| SBC B                            |
+| SBC C                            |
+| SBC H                            |
+| SBC L                            |
+| SBC #$value                      |
+| SBC $address *(overwrites HL)*   |
+| SBC ($address) *(overwrites HL)* |
+| SBC (HL)                         |
 
 <a name="INC"></a>
 ### INC
@@ -504,6 +505,8 @@ Values for data or addresses may be expressed using different formats:
 
 <a name="RET"></a>
 ### RET
+
+*Check for use within label*
 
 <a name="RETc"></a>
 

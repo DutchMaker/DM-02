@@ -86,5 +86,30 @@ namespace Mcc.Models
 
             return true;
         }
+
+        public static bool operator ==(FlagsState f1, FlagsState f2)
+        {
+            if (Object.ReferenceEquals(f1, null))
+            {
+                if (Object.ReferenceEquals(f2, null))
+                {
+                    return true;
+                }
+
+                return false;
+            }
+
+            if (Object.ReferenceEquals(f2, null))
+            {
+                return false;
+            }
+            
+            return f1.ToBits().Equals(f2.ToBits());
+        }
+
+        public static bool operator !=(FlagsState f1, FlagsState f2)
+        {
+            return !(f1 == f2);
+        }
     }
 }
