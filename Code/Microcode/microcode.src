@@ -190,109 +190,109 @@
 79:1:INC C
 7A:1:INC H
 7B:1:INC L
-7E:1:DEC A
-7F:1:DEC B
-80:1:DEC C
-81:1:DEC H
-82:1:DEC L
-85:1:AND B
-86:1:AND C
-87:1:AND H
-88:1:AND L
-89:2:AND value
-8A:3:AND address
-8B:3:AND (address)
-8C:1:AND (HL)
-8D:1:OR B
-8E:1:OR C
-8F:1:OR H
-90:1:OR L
-91:2:OR value
-92:3:OR address
-93:3:OR (address)
-94:1:OR (HL)
-95:1:XOR B
-96:1:XOR C
-97:1:XOR H
-98:1:XOR L
-99:2:XOR value
-9A:3:XOR address
-9B:3:XOR (address)
-9C:1:XOR (HL)
-9D:1:NOT A
-9E:1:NOT B
-9F:1:NOT C
-A0:1:NOT H
-A1:1:NOT L
-A2:2:NOT value
-A3:3:NOT address
-A4:3:NOT (address)
-A5:1:NOT (HL)
-A7:1:SHL B
-A8:1:SHL C
-A9:1:SHL H
-AA:1:SHL L
-AB:2:SHL value
-B0:1:SHR B
-B1:1:SHR C
-B2:1:SHR H
-B3:1:SHR L
-B4:2:SHR value
-B5:1:ASR B
-B6:1:ASR C
-B7:1:ASR H
-B8:1:ASR L
-AC:2:ASR value
-B9:1:ROL B
-BA:1:ROL C
-BB:1:ROL H
-BC:1:ROL L
-BD:2:ROL value
-C2:1:ROR B
-C3:1:ROR C
-C4:1:ROR H
-C5:1:ROR L
-C6:2:ROR value
-CA:1:CMP B
-CB:1:CMP C
-CC:1:CMP H
-CD:1:CMP L
-CE:2:CMP value
-CF:3:CMP address
-D0:3:CMP (address)
-D1:1:CMP (HL)
-D2:3:JMP address
-D3:3:JC address
-D4:3:JZ address
-D5:3:JN address
-D6:3:JO address
-D7:3:JNC address
-D8:3:JNZ address
-D9:3:JP address
-DA:3:JNO address
-DB:3:CALL address
-DC:3:CC address
-DD:3:CZ address
-DE:3:CN address
-DF:3:CO address
-E0:3:CNC address
-E1:3:CNZ address
-E2:3:CP address
-E3:3:CNO address
-E4:1:RET
-E5:1:RC
-E6:1:RZ
-E7:1:RN
-E8:1:RO
-E9:1:RNC
-EA:1:RNZ
-EB:1:RP
-EC:1:RNO
-ED:1:FSET C
-EE:1:FSET Z
-EF:1:FCLR C
-F0:1:FCLR Z
-F1:1:HALT
+7C:1:DEC A
+7D:1:DEC B
+7E:1:DEC C
+7F:1:DEC H
+80:1:DEC L
+81:1:AND B
+82:1:AND C
+83:1:AND H
+84:1:AND L
+85:2:AND value
+86:3:AND address
+87:3:AND (address)
+88:1:AND (HL)
+89:1:OR B
+8A:1:OR C
+8B:1:OR H
+8C:1:OR L
+8D:2:OR value
+8E:3:OR address
+8F:3:OR (address)
+90:1:OR (HL)
+91:1:XOR B
+92:1:XOR C
+93:1:XOR H
+94:1:XOR L
+95:2:XOR value
+96:3:XOR address
+97:3:XOR (address)
+98:1:XOR (HL)
+99:1:NOT A
+9A:1:NOT B
+9B:1:NOT C
+9C:1:NOT H
+9D:1:NOT L
+9E:2:NOT value
+9F:3:NOT address
+A0:3:NOT (address)
+A1:1:NOT (HL)
+A2:1:SHL B
+A3:1:SHL C
+A4:1:SHL H
+A5:1:SHL L
+A6:2:SHL value
+A7:1:SHR B
+A8:1:SHR C
+A9:1:SHR H
+AA:1:SHR L
+AB:2:SHR value
+AC:1:ASR B
+AD:1:ASR C
+AE:1:ASR H
+AF:1:ASR L
+B0:2:ASR value
+B1:1:ROL B
+B2:1:ROL C
+B3:1:ROL H
+B4:1:ROL L
+B5:2:ROL value
+B6:1:ROR B
+B7:1:ROR C
+B8:1:ROR H
+B9:1:ROR L
+BA:2:ROR value
+BB:1:CMP B
+BC:1:CMP C
+BD:1:CMP H
+BE:1:CMP L
+BF:2:CMP value
+C0:3:CMP address
+C1:3:CMP (address)
+C2:1:CMP (HL)
+C3:3:JMP address
+C4:3:JC address
+C5:3:JZ address
+C6:3:JN address
+C7:3:JO address
+C8:3:JNC address
+C9:3:JNZ address
+CA:3:JP address
+CB:3:JNO address
+CC:3:CALL address
+CD:3:CC address
+CE:3:CZ address
+CF:3:CN address
+D0:3:CO address
+D1:3:CNC address
+D2:3:CNZ address
+D3:3:CP address
+D4:3:CNO address
+D5:1:RET
+D6:1:RC
+D7:1:RZ
+D8:1:RN
+D9:1:RO
+DA:1:RNC
+DB:1:RNZ
+DC:1:RP
+DD:1:RNO
+DE:1:FSET C
+DF:1:FSET Z
+E0:1:FCLR C
+E1:1:FCLR Z
+E2:1:HALT
 .end
 
 .code
