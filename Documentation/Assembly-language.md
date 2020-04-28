@@ -29,8 +29,9 @@ The table below briefly describes the instructions that are support by the DM-02
 | [OR](#OR)                    | Logical OR with accumulator                                  |
 | [XOR](#XOR)                  | Logical XOR with accumulator                                 |
 | [NOT](#NOT)                  | Invert value                                                 |
-| [SHL](#SHL)                  | Shift bits to the left                                       |
-| [SHR](#SHR)                  | Shift bits to the right                                      |
+| [SHL](#SHL)                  | Logical shift left                                           |
+| [SHR](#SHR)                  | Logical shift right                                          |
+| [ASR](#ASR)                  | Arithmetic shift right                                       |
 | [ROL](#ROL)                  | Rotate (carry-over) bits to the left                         |
 | [ROR](#ROR)                  | Rotate (carry-over) bits to the right                        |
 | [CMP](#CMP)                  | Compare with accumulator (performs subtraction, but only affect flags) |
@@ -380,78 +381,74 @@ Values for data or addresses may be expressed using different formats:
 <a name="NOT"></a>
 ### NOT
 
-|                  |
-| ---------------- |
-| NOT A            |
-| NOT B            |
-| NOT C            |
-| NOT H            |
-| NOT L            |
-| *NOT #$value*    |
-| *NOT $address*   |
-| *NOT ($address)* |
-| *NOT (HL)*       |
+|                                               |
+| --------------------------------------------- |
+| NOT A                                         |
+| NOT B *(affects register it is performed on)* |
+| NOT C *(affects register it is performed on)* |
+| NOT H *(affects register it is performed on)* |
+| NOT L *(affects register it is performed on)* |
+| *NOT #$value*                                 |
+| *NOT $address*                                |
+| *NOT ($address)*                              |
+| *NOT (HL)*                                    |
 
 <a name="SHL"></a>
 
 ### SHL
 
-|                  |
-| ---------------- |
-| SHL A            |
-| SHL B            |
-| SHL C            |
-| SHL H            |
-| SHL L            |
-| *SHL #$value*    |
-| *SHL $address*   |
-| *SHL ($address)* |
-| *SHL (HL)*       |
+|                                               |
+| --------------------------------------------- |
+| SHL A                                         |
+| SHL B |
+| SHL C |
+| SHL H |
+| SHL L |
+| *SHL #$value*                                 |
 
 <a name="SHR"></a>
 ### SHR
 
-|                  |
-| ---------------- |
-| SHR A            |
-| SHR B            |
-| SHR C            |
-| SHR H            |
-| SHR L            |
-| *SHR #$value*    |
-| *SHR $address*   |
-| *SHR ($address)* |
-| *SHR (HL)*       |
+|                                               |
+| --------------------------------------------- |
+| SHR B |
+| SHR C |
+| SHR H |
+| SHR L  |
+| *SHR #$value*                                 |
+
+<a name="ASR"></a>
+### ASR
+
+|                                               |
+| --------------------------------------------- |
+| ASR B |
+| ASR C |
+| ASR H |
+| ASR L  |
+| *ASR #$value*                                 |
 
 <a name="ROL"></a>
 ### ROL
 
 |                  |
 | ---------------- |
-| ROL A            |
 | ROL B            |
 | ROL C            |
 | ROL H            |
 | ROL L            |
 | *ROL #$value*    |
-| *ROL $address*   |
-| *ROL ($address)* |
-| *ROL (HL)*       |
 
 <a name="ROR"></a>
 ### ROR
 
 |                  |
 | ---------------- |
-| ROR A            |
 | ROR B            |
 | ROR C            |
 | ROR H            |
 | ROR L            |
 | *ROR #$value*    |
-| *ROR $address*   |
-| *ROR ($address)* |
-| *ROR (HL)*       |
 
 <a name="CMP"></a>
 ### CMP

@@ -366,7 +366,7 @@ namespace Mcc
                 return result;
             }
 
-            if (tstates.IndexOf(">") > -1)
+            if (tstates.Trim().StartsWith(">"))
             {
                 // Instruction doesn't define T-states, but instead refers to another instruction for the T-state definition.
                 string referredMnemonic = tstates.Substring(1).Trim();

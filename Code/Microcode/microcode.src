@@ -47,13 +47,13 @@
 01101:B-A
 01110:A-B-1
 01111:B-A-1
-10000:A*B_H
-10001:A*B_L
+10000:A*B_L
+10001:A*B_H
 10010:A/B
 10011:A%B
 10100:A<<B
-10101:A>>B_A
-10110:A>>B_L
+10101:A>>B_L
+10110:A>>B_A
 10111:A_ROL_B
 11000:A_ROR_B
 11001:A_AND_B
@@ -190,15 +190,15 @@
 79:1:INC C
 7A:1:INC H
 7B:1:INC L
-7C:1:INC BC
-7D:1:INC HL
+#7C:1:INC BC
+#7D:1:INC HL
 7E:1:DEC A
 7F:1:DEC B
 80:1:DEC C
 81:1:DEC H
 82:1:DEC L
-83:1:DEC BC
-84:1:DEC HL
+#83:1:DEC BC
+#84:1:DEC HL
 85:1:AND B
 86:1:AND C
 87:1:AND H
@@ -232,42 +232,47 @@ A2:2:NOT value
 A3:3:NOT address
 A4:3:NOT (address)
 A5:1:NOT (HL)
-A6:1:SHL A
+#A6:1:SHL A
 A7:1:SHL B
 A8:1:SHL C
 A9:1:SHL H
 AA:1:SHL L
 AB:2:SHL value
-AC:3:SHL address
-AD:3:SHL (address)
-AE:1:SHL (HL)
-AF:1:SHR A
+#AC:3:SHL address
+#AD:3:SHL (address)
+#AE:1:SHL (HL)
+#AF:1:SHR A
 B0:1:SHR B
 B1:1:SHR C
 B2:1:SHR H
 B3:1:SHR L
 B4:2:SHR value
-B5:3:SHR address
-B6:3:SHR (address)
-B7:1:SHR (HL)
-B8:1:ROL A
+B5:1:ASR B
+B6:1:ASR C
+B7:1:ASR H
+B8:1:ASR L
+AC:2:ASR value
+#B5:3:SHR address
+#B6:3:SHR (address)
+#B7:1:SHR (HL)
+#B8:1:ROL A
 B9:1:ROL B
 BA:1:ROL C
 BB:1:ROL H
 BC:1:ROL L
 BD:2:ROL value
-BE:3:ROL address
-BF:3:ROL (address)
-C0:1:ROL (HL)
-C1:1:ROR A
+#BE:3:ROL address
+#BF:3:ROL (address)
+#C0:1:ROL (HL)
+#C1:1:ROR A
 C2:1:ROR B
 C3:1:ROR C
 C4:1:ROR H
 C5:1:ROR L
 C6:2:ROR value
-C7:3:ROR address
-C8:3:ROR (address)
-C9:1:ROR (HL)
+#C7:3:ROR address
+#C8:3:ROR (address)
+#C9:1:ROR (HL)
 CA:1:CMP B
 CB:1:CMP C
 CC:1:CMP H
@@ -938,27 +943,189 @@ F1:1:HALT
   .end
 
   ADC value [C=0]
+    : PC_MAR_transfer
+    : [data][A+B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
   ADC value [C=1]
+    : PC_MAR_transfer
+    : [data][A+B+1]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
   ADC address [C=0]
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data][A+B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
   ADC address [C=1]
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data][A+B+1]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
   ADC (address) [C=0]
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data]
+      MEM_out
+      H_load
+    : MAR_inc
+    : [data]
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data][A+B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
   ADC (address) [C=1]
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data]
+      MEM_out
+      H_load
+    : MAR_inc
+    : [data]
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data][A+B+1]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
   ADC (HL) [C=0]
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data][A+B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : TSTATE_reset
   .end
 
   ADC (HL) [C=1]
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data][A+B+1]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : TSTATE_reset
   .end
 
   ###########
@@ -1072,19 +1239,210 @@ F1:1:HALT
   #   SBC   #
   ###########
 
-  SBC r1
+  SBC r1 [C=0]
+    : [data][A-B]
+      r1_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : TSTATE_reset
   .end
 
-  SBC value
+  SBC r1 [C=1]
+    : [data][A-B-1]
+      r1_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : TSTATE_reset
   .end
 
-  SBC address
+  SBC value [C=0]
+    : PC_MAR_transfer
+    : [data][A-B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
-  SBC (address)
+  SBC value [C=1]
+    : PC_MAR_transfer
+    : [data][A-B-1]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
-  SBC (HL)
+  SBC address [C=0]
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data][A-B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
+  .end
+
+  SBC address [C=1]
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data][A-B-1]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
+  .end
+
+  SBC (address) [C=0]
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data]
+      MEM_out
+      H_load
+    : MAR_inc
+    : [data]
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data][A-B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
+  .end
+
+  SBC (address) [C=1]
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data]
+      MEM_out
+      H_load
+    : MAR_inc
+    : [data]
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data][A-B-1]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
+  .end
+
+  SBC (HL) [C=0]
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data][A-B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : TSTATE_reset
+  .end
+
+  SBC (HL) [C=1]
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data][A-B-1]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : TSTATE_reset
   .end
 
   ###########
@@ -1092,9 +1450,13 @@ F1:1:HALT
   ###########
 
   INC r1
-  .end
-
-  INC hl1
+    : [data][B+1]
+      r1_out
+      ALU_load
+    : [data]
+      ALU_out
+      r1_load
+    : TSTATE_reset
   .end
 
   ###########
@@ -1102,9 +1464,13 @@ F1:1:HALT
   ###########
 
   DEC r1
-  .end
-
-  DEC hl1
+    : [data][B-1]
+      r1_out
+      ALU_load
+    : [data]
+      ALU_out
+      r1_load
+    : TSTATE_reset
   .end
 
   ###########
@@ -1112,18 +1478,106 @@ F1:1:HALT
   ###########
 
   AND r1
+    : [data][A_AND_B]
+      r1_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : TSTATE_reset
   .end
 
   AND value
+    : PC_MAR_transfer
+    : [data][A_AND_B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
   AND address
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data][A_AND_B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
   AND (address)
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data]
+      MEM_out
+      H_load
+    : MAR_inc
+    : [data]
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data][A_AND_B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
   AND (HL)
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data][A_AND_B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : TSTATE_reset
   .end
 
   ##########
@@ -1131,18 +1585,106 @@ F1:1:HALT
   ##########
 
   OR r1
+    : [data][A_OR_B]
+      r1_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : TSTATE_reset
   .end
 
   OR value
+    : PC_MAR_transfer
+    : [data][A_OR_B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
   OR address
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data][A_OR_B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
   OR (address)
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data]
+      MEM_out
+      H_load
+    : MAR_inc
+    : [data]
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data][A_OR_B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
   OR (HL)
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data][A_OR_B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : TSTATE_reset
   .end
 
   ###########
@@ -1150,18 +1692,106 @@ F1:1:HALT
   ###########
 
   XOR r1
+    : [data][A_XOR_B]
+      r1_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : TSTATE_reset
   .end
 
   XOR value
+    : PC_MAR_transfer
+    : [data][A_XOR_B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
   XOR address
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data][A_XOR_B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
   XOR (address)
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data]
+      MEM_out
+      H_load
+    : MAR_inc
+    : [data]
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data][A_XOR_B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
   XOR (HL)
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data][A_XOR_B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : TSTATE_reset
   .end
 
   ###########
@@ -1169,18 +1799,106 @@ F1:1:HALT
   ###########
 
   NOT r1
+    : [data][NOT_B]
+      r1_out
+      ALU_load
+    : [data]
+      ALU_out
+      r1_load
+    : TSTATE_reset
   .end
 
   NOT value
+    : PC_MAR_transfer
+    : [data][NOT_B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
   NOT address
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data][NOT_B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
   NOT (address)
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      H_load
+    : PC_inc
+    : [data]
+      PC_MAR_transfer
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data]
+      MEM_out
+      H_load
+    : MAR_inc
+    : [data]
+      MEM_out
+      L_load
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data][NOT_B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
   NOT (HL)
+    : [data]
+      H_out
+      MAR_H_load
+    : [data]
+      L_out
+      MAR_L_load
+    : [data][NOT_B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : TSTATE_reset
   .end
 
   ###########
@@ -1188,18 +1906,25 @@ F1:1:HALT
   ###########
 
   SHL r1
+    : [data][A<<B]
+      r1_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : TSTATE_reset
   .end
 
   SHL value
-  .end
-
-  SHL address
-  .end
-
-  SHL (address)
-  .end
-
-  SHL (HL)
+    : PC_MAR_transfer
+    : [data][A<<B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
   ###########
@@ -1207,18 +1932,51 @@ F1:1:HALT
   ###########
 
   SHR r1
+    : [data][A>>B_L]
+      r1_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : TSTATE_reset
   .end
 
   SHR value
+    : PC_MAR_transfer
+    : [data][A>>B_L]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
-  SHR address
+  ###########
+  #   ASR   #
+  ###########
+
+  ASR r1
+    : [data][A>>B_A]
+      r1_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : TSTATE_reset
   .end
 
-  SHR (address)
-  .end
-
-  SHR (HL)
+  ASR value
+    : PC_MAR_transfer
+    : [data][A>>B_A]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
   ###########
@@ -1226,18 +1984,25 @@ F1:1:HALT
   ###########
 
   ROL r1
+    : [data][A_ROL_B]
+      r1_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : TSTATE_reset
   .end
 
   ROL value
-  .end
-
-  ROL address
-  .end
-
-  ROL (address)
-  .end
-
-  ROL (HL)
+    : PC_MAR_transfer
+    : [data][A_ROL_B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
   ###########
@@ -1245,18 +2010,25 @@ F1:1:HALT
   ###########
 
   ROR r1
+    : [data][A_ROR_B]
+      r1_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : TSTATE_reset
   .end
 
   ROR value
-  .end
-
-  ROR address
-  .end
-
-  ROR (address)
-  .end
-
-  ROR (HL)
+    : PC_MAR_transfer
+    : [data][A_ROR_B]
+      MEM_out
+      ALU_load
+    : [data]
+      ALU_out
+      A_load
+    : PC_inc
+      TSTATE_reset
   .end
 
   ###########
