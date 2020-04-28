@@ -398,7 +398,9 @@ namespace Mcc
                 var microInstruction = new MicroInstruction
                 {
                     Type = MicroInstructionType.FunctionOperation,
-                    ControlLines = new List<BitPattern>()
+                    ControlLines = new List<BitPattern>(),
+                    OperandLoad = new BitPattern { Bits = "0000" },
+                    OperandOut = new BitPattern { Bits = "0000" }
                 };
                 
                 for (int i = 0; i < uinstructions.Length; i++)

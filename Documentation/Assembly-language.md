@@ -464,23 +464,32 @@ Values for data or addresses may be expressed using different formats:
 | *CMP ($address)* |
 | *CMP (HL)*       |
 
+Compare result:
+
+|Carry|Zero|Meaning|
+|-|-|-|
+| 1 | 0 | A < B |
+| 0 | 1 | A == B |
+| 0 | 0 | A > B |
+
 <a name="JMP"></a>
+
 ### JMP
 
 <a name="JMPc"></a>
 
 ### JMP (conditional)
 
-|               |
-| ------------- |
-| JC   $address |
-| JZ $address   |
-| JN $address   |
-| JO $address   |
-| JNC $address  |
-| JNZ $address  |
-| JP $address   |
-| JNO $address  |
+|              |
+| ------------ |
+| JC $address  |
+| JZ $address  |
+| JN $address  |
+| JO $address  |
+| JNC $address |
+| JNZ $address |
+| JP $address  |
+| JNO $address |
 
 <a name="CALL"></a>
 ### CALL
