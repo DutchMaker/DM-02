@@ -798,6 +798,12 @@ F1:1:HALT
   .end
 
   POP F
+    : STK_inc
+    : STK_MAR_transfer
+    : [data]
+      MEM_out
+      F_load
+    : TSTATE_reset
   .end
 
   ###########
