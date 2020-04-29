@@ -9,12 +9,12 @@ namespace Asm
 {
     public class Assembler
     {
-        private const int bootloaderSize = 16;
+        private const int BOOTLOADER_SIZE = 16;
 
         private readonly string[] LABEL_INSTRUCTIONS = 
         { 
-            "JMP", "JMPC Z", "JMPC NZ", "JMPC C", "JMPC NC", "JMPC CMP", "JMPC NCMP",
-            "CALL", "CALLC Z", "CALLC NZ", "CALLC C", "CALLC NC", "CALLC CMP", "CALLC NCMP"
+            "JMP", "JC", "JZ", "JN", "JO", "JNC", "JNZ", "JP", "JNO",
+            "CALL", "CC", "CZ", "CN", "CO", "CNC", "CNZ", "CP", "CNO"
         };
 
         private static Assembler _assembler;
@@ -22,12 +22,12 @@ namespace Asm
 
         private string source;
         private byte[] machineCode = new byte[0x4000];        
-        private ushort machineCodeAddress = bootloaderSize; // The first 16 bytes of machine code are reserved
-                                                            // for a JMP to get past the predefined data and maybe additional code in the future.
+        private ushort machineCodeAddress = BOOTLOADER_SIZE;    // The first 16 bytes of machine code are reserved
+                                                                // for a JMP to get past the predefined data and maybe additional code in the future.
         private ushort offset = 0;
 
-        //private Dictionary<string, int> labels = new Dictionary<string, int>();
-        //private Dictionary<int, string> labelsToTranslate = new Dictionary<int, string>();
+        private Dictionary<string, int> labels = new Dictionary<string, int>();
+        private Dictionary<int, string> labelsToTranslate = new Dictionary<int, string>();
         private Dictionary<string, int> addressVariables = new Dictionary<string, int>();
 
         bool dataDefined = false;
@@ -55,10 +55,12 @@ namespace Asm
             var sw = Stopwatch.StartNew();
             Console.WriteLine("Generating machinecode...");
 
-            ProcessIncludes();
-            ProcessOffset();
-            ProcessDataBlocks();
-            //ProcessAssembly();
+            ProcessIncludes();          // Include external files.
+            ProcessOffset();            // Determine the memory offset.
+            ProcessDataBlocks();        // Add predefined data to the machine code.
+            ProcessAddressVariables();  // Replace any address variables with their address.
+            ProcessAssembly();
+            //Save();                     // Save the machine code to disk.
 
             Console.WriteLine();
             Console.WriteLine($"{machineCodeAddress} bytes of machinecode generated in {sw.ElapsedMilliseconds} ms.");
@@ -78,6 +80,20 @@ namespace Asm
             {
                 File.Delete(logisimImageFileName);
             }
+
+        // private void SaveMachineCode()
+        // {
+        //     if (File.Exists(targetFileName))
+        //     {
+        //         File.Delete(targetFileName);
+        //     }
+
+        //     using (var writer = new BinaryWriter(File.Open(targetFileName, FileMode.CreateNew)))
+        //     {
+        //         writer.Seek(0, SeekOrigin.Begin);
+        //         writer.Write(machineCode);
+        //     }
+        // }
 
             using (var writer = new BinaryWriter(File.Open(romFileName, FileMode.CreateNew)))
             {
@@ -215,7 +231,7 @@ namespace Asm
             else
             {
                 source = source.Replace(".code\n", string.Empty);
-                Console.WriteLine($"Processed {machineCodeAddress-bootloaderSize} bytes of predefined data.");
+                Console.WriteLine($"Processed {machineCodeAddress-BOOTLOADER_SIZE} bytes of predefined data.");
             }
         }
 
@@ -262,290 +278,158 @@ namespace Asm
             }
         }
 
-        // private void ProcessAssembly()
-        // {
-        //     int address = 0;
-        //     string[] consoleLog = new string[0x4000];
+        private void ProcessAddressVariables()
+        {
+            // Start replacing variables in the source, in order of variable name length (longest first).
+            var ordered = addressVariables.OrderByDescending(kvp => kvp.Key.Length);
 
-        //     source = RemoveWhitespace(source);
-        //     source = source.Substring(source.IndexOf(":main"));
+            foreach (var kvp in ordered)
+            {
+                string variable = kvp.Key;
+                int address = kvp.Value;
 
-        //     var lines = source.Replace("\r", string.Empty)
-        //         .Split('\n', StringSplitOptions.RemoveEmptyEntries)
-        //         .Skip(1)
-        //         .Select(x => x.Trim())
-        //         .ToArray();
+                if (!variable.StartsWith("*"))
+                {
+                    address += offset;
+                }
 
-        //     // Replace complex instructions such as LDX and STX.
-        //     lines = PreprocessComplexInstructions(lines);
+                source = source.Replace(variable, $"${address:X4}");
+            }
+        }
 
-        //     for (int l = 0; l < lines.Length; l++)
-        //     {
-        //         string line = lines[l];
+        private void ProcessAssembly()
+        {
+            string[] consoleLog = new string[0x4000];
+            var lines = source.Split('\n', StringSplitOptions.RemoveEmptyEntries);
 
-        //         if (ProcessLabelDefinition(line, address))
-        //         {
-        //             // Current line defines a label.
-        //             continue;
-        //         }
+            for (int l = 0; l < lines.Length; l++)
+            {
+                string line = lines[l];
 
-        //         if (ProcessVariableDefinition(line))
-        //         {
-        //             // Current line defines an address variable.
-        //             continue;
-        //         }
-
-        //         // Replace address variables in current line.
-        //         line = ReplaceVariablesInLine(line);
-
-        //         // Find instruction definition for current line.
-        //         KeyValuePair<string, string> instruction;
+                if (l == 0 && !line.Equals("main:", StringComparison.OrdinalIgnoreCase))
+                {
+                    // Ensure that the main label is defined because the bootloader needs this.
+                    ProcessLabelDefinition("main:", machineCodeAddress);
+                }
                 
-        //         try
-        //         {
-        //             instruction = microcodeCompiler.Instructions.OrderByDescending(x => x.Key.Length)
-        //                 .First(x => line.StartsWith(x.Key));
-        //         }
-        //         catch (InvalidOperationException)
-        //         {
-        //             throw new AssemblerException($"Instruction not defined: {line}");
-        //         }
-
-        //         byte instructionByte = Convert.ToByte(instruction.Value, 2);
-        //         int instructionLength = microcodeCompiler.InstructionLengths[instruction.Key];
-
-        //         // Add the current instruction to the machinecode.
-        //         consoleLog[address] = line;
-        //         machineCode[address++] = instructionByte;
+                if (ProcessLabelDefinition(line, machineCodeAddress))
+                {
+                    // Current line defines a label.
+                    continue;
+                }
+                machineCodeAddress++;
+                // // Find instruction definition for current line.
+                // Instruction instruction;
                 
-        //         if (LABEL_INSTRUCTIONS.Contains(instruction.Key))
-        //         {
-        //             // Current instruction refers to a label.
-        //             // We need to fill in the label address later.
-        //             labelsToTranslate.Add(address, line.Split(' ').Last());
-        //             address += 2;
-        //         }
-        //         else if (instructionLength > 1)
-        //         {
-        //             // Instruction has 1 or 2 operands that need to be stored as well.
-        //             var parts = line.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                // try
+                // {
+                //     // TODO:
+                //     // FIGURE OUT WHAT INSTRUCTION IS USED
+                //     //
+                //     //microcodeCompiler.Instructions
+                //     // instruction = microcodeCompiler.Instructions.OrderByDescending(x => x.Key.Length)
+                //     //     .First(x => line.StartsWith(x.Key));
+                // }
+                // catch (InvalidOperationException)
+                // {
+                //     throw new AssemblerException($"Instruction not defined: {line}");
+                // }
 
-        //             if (instructionLength == 2)
-        //             {
-        //                 // There is one operand which is a hex value representing one byte.
-        //                 machineCode[address++] = Convert.ToByte(parts[parts.Length - 1], 16);
-        //             }
-        //             else if (instructionLength == 3)
-        //             {
-        //                 // Check if we need to translate to a zero page instruction.
-        //                 if (parts[parts.Length - 1].Length == 4 && ZEROPAGE_TRANSLATIONS.ContainsKey(instruction.Key))
-        //                 {
-        //                     // Replace instruction with zero page instruction and process line again.
-        //                     lines[l] = line.Replace(instruction.Key, ZEROPAGE_TRANSLATIONS[instruction.Key]);
-        //                     l--;
-        //                     address--;
-        //                     continue;
-        //                 }
+                // // Add the current instruction to the machinecode.
+                // consoleLog[machineCodeAddress] = line;
+                // machineCode[machineCodeAddress++] = instruction.Opcode;
+                
+                // if (LABEL_INSTRUCTIONS.Contains(instruction.Key))
+                // {
+                //     // Current instruction refers to a label.
+                //     // We need to fill in the label address later.
+                //     labelsToTranslate.Add(machineCodeAddress, line.Split(' ').Last());
+                //     machineCodeAddress += 2;
+                // }
+                // else if (instruction.ByteCount > 1)
+                // {
+                //     // Instruction has 1 or 2 operands that need to be stored as well.
+                //     var parts = line.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
-        //                 // There is one operand which is a hex value representing two bytes. 
-        //                 var bytes = BitConverter.GetBytes(Convert.ToInt32(parts[parts.Length - 1], 16));
-        //                 machineCode[address++] = bytes[1];
-        //                 machineCode[address++] = bytes[0];
-        //             }
-        //         }
-        //     }
+                //     if (instruction.ByteCount == 2)
+                //     {
+                //         // There is one operand which is a hex value representing one byte.
+                //         //
+                //         // TODO:
+                //         // GET OPERAND VALUE
+                //         machineCode[machineCodeAddress++] = 0; //Convert.ToByte(parts[parts.Length - 1], 16);
+                //     }
+                //     else if (instruction.ByteCount == 3)
+                //     {
+                //         // There is one operand which is a hex value representing two bytes. 
+                //         //
+                //         // TODO:
+                //         // GET OPERAND VALUE
+                //         //var bytes = BitConverter.GetBytes(Convert.ToInt32(parts[parts.Length - 1], 16));
+                //         //machineCode[address++] = bytes[1];
+                //         //machineCode[address++] = bytes[0];
+                //         machineCode[machineCodeAddress++] = 0;
+                //         machineCode[machineCodeAddress++] = 0;
+                //     }
+                // }
+            }
 
-        //     // Fill in the addresses of all label references.
-        //     foreach (var labelref in labelsToTranslate)
-        //     {
-        //         int refAddress = labelref.Key;
-        //         int labelAddress = labels[labelref.Value];
+            // Fill in the addresses of all label references.
+            foreach (var labelref in labelsToTranslate)
+            {
+                int refAddress = labelref.Key;
+                int labelAddress = labels[labelref.Value] + offset;
 
-        //         // Split label address into two bytes.
-        //         var bytes = BitConverter.GetBytes(labelAddress);
-        //         machineCode[refAddress] = bytes[1];
-        //         machineCode[refAddress + 1] = bytes[0];
-        //     }
+                // Split label address into two bytes.
+                var bytes = BitConverter.GetBytes(labelAddress);
+                machineCode[refAddress] = bytes[1];
+                machineCode[refAddress + 1] = bytes[0];
+            }
 
-        //     // Output the machinecode with assembly to the console.
-        //     for (int i = 0; i < address; i++)
-        //     {
-        //         if (labels.ContainsValue(i))
-        //         {
-        //             Console.WriteLine($":{labels.FirstOrDefault(x => x.Value == i).Key}");
-        //         }
+            // Add bootloader code at the start of the machine code to jump to the program code.
+            AddBootLoader();
 
-        //         Console.WriteLine($"0x{i:X4}: 0x{machineCode[i]:X2}  # {consoleLog[i]}");
-        //     }
+            // Output the machinecode with assembly to the console.
+            for (int i = 0; i < machineCodeAddress; i++)
+            {
+                if (labels.ContainsValue(i))
+                {
+                    Console.WriteLine($":{labels.FirstOrDefault(x => x.Value == i).Key}");
+                }
 
-        //     // Output other data stored in machinecode (predefined data).
-        //     if (dataDefined)
-        //     {
-        //         Console.WriteLine($":data");
+                Console.WriteLine($"0x{i:X4}: 0x{machineCode[i]:X2}  ; {consoleLog[i]}");
+            }
+        }
 
-        //         for (int i = address; i < machineCode.Length; i++)
-        //         {
-        //             if (machineCode[i] != 0)
-        //             {
-        //                 Console.WriteLine($"0x{i:X4}: 0x{machineCode[i]:X2}");
-        //             }
-        //         }
-        //     }
+        private void AddBootLoader()
+        {
+            // Jump to main label
+            int mainAddress = labels["main"];
+            var bytes = BitConverter.GetBytes(mainAddress);
 
-        //     totalBytes += address;
-
-        //     SaveMachineCode();
-        // }
+            machineCode[0] = 0xC3;      // JMP
+            machineCode[1] = bytes[1];  // high byte
+            machineCode[2] = bytes[0];  // low byte
+        }
         
-        // private bool ProcessLabelDefinition(string line, int address)
-        // {
-        //     if (line.StartsWith(":"))
-        //     {
-        //         // Current line defines a label.
-        //         string label = RemoveNewLine(line.Split(':').Last());
+        private bool ProcessLabelDefinition(string line, int address)
+        {
+            if (line.EndsWith(":"))
+            {
+                string label = line.Split(':').First();
 
-        //         if (labels.ContainsKey(label))
-        //         {
-        //             throw new AssemblerException($"Label '{label}' is already defined");
-        //         }
+                if (labels.ContainsKey(label))
+                {
+                    throw new AssemblerException($"Label '{label}' is defined more than once.");
+                }
 
-        //         labels.Add(label, address);
+                labels.Add(label, address);
 
-        //         return true;
-        //     }
+                return true;
+            }
 
-        //     return false;
-        // }
-
-        // private bool ProcessVariableDefinition(string line)
-        // {
-        //     if (line.StartsWith("*"))
-        //     {
-        //         // Current line defines an address variable.
-        //         string varName = RemoveNewLine(line.Split('*').Last()).Split('=').First().Trim();
-        //         int varAddress = Convert.ToInt16(RemoveNewLine(line.Split('*').Last()).Split('=').Last().Trim(), 16);
-
-        //         if (addressVariables.ContainsKey(varName))
-        //         {
-        //             addressVariables[varName] = varAddress;
-        //         }
-        //         else
-        //         {
-        //             addressVariables.Add(varName, varAddress);
-        //         }
-
-        //         return true;
-        //     }
-
-        //     return false;
-        // }
-
-        // private string ReplaceVariablesInLine(string line)
-        // {
-        //     if (line.Contains("*"))
-        //     {
-        //         // Extract variable name.
-        //         int varStart = line.IndexOf("*") + 1;
-        //         int varEnd = line.IndexOf(" ", varStart);
-
-        //         if (varEnd == -1)
-        //         {
-        //             varEnd = line.Length;
-        //         }
-
-        //         string varName = line.Substring(varStart, varEnd - varStart);
-        //         string lineBeforeVar = line.Substring(0, varStart - 1);
-        //         string lineAfterVar = line.Length > varEnd
-        //             ? line.Substring(varEnd)
-        //             : string.Empty;
-
-        //         if (!addressVariables.ContainsKey(varName))
-        //         {
-        //             throw new AssemblerException($"Variable '{varName}' is not defined.");
-        //         }
-
-        //         return ReplaceVariablesInLine(lineBeforeVar + $"0x{addressVariables[varName]:X4}" + lineAfterVar);
-        //     }
-
-        //     return line;
-        // }
-
-        // private string[] PreprocessComplexInstructions(string[] source)
-        // {
-        //     var result = new List<string>(source);
-
-        //     for (int l = 0; l < source.Length; l++)
-        //     {
-        //         if ((source[l].StartsWith("LDX") || source[l].StartsWith("STX")) && !source[l].EndsWith("#DONE"))
-        //         {
-        //             string[] parts = source[l].Split(' ', StringSplitOptions.RemoveEmptyEntries);
-
-        //             string instruction = parts[0];
-        //             string register = parts[1];
-        //             string address = parts[2];
-        //             string addressPlusOne = $"0x{(Convert.ToInt32(address, 16) + 1):X4}";
-
-        //             instruction = instruction.Substring(0, 2) + "R";
-        //             string instructionCode = string.Empty;
-
-        //             if (address.Length == 4)
-        //             {
-        //                 addressPlusOne = $"0x{(Convert.ToInt32(address, 16) + 1):X2}";
-
-        //                 instructionCode = $@"
-        //                     LD AX {address}
-        //                     MVI AY 0x00
-
-        //                     LD D {addressPlusOne}
-        //                     MOV C D
-        //                     ADD D
-
-        //                     {instruction} {register} #DONE";
-        //             }
-        //             else
-        //             {
-        //                 instructionCode = $@"
-        //                     LD AX {address}
-        //                     MVI AY 0x00
-
-        //                     LD C {addressPlusOne}
-
-        //                     ADD D
-
-        //                     {instruction} {register} #DONE";
-        //             }
-
-        //             var instructionCodeLines = RemoveWhitespace(instructionCode)
-        //                 .Replace("\r", string.Empty)
-        //                 .Split('\n', StringSplitOptions.RemoveEmptyEntries)
-        //                 .Select(x => x.Trim());
-
-        //             result = new List<string>();
-        //             result.AddRange(source.Take(l));
-        //             result.AddRange(instructionCodeLines);
-        //             result.AddRange(source.Skip(l + 1));
-
-        //             return PreprocessComplexInstructions(result.ToArray());
-        //         }
-        //     }
-
-        //     // Remove #DONE markers.
-        //     return result.Select(x => x.Replace(" #DONE", string.Empty)).ToArray();
-        // }
-
-        // private void SaveMachineCode()
-        // {
-        //     if (File.Exists(targetFileName))
-        //     {
-        //         File.Delete(targetFileName);
-        //     }
-
-        //     using (var writer = new BinaryWriter(File.Open(targetFileName, FileMode.CreateNew)))
-        //     {
-        //         writer.Seek(0, SeekOrigin.Begin);
-        //         writer.Write(machineCode);
-        //     }
-        // }
+            return false;
+        }
         
         private void LoadMicrocode(string microcodeSourceFile)
         {

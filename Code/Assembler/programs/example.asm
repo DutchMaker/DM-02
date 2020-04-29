@@ -17,7 +17,7 @@ bytes     : $A4 $FF $5B 'G'         ; Store multiple bytes of data.
 
 .code
 
-main:
+;main:
   MOV HL,message  ; Load 16-bit address to the 'message' string into HL register pair.
           
 nextchar: 
