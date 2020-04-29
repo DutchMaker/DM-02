@@ -10,12 +10,7 @@ namespace Asm
     public class Assembler
     {
         private const int BOOTLOADER_SIZE = 16;
-
-        private readonly string[] LABEL_INSTRUCTIONS = 
-        { 
-            "JMP", "JC", "JZ", "JN", "JO", "JNC", "JNZ", "JP", "JNO",
-            "CALL", "CC", "CZ", "CN", "CO", "CNC", "CNZ", "CP", "CNO"
-        };
+        private readonly byte[] LABEL_INSTRUCTIONS = { 0xC3, 0xC4, 0xC5, 0xC6, 0xC7, 0XC8, 0xC9, 0xCA, 0xCB, 0xCC, 0xCD, 0xCE, 0xCF, 0xD0, 0xD1, 0xD2, 0xD2, 0xD3, 0xD4 };
 
         private static Assembler _assembler;
         private Mcc.Compiler microcodeCompiler;
@@ -59,8 +54,7 @@ namespace Asm
             ProcessOffset();            // Determine the memory offset.
             ProcessDataBlocks();        // Add predefined data to the machine code.
             ProcessAddressVariables();  // Replace any address variables with their address.
-            ProcessAssembly();
-            //Save();                     // Save the machine code to disk.
+            ProcessAssembly();          // Convert the assembly to machine code.
 
             Console.WriteLine();
             Console.WriteLine($"{machineCodeAddress} bytes of machinecode generated in {sw.ElapsedMilliseconds} ms.");
@@ -69,7 +63,7 @@ namespace Asm
         public void Save(string romFileName, string logisimImageFileName)
         {
             var sw = Stopwatch.StartNew();
-            Console.Write("Writing data...");
+            Console.Write("Writing machine code to output files...");
 
             if (File.Exists(romFileName))
             {
@@ -81,68 +75,33 @@ namespace Asm
                 File.Delete(logisimImageFileName);
             }
 
-        // private void SaveMachineCode()
-        // {
-        //     if (File.Exists(targetFileName))
-        //     {
-        //         File.Delete(targetFileName);
-        //     }
-
-        //     using (var writer = new BinaryWriter(File.Open(targetFileName, FileMode.CreateNew)))
-        //     {
-        //         writer.Seek(0, SeekOrigin.Begin);
-        //         writer.Write(machineCode);
-        //     }
-        // }
-
             using (var writer = new BinaryWriter(File.Open(romFileName, FileMode.CreateNew)))
             {
-                // // ROM image for EPROM needs to be little-endian format.
-                // // (low byte first, high byte second)
-                // foreach (int address in this.microcode.Keys)
-                // {
-                //     byte high = (byte)(this.microcode[address] >> 8);
-                //     byte low = (byte)(this.microcode[address] & 0xff);
-
-                //     // The offset is calculated in bytes, our values are 2 bytes each.
-                //     // Therefore we need to store at address*2.
-                //     writer.Seek(address*2, SeekOrigin.Begin);
-                //     writer.Write(low);
-                //     writer.Write(high);
-                // }
+                writer.Seek(0, SeekOrigin.Begin);
+                writer.Write(machineCode);
             }
 
             using (TextWriter writer = new StreamWriter(File.Open(logisimImageFileName, FileMode.CreateNew)))
             {
-                // // The Logisim image is written in a plain text format.
-                // // It has 8 16-bit values per row, separated by space.
-                // // Values are formatted big-endian.
-                // writer.WriteLine("v2.0 raw\n");
-                // int address = 0;
+                // The Logisim image is written in a plain text format.
+                // It has 8 bytes per row, separated by space.
+                writer.WriteLine("v2.0 raw\n");
+                int address = 0;
 
-                // for (int row = 0; row < UInt16.MaxValue / 8; row++)
-                // {
-                //     string rowData = string.Empty;
+                for (int row = 0; row < machineCode.Length / 8; row++)
+                {
+                    string rowData = string.Empty;
 
-                //     for (int col = 0; col < 8; col++)
-                //     {
-                //         if (this.microcode.ContainsKey(address))
-                //         {
-                //             rowData += $"{Converter.UIntToHex(this.microcode[address])} ";
-                //         }
-                //         else
-                //         {
-                //             rowData += "0000 ";
-                //         }
+                    for (int col = 0; col < 8; col++)
+                    {
+                        rowData += $"{machineCode[address++]:X2} ";
+                    }
 
-                //         address++;
-                //     }
-
-                //     writer.WriteLine(rowData.Trim());
-                // }
+                    writer.WriteLine(rowData.Trim());
+                }
             }
 
-            Console.WriteLine($"Saved and done ({sw.ElapsedMilliseconds} ms)");
+            Console.WriteLine($"Done in {sw.ElapsedMilliseconds} ms.");
         }
 
         private void ProcessIncludes()
@@ -317,61 +276,42 @@ namespace Asm
                     // Current line defines a label.
                     continue;
                 }
-                machineCodeAddress++;
-                // // Find instruction definition for current line.
-                // Instruction instruction;
                 
-                // try
-                // {
-                //     // TODO:
-                //     // FIGURE OUT WHAT INSTRUCTION IS USED
-                //     //
-                //     //microcodeCompiler.Instructions
-                //     // instruction = microcodeCompiler.Instructions.OrderByDescending(x => x.Key.Length)
-                //     //     .First(x => line.StartsWith(x.Key));
-                // }
-                // catch (InvalidOperationException)
-                // {
-                //     throw new AssemblerException($"Instruction not defined: {line}");
-                // }
-
-                // // Add the current instruction to the machinecode.
-                // consoleLog[machineCodeAddress] = line;
-                // machineCode[machineCodeAddress++] = instruction.Opcode;
+                // Find instruction definition for current line.
+                string data = null;
+                Mcc.Models.Instruction instruction = FindInstruction(line, out data);
                 
-                // if (LABEL_INSTRUCTIONS.Contains(instruction.Key))
-                // {
-                //     // Current instruction refers to a label.
-                //     // We need to fill in the label address later.
-                //     labelsToTranslate.Add(machineCodeAddress, line.Split(' ').Last());
-                //     machineCodeAddress += 2;
-                // }
-                // else if (instruction.ByteCount > 1)
-                // {
-                //     // Instruction has 1 or 2 operands that need to be stored as well.
-                //     var parts = line.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                if (instruction == null)
+                {
+                    throw new AssemblerException($"Instruction not defined: {line}");
+                }
 
-                //     if (instruction.ByteCount == 2)
-                //     {
-                //         // There is one operand which is a hex value representing one byte.
-                //         //
-                //         // TODO:
-                //         // GET OPERAND VALUE
-                //         machineCode[machineCodeAddress++] = 0; //Convert.ToByte(parts[parts.Length - 1], 16);
-                //     }
-                //     else if (instruction.ByteCount == 3)
-                //     {
-                //         // There is one operand which is a hex value representing two bytes. 
-                //         //
-                //         // TODO:
-                //         // GET OPERAND VALUE
-                //         //var bytes = BitConverter.GetBytes(Convert.ToInt32(parts[parts.Length - 1], 16));
-                //         //machineCode[address++] = bytes[1];
-                //         //machineCode[address++] = bytes[0];
-                //         machineCode[machineCodeAddress++] = 0;
-                //         machineCode[machineCodeAddress++] = 0;
-                //     }
-                // }
+                // Add the current instruction to the machinecode.
+                consoleLog[machineCodeAddress] = line;
+                machineCode[machineCodeAddress++] = instruction.Opcode;
+                
+                if (LABEL_INSTRUCTIONS.Contains(instruction.Opcode))
+                {
+                    // Current instruction refers to a label.
+                    // We need to fill in the label address later.
+                    labelsToTranslate.Add(machineCodeAddress, line.Split(' ').Last());
+                    machineCodeAddress += 2;
+                }
+                else if (instruction.ByteCount > 1)
+                {
+                    if (instruction.ByteCount == 2)
+                    {
+                        // There is one operand which is a hex value representing one byte.
+                        machineCode[machineCodeAddress++] = StringUtils.ParseByteValue(data);
+                    }
+                    else if (instruction.ByteCount == 3)
+                    {
+                        // There is one operand which is a hex value representing two bytes. 
+                        var bytes = BitConverter.GetBytes(StringUtils.ParseUshortValue(data));
+                        machineCode[machineCodeAddress++] = bytes[1];
+                        machineCode[machineCodeAddress++] = bytes[0];
+                    }
+                }
             }
 
             // Fill in the addresses of all label references.
@@ -397,8 +337,61 @@ namespace Asm
                     Console.WriteLine($":{labels.FirstOrDefault(x => x.Value == i).Key}");
                 }
 
-                Console.WriteLine($"0x{i:X4}: 0x{machineCode[i]:X2}  ; {consoleLog[i]}");
+                Console.WriteLine($"{i:X4}: {machineCode[i]:X2}; {consoleLog[i]}");
             }
+        }
+
+        /// <summary>
+        /// Finds the instruction that is used in the given line of assembly code.
+        /// </summary>
+        /// <param name="line"></param>
+        /// <param name="data">If the line of code contains data (value or address), it's output here.</param>
+        /// <returns></returns>
+        public Mcc.Models.Instruction FindInstruction(string line, out string data)
+        {
+            // First check if there is an exact match.
+            var instruction = microcodeCompiler.Instructions.FirstOrDefault(x => x.Mnemonic.Equals(line));
+
+            if (instruction != null)
+            {
+                data = null;
+                return instruction;
+            }
+
+            if (line.Contains("#"))
+            {
+                string mnemonic = line.Split(',').First() + ",value";
+                data = line.Split(',').Last().Replace("#", string.Empty);
+
+                instruction = microcodeCompiler.Instructions.FirstOrDefault(x => x.Mnemonic.Equals(mnemonic));
+
+                if (instruction != null)
+                {
+                    return instruction;
+                }
+            }
+
+            foreach (var i in microcodeCompiler.Instructions.Where(x => x.Mnemonic.Contains("address")))
+            {
+                string[] beforeAfter = i.Mnemonic.Split("address");
+
+                if (line.StartsWith(beforeAfter[0]) && (string.IsNullOrEmpty(beforeAfter[1]) || line.EndsWith(beforeAfter[1])))
+                {
+                    data = line.Replace(beforeAfter[0], "");
+                    if (!string.IsNullOrEmpty(beforeAfter[1]))
+                    {
+                        data = data.Replace(beforeAfter[1], "");
+                    }
+
+                    if (i.Mnemonic.Replace("address", data).Equals(line))
+                    {
+                        return i;
+                    }
+                }
+            }
+
+            data = null;
+            return null;
         }
 
         private void AddBootLoader()

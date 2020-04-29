@@ -1,7 +1,7 @@
 ; This source file demonstrates all the DM-02 assembly language features.
 
 .data
-message   : "Hel\0Dlo \09Wor\\ld"           ; Store string data (terminated with 0x0 by the assembler).
+message   : "Hello\0DWorld"           ; Store string data (terminated with 0x0 by the assembler).
 multiline : "This uses multipe " _  ; An underscore is required when a string 
             "lines to define data"  ; definition spans multiple lines so the assembler knows to terminate.
 bytes     : $A4 $FF $5B 'G'         ; Store multiple bytes of data.
@@ -18,24 +18,24 @@ bytes     : $A4 $FF $5B 'G'         ; Store multiple bytes of data.
 .code
 
 ;main:
-  MOV HL,message  ; Load 16-bit address to the 'message' string into HL register pair.
+  MOV BC,#message ; Load 16-bit address to the 'message' string into BC register pair.
           
 nextchar: 
-  MOV A,(HL)      ; Transfer value from memory location HL into A.
+  MOV A,(BC)      ; Transfer value from memory location BC into A.
 
   ; Check if we reached the end of the string:
-  MOV B,#0        ; Load immediate value 0 into B.
-  CMP B           ; Compare A and B.
-  JZ done         ; If A==B then we reached the string terminator.
+  MOV H,#0        ; Load immediate value 0 into H.
+  CMP H           ; Compare A and H.
+  JZ done         ; If A==H then we reached the string terminator.
 
   MOV *serialout,A ; Transfer value from A to #FF00 (I/O address).
 
   ; Incrementing a 16-bit register pair:
-  INC L           ; First increment the lower byte value.
+  INC C           ; First increment the lower byte value.
   MOV A,#0        ; Load immediate value 0 into A.
-  ADC H           ; Add A to H with carry, 
+  ADC B           ; Add A to B with carry, 
                   ; this increments the higher byte if needed.
-  MOV H,A         ; Copy A into H.
+  MOV B,A         ; Copy A into B.
   
   JMP nextchar
 

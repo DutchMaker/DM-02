@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 namespace Mcc.Models
 {
@@ -47,6 +48,58 @@ namespace Mcc.Models
             {
                 throw new CompilerException($"Exception occurred while parsing instruction definition '{str}': {ex.Message}");
             }
+        }
+
+        /// <summary>
+        /// Indicates whether the given line of assembly code matches this instruction.
+        /// </summary>
+        /// <param name="line"></param>
+        /// <param name="data">If the line of code contains data (value or address), it's output here.</param>
+        /// <returns></returns>
+        public bool Match(string line, out string data)
+        {
+            if (ByteCount == 1 && line.Equals(Mnemonic))
+            {
+                data = null;
+                return true;
+            }
+
+            if (line.Contains("#"))
+            {
+                string mnemonic = line.Split(',').First();
+                data = line.Split(',').Last().Replace("#", string.Empty);
+
+                if (Mnemonic.Equals(mnemonic + ",value"))
+                {
+                    return true;
+                }
+            }
+
+            if (Mnemonic.Contains("address"))
+            {
+                if (line.Contains("(") && !Mnemonic.Contains("("))
+                {
+                    data = null;
+                    return false;
+                }
+                
+                string[] beforeAfter = Mnemonic.Split("address");
+
+                if (line.StartsWith(beforeAfter[0]) && (string.IsNullOrEmpty(beforeAfter[1]) || line.EndsWith(beforeAfter[1])))
+                {
+                    data = line.Replace(beforeAfter[0], "");
+                    
+                    if (!string.IsNullOrEmpty(beforeAfter[1]))
+                    {
+                        data = data.Replace(beforeAfter[1], "");
+                    }
+
+                    return true;
+                }
+            }
+
+            data = null;
+            return false;
         }
     }
 }
