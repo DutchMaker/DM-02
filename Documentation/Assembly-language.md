@@ -4,12 +4,14 @@
 
 - [Instruction overview](#instruction-overview)
 - [Example code](#example-code)
+- [Source file structure](#source-file-structure)
 - [Addressing modes](#addressing-modes)
 - [Value formats](#value-formats)
 - [Memory layout](#memory-layout)
 - [Instruction reference](#instruction-reference)
 
 <a name="instruction-overview"></a>
+
 ## Instruction overview
 
 The table below briefly describes the instructions that are support by the DM-02 assembly language. Each of the instructions is described in more detail in this document.
@@ -50,33 +52,80 @@ The table below briefly describes the instructions that are support by the DM-02
 
 
 <a name="example-code"></a>
+
 ## Example code
 ```
+.data																; Data is always stored at the start of memory.
+message   : "Hello World"           ; Store string data (automatically terminated with $00).
+
+multiline : "This uses multiple " _ ; An _ is required when a string definition spans
+            "lines to define data"  ; multiple lines so the assembler knows to terminate.
+            
+bytes     : $A4 $FF $5B 'G'         ; Store multiple bytes of data.
+            $BC 65 %10001001 $AA    ; data may continue on the next line.
+            $AA $BB 
+            
+*serialout: $FF00                   ; Define an address pointer.
+                                    ; The * prefix tells the assembler not to apply the 
+                                    ; memory offset.
+
+.include  "example_data.asm"        ; Include the contents of another file.
+.offset		$4000											; Define the memory offset (depends on wether the
+                                    ; program will run from ROM or RAM).
+
+.code
+main:							; The program starts at the 'main' label.
+  MOV HL,message  ; Load 16-bit address to the 'message' string into HL register pair.
+          
+nextchar: 
+  MOV A,(HL)      ; Transfer value from memory location HL into A.
+
+  ; Check if we reached the end of the string:
+  MOV B,#0        ; Load immediate value 0 into B.
+  CMP B           ; Compare A and B.
+  JZ done         ; If A==B then we reached the string terminator.
+
+  MOV *serialout,A    ; Transfer value from A to #FF00 (I/O address).
+
+  ; Incrementing a 16-bit register pair:
+  INC L           ; First increment the lower byte value.
+  MOV A,#0        ; Load immediate value 0 into A.
+  ADC H           ; Add A to H with carry, 
+                  ; this increments the higher byte if needed.
+  MOV H,A         ; Copy A into H.
+  
+  JMP nextchar
+
+done:     
+  HALT
+
+
 .data
-message   : "Hello world"                  ; Store string data (terminated with 0).
-bytes     : $A4 $FF $5B ‘G’ 128 %10010011  ; Store multiple bytes of data.
-            $FF $4A $DE
-$4F00     : $00 $01 $02 $03 $04            ; Store data at explicit address.
-serialout = $FF00                          ; Define an address pointer.
-
-.code   
-main:   MOV HL,message  ; Load 16-bit address to message string into HL register pair.
-        MOV B,#0        ; Load immediate value 0 into B.
-
-nxtchr: MOV A,(HL)      ; Transfer value from memory location HL into A.
-        CMP B           ; Compare A and B.
-        JZ done         ; If A-B=0, we hit the end of our string.
-        MOV serialout,A ; Transfer value from A to $FF00 (I/O address).
-
-        INC HL          ; Increment value of the HL register pair.
-        JMP nxtchr      ; Repeat for the next character in the string.
-
-done:   HALT
+example:  "Data may also be stored after the .code block"
+          "Special characters in strings are expressed by their hexadecimal code"
+          "This is a carriage return \0D and this is a tab \09"
 ```
+
+
+
+<a name="source-file-structure"></a>
+
+## Source file structure
+
+### Data blocks
+
+
+
+### Code block
+
+
+
+#### Main label
 
 
 
 <a name="address-modes"></a>
+
 ## Addressing modes
 
 Where DM-01 had many different mnemonics for data transfer, DM-02 mainly uses the `MOV` instruction combined with different addressing modes.
@@ -119,8 +168,23 @@ Values for data or addresses may be expressed using different formats:
 | character   | '*value*' | `MOV A,#'A'`           |
 | string      | "*value*" | `$4F00: "Hello world"` |
 
+**Note:** 16-bit values must always be expressed in hexadecimal format, preferably with all 4 characters to avoid confusion by the assembler (e.g., $003A).
+
+### Strings
+
+Defining strings is pretty straight forward as you can see in the example. Some characters require the use of the `\` escape character in order to be expressed.
+
+To use an escape character simply write the **2 character** hexadecimal code, prefixed with a backslash:
+
+```
+"This is a carriage return: \0D"
+"This is a horizontal tab: \09"
+```
+
+
 
 <a name="memory-layout"></a>
+
 ## Memory layout
 
 | Start address | End address | Description             |
@@ -136,7 +200,6 @@ Values for data or addresses may be expressed using different formats:
 - *Assembler must know memory offset (wether it runs from ROM or RAM)*
 - Stack space starts at the end of RAM and works its way back to the start when data is pushed onto it.
 - The entire RAM may be used for stack.
-- MAR can increment by one - used when loading 16-bit data 
 
 
 <a name="instruction-reference"></a>

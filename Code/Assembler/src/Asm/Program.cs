@@ -8,12 +8,12 @@ namespace Asm
         static void Main(string[] args)
         {
             Console.WriteLine();
-            Console.WriteLine("-----------------------");
-            Console.WriteLine("74xx Computer Assembler");
-            Console.WriteLine("-----------------------");
+            Console.WriteLine("------------------------");
+            Console.WriteLine("DM-02 Computer Assembler");
+            Console.WriteLine("------------------------");
             Console.WriteLine();
 
-            // args = new string[] { @"d:\Projects\Active\TTL-computer\Code\Microcode\microcode.src", @"d:\Projects\Active\TTL-computer\Code\Assembler\program.asm" };
+            args = new string[] { @"/Users/ruud/Projects/DM-02/Code/Microcode/microcode.src", @"/Users/ruud/Projects/DM-02/Code/Assembler/programs/example.asm" };
 
             if (args.Length == 0)
             {
@@ -47,7 +47,7 @@ namespace Asm
             {
                 Assembler.Assemble(microCodeFileName, programCodeFileName);
             }
-            catch (MicrocodeCompilerException ex)
+            catch (Mcc.CompilerException ex)
             {
                 Console.WriteLine("Microcode compilation failed:");
                 Console.WriteLine(ex?.Message);
@@ -59,7 +59,6 @@ namespace Asm
             }
 
             Console.WriteLine();
-            //Console.ReadLine();
         }
     }
 }

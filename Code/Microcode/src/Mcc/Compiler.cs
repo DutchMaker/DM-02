@@ -28,9 +28,9 @@ namespace Mcc
         public List<AluFunction> AluFunctions = new List<AluFunction>();
         public List<InstructionMicrocode> MicrocodeSource = new List<InstructionMicrocode>();
 
-        private Dictionary<int, UInt16> microcode = new Dictionary<int, ushort>();
+        private Dictionary<int, ushort> microcode = new Dictionary<int, ushort>();
 
-        public static void Compile(string sourceFileName)
+        public static Compiler Compile(string sourceFileName, bool save = true)
         {
             string romFileName = sourceFileName.Split('.', StringSplitOptions.RemoveEmptyEntries).First() + ".rom";
             string logisimImageFileName = sourceFileName.Split('.', StringSplitOptions.RemoveEmptyEntries).First() + ".img";
@@ -38,7 +38,13 @@ namespace Mcc
 
             _compiler = new Compiler(source);
             _compiler.Compile();
-            _compiler.Save(romFileName, logisimImageFileName);
+
+            if (save)
+            {
+                _compiler.Save(romFileName, logisimImageFileName);
+            }
+
+            return _compiler;
         }
 
         public Compiler(string source)
@@ -136,21 +142,11 @@ namespace Mcc
             source = source.Replace("\r\n", "\n");
 
             // Remove indentations.
-            source = source.Replace("\t", string.Empty);
+            source = source.Replace("\t", " ");
             while (source.Contains("  "))
             {
                 source = source.Replace("  ", " ");
             }
-
-            // Remove whitespace lines.
-            while (source.Contains("\n\n"))
-            {
-                source = source.Replace("\n\n", "\n");
-            }
-
-            source = source.Replace("\n \n", "\n");
-            source = source.Replace("\n ", "\n");
-            source = source.Replace(" \n", "\n");
 
             // Remove comments.
             while (source.Contains("#"))
@@ -164,10 +160,28 @@ namespace Mcc
                 }
 
                 string beforeComment = source.Substring(0, commentStart);
-                string afterComment = source.Substring(commentEnd + 1);
+                string afterComment = source.Substring(commentEnd);
 
                 source = beforeComment + afterComment;
             }
+
+            while (source.Contains(" \n"))
+            {
+                source = source.Replace(" \n", "\n");
+            }
+
+            while (source.Contains("\n "))
+            {
+                source = source.Replace("\n ", "\n");
+            }
+
+            // Remove whitespace lines.
+            while (source.Contains("\n\n"))
+            {
+                source = source.Replace("\n\n", "\n");
+            }
+
+            source = source.Trim('\n');
         }
 
         private void LoadBitPatterns()
@@ -234,6 +248,11 @@ namespace Mcc
             {
                 // Get instruction mnemonic.
                 int mnemonicEnd = this.source.IndexOf("\n", cursor);
+                if (mnemonicEnd == -1)
+                {
+                    mnemonicEnd = this.source.Length;
+                }
+
                 string mnemonic = this.source.Substring(cursor, mnemonicEnd - cursor);
 
                 if (mnemonic.Equals(".end", StringComparison.OrdinalIgnoreCase))

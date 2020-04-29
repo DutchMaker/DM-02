@@ -7275,8 +7275,8 @@ d580 0 0 2800 2800 0 0 2800
     <comp lib="4" loc="(1280,170)" name="ROM">
       <a name="addrWidth" val="16"/>
       <a name="contents">addr/data: 16 8
-1c 51 ff 79 c8 0 10 78
-8*0 e2
+1c 51 0 7e 1 18 0 6f
+5 e2
 </a>
     </comp>
     <comp lib="1" loc="(490,520)" name="AND Gate">
