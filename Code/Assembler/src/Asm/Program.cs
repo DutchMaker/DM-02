@@ -13,7 +13,7 @@ namespace Asm
             Console.WriteLine("------------------------");
             Console.WriteLine();
 
-            args = new string[] { @"/Users/ruud/Projects/DM-02/Code/Microcode/microcode.src", @"/Users/ruud/Projects/DM-02/Code/Assembler/programs/print_str/print_str.asm" };
+            args = new string[] { @"/Users/ruud/Projects/DM-02/Code/Microcode/microcode.src", @"/Users/ruud/Projects/DM-02/Code/Assembler/programs/video/bitmap.asm" };
             //args = new string[] { @"/Users/ruud/Projects/DM-02/Code/Microcode/microcode.src", @"/Users/ruud/Projects/DM-02/Code/Assembler/programs/example/example.asm" };
 
             if (args.Length == 0)

@@ -63,6 +63,9 @@ namespace Asm
                 input = input.Replace("\n\n", "\n");
             }
 
+            input = input.Replace(" ,", ",");
+            input = input.Replace(", ", ",");
+
             input = input.Trim('\n');
 
             return input;

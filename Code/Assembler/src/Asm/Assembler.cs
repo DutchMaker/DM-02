@@ -19,10 +19,10 @@ namespace Asm
 
         private string source;
         private string sourceFolderPath;
-        private byte[] machineCode = new byte[0x4000];        
-        private ushort machineCodeAddress = BOOTLOADER_SIZE;    // The first 16 bytes of machine code are reserved
-                                                                // for a JMP to get past the predefined data and maybe additional code in the future.
-        private ushort offset = 0;
+        private byte[] machineCode = new byte[0xBFFF];        
+        private int machineCodeAddress = BOOTLOADER_SIZE;   // The first 16 bytes of machine code are reserved
+                                                            // for a JMP to get past the predefined data and maybe additional code in the future.
+        private int offset = 0;
 
         private Dictionary<string, int> labels = new Dictionary<string, int>();
         private Dictionary<int, string> labelsToTranslate = new Dictionary<int, string>();
@@ -51,13 +51,25 @@ namespace Asm
         private void Assemble()
         {
             var sw = Stopwatch.StartNew();
-            Console.WriteLine("Generating machinecode...");
+            Console.WriteLine("Generating machine code...");
 
-            ProcessIncludes();          // Include external files.
-            ProcessOffset();            // Determine the memory offset.
-            ProcessDataBlocks();        // Add predefined data to the machine code.
-            ProcessAddressVariables();  // Replace any address variables with their address.
-            ProcessAssembly();          // Convert the assembly to machine code.
+            try
+            {
+                ProcessIncludes();          // Include external files.
+                ProcessOffset();            // Determine the memory offset.
+                ProcessDataBlocks();        // Add predefined data to the machine code.
+                ProcessAddressVariables();  // Replace any address variables with their address.
+                ProcessAssembly();          // Convert the assembly to machine code.
+            }
+            catch (IndexOutOfRangeException ex)
+            {
+                throw new AssemblerException("Generated machine code size exceeds maximum of 48 Kb");
+            }
+
+            if (machineCodeAddress >= 0x4000)
+            {
+                Console.WriteLine("\nWARNING: Generated machine code size exceeds 16 Kb and will not fit into ROM!");
+            }
 
             Console.WriteLine();
             Console.WriteLine($"{machineCodeAddress} bytes of machinecode generated in {sw.ElapsedMilliseconds} ms.");
@@ -91,7 +103,7 @@ namespace Asm
                 writer.WriteLine("v2.0 raw\n");
                 int address = 0;
 
-                for (int row = 0; row < machineCode.Length / 8; row++)
+                for (int row = 0; row < (machineCodeAddress + BOOTLOADER_SIZE) / 8; row++)
                 {
                     string rowData = string.Empty;
 
@@ -257,7 +269,7 @@ namespace Asm
 
         private void ProcessAssembly()
         {
-            string[] consoleLog = new string[0x4000];
+            string[] consoleLog = new string[0xBFFF];
             bool stackPointerUsed = false;
             bool stackPointerSet = false;
 

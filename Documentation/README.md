@@ -27,7 +27,7 @@ DM-02 is (being) built with the following specifications in mind:
 - 8-bit data bus
 - 16-bit address bus, allowing for 64 Kb of addressable memory
   - 16 Kb reserved for ROM
-  - 48 Kb (minus 256 bytes) reserved for RAM
+  - 48 Kb reserved for RAM
 - 16-bit stack pointer (entire RAM may be used as stack space)
 - 16-bit program counter
 - Register configuration:
