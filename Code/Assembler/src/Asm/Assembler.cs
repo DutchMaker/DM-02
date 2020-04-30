@@ -16,6 +16,7 @@ namespace Asm
         private Mcc.Compiler microcodeCompiler;
 
         private string source;
+        private string sourceFolderPath;
         private byte[] machineCode = new byte[0x4000];        
         private ushort machineCodeAddress = BOOTLOADER_SIZE;    // The first 16 bytes of machine code are reserved
                                                                 // for a JMP to get past the predefined data and maybe additional code in the future.
@@ -25,23 +26,23 @@ namespace Asm
         private Dictionary<int, string> labelsToTranslate = new Dictionary<int, string>();
         private Dictionary<string, int> addressVariables = new Dictionary<string, int>();
 
-        bool dataDefined = false;
-
-        public static void Assemble(string microcodeSourceFile, string programSourceFile)
+        public static void Assemble(string microcodeSourceFilePath, string programSourceFilePath)
         {
-            string romFileName = programSourceFile.Split('.', StringSplitOptions.RemoveEmptyEntries).First() + ".rom";
-            string logisimImageFileName = programSourceFile.Split('.', StringSplitOptions.RemoveEmptyEntries).First() + ".img";
-            string programCode = File.ReadAllText(programSourceFile);
+            string romFileName = programSourceFilePath.Split('.', StringSplitOptions.RemoveEmptyEntries).First() + ".rom";
+            string logisimImageFileName = programSourceFilePath.Split('.', StringSplitOptions.RemoveEmptyEntries).First() + ".img";
 
-            _assembler = new Assembler(microcodeSourceFile, programCode);
+            _assembler = new Assembler(microcodeSourceFilePath, programSourceFilePath);
             _assembler.Assemble();
             _assembler.Save(romFileName, logisimImageFileName);
         }
 
-        private Assembler(string microcodeSourceFile, string programCode)
+        private Assembler(string microcodeSourceFilePath, string programSourceFilePath)
         {
-            LoadMicrocode(microcodeSourceFile);
+            LoadMicrocode(microcodeSourceFilePath);
 
+            string programCode = File.ReadAllText(programSourceFilePath);
+
+            this.sourceFolderPath = Path.GetDirectoryName(programSourceFilePath);
             this.source = StringUtils.Cleanup(programCode);
         }
 
@@ -109,18 +110,18 @@ namespace Asm
             while (source.IndexOf(".include") > -1)
             {
                 int start = source.IndexOf(".include");
-                string includeFileName = StringUtils.ExtractStringData(source, start);
+                string includeFilePath = Path.Combine(sourceFolderPath, StringUtils.ExtractStringData(source, start));
 
                 string before = source.Substring(0, start);
                 string after = source.Substring(source.IndexOf("\n", start));
 
                 try
                 {
-                    source = before + File.ReadAllText(includeFileName) + after;
+                    source = before + File.ReadAllText(includeFilePath) + after;
                 }
                 catch (Exception ex)
                 {
-                    throw new AssemblerException($"Could not include file {includeFileName}\nException: {ex.Message}");
+                    throw new AssemblerException($"Could not include file {includeFilePath}\nException: {ex.Message}");
                 }
             }
 
@@ -156,8 +157,6 @@ namespace Asm
                 Console.WriteLine("Optional block '.data' was found.");
                 return;
             }
-
-            dataDefined = true;
 
             int start = source.IndexOf(".data\n");
 
@@ -196,8 +195,6 @@ namespace Asm
 
         private void ProcessDataBlock(string block)
         {
-            dataDefined = true;
-
             block = block.Substring(5).Trim('\n');
             var lines = block.Split('\n', StringSplitOptions.RemoveEmptyEntries);
 
@@ -337,7 +334,7 @@ namespace Asm
                     Console.WriteLine($":{labels.FirstOrDefault(x => x.Value == i).Key}");
                 }
 
-                Console.WriteLine($"{i:X4}: {machineCode[i]:X2}; {consoleLog[i]}");
+                Console.WriteLine($"${i+offset:X4}: ${machineCode[i]:X2}; {consoleLog[i]}");
             }
         }
 
@@ -397,7 +394,7 @@ namespace Asm
         private void AddBootLoader()
         {
             // Jump to main label
-            int mainAddress = labels["main"];
+            int mainAddress = labels["main"] + offset;
             var bytes = BitConverter.GetBytes(mainAddress);
 
             machineCode[0] = 0xC3;      // JMP

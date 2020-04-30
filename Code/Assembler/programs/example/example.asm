@@ -10,7 +10,7 @@ bytes     : $A4 $FF $5B 'G'         ; Store multiple bytes of data.
 *serialout: $FF00                   ; Define an address pointer (must be express as 4 character hex value). 
                                     ; The * prefix tells the assembler not to apply the memory offset.
 
-.include  "/Users/ruud/Projects/DM-02/Code/Assembler/programs/example_data.asm"        ; Include the contents of another file.
+.include  "example_data.asm"        ; Include the contents of another file.
 
 ;.offset		$4000										; Define the memory offset (depends on wether the
                                     ; program will run from ROM or RAM).
