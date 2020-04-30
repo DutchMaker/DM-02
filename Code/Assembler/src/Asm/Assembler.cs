@@ -10,7 +10,9 @@ namespace Asm
     public class Assembler
     {
         private const int BOOTLOADER_SIZE = 16;
+        private const byte SP_INSTRUCTION = 0x42;
         private readonly byte[] LABEL_INSTRUCTIONS = { 0xC3, 0xC4, 0xC5, 0xC6, 0xC7, 0XC8, 0xC9, 0xCA, 0xCB, 0xCC, 0xCD, 0xCE, 0xCF, 0xD0, 0xD1, 0xD2, 0xD2, 0xD3, 0xD4 };
+        private readonly byte[] STACK_INSTRUCTIONS = { 0x43, 0x44, 0x45, 0x46, 0x47, 0x48, 0x49, 0x4A, 0x4B, 0x4C, 0x4D, 0x4E, 0x4F, 0x50, 0x51, 0x52, 0xCC, 0xCD, 0xCE, 0xCE, 0xCF, 0xD0, 0xD1, 0xD2, 0xD3, 0xD4 };
 
         private static Assembler _assembler;
         private Mcc.Compiler microcodeCompiler;
@@ -256,6 +258,9 @@ namespace Asm
         private void ProcessAssembly()
         {
             string[] consoleLog = new string[0x4000];
+            bool stackPointerUsed = false;
+            bool stackPointerSet = false;
+
             var lines = source.Split('\n', StringSplitOptions.RemoveEmptyEntries);
 
             for (int l = 0; l < lines.Length; l++)
@@ -281,6 +286,16 @@ namespace Asm
                 if (instruction == null)
                 {
                     throw new AssemblerException($"Instruction not defined: {line}");
+                }
+
+                if (STACK_INSTRUCTIONS.Contains(instruction.Opcode))
+                {
+                    stackPointerUsed = true;
+                }
+
+                if (instruction.Opcode == SP_INSTRUCTION)
+                {
+                    stackPointerSet = true;
                 }
 
                 // Add the current instruction to the machinecode.
@@ -309,6 +324,12 @@ namespace Asm
                         machineCode[machineCodeAddress++] = bytes[0];
                     }
                 }
+            }
+
+            // If an instruction was used to relies on the Stack Pointer, make sure the stack pointer was set.
+            if (stackPointerUsed && !stackPointerSet)
+            {
+                throw new AssemblerException("Stack Pointer was not set. Execute 'SP' before attempting to use stack.");
             }
 
             // Fill in the addresses of all label references.
@@ -357,8 +378,11 @@ namespace Asm
 
             if (line.Contains("#"))
             {
-                string mnemonic = line.Split(',').First() + ",value";
-                data = line.Split(',').Last().Replace("#", string.Empty);
+                string mnemonic = line.Contains(",")
+                        ? line.Split(',').First() + ",value"
+                        : line.Split('#').First() + "value";
+                
+                data = line.Split('#').Last();
 
                 instruction = microcodeCompiler.Instructions.FirstOrDefault(x => x.Mnemonic.Equals(mnemonic));
 
