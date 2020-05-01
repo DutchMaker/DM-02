@@ -119,7 +119,7 @@ example:  "Data may also be stored after the .code block" _
 
 ### Data blocks
 
-
+defining buffer only makes sense when running from RAM
 
 ### Code block
 

@@ -383,9 +383,21 @@ namespace Asm
 
             // Add bootloader code at the start of the machine code to jump to the program code.
             AddBootLoader();
-            consoleLog[0] = "JMP main";
+            consoleLog[offset] = "JMP main";
             
+            // Output the address pointer variables to the console.
             Console.WriteLine();
+
+            if (addressVariables.Count > 0)
+            {
+                int maxNameLength = addressVariables.Keys.OrderByDescending(k => k.Length).First().Length;
+
+                addressVariables.OrderBy(kvp => kvp.Value)
+                    .ToList()
+                    .ForEach(kvp => Console.WriteLine($"{kvp.Key}{"".PadLeft(maxNameLength - kvp.Key.Length)} : ${kvp.Value:X4}"));
+
+                Console.WriteLine();
+            }
 
             // Output the machinecode with assembly to the console.
             for (int i = offset; i < machineCodeAddress; i++)

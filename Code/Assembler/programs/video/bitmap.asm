@@ -18,6 +18,12 @@
 *x            : $4000
 *y            : $4001
 
+~CMD_SETCOLOR_H   : #$01
+~CMD_SETCOLOR_L   : #$02
+~CMD_SETCOORD     : #$03
+~CMD_WRITE_PIXEL  : #$04
+~CMD_CLEAR_SCREEN : #$05
+
 .include "bitmap_data.asm"   ; 64x64 pixel black&white bitmap.
 
 .code
@@ -26,12 +32,13 @@ main:
   SP $FEFF
 
   ; Set pixel color to white.
-  MOV A,#$FF          ; Set color data to white
+  MOV A,#$FF              ; Set color data to white
   MOV *display_data,A
-  MOV A,#$01          ; Execute set color (high byte) command
-  MOV *display_cmd,A
-  MOV A,#$02          ; Execute set color (low byte) command
-  MOV *display_cmd,A
+  
+  MOV A,~CMD_SETCOLOR_H   
+  MOV *display_cmd,A      ; Execute set color (high byte) command
+  MOV A,~CMD_SETCOLOR_L 
+  MOV *display_cmd,A      ; Execute set color (low byte) command
 
   ; Store pointer to bitmap.
   MOV BC,#bitmap
@@ -78,16 +85,16 @@ draw_pixel:
 
   MOV A,*x            ; Set X coordinate
   MOV *display_data,A
-  MOV A,#$03          ; Execute set coordinate command
-  MOV *display_cmd,A
+  MOV A,~CMD_SETCOORD
+  MOV *display_cmd,A  ; Execute set coordinate command
 
   MOV A,*y            ; Set Y coordinate
   ADD #$80            ; Most-left bit must be 1.
   MOV *display_data,A
-  MOV A,#$03          ; Execute set coordinate command
-  MOV *display_cmd,A
+  MOV A,~CMD_SETCOORD
+  MOV *display_cmd,A  ; Execute set coordinate command
 
-  MOV A,#$04
+  MOV A,~CMD_WRITE_PIXEL
   MOV *display_cmd,A  ; Execute set pixel command
 
   RET
