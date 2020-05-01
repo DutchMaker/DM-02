@@ -1,3 +1,5 @@
+; Generated with help of https://hexed.it
+
 .data
 bitmap: $01 $01 $01 $01 $01 $01 $01 $01 $01 $01 $01 $01
         $01 $01 $01 $01 $01 $01 $01 $01 $01 $01 $01 $01

@@ -19,6 +19,7 @@ The table below briefly describes the instructions that are support by the DM-02
 | Mnemonic                     | Description                                                  |
 | ---------------------------- | ------------------------------------------------------------ |
 | [MOV](#MOV)                  | Transfer data from one location (e.g. register or memory location) to another. |
+| [SP](#SP)                    | Initialize stack pointer                                     |
 | [PUSH](#PUSH)                | Push data onto the stack                                     |
 | [POP](#POP)                  | Pop data from the stack                                      |
 | [ADD](#ADD)                  | Add to accumulator                                           |
@@ -47,7 +48,6 @@ The table below briefly describes the instructions that are support by the DM-02
 | [FCLR](#FCLR)                | Flag clear                                                   |
 | [NOP](#NOP)                  | No operation (do nothing)                                    |
 | [HALT](#HALT)                | Halt program execution                                       |
-| [SP](#SP)                    | Initialize stack pointer                                     |
 
 
 
@@ -75,24 +75,23 @@ bytes     : $A4 $FF $5B 'G'         ; Store multiple bytes of data.
 
 .code
 main:							; The program starts at the 'main' label.
-  MOV HL,message  ; Load 16-bit address to the 'message' string into HL register pair.
+  MOV BC,#message ; Load 16-bit address to the 'message' string into BC register pair.
           
 nextchar: 
-  MOV A,(HL)      ; Transfer value from memory location HL into A.
+  MOV A,(BC)      ; Transfer value from memory location HL into A.
 
   ; Check if we reached the end of the string:
-  MOV B,#0        ; Load immediate value 0 into B.
-  CMP B           ; Compare A and B.
+  CMP #0          ; Compare A and B.
   JZ done         ; If A==B then we reached the string terminator.
 
   MOV *serialout,A    ; Transfer value from A to #FF00 (I/O address).
 
   ; Incrementing a 16-bit register pair:
-  INC L           ; First increment the lower byte value.
+  INC C           ; First increment the lower byte value.
   MOV A,#0        ; Load immediate value 0 into A.
-  ADC H           ; Add A to H with carry, 
+  ADC B           ; Add A to B with carry, 
                   ; this increments the higher byte if needed.
-  MOV H,A         ; Copy A into H.
+  MOV B,A         ; Transfer A to B.
   
   JMP nextchar
 
@@ -101,8 +100,8 @@ done:
 
 
 .data
-example:  "Data may also be stored after the .code block"
-          "Special characters in strings are expressed by their hexadecimal code"
+example:  "Data may also be stored after the .code block" _
+          "Special characters in strings are expressed by their hexadecimal code" _
           "This is a carriage return \0D and this is a tab \09"
 ```
 
@@ -172,16 +171,16 @@ Values for data or addresses may be expressed using different formats:
 
 ### Strings
 
-Defining strings is pretty straight forward as you can see in the example. Some characters require the use of the `\` escape character in order to be expressed.
+Defining strings is pretty straight forward as you can see in the example. Some characters require the use of the `\` **escape character** in order to be expressed.
 
 To use an escape character simply write the **2 character** hexadecimal code, prefixed with a backslash:
 
 ```
-"This is a carriage return: \0D"
+"This is a carriage return: \0D" _
 "This is a horizontal tab: \09"
 ```
 
-
+If the string definition spans multiple lines, an underscore is required to indicate the string terminator should not be applied.
 
 <a name="memory-layout"></a>
 
@@ -201,8 +200,24 @@ To use an escape character simply write the **2 character** hexadecimal code, pr
 - Stack space starts at the end of RAM and works its way back to the start when data is pushed onto it.
 - The entire RAM may be used for stack.
 
+### Program storage
+
+The machine code produced by the assembler follows this structure:
+
+1. Bootloader
+2. Pre-defined data
+3. Program code
+
+### Bootloader
+
+The assembler adds bootloader code at the start of memory (either address $0000 or at the offset if it's defined). This code performs a jump to the start of the program code.
+
+This is needed because data that is pre-defined in the program is stored before any of the instructions.
+
+If a program needs to run from RAM, the bootloader code must be present in the ROM because execution always starts at address zero.
 
 <a name="instruction-reference"></a>
+
 ## Instruction reference
 
 <a name="MOV"></a>
