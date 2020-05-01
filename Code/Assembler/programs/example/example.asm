@@ -1,18 +1,25 @@
 ; This source file demonstrates all the DM-02 assembly language features.
 
 .data
-message   : "Hello\0DWorld"           ; Store string data (terminated with 0x0 by the assembler).
+message   : "Hello\0DWorld"         ; Store string data (terminated with 0x0 by the assembler).
 multiline : "This uses multipe " _  ; An underscore is required when a string 
             "lines to define data"  ; definition spans multiple lines so the assembler knows to terminate.
 bytes     : $A4 $FF $5B 'G'         ; Store multiple bytes of data.
             $BC 65 %10001001 $AA    ; data may continue on the next line.
             $AA $BB 
+
+buffer    : [24]                    ; Reserves 24 bytes of space at the first available address.
+moredata  : $AA $BB                 ; So this will be stored at address buffer+1024.
+
 *serialout: $FF00                   ; Define an address pointer (must be express as 4 character hex value). 
                                     ; The * prefix tells the assembler not to apply the memory offset.
 
+~zero     : #0                      ; Define a constant (simply replaced when assembler starts).
+~maxbyte  : #$FF
+
 .include  "example_data.asm"        ; Include the contents of another file.
 
-;.offset		$4000										; Define the memory offset (depends on wether the
+.offset		$4000										  ; Define the memory offset (depends on wether the
                                     ; program will run from ROM or RAM).
 
 .code
@@ -24,7 +31,7 @@ nextchar:
   MOV A,(BC)      ; Transfer value from memory location BC into A.
 
   ; Check if we reached the end of the string:
-  MOV H,#0        ; Load immediate value 0 into H.
+  MOV H,~zero     ; Load immediate value 0 into H.
   CMP H           ; Compare A and H.
   JZ done         ; If A==H then we reached the string terminator.
 
@@ -32,7 +39,7 @@ nextchar:
 
   ; Incrementing a 16-bit register pair:
   INC C           ; First increment the lower byte value.
-  MOV A,#0        ; Load immediate value 0 into A.
+  MOV A,~zero     ; Load immediate value 0 into A.
   ADC B           ; Add A to B with carry, 
                   ; this increments the higher byte if needed.
   MOV B,A         ; Copy A into B.

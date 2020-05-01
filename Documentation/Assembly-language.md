@@ -65,9 +65,15 @@ bytes     : $A4 $FF $5B 'G'         ; Store multiple bytes of data.
             $BC 65 %10001001 $AA    ; data may continue on the next line.
             $AA $BB 
             
-*serialout: $FF00                   ; Define an address pointer.
+buffer    : [1024]                  ; Only define a pointer and reserve space 
+                                    ; without predefining the data.
+            
+*txt_out  : $FF00                   ; Define an address pointer.
                                     ; The * prefix tells the assembler not to apply the 
                                     ; memory offset.
+                                    
+~maxbyte  : #$FF                    ; Define a constant (simply replaced by the assembler)
+~zero     : #0
 
 .include  "example_data.asm"        ; Include the contents of another file.
 .offset		$4000											; Define the memory offset (depends on wether the
@@ -81,14 +87,14 @@ nextchar:
   MOV A,(BC)      ; Transfer value from memory location HL into A.
 
   ; Check if we reached the end of the string:
-  CMP #0          ; Compare A and B.
-  JZ done         ; If A==B then we reached the string terminator.
+  CMP ~zero       ; Compare A to 0.
+  JZ done         ; If A==0 then we reached the string terminator.
 
-  MOV *serialout,A    ; Transfer value from A to #FF00 (I/O address).
+  MOV *txt_out,A  ; Transfer value from A to $FF00 (I/O address).
 
   ; Incrementing a 16-bit register pair:
   INC C           ; First increment the lower byte value.
-  MOV A,#0        ; Load immediate value 0 into A.
+  MOV A,~zero     ; Load immediate value 0 into A.
   ADC B           ; Add A to B with carry, 
                   ; this increments the higher byte if needed.
   MOV B,A         ; Transfer A to B.

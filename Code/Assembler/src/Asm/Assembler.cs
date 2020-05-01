@@ -27,6 +27,7 @@ namespace Asm
         private Dictionary<string, int> labels = new Dictionary<string, int>();
         private Dictionary<int, string> labelsToTranslate = new Dictionary<int, string>();
         private Dictionary<string, int> addressVariables = new Dictionary<string, int>();
+        private Dictionary<string, string> constants = new Dictionary<string, string>();
 
         public static void Assemble(string microcodeSourceFilePath, string programSourceFilePath)
         {
@@ -58,6 +59,7 @@ namespace Asm
                 ProcessIncludes();          // Include external files.
                 ProcessOffset();            // Determine the memory offset.
                 ProcessDataBlocks();        // Add predefined data to the machine code.
+                ProcessConstants();         // Replace constants in code with their value.
                 ProcessAddressVariables();  // Replace any address variables with their address.
                 ProcessAssembly();          // Convert the assembly to machine code.
             }
@@ -156,6 +158,8 @@ namespace Asm
                 string after = source.Substring(source.IndexOf("\n", start));
                 source = before + after;
             }
+
+            machineCodeAddress = offset + BOOTLOADER_SIZE;
         }
 
         private void ProcessDataBlocks()
@@ -224,6 +228,12 @@ namespace Asm
                         throw new AssemblerException($"Address variable '{nameAndData[0]}' was defined more than once.");
                     }
 
+                    if (nameAndData[0].StartsWith("~"))
+                    {
+                        constants.Add(nameAndData[0], dataString);
+                        continue;
+                    }
+
                     if (dataString.StartsWith("$") && dataString.Length == 5)
                     {
                         // Explicit pointer definition.
@@ -233,6 +243,18 @@ namespace Asm
                     else
                     {
                         addressVariables.Add(nameAndData[0], machineCodeAddress);
+                    }
+
+                    if (dataString.StartsWith("["))
+                    {
+                        // Defined a length for the current variable.
+                        string lengthString = dataString.Replace("[", string.Empty).Replace("]", string.Empty);
+                        int length = dataString.StartsWith("$")
+                            ? StringUtils.ParseUshortValue(lengthString)
+                            : int.Parse(lengthString);
+
+                        machineCodeAddress += length;
+                        continue;
                     }
                 }
                 else if (nameAndData.Length > 2 || (nameAndData.Length == 2 && nameAndData[0].StartsWith('"')))
@@ -248,6 +270,14 @@ namespace Asm
             }
         }
 
+        private void ProcessConstants()
+        {
+            // Start replacing constants in the source, in order of constant name length (longest first).
+            constants.OrderByDescending(kvp => kvp.Key.Length)
+                .ToList()
+                .ForEach(kvp => source = source.Replace(kvp.Key, kvp.Value));
+        }
+
         private void ProcessAddressVariables()
         {
             // Start replacing variables in the source, in order of variable name length (longest first).
@@ -257,11 +287,6 @@ namespace Asm
             {
                 string variable = kvp.Key;
                 int address = kvp.Value;
-
-                if (!variable.StartsWith("*"))
-                {
-                    address += offset;
-                }
 
                 source = source.Replace(variable, $"${address:X4}");
             }
@@ -348,7 +373,7 @@ namespace Asm
             foreach (var labelref in labelsToTranslate)
             {
                 int refAddress = labelref.Key;
-                int labelAddress = labels[labelref.Value] + offset;
+                int labelAddress = labels[labelref.Value];
 
                 // Split label address into two bytes.
                 var bytes = BitConverter.GetBytes(labelAddress);
@@ -358,16 +383,31 @@ namespace Asm
 
             // Add bootloader code at the start of the machine code to jump to the program code.
             AddBootLoader();
+            consoleLog[0] = "JMP main";
+            
+            Console.WriteLine();
 
             // Output the machinecode with assembly to the console.
-            for (int i = 0; i < machineCodeAddress; i++)
+            for (int i = offset; i < machineCodeAddress; i++)
             {
+                string loginstruction = consoleLog[i];
+
                 if (labels.ContainsValue(i))
                 {
-                    Console.WriteLine($":{labels.FirstOrDefault(x => x.Value == i).Key}");
+                    Console.WriteLine($"{labels.FirstOrDefault(x => x.Value == i).Key}:");
                 }
 
-                Console.WriteLine($"${i+offset:X4}: ${machineCode[i]:X2}; {consoleLog[i]}");
+                if (addressVariables.ContainsValue(i))
+                {
+                    loginstruction = addressVariables.FirstOrDefault(x => x.Value == i).Key;
+                }
+
+                if (!string.IsNullOrEmpty(loginstruction))
+                {
+                    loginstruction = "\t; " + loginstruction;
+                }
+
+                Console.WriteLine($"${i:X4}: ${machineCode[i]:X2}{loginstruction}");
             }
         }
 
@@ -430,12 +470,12 @@ namespace Asm
         private void AddBootLoader()
         {
             // Jump to main label
-            int mainAddress = labels["main"] + offset;
+            int mainAddress = labels["main"];
             var bytes = BitConverter.GetBytes(mainAddress);
 
-            machineCode[0] = 0xC3;      // JMP
-            machineCode[1] = bytes[1];  // high byte
-            machineCode[2] = bytes[0];  // low byte
+            machineCode[offset] = 0xC3;         // JMP
+            machineCode[offset+1] = bytes[1];   // high byte
+            machineCode[offset+2] = bytes[0];   // low byte
         }
         
         private bool ProcessLabelDefinition(string line, int address)
@@ -461,7 +501,7 @@ namespace Asm
         {
             Console.WriteLine("Loading microcode definition...");
 
-            this.microcodeCompiler = Mcc.Compiler.Compile(microcodeSourceFile);
+            this.microcodeCompiler = Mcc.Compiler.Compile(microcodeSourceFile, false);
 
             Console.WriteLine("Microcode loaded!");
             Console.WriteLine();
