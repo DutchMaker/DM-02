@@ -207,7 +207,7 @@ namespace Asm
             else
             {
                 source = source.Replace(".code\n", string.Empty);
-                Console.WriteLine($"Processed {machineCodeAddress-BOOTLOADER_SIZE} bytes of predefined data.");
+                Console.WriteLine($"Processed {machineCodeAddress-BOOTLOADER_SIZE} bytes of predefined data.\n");
             }
         }
 
@@ -300,14 +300,18 @@ namespace Asm
 
             var lines = source.Split('\n', StringSplitOptions.RemoveEmptyEntries);
 
+            if (!lines.Contains("main:"))
+            {
+                throw new AssemblerException("Required label 'main' could not be found.");
+            }
+
             for (int l = 0; l < lines.Length; l++)
             {
                 string line = lines[l];
 
-                if (l == 0 && !line.Equals("main:", StringComparison.OrdinalIgnoreCase))
+                if (l == 0 && !line.Contains(":"))
                 {
-                    // Ensure that the main label is defined because the bootloader needs this.
-                    ProcessLabelDefinition("main:", machineCodeAddress);
+                    Console.WriteLine("WARNING: Program code does not start with a label. Consider adding one!");
                 }
                 
                 if (ProcessLabelDefinition(line, machineCodeAddress))

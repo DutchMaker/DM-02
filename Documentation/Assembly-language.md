@@ -54,6 +54,9 @@ The table below briefly describes the instructions that are support by the DM-02
 <a name="example-code"></a>
 
 ## Example code
+
+The following piece of example code demonstrates all of the features supported by the assembler (except for every possible instruction).
+
 ```
 .data																; Data is always stored at the start of memory.
 message   : "Hello World"           ; Store string data (automatically terminated with $00).
@@ -117,17 +120,98 @@ example:  "Data may also be stored after the .code block" _
 
 ## Source file structure
 
+Source files must contain one or more blocks of code and may optionally contain one of more data blocks. It may also define a memory offset, which is required if the program needs to execute from RAM:
+
+```
+.offset $4000		; memory starts at address hex 4000
+
+.data
+  ; this is a data block.
+  ; it ends at the next block or end of file...
+ 
+.code
+  ; this is the code block (at least one block required)
+  ; it ends at the next data block or end of file...
+```
+
 ### Data blocks
 
-defining buffer only makes sense when running from RAM
+Data blocks are used to predefine data and (at the same time) define address pointer variables and define constants that are replaced by the assembler:
 
-### Code block
+```
+.data
+pointer_1   : "This is a string " _
+              "and we use multiple lines of code " _
+              "to define it."
 
+pointer_2   : $41 65 'A' %01000001
 
+pointer_3   : [1024]
+
+pointer_4   : $FF
+
+*pointer_5  : $FF00
+
+~constant_1 : #$FF 
+```
+
+The following applies to the example above:
+
+- `pointer_1` stores the bytes contained in the [string](#strings) into memory and stores its location in the pointer.
+  For the sake of example, let's say it was stored at address `$4000` (the offset).
+  That means that wherever you use `pointer_1` in your code, it will be replaced by `$4000`.
+
+  The length of the string is 64 characters, but the assembler will **automatically add a null terminator** at the end. Therefore it will take up 65 bytes of space!
+
+- `pointer_2` does exactly the same, but it defined the data as explicit bytes. Note how each byte value is [expressed in a different way](#value-formats), but they all are the same value.
+  Because the previous defined data took up 65 bytes, `pointer_2` points to `$4041`.
+
+- `pointer_3` only defines a pointer and reserves 1024 bytes of space, but does not define any data. Because the previous defined data took up 5 bytes, `pointer_3` points to `$4046`.
+
+- `pointer_4` is only here as an example to demonstrate what reservering space does. The previous definition (`pointer_3`) reserved 1024 bytes of space and therefore, `pointer_4` points to `$4446`.
+
+- `*pointer_5` refers to the explicit address `$FF00`.
+
+- `~constant_1` will simply be searched/replaced by the assembler. While it makes sense to use it for byte or address values, you could use it for anything - even instructions.
+
+### Code blocks
+
+Code blocks are used to indicate to the assembler that program code definition is about to start:
+
+```
+.code
+main:					; label main
+  MOV A,#$FF	; store 255 in A
+  HALT				; halt the processor
+```
+
+There may be multiple code blocks defined and they will be processed by the assembler in order of occurrence. This applies when using `.include` to include other files that may contain code.
 
 #### Main label
 
+Programs must contain a `main` label to indicate where program execution starts. This is required because the assembler will add bootloader code at the start of memory that jumps to this label.
 
+### Includes
+
+Other source files may be included by the assembler by refering to their file name:
+
+```
+.include "filename.asm"
+```
+
+This will include **all** contents of the file at the exact location of the `.include` directive.
+
+### Offset
+
+Because programs may be executed from either ROM or RAM, the assembler needs to know where memory starts:
+
+```
+.offset $4000
+```
+
+This directive is optional and will default to address zero.
+
+**Note:** the computer uses a 64 Kb RAM chip, but only the last 48 Kb can be addressed by the processor. Therefore RAM program storage starts at address `$4000`.
 
 <a name="address-modes"></a>
 
@@ -141,7 +225,7 @@ Here are some examples of DM-01 instructions and how they are expressed in the D
 | ------------------------------ | ----------------- |
 | `MOV A B`                      | `MOV A,B`         |
 | `MVI A 0xF8`                   | `MOV A,#$F8`      |
-| `MVI B 0xF8`<br />`MVI C 0xA2` | `MVI BC,#$F8A2`   |
+| `MVI B 0xF8`<br />`MVI C 0xA2` | `MOV BC,#$F8A2`   |
 | `LD A 0xBF46`                  | `MOV A,$BF46`     |
 | `ST A 0xBF46`                  | `MOV $BF46,A`     |
 | `LDX A 0xBF46`                 | `MOV A,($BF46)`   |
@@ -161,6 +245,8 @@ Here are some examples of DM-01 instructions and how they are expressed in the D
 
 <a name="value-formats"></a>
 
+
+
 ## Value formats
 
 Values for data or addresses may be expressed using different formats:
@@ -173,7 +259,9 @@ Values for data or addresses may be expressed using different formats:
 | character   | '*value*' | `MOV A,#'A'`           |
 | string      | "*value*" | `$4F00: "Hello world"` |
 
-**Note:** 16-bit values must always be expressed in hexadecimal format, preferably with all 4 characters to avoid confusion by the assembler (e.g., $003A).
+**Note:** 16-bit values must always be expressed in hexadecimal format, preferably with all 4 characters to avoid confusion by the assembler (e.g., `$003A`).
+
+<a name="strings"></a>
 
 ### Strings
 
@@ -188,6 +276,8 @@ To use an escape character simply write the **2 character** hexadecimal code, pr
 
 If the string definition spans multiple lines, an underscore is required to indicate the string terminator should not be applied.
 
+
+
 <a name="memory-layout"></a>
 
 ## Memory layout
@@ -199,12 +289,10 @@ If the string definition spans multiple lines, an underscore is required to indi
 | FEFF          | 4000        | Stack space (suggested) |
 | FF00          | FFFF        | I/O                     |
 
-
+**Notes:**
 
 - No zero-page addressing support (may be added in future)
-- *Assembler must know memory offset (wether it runs from ROM or RAM)*
-- Stack space starts at the end of RAM and works its way back to the start when data is pushed onto it.
-- The entire RAM may be used for stack.
+- Stack space starts at the end of RAM and works its way back to the start when data is pushed onto it, therefore the entire RAM may technically be used as stack space.
 
 ### Program storage
 
@@ -216,11 +304,13 @@ The machine code produced by the assembler follows this structure:
 
 ### Bootloader
 
-The assembler adds bootloader code at the start of memory (either address $0000 or at the offset if it's defined). This code performs a jump to the start of the program code.
+The assembler adds bootloader code at the start of memory (either address `$0000` or at the offset if it's defined). This code performs a jump to the start of the program code.
 
 This is needed because data that is pre-defined in the program is stored before any of the instructions.
 
 If a program needs to run from RAM, the bootloader code must be present in the ROM because execution always starts at address zero.
+
+
 
 <a name="instruction-reference"></a>
 

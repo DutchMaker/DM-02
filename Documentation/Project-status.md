@@ -6,6 +6,15 @@ This document is here to keep track of the project status.
 
 ## Project log
 
+### 2020-05-01:
+
+Picked up where I left a long time ago. A lot has been done:
+
+- The Logisim circuit is fully functional.
+- The microcode language has been specified, all microcode has been written and the microcode compiler is fully functional.
+- The assembly language has been specified and the assembler is fully functional
+- First example programs run succesfully on the Logisim circuit.
+
 ### 2019-10-01:
 
 The Logisim design has all the modules done, except for the Controller. I'll probably build the Microcode Compiler first before starting design of the Controller.
@@ -24,11 +33,6 @@ The following high-level tasks are waiting to be done (in no particular order):
 
 - Write more documentation as the project progresses.
 - Create and maintain the project on Hackaday.
-- Simulator circuit design (in Logisim or Proteus, not decided yet).
-- Assembly language specification.
-- Assembler tooling.
-- Microcode language specification.
-- Microcode compiler tooling.
 - Circuit design.
 - PCB design.
 
@@ -46,11 +50,5 @@ Just some things I need to keep track of:
 - All counters need reset lines
 - TODO
 
-  - Check if I have Zener in stock - also check footprint for Kicad
-  - Test power circuit on breadboard
-    - Test reset circuit
   - Measure if power + debug board can connect with Arduino in between
-  - Create footprint for powerswitch (double pole single throw) - also used in debug board
-  - Check if I have angled tact switch in stock - also check footprint
-  - Test continue/halt circuit
 

@@ -27,7 +27,7 @@ DM-02 is (being) built with the following specifications in mind:
 - 8-bit data bus
 - 16-bit address bus, allowing for 64 Kb of addressable memory
   - 16 Kb reserved for ROM
-  - 48 Kb reserved for RAM
+  - 48 Kb reserved for RAM *(a 64 Kb RAM chip is used, but only the last 48 Kb can be addressed)*
 - 16-bit stack pointer (entire RAM may be used as stack space)
 - 16-bit program counter
 - Register configuration:
@@ -36,10 +36,10 @@ DM-02 is (being) built with the following specifications in mind:
   - BC and HL may be used as pair for 16-bit operations
 - The ALU is based around an EPROM
 - Supported flags: Zero, Carry, Negative, Overflow
-- Flags may be stored/loaded to/from RAM for use in CALL/RET instructions and for future interrupt support.
+- Flags may be pushed/popped onto/off the stack for use in JMP/CALL/RET instructions and for future interrupt support.
 - I/O is addressable through memory and there are 256 addresses reserved for this
 - Planned I/O modules:
-  - Program loader (i.e. from SD card)
+  - Program loader (e.g., from SD card)
   - VGA card
   - Keyboard
 - Modular design based on stackable PCBs
