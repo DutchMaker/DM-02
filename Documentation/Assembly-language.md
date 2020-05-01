@@ -249,7 +249,7 @@ Here are some examples of DM-01 instructions and how they are expressed in the D
 
 ## Value formats
 
-Values for data or addresses may be expressed using different formats:
+Values for data may be expressed using different formats:
 
 | Value Type  | Format    | Example                |
 | ----------- | --------- | ---------------------- |
@@ -259,7 +259,7 @@ Values for data or addresses may be expressed using different formats:
 | character   | '*value*' | `MOV A,#'A'`           |
 | string      | "*value*" | `$4F00: "Hello world"` |
 
-**Note:** 16-bit values must always be expressed in hexadecimal format, preferably with all 4 characters to avoid confusion by the assembler (e.g., `$003A`).
+**Note:** 16-bit values (i.e., memory addresses) must always be expressed in hexadecimal format, preferably with all 4 characters to avoid confusion by the assembler (e.g., `$003A`).
 
 <a name="strings"></a>
 
@@ -276,6 +276,8 @@ To use an escape character simply write the **2 character** hexadecimal code, pr
 
 If the string definition spans multiple lines, an underscore is required to indicate the string terminator should not be applied.
 
+It must also be noted that the colon (`:`) character is not allowed in string definitions because the assembler uses that character to split the lines. If a string must contain colon, use the `\3A` escape character instead.
+
 
 
 <a name="memory-layout"></a>
@@ -284,29 +286,30 @@ If the string definition spans multiple lines, an underscore is required to indi
 
 | Start address | End address | Description             |
 | ------------- | ----------- | ----------------------- |
-| 0000          | 3FFF        | ROM                     |
-| 4000          | FEFF        | RAM                     |
-| FEFF          | 4000        | Stack space (suggested) |
-| FF00          | FFFF        | I/O                     |
+| `$0000`       | `$3FFF`     | ROM                     |
+| `$4000`       | `$FEFF`     | RAM                     |
+| `$FEFF`       | `$4000`     | Stack space (suggested) |
+| `$FF00`       | `$FFFF`     | I/O                     |
 
 **Notes:**
 
 - No zero-page addressing support (may be added in future)
-- Stack space starts at the end of RAM and works its way back to the start when data is pushed onto it, therefore the entire RAM may technically be used as stack space.
+- Stack space may start at the end of RAM and works its way back to the start when data is pushed onto it, therefore the entire RAM may technically be used as stack space.
+- The starting address of the stack is defined in the program by executing the [SP](#SP) instruction.
 
 ### Program storage
 
 The machine code produced by the assembler follows this structure:
 
 1. Bootloader
-2. Pre-defined data
+2. Predefined data
 3. Program code
 
 ### Bootloader
 
 The assembler adds bootloader code at the start of memory (either address `$0000` or at the offset if it's defined). This code performs a jump to the start of the program code.
 
-This is needed because data that is pre-defined in the program is stored before any of the instructions.
+This is needed because data that is predefined in the program is stored before any of the instructions.
 
 If a program needs to run from RAM, the bootloader code must be present in the ROM because execution always starts at address zero.
 

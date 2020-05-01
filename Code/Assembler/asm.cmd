@@ -1,1 +1,0 @@
-.\app\asm.exe "..\Microcode\microcode.src" "program.asm"

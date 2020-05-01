@@ -74,7 +74,7 @@ namespace Asm
             }
 
             Console.WriteLine();
-            Console.WriteLine($"{machineCodeAddress} bytes of machinecode generated in {sw.ElapsedMilliseconds} ms.");
+            Console.WriteLine($"{machineCodeAddress-offset} bytes of machinecode generated in {sw.ElapsedMilliseconds} ms.");
         }
 
         public void Save(string romFileName, string logisimImageFileName)
@@ -207,7 +207,7 @@ namespace Asm
             else
             {
                 source = source.Replace(".code\n", string.Empty);
-                Console.WriteLine($"Processed {machineCodeAddress-BOOTLOADER_SIZE} bytes of predefined data.\n");
+                Console.WriteLine($"Processed {machineCodeAddress-BOOTLOADER_SIZE-offset} bytes of predefined data.\n");
             }
         }
 

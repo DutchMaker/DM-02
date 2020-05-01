@@ -24,7 +24,7 @@ moredata  : $AA $BB                 ; So this will be stored at address buffer+1
 
 .code
 
-;main:
+main:
   MOV BC,#message ; Load 16-bit address to the 'message' string into BC register pair.
           
 nextchar: 

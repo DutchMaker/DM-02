@@ -1,14 +1,13 @@
 # DM-02 Assembler
 
-_This is the Assembler used for DM-01. **Still needs to be refactored for DM-02!**_
-
-
-
-This application is used to compile 74xx Computer Assembly files to 74xx Computer machine code.
-It's a .NET Core application that is compiled for the Windows x64 platform, but can also be compiled for macOS or Linux.
+This application is used to compile DM-02 Computer assembly files to DM-02 Computer machine code.
+It's a .NET Core application that can compile and run on Windows, macOS and Linux.
 
 ## Usage
+- Build the application: `dotnet build src`
+- Run the application: `dotnet ./src/Asm/bin/Debug/netcoreapp2.2/asm.dll ../Microcode/microcode.src programs/example/example.asm`
+- Upload the contents of the `.rom` file into the DM-02's memory.
+- The `.img` file can be used as image for the Logisim circuit.
 
-
-## Syntax
-
+## Shell script
+- To use the shell script that assembles the example, just execute: `sh asm.sh`.
