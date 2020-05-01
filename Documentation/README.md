@@ -74,6 +74,7 @@ Jump to detailed documentation on:
 - [ALU and Flags register](./ALU-and-flags.md)
 - [Debugger module](./Debugger-module.md)
 - [Notes on all the modules](./Modules.md)
+- [Logisim instructions](./Logisim-Instructions.md)
 - [Project status](./Project-status.md)
 
 <a name="resources"></a>
@@ -83,7 +84,7 @@ It’s impossible to refer to every resource that helped me on the way, but a fe
 
 - [Digital Computer Electronics by Malvino & Brown](https://www.amazon.com/Digital-Computer-Electronics-Jerald-Malvino/dp/0074622358) (ISBN: 978-0-07-462235-3); This book has been a treasure of information! A must-have for every CPU enthusiast.
 - [Ben Eater’s YouTube videos](https://www.youtube.com/user/eaterbc); His breadboard computer was the first computer I built and his videos are what got me into this whole thing
-- [CSCvon8](https://github.com/DoctorWkt/CSCvon8) TTL computer
+- [CSCvon8](https://github.com/DoctorWkt/CSCvon8) TTL computer; I've got a lot of inspiration from this project and the ALU ROM is taken from here.
 - [Gigatron](http://gigatron.io) TTL computer
 - The folks at Hackaday, Reddit and StackEchange
 
