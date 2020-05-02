@@ -34,7 +34,7 @@ main:
   ; Set pixel color to white.
   MOV A,#$FF              ; Set color data to white
   MOV *display_data,A
-  
+
   MOV A,~CMD_SETCOLOR_H   
   MOV *display_cmd,A      ; Execute set color (high byte) command
   MOV A,~CMD_SETCOLOR_L 
@@ -48,10 +48,8 @@ draw_bitmap:
 
   ; Increment pointer
   INC C
-  MOV A,#0
-  ADC B
-  MOV B,A
-
+  CZ inc_b
+  
   ; Increment X
   MOV A,*x
   INC A
@@ -59,6 +57,10 @@ draw_bitmap:
   JZ reset_x
   MOV *x,A      ; Store incremented X.
   JMP draw_bitmap
+
+inc_b:
+  INC B
+  RET
 
 reset_x:
   MOV A,#0
@@ -68,6 +70,12 @@ reset_x:
   MOV A,*y
   INC A
   MOV *y,A
+
+  MOV A,*y            ; Set Y coordinate
+  ADD #$80            ; Most-left bit must be 1.
+  MOV *display_data,A
+  MOV A,~CMD_SETCOORD
+  MOV *display_cmd,A  ; Execute set coordinate command
 
   JMP draw_bitmap
 
@@ -84,12 +92,6 @@ draw_pixel:
   RZ
 
   MOV A,*x            ; Set X coordinate
-  MOV *display_data,A
-  MOV A,~CMD_SETCOORD
-  MOV *display_cmd,A  ; Execute set coordinate command
-
-  MOV A,*y            ; Set Y coordinate
-  ADD #$80            ; Most-left bit must be 1.
   MOV *display_data,A
   MOV A,~CMD_SETCOORD
   MOV *display_cmd,A  ; Execute set coordinate command

@@ -490,6 +490,8 @@ If a program needs to run from RAM, the bootloader code must be present in the R
 <a name="INC"></a>
 ### INC
 
+*Sets zero flag* if >255
+
 |          |
 | -------- |
 | INC A    |
@@ -503,6 +505,8 @@ If a program needs to run from RAM, the bootloader code must be present in the R
 <a name="DEC"></a>
 ### DEC
 
+*Sets negative flag* if <0
+
 |          |
 | -------- |
 | DEC A    |
@@ -514,6 +518,7 @@ If a program needs to run from RAM, the bootloader code must be present in the R
 | *DEC HL* |
 
 <a name="AND"></a>
+
 ### AND
 
 |                  |
