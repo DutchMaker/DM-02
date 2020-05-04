@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 90)
+    (drawings 89)
     (tracks 769)
     (zones 0)
     (modules 11)
@@ -701,8 +701,8 @@
     (fp_text reference R1 (at 3.81 -2.37) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 330 (at 3.81 2.37) (layer F.SilkS)
-      (effects (font (size 1 1) (thickness 0.15)))
+    (fp_text value 330 (at 3.81 0) (layer B.SilkS)
+      (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start 0.66 -1.25) (end 0.66 1.25) (layer F.Fab) (width 0.1))
     (fp_line (start 0.66 1.25) (end 6.96 1.25) (layer F.Fab) (width 0.1))
@@ -1035,7 +1035,6 @@
       (net 16 "Net-(XA1-PadMISO)"))
   )
 
-  (gr_poly (pts (xy 129.54 38.1) (xy 123.13 38.08) (xy 123.19 25.4) (xy 129.54 25.4)) (layer F.SilkS) (width 0.1))
   (gr_text 2.36 (at 91.44 118.745 270) (layer F.SilkS) (tstamp 5E97D7EF)
     (effects (font (size 1 1) (thickness 0.15)) (justify right))
   )
@@ -1280,7 +1279,7 @@
   (gr_arc (start 30.48 30.48) (end 30.48 25.4) (angle -90) (layer Edge.Cuts) (width 0.15))
   (gr_arc (start 30.48 124.46) (end 25.4 124.46) (angle -90) (layer Edge.Cuts) (width 0.15))
   (gr_arc (start 124.46 124.46) (end 124.46 129.54) (angle -90) (layer Edge.Cuts) (width 0.15))
-  (gr_text "Debugger | Revision 1" (at 77.47 127) (layer B.SilkS) (tstamp 5D78C8F1)
+  (gr_text "DM-02 | Debugger | Revision 2" (at 77.47 127) (layer B.SilkS) (tstamp 5D78C8F1)
     (effects (font (size 1 1) (thickness 0.1)) (justify mirror))
   )
   (gr_line (start 124.46 129.54) (end 30.48 129.54) (layer Edge.Cuts) (width 0.15) (tstamp 5D77B0B7))

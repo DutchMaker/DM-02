@@ -49,8 +49,6 @@ The table below briefly describes the instructions that are support by the DM-02
 | [NOP](#NOP)                  | No operation (do nothing)                                    |
 | [HALT](#HALT)                | Halt program execution                                       |
 
-
-
 <a name="example-code"></a>
 
 ## Example code
@@ -315,9 +313,19 @@ If a program needs to run from RAM, the bootloader code must be present in the R
 
 
 
+## Known issues
+
+- `INC C` does not set carry/overflow flag
+
+
+
 <a name="instruction-reference"></a>
 
 ## Instruction reference
+
+### Opcode matrix
+
+![](Opcode-Matrix.png)
 
 <a name="MOV"></a>
 
