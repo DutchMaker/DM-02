@@ -313,12 +313,6 @@ If a program needs to run from RAM, the bootloader code must be present in the R
 
 
 
-## Known issues
-
-- `INC C` does not set carry/overflow flag
-
-
-
 <a name="instruction-reference"></a>
 
 ## Instruction reference
