@@ -1,5 +1,7 @@
 var emulator = { 
-
+  constants: {
+    max_iterations: 1
+  },
   main_address: 0,
   state: {
     registers: {
@@ -21,16 +23,43 @@ var emulator = {
     memory: {
       rom: [ ],
       ram: [ ],
-      getData: function(address) { }
+      getData: function(address) { 
+        return (address >= 0x4000)
+          ? emulator.state.memory.ram[address]
+          : emulator.state.memory.rom[address];
+      },
+      setData: function(address, data) {
+        if (address >= 0x4000) {
+          emulator.state.memory.ram[address] = data;
+        }
+      }
     },
-    halt: false
+    halt: false,
+    running: false
   },
 
-  main: function() 
-  { 
-    emulator.init();
+  /*
+  * Main loop.
+  **/
+  main: function()
+  {
+    var i = 0;
+    while (i++ < emulator.constants.max_iterations) {
+      // We limit the amount of iterations we do with this loop to prevent blocking the event thread.
+      // This allows us to maximize the speed the emulator (setTimeout can't go faster than 1 ms.)
+      emulator.emulate();
+    }
+
+    emulator.highlight_instruction(emulator.state.pc);
+
+    if (emulator.running) {
+      setTimeout(emulator.main, 1);
+    }
   },
 
+  /*
+  * Initialize the emulator.
+  ***/
   init: function() 
   { 
     emulator.main_address = (emulator.state.memory.rom[1] << 8) + emulator.state.memory.rom[2];
@@ -39,6 +68,9 @@ var emulator = {
     emulator.disassemble();
   },
 
+  /*
+  * Disassemble the program code in memory and display it.
+  ***/
   disassemble: function()
   {
     var assembly = (0x10).toHex(4) + ":&nbsp;";
@@ -79,6 +111,9 @@ var emulator = {
     document.getElementById("assembly").innerHTML = assembly;
   },
 
+  /*
+  * Highlight the specified address in the disassembled code.
+  ***/
   highlight_instruction: function(address)
   {
     var cur = document.getElementsByName("code_" + address)[0];
@@ -98,22 +133,60 @@ var emulator = {
     }
   },
 
+  /*
+  * Halt the processor.
+  ***/
   halt: function() 
   { 
     emulator.state.halt = !emulator.state.halt;
     document.getElementById("button_halt").innerText = emulator.state.halt ? "Continue" : "Halt";
   },
 
-  emulate: function(state) 
+  /*
+  * Stop the emulator.
+  **/
+  start_stop: function()
+  {
+    if (emulator.running) {     
+      document.getElementById("button_startstop").innerText = "Start";
+      emulator.running = false;
+    }
+    else {
+      document.getElementById("button_startstop").innerText = "Stop";
+      emulator.running = true;
+
+      emulator.reset();
+      emulator.main();
+    }
+  },
+
+  reset: function()
+  {
+    emulator.state.pc = 0;
+  },
+
+  /*
+  * Emulate the current processor state.
+  **/
+  emulate: function() 
   { 
-    var opcode = emulator.memory.getData(emulator.state.pc);
+    if (emulator.state.halt) {
+      return;
+    }
+
+    var opcode = emulator.state.memory.getData(emulator.state.pc);
+    emulator.state.pc++;
+    //emulator.highlight_instruction(emulator.state.pc);
+
+    if (emulator.state.pc > 0xFFFF) {
+      emulator.start_stop();
+    }
   }
 }
 
 Number.prototype.toHex = function(len)
 {
   var l = len > 0 ? len : 2;
-
   return "$" + this.toString(16).toUpperCase().padStart(l, '0');
 }
 
@@ -124,6 +197,9 @@ document.getElementById("button_step").addEventListener("click", function() {
   emulator.highlight_instruction(emulator.state.pc);
 });
 
+document.getElementById("button_startstop").addEventListener("click", emulator.start_stop);
+
 document.write('<script type="text/javascript" src="js/example_program.js"></script>');
 document.write('<script type="text/javascript" src="js/instructions.js"></script>');
-document.addEventListener("DOMContentLoaded", emulator.main, true);
+
+document.addEventListener("DOMContentLoaded", emulator.init, true);
