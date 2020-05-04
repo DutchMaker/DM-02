@@ -279,7 +279,6 @@ Text GLabel 6200 5550 0    50   Input ~ 0
 ARDUINO_5V
 Text GLabel 6200 4650 0    50   Input ~ 0
 ARDUINO_GND
-NoConn ~ 7250 800 
 NoConn ~ 7350 800 
 NoConn ~ 7450 800 
 NoConn ~ 7550 800 
@@ -423,122 +422,173 @@ Text GLabel 2250 5450 2    50   Input ~ 0
 BUS2_23
 Text GLabel 2250 5550 2    50   Input ~ 0
 BUS2_22
-Text GLabel 6200 2150 0    50   Input ~ 0
+Text GLabel 6050 2150 0    50   Input ~ 0
 BUS2_20
-Text GLabel 8800 1250 2    50   Input ~ 0
+Text GLabel 9000 1250 2    50   Input ~ 0
 BUS2_1
-Text GLabel 8800 1350 2    50   Input ~ 0
+Text GLabel 9000 1350 2    50   Input ~ 0
 BUS2_2
-Text GLabel 8800 1450 2    50   Input ~ 0
+Text GLabel 9000 1450 2    50   Input ~ 0
 BUS2_3
-Text GLabel 8800 1550 2    50   Input ~ 0
+Text GLabel 9000 1550 2    50   Input ~ 0
 BUS2_4
-Text GLabel 8800 1650 2    50   Input ~ 0
+Text GLabel 9000 1650 2    50   Input ~ 0
 BUS2_5
-Text GLabel 8800 1750 2    50   Input ~ 0
+Text GLabel 9000 1750 2    50   Input ~ 0
 BUS2_6
-Text GLabel 8800 1850 2    50   Input ~ 0
+Text GLabel 9000 1850 2    50   Input ~ 0
 BUS2_7
-Text GLabel 8800 1950 2    50   Input ~ 0
+Text GLabel 9000 1950 2    50   Input ~ 0
 BUS2_8
-Text GLabel 8800 2050 2    50   Input ~ 0
+Text GLabel 9000 2050 2    50   Input ~ 0
 BUS2_9
-Text GLabel 8800 2150 2    50   Input ~ 0
+Text GLabel 9000 2150 2    50   Input ~ 0
 BUS2_10
-Text GLabel 8800 2250 2    50   Input ~ 0
+Text GLabel 9000 2250 2    50   Input ~ 0
 BUS2_11
-Text GLabel 8800 2350 2    50   Input ~ 0
+Text GLabel 9000 2350 2    50   Input ~ 0
 BUS2_12
-Text GLabel 6200 1950 0    50   Input ~ 0
+Text GLabel 6050 1950 0    50   Input ~ 0
 BUS2_13
-Text GLabel 6200 1850 0    50   Input ~ 0
+Text GLabel 6050 1850 0    50   Input ~ 0
 BUS2_14
-Text GLabel 6200 1750 0    50   Input ~ 0
+Text GLabel 6050 1750 0    50   Input ~ 0
 BUS2_15
-Text GLabel 6200 1650 0    50   Input ~ 0
+Text GLabel 6050 1650 0    50   Input ~ 0
 BUS2_16
-Text GLabel 6200 1550 0    50   Input ~ 0
+Text GLabel 6050 1550 0    50   Input ~ 0
 BUS2_17
-Text GLabel 6200 1450 0    50   Input ~ 0
+Text GLabel 6050 1450 0    50   Input ~ 0
 BUS2_18
-Text GLabel 6200 2050 0    50   Input ~ 0
+Text GLabel 6050 2050 0    50   Input ~ 0
 BUS2_19
-Text GLabel 8800 2450 2    50   Input ~ 0
+Text GLabel 9000 2450 2    50   Input ~ 0
 BUS2_21
-Text GLabel 8800 4350 2    50   Input ~ 0
+Text GLabel 9000 4350 2    50   Input ~ 0
 BUS2_40
-Text GLabel 8800 4250 2    50   Input ~ 0
+Text GLabel 9000 4250 2    50   Input ~ 0
 BUS2_39
-Text GLabel 8800 4150 2    50   Input ~ 0
+Text GLabel 9000 4150 2    50   Input ~ 0
 BUS2_38
-Text GLabel 8800 4050 2    50   Input ~ 0
+Text GLabel 9000 4050 2    50   Input ~ 0
 BUS2_37
-Text GLabel 8800 3950 2    50   Input ~ 0
+Text GLabel 9000 3950 2    50   Input ~ 0
 BUS2_36
-Text GLabel 8800 3850 2    50   Input ~ 0
+Text GLabel 9000 3850 2    50   Input ~ 0
 BUS2_35
-Text GLabel 8800 3750 2    50   Input ~ 0
+Text GLabel 9000 3750 2    50   Input ~ 0
 BUS2_34
-Text GLabel 8800 3650 2    50   Input ~ 0
+Text GLabel 9000 3650 2    50   Input ~ 0
 BUS2_33
-Text GLabel 8800 3550 2    50   Input ~ 0
+Text GLabel 9000 3550 2    50   Input ~ 0
 BUS2_32
-Text GLabel 8800 3450 2    50   Input ~ 0
+Text GLabel 9000 3450 2    50   Input ~ 0
 BUS2_31
-Text GLabel 8800 3350 2    50   Input ~ 0
+Text GLabel 9000 3350 2    50   Input ~ 0
 BUS2_30
-Text GLabel 8800 3250 2    50   Input ~ 0
+Text GLabel 9000 3250 2    50   Input ~ 0
 BUS2_29
-Text GLabel 8800 3150 2    50   Input ~ 0
+Text GLabel 9000 3150 2    50   Input ~ 0
 BUS2_28
-Text GLabel 8800 3050 2    50   Input ~ 0
+Text GLabel 9000 3050 2    50   Input ~ 0
 BUS2_27
-Text GLabel 8800 2950 2    50   Input ~ 0
+Text GLabel 9000 2950 2    50   Input ~ 0
 BUS2_26
-Text GLabel 8800 2850 2    50   Input ~ 0
+Text GLabel 9000 2850 2    50   Input ~ 0
 BUS2_25
-Text GLabel 8800 2750 2    50   Input ~ 0
+Text GLabel 9000 2750 2    50   Input ~ 0
 BUS2_24
-Text GLabel 8800 2650 2    50   Input ~ 0
+Text GLabel 9000 2650 2    50   Input ~ 0
 BUS2_23
-Text GLabel 8800 2550 2    50   Input ~ 0
+Text GLabel 9000 2550 2    50   Input ~ 0
 BUS2_22
 Text GLabel 2150 1400 2    31   Input ~ 0
 ~RESET
-Text GLabel 8800 4750 2    31   Input ~ 0
+Text GLabel 9000 4750 2    31   Input ~ 0
 ~RESET
 Connection ~ 2150 1200
-NoConn ~ 1650 1500
 NoConn ~ 2150 1500
-NoConn ~ 1650 1600
-NoConn ~ 1650 1700
 NoConn ~ 1650 1800
-Text GLabel 1650 1300 0    50   Input ~ 0
+Text GLabel 1650 1300 0    39   Input ~ 0
 CLOCK1
-Text GLabel 1650 1400 0    50   Input ~ 0
+Text GLabel 1650 1400 0    39   Input ~ 0
 CLOCK2
-Text GLabel 8800 4450 2    50   Input ~ 0
+Text GLabel 9000 4450 2    50   Input ~ 0
 CLOCK1
-Text GLabel 8800 4550 2    50   Input ~ 0
+Text GLabel 9000 4550 2    50   Input ~ 0
 CLOCK2
-Text GLabel 8800 4650 2    50   Input ~ 0
+Text GLabel 9000 4650 2    50   Input ~ 0
 BUS1_5
-Text GLabel 6200 2250 0    50   Input ~ 0
+Text GLabel 6050 2250 0    50   Input ~ 0
 BUS1_3
-Text GLabel 6200 2350 0    50   Input ~ 0
+Text GLabel 6050 2350 0    50   Input ~ 0
 BUS1_4
-Text GLabel 6200 1250 0    50   Input ~ 0
-BUS1_1
-Text GLabel 6200 1350 0    50   Input ~ 0
-BUS1_2
-Text GLabel 1650 1900 0    50   Input ~ 0
-BUS1_1
-Text GLabel 1650 2000 0    50   Input ~ 0
-BUS1_2
 Text GLabel 1650 2100 0    50   Input ~ 0
 BUS1_3
 Text GLabel 1650 2200 0    50   Input ~ 0
 BUS1_4
 Text GLabel 1650 2300 0    50   Input ~ 0
 BUS1_5
+NoConn ~ 1650 1900
+NoConn ~ 1650 2000
+NoConn ~ 6200 1250
+NoConn ~ 6200 1350
+Text GLabel 1650 1700 0    39   Input ~ 0
+CLOCK_ENABLE
+Text GLabel 7150 650  0    50   Input ~ 0
+CLOCK_ENABLE
+Wire Wire Line
+	7150 650  7250 650 
+Wire Wire Line
+	7250 650  7250 800 
+NoConn ~ 6200 1450
+NoConn ~ 6200 1550
+NoConn ~ 6200 1650
+NoConn ~ 6200 1750
+NoConn ~ 6200 1850
+NoConn ~ 6200 1950
+NoConn ~ 6200 2050
+NoConn ~ 6200 2150
+NoConn ~ 6200 2250
+NoConn ~ 6200 2350
+NoConn ~ 8800 4750
+NoConn ~ 8800 4650
+NoConn ~ 8800 4550
+NoConn ~ 8800 4450
+NoConn ~ 8800 4350
+NoConn ~ 8800 4250
+NoConn ~ 8800 4150
+NoConn ~ 8800 4050
+NoConn ~ 8800 3950
+NoConn ~ 8800 3850
+NoConn ~ 8800 3750
+NoConn ~ 8800 3650
+NoConn ~ 8800 3550
+NoConn ~ 8800 3450
+NoConn ~ 8800 3350
+NoConn ~ 8800 3250
+NoConn ~ 8800 3150
+NoConn ~ 8800 3050
+NoConn ~ 8800 2950
+NoConn ~ 8800 2850
+NoConn ~ 8800 2750
+NoConn ~ 8800 2650
+NoConn ~ 8800 2550
+NoConn ~ 8800 2450
+NoConn ~ 8800 2350
+NoConn ~ 8800 2250
+NoConn ~ 8800 2150
+NoConn ~ 8800 2050
+NoConn ~ 8800 1950
+NoConn ~ 8800 1850
+NoConn ~ 8800 1750
+NoConn ~ 8800 1650
+NoConn ~ 8800 1550
+NoConn ~ 8800 1450
+NoConn ~ 8800 1350
+NoConn ~ 8800 1250
+Text GLabel 1650 1500 0    39   Input ~ 0
+~CLOCK1
+Text GLabel 1650 1600 0    39   Input ~ 0
+~CLOCK2
 $EndSCHEMATC

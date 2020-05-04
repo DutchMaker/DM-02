@@ -675,9 +675,9 @@ Wire Wire Line
 Text GLabel 6200 3500 0    60   Input ~ 0
 HALT
 Text GLabel 8250 4100 0    50   Output ~ 0
-~CLOCK1
+CLOCK_PH2
 Text GLabel 6450 4650 0    50   Output ~ 0
-CLOCK2
+CLOCK_PH1
 Wire Wire Line
 	2450 5300 2250 5300
 Wire Wire Line
@@ -911,11 +911,11 @@ F 3 "" H 8250 5000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 6450 4450 0    50   Output ~ 0
-~CLOCK2
+CLOCK_PH3
 Wire Wire Line
 	9150 4100 9150 4300
 Text GLabel 8250 4300 0    50   Output ~ 0
-CLOCK1
+CLOCK_PH0
 $Comp
 L Device:Polyfuse F1
 U 1 1 5EA0A4D1
@@ -1305,14 +1305,10 @@ Text GLabel 1750 1100 2    31   Input ~ 0
 Connection ~ 1750 900 
 NoConn ~ 1750 1200
 NoConn ~ 1250 1500
-Text GLabel 1250 1000 0    50   Input ~ 0
-CLOCK1
-Text GLabel 1250 1100 0    50   Input ~ 0
-CLOCK2
-Text GLabel 1250 1600 0    50   Input ~ 0
-BUS1_1
-Text GLabel 1250 1700 0    50   Input ~ 0
-BUS1_2
+Text GLabel 1250 1000 0    39   Input ~ 0
+CLOCK_PH0
+Text GLabel 1250 1100 0    39   Input ~ 0
+CLOCK_PH1
 Text GLabel 1250 1800 0    50   Input ~ 0
 BUS1_3
 Text GLabel 1250 1900 0    50   Input ~ 0
@@ -1320,9 +1316,9 @@ BUS1_4
 Text GLabel 1250 2000 0    50   Input ~ 0
 BUS1_5
 Text GLabel 1250 1200 0    39   Input ~ 0
-~CLOCK1
+CLOCK_PH2
 Text GLabel 1250 1300 0    39   Input ~ 0
-~CLOCK2
+CLOCK_PH3
 Text GLabel 1250 1400 0    50   Input ~ 0
 CLOCK_ENABLE
 Wire Wire Line
@@ -1450,4 +1446,6 @@ F 3 "" H 5100 6400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 5100 6400
+NoConn ~ 1250 1600
+NoConn ~ 1250 1700
 $EndSCHEMATC

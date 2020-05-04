@@ -51,4 +51,7 @@ Just some things I need to keep track of:
 - TODO
 
   - Measure if power + debug board can connect with Arduino in between
+  - Update labels on bus connectors for boards bottom, debugger, power/clock
+  - Reroute debugger board
+    - On assembled board: connect NC3 to SPI_MISO
 

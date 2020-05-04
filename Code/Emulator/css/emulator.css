@@ -1,0 +1,16 @@
+.assembly {
+  width: 400px;
+  height: 495px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  overflow: scroll;
+  background: #000;
+  color: rgb(0,255,0);
+  border: 10px solid #000;
+}
+
+  .assembly .selected_address {
+    background: #fff;
+    color: #ff0000;
+    font-weight: bold;
+  }

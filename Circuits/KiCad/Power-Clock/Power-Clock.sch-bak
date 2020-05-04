@@ -86,7 +86,7 @@ L Device:LED D3
 U 1 1 5EAAC90B
 P 4900 2750
 F 0 "D3" H 4900 2900 50  0000 C CNN
-F 1 "LED" H 4900 3000 50  0000 C CNN
+F 1 "POWER" H 4900 3000 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm_Horizontal_O1.27mm_Z3.0mm" H 4900 2750 50  0001 C CNN
 F 3 "~" H 4900 2750 50  0001 C CNN
 	1    4900 2750
@@ -1305,14 +1305,10 @@ Text GLabel 1750 1100 2    31   Input ~ 0
 Connection ~ 1750 900 
 NoConn ~ 1750 1200
 NoConn ~ 1250 1500
-Text GLabel 1250 1000 0    50   Input ~ 0
-CLOCK1
-Text GLabel 1250 1100 0    50   Input ~ 0
-CLOCK2
-Text GLabel 1250 1600 0    50   Input ~ 0
-BUS1_1
-Text GLabel 1250 1700 0    50   Input ~ 0
-BUS1_2
+Text GLabel 1250 1000 0    39   Input ~ 0
+CLOCK_PH0
+Text GLabel 1250 1100 0    39   Input ~ 0
+CLOCK_PH1
 Text GLabel 1250 1800 0    50   Input ~ 0
 BUS1_3
 Text GLabel 1250 1900 0    50   Input ~ 0
@@ -1320,9 +1316,9 @@ BUS1_4
 Text GLabel 1250 2000 0    50   Input ~ 0
 BUS1_5
 Text GLabel 1250 1200 0    39   Input ~ 0
-~CLOCK1
+CLOCK_PH2
 Text GLabel 1250 1300 0    39   Input ~ 0
-~CLOCK2
+CLOCK_PH3
 Text GLabel 1250 1400 0    50   Input ~ 0
 CLOCK_ENABLE
 Wire Wire Line
@@ -1450,4 +1446,6 @@ F 3 "" H 5100 6400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 5100 6400
+NoConn ~ 1250 1600
+NoConn ~ 1250 1700
 $EndSCHEMATC
