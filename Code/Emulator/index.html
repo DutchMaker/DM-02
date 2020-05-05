@@ -9,9 +9,86 @@
 
     <div class="assembly" id="assembly"></div>
 
-    <button id="button_startstop">Start</button>
-    <button id="button_halt">Halt</button>
-    <button id="button_step">Step</button>
+    <div class="screen">
+      <pre class="text" id="textdisplay"></pre>
+      <span class="type">TEXT DISPLAY&trade;</span>
+    </div>
+
+    <div class="state">
+      <div class="panel">
+        <span class="title">Registers</span>
+        <div class="register">
+          <span class="name">A</span>
+          <span class="value" id="ra">$00</span>
+        </div>
+        <div class="register">
+          <span class="name">B</span>
+          <span class="value" id="rb">$00</span>
+        </div>
+        <div class="register">
+          <span class="name">C</span>
+          <span class="value" id="rc">$00</span>
+        </div>
+        <div class="register">
+          <span class="name">H</span>
+          <span class="value" id="rh">$00</span>
+        </div>
+        <div class="register">
+          <span class="name">L</span>
+          <span class="value" id="rl">$00</span>
+        </div>
+        <div class="register">
+          <span class="name">IR</span>
+          <span class="value" id="rir">$00</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <span class="title">Flags</span>
+        <div class="flag">
+          <span class="name">N</span>
+          <span class="value v0" id="fn">&#11044;</span>
+        </div>
+        <div class="flag">
+          <span class="name">Z</span>
+          <span class="value v0" id="fz">&#11044;</span>
+        </div>
+        <div class="flag">
+          <span class="name">O</span>
+          <span class="value v0" id="fo">&#11044;</span>
+        </div>
+        <div class="flag">
+          <span class="name">C</span>
+          <span class="value v0" id="fc">&#11044;</span>
+        </div>
+      </div>
+
+      <div class="panel addresses">
+        <span class="title">Addresses</span>
+        <div class="register">
+          <span class="name">PC</span>
+          <span class="value" id="pc">$0000</span>
+        </div>
+        <div class="register">
+          <span class="name">SP</span>
+          <span class="value" id="sp">$0000</span>
+        </div>
+      </div>
+
+      <div class="panel controls">
+        <span class="title">Controls</span>
+
+        <div class="buttonrow">
+          <button id="button_startstop">Start</button>
+        </div>
+        <div class="buttonrow">
+          <button id="button_halt">Halt</button>
+          <button id="button_step">Step</button>
+        </div>
+      </div>
+    </div>
+
+
 
   </div>
 

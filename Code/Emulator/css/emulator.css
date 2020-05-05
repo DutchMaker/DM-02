@@ -1,4 +1,5 @@
 .assembly {
+  float: left;
   width: 400px;
   height: 495px;
   font-family: 'Courier New', Courier, monospace;
@@ -13,4 +14,138 @@
     background: #fff;
     color: #ff0000;
     font-weight: bold;
+  }
+
+  .screen {
+    float: left;
+    width: 495px;
+    height: 471px;
+    background: #d3d3d3;
+    padding: 20px;
+    border: 2px solid #000;
+    margin-left: 20px;
+  }
+
+    span.type {
+      display: block;
+      text-align: center;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      margin-top: 15px;
+      font-size: 22px;
+    }
+
+    .screen pre {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 14px;
+      color: #ccc;
+      background: #000;
+      padding: 5px;
+      margin: 0;
+      border: 2px inset;
+      height: 420px;
+    }
+
+.state {
+  float: left;
+  clear: both;
+  margin-top: 15px;
+}
+
+  .state .panel {
+    float: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+    border: 2px solid;
+    margin-left: 15px;
+  }
+
+  .state .panel:first-child {
+    margin-left: 0;
+  }
+
+    .state .panel .title {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+  .state .register {
+    display: inline-block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    border: 2px outset;
+    background: #d3d3d3;
+  }
+
+    .state .register span {
+      display: block;
+      text-align: center;
+    }
+
+    .state .register .name {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    .state .register .value {
+      background: #000;
+      color: #00FF00;
+      font-size: 25px;
+      padding: 5px;
+      border: 2px inset;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+  .state .flag {
+    display: inline-block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    border: 2px outset;
+    background: #d3d3d3;
+  }
+
+    .state .flag span {
+      display: block;
+      text-align: center;
+    }
+
+    .state .flag .name {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    .state .flag .value {
+      font-size: 17px;
+      padding: 9px 8px 8px 8px;
+    }
+
+    .state .flag .value.v0 {
+      color: #a90202;
+    }
+
+    .state .flag .value.v1 {
+      color: #02a902;
+    }
+
+  .state button {
+    border: 2px outset;
+    padding: 11px 11px 12px 11px;
+    background: #d3d3d3;
+    font-size: 18px;
+    margin-right: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .state button:last-child {
+    margin-right: 0;
+  }
+
+  .state .buttonrow {
+    margin-bottom: 10px;
+  }
+
+  .state .buttonrow:last-child {
+    margin-bottom: 0;
   }
