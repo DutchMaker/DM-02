@@ -57,11 +57,12 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 10px;
     border: 2px solid;
-    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
   }
 
-  .state .panel:first-child {
-    margin-left: 0;
+  .state .panel:last-child {
+    margin-right: 0;
   }
 
     .state .panel .title {
@@ -130,6 +131,17 @@
       color: #02a902;
     }
 
+  .state .buttons {
+    float: left;
+    padding-right: 15px;
+    margin-right: 15px;
+    border-right: 2px inset;
+  }
+
+  .state .settings {
+    float: left;
+  }
+
   .state button {
     border: 2px outset;
     padding: 11px 11px 12px 11px;
@@ -151,10 +163,29 @@
     margin-bottom: 0;
   }
 
-  .state .controls .check {
-    float: right;
+  .state .controls .text {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px outset;
   }
-  
+
+  .state .controls .text label {
+    float: left;
+    margin-bottom: 5px;
+  }
+
+  .state .controls .text input {
+    float: left;
+    clear: both;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    width: 80px;
+  }
+
+  .state .controls .text input:disabled {
+    color: #ddd;
+  }
+
   .word-wrap {
     white-space: -moz-pre-wrap !important;
     white-space: -webkit-pre-wrap;

@@ -1,8 +1,5 @@
 var emulator = { 
-  constants: {
-    max_iterations: 1,
-    main_timeout: 1
-  },
+  max_iterations: 1, // Max iterations in main loop before UI update is called.
   main_address: 0,
   state: {
     registers: {
@@ -19,7 +16,10 @@ var emulator = {
       z: 0,
       c: 0,
       o: 0,
-      n: 0
+      n: 0,
+      clear: function() {
+        emulator.state.flags.z = emulator.state.flags.c = emulator.state.flags.o = emulator.state.flags.n = 0;
+      }
     },
     memory: {
       rom: [ ],
@@ -64,7 +64,7 @@ var emulator = {
   {
     if (!emulator.state.single_step) {
       var i = 0;
-      while (i++ < emulator.constants.max_iterations) {
+      while (i++ < emulator.max_iterations) {
         // We limit the amount of iterations we do with this loop to prevent blocking the event thread.
         // This allows us to maximize the speed the emulator (setTimeout can't go faster than 1 ms.)
         emulator.emulate();
@@ -74,7 +74,7 @@ var emulator = {
     }
 
     if (emulator.running) {
-      setTimeout(emulator.main, emulator.constants.main_timeout);
+      setTimeout(emulator.main, 1);
     }
   },
 
@@ -85,6 +85,8 @@ var emulator = {
   { 
     emulator.main_address = (emulator.state.memory.rom[1] << 8) + emulator.state.memory.rom[2];
     emulator.state.pc = emulator.main_address;
+
+    document.getElementById("iterations_per_update").value = emulator.max_iterations;
     
     emulator.disassemble();
     emulator.ui.init();
@@ -195,11 +197,8 @@ var emulator = {
     emulator.state.registers.h = 0;
     emulator.state.registers.l = 0;
     emulator.state.registers.ir = 0;
-    emulator.state.registers.sp = 0;
-    emulator.state.registers.fz = 0;
-    emulator.state.registers.fc = 0;
-    emulator.state.registers.fn = 0;
-    emulator.state.registers.fo = 0;
+    emulator.state.sp = 0;
+    emulator.state.flags.clear();
 
     emulator.ui.update();
   },
@@ -510,6 +509,110 @@ var emulator = {
         break;
     }
 
+    var flag_update = false;
+
+    switch (opcode)
+    {
+      case 0x53:	// ADD A
+      case 0x54:	// ADD B
+      case 0x55:	// ADD C
+      case 0x56:	// ADD H
+      case 0x57:	// ADD L
+      case 0x58:	// ADD value
+      case 0x59:	// ADD address
+      case 0x5A:	// ADD (address)
+      case 0x5B:	// ADD (HL)
+      case 0x5C:	// ADC A
+      case 0x5D:	// ADC B
+      case 0x5E:	// ADC C
+      case 0x5F:	// ADC H
+      case 0x60:	// ADC L
+      case 0x61:	// ADC value
+      case 0x62:	// ADC address
+      case 0x63:	// ADC (address)
+      case 0x64:	// ADC (HL)
+      case 0x65:	// SUB A
+      case 0x66:	// SUB B
+      case 0x67:	// SUB C
+      case 0x68:	// SUB H
+      case 0x69:	// SUB L
+      case 0x6A:	// SUB value
+      case 0x6B:	// SUB address
+      case 0x6C:	// SUB (address)
+      case 0x6D:	// SUB (HL)
+      case 0x6E:	// SBC A
+      case 0x6F:	// SBC B
+      case 0x70:	// SBC C
+      case 0x71:	// SBC H
+      case 0x72:	// SBC L
+      case 0x73:	// SBC value
+      case 0x74:	// SBC address
+      case 0x75:	// SBC (address)
+      case 0x76:	// SBC (HL)
+      case 0x77:	// INC A
+      case 0x7C:	// DEC A
+      case 0x81:	// AND B
+      case 0x82:	// AND C
+      case 0x83:	// AND H
+      case 0x84:	// AND L
+      case 0x85:	// AND value
+      case 0x86:	// AND address
+      case 0x87:	// AND (address)
+      case 0x88:	// AND (HL)
+      case 0x89:	// OR B
+      case 0x8A:	// OR C
+      case 0x8B:	// OR H
+      case 0x8C:	// OR L
+      case 0x8D:	// OR value
+      case 0x8E:	// OR address
+      case 0x8F:	// OR (address)
+      case 0x90:	// OR (HL)
+      case 0x91:	// XOR B
+      case 0x92:	// XOR C
+      case 0x93:	// XOR H
+      case 0x94:	// XOR L
+      case 0x95:	// XOR value
+      case 0x96:	// XOR address
+      case 0x97:	// XOR (address)
+      case 0x98:	// XOR (HL)
+      case 0x99:	// NOT A
+      case 0x9A:	// NOT B
+      case 0x9B:	// NOT C
+      case 0x9C:	// NOT H
+      case 0x9D:	// NOT L
+      case 0x9E:	// NOT value
+      case 0x9F:	// NOT address
+      case 0xA0:	// NOT (address)
+      case 0xA1:	// NOT (HL)
+      case 0xA2:	// SHL B
+      case 0xA3:	// SHL C
+      case 0xA4:	// SHL H
+      case 0xA5:	// SHL L
+      case 0xA6:	// SHL value
+      case 0xA7:	// SHR B
+      case 0xA8:	// SHR C
+      case 0xA9:	// SHR H
+      case 0xAA:	// SHR L
+      case 0xAB:	// SHR value
+      case 0xAC:	// ASR B
+      case 0xAD:	// ASR C
+      case 0xAE:	// ASR H
+      case 0xAF:	// ASR L
+      case 0xB0:	// ASR value
+      case 0xB1:	// ROL B
+      case 0xB2:	// ROL C
+      case 0xB3:	// ROL H
+      case 0xB4:	// ROL L
+      case 0xB5:	// ROL value
+      case 0xB6:	// ROR B
+      case 0xB7:	// ROR C
+      case 0xB8:	// ROR H
+      case 0xB9:	// ROR L
+      case 0xBA:	// ROR value
+        flag_update = true;
+        break;
+    }
+
     // Update the emulator state.
     switch (opcode)
     {
@@ -660,13 +763,6 @@ var emulator = {
       case 0x5A:	// ADD (address)
       case 0x5B:	// ADD (HL)
         emulator.state.registers.a += data;
-        emulator.state.flags.c = 0;
-
-        if (emulator.state.registers.a > 255) {
-          emulator.state.registers.a = 0;
-          emulator.state.flags.c = 1;
-        }
-
         break;
       case 0x5C:	// ADC A
       case 0x5D:	// ADC B
@@ -678,13 +774,6 @@ var emulator = {
       case 0x63:	// ADC (address)
       case 0x64:	// ADC (HL)
         emulator.state.registers.a += data + emulator.state.flags.c;
-        emulator.state.flags.c = 0;
-
-        if (emulator.state.registers.a > 255) {
-          emulator.state.registers.a = 0;
-          emulator.state.flags.c = 1;
-        }
-
         break;
       case 0x65:	// SUB A
       case 0x66:	// SUB B
@@ -695,6 +784,7 @@ var emulator = {
       case 0x6B:	// SUB address
       case 0x6C:	// SUB (address)
       case 0x6D:	// SUB (HL)
+        emulator.state.registers.a -= data;
         break;
       case 0x6E:	// SBC A
       case 0x6F:	// SBC B
@@ -705,18 +795,85 @@ var emulator = {
       case 0x74:	// SBC address
       case 0x75:	// SBC (address)
       case 0x76:	// SBC (HL)
+        emulator.state.registers.a -= (data + emulator.state.flags.c);
         break;
       case 0x77:	// INC A
+        emulator.state.registers.a++;
+        break;
       case 0x78:	// INC B
+        emulator.state.flags.clear();
+        if (++emulator.state.registers.b > 255) {
+          emulator.state.flags.o = 1;
+          emulator.state.flags.c = 1;
+          emulator.state.flags.z = 1;
+          emulator.state.registers.b = 0;
+        }
+        break;
       case 0x79:	// INC C
+        emulator.state.flags.clear();
+        if (++emulator.state.registers.c > 255) {
+          emulator.state.flags.o = 1;
+          emulator.state.flags.c = 1;
+          emulator.state.flags.z = 1;
+          emulator.state.registers.c = 0;
+        }
+        break;
       case 0x7A:	// INC H
+        emulator.state.flags.clear();
+        if (++emulator.state.registers.h > 255) {
+          emulator.state.flags.o = 1;
+          emulator.state.flags.c = 1;
+          emulator.state.flags.z = 1;
+          emulator.state.registers.h = 0;
+        }
+        break;
       case 0x7B:	// INC L
+        emulator.state.flags.clear();
+        if (++emulator.state.registers.l > 255) {
+          emulator.state.flags.o = 1;
+          emulator.state.flags.c = 1;
+          emulator.state.flags.z = 1;
+          emulator.state.registers.l = 0;
+        }
         break;
       case 0x7C:	// DEC A
+        emulator.state.registers.a--;
+        break;
       case 0x7D:	// DEC B
+        emulator.state.flags.clear();
+        if (--emulator.state.registers.b < 0) {
+          emulator.state.flags.o = 1;
+          emulator.state.flags.c = 1;
+          emulator.state.flags.n = 1;
+          emulator.state.registers.b = 255;
+        }
+        break;
       case 0x7E:	// DEC C
+        emulator.state.flags.clear();
+        if (--emulator.state.registers.c < 0) {
+          emulator.state.flags.o = 1;
+          emulator.state.flags.c = 1;
+          emulator.state.flags.n = 1;
+          emulator.state.registers.c = 255;
+        }
+        break;
       case 0x7F:	// DEC H
+        emulator.state.flags.clear();
+        if (--emulator.state.registers.h < 0) {
+          emulator.state.flags.o = 1;
+          emulator.state.flags.c = 1;
+          emulator.state.flags.n = 1;
+          emulator.state.registers.h = 255;
+        }
+        break;
       case 0x80:	// DEC L
+        emulator.state.flags.clear();
+        if (--emulator.state.registers.l < 0) {
+          emulator.state.flags.o = 1;
+          emulator.state.flags.c = 1;
+          emulator.state.flags.n = 1;
+          emulator.state.registers.l = 255;
+        }
         break;
       case 0x81:	// AND B
       case 0x82:	// AND C
@@ -726,6 +883,7 @@ var emulator = {
       case 0x86:	// AND address
       case 0x87:	// AND (address)
       case 0x88:	// AND (HL)
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0x89:	// OR B
       case 0x8A:	// OR C
@@ -735,6 +893,7 @@ var emulator = {
       case 0x8E:	// OR address
       case 0x8F:	// OR (address)
       case 0x90:	// OR (HL)
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0x91:	// XOR B
       case 0x92:	// XOR C
@@ -744,6 +903,7 @@ var emulator = {
       case 0x96:	// XOR address
       case 0x97:	// XOR (address)
       case 0x98:	// XOR (HL)
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0x99:	// NOT A
       case 0x9A:	// NOT B
@@ -754,35 +914,42 @@ var emulator = {
       case 0x9F:	// NOT address
       case 0xA0:	// NOT (address)
       case 0xA1:	// NOT (HL)
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xA2:	// SHL B
       case 0xA3:	// SHL C
       case 0xA4:	// SHL H
       case 0xA5:	// SHL L
       case 0xA6:	// SHL value
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
+        break;
       case 0xA7:	// SHR B
       case 0xA8:	// SHR C
       case 0xA9:	// SHR H
       case 0xAA:	// SHR L
       case 0xAB:	// SHR value
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xAC:	// ASR B
       case 0xAD:	// ASR C
       case 0xAE:	// ASR H
       case 0xAF:	// ASR L
       case 0xB0:	// ASR value
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");      
         break;
       case 0xB1:	// ROL B
       case 0xB2:	// ROL C
       case 0xB3:	// ROL H
       case 0xB4:	// ROL L
       case 0xB5:	// ROL value
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xB6:	// ROR B
       case 0xB7:	// ROR C
       case 0xB8:	// ROR H
       case 0xB9:	// ROR L
       case 0xBA:	// ROR value
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xBB:	// CMP B
       case 0xBC:	// CMP C
@@ -792,89 +959,152 @@ var emulator = {
       case 0xC0:	// CMP address
       case 0xC1:	// CMP (address)
       case 0xC2:	// CMP (HL)
+        emulator.state.flags.clear();
+        if (emulator.state.registers.a - data < 0) {
+          emulator.state.flags.o = 1;
+          emulator.state.flags.c = 1;
+          emulator.state.flags.z = 0;
+          emulator.state.flags.n = 1;
+          emulator.state.registers.a = 255;
+        }
+        else if (emulator.state.registers.a - data == 0) {
+          emulator.state.flags.z = 1;
+        }
         break;
       case 0xC3:	// JMP address
         emulator.state.pc = address;
         break;
       case 0xC4:	// JC address
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xC5:	// JZ address
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xC6:	// JN address
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xC7:	// JO address
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xC8:	// JNC address
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xC9:	// JNZ address
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xCA:	// JP address
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xCB:	// JNO address
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xCC:	// CALL address
         emulator.state.memory.set(emulator.state.sp--, emulator.state.pc >> 8);
-        emulator.state.memory.set(emulator.state.sp--, emulator.state.pc && 8);
+        emulator.state.memory.set(emulator.state.sp--, emulator.state.pc & 0xFF);
         emulator.state.pc = address;
         break;
       case 0xCD:	// CC address
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xCE:	// CZ address
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xCF:	// CN address
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xD0:	// CO address
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xD1:	// CNC address
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xD2:	// CNZ address
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xD3:	// CP address
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xD4:	// CNO address
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xD5:	// RET
+        var lo = emulator.state.memory.get(++emulator.state.sp);
+        var hi = emulator.state.memory.get(++emulator.state.sp);
+        var addr = (hi << 8) + lo;
+
+        emulator.state.pc = addr;
         break;
       case 0xD6:	// RC
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xD7:	// RZ
         if (emulator.state.flags.z == 1) {
-          var lo = emulator.state.memory.get(emulator.state.sp++);
-          var hi = emulator.state.memory.get(emulator.state.sp++);
+          var lo = emulator.state.memory.get(++emulator.state.sp);
+          var hi = emulator.state.memory.get(++emulator.state.sp);
           var addr = (hi << 8) + lo;
 
           emulator.state.pc = addr;
         }
         break;
       case 0xD8:	// RN
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xD9:	// RO
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xDA:	// RNC
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xDB:	// RNZ
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xDC:	// RP
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented");
         break;
       case 0xDD:	// RNO
+        console.log("Warning: Instruction " + opcode.toHex() + " not implemented"); 
         break;
       case 0xDE:	// FSET C
-        emulator.state.fc = 1;
+        emulator.state.flags.c = 1;
         break;
       case 0xDF:	// FSET Z
-        emulator.state.fz = 1;
+        emulator.state.flags.z = 1;
         break;
       case 0xE0:	// FCLR C
-        emulator.state.fc = 0;
+        emulator.state.flags.c = 0;
         break;
       case 0xE1:	// FCLR Z
-        emulator.state.fz = 0;
+        emulator.state.flags.z = 0;
         break;
       case 0xE2:	// HALT
         emulator.state.halt = true;
         break;
       default:
         throw "Unknown opcode: " + opcode.toHex();
+    }
+
+    if (flag_update) {
+      emulator.state.flags.clear();
+
+      if (emulator.state.registers.a == 0)
+      {
+        emulator.state.flags.z = 1;
+      }
+
+      if (emulator.state.registers.a > 255) {
+        emulator.state.flags.o = 1;
+        emulator.state.flags.c = 1;
+        emulator.state.flags.z = 1;
+        emulator.state.registers.a = 0;
+      }
+
+      if (emulator.state.registers.a < 0) {
+        emulator.state.flags.o = 1;
+        emulator.state.flags.c = 1;
+        emulator.state.flags.z = 0;
+        emulator.state.flags.n = 1;
+        emulator.state.registers.a = 255;
+      }
     }
 
     if (emulator.state.pc > 0xFFFF) {
@@ -993,7 +1223,13 @@ Number.prototype.toHex = function(len)
 document.getElementById("button_halt").addEventListener("click", emulator.halt);
 document.getElementById("button_step").addEventListener("click", emulator.step);
 document.getElementById("button_startstop").addEventListener("click", emulator.start_stop);
-document.getElementById("single_step").addEventListener("change", function() { emulator.state.single_step = !emulator.state.single_step; });
+document.getElementById("iterations_per_update").addEventListener("change", function() { emulator.max_iterations = parseInt(this.value) });
+
+document.getElementById("single_step").addEventListener("change", function() { 
+  emulator.state.single_step = !emulator.state.single_step; 
+  document.getElementById("button_step").disabled = !emulator.state.single_step; 
+  document.getElementById("iterations_per_update").disabled = emulator.state.single_step;
+});
 
 document.write('<script type="text/javascript" src="js/example_program.js"></script>');
 document.write('<script type="text/javascript" src="js/instructions.js"></script>');

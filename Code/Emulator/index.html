@@ -78,21 +78,27 @@
       <div class="panel controls">
         <span class="title">Controls</span>
 
-        <div class="buttonrow">
-          <button id="button_startstop">Start</button>
-          <div class="check">
-            <input type="checkbox" id="single_step" />
-            <label for="single_step">Single Step</label>
+        <div class="buttons">
+          <div class="buttonrow">
+            <button id="button_startstop">Start</button>
+          </div>
+          <div class="buttonrow">
+            <button id="button_halt" disabled>Halt</button>
+            <button id="button_step" disabled>Step</button>
           </div>
         </div>
-        <div class="buttonrow">
-          <button id="button_halt">Halt</button>
-          <button id="button_step">Step</button>
+        <div class="settings">
+          <div class="check">
+            <label for="single_step">Single Step</label>
+            <input type="checkbox" id="single_step" />
+          </div>
+          <div class="text">
+            <label for="iterations_per_update">Iterations per update</label>
+            <input type="text" id="iterations_per_update" />
+          </div>
         </div>
       </div>
     </div>
-
-
 
   </div>
 
