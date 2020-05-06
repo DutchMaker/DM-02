@@ -43,6 +43,7 @@
       margin: 0;
       border: 2px inset;
       height: 420px;
+      overflow-y: scroll;
     }
 
 .state {
@@ -148,4 +149,19 @@
 
   .state .buttonrow:last-child {
     margin-bottom: 0;
+  }
+
+  .state .controls .check {
+    float: right;
+  }
+  
+  .word-wrap {
+    white-space: -moz-pre-wrap !important;
+    white-space: -webkit-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
   }
