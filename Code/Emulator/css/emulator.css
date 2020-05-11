@@ -196,3 +196,7 @@
     word-break: break-all;
     white-space: normal;
   }
+
+#program_file {
+  display: none;
+}

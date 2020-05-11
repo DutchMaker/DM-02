@@ -93,6 +93,32 @@ var emulator = {
   },
 
   /*
+  * Load program code from a local file.
+  **/
+  load_program: function()
+  {
+    var file_selector = document.getElementById("program_file");
+    
+    file_selector.onchange = function() {
+      if (file_selector.files.length == 0) {
+        return;
+      }
+
+      var reader = new FileReader();
+
+      reader.addEventListener("load", function(e) {
+        var bytes = new Uint8Array(e.target.result);
+        emulator.state.memory.rom = bytes;
+        emulator.init();
+      });
+
+      reader.readAsArrayBuffer(file_selector.files[0]);
+    };
+
+    file_selector.click();
+  },
+
+  /*
   * Disassemble the program code in memory and display it.
   ***/
   disassemble: function()
@@ -171,12 +197,14 @@ var emulator = {
     if (emulator.running) {     
       document.getElementById("button_startstop").innerText = "Restart";
       document.getElementById("button_halt").innerText = "Halt";
+      document.getElementById("button_halt").disabled = true;
 
       emulator.running = false;
       emulator.state.halt = false;
     }
     else {
       document.getElementById("button_startstop").innerText = "Stop";
+      document.getElementById("button_halt").disabled = false;
       emulator.running = true;
 
       emulator.reset();
@@ -511,6 +539,7 @@ var emulator = {
 
     var flag_update = false;
 
+    // Instructions that affect flags.
     switch (opcode)
     {
       case 0x53:	// ADD A
@@ -1077,7 +1106,7 @@ var emulator = {
         emulator.state.flags.z = 0;
         break;
       case 0xE2:	// HALT
-        emulator.state.halt = true;
+        emulator.halt();
         break;
       default:
         throw "Unknown opcode: " + opcode.toHex();
@@ -1223,6 +1252,7 @@ Number.prototype.toHex = function(len)
 document.getElementById("button_halt").addEventListener("click", emulator.halt);
 document.getElementById("button_step").addEventListener("click", emulator.step);
 document.getElementById("button_startstop").addEventListener("click", emulator.start_stop);
+document.getElementById("button_load").addEventListener("click", emulator.load_program);
 document.getElementById("iterations_per_update").addEventListener("change", function() { emulator.max_iterations = parseInt(this.value) });
 
 document.getElementById("single_step").addEventListener("change", function() { 
