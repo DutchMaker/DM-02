@@ -122,7 +122,10 @@ var emulator = {
   load_fromserver: function()
   {
     var file = "programs/" + document.getElementById("program_server").value;
-    console.log(file);
+
+    if (file == "programs/") {
+      return;
+    }
 
     var req = new XMLHttpRequest();
     req.open("GET", file, true);
@@ -131,10 +134,10 @@ var emulator = {
     req.onload = function (oEvent) {
       if (req.response) {
         var bytes = new Uint8Array(req.response);
-        load_program_binary(bytes);
+        emulator.load_program_binary(bytes);
       }
     };
-    
+
     req.send(null);
   },
 
