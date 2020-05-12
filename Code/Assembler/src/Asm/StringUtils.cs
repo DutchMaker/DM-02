@@ -38,7 +38,7 @@ namespace Asm
 
                 if (commentEnd == -1)
                 {
-                    commentEnd = input.Length - commentStart;
+                    commentEnd = commentStart + (input.Length - commentStart);
                 }
 
                 string beforeComment = input.Substring(0, commentStart);
@@ -66,7 +66,7 @@ namespace Asm
             input = input.Replace(" ,", ",");
             input = input.Replace(", ", ",");
 
-            input = input.Trim('\n');
+            input = input.Trim('\n').Trim();
 
             return input;
         }

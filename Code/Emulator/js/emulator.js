@@ -1,6 +1,8 @@
 var emulator = { 
-  max_iterations: 1, // Max iterations in main loop before UI update is called.
+  max_iterations: 10000, // Max iterations in main loop before UI update is called.
   main_address: 0,
+  offset: 0,
+  last_instruction: 0,
   state: {
     registers: {
       a: 0,
@@ -22,8 +24,7 @@ var emulator = {
       }
     },
     memory: {
-      rom: [ ],
-      ram: [ ],
+      data: [ ],
       get: function(address) { },
       set: function(address, data) { }
     },
@@ -50,7 +51,8 @@ var emulator = {
         data: "",
         dirty: false,
         print: function(str) { }
-      }
+      },
+      videodisplay: { }
     },
     prev_highlighted: 0,
     init: function() { },
@@ -65,7 +67,7 @@ var emulator = {
   {
     if (!emulator.state.single_step) {
       var i = 0;
-      while (i++ < emulator.max_iterations) {
+      while (i++ < emulator.max_iterations && emulator.running) {
         // We limit the amount of iterations we do with this loop to prevent blocking the event thread.
         // This allows us to maximize the speed the emulator (setTimeout can't go faster than 1 ms.)
         emulator.emulate();
@@ -84,19 +86,20 @@ var emulator = {
   **/
   init: function() 
   { 
-    emulator.main_address = (emulator.state.memory.rom[1] << 8) + emulator.state.memory.rom[2];
+    emulator.main_address = (emulator.state.memory.get(1 + emulator.offset) << 8) + emulator.state.memory.get(2 + emulator.offset);
     emulator.state.pc = emulator.main_address;
 
     document.getElementById("iterations_per_update").value = emulator.max_iterations;
-    
+
     emulator.disassemble();
     emulator.ui.init();
   },
 
   /*
   * Load program code from a local file.
+  * Destination may be "rom" or "ram".
   **/
-  load_program: function()
+  load_program: function(destination)
   {
     var file_selector = document.getElementById("program_file");
     
@@ -109,7 +112,24 @@ var emulator = {
 
       reader.addEventListener("load", function(e) {
         var bytes = new Uint8Array(e.target.result);
-        emulator.state.memory.rom = bytes;
+        emulator.state.memory.data = new Array(0xFF00);
+
+        for (var i = 0; i < bytes.length; i++) {
+          emulator.state.memory.data[i] = bytes[i];
+        }
+
+        if (destination == "ram") {
+          emulator.state.memory.data[0] = 0xC3;  // Add JMP to start of RAM.
+          emulator.state.memory.data[1] = 0x40;
+          emulator.state.memory.data[2] = 0x00;
+          emulator.offset = 0x4000;
+        }
+
+        emulator.last_instruction = bytes.length;
+        for (var i = emulator.last_instruction; i < 0xFF00; i++) {
+          emulator.state.memory.data[i] = 0;
+        }
+
         emulator.init();
       });
 
@@ -124,14 +144,46 @@ var emulator = {
   **/
   disassemble: function()
   {
-    var assembly = (0x10).toHex(4) + ":&nbsp;";
+    var assembly = "";
     
-    // First display the predefined data.
-    for (var i = 0x10; i < emulator.main_address; i++)
-    {
-      assembly += emulator.state.memory.rom[i].toHex() + "&nbsp;";
+    if (emulator.offset == 0) {
+       // Display bootloader code from ROM.
+      assembly += "$0000:&nbsp;";
+    
+      for (var i = 0; i < 16; i++)
+      {
+        assembly += emulator.state.memory.get(i).toHex() + "&nbsp;";
+  
+        if ((i + 1) % 10 == 0)
+        {
+          assembly += "<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+        }
+      }
+    }
+    
+    if (emulator.offset > 0) {
+      // Display bootloader code (RAM).
+      assembly += "<br>" + emulator.offset.toHex(4) + ":&nbsp;";
+      for (var i = emulator.offset; i < 16 + emulator.offset; i++)
+      {
+        assembly += emulator.state.memory.get(i).toHex() + "&nbsp;";
 
-      if ((i - 0x10 + 1) % 10 == 0)
+        if ((i + 1) % 10 == 0)
+        {
+          assembly += "<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+        }
+      }
+    }
+
+    assembly += "<br />";
+    assembly += (emulator.offset + 0x10).toHex(4) + ":&nbsp;";
+
+    // First display the predefined data.
+    for (var i = emulator.offset + 0x10; i < emulator.main_address; i++)
+    {
+      assembly += emulator.state.memory.get(i).toHex() + "&nbsp;";
+
+      if ((i - (emulator.offset + 0x10) + 1) % 10 == 0)
       {
         assembly += "<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
       }
@@ -140,9 +192,9 @@ var emulator = {
     assembly += "<br />";
 
     // Now disassemble the machine code.
-    for (var i = emulator.main_address; i < emulator.state.memory.rom.length; i++)
+    for (var i = emulator.main_address; i < emulator.last_instruction; i++)
     {
-      var opcode = emulator.state.memory.rom[i];
+      var opcode = emulator.state.memory.get(i);
       var instruction = emulator.instructions.findByOpcode(opcode);
 
       assembly += "<a name='code_" + i + "'>" + i.toHex(4) + ":&nbsp;" + opcode.toHex() + "&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;" + instruction[2] + "</a><br />";
@@ -151,7 +203,7 @@ var emulator = {
       {
         for (var d = i + 1; d < i + instruction[1]; d++)
         {
-          var data = emulator.state.memory.rom[d];
+          var data = emulator.state.memory.get(d);
           assembly += "<a name='code_" + d + "'>" + d.toHex(4) + ":&nbsp;" + data.toHex() + "</a><br />";
         }
 
@@ -169,6 +221,10 @@ var emulator = {
       case 0xFF00:
         emulator.ui.objects.textdisplay.data += String.fromCharCode(data);
         emulator.ui.objects.textdisplay.dirty = true;
+      case 0xFF01:
+      case 0xFF02:
+        emulator.ui.objects.videodisplay.load(address, data);
+        break;
     }
   },
 
@@ -177,6 +233,8 @@ var emulator = {
   **/
   halt: function() 
   { 
+    emulator.ui.update();
+
     emulator.state.halt = !emulator.state.halt;
     document.getElementById("button_halt").innerText = emulator.state.halt ? "Continue" : "Halt";
   },
@@ -229,31 +287,27 @@ var emulator = {
     emulator.state.sp = 0;
     emulator.state.flags.clear();
 
+    emulator.ui.objects.videodisplay.reset();
+
     emulator.ui.update();
   },
 };
 
 emulator.state.memory.get = function(address) 
 { 
-  if (address >= 0xFF00) {
-    return emulator.handle_input(address);
-  }
-
-  return (address >= 0x4000)
-    ? emulator.state.memory.ram[address]
-    : emulator.state.memory.rom[address];
+  return (address >= 0xFF00)
+    ? emulator.handle_input(address)
+    : emulator.state.memory.data[address];
 };
 
 emulator.state.memory.set = function(address, data) 
 {
-  if (address >= 0x4000) {
-    if (address >= 0xFF00) {
-      emulator.handle_output(address, data);
-      return;
-    }
-
-    emulator.state.memory.ram[address] = data;
+  if (address >= 0xFF00) {
+    emulator.handle_output(address, data);
+    return;
   }
+
+  emulator.state.memory.data[address] = data;
 };
 
 emulator.ui.init = function()
@@ -274,12 +328,18 @@ emulator.ui.init = function()
   emulator.ui.objects.fc = document.getElementById("fc");
 
   emulator.ui.objects.textdisplay.obj = document.getElementById("textdisplay");
+  
+  emulator.ui.objects.videodisplay.init();
 
   emulator.ui.update();
 };
 
 emulator.ui.update = function()
 {
+  if (!emulator.running) {
+    return;
+  }
+
   // Highlight the specified address in the disassembled code.
   if (emulator.state.pc != emulator.ui.prev_highlighted)
   {
@@ -299,7 +359,8 @@ emulator.ui.update = function()
         sel.scrollIntoView();
       }
       else {
-        document.getElementById("assembly").scrollTop = 0;
+        cur.scrollIntoView();
+        //document.getElementById("assembly").scrollTop = 0;
       }
     }
 
@@ -326,6 +387,8 @@ emulator.ui.update = function()
     emulator.ui.objects.textdisplay.obj.scrollTop = emulator.ui.objects.textdisplay.obj.scrollHeight;
     emulator.ui.objects.textdisplay.dirty = false;
   }
+
+  emulator.ui.objects.videodisplay.update();
 }
 
 emulator.ui.objects.textdisplay.print = function(str)
@@ -344,7 +407,8 @@ Number.prototype.toHex = function(len)
 document.getElementById("button_halt").addEventListener("click", emulator.halt);
 document.getElementById("button_step").addEventListener("click", emulator.step);
 document.getElementById("button_startstop").addEventListener("click", emulator.start_stop);
-document.getElementById("button_load").addEventListener("click", emulator.load_program);
+document.getElementById("button_load").addEventListener("click", function() { emulator.load_program("rom"); });
+document.getElementById("button_load_ram").addEventListener("click", function() { emulator.load_program("ram") });
 document.getElementById("iterations_per_update").addEventListener("change", function() { emulator.max_iterations = parseInt(this.value) });
 
 document.getElementById("single_step").addEventListener("change", function() { 
@@ -354,8 +418,9 @@ document.getElementById("single_step").addEventListener("change", function() {
 });
 
 // Load additional JavaScript files.
-document.write('<script type="text/javascript" src="js/example_program.js"></script>');
+document.write('<script type="text/javascript" src="js/videodisplay.js"></script>');
 document.write('<script type="text/javascript" src="js/instructions.js"></script>');
 document.write('<script type="text/javascript" src="js/instructions_logic.js"></script>');
+document.write('<script type="text/javascript" src="js/example_program.js"></script>');
 
 document.addEventListener("DOMContentLoaded", emulator.init, true);

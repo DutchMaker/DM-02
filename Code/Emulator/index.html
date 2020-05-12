@@ -14,9 +14,9 @@
       <span class="type">TEXT DISPLAY&trade;</span>
     </div>
 
-    <div class="screen">
-      <canvas class="video" id="videodisplay"></canvas>
-      <span class="type">VIDEO DISPLAY&trade;</span>
+    <div class="screen video">
+      <canvas class="video" id="videodisplay" width="240" height="200"></canvas>
+      <span class="type">VIDEO DISPLAY&trade;<br>(240x200 pixels)</span>
     </div>
 
     <div class="state">
@@ -86,13 +86,13 @@
         <div class="buttons">
           <div class="buttonrow">
             <button id="button_startstop">Start</button>
-
-            <input type="file" id="program_file" />
-            <button id="button_load" title="Load program code from local file">Load</button>
-          </div>
-          <div class="buttonrow">
             <button id="button_halt" disabled>Halt</button>
             <button id="button_step" disabled>Step</button>
+          </div>
+          <div class="buttonrow">
+            <input type="file" id="program_file" />
+            <button id="button_load" title="Load program code from local file">Load ROM</button>
+            <button id="button_load_ram" title="Load program code from local file">Load RAM</button>
           </div>
         </div>
         <div class="settings">
@@ -102,7 +102,7 @@
           </div>
           <div class="text">
             <label for="iterations_per_update">Iterations per update</label>
-            <input type="text" id="iterations_per_update" />
+            <input type="text" id="iterations_per_update" accept=".bin" />
           </div>
         </div>
       </div>

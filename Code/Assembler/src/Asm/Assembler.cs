@@ -19,7 +19,7 @@ namespace Asm
 
         private string source;
         private string sourceFolderPath;
-        private byte[] machineCode = new byte[0xBFFF];        
+        private byte[] machineCode = new byte[0xFF00];        
         private int machineCodeAddress = BOOTLOADER_SIZE;   // The first 16 bytes of machine code are reserved
                                                             // for a JMP to get past the predefined data and maybe additional code in the future.
         private int offset = 0;
@@ -31,12 +31,16 @@ namespace Asm
 
         public static void Assemble(string microcodeSourceFilePath, string programSourceFilePath)
         {
+            // ROM = used to burn on ROM chip (includes blank bytes after program code)
+            // Logisim = used to load into the Logisim memory chips.
+            // BIN = used in the emulator, discards blank bytes after program code.
             string romFileName = programSourceFilePath.Split('.', StringSplitOptions.RemoveEmptyEntries).First() + ".rom";
             string logisimImageFileName = programSourceFilePath.Split('.', StringSplitOptions.RemoveEmptyEntries).First() + ".img";
+            string binFileName = programSourceFilePath.Split('.', StringSplitOptions.RemoveEmptyEntries).First() + ".bin";
 
             _assembler = new Assembler(microcodeSourceFilePath, programSourceFilePath);
             _assembler.Assemble();
-            _assembler.Save(romFileName, logisimImageFileName);
+            _assembler.Save(romFileName, logisimImageFileName, binFileName);
         }
 
         private Assembler(string microcodeSourceFilePath, string programSourceFilePath)
@@ -77,7 +81,7 @@ namespace Asm
             Console.WriteLine($"{machineCodeAddress-offset} bytes of machinecode generated in {sw.ElapsedMilliseconds} ms.");
         }
 
-        public void Save(string romFileName, string logisimImageFileName)
+        public void Save(string romFileName, string logisimImageFileName, string binFileName)
         {
             var sw = Stopwatch.StartNew();
             Console.Write("Writing machine code to output files...");
@@ -92,10 +96,21 @@ namespace Asm
                 File.Delete(logisimImageFileName);
             }
 
+            if (File.Exists(binFileName))
+            {
+                File.Delete(binFileName);
+            }
+
             using (var writer = new BinaryWriter(File.Open(romFileName, FileMode.CreateNew)))
             {
                 writer.Seek(0, SeekOrigin.Begin);
                 writer.Write(machineCode);
+            }
+
+            using (var writer = new BinaryWriter(File.Open(binFileName, FileMode.CreateNew)))
+            {
+                writer.Seek(0, SeekOrigin.Begin);
+                writer.Write(machineCode.Take(machineCodeAddress).ToArray());
             }
 
             using (TextWriter writer = new StreamWriter(File.Open(logisimImageFileName, FileMode.CreateNew)))

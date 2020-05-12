@@ -784,7 +784,6 @@ emulator.emulate = function()
         emulator.state.flags.c = 1;
         emulator.state.flags.z = 0;
         emulator.state.flags.n = 1;
-        emulator.state.registers.a = 255;
       }
       else if (emulator.state.registers.a - data == 0) {
         emulator.state.flags.z = 1;

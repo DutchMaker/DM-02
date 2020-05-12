@@ -12,11 +12,15 @@
 ; $04: Write pixel
 ; $05: Clear screen
 
+.offset $4000
+
 .data
+message       : "Hello world\0D\3A-)"
+*text_display : $FF00
 *display_data : $FF01
 *display_cmd  : $FF02
-*x            : $4000
-*y            : $4001
+*x            : $FE00
+*y            : $FE01
 
 ~CMD_SETCOLOR_H   : #$01
 ~CMD_SETCOLOR_L   : #$02
@@ -25,12 +29,21 @@
 ~CMD_WRITE_PIXEL  : #$10
 ~CMD_CLEAR_SCREEN : #$20
 
-.include "bitmap_data.asm"   ; 64x64 pixel black&white bitmap.
+.include "emulator_demo_data.asm"   ; 128x128 pixel black&white bitmap.
 
 .code
 main:
   ; Set stack pointer.
   SP $FEFF
+
+  ; Print message on text display.
+  MOV BC,#message     ; Load 16-bit address to the 'message' string into BC register pair.
+  CALL print_str      ; Print the string to which BC is now pointing.
+
+  ; Clear X/Y in RAM.
+  MOV A,#0
+  MOV *x,A
+  MOV *y,A
 
   ; Set pixel color to white.
   MOV A,#$FF              ; Set color data to white
@@ -54,7 +67,7 @@ draw_bitmap:
   ; Increment X
   MOV A,*x
   INC A
-  CMP #64       ; Check if X reached 64, then it should reset to 0
+  CMP #128       ; Check if X reached 128, then it should reset to 0
   JZ reset_x
   MOV *x,A      ; Store incremented X.
   JMP draw_bitmap
@@ -100,3 +113,19 @@ draw_pixel:
   MOV *display_cmd,A  ; Execute set pixel command
 
   RET
+
+; Prints a string to the text display.
+; BC must contain the address to the string data.
+print_str:
+  MOV A,(BC)          ; Transfer data (current character) from memory location BC into A.
+  CMP #0              ; Compare A to zero.
+  RZ                  ; Return if zero (A==0).
+
+  MOV *text_display,A ; Send the current character to the text display.
+
+  INC C               ; Increment the 16-bit BC.
+  MOV A,#0            ; Reset A to zero.
+  ADC B               ; Add B + carry to A (increments high byte if needed).
+  MOV B,A             ; Transfer A to B.
+
+  JMP print_str       ; Repeat for next character.
