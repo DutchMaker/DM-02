@@ -13,15 +13,15 @@ namespace Asm
             Console.WriteLine("------------------------");
             Console.WriteLine();
 
-            args = new string[] { @"/Users/ruud/Projects/DM-02/Code/Microcode/microcode.src", @"/Users/ruud/Projects/DM-02/Code/Assembler/programs/emulator_demo/emulator_demo.asm" };
+            //args = new string[] { @"/Users/ruud/Projects/DM-02/Code/Microcode/microcode.src", @"/Users/ruud/Projects/DM-02/Code/Assembler/programs/emulator_demo/emulator_demo.asm" };
 
             if (args.Length == 0)
             {
                 Console.WriteLine("Usage: asm.exe \"microcode.src\" \"filename.asm\"");
-				Console.WriteLine("Outputs \"filename.img\" (for Logisim) and \"filename.rom\" files.");
-				Console.WriteLine();
-				Console.WriteLine("'microcode.src' must refer to the computer's microcode source file");
-				Console.WriteLine("'filename.asm' is the assembly file that needs to be compiled to machine code.");
+                Console.WriteLine("Outputs \"filename.img\" (for Logisim) and \"filename.rom\" files.");
+                Console.WriteLine();
+                Console.WriteLine("'microcode.src' must refer to the computer's microcode source file");
+                Console.WriteLine("'filename.asm' is the assembly file that needs to be compiled to machine code.");
                 Console.WriteLine();
                 return;
             }

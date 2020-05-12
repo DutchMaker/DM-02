@@ -97,9 +97,8 @@ var emulator = {
 
   /*
   * Load program code from a local file.
-  * Destination may be "rom" or "ram".
   **/
-  load_program: function(destination)
+  load_fromdisk: function()
   {
     var file_selector = document.getElementById("program_file");
     
@@ -109,34 +108,57 @@ var emulator = {
       }
 
       var reader = new FileReader();
-
       reader.addEventListener("load", function(e) {
         var bytes = new Uint8Array(e.target.result);
-        emulator.state.memory.data = new Array(0xFF00);
-
-        for (var i = 0; i < bytes.length; i++) {
-          emulator.state.memory.data[i] = bytes[i];
-        }
-
-        if (destination == "ram") {
-          emulator.state.memory.data[0] = 0xC3;  // Add JMP to start of RAM.
-          emulator.state.memory.data[1] = 0x40;
-          emulator.state.memory.data[2] = 0x00;
-          emulator.offset = 0x4000;
-        }
-
-        emulator.last_instruction = bytes.length;
-        for (var i = emulator.last_instruction; i < 0xFF00; i++) {
-          emulator.state.memory.data[i] = 0;
-        }
-
-        emulator.init();
+        emulator.load_program_binary(bytes);
       });
 
       reader.readAsArrayBuffer(file_selector.files[0]);
     };
 
     file_selector.click();
+  },
+  
+  load_fromserver: function()
+  {
+    var file = "programs/" + document.getElementById("program_server").value;
+    console.log(file);
+
+    var req = new XMLHttpRequest();
+    req.open("GET", file, true);
+    req.responseType = "arraybuffer";
+
+    req.onload = function (oEvent) {
+      if (req.response) {
+        var bytes = new Uint8Array(req.response);
+        load_program_binary(bytes);
+      }
+    };
+    
+    req.send(null);
+  },
+
+  load_program_binary: function(bytes)
+  {
+    emulator.state.memory.data = new Array(0xFF00);
+
+    for (var i = 0; i < bytes.length; i++) {
+      emulator.state.memory.data[i] = bytes[i];
+    }
+
+    if (emulator.state.memory.get(0) == 0) {
+      emulator.state.memory.data[0] = 0xC3;  // Add JMP to start of RAM.
+      emulator.state.memory.data[1] = 0x40;
+      emulator.state.memory.data[2] = 0x00;
+      emulator.offset = 0x4000;
+    }
+
+    emulator.last_instruction = bytes.length;
+    for (var i = emulator.last_instruction; i < 0xFF00; i++) {
+      emulator.state.memory.data[i] = 0;
+    }
+
+    emulator.init();
   },
 
   /*
@@ -407,8 +429,8 @@ Number.prototype.toHex = function(len)
 document.getElementById("button_halt").addEventListener("click", emulator.halt);
 document.getElementById("button_step").addEventListener("click", emulator.step);
 document.getElementById("button_startstop").addEventListener("click", emulator.start_stop);
-document.getElementById("button_load").addEventListener("click", function() { emulator.load_program("rom"); });
-document.getElementById("button_load_ram").addEventListener("click", function() { emulator.load_program("ram") });
+document.getElementById("button_load").addEventListener("click", emulator.load_fromdisk);
+document.getElementById("program_server").addEventListener("change", emulator.load_fromserver);
 document.getElementById("iterations_per_update").addEventListener("change", function() { emulator.max_iterations = parseInt(this.value) });
 
 document.getElementById("single_step").addEventListener("change", function() { 

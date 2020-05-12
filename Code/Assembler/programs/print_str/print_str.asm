@@ -11,12 +11,6 @@ main:
   MOV BC,#message     ; Load 16-bit address to the 'message' string into BC register pair.
   CALL print_str      ; Print the string to which BC is now pointing.
 
-  MOV A,#$12           ; Execute some more code to see that we returned.
-  MOV B,#$34
-  MOV C,#$56
-  MOV H,#$78
-  MOV L,#$90
-
 done:     
   HALT
 

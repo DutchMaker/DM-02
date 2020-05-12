@@ -89,10 +89,16 @@
             <button id="button_halt" disabled>Halt</button>
             <button id="button_step" disabled>Step</button>
           </div>
-          <div class="buttonrow">
+          <div class="buttonrow loadfromdisk">
             <input type="file" id="program_file" />
-            <button id="button_load" title="Load program code from local file">Load ROM</button>
-            <button id="button_load_ram" title="Load program code from local file">Load RAM</button>
+            <button id="button_load" title="Load program code from local file">Load program from disk</button>
+          </div>
+          <div class="buttonrow">
+            <select id="program_server">
+              <option>Load program from server</option>
+              <option value="emulator_demo.bin">emulator_demo.bin</option>
+              <option value="emulator_demo.bin">hello_world.bin</option>
+            </select>
           </div>
         </div>
         <div class="settings">

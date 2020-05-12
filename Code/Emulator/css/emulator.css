@@ -181,6 +181,11 @@
     margin-bottom: 0;
   }
 
+  .state .buttonrow.loadfromdisk {
+    padding-top: 15px;
+    border-top: 2px outset;
+  }
+
   .state .controls .text {
     margin-top: 15px;
     padding-top: 15px;
@@ -198,6 +203,10 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     width: 80px;
+  }
+
+  .state .controls select {
+    font-size: 18px;
   }
 
   .state .controls .text input:disabled {
