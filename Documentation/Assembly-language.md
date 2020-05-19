@@ -389,7 +389,7 @@ If a program needs to run from RAM, the bootloader code must be present in the R
 | MOV BC,(HL)                         |
 | MOV HL,(BC)                         |
 | MOV (HL),BC                         |
-| MPV (BC),HL                         |
+| MOV (BC),HL                         |
 
 <a name="SP"></a>
 
