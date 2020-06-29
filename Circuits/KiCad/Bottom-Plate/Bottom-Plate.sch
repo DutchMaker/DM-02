@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -121,26 +121,15 @@ NoConn ~ 700  3650
 NoConn ~ 700  3750
 NoConn ~ 700  3850
 $Comp
-L Connector_Generic:Conn_02x32_Odd_Even BUS1
-U 1 1 5EC3909D
-P 1700 2250
-F 0 "BUS1" H 1750 3875 50  0000 C CNN
-F 1 "Conn_02x32_Odd_Even" H 1750 3876 50  0001 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x32_P2.54mm_Vertical" H 1700 2250 50  0001 C CNN
-F 3 "~" H 1700 2250 50  0001 C CNN
-	1    1700 2250
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector_Generic:Conn_02x32_Odd_Even BUS2
 U 1 1 5EC6B636
-P 3600 2250
-F 0 "BUS2" H 3650 3875 50  0000 C CNN
-F 1 "Conn_02x32_Odd_Even" H 3650 3876 50  0001 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x32_P2.54mm_Vertical" H 3600 2250 50  0001 C CNN
-F 3 "~" H 3600 2250 50  0001 C CNN
-	1    3600 2250
-	1    0    0    -1  
+P 3700 2250
+F 0 "BUS2" H 3750 3875 50  0000 C CNN
+F 1 "Conn_02x32_Odd_Even" H 3750 3876 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x32_P2.54mm_Vertical" H 3700 2250 50  0001 C CNN
+F 3 "~" H 3700 2250 50  0001 C CNN
+	1    3700 2250
+	-1   0    0    -1  
 $EndComp
 Text Label 1500 750  2    50   ~ 0
 GND
@@ -161,43 +150,43 @@ BTN_RESET
 Text Label 1500 1550 2    50   ~ 0
 IO_load
 Text Label 1500 1950 2    50   ~ 0
-A_load
+~A_load
 Text Label 1500 2050 2    50   ~ 0
-B_load
+~B_load
 Text Label 1500 2150 2    50   ~ 0
-C_load
+~C_load
 Text Label 1500 2250 2    50   ~ 0
-H_load
+~H_load
 Text Label 1500 2350 2    50   ~ 0
-L_load
+~L_load
 Text Label 1500 2450 2    50   ~ 0
-F_load
+~F_load
 Text Label 1500 2550 2    50   ~ 0
-ALU_load
+~ALU_load
 Text Label 1500 2650 2    50   ~ 0
-MEM_load
+~MEM_load
 Text Label 1500 2750 2    50   ~ 0
-PC_H_load
+~PC_H_load
 Text Label 1500 2850 2    50   ~ 0
-PC_L_load
+~PC_L_load
 Text Label 1500 2950 2    50   ~ 0
-STK_H_load
+~STK_H_load
 Text Label 1500 3050 2    50   ~ 0
-STK_L_load
+~STK_L_load
 Text Label 1500 3150 2    50   ~ 0
-MAR_H_load
+~MAR_H_load
 Text Label 1500 3250 2    50   ~ 0
-MAR_L_load
+~MAR_L_load
 Text Label 1500 3350 2    50   ~ 0
-IR_load
+~IR_load
 Text Label 1500 3450 2    50   ~ 0
-PC_MAR_transfer
+~PC_MAR_transfer
 Text Label 1500 3550 2    50   ~ 0
-STK_MAR_transfer
+~STK_MAR_transfer
 Text Label 1500 3650 2    50   ~ 0
 PC_inc
 Text Label 1500 3750 2    50   ~ 0
-MAR_inc
+~MAR_inc
 Text Label 1500 3850 2    50   ~ 0
 FETCH_done
 Text Label 2000 750  0    50   ~ 0
@@ -209,37 +198,37 @@ CLOCK_PH3
 Text Label 2000 1550 0    50   ~ 0
 IO_out
 Text Label 2000 1950 0    50   ~ 0
-A_out
+~A_out
 Text Label 2000 2050 0    50   ~ 0
-B_out
+~B_out
 Text Label 2000 2150 0    50   ~ 0
-C_out
+~C_out
 Text Label 2000 2250 0    50   ~ 0
-H_out
+~H_out
 Text Label 2000 2350 0    50   ~ 0
-L_out
+~L_out
 Text Label 2000 2450 0    50   ~ 0
-F_out
+~F_out
 Text Label 2000 2550 0    50   ~ 0
-ALU_out
+~ALU_out
 Text Label 2000 2650 0    50   ~ 0
-MEM_out
+~MEM_out
 Text Label 2000 2750 0    50   ~ 0
-PC_H_out
+~PC_H_out
 Text Label 2000 2850 0    50   ~ 0
-PC_L_out
+~PC_L_out
 Text Label 2000 2950 0    50   ~ 0
-STK_H_out
+~STK_H_out
 Text Label 2000 3050 0    50   ~ 0
-STK_L_out
+~STK_L_out
 Text Label 2000 3150 0    50   ~ 0
-FSET_c
+~FSET_c
 Text Label 2000 3250 0    50   ~ 0
-FSET_z
+~FSET_z
 Text Label 2000 3350 0    50   ~ 0
-FCLR_c
+~FCLR_c
 Text Label 2000 3450 0    50   ~ 0
-FCLR_z
+~FCLR_z
 Text Label 2000 3550 0    50   ~ 0
 TSTATE_reset
 Text Label 2000 3650 0    50   ~ 0
@@ -248,71 +237,7 @@ Text Label 2000 3750 0    50   ~ 0
 STK_inc
 Text Label 2000 3850 0    50   ~ 0
 STK_dec
-Wire Wire Line
-	1500 750  700  750 
-Wire Wire Line
-	700  850  1500 850 
-Wire Wire Line
-	700  950  1500 950 
-Wire Wire Line
-	700  1050 1500 1050
-Wire Wire Line
-	700  1150 1500 1150
-Wire Wire Line
-	700  1250 1500 1250
-Wire Wire Line
-	700  1350 1500 1350
-Wire Wire Line
-	700  1450 1500 1450
-Wire Wire Line
-	700  1550 1500 1550
-Wire Wire Line
-	700  1650 1500 1650
-Wire Wire Line
-	700  1750 1500 1750
-Wire Wire Line
-	700  1850 1500 1850
-Wire Wire Line
-	700  1950 1500 1950
-Wire Wire Line
-	700  2050 1500 2050
 NoConn ~ 700  2150
-Wire Wire Line
-	700  2150 1500 2150
-Wire Wire Line
-	700  2250 1500 2250
-Wire Wire Line
-	700  2350 1500 2350
-Wire Wire Line
-	700  2450 1500 2450
-Wire Wire Line
-	700  2550 1500 2550
-Wire Wire Line
-	700  2650 1500 2650
-Wire Wire Line
-	700  2750 1500 2750
-Wire Wire Line
-	700  2850 1500 2850
-Wire Wire Line
-	700  2950 1500 2950
-Wire Wire Line
-	700  3050 1500 3050
-Wire Wire Line
-	700  3150 1500 3150
-Wire Wire Line
-	700  3250 1500 3250
-Wire Wire Line
-	700  3350 1500 3350
-Wire Wire Line
-	700  3450 1500 3450
-Wire Wire Line
-	700  3550 1500 3550
-Wire Wire Line
-	700  3650 1500 3650
-Wire Wire Line
-	700  3750 1500 3750
-Wire Wire Line
-	700  3850 1500 3850
 Wire Wire Line
 	2600 750  2000 750 
 Wire Wire Line
@@ -659,4 +584,79 @@ Wire Wire Line
 	2850 3750 3400 3750
 Wire Wire Line
 	2850 3850 3400 3850
+Wire Wire Line
+	700  1050 1500 1050
+Wire Wire Line
+	700  3850 1500 3850
+Wire Wire Line
+	700  3750 1500 3750
+Wire Wire Line
+	700  3650 1500 3650
+Wire Wire Line
+	700  950  1500 950 
+Wire Wire Line
+	700  3550 1500 3550
+Wire Wire Line
+	700  3450 1500 3450
+Wire Wire Line
+	700  3350 1500 3350
+Wire Wire Line
+	700  3250 1500 3250
+Wire Wire Line
+	700  3150 1500 3150
+Wire Wire Line
+	700  3050 1500 3050
+Wire Wire Line
+	700  2950 1500 2950
+Wire Wire Line
+	700  2850 1500 2850
+Wire Wire Line
+	700  2750 1500 2750
+Wire Wire Line
+	700  2650 1500 2650
+Wire Wire Line
+	700  850  1500 850 
+Wire Wire Line
+	700  2550 1500 2550
+Wire Wire Line
+	700  2450 1500 2450
+Wire Wire Line
+	700  2350 1500 2350
+Wire Wire Line
+	700  2250 1500 2250
+Wire Wire Line
+	700  2150 1500 2150
+Wire Wire Line
+	700  2050 1500 2050
+Wire Wire Line
+	700  1950 1500 1950
+Wire Wire Line
+	700  1850 1500 1850
+Wire Wire Line
+	700  1750 1500 1750
+Wire Wire Line
+	700  1650 1500 1650
+Wire Wire Line
+	1500 750  700  750 
+Wire Wire Line
+	700  1550 1500 1550
+Wire Wire Line
+	700  1450 1500 1450
+Wire Wire Line
+	700  1350 1500 1350
+Wire Wire Line
+	700  1250 1500 1250
+Wire Wire Line
+	700  1150 1500 1150
+$Comp
+L Connector_Generic:Conn_02x32_Odd_Even BUS1
+U 1 1 5EC3909D
+P 1800 2250
+F 0 "BUS1" H 1850 3875 50  0000 C CNN
+F 1 "Conn_02x32_Odd_Even" H 1850 3876 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x32_P2.54mm_Vertical" H 1800 2250 50  0001 C CNN
+F 3 "~" H 1800 2250 50  0001 C CNN
+	1    1800 2250
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC
