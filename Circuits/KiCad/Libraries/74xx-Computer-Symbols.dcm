@@ -1,5 +1,16 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP 27512
+D UV Erasable EPROM 512 KiBit, [Obsolete 2007-01]
+K Erasable EPROM 512KiBit
+F http://pdf.datasheetcatalog.com/datasheets/120/227190_DS.pdf
+$ENDCMP
+#
+$CMP M27C322
+D OTP EPROM 32 MBit (2Mb x 16)
+K OTP EPROM 32 MBit (2Mb x 16)
+$ENDCMP
+#
 $CMP SW_DPST
 D Double Pole Single Throw (DPST) Switch
 K switch dual double-pole single-throw OFF-ON
