@@ -284,8 +284,8 @@ It must also be noted that the colon (`:`) character is not allowed in string de
 
 | Start address | End address | Description             |
 | ------------- | ----------- | ----------------------- |
-| `$0000`       | `$3FFF`     | ROM                     |
-| `$4000`       | `$FEFF`     | RAM                     |
+| `$0000`       | `$3FFF`     | ROM (16 Kb)             |
+| `$4000`       | `$FEFF`     | RAM (48 Kb)             |
 | `$FEFF`       | `$4000`     | Stack space (suggested) |
 | `$FF00`       | `$FFFF`     | I/O                     |
 

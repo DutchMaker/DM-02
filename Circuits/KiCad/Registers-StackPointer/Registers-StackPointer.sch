@@ -326,6 +326,7 @@ F 0 "U7" H 6300 1550 50  0000 C CNN
 F 1 "74LS191" H 6300 1450 50  0000 C CNN
 F 2 "Package_DIP:DIP-16_W7.62mm" H 6300 1500 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS191" H 6300 1500 50  0001 C CNN
+F 4 "8 - 11" H 6300 1200 50  0000 C CNN "Bits"
 	1    6300 1500
 	1    0    0    -1  
 $EndComp
@@ -433,6 +434,7 @@ F 0 "U8" H 6300 3350 50  0000 C CNN
 F 1 "74LS191" H 6300 3250 50  0000 C CNN
 F 2 "Package_DIP:DIP-16_W7.62mm" H 6300 3300 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS191" H 6300 3300 50  0001 C CNN
+F 4 "12 - 15" H 6300 3000 50  0000 C CNN "Bits"
 	1    6300 3300
 	1    0    0    -1  
 $EndComp
@@ -472,6 +474,7 @@ F 0 "U12" H 10400 1550 50  0000 C CNN
 F 1 "74LS191" H 10400 1450 50  0000 C CNN
 F 2 "Package_DIP:DIP-16_W7.62mm" H 10400 1500 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS191" H 10400 1500 50  0001 C CNN
+F 4 "0 - 3" H 10400 1200 50  0000 C CNN "Bits"
 	1    10400 1500
 	1    0    0    -1  
 $EndComp
@@ -499,6 +502,7 @@ F 0 "U13" H 10400 3350 50  0000 C CNN
 F 1 "74LS191" H 10400 3250 50  0000 C CNN
 F 2 "Package_DIP:DIP-16_W7.62mm" H 10400 3300 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS191" H 10400 3300 50  0001 C CNN
+F 4 "4 - 7" H 10400 3000 50  0000 C CNN "Bits"
 	1    10400 3300
 	1    0    0    -1  
 $EndComp
@@ -1677,9 +1681,9 @@ Text GLabel 1050 7950 0    39   Input ~ 0
 Text GLabel 2050 7950 2    39   Input ~ 0
 IR_clock
 Text GLabel 8100 2000 0    39   Input ~ 0
-GND
+5V
 Text GLabel 12100 2000 0    39   Input ~ 0
-GND
+5V
 Text GLabel 10400 8750 2    39   Input ~ 0
 GND
 Connection ~ 10350 8750
@@ -1825,9 +1829,9 @@ Connection ~ 11350 1100
 Wire Wire Line
 	11350 1100 12100 1100
 Text GLabel 8100 5650 0    39   Input ~ 0
-GND
+5V
 Text GLabel 12100 5650 0    39   Input ~ 0
-GND
+5V
 Text GLabel 8000 6200 0    39   Input ~ 0
 ~STK_MAR_transfer
 Wire Wire Line
@@ -1875,4 +1879,6 @@ Text GLabel 9100 5350 2    39   Input ~ 0
 A14
 Text GLabel 9100 5450 2    39   Input ~ 0
 A15
+Text Notes 3850 9900 0    118  ~ 0
+TODO: Decoupling
 $EndSCHEMATC
