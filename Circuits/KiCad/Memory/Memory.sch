@@ -898,12 +898,12 @@ $EndComp
 $Comp
 L 74xx:74LS245 U?
 U 1 1 5F5A8C71
-P 11400 1600
-F 0 "U?" H 11400 1750 50  0000 C CNN
-F 1 "74HCT245" H 11400 1300 50  0000 C CNN
-F 2 "" H 11400 1600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS245" H 11400 1600 50  0001 C CNN
-	1    11400 1600
+P 10500 1400
+F 0 "U?" H 10500 1550 50  0000 C CNN
+F 1 "74HCT245" H 10500 1100 50  0000 C CNN
+F 2 "" H 10500 1400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS245" H 10500 1400 50  0001 C CNN
+	1    10500 1400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -921,23 +921,23 @@ $EndComp
 $Comp
 L Memory_EPROM:27C256 U?
 U 1 1 5F5AD161
-P 8550 2000
-F 0 "U?" H 8550 1950 50  0000 C CNN
-F 1 "27C256" H 8550 3190 50  0000 C CNN
-F 2 "Package_DIP:DIP-28_W15.24mm" H 8550 2000 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc0014.pdf" H 8550 2000 50  0001 C CNN
-	1    8550 2000
+P 7650 1800
+F 0 "U?" H 7650 1750 50  0000 C CNN
+F 1 "27C256" H 7650 1200 50  0000 C CNN
+F 2 "Package_DIP:DIP-28_W15.24mm" H 7650 1800 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc0014.pdf" H 7650 1800 50  0001 C CNN
+	1    7650 1800
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx-Computer-Symbols:UM61512AK-15 U?
 U 1 1 5F5AEABC
-P 8650 4700
-F 0 "U?" H 8650 4850 50  0000 C CNN
-F 1 "UM61512AK-15" H 8650 5810 50  0000 C CNN
-F 2 "DIP32" H 8650 4850 50  0001 C CIN
-F 3 "" H 8650 4700 50  0001 C CNN
-	1    8650 4700
+P 7750 4500
+F 0 "U?" H 7750 4650 50  0000 C CNN
+F 1 "UM61512AK-15" H 7850 4500 50  0000 C CNN
+F 2 "DIP32" H 7750 4650 50  0001 C CIN
+F 3 "" H 7750 4500 50  0001 C CNN
+	1    7750 4500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -965,23 +965,23 @@ $EndComp
 $Comp
 L 74xx:74LS00 U?
 U 1 1 5F5B5820
-P 8650 7950
-F 0 "U?" H 8650 7950 50  0000 C CNN
-F 1 "74HCT00" H 8650 8184 50  0000 C CNN
-F 2 "" H 8650 7950 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 8650 7950 50  0001 C CNN
-	1    8650 7950
+P 7950 7300
+F 0 "U?" H 7950 7300 50  0000 C CNN
+F 1 "74HCT00" H 7950 7534 50  0000 C CNN
+F 2 "" H 7950 7300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 7950 7300 50  0001 C CNN
+	1    7950 7300
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS04 U?
 U 1 1 5F5B7D3B
-P 14700 9200
-F 0 "U?" H 14700 9517 50  0000 C CNN
-F 1 "74HCT04" H 14700 9426 50  0000 C CNN
-F 2 "" H 14700 9200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 14700 9200 50  0001 C CNN
-	1    14700 9200
+P 7350 9050
+F 0 "U?" H 7300 9050 50  0000 C CNN
+F 1 "74HCT04" H 7350 8850 50  0000 C CNN
+F 2 "" H 7350 9050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 7350 9050 50  0001 C CNN
+	1    7350 9050
 	1    0    0    -1  
 $EndComp
 Text GLabel 1050 5500 0    39   Input ~ 0
@@ -1316,351 +1316,458 @@ Text GLabel 5900 5600 2    39   Input ~ 0
 R1
 Text GLabel 5900 5500 2    39   Input ~ 0
 R0
-Text GLabel 8150 1400 0    39   Input ~ 0
+Text GLabel 7250 1200 0    39   Input ~ 0
 R3
-Text GLabel 8150 1300 0    39   Input ~ 0
+Text GLabel 7250 1100 0    39   Input ~ 0
 R2
-Text GLabel 8150 1200 0    39   Input ~ 0
+Text GLabel 7250 1000 0    39   Input ~ 0
 R1
-Text GLabel 8150 1100 0    39   Input ~ 0
+Text GLabel 7250 900  0    39   Input ~ 0
 R0
-Text GLabel 8150 1500 0    39   Input ~ 0
+Text GLabel 7250 1300 0    39   Input ~ 0
 R4
-Text GLabel 8150 1600 0    39   Input ~ 0
+Text GLabel 7250 1400 0    39   Input ~ 0
 R5
-Text GLabel 8150 1700 0    39   Input ~ 0
+Text GLabel 7250 1500 0    39   Input ~ 0
 R6
-Text GLabel 8150 1800 0    39   Input ~ 0
+Text GLabel 7250 1600 0    39   Input ~ 0
 R7
-Text GLabel 8150 1900 0    39   Input ~ 0
+Text GLabel 7250 1700 0    39   Input ~ 0
 R8
-Text GLabel 8150 2000 0    39   Input ~ 0
+Text GLabel 7250 1800 0    39   Input ~ 0
 R9
-Text GLabel 8150 2100 0    39   Input ~ 0
+Text GLabel 7250 1900 0    39   Input ~ 0
 R10
-Text GLabel 8150 2200 0    39   Input ~ 0
+Text GLabel 7250 2000 0    39   Input ~ 0
 R11
-Text GLabel 8150 2300 0    39   Input ~ 0
+Text GLabel 7250 2100 0    39   Input ~ 0
 R12
-Text GLabel 8150 2400 0    39   Input ~ 0
+Text GLabel 7250 2200 0    39   Input ~ 0
 R13
-Text GLabel 8150 2500 0    39   Input ~ 0
+Text GLabel 7250 2300 0    39   Input ~ 0
 R14
-Text GLabel 7950 4100 0    39   Input ~ 0
+Text GLabel 7050 3900 0    39   Input ~ 0
 R3
-Text GLabel 7950 4000 0    39   Input ~ 0
+Text GLabel 7050 3800 0    39   Input ~ 0
 R2
-Text GLabel 7950 3900 0    39   Input ~ 0
+Text GLabel 7050 3700 0    39   Input ~ 0
 R1
-Text GLabel 7950 3800 0    39   Input ~ 0
+Text GLabel 7050 3600 0    39   Input ~ 0
 R0
-Text GLabel 7950 4200 0    39   Input ~ 0
+Text GLabel 7050 4000 0    39   Input ~ 0
 R4
-Text GLabel 7950 4300 0    39   Input ~ 0
+Text GLabel 7050 4100 0    39   Input ~ 0
 R5
-Text GLabel 7950 4400 0    39   Input ~ 0
+Text GLabel 7050 4200 0    39   Input ~ 0
 R6
-Text GLabel 7950 4500 0    39   Input ~ 0
+Text GLabel 7050 4300 0    39   Input ~ 0
 R7
-Text GLabel 7950 4600 0    39   Input ~ 0
+Text GLabel 7050 4400 0    39   Input ~ 0
 R8
-Text GLabel 7950 4700 0    39   Input ~ 0
+Text GLabel 7050 4500 0    39   Input ~ 0
 R9
-Text GLabel 7950 4800 0    39   Input ~ 0
+Text GLabel 7050 4600 0    39   Input ~ 0
 R10
-Text GLabel 7950 4900 0    39   Input ~ 0
+Text GLabel 7050 4700 0    39   Input ~ 0
 R11
-Text GLabel 7950 5000 0    39   Input ~ 0
+Text GLabel 7050 4800 0    39   Input ~ 0
 R12
-Text GLabel 7950 5100 0    39   Input ~ 0
+Text GLabel 7050 4900 0    39   Input ~ 0
 R13
-Text GLabel 7950 5200 0    39   Input ~ 0
+Text GLabel 7050 5000 0    39   Input ~ 0
 R14
-Text GLabel 7950 5300 0    39   Input ~ 0
+Text GLabel 7050 5100 0    39   Input ~ 0
 R15
-Text GLabel 11900 1100 2    39   Input ~ 0
+Text GLabel 11000 900  2    39   Input ~ 0
 DATA0
-Text GLabel 11900 1200 2    39   Input ~ 0
+Text GLabel 11000 1000 2    39   Input ~ 0
 DATA1
-Text GLabel 11900 1300 2    39   Input ~ 0
+Text GLabel 11000 1100 2    39   Input ~ 0
 DATA2
-Text GLabel 11900 1400 2    39   Input ~ 0
+Text GLabel 11000 1200 2    39   Input ~ 0
 DATA3
-Text GLabel 11900 1500 2    39   Input ~ 0
+Text GLabel 11000 1300 2    39   Input ~ 0
 DATA4
-Text GLabel 11900 1600 2    39   Input ~ 0
+Text GLabel 11000 1400 2    39   Input ~ 0
 DATA5
-Text GLabel 11900 1700 2    39   Input ~ 0
+Text GLabel 11000 1500 2    39   Input ~ 0
 DATA6
-Text GLabel 11900 1800 2    39   Input ~ 0
+Text GLabel 11000 1600 2    39   Input ~ 0
 DATA7
 $Comp
 L 74xx:74LS08 U?
 U 1 1 5FD39938
-P 10600 2400
-F 0 "U?" H 10600 2400 50  0000 C CNN
-F 1 "74HCT08" H 10600 2634 50  0000 C CNN
-F 2 "" H 10600 2400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 10600 2400 50  0001 C CNN
-	1    10600 2400
+P 9700 2200
+F 0 "U?" H 9700 2200 50  0000 C CNN
+F 1 "74HCT08" H 9700 2434 50  0000 C CNN
+F 2 "" H 9700 2200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 9700 2200 50  0001 C CNN
+	1    9700 2200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10900 2100 10900 2400
-Text GLabel 10300 2500 0    39   Input ~ 0
+	10000 1900 10000 2200
+Text GLabel 9400 2300 0    39   Input ~ 0
 ~MEM_load
-Text GLabel 10300 2300 0    39   Input ~ 0
+Text GLabel 9400 2100 0    39   Input ~ 0
 ~MEM_out
-Text GLabel 10900 2000 0    39   Input ~ 0
+Text GLabel 10000 1800 0    39   Input ~ 0
 ~MEM_out
 Wire Wire Line
-	8950 1100 9350 1100
+	8050 900  8450 900 
 Wire Wire Line
-	10900 1200 9400 1200
+	10000 1000 8500 1000
 Wire Wire Line
-	8950 1300 9450 1300
+	8050 1100 8550 1100
 Wire Wire Line
-	10900 1400 9500 1400
+	10000 1200 8600 1200
 Wire Wire Line
-	8950 1500 9550 1500
+	8050 1300 8650 1300
 Wire Wire Line
-	10900 1600 9600 1600
+	10000 1400 8700 1400
 Wire Wire Line
-	8950 1700 9650 1700
+	8050 1500 8750 1500
 Wire Wire Line
-	10900 1800 9700 1800
+	10000 1600 8800 1600
 Wire Wire Line
-	9350 3800 9350 1100
-Connection ~ 9350 1100
+	8450 3600 8450 900 
+Connection ~ 8450 900 
 Wire Wire Line
-	9350 1100 10900 1100
+	8450 900  10000 900 
 Wire Wire Line
-	9350 3900 9400 3900
+	8450 3700 8500 3700
 Wire Wire Line
-	9400 3900 9400 1200
-Connection ~ 9400 1200
+	8500 3700 8500 1000
+Connection ~ 8500 1000
 Wire Wire Line
-	9400 1200 8950 1200
+	8500 1000 8050 1000
 Wire Wire Line
-	9350 4000 9450 4000
+	8450 3800 8550 3800
 Wire Wire Line
-	9450 4000 9450 1300
-Connection ~ 9450 1300
+	8550 3800 8550 1100
+Connection ~ 8550 1100
 Wire Wire Line
-	9450 1300 10900 1300
+	8550 1100 10000 1100
 Wire Wire Line
-	9350 4100 9500 4100
+	8450 3900 8600 3900
 Wire Wire Line
-	9500 4100 9500 1400
-Connection ~ 9500 1400
+	8600 3900 8600 1200
+Connection ~ 8600 1200
 Wire Wire Line
-	9500 1400 8950 1400
+	8600 1200 8050 1200
 Wire Wire Line
-	9350 4200 9550 4200
+	8450 4000 8650 4000
 Wire Wire Line
-	9550 4200 9550 1500
-Connection ~ 9550 1500
+	8650 4000 8650 1300
+Connection ~ 8650 1300
 Wire Wire Line
-	9550 1500 10900 1500
+	8650 1300 10000 1300
 Wire Wire Line
-	9350 4300 9600 4300
+	8450 4100 8700 4100
 Wire Wire Line
-	9600 4300 9600 1600
-Connection ~ 9600 1600
+	8700 4100 8700 1400
+Connection ~ 8700 1400
 Wire Wire Line
-	9600 1600 8950 1600
+	8700 1400 8050 1400
 Wire Wire Line
-	9350 4400 9650 4400
+	8450 4200 8750 4200
 Wire Wire Line
-	9650 4400 9650 1700
-Connection ~ 9650 1700
+	8750 4200 8750 1500
+Connection ~ 8750 1500
 Wire Wire Line
-	9650 1700 10900 1700
+	8750 1500 10000 1500
 Wire Wire Line
-	9350 4500 9700 4500
+	8450 4300 8800 4300
 Wire Wire Line
-	9700 4500 9700 1800
-Connection ~ 9700 1800
+	8800 4300 8800 1600
+Connection ~ 8800 1600
 Wire Wire Line
-	9700 1800 8950 1800
-Text GLabel 7400 6900 0    39   Input ~ 0
+	8800 1600 8050 1600
+Text GLabel 7050 6400 0    39   Input ~ 0
 A15
-Text GLabel 7400 6800 0    39   Input ~ 0
+Text GLabel 7050 6300 0    39   Input ~ 0
 A14
-Text GLabel 7400 6700 0    39   Input ~ 0
+Text GLabel 7050 6200 0    39   Input ~ 0
 A13
-Text GLabel 7400 6600 0    39   Input ~ 0
+Text GLabel 7050 6100 0    39   Input ~ 0
 A12
-Text GLabel 7400 6500 0    39   Input ~ 0
+Text GLabel 7050 6000 0    39   Input ~ 0
 A11
-Text GLabel 7400 6400 0    39   Input ~ 0
+Text GLabel 7050 5900 0    39   Input ~ 0
 A10
-Text GLabel 7400 6300 0    39   Input ~ 0
+Text GLabel 7050 5800 0    39   Input ~ 0
 A9
-Text GLabel 7400 6200 0    39   Input ~ 0
+Text GLabel 7050 5700 0    39   Input ~ 0
 A8
-Text GLabel 9350 5300 2    39   Input ~ 0
+Text GLabel 8450 5100 2    39   Input ~ 0
 5V
-Text GLabel 8150 2800 0    39   Input ~ 0
+Text GLabel 7150 2600 0    39   Input ~ 0
 GND
 $Comp
 L 74xx:74LS08 U?
 U 1 1 5FEF36D4
-P 8300 6550
-F 0 "U?" H 8300 6550 50  0000 C CNN
-F 1 "74HCT08" H 8300 6784 50  0000 C CNN
-F 2 "" H 8300 6550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 8300 6550 50  0001 C CNN
-	1    8300 6550
+P 7950 6050
+F 0 "U?" H 7950 6050 50  0000 C CNN
+F 1 "74HCT08" H 7950 6284 50  0000 C CNN
+F 2 "" H 7950 6050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 7950 6050 50  0001 C CNN
+	1    7950 6050
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS21 U?
 U 1 1 5FEF5707
-P 7700 6350
-F 0 "U?" H 7700 6350 50  0000 C CNN
-F 1 "74LS21" H 7700 6600 50  0000 C CNN
-F 2 "" H 7700 6350 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 7700 6350 50  0001 C CNN
-	1    7700 6350
+P 7350 5850
+F 0 "U?" H 7350 5850 50  0000 C CNN
+F 1 "74LS21" H 7350 6100 50  0000 C CNN
+F 2 "" H 7350 5850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 7350 5850 50  0001 C CNN
+	1    7350 5850
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS21 U?
 U 1 1 5FEF9971
-P 7700 6750
-F 0 "U?" H 7700 6750 50  0000 C CNN
-F 1 "74LS21" H 7700 6500 50  0000 C CNN
-F 2 "" H 7700 6750 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 7700 6750 50  0001 C CNN
-	1    7700 6750
+P 7350 6250
+F 0 "U?" H 7350 6250 50  0000 C CNN
+F 1 "74LS21" H 7350 6000 50  0000 C CNN
+F 2 "" H 7350 6250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 7350 6250 50  0001 C CNN
+	1    7350 6250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8000 6350 8000 6450
+	7650 5850 7650 5950
 Wire Wire Line
-	8000 6650 8000 6750
-Text GLabel 7700 8350 0    39   Input ~ 0
+	7650 6150 7650 6250
+Text GLabel 7000 7700 0    39   Input ~ 0
 IO_enable
 $Comp
 L 74xx:74LS08 U?
 U 1 1 5FF23E1B
-P 8700 7000
-F 0 "U?" H 8700 7000 50  0000 C CNN
-F 1 "74HCT08" H 8700 7234 50  0000 C CNN
-F 2 "" H 8700 7000 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 8700 7000 50  0001 C CNN
-	1    8700 7000
+P 8350 6500
+F 0 "U?" H 8350 6500 50  0000 C CNN
+F 1 "74HCT08" H 8350 6734 50  0000 C CNN
+F 2 "" H 8350 6500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 8350 6500 50  0001 C CNN
+	1    8350 6500
 	1    0    0    -1  
 $EndComp
-Text GLabel 8400 6900 0    39   Input ~ 0
+Text GLabel 8050 6400 0    39   Input ~ 0
 ~MAR_L_load
-Text GLabel 8400 7100 0    39   Input ~ 0
+Text GLabel 8050 6600 0    39   Input ~ 0
 ~MAR_H_load
 $Comp
 L 74xx:74LS08 U?
 U 1 1 5FF3B239
-P 9300 6650
-F 0 "U?" H 9300 6650 50  0000 C CNN
-F 1 "74HCT08" H 9300 6884 50  0000 C CNN
-F 2 "" H 9300 6650 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 9300 6650 50  0001 C CNN
-	1    9300 6650
+P 8950 6150
+F 0 "U?" H 8950 6150 50  0000 C CNN
+F 1 "74HCT08" H 8950 6384 50  0000 C CNN
+F 2 "" H 8950 6150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 8950 6150 50  0001 C CNN
+	1    8950 6150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9000 6750 9000 7000
+	8650 6250 8650 6500
 Wire Wire Line
-	9000 6550 8600 6550
+	8650 6050 8250 6050
 $Comp
 L 74xx:74LS32 U?
 U 1 1 5FF7D14D
-P 8050 7850
-F 0 "U?" H 8050 7850 50  0000 C CNN
-F 1 "74HCT32" H 8050 8084 50  0000 C CNN
-F 2 "" H 8050 7850 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 8050 7850 50  0001 C CNN
-	1    8050 7850
+P 7350 7200
+F 0 "U?" H 7350 7200 50  0000 C CNN
+F 1 "74HCT32" H 7350 7434 50  0000 C CNN
+F 2 "" H 7350 7200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 7350 7200 50  0001 C CNN
+	1    7350 7200
 	1    0    0    -1  
 $EndComp
-Text GLabel 7750 7950 0    39   Input ~ 0
+Text GLabel 7050 7300 0    39   Input ~ 0
 A15
-Text GLabel 7750 7750 0    39   Input ~ 0
+Text GLabel 7050 7100 0    39   Input ~ 0
 A14
 $Comp
 L 74xx:74LS00 U?
 U 1 1 5FFE46A9
-P 8050 8350
-F 0 "U?" H 8050 8350 50  0000 C CNN
-F 1 "74HCT00" H 8050 8584 50  0000 C CNN
-F 2 "" H 8050 8350 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 8050 8350 50  0001 C CNN
-	1    8050 8350
+P 7350 7700
+F 0 "U?" H 7350 7700 50  0000 C CNN
+F 1 "74HCT00" H 7350 7934 50  0000 C CNN
+F 2 "" H 7350 7700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 7350 7700 50  0001 C CNN
+	1    7350 7700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7700 8350 7750 8350
-Connection ~ 7750 8350
+	7000 7700 7050 7700
+Connection ~ 7050 7700
 Wire Wire Line
-	7750 8350 7750 8450
+	7050 7700 7050 7800
 Wire Wire Line
-	7750 8250 7750 8350
+	7050 7600 7050 7700
 Wire Wire Line
-	8350 8050 8350 8350
-Text GLabel 10150 7950 2    39   Input ~ 0
+	7650 7400 7650 7700
+Text GLabel 9500 7300 2    39   Input ~ 0
 ~RAM_enable
-Text GLabel 9350 5200 2    39   Input ~ 0
+Text GLabel 8450 5000 2    39   Input ~ 0
 GND
-Text GLabel 9350 4950 2    39   Input ~ 0
+Text GLabel 8450 4750 2    39   Input ~ 0
 ~RAM_enable
-Text GLabel 8550 3100 2    39   Input ~ 0
+Text GLabel 7700 2900 2    39   Input ~ 0
 GND
-Text GLabel 8550 900  2    39   Input ~ 0
+Text GLabel 7700 700  2    39   Input ~ 0
 5V
-Text GLabel 11400 2400 2    39   Input ~ 0
+Text GLabel 10550 2200 2    39   Input ~ 0
 GND
-Text GLabel 11400 800  2    39   Input ~ 0
+Text GLabel 10550 600  2    39   Input ~ 0
 5V
 $Comp
 L 74xx:74LS32 U?
 U 1 1 600F0F45
-P 9900 8600
-F 0 "U?" H 9900 8600 50  0000 C CNN
-F 1 "74HCT32" H 9900 8834 50  0000 C CNN
-F 2 "" H 9900 8600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 9900 8600 50  0001 C CNN
-	1    9900 8600
+P 9200 7950
+F 0 "U?" H 9200 7950 50  0000 C CNN
+F 1 "74HCT32" H 9200 8184 50  0000 C CNN
+F 2 "" H 9200 7950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 9200 7950 50  0001 C CNN
+	1    9200 7950
 	1    0    0    -1  
 $EndComp
-Text GLabel 9550 8800 0    39   Input ~ 0
+Text GLabel 8850 8150 0    39   Input ~ 0
 IO_enable
 Wire Wire Line
-	10150 7950 9000 7950
+	9500 7300 8300 7300
 $Comp
 L 74xx:74LS00 U?
 U 1 1 60170A74
-P 9300 8500
-F 0 "U?" H 9300 8500 50  0000 C CNN
-F 1 "74HCT00" H 9300 8734 50  0000 C CNN
-F 2 "" H 9300 8500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 9300 8500 50  0001 C CNN
-	1    9300 8500
+P 8600 7850
+F 0 "U?" H 8600 7850 50  0000 C CNN
+F 1 "74HCT00" H 8600 8084 50  0000 C CNN
+F 2 "" H 8600 7850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 8600 7850 50  0001 C CNN
+	1    8600 7850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9000 8600 9000 8400
-Connection ~ 9000 7950
+	8300 7950 8300 7750
+Connection ~ 8300 7300
 Wire Wire Line
-	9000 7950 8950 7950
-Connection ~ 9000 8400
+	8300 7300 8250 7300
+Connection ~ 8300 7750
 Wire Wire Line
-	9000 8400 9000 7950
+	8300 7750 8300 7300
 Wire Wire Line
-	9550 8800 9600 8800
+	8850 8150 8900 8150
 Wire Wire Line
-	9600 8800 9600 8700
-Text GLabel 10200 8600 2    39   Input ~ 0
+	8900 8150 8900 8050
+Text GLabel 9500 7950 2    39   Input ~ 0
 ~ROM_enable
-Text GLabel 8150 2900 0    39   Input ~ 0
+Text GLabel 7250 2700 0    39   Input ~ 0
 ~ROM_enable
+Text GLabel 7050 8850 0    39   Input ~ 0
+~MEM_load
+Text GLabel 9250 6150 2    39   Input ~ 0
+IO_enable
+Text GLabel 7050 9050 0    39   Input ~ 0
+CLOCK_PH2
+Wire Wire Line
+	7150 2600 7200 2600
+Wire Wire Line
+	7200 2600 7200 2500
+Wire Wire Line
+	7200 2500 7250 2500
+Connection ~ 7200 2600
+Wire Wire Line
+	7200 2600 7250 2600
+Wire Wire Line
+	7700 2900 7650 2900
+Wire Wire Line
+	7700 700  7650 700 
+Wire Wire Line
+	10550 2200 10500 2200
+Wire Wire Line
+	10550 600  10500 600 
+$Comp
+L 74xx:74LS08 U?
+U 1 1 601D80D1
+P 7950 9850
+F 0 "U?" H 7950 9850 50  0000 C CNN
+F 1 "74HCT08" H 7950 10100 50  0000 C CNN
+F 2 "" H 7950 9850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 7950 9850 50  0001 C CNN
+	1    7950 9850
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7050 8850 7650 8850
+$Comp
+L 74xx:74HCT02 U?
+U 1 1 6033E2E7
+P 7950 8950
+F 0 "U?" H 7950 8950 50  0000 C CNN
+F 1 "74HCT02" H 7950 9184 50  0000 C CNN
+F 2 "" H 7950 8950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hct02" H 7950 8950 50  0001 C CNN
+	1    7950 8950
+	1    0    0    -1  
+$EndComp
+Text GLabel 8400 9150 0    39   Input ~ 0
+IO_enable
+Text GLabel 9000 9050 2    39   Input ~ 0
+IO_load
+Wire Wire Line
+	8250 8950 8300 8950
+Text GLabel 9000 8700 2    39   Input ~ 0
+~RAM_write
+Wire Wire Line
+	8300 8700 8300 8950
+Connection ~ 8300 8950
+Wire Wire Line
+	8300 8950 8400 8950
+Text GLabel 8450 4850 2    39   Input ~ 0
+~RAM_write
+$Comp
+L 74xx:74LS04 U?
+U 1 1 603E13BE
+P 8700 8700
+F 0 "U?" H 8650 8700 50  0000 C CNN
+F 1 "74HCT04" H 8700 8900 50  0000 C CNN
+F 2 "" H 8700 8700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 8700 8700 50  0001 C CNN
+	1    8700 8700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 8700 8400 8700
+Text GLabel 7050 9750 0    39   Input ~ 0
+~MEM_out
+Text GLabel 7050 9950 0    39   Input ~ 0
+IO_enable
+$Comp
+L 74xx:74LS04 U?
+U 1 1 604130CD
+P 7350 9750
+F 0 "U?" H 7300 9750 50  0000 C CNN
+F 1 "74HCT04" H 7350 9950 50  0000 C CNN
+F 2 "" H 7350 9750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 7350 9750 50  0001 C CNN
+	1    7350 9750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 9950 7650 9950
+$Comp
+L 74xx:74LS08 U?
+U 1 1 6042B0F8
+P 8700 9050
+F 0 "U?" H 8700 9050 50  0000 C CNN
+F 1 "74HCT08" H 8700 9300 50  0000 C CNN
+F 2 "" H 8700 9050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 8700 9050 50  0001 C CNN
+	1    8700 9050
+	1    0    0    1   
+$EndComp
+Text GLabel 9000 9850 2    39   Input ~ 0
+IO_out
+Wire Wire Line
+	9000 9850 8250 9850
 $EndSCHEMATC
