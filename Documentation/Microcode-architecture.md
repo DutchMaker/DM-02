@@ -32,8 +32,8 @@ each type of word has its own bit format:
 
 ### Data operation word format
 
-`1|xxxx|xxxx|x|xxxxx|0` 
-`1|operand_out|operand_load|0|function|0` 
+`1|xxxx|xxxx|x|xxxxx|0`  
+`1|operand_out|operand_load|0|function|0`  
 `1|operand_out|operand_load|1|alu_operation|0`
 
 > The *out* operation starts at rising CLOCK1
@@ -43,7 +43,7 @@ each type of word has its own bit format:
 
 ### Function operation word format
 
-`0|xxxx|000000|xxxx|0` 
+`0|xxxx|000000|xxxx|0`  
 `0|function|000000|function|0`
 
 > Controls up to 2 lines at once (we have room for one more in the control word, but takes an additional line decoder to use it).
