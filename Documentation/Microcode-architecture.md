@@ -33,7 +33,7 @@ each type of word has its own bit format:
 ### Data operation word format
 
 `1|xxxx|xxxx|x|xxxxx|0`
-`1|operand_out|operand_load|0|0|function|0`
+`1|operand_out|operand_load|0|function|0`
 `1|operand_out|operand_load|1|alu_operation|0`
 
 > The *out* operation starts at rising CLOCK1
