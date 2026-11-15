@@ -1,0 +1,130 @@
+PAGE 1
+ HALF SIZE DIP LOW VOLTAGE
+     5.0V CRYSTAL CLOCK OSCILLATOR
+     ACH Series                                                               ESD Sensitive                              Pb     RoHS/Ro    HS    II Com      pli an  t
+                                                                                                                                                                                   12.    7 x 12.    7 x 5.6mm
+
+Moisture Sensitivity Level (MSL) –                                                          This product is Hermeticall                                           y Sealed and not Moisture Sensitive - MSL = N/A: Not                    Applicable
+FEATURES:                                                                                           APPLICATIONS:
+• Wide frequency range.                                                                             • Microprocessors.
+• HCMOS and TTL compatible.                                                                         • Digital circuit.
+• Tight symmetry option.
+• Tri-state Enable / Disable function.
+STANDARD SPECIFICATIONS:
+                        Paramete               rs                        Minimum                     Typical                 Maxim         um        Units                       Notes
+ Frequency         Range                                                  0.032768                                             200.000                MHz
+ Operating        Temperature                                                    0                                                 +70                  °C                  See    options
+ Storage       Temperature                                                     -55                                               +125                   °C
+ Overall Frequency                             Stabilit          y                                  -100                                                   +100                     ppm                      See options
+ Supply       Voltage       (Vdd)                                              4.5                       5.0                       5.5                   V
+                               32.768kHz ~ 23                        .999MHz                                                                    30
+ Input Current                      24.000MHz ~ 4                       9.999MHz                                                                                                                       45mA
+                               50.000MHz ~ 7                       9.999MHz                                                                                                                       70
+                              80.000MHz ~ 2                       00.999MHz                                                                                                                      85
+ Sy  mm   etry                 32.768kHz ~ 49                        .999MHz                45                                                55                 %                See options
+ (@ 1/2Vdd)                   50.000MHz ~ 2                       00.000MHz               40                                                60
+ Rise and Fall                  32.768kHz ~ 1                      .999MHz                                                                     40
+ Ti  me (Tr/Tf)                 2.000MHz ~ 24                       .000MHz                                                                                                                       10ns
+                              24.001MHz ~ 2                       00.000MHz                                                                                                                      5
+
+                               32.768kHz ~ 79                        .999MHz                                                                    15                pF                                                   10                 TTL
+ Output Load                                                                                                                                                                See options
+                              80.000MHz ~ 2                       00.000MHz                                                                   15                pF                                                    5                TTL
+
+ Output Volta                   ge                              VOH                       0.9*Vdd                                                                          V
+                                                    VOL                                                                        0.1*   Vdd            V
+                                                     VIH                       2.2                                                                    V                "1" or Open:Oscillation
+ Tri -state Function
+                                                     VIL                                                                       0.8                   V           "0": Output disable  (Hi Z)
+ Out     put     En  able time                                                                                                       4                 ms           For opt           ion A         onl    y
+ Output     Disab        le ti     me                                                                                                    100                   ns           For opti            on A         onl    y
+ Start      -up Tim          e                                                                                        1                       10                ms
+
+* Overa    ll freque             ncy stability        includes          in it ia l t olera     nce and te             mpera         ture sta          bility.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                 REVISED: 1                   1.15.2016
+                                                                                         5101 Hidden Creek Lane Spicewood TX 78669                                                   ABRACON IS
+                                                                                         Phone: 512-371-6159 | Fax: 512-351-8858                                                      ISO9001-2008
+                                                                           LLC           For terms and conditions of sale please visit:
+                                                                                         www      .abracon.com                                                                         CER     TIFIED
+PAGE 2
+       HALF SIZE DIP LOW VOLTAGE
+           5.0V CRYSTAL CLOCK OSCILLATOR
+           ACH Series                                                                                                Pb    RoHS/Ro    HS    II Com      pli an  t
+                                                                                                                                                                          12.    7 x 12.    7 x 5.6mm
+        OPTIONS & PART IDENTIFICATION:
+           (Left blank if standard)
+                                                        ACH-              MHz-    -    -     -     -     -    -
+
+
+
+                         Frequenc              y in     MHz                                                                                                               Packaging
+                         e.g.      24.576M    Hz                                                                                                                        Blank:           Tube
+                               14.    31818MHz                                                                                                                          TY: T       ray
+                               26.    000MH        z
+
+
+
+
+
+                       Operating Te                     mp. Freq. Sta              bility Symme           tr y       Tri-state               Outp       ut Load            Pin form
+                       D: -     10°C ~ +            60°C       Y*:      ± 10 ppm     S: 45/55% @1                     /2Vdd A: Tri-state on p                         in 1    50: 50pF G: Gu        ll Wing
+                        E: -20°C            ~ +70°C             J**:       ± 20 ppm     T: 47       .5/52     .5% @1/2Vdd                                             Q25: 0.25”     (6.35)
+                        F: -    30°C ~ +            70°C R: ± 25             ppm                                                                                      Q20: 0.20”     (5.08)
+                       N: -     30°C ~ +            85°C       K: ±      30      ppm                                                                                  Q15: 0.15”     (3.81)
+                        L: -40°C            ~ +85°C             H: ±      35      ppm     Note:
+                                                                                       C: ± 50             ppm     *: Tem     p optio  n D onl    y
+                                                                               **:     Te  mp opt       ion D, E and 0-70oC only
+
+        OUTLINE DIMENSION:
+
+
+                                                                                                                                                         Pin          Functi          on
+                                                                                                                                                           1        Tri-      Sta    te/NC
+                                                                                                                                                           4          Case       GND
+                                                                                                                                                           5             Out     put
+                                                                                                                                                           8                Vdd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                      Di   mensi         ons: i        nches (mm)
+      Packaging: 40pcs /tube
+
+ ATTENTION: A  bracon  products are COTS – Commercial-Off-The-Shelf products; suitable for Commercial, Industrial and, where designated, Automot  ive Applications.
+    Abracon’s products are not specifically designed for Military, Aviation, Aerospace, Life-dependant Medical applications or any application requiring high reliability where
+component failure could result in loss of life and/or property. For applications requiring high reliability and/or presenting an extreme operating e nvironment, written consent and
+authorization from Abracon is required. Please contact Abracon  for more information.
+
+                                                                                                                                                                           REVISED: 1                   1.15.2016
+                                                                                          5101 Hidden Creek Lane Spicewood TX 78669                                            ABRACON IS
+                                                                                          Phone: 512-371-6159 | Fax: 512-351-8858                                              ISO9001-2008
+                                                                             LLC          For terms and conditions of sale please visit:
+                                                                                          www      .abracon.com                                                                 CER     TIFIED

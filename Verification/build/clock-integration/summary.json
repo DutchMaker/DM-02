@@ -1,0 +1,1354 @@
+{
+  "created_at": "2026-11-15T17:07:13.413089+00:00",
+  "passed": true,
+  "status": "validated-in-staging",
+  "normal_sources_modified": false,
+  "tests": 158,
+  "normalized_clock_net_groups": 66,
+  "clock_profiles": 150,
+  "clock_native": {
+    "sheet": "Counted-Clock",
+    "status": "pass",
+    "components": 27,
+    "net_groups": 66,
+    "connected_nets": 43,
+    "physical_pins": 204,
+    "differences": [],
+    "source_hash": "b8b3cf76ac902bb8608132f7d5ce0495852d6ba746970421dda0842d9c4a3b3c",
+    "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+  },
+  "oscillator_contract": {
+    "pin_functions": {
+      "1": "NC",
+      "4": "GND",
+      "5": "OSC_TTL",
+      "8": "5V"
+    },
+    "receiver": [
+      "U3",
+      "1"
+    ],
+    "allocated_load_pf": 15,
+    "standard_load_pf": 15,
+    "passed": true,
+    "physical_load_qualified": false,
+    "scope": "Pin/footprint identity and capacitance allocation only; extracted load and waveform qualification remain open."
+  },
+  "clock_timing": {
+    "oscillator": {
+      "mpn": "ACH-4.000MHZ-EK",
+      "frequency_hz": 4000000,
+      "stability_ppm": 30,
+      "duty_min": 0.45,
+      "duty_max": 0.55,
+      "startup_max_ms": 10,
+      "supply_min_v": 4.5,
+      "supply_max_v": 5.5,
+      "temperature_min_c": -20,
+      "temperature_max_c": 70,
+      "source": "abracon-ach-2016",
+      "source_pages": [
+        1,
+        2
+      ],
+      "output_pin": "5",
+      "ground_pin": "4",
+      "supply_pin": "8",
+      "nc_pin": "1",
+      "standard_load_pf": 15,
+      "duty_reference": "half supply; NOT an AHCT threshold-crossing guarantee"
+    },
+    "analysis_frequency_hz": 4000000,
+    "selected_frequency": true,
+    "oscillator_period_min_ns": 249.99250022499325,
+    "paths": [
+      {
+        "path": "P to N: Johnson next-state logic",
+        "available_ns": 72.4972250832475,
+        "required_ns": 27.7,
+        "margin_ns": 44.7972250832475
+      },
+      {
+        "path": "N to P: staging register",
+        "available_ns": 63.9972250832475,
+        "required_ns": 14.2,
+        "margin_ns": 49.7972250832475
+      },
+      {
+        "path": "N to P: request and reset synchronizers",
+        "available_ns": 63.9972250832475,
+        "required_ns": 16,
+        "margin_ns": 47.9972250832475
+      },
+      {
+        "path": "P to N: synchronized request through next-state logic",
+        "available_ns": 72.4972250832475,
+        "required_ns": 26.5,
+        "margin_ns": 45.9972250832475
+      },
+      {
+        "path": "Shortest opposite-edge hold window, zero contamination delay",
+        "available_ns": 63.9972250832475,
+        "required_ns": 2,
+        "margin_ns": 61.9972250832475
+      },
+      {
+        "path": "Reset release to downstream edge",
+        "available_ns": 63.9972250832475,
+        "required_ns": 14,
+        "margin_ns": 49.9972250832475
+      },
+      {
+        "path": "Shortest internal clock pulse",
+        "available_ns": 63.9972250832475,
+        "required_ns": 5,
+        "margin_ns": 58.9972250832475
+      },
+      {
+        "path": "External reset pulse after worst assertion/release spread",
+        "available_ns": 972.0,
+        "required_ns": 5,
+        "margin_ns": 967.0
+      }
+    ],
+    "phase_nominal_ns": 750.0,
+    "phase_min_ns": 718.2775006749797,
+    "pilot_required_ns": 208,
+    "pilot_margin_ns": 510.2775006749797,
+    "output_pulse_min_ns": 968.270000899973,
+    "oscillator_interface": {
+      "pin_functions": {
+        "1": "NC",
+        "4": "GND",
+        "5": "OSC_TTL",
+        "8": "5V"
+      },
+      "receiver": [
+        "U3",
+        "1"
+      ],
+      "allocated_load_pf": 15,
+      "standard_load_pf": 15,
+      "passed": true,
+      "physical_load_qualified": false,
+      "scope": "Pin/footprint identity and capacitance allocation only; extracted load and waveform qualification remain open."
+    },
+    "passing": true,
+    "status": "conditional bounds, not physical qualification",
+    "assumptions": {
+      "local_trace_cap_pf": 5,
+      "phase_connector_load_pf": 50,
+      "clock_routing_and_jitter_ns": 2,
+      "output_routing_and_jitter_ns": 10,
+      "minimum_reset_input_ns": 1000,
+      "power_on_reset_after_valid_supply_ms": 25,
+      "request_protocol": "RUN high requests continuous cycles. RUN low finishes an already-started cycle, after synchronization latency. A rising debounced STEP while READY and idle sets a pending latch; ACTIVE clears it after acceptance. Holding STEP high does not repeat. STEP during an active cycle is ignored. Raw switch debounce and HALT/CONTINUE arbitration are external to this core.",
+      "reset_protocol": "RESET_IN_n asynchronously aborts the current cycle. Receivers must remain inhibited during reset and until controller initialization. Release only after supply is valid and the oscillator startup interval has elapsed. READY is an internal reset-sequencing indication, not a power-good detector.",
+      "receiver_duty_min": 0.37,
+      "receiver_duty_max": 0.63,
+      "receiver_duty_scope": "Assumed digital threshold-duty stress range; the manufacturer only bounds 45/55 duty at half supply."
+    },
+    "unqualified": [
+      "Oscillator cycle-to-cycle jitter is not bounded in the cited data sheet; 2 ns internal and 10 ns output uncertainty are allocated design limits.",
+      "Maximum propagation bounds are used at their data-sheet input-slew and load conditions; source-to-receiver slew compatibility needs electrical modelling or measurements.",
+      "Trace capacitance, connector loading and clock routing allocations need extracted PCB evidence.",
+      "The asynchronous request and reset entry stages have no metastability MTBF qualification.",
+      "Front-panel debounce, HALT/CONTINUE arbitration, power supervisor, receiver reset inhibition and backplane hookup remain to be implemented.",
+      "Exact passive parts, distributor availability, footprint review and independent review remain open.",
+      "ACH edge measurement levels and monotonic threshold crossing are not specified in the archived family sheet.",
+      "Nominal 45/55 duty applies at half supply. The 37/63 receiver-duty sweep is a hypothetical sensitivity, not a guaranteed oscillator limit.",
+      "ACH standard load is 15 pF, including the 10 pF AHCT04 input and all routing/socket/probe capacitance."
+    ]
+  },
+  "fd1": {
+    "id": "distribution",
+    "title": "FD1 flash machine with clock/reset and private DATA distribution",
+    "status": "limited",
+    "summary": "8/8 continuous and 3/3 all-opcode profiles; 324 connector links; 9/9 wiring mutations and 28/28 receiver guards; conditional 4 MHz target, 8 MHz rejected.",
+    "limitation": "AL2 occupies the AL1 connector slot. Each link allocates 10 pF total trace/connector load. Partial interval/load coverage, exact oscillator, qualified reset, private SRAM turnaround, full-temperature capacitance and physical routing remain open. No physical-clock or MOD-08 acceptance is implied.",
+    "artifacts": [
+      "distribution/summary.json",
+      "distribution/links.json",
+      "distribution/local-loads.json",
+      "distribution/timing.json",
+      "distribution/faults/wiring.json",
+      "distribution/faults/guards.json",
+      "distribution/hello/io-observed.txt",
+      "distribution/native/C1/Reset-C1.kicad_sch",
+      "distribution/native/CW1/Data-CW1.kicad_sch",
+      "distribution/native/SQ1/Reset-SQ1.kicad_sch",
+      "distribution/native/PC1/Data-PC1.kicad_sch",
+      "distribution/native/AL1/Data-AL1.kicad_sch",
+      "distribution/native/RG1/Data-RG1.kicad_sch",
+      "distribution/native/SP1/Data-SP1.kicad_sch",
+      "distribution/native/MA1/Data-MA1.kicad_sch",
+      "distribution/native/ME1/Data-ME1.kicad_sch",
+      "distribution/native/CD1/Clock-Distribution.kicad_sch",
+      "distribution/native/RD1/Reset-Distribution.kicad_sch",
+      "distribution/native/DF1/Data-Fabric.kicad_sch",
+      "distribution/native/SEL/Data-Selector.kicad_sch"
+    ]
+  },
+  "intervals": [
+    {
+      "frequency_hz": 8000000,
+      "paths": [
+        {
+          "board": "CW1",
+          "path": "PH1 word capture to PH2 enable: address/format settled",
+          "original_available_ns": 93.29625011249664,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 74.29625011249664,
+          "required_ns": 73.5,
+          "margin_ns": 0.7962501124966366,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "CW1",
+          "path": "PH2 control enable to PH3 PC capture",
+          "original_available_ns": 343.2887503374899,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 324.2887503374899,
+          "required_ns": 127.0,
+          "margin_ns": 197.2887503374899,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "CW1",
+          "path": "PH2 disable to PH1 word change: break before make",
+          "original_available_ns": 343.2887503374899,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 324.2887503374899,
+          "required_ns": 121.0,
+          "margin_ns": 203.2887503374899,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "CW1",
+          "path": "PH3 PC capture to PH2 disable: control hold",
+          "original_available_ns": 93.29625011249664,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 74.29625011249664,
+          "required_ns": 28,
+          "margin_ns": 46.29625011249664,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "CW1",
+          "path": "ROM address setup contract",
+          "original_available_ns": 150,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 150,
+          "required_ns": 105,
+          "margin_ns": 45,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "CW1",
+          "path": "ROM address hold with zero contamination delay",
+          "original_available_ns": 20,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 20,
+          "required_ns": 14.5,
+          "margin_ns": 5.5,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "SQ1",
+          "path": "PH3 retained decision to PH0 state/count update",
+          "original_available_ns": 93.29625011249664,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 74.29625011249664,
+          "required_ns": 49.7,
+          "margin_ns": 24.596250112496634,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "SQ1",
+          "path": "PH0 t-state publication to CW1 ROM setup contract",
+          "original_available_ns": 343.2887503374899,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 324.2887503374899,
+          "required_ns": 244.5,
+          "margin_ns": 79.78875033748989,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "SQ1",
+          "path": "PH3 opcode capture to next PH1 ROM setup contract",
+          "original_available_ns": 468.2850004499865,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 449.2850004499865,
+          "required_ns": 214.5,
+          "margin_ns": 234.7850004499865,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "SQ1",
+          "path": "PH0 mode publication to PH1 mode latch",
+          "original_available_ns": 343.2887503374899,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 324.2887503374899,
+          "required_ns": 33.7,
+          "margin_ns": 290.5887503374899,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "SQ1",
+          "path": "PH1 mode latch settles before PH2 window",
+          "original_available_ns": 93.29625011249664,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 74.29625011249664,
+          "required_ns": 49.7,
+          "margin_ns": 24.596250112496634,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "SQ1",
+          "path": "PH2 decoded end to PH3 retained decision",
+          "original_available_ns": 343.2887503374899,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 324.2887503374899,
+          "required_ns": 135.5,
+          "margin_ns": 188.7887503374899,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "SQ1",
+          "path": "PH2 CW1 increment through SQ1 to PC1 capture",
+          "original_available_ns": 343.2887503374899,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 324.2887503374899,
+          "required_ns": 145.0,
+          "margin_ns": 179.2887503374899,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "SQ1",
+          "path": "HALT reaches C1 request synchronizer before idle PH1",
+          "original_available_ns": 468.2850004499865,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 449.2850004499865,
+          "required_ns": 475.71162534876044,
+          "margin_ns": -26.426624898773923,
+          "passed": false,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "SQ1",
+          "path": "IR data setup interface through NAND mux",
+          "original_available_ns": 60,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 60,
+          "required_ns": 53,
+          "margin_ns": 7,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "SQ1",
+          "path": "IR data hold interface with zero contamination",
+          "original_available_ns": 25,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 25,
+          "required_ns": 14.5,
+          "margin_ns": 10.5,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "AL2",
+          "path": "PH3 operands through buffered flash/bank mux to PH1 result snapshot",
+          "original_available_ns": 468.2850004499865,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 449.2850004499865,
+          "required_ns": 214.5,
+          "margin_ns": 234.7850004499865,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "AL2",
+          "path": "PH1 result stable before PH2 output window",
+          "original_available_ns": 93.29625011249664,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 74.29625011249664,
+          "required_ns": 64.5,
+          "margin_ns": 9.796250112496637,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "AL2",
+          "path": "PH3 A/flags hold before next PH1 result change",
+          "original_available_ns": 468.2850004499865,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 449.2850004499865,
+          "required_ns": 31.0,
+          "margin_ns": 418.2850004499865,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "AL2",
+          "path": "Stored flags settle for next CW1 ROM capture",
+          "original_available_ns": 468.2850004499865,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 449.2850004499865,
+          "required_ns": 191.2,
+          "margin_ns": 258.0850004499865,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "AL2",
+          "path": "PH2 CW1 command to synchronous flags",
+          "original_available_ns": 343.2887503374899,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 324.2887503374899,
+          "required_ns": 151.0,
+          "margin_ns": 173.2887503374899,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "AL2",
+          "path": "DATA setup interface to A/operand/flag capture",
+          "original_available_ns": 40,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 40,
+          "required_ns": 28,
+          "margin_ns": 12,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "AL2",
+          "path": "DATA hold interface with zero contamination",
+          "original_available_ns": 40,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 40,
+          "required_ns": 32.0,
+          "margin_ns": 8.0,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "RG1",
+          "path": "DATA setup through input buffer and selection",
+          "original_available_ns": 40,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 40,
+          "required_ns": 33.5,
+          "margin_ns": 6.5,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "RG1",
+          "path": "DATA hold with zero contamination and two clock buffers",
+          "original_available_ns": 40,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 40,
+          "required_ns": 31.0,
+          "margin_ns": 9.0,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "RG1",
+          "path": "PH2 decoded load to PH3 capture",
+          "original_available_ns": 343.2887503374899,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 324.2887503374899,
+          "required_ns": 121.0,
+          "margin_ns": 203.2887503374899,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "SP1/MA1",
+          "path": "PC1 PH3 state to MA1 PH1 snapshot on dedicated link",
+          "original_available_ns": 468.2850004499865,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 468.2850004499865,
+          "required_ns": 113,
+          "margin_ns": 355.2850004499865,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "SP1/MA1",
+          "path": "SP1 PH3 state to MA1 PH1 snapshot on dedicated link",
+          "original_available_ns": 468.2850004499865,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 468.2850004499865,
+          "required_ns": 52.7,
+          "margin_ns": 415.5850004499865,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "SP1/MA1",
+          "path": "PH1 snapshots stable before PH2",
+          "original_available_ns": 93.29625011249664,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 74.29625011249664,
+          "required_ns": 41.2,
+          "margin_ns": 33.096250112496634,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "SP1/MA1",
+          "path": "PH2 arithmetic command through four ACT283 adders",
+          "original_available_ns": 343.2887503374899,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 324.2887503374899,
+          "required_ns": 194.8,
+          "margin_ns": 129.48875033748988,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "SP1/MA1",
+          "path": "PH1 snapshot through transfer muxes and carry chain to PH3",
+          "original_available_ns": 468.2850004499865,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 449.2850004499865,
+          "required_ns": 152.0,
+          "margin_ns": 297.2850004499865,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "SP1/MA1",
+          "path": "Incoming DATA setup through buffer and byte-load mux",
+          "original_available_ns": 40,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 40,
+          "required_ns": 33.5,
+          "margin_ns": 6.5,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "SP1/MA1",
+          "path": "Incoming DATA hold with zero contamination",
+          "original_available_ns": 40,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 40,
+          "required_ns": 31.0,
+          "margin_ns": 9.0,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "ME1",
+          "path": "SRAM minimum write pulse after decoded PH2 command",
+          "original_available_ns": 343.2887503374899,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 343.2887503374899,
+          "required_ns": 197.0,
+          "margin_ns": 146.2887503374899,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "ME1",
+          "path": "SRAM DATA setup through two buffers, 60 ns connector contract",
+          "original_available_ns": 60,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 60,
+          "required_ns": 57.5,
+          "margin_ns": 2.5,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "ME1",
+          "path": "SRAM DATA hold until latest PH3 write termination",
+          "original_available_ns": 40,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 40,
+          "required_ns": 36.5,
+          "margin_ns": 3.5,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "ME1",
+          "path": "IO DATA setup through input buffer and feedback mux",
+          "original_available_ns": 60,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 60,
+          "required_ns": 33.5,
+          "margin_ns": 26.5,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "ME1",
+          "path": "IO DATA hold across two clock buffers",
+          "original_available_ns": 40,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 40,
+          "required_ns": 31.0,
+          "margin_ns": 9.0,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "ME1",
+          "path": "PH2 decoded IO request through feedback select to PH3",
+          "original_available_ns": 343.2887503374899,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 324.2887503374899,
+          "required_ns": 157.5,
+          "margin_ns": 166.7887503374899,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "DF2/CD1/ME1",
+          "kind": "integrated delivery/hold interval",
+          "path": "PH2 early MA1 address through ROM to DF2 receiver setup",
+          "available_ns": 324.2887503374899,
+          "terms_ns": {
+            "existing_ME1_path_including_40ns_setup_and_route": 287.0,
+            "four_muxes_two_receive_buffers": 67.0,
+            "raise_connector_setup_from_40_to_60": 20
+          },
+          "required_ns": 374.0,
+          "margin_ns": -49.71124966251011,
+          "passed": false
+        },
+        {
+          "board": "DF2/CD1/ME1",
+          "kind": "integrated delivery/hold interval",
+          "path": "PH2 early MA1 address through SRAM to DF2 receiver setup",
+          "available_ns": 324.2887503374899,
+          "terms_ns": {
+            "existing_ME1_path_including_40ns_setup_and_route": 272.0,
+            "four_muxes_two_receive_buffers": 67.0,
+            "raise_connector_setup_from_40_to_60": 20
+          },
+          "required_ns": 359.0,
+          "margin_ns": -34.71124966251011,
+          "passed": false
+        },
+        {
+          "board": "DF2/CD1/ME1",
+          "kind": "integrated delivery/hold interval",
+          "path": "PH2 early MA1 address through IO select to DF2 receiver setup",
+          "available_ns": 324.2887503374899,
+          "terms_ns": {
+            "existing_ME1_path_including_40ns_setup_and_route": 232.0,
+            "four_muxes_two_receive_buffers": 67.0,
+            "raise_connector_setup_from_40_to_60": 20
+          },
+          "required_ns": 319.0,
+          "margin_ns": 5.288750337489887,
+          "passed": true
+        },
+        {
+          "board": "DF2/CD1/ME1",
+          "kind": "integrated delivery/hold interval",
+          "path": "PH2 execution selector to every receiver",
+          "available_ns": 324.2887503374899,
+          "terms_ns": {
+            "SQ_CW_PH2_gate": 9,
+            "CW_ACTIVE_gate": 9,
+            "CW_export_buffer": 9.5,
+            "selector_format_active_gate": 9,
+            "idle_and_fetch_muxes": 24,
+            "replicated_select_buffer": 9.5,
+            "fabric_delivery": 67.0,
+            "worst_receiver_connector_setup": 60,
+            "route_allowance": 10
+          },
+          "required_ns": 207.0,
+          "margin_ns": 117.28875033748989,
+          "passed": true
+        },
+        {
+          "board": "DF2/CD1/ME1",
+          "kind": "integrated delivery/hold interval",
+          "path": "PH2 fetch override selector to every receiver",
+          "available_ns": 324.2887503374899,
+          "terms_ns": {
+            "SQ_window_and_fetch_gates": 18,
+            "fetch_override_mux": 12,
+            "replicated_select_buffer": 9.5,
+            "fabric_delivery": 67.0,
+            "worst_receiver_connector_setup": 60,
+            "route_allowance": 10
+          },
+          "required_ns": 176.5,
+          "margin_ns": 147.7887503374899,
+          "passed": true
+        },
+        {
+          "board": "DF2/CD1/ME1",
+          "kind": "integrated delivery/hold interval",
+          "path": "PH3 capture to earliest PH2-close DATA change",
+          "available_ns": 74.29625011249664,
+          "terms_ns": {
+            "worst_receiver_connector_hold": 40,
+            "route_allowance": 10
+          },
+          "required_ns": 50,
+          "margin_ns": 24.296250112496637,
+          "passed": true
+        },
+        {
+          "board": "DF2/CD1/ME1",
+          "kind": "integrated delivery/hold interval",
+          "path": "PH3 IO capture to PH0 external setup",
+          "available_ns": 74.29625011249664,
+          "terms_ns": {
+            "local_clock_buffers": 19.0,
+            "IO_register_clock_q": 12.2,
+            "external_setup": 40,
+            "route_allowance": 10
+          },
+          "required_ns": 81.2,
+          "margin_ns": -6.903749887503366,
+          "passed": false
+        }
+      ],
+      "excluded": [
+        {
+          "board": "AL2",
+          "path": "PH2 close to PH1 result change: release before update",
+          "reason": "AL2 private source outputs are continuously enabled; shared-output release premise does not apply."
+        },
+        {
+          "board": "SP1/MA1",
+          "path": "PH2 transfer through MA1 to 150 ns host memory and DATA setup",
+          "reason": "Superseded by pin-derived ME1 + DF2 delivery or distributed IO interval."
+        },
+        {
+          "board": "ME1",
+          "path": "PH2 early MA1 address through ROM to DATA setup",
+          "reason": "Superseded by pin-derived ME1 + DF2 delivery or distributed IO interval."
+        },
+        {
+          "board": "ME1",
+          "path": "PH2 early MA1 address through SRAM to DATA setup",
+          "reason": "Superseded by pin-derived ME1 + DF2 delivery or distributed IO interval."
+        },
+        {
+          "board": "ME1",
+          "path": "PH2 early MA1 address through IO select to DATA setup",
+          "reason": "Superseded by pin-derived ME1 + DF2 delivery or distributed IO interval."
+        },
+        {
+          "board": "ME1",
+          "path": "PH3 IO capture to PH0 external 40 ns setup",
+          "reason": "Superseded by pin-derived ME1 + DF2 delivery or distributed IO interval."
+        }
+      ],
+      "passed": false
+    },
+    {
+      "frequency_hz": 4000000,
+      "paths": [
+        {
+          "board": "CW1",
+          "path": "PH1 word capture to PH2 enable: address/format settled",
+          "original_available_ns": 218.2925002249932,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 199.2925002249932,
+          "required_ns": 73.5,
+          "margin_ns": 125.7925002249932,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "CW1",
+          "path": "PH2 control enable to PH3 PC capture",
+          "original_available_ns": 718.2775006749797,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 699.2775006749797,
+          "required_ns": 127.0,
+          "margin_ns": 572.2775006749797,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "CW1",
+          "path": "PH2 disable to PH1 word change: break before make",
+          "original_available_ns": 718.2775006749797,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 699.2775006749797,
+          "required_ns": 121.0,
+          "margin_ns": 578.2775006749797,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "CW1",
+          "path": "PH3 PC capture to PH2 disable: control hold",
+          "original_available_ns": 218.2925002249932,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 199.2925002249932,
+          "required_ns": 28,
+          "margin_ns": 171.2925002249932,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "CW1",
+          "path": "ROM address setup contract",
+          "original_available_ns": 150,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 150,
+          "required_ns": 105,
+          "margin_ns": 45,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "CW1",
+          "path": "ROM address hold with zero contamination delay",
+          "original_available_ns": 20,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 20,
+          "required_ns": 14.5,
+          "margin_ns": 5.5,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "SQ1",
+          "path": "PH3 retained decision to PH0 state/count update",
+          "original_available_ns": 218.2925002249932,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 199.2925002249932,
+          "required_ns": 49.7,
+          "margin_ns": 149.59250022499322,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "SQ1",
+          "path": "PH0 t-state publication to CW1 ROM setup contract",
+          "original_available_ns": 718.2775006749797,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 699.2775006749797,
+          "required_ns": 244.5,
+          "margin_ns": 454.7775006749797,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "SQ1",
+          "path": "PH3 opcode capture to next PH1 ROM setup contract",
+          "original_available_ns": 968.270000899973,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 949.270000899973,
+          "required_ns": 214.5,
+          "margin_ns": 734.770000899973,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "SQ1",
+          "path": "PH0 mode publication to PH1 mode latch",
+          "original_available_ns": 718.2775006749797,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 699.2775006749797,
+          "required_ns": 33.7,
+          "margin_ns": 665.5775006749797,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "SQ1",
+          "path": "PH1 mode latch settles before PH2 window",
+          "original_available_ns": 218.2925002249932,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 199.2925002249932,
+          "required_ns": 49.7,
+          "margin_ns": 149.59250022499322,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "SQ1",
+          "path": "PH2 decoded end to PH3 retained decision",
+          "original_available_ns": 718.2775006749797,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 699.2775006749797,
+          "required_ns": 135.5,
+          "margin_ns": 563.7775006749797,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "SQ1",
+          "path": "PH2 CW1 increment through SQ1 to PC1 capture",
+          "original_available_ns": 718.2775006749797,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 699.2775006749797,
+          "required_ns": 145.0,
+          "margin_ns": 554.2775006749797,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "SQ1",
+          "path": "HALT reaches C1 request synchronizer before idle PH1",
+          "original_available_ns": 968.270000899973,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 949.270000899973,
+          "required_ns": 475.71162534876044,
+          "margin_ns": 473.5583755512125,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "SQ1",
+          "path": "IR data setup interface through NAND mux",
+          "original_available_ns": 60,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 60,
+          "required_ns": 53,
+          "margin_ns": 7,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "SQ1",
+          "path": "IR data hold interface with zero contamination",
+          "original_available_ns": 25,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 25,
+          "required_ns": 14.5,
+          "margin_ns": 10.5,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "AL2",
+          "path": "PH3 operands through buffered flash/bank mux to PH1 result snapshot",
+          "original_available_ns": 968.270000899973,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 949.270000899973,
+          "required_ns": 214.5,
+          "margin_ns": 734.770000899973,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "AL2",
+          "path": "PH1 result stable before PH2 output window",
+          "original_available_ns": 218.2925002249932,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 199.2925002249932,
+          "required_ns": 64.5,
+          "margin_ns": 134.7925002249932,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "AL2",
+          "path": "PH3 A/flags hold before next PH1 result change",
+          "original_available_ns": 968.270000899973,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 949.270000899973,
+          "required_ns": 31.0,
+          "margin_ns": 918.270000899973,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "AL2",
+          "path": "Stored flags settle for next CW1 ROM capture",
+          "original_available_ns": 968.270000899973,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 949.270000899973,
+          "required_ns": 191.2,
+          "margin_ns": 758.0700008999729,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "AL2",
+          "path": "PH2 CW1 command to synchronous flags",
+          "original_available_ns": 718.2775006749797,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 699.2775006749797,
+          "required_ns": 151.0,
+          "margin_ns": 548.2775006749797,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "AL2",
+          "path": "DATA setup interface to A/operand/flag capture",
+          "original_available_ns": 40,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 40,
+          "required_ns": 28,
+          "margin_ns": 12,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "AL2",
+          "path": "DATA hold interface with zero contamination",
+          "original_available_ns": 40,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 40,
+          "required_ns": 32.0,
+          "margin_ns": 8.0,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "RG1",
+          "path": "DATA setup through input buffer and selection",
+          "original_available_ns": 40,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 40,
+          "required_ns": 33.5,
+          "margin_ns": 6.5,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "RG1",
+          "path": "DATA hold with zero contamination and two clock buffers",
+          "original_available_ns": 40,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 40,
+          "required_ns": 31.0,
+          "margin_ns": 9.0,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "RG1",
+          "path": "PH2 decoded load to PH3 capture",
+          "original_available_ns": 718.2775006749797,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 699.2775006749797,
+          "required_ns": 121.0,
+          "margin_ns": 578.2775006749797,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "SP1/MA1",
+          "path": "PC1 PH3 state to MA1 PH1 snapshot on dedicated link",
+          "original_available_ns": 968.270000899973,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 968.270000899973,
+          "required_ns": 113,
+          "margin_ns": 855.270000899973,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "SP1/MA1",
+          "path": "SP1 PH3 state to MA1 PH1 snapshot on dedicated link",
+          "original_available_ns": 968.270000899973,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 968.270000899973,
+          "required_ns": 52.7,
+          "margin_ns": 915.5700008999729,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "SP1/MA1",
+          "path": "PH1 snapshots stable before PH2",
+          "original_available_ns": 218.2925002249932,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 199.2925002249932,
+          "required_ns": 41.2,
+          "margin_ns": 158.09250022499322,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "SP1/MA1",
+          "path": "PH2 arithmetic command through four ACT283 adders",
+          "original_available_ns": 718.2775006749797,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 699.2775006749797,
+          "required_ns": 194.8,
+          "margin_ns": 504.4775006749797,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "SP1/MA1",
+          "path": "PH1 snapshot through transfer muxes and carry chain to PH3",
+          "original_available_ns": 968.270000899973,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 949.270000899973,
+          "required_ns": 152.0,
+          "margin_ns": 797.270000899973,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "SP1/MA1",
+          "path": "Incoming DATA setup through buffer and byte-load mux",
+          "original_available_ns": 40,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 40,
+          "required_ns": 33.5,
+          "margin_ns": 6.5,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "SP1/MA1",
+          "path": "Incoming DATA hold with zero contamination",
+          "original_available_ns": 40,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 40,
+          "required_ns": 31.0,
+          "margin_ns": 9.0,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "ME1",
+          "path": "SRAM minimum write pulse after decoded PH2 command",
+          "original_available_ns": 718.2775006749797,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 718.2775006749797,
+          "required_ns": 197.0,
+          "margin_ns": 521.2775006749797,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "ME1",
+          "path": "SRAM DATA setup through two buffers, 60 ns connector contract",
+          "original_available_ns": 60,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 60,
+          "required_ns": 57.5,
+          "margin_ns": 2.5,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "ME1",
+          "path": "SRAM DATA hold until latest PH3 write termination",
+          "original_available_ns": 40,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 40,
+          "required_ns": 36.5,
+          "margin_ns": 3.5,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "ME1",
+          "path": "IO DATA setup through input buffer and feedback mux",
+          "original_available_ns": 60,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 60,
+          "required_ns": 33.5,
+          "margin_ns": 26.5,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "ME1",
+          "path": "IO DATA hold across two clock buffers",
+          "original_available_ns": 40,
+          "distribution_skew_debit_ns": 0,
+          "available_ns": 40,
+          "required_ns": 31.0,
+          "margin_ns": 9.0,
+          "passed": true,
+          "kind": "local interface contract"
+        },
+        {
+          "board": "ME1",
+          "path": "PH2 decoded IO request through feedback select to PH3",
+          "original_available_ns": 718.2775006749797,
+          "distribution_skew_debit_ns": 19,
+          "available_ns": 699.2775006749797,
+          "required_ns": 157.5,
+          "margin_ns": 541.7775006749797,
+          "passed": true,
+          "kind": "inherited interphase path (conservative skew debit)"
+        },
+        {
+          "board": "DF2/CD1/ME1",
+          "kind": "integrated delivery/hold interval",
+          "path": "PH2 early MA1 address through ROM to DF2 receiver setup",
+          "available_ns": 699.2775006749797,
+          "terms_ns": {
+            "existing_ME1_path_including_40ns_setup_and_route": 287.0,
+            "four_muxes_two_receive_buffers": 67.0,
+            "raise_connector_setup_from_40_to_60": 20
+          },
+          "required_ns": 374.0,
+          "margin_ns": 325.2775006749797,
+          "passed": true
+        },
+        {
+          "board": "DF2/CD1/ME1",
+          "kind": "integrated delivery/hold interval",
+          "path": "PH2 early MA1 address through SRAM to DF2 receiver setup",
+          "available_ns": 699.2775006749797,
+          "terms_ns": {
+            "existing_ME1_path_including_40ns_setup_and_route": 272.0,
+            "four_muxes_two_receive_buffers": 67.0,
+            "raise_connector_setup_from_40_to_60": 20
+          },
+          "required_ns": 359.0,
+          "margin_ns": 340.2775006749797,
+          "passed": true
+        },
+        {
+          "board": "DF2/CD1/ME1",
+          "kind": "integrated delivery/hold interval",
+          "path": "PH2 early MA1 address through IO select to DF2 receiver setup",
+          "available_ns": 699.2775006749797,
+          "terms_ns": {
+            "existing_ME1_path_including_40ns_setup_and_route": 232.0,
+            "four_muxes_two_receive_buffers": 67.0,
+            "raise_connector_setup_from_40_to_60": 20
+          },
+          "required_ns": 319.0,
+          "margin_ns": 380.2775006749797,
+          "passed": true
+        },
+        {
+          "board": "DF2/CD1/ME1",
+          "kind": "integrated delivery/hold interval",
+          "path": "PH2 execution selector to every receiver",
+          "available_ns": 699.2775006749797,
+          "terms_ns": {
+            "SQ_CW_PH2_gate": 9,
+            "CW_ACTIVE_gate": 9,
+            "CW_export_buffer": 9.5,
+            "selector_format_active_gate": 9,
+            "idle_and_fetch_muxes": 24,
+            "replicated_select_buffer": 9.5,
+            "fabric_delivery": 67.0,
+            "worst_receiver_connector_setup": 60,
+            "route_allowance": 10
+          },
+          "required_ns": 207.0,
+          "margin_ns": 492.2775006749797,
+          "passed": true
+        },
+        {
+          "board": "DF2/CD1/ME1",
+          "kind": "integrated delivery/hold interval",
+          "path": "PH2 fetch override selector to every receiver",
+          "available_ns": 699.2775006749797,
+          "terms_ns": {
+            "SQ_window_and_fetch_gates": 18,
+            "fetch_override_mux": 12,
+            "replicated_select_buffer": 9.5,
+            "fabric_delivery": 67.0,
+            "worst_receiver_connector_setup": 60,
+            "route_allowance": 10
+          },
+          "required_ns": 176.5,
+          "margin_ns": 522.7775006749797,
+          "passed": true
+        },
+        {
+          "board": "DF2/CD1/ME1",
+          "kind": "integrated delivery/hold interval",
+          "path": "PH3 capture to earliest PH2-close DATA change",
+          "available_ns": 199.2925002249932,
+          "terms_ns": {
+            "worst_receiver_connector_hold": 40,
+            "route_allowance": 10
+          },
+          "required_ns": 50,
+          "margin_ns": 149.2925002249932,
+          "passed": true
+        },
+        {
+          "board": "DF2/CD1/ME1",
+          "kind": "integrated delivery/hold interval",
+          "path": "PH3 IO capture to PH0 external setup",
+          "available_ns": 199.2925002249932,
+          "terms_ns": {
+            "local_clock_buffers": 19.0,
+            "IO_register_clock_q": 12.2,
+            "external_setup": 40,
+            "route_allowance": 10
+          },
+          "required_ns": 81.2,
+          "margin_ns": 118.0925002249932,
+          "passed": true
+        }
+      ],
+      "excluded": [
+        {
+          "board": "AL2",
+          "path": "PH2 close to PH1 result change: release before update",
+          "reason": "AL2 private source outputs are continuously enabled; shared-output release premise does not apply."
+        },
+        {
+          "board": "SP1/MA1",
+          "path": "PH2 transfer through MA1 to 150 ns host memory and DATA setup",
+          "reason": "Superseded by pin-derived ME1 + DF2 delivery or distributed IO interval."
+        },
+        {
+          "board": "ME1",
+          "path": "PH2 early MA1 address through ROM to DATA setup",
+          "reason": "Superseded by pin-derived ME1 + DF2 delivery or distributed IO interval."
+        },
+        {
+          "board": "ME1",
+          "path": "PH2 early MA1 address through SRAM to DATA setup",
+          "reason": "Superseded by pin-derived ME1 + DF2 delivery or distributed IO interval."
+        },
+        {
+          "board": "ME1",
+          "path": "PH2 early MA1 address through IO select to DATA setup",
+          "reason": "Superseded by pin-derived ME1 + DF2 delivery or distributed IO interval."
+        },
+        {
+          "board": "ME1",
+          "path": "PH3 IO capture to PH0 external 40 ns setup",
+          "reason": "Superseded by pin-derived ME1 + DF2 delivery or distributed IO interval."
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "changed_sources": 28,
+  "physical_clock_qualified": false,
+  "fabrication_ready": false,
+  "bom_change": {
+    "reference": "C1/Y1",
+    "previous_mpn": "ECS-100AX-080",
+    "candidate_mpn": "ACH-4.000MHZ-EK",
+    "previous_footprint": "Oscillator:Oscillator_DIP-14",
+    "candidate_footprint": "Oscillator:Oscillator_DIP-8",
+    "inventory_confirmed": false,
+    "published_workbook_modified": false
+  }
+}

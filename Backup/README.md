@@ -50,3 +50,8 @@ python3 Backup/verify_checkpoint.py /path/to/downloaded/checkpoint
 
 Verification streams every file from both archives, checks its hash and rejects
 unlisted, duplicate or missing members. It does not extract files.
+
+For an incremental backup of a completed study, use
+`--study clock-integration` with `create_checkpoint.py`. The selected directory
+must have passing remote-hash and browser checks. This produces one archive
+and a manifest; keep the earlier release for the other project evidence.
