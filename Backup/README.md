@@ -55,3 +55,17 @@ For an incremental backup of a completed study, use
 `--study clock-integration` with `create_checkpoint.py`. The selected directory
 must have passing remote-hash and browser checks. This produces one archive
 and a manifest; keep the earlier release for the other project evidence.
+
+## ACH 4 MHz staging checkpoint
+
+The [clock-integration-2026-11-15 release](https://github.com/DutchMaker/DM-02/releases/tag/clock-integration-2026-11-15)
+preserves the full staged candidate tree and its evidence at source commit
+`4132cd84c19dee8e73fd414b2c62af3651aa74de`. All 2,464 archived files matched
+both locally and after downloading from GitHub. The
+[receipt](clock-integration-2026-11-15.json) records asset hashes and validation.
+
+Staging passed 158 regressions, 150 clock profiles and connected FD1 execution.
+All 46 interval paths pass conditionally at 4 MHz. The publication's 1,855
+artifact hashes and desktop/mobile browser checks passed. Normal-source
+promotion awaits completion and archival of the analogue-integrated full run;
+physical-clock qualification remains open.

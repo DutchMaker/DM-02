@@ -1,0 +1,40 @@
+{
+  "repository": "DutchMaker/DM-02",
+  "source_commit": "4132cd84c19dee8e73fd414b2c62af3651aa74de",
+  "release": "https://github.com/DutchMaker/DM-02/releases/tag/clock-integration-2026-11-15",
+  "release_author": "DutchMaker",
+  "asset_uploader": "DutchMaker",
+  "archived_files": 2464,
+  "published_file_hashes_preserved": 1855,
+  "verification": {
+    "local_archive_members": "all matched",
+    "downloaded_archive_members": "all matched",
+    "downloaded_manifest_matches_original": true,
+    "github_asset_digests_match_local": true,
+    "release_published": true,
+    "desktop_browser": "pass",
+    "mobile_browser": "pass"
+  },
+  "assets": {
+    "checkpoint-manifest.json": {
+      "bytes": 666742,
+      "sha256": "311660c5198998cbe3a0ff889f0f29aa6a702de6882b4caf84b3de56592705f1"
+    },
+    "studies-and-workbook.tar.gz": {
+      "bytes": 91601783,
+      "files": 2464,
+      "sha256": "b13b7365b608febe5a1f8f67be102b6a1372b73c902a1f67346c32131a9e7ab3"
+    }
+  },
+  "validation": {
+    "regressions": 158,
+    "clock_profiles": 150,
+    "conditional_4mhz_paths": 46,
+    "fd1_continuous_profiles": 8,
+    "fd1_opcode_profiles": 3,
+    "connector_links": 324,
+    "wiring_faults": 9,
+    "receiver_guards": 28
+  },
+  "scope": "Incremental backup of the complete ACH clock-integration staging directory. Normal-source promotion is pending completion and archival of the analogue-integrated full run. Physical-clock qualification remains open. Keep checkpoint-2026-11-15 for earlier project evidence."
+}
