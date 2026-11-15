@@ -6,7 +6,7 @@ original paths under `Verification/build/` so archived relative paths work.
 The working BOM workbook is also tracked there.
 
 Large generated evidence is backed up as GitHub release assets. The
-`checkpoint-2026-11-15` release contains two compressed archives:
+[`checkpoint-2026-11-15` release](https://github.com/DutchMaker/DM-02/releases/tag/checkpoint-2026-11-15) contains two compressed archives:
 
 - `completed-runs.tar.gz`: the six preserved experiment/run directories,
   including the complete run finished at 14:45 UTC on 15 November 2026.
@@ -17,6 +17,10 @@ Large generated evidence is backed up as GitHub release assets. The
 original repository path, plus each archive's SHA-256 and the Git source
 commit. Restore with `tar -xzf` from the repository root; archives use paths
 under `Verification/build/`. To inspect without extracting, use `tar -tzf`.
+
+All 14,926 files were verified locally and after downloading from GitHub.
+The [backup receipt](checkpoint-2026-11-15.json) records the asset hashes and
+the published release identity.
 
 The completed normal run had 22 passing checks, 16 limited checks, six blocked
 checks and the documented baseline timing failure, with no harness errors.

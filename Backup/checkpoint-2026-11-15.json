@@ -1,0 +1,34 @@
+{
+  "repository": "DutchMaker/DM-02",
+  "source_commit": "c56344740b50e7f1548111bd7500f15090c58833",
+  "release": "https://github.com/DutchMaker/DM-02/releases/tag/checkpoint-2026-11-15",
+  "release_author": "DutchMaker",
+  "asset_uploader": "DutchMaker",
+  "archived_files": 14926,
+  "publication_manifests_preserved": 20,
+  "published_file_hashes_preserved": 6554,
+  "verification": {
+    "local_archive_members": "all matched",
+    "downloaded_archive_members": "all matched",
+    "downloaded_manifest_matches_original": true,
+    "github_asset_digests_match_local": true,
+    "release_published": true
+  },
+  "assets": {
+    "checkpoint-manifest.json": {
+      "bytes": 3856400,
+      "sha256": "295ab59a0f0dbd2af0606c18e10a4b6c37f705df202d0c68fb60068361fd0549"
+    },
+    "completed-runs.tar.gz": {
+      "bytes": 440837011,
+      "files": 11023,
+      "sha256": "e49b4018e7802d7a88ac26d722a7ba8a52474d2494e245fae59433f28636d50f"
+    },
+    "studies-and-workbook.tar.gz": {
+      "bytes": 134111765,
+      "files": 3903,
+      "sha256": "6adbb3b1d16ebbd103e0b99957fccedbdf485ec72c2edad33e5694964a6db867"
+    }
+  },
+  "scope": "Completed preserved runs and supplemental studies. The new full-system analogue-integration run was still in progress at this checkpoint. Private licensed model inputs and derived manufacturer-model circuits are excluded."
+}
