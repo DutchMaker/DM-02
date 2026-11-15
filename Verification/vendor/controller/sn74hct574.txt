@@ -1,0 +1,645 @@
+Source: https://www.ti.com/lit/ds/symlink/sn74hct574.pdf
+Retrieved: 2026-11-14
+PDF pages: [1, 2, 3, 4, 5, 6, 7, 8, 11]
+
+--- PDF page 1 ---
+                                                                                                                      SN54HCT574, SN74HCT574
+                                                                                                     SCLS177H – MARCH 1984 – REVISED AUGUST 2024
+          SNx4HCT574 Octal Edge-Triggered D-Type Flip-Flips With 3-State Outputs
+
+1 Features                                                                     2 Description
+•   Operating voltage range of 4.5V to 5.5V                                    These  octal  edge-triggered  D-type  flip-flops  feature
+•   High-current 3-state noninverting outputs drive bus                        3-state  outputs  designed  specifically  for  bus  driving.
+    lines directly or up to 15 LSTTL loads                                     The  ’HCT574  devices  are  particularly  suitable  for
+•   Low power consumption, 80μA max ICC                                        implementing  buffer  registers,  I/O  ports,  bidirectional
+•   Typical tpd = 22ns                                                         bus drivers, and working registers.
+•   ±6mA output drive at 5V                                                                           Device Information
+•   Low input current of 1μA max                                                  PART NUMBER         PACKAGE(1)     PACKAGE SIZE(2)     BODY SIZE(3)
+•   Inputs are TTL-voltage compatible                                                               DGS (VSSOP, 20) 5.1mm × 4.9mm     5.1mm × 3mm
+•   Bus-structured pinout                                                                           DW (SOIC, 20)   12.80mm x 10.3mm  12.80mm x 7.50mm
+
+                                                                                                    DB (SSOP, 20)   7.2mm x 7.8mm     7.2mm x 5.30mm
+                                                                                SN74HCT574
+                                                                                                    PDIP (20)       24.33mm × 9.4mm   24.33mm × 6.35mm
+                                                                                                    NS (SOP, 20)    12.6mm x 7.8mm    12.6mm x 5.3mm
+
+                                                                                                    PW (TSSOP, 20)  6.50mm x 6.4mm    6.50mm x 4.40mm
+
+                                                                               (1)    For more information, see Section 11.
+                                                                               (2)    The package size (length × width) is a nominal value and
+                                                                                      includes pins, where applicable.
+                                                                               (3)    The body size (length × width) is a nominal value and does
+                                                                                      not include pins.
+
+
+
+
+
+
+
+
+
+
+
+
+                                                      Logic Diagram (Positive Logic)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications,
+      intellectual property matters and other important disclaimers. PRODUCTION DATA.
+--- PDF page 2 ---
+SN54HCT574, SN74HCT574
+SCLS177H – MARCH 1984 – REVISED AUGUST 2024                                                                                                                                   www.ti.com
+
+                                                                            Table of Contents
+
+ 1 Features............................................................................1              6.2 Functional Block Diagram...........................................8
+ 2 Description.......................................................................1                6.3 Device Functional Modes............................................8
+ 3 Pin Configuration and Functions...................................3                             7 Application and Implementation....................................9
+ 4 Specifications..................................................................       4           7.1 Power Supply Recommendations...............................9
+    4.1 Absolute Maximum Ratings .......................................                  4           7.2 Layout.........................................................................   9
+    4.2 Recommended Operating Conditions ........................4                                 8 Device and Documentation Support............................10
+    4.3 Thermal Information....................................................4                      8.1 Receiving Notification of Documentation Updates....10
+    4.4 Electrical Characteristics.............................................5                      8.2 Support Resources...................................................            10
+    4.5 Timing Requirements..................................................5                        8.3 Trademarks...............................................................10
+    4.6 Switching Characteristics, CL = 50 pF .......................                     5           8.4 Electrostatic Discharge Caution................................10
+    4.7 Switching Characteristics, CL = 150 pF......................                      6           8.5 Glossary....................................................................10
+    4.8 Operating Characteristics...........................................              6        9 Revision History............................................................         10
+ 5 Parameter Measurement Information............................                          7        10 Mechanical, Packaging, and Orderable
+ 6 Detailed Description........................................................8                      Information....................................................................     10
+    6.1 Overview.....................................................................     8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2        Submit Document Feedback                                                                                                   Copyright © 2024 Texas Instruments Incorporated
+                                                             Product Folder Links: SN54HCT574 SN74HCT574
+--- PDF page 3 ---
+                                                                                                               SN54HCT574, SN74HCT574
+www.ti.com                                                                                     SCLS177H – MARCH 1984 – REVISED AUGUST 2024
+
+3 Pin Configuration and Functions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           DB, DGS, DW, N, NS, or PW package                                                        FK Package
+           20-Pin SSOP, SOIC, PDIP, SO, TSSOP                                                      20-Pin LCCC
+                              Top View                                                                Top View
+
+
+                                                        Table 3-1. Pin Functions
+ NAME(1)                        PIN                  TYPE                                         DESCRIPTION
+
+ 1OE                             1                      I           Output enable 1
+ 1A1                             2                      I           1A1 input
+ 2Y4                             3                     O            2Y4 output
+ 1A2                             4                      I           1A2 input
+ 2Y3                             5                     O            2Y3 output
+ 1A3                             6                      I           1A3 input
+ 2Y2                             7                     O            2Y2 output
+ 1A4                             8                      I           1A4 input
+ 2Y1                             9                     O            2Y1 output
+ GND                            10                     —            Ground pin
+ 2A1                            11                      I           2A1 input
+
+ 1Y4                            12                     O            1Y4 output
+ 2A2                            13                      I           2A2 input
+
+ 1Y3                            14                     O            1Y3 output
+ 2A3                            15                      I           2A3 input
+ 1Y2                            16                     O            1Y2 output
+ 2A4                            17                      I           2A4 input
+ 1Y1                            18                     O            1Y1 output
+ 2OE                            19                      I           Output enable 2
+ VCC                            20                     —            Power pin
+
+(1)   I = input, O = output, P = power, FB = feedback, GND = ground, N/A = not applicable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2024 Texas Instruments Incorporated                                                             Submit Document Feedback            3
+                                              Product Folder Links: SN54HCT574 SN74HCT574
+--- PDF page 4 ---
+SN54HCT574, SN74HCT574
+SCLS177H – MARCH 1984 – REVISED AUGUST 2024                                                                                                        www.ti.com
+
+4 Specifications
+
+4.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted)(1)
+                                                                                                                         MIN             MAX         UNIT
+ VCC              Supply voltage range                                                                                   –0.5                7         V
+ IIK              Input clamp current(2)                                     VI < 0 or VI > VCC                                            ±20        mA
+ IOK              Output clamp current(2)                                    VO < 0 or VO > VCC                                            ±20        mA
+
+ IO               Continuous output current                                  VO = 0 to VCC                                                 ±35        mA
+                  Continuous current through VCC or GND                                                                                    ±70        mA
+ TJ               Junction temperature                                                                                                     150         ℃
+ Tstg             Storage temperature range                                                                               –65              150         ℃
+
+(1)    Stresses beyond those listed under “absolute maximum ratings” may cause permanent damage to the device. These are stress ratings
+       only, and functional operation of the device at these or any other conditions beyond those indicated under “recommended" operating
+       conditions" is not implied. Exposure to absolute-maximum-rated conditions for extended periods may affect device reliability.
+(2)    The input and output voltage ratings may be exceeded if the input and output current ratings are observed.
+4.2 Recommended Operating Conditions
+over operating free-air temperature range (unless otherwise noted)(1)
+                                                                                       SN54HCT574                          SN74HCT574                  UNIT
+                                                                                   MIN        NOM         MAX          MIN        NOM         MAX
+ VCC         Supply voltage                                                          4.5           5        5.5         4.5           5         5.5       V
+ VIH         High-level input voltage            VCC = 4.5 V to 5.5 V                  2                                   2                              V
+ VIL         Low-level input voltage             VCC = 4.5 V to 5.5 V                                       0.8                                 0.8       V
+ VI          Input voltage                                                             0                   VCC             0                   VCC        V
+ VO          Output voltage                                                            0                   VCC             0                   VCC        V
+ Δt/Δv       Input transition rise/fall time                                                                500                                 500      ns
+ TA          Operating free-air temperature                                         −55                     125         −40                      85      °C
+
+(1)    All unused inputs of the device must be held at VCC or GND to ensure proper device operation. Refer to the TI application report,
+       Implications of Slow or Floating CMOS Inputs, literature number SCBA004.
+4.3 Thermal Information
+                                                     DGS         DW (SOIC)       DB (SSOP)        N (PDIP)         NS (SO)            PW
+                                                   (VSSOP)                                                                         (TSSOP)
+ THERMAL METRIC                                    20 PINS        20 PINS          20 PINS         20 PINS         20 PINS         20 PINS           UNIT
+ RθJA          Junction-to-ambient thermal
+               resistance (1)                        130.6          109.1           122.7            84.6            113.4           131.8           °C/W
+
+ RθJC(top)     Junction-to-case (top)                 68.7            76             81.6            72.5            78.6             72.2           °C/W
+               thermal resistance
+ RθJB          Junction-to-board thermal              85.4           77.6            77.5            65.3            78.4             82.8           °C/W
+               resistance
+ ψJT           Junction-to-top                        10.5           51.5            46.1            55.3            47.1             21.5           °C/W
+               characterization parameter
+ ψJB           Junction-to-board                      85.0           77.1            77.1            65.2            78.1             82.4           °C/W
+               characterization parameter
+ RθJC(bot)     Junction-to-case (bottom)              N/A            N/A             N/A             N/A              N/A             N/A            °C/W
+               thermal resistance
+
+(1)    For more information about traditional and new thermal metrics, see the Semiconductor and IC package thermal metrics application
+       report.
+
+
+
+
+
+4       Submit Document Feedback                                                                                Copyright © 2024 Texas Instruments Incorporated
+                                                    Product Folder Links: SN54HCT574 SN74HCT574
+--- PDF page 5 ---
+                                                                                                                     SN54HCT574, SN74HCT574
+www.ti.com                                                                                          SCLS177H – MARCH 1984 – REVISED AUGUST 2024
+
+4.4 Electrical Characteristics
+over recommended operating free-air temperature range (unless otherwise noted)
+ PARAMETER              TEST CONDITIONS                    V                    TA = 25°C              SN54HCT574          SN74HCT574          UNIT
+                                                             CC            MIN       TYP      MAX         MIN      MAX        MIN      MAX
+
+ V                V = V    or V    IOH = −20 μA           4.5 V             4.4     4.499                  4.4                 4.4               V
+   OH               I    IH     IL
+                                   IOH = −6 mA                             3.98       4.3                  3.7                3.84
+ V                V = V    or V    IOL = 20 μA            4.5 V                     0.001       0.1                  0.1                 0.1     V
+   OL               I    IH     IL
+                                   IOL = 6 mA                                        0.17      0.26                  0.4                0.33
+ II               VI = VCC or 0                           5.5 V                      ±0.1     ±100               ±1000                ±1000      nA
+ IOZ              VO = VCC or 0                           5.5 V                     ±0.01      ±0.5                 ±10                   ±5     μA
+ ICC              VI = VCC or 0,   IO = 0                 5.5 V                                    8                160                   80     μA
+ ΔI    (1)        One input at 0.5 V or 2.4 V,            5.5 V                       1.4       2.4                    3                 2.9    mA
+   CC             Other inputs at 0 or VCC
+
+ Ci                                                   4.5 V to 5.5 V                    3        10                  10                   10     pF
+
+(1)    This is the increase in supply current for each input that is at one of the specified TTL voltage levels rather than 0 V or VCC.
+
+4.5 Timing Requirements
+over recommended operating free-air temperature range (unless otherwise noted)
+                                                           V             TA = 25°C             SN54HCT574              SN74HCT574             UNIT
+                                                            CC            MIN        MAX          MIN        MAX          MIN        MAX
+
+ f           Clock frequency                              4.5 V                        30                       20                      24     MHz
+  clock                                                   5.5 V                        33                       22                      27
+
+ t           Pulse duration, CLK high or low              4.5 V            16                       24                      20                  ns
+  w                                                       5.5 V            14                       22                      18
+
+ t           Setup time, data before CLK↑                 4.5 V            20                       30                      25                  ns
+  su                                                      5.5 V            17                       27                      23
+
+ t           Hold time, data after CLK↑                   4.5 V              5                       5                       5                  ns
+  h
+                                                          5.5 V              5                       5                       5
+
+4.6 Switching Characteristics, CL = 50 pF
+over recommended operating free-air temperature range, CL = 50 pF (unless otherwise noted) (see Load Circuit and Voltage
+Waveforms)
+  PARAMETER             FROM             TO           V                  TA = 25°C                 SN54HCT574            SN74HCT574            UNIT
+                       (INPUT)       (OUTPUT)           CC          MIN        TYP       MAX         MIN        MAX         MIN       MAX
+
+        f                                            4.5 V            30         36                    20                    24                MHz
+        max
+                                                     5.5 V            33         40                    22                    27
+        t                CLK           Any Q         4.5 V                       30         36                    54                     45     ns
+         pd
+                                                     5.5 V                       25         32                    48                     41
+        t                OE            Any Q         4.5 V                       26         30                    45                     38     ns
+         en                                          5.5 V                       23         27                    41                     34
+
+        t                OE            Any Q         4.5 V                       23         30                    45                     38     ns
+         dis                                         5.5 V                       22         27                    41                     34
+
+         t                             Any Q         4.5 V                       10         12                    18                     15     ns
+          t                                          5.5 V                        9         11                    16                     14
+
+
+
+
+
+
+
+
+Copyright © 2024 Texas Instruments Incorporated                                                                   Submit Document Feedback             5
+                                                 Product Folder Links: SN54HCT574 SN74HCT574
+--- PDF page 6 ---
+SN54HCT574, SN74HCT574
+SCLS177H – MARCH 1984 – REVISED AUGUST 2024                                                                                         www.ti.com
+
+4.7 Switching Characteristics, CL = 150 pF
+over recommended operating free-air temperature range, CL = 150 pF (unless otherwise noted) (see Load Circuit and
+Voltage Waveforms)
+  PARAMETER           FROM            TO            V                  TA = 25°C               SN54HCT574           SN74HCT574          UNIT
+                     (INPUT)      (OUTPUT)           CC            MIN       TYP      MAX        MIN       MAX        MIN      MAX
+
+ f                                                 4.5 V            30         36                  20                   24              MHz
+  max
+                                                   5.5 V            33         40                  22                   27
+ t                     CLK          Any Q          4.5 V                       40        53                  80                   66     ns
+  pd
+                                                   5.5 V                       35        47                  71                   60
+ t                     OE           Any Q          4.5 V                       34        47                  71                   59     ns
+  en                                               5.5 V                       29        39                  94                   78
+
+ t                                  Any Q          4.5 V                       18        42                  63                   53     ns
+  t                                                5.5 V                       16        38                  57                   48
+
+4.8 Operating Characteristics
+TA = 25℃
+                                 PARAMETER                                          TEST CONDITIONS                     TYP         UNIT
+ Cpd               Power dissipation capacitance per flip-flop                            No load                         93         pF
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6      Submit Document Feedback                                                                     Copyright © 2024 Texas Instruments Incorporated
+                                              Product Folder Links: SN54HCT574 SN74HCT574
+--- PDF page 7 ---
+                                                                                                                               SN54HCT574, SN74HCT574
+www.ti.com                                                                                                   SCLS177H – MARCH 1984 – REVISED AUGUST 2024
+
+5 Parameter Measurement Information
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A.    CL includes probe and test-fixture capacitance.
+B.    Waveform 1 is for an output with internal conditions such that the output is low except when disabled by the output control. Waveform 2
+      is for an output with internal conditions such that the output is high except when disabled by the output control.
+C.    Phase relationships between waveforms were chosen arbitrarily. All input pulses are supplied by generators having the following
+      characteristics: PRR ≤ 1 MHz, ZO = 50 Ω, tr = 6 ns, tf = 6 ns.
+D.    For clock inputs, fmaxis measured when the input duty cycle is 50%.
+E.    The outputs are measured one at a time with one input transition per measurement.
+F.    tPLZ and tPHZ are the same as tdis.
+G.    tPZL and tPZH are the same as ten.
+H.    tPLH and tPHL are the same as tpd.
+                                             Figure 5-1. Load Circuit and Voltage Waveforms
+
+
+
+
+
+
+
+
+
+Copyright © 2024 Texas Instruments Incorporated                                                                             Submit Document Feedback                 7
+                                                     Product Folder Links: SN54HCT574 SN74HCT574
+--- PDF page 8 ---
+SN54HCT574, SN74HCT574
+SCLS177H – MARCH 1984 – REVISED AUGUST 2024                                                                                       www.ti.com
+
+6 Detailed Description
+6.1 Overview
+These  octal  edge-triggered  D-type  flip-flops  feature  3-state  outputs  designed  specifically  for  bus  driving.
+The  ’HCT574  devices  are  particularly  suitable  for  implementing  buffer  registers,  I/O  ports,  bidirectional  bus
+drivers, and working registers.
+The eight flip-flops enter data on the low-to-high transition of the clock (CLK) input.
+A buffered output-enable (OE) input can be used to place the eight outputs in either a normal logic state (high
+or low logic levels) or the high-impedance state. In the high-impedance state, the outputs neither load nor drive
+the bus lines significantly. The high-impedance state and increased drive provide the capability to drive bus lines
+without interface or pullup components.
+OE does not affect the internal operations of the flip-flops. Old data can be retained or new data can be entered
+while the outputs are in the high-impedance state.
+6.2 Functional Block Diagram
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6.3 Device Functional Modes
+                                                      Table 6-1. Function Table
+                                                            (Each Flip-Flop)
+                                                          INPUTS                             OUTPUT
+                                           OE               CLK                D                 Q
+
+                                            L                 ↑                H                 H
+                                            L                 ↑                L                 L
+                                            L              H or L              X                Q0
+                                            H                 X                X                 Z
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8      Submit Document Feedback                                                                    Copyright © 2024 Texas Instruments Incorporated
+                                              Product Folder Links: SN54HCT574 SN74HCT574
+--- PDF page 11 ---
+                                                                                                                                                                                   PACKAGE OPTION ADDENDUM
+
+
+
+    www.ti.com                                                                                                                                                                                                                          31-Oct-2025
+
+
+
+PACKAGING INFORMATION
+
+    Orderable part number             Status      Material type        Package | Pins         Package qty | Carrier           RoHS              Lead finish/                MSL rating/               Op temp (°C)                 Part marking
+                                         (1)             (2)                                                                    (3)             Ball material               Peak reflow                                                   (6)
+                                                                                                                                                       (4)                        (5)
+       SN74HCT574DBR                   Active       Production         SSOP (DB) | 20           2000 | LARGE T&R               Yes                 NIPDAU              Level-1-260C-UNLIM                -40 to 85                     HT574
+      SN74HCT574DBR.A                  Active       Production         SSOP (DB) | 20           2000 | LARGE T&R               Yes                 NIPDAU              Level-1-260C-UNLIM                -40 to 85                     HT574
+      SN74HCT574DGSR                   Active       Production       VSSOP (DGS) | 20           5000 | LARGE T&R               Yes                 NIPDAU              Level-1-260C-UNLIM               -40 to 125                     HT574
+     SN74HCT574DGSR.A                  Active       Production       VSSOP (DGS) | 20           5000 | LARGE T&R               Yes                 NIPDAU              Level-1-260C-UNLIM               -40 to 125                     HT574
+       SN74HCT574DW                  Obsolete       Production         SOIC (DW) | 20                      -                     -                  Call TI                    Call TI                   -40 to 85                    HCT574
+       SN74HCT574DWR                   Active       Production         SOIC (DW) | 20           2000 | LARGE T&R               Yes                 NIPDAU              Level-1-260C-UNLIM                -40 to 85                    HCT574
+     SN74HCT574DWR.A                   Active       Production         SOIC (DW) | 20           2000 | LARGE T&R               Yes                 NIPDAU              Level-1-260C-UNLIM                -40 to 85                    HCT574
+     SN74HCT574DWRG4                   Active       Production         SOIC (DW) | 20           2000 | LARGE T&R               Yes                 NIPDAU              Level-1-260C-UNLIM                -40 to 85                    HCT574
+         SN74HCT574N                   Active       Production           PDIP (N) | 20               20 | TUBE                 Yes                 NIPDAU                N/A for Pkg Type                -40 to 85                SN74HCT574N
+       SN74HCT574N.A                   Active       Production           PDIP (N) | 20               20 | TUBE                 Yes                 NIPDAU                N/A for Pkg Type                -40 to 85                SN74HCT574N
+       SN74HCT574NE4                   Active       Production           PDIP (N) | 20               20 | TUBE                 Yes                 NIPDAU                N/A for Pkg Type                -40 to 85                SN74HCT574N
+       SN74HCT574NSR                   Active       Production          SOP (NS) | 20           2000 | LARGE T&R               Yes                 NIPDAU              Level-1-260C-UNLIM                -40 to 85                    HCT574
+      SN74HCT574NSR.A                  Active       Production          SOP (NS) | 20           2000 | LARGE T&R               Yes                 NIPDAU              Level-1-260C-UNLIM                -40 to 85                    HCT574
+        SN74HCT574PW                 Obsolete       Production        TSSOP (PW) | 20                      -                     -                  Call TI                    Call TI                   -40 to 85                     HT574
+       SN74HCT574PWR                   Active       Production        TSSOP (PW) | 20           2000 | LARGE T&R               Yes                 NIPDAU              Level-1-260C-UNLIM                -40 to 85                     HT574
+     SN74HCT574PWR.A                   Active       Production        TSSOP (PW) | 20           2000 | LARGE T&R               Yes                 NIPDAU              Level-1-260C-UNLIM                -40 to 85                     HT574
+       SN74HCT574PWT                 Obsolete       Production        TSSOP (PW) | 20                      -                     -                  Call TI                    Call TI                   -40 to 85                     HT574
+
+(1) Status:  For more details on status, see our product life cycle.
+
+(2) Material type:  When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+
+(3) RoHS values:  Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+
+(4) Lead finish/Ball material:  Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+
+(5) MSL rating/Peak reflow:  The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+
+
+                                                                                                                  Addendum-Page 1

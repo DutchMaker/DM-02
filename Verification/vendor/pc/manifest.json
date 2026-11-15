@@ -1,0 +1,51 @@
+{
+  "retrieved": "2026-11-14",
+  "files": [
+    {
+      "id": "cd74hct161",
+      "url": "https://www.ti.com/lit/ds/symlink/cd74hct161.pdf",
+      "pages": [
+        2,
+        3,
+        5,
+        7,
+        8,
+        11,
+        12
+      ],
+      "file": "cd74hct161.txt",
+      "pdf_sha256": "cfdc63695252f7148384e6488afc1a420f6fea3ef49fe6672f45600cda06800d",
+      "sha256": "fded125bb151b7c5d3d5c009a0d9786d7c9f8685b6a28f860ab99832a24d2adb"
+    },
+    {
+      "id": "sn74ahct08",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74ahct08.pdf",
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        13,
+        15
+      ],
+      "file": "sn74ahct08.txt",
+      "pdf_sha256": "d05ccca9b4649550ebadf3b3c1072ce35abf0f589261a559b1327cd94172663b",
+      "sha256": "224da1faa4ce013179ba62f661f16349e550c115c059c903ae71403b59558492"
+    },
+    {
+      "id": "sn74ahct32",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74ahct32.pdf",
+      "pages": [
+        3,
+        4,
+        5,
+        12,
+        14
+      ],
+      "file": "sn74ahct32.txt",
+      "pdf_sha256": "24329ccd7c25027001e0cf37b16ce007a72215628fd9ffb35c68ff256e9da821",
+      "sha256": "eecce36b2c17d500bfc55c4d19baf556ca93d18c5ca8a83a7468b3a8bc2a2473"
+    }
+  ],
+  "shared_sources": "../clock/manifest.json contains AC175, AHCT04 and AHCT244 provenance."
+}

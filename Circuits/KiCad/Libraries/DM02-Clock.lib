@@ -1,0 +1,15 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+# ECS-100AX, manufacturer pin numbering: 1 NC, 7 case/GND, 8 output, 14 VCC
+DEF ECS-100AX Y 0 40 Y Y 1 F N
+F0 "Y" 0 350 50 H V C CNN
+F1 "ECS-100AX" 0 250 50 H V C CNN
+DRAW
+S -300 200 300 -200 0 1 10 f
+X NC 1 -500 0 200 R 40 40 1 1 N
+X GND 7 0 -400 200 U 40 40 1 1 W
+X OUT 8 500 0 200 L 40 40 1 1 O
+X VCC 14 0 400 200 D 40 40 1 1 W
+ENDDRAW
+ENDDEF
+#End Library

@@ -22,6 +22,21 @@ namespace Mcc.Models
 
         public string GetControlBits()
         {
+            int limit = this.Type == MicroInstructionType.DataOperation
+                ? (this.AluFunction == null ? 1 : 0) : 2;
+            if (this.ControlLines.Count > limit)
+            {
+                throw new CompilerException($"Too many function controls: {this.ControlLines.Count}, format allows {limit}");
+            }
+            if (this.ControlLines.Select(line => line.Bits).Distinct().Count() != this.ControlLines.Count)
+            {
+                throw new CompilerException("Duplicate function control in one word");
+            }
+            if (this.Type != MicroInstructionType.DataOperation &&
+                (this.OperandOut.Bits != "0000" || this.OperandLoad.Bits != "0000"))
+            {
+                throw new CompilerException("Operand requires a data operation word");
+            }
             string format = INSTRUCTION_FORMAT_FUNCTION;
             string result = format;
 

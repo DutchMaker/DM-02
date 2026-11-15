@@ -1,0 +1,29 @@
+{
+  "retrieved": "2026-11-14",
+  "files": [
+    {
+      "id": "as6c1008",
+      "url": "https://www.alliancememory.com/wp-content/uploads/AS6C1008_Mar_2023V1.2.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "file": "as6c1008.txt",
+      "sha256": "20f5c3010e29869db29c400bb71178fb798f9e4062fb40493fe718563293deef",
+      "pdf_sha256": "572b37292c4c838f1a12cd75627ab4fede7dd667f20c350bf174b54d293f6ffc"
+    }
+  ]
+}

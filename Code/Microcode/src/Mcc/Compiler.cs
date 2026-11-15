@@ -32,8 +32,8 @@ namespace Mcc
 
         public static Compiler Compile(string sourceFileName, bool save = true)
         {
-            string romFileName = sourceFileName.Split('.', StringSplitOptions.RemoveEmptyEntries).First() + ".rom";
-            string logisimImageFileName = sourceFileName.Split('.', StringSplitOptions.RemoveEmptyEntries).First() + ".img";
+            string romFileName = Path.ChangeExtension(sourceFileName, ".rom");
+            string logisimImageFileName = Path.ChangeExtension(sourceFileName, ".img");
             string source = File.ReadAllText(sourceFileName);
 
             _compiler = new Compiler(source);
@@ -90,16 +90,11 @@ namespace Mcc
             {
                 // ROM image for EPROM needs to be little-endian format.
                 // (low byte first, high byte second)
-                foreach (int address in this.microcode.Keys)
+                // Emit the entire address space; zero fill preserves the prior
+                // internal-gap policy and makes the formerly missing tail explicit.
+                for (int address = 0; address <= UInt16.MaxValue; address++)
                 {
-                    byte high = (byte)(this.microcode[address] >> 8);
-                    byte low = (byte)(this.microcode[address] & 0xff);
-
-                    // The offset is calculated in bytes, our values are 2 bytes each.
-                    // Therefore we need to store at address*2.
-                    writer.Seek(address*2, SeekOrigin.Begin);
-                    writer.Write(low);
-                    writer.Write(high);
+                    writer.Write(this.microcode.TryGetValue(address, out ushort word) ? word : (ushort)0);
                 }
             }
 
@@ -111,7 +106,7 @@ namespace Mcc
                 writer.WriteLine("v2.0 raw\n");
                 int address = 0;
 
-                for (int row = 0; row < UInt16.MaxValue / 8; row++)
+                for (int row = 0; row < (UInt16.MaxValue + 1) / 8; row++)
                 {
                     string rowData = string.Empty;
 
@@ -149,21 +144,7 @@ namespace Mcc
             }
 
             // Remove comments.
-            while (source.Contains("#"))
-            {
-                int commentStart = source.IndexOf("#");
-                int commentEnd = source.IndexOf("\n", commentStart);
-
-                if (commentEnd == -1)
-                {
-                    commentEnd = source.Length - commentStart;
-                }
-
-                string beforeComment = source.Substring(0, commentStart);
-                string afterComment = source.Substring(commentEnd);
-
-                source = beforeComment + afterComment;
-            }
+            source = string.Join("\n", source.Split('\n').Select(line => line.Split('#')[0]));
 
             while (source.Contains(" \n"))
             {
@@ -206,6 +187,15 @@ namespace Mcc
                     return t;
                 })
                 .ToList();
+
+            int width = section == SECTION_INSTRUCTIONS ? 8 : section == SECTION_ALUFUNCTIONS ? 5 : 4;
+            foreach (var pattern in patterns)
+            {
+                if (pattern.Bits.Length != width || pattern.Bits.Any(bit => bit != '0' && bit != '1'))
+                {
+                    throw new CompilerException($"Invalid {width}-bit encoding for '{pattern.Identifier}': '{pattern.Bits}'");
+                }
+            }
 
             // Check for unique opcodes.
             patterns.ForEach(i => 
@@ -351,7 +341,22 @@ namespace Mcc
                         string addressBits = instructionBits + tstateBits + flagsBits;
 
                         int address = Convert.ToInt32(addressBits, 2);
+                        if (this.microcode.ContainsKey(address))
+                        {
+                            throw new CompilerException($"Overlapping microcode address {address:X4} for '{c.Instruction.Mnemonic}'");
+                        }
                         this.microcode.Add(address, c.TStates[t].GetControlWord());
+                    }
+                }
+            }
+
+            foreach (var instruction in this.Instructions)
+            {
+                for (int flags = 0; flags < 16; flags++)
+                {
+                    if (!this.microcode.ContainsKey((instruction.Opcode << 8) | flags))
+                    {
+                        throw new CompilerException($"Missing microcode for '{instruction.Mnemonic}' at flags {flags:X1}");
                     }
                 }
             }
@@ -432,9 +437,13 @@ namespace Mcc
                             .Replace("[", string.Empty)
                             .Replace("]", string.Empty);
 
-                        if (!string.IsNullOrWhiteSpace(aluFuncString) && this.AluFunctions.Exists(f => f.Identifier.Equals(aluFuncString, StringComparison.OrdinalIgnoreCase)))
+                        if (!string.IsNullOrWhiteSpace(aluFuncString))
                         {
                             microInstruction.AluFunction = this.AluFunctions.FirstOrDefault(f => f.Identifier.Equals(aluFuncString, StringComparison.OrdinalIgnoreCase));
+                            if (microInstruction.AluFunction == null)
+                            {
+                                throw new CompilerException($"Unknown ALU function '{aluFuncString}' for instruction {mnemonic}");
+                            }
                         }
                     }
                     else if (i == 0 && uinstructions[i].IndexOf("[function]", StringComparison.OrdinalIgnoreCase) > -1)
@@ -452,10 +461,18 @@ namespace Mcc
                         {
                             if (uinstructions[i].IndexOf("_load", StringComparison.OrdinalIgnoreCase) > -1)
                             {
+                                if (microInstruction.OperandLoad.Bits != "0000")
+                                {
+                                    throw new CompilerException($"Multiple operand loads for instruction {mnemonic}");
+                                }
                                 microInstruction.OperandLoad = operand;
                             }
                             else if (uinstructions[i].IndexOf("_out", StringComparison.OrdinalIgnoreCase) > -1)
                             {
+                                if (microInstruction.OperandOut.Bits != "0000")
+                                {
+                                    throw new CompilerException($"Multiple operand outputs for instruction {mnemonic}");
+                                }
                                 microInstruction.OperandOut = operand;
                             }
                         }

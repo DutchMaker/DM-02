@@ -2133,7 +2133,6 @@ E2:1:HALT
     : [data]
       L_out
       PC_L_load
-      PC_inc
     : TSTATE_reset
   .end
 
@@ -2251,7 +2250,6 @@ E2:1:HALT
     : [data]
       L_out
       PC_L_load
-      PC_inc
     : TSTATE_reset
   .end
 

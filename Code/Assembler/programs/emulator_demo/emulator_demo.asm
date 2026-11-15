@@ -29,7 +29,8 @@ message       : "Hello world\0D\3A-)"
 ~CMD_WRITE_PIXEL  : #$10
 ~CMD_CLEAR_SCREEN : #$20
 
-.include "emulator_demo_data.asm"   ; 128x128 pixel black&white bitmap.
+.include "emulator_demo_data.asm"   ; 128-pixel-wide bitmap (partial final row).
+bitmap_end : $FF                   ; Stop before the following machine code.
 
 .code
 main:

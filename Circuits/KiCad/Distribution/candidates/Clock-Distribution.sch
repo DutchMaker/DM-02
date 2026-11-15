@@ -1,0 +1,273 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A0 46811 33110
+Sheet 1 1
+Title "DM-02 phase distribution candidate"
+Date "2026-11-14"
+Rev "CD1"
+Comp "DM-02"
+Comment1 "Two AHCT244 stages from each phase root to dedicated board links."
+Comment2 "Maximum allocated branch delay 19 ns; interval review uses a 4 MHz target."
+Comment3 "Exact oscillator, physical routing/load and slew remain unqualified."
+Comment4 ""
+$EndDescr
+$Comp
+L 74xx:74HCT244 U1
+U 1 1 69E00000
+P 2000 1900
+F 0 "U1" H 2100 2200 50 0000 L CNN
+F 1 "SN74AHCT244N" H 2100 2100 50 0000 L CNN
+F 2 "Package_DIP:DIP-20_W7.62mm" H 2000 1900 50 0001 C CNN
+	1 2000 1900
+	1 0 0 -1
+$EndComp
+Text Label 1500 2300 0 39 ~ 0
+GND
+Text Label 2000 2700 0 39 ~ 0
+GND
+Text Label 1500 2100 0 39 ~ 0
+GND
+Text Label 2500 1700 0 39 ~ 0
+ROOT2_0
+Text Label 1500 2000 0 39 ~ 0
+GND
+Text Label 2500 1600 0 39 ~ 0
+ROOT1_1
+Text Label 1500 1900 0 39 ~ 0
+PH3
+Text Label 2500 1500 0 39 ~ 0
+ROOT1_0
+Text Label 1500 1800 0 39 ~ 0
+PH3
+Text Label 2500 1400 0 39 ~ 0
+ROOT0_0
+Text Label 1500 2400 0 39 ~ 0
+GND
+Text Label 1500 1400 0 39 ~ 0
+PH0
+Text Label 2000 1100 0 39 ~ 0
+5V
+Text Label 2500 1800 0 39 ~ 0
+ROOT3_0
+Text Label 1500 1500 0 39 ~ 0
+PH1
+Text Label 2500 1900 0 39 ~ 0
+ROOT3_1
+Text Label 1500 1600 0 39 ~ 0
+PH1
+NoConn ~ 2500 2000
+Text Label 1500 1700 0 39 ~ 0
+PH2
+NoConn ~ 2500 2100
+$Comp
+L 74xx:74HCT244 U2
+U 1 1 69E00001
+P 5100 1900
+F 0 "U2" H 5200 2200 50 0000 L CNN
+F 1 "SN74AHCT244N" H 5200 2100 50 0000 L CNN
+F 2 "Package_DIP:DIP-20_W7.62mm" H 5100 1900 50 0001 C CNN
+	1 5100 1900
+	1 0 0 -1
+$EndComp
+Text Label 4600 2300 0 39 ~ 0
+GND
+Text Label 5100 2700 0 39 ~ 0
+GND
+Text Label 4600 2100 0 39 ~ 0
+ROOT2_0
+Text Label 5600 1700 0 39 ~ 0
+SQ1_PH1
+Text Label 4600 2000 0 39 ~ 0
+ROOT1_1
+Text Label 5600 1600 0 39 ~ 0
+CW1_PH1
+Text Label 4600 1900 0 39 ~ 0
+ROOT1_0
+Text Label 5600 1500 0 39 ~ 0
+ME1_PH0
+Text Label 4600 1800 0 39 ~ 0
+ROOT1_0
+Text Label 5600 1400 0 39 ~ 0
+SQ1_PH0
+Text Label 4600 2400 0 39 ~ 0
+GND
+Text Label 4600 1400 0 39 ~ 0
+ROOT0_0
+Text Label 5100 1100 0 39 ~ 0
+5V
+Text Label 5600 1800 0 39 ~ 0
+AL1_PH1
+Text Label 4600 1500 0 39 ~ 0
+ROOT0_0
+Text Label 5600 1900 0 39 ~ 0
+SP1_PH1
+Text Label 4600 1600 0 39 ~ 0
+ROOT1_0
+Text Label 5600 2000 0 39 ~ 0
+MA1_PH1
+Text Label 4600 1700 0 39 ~ 0
+ROOT1_0
+Text Label 5600 2100 0 39 ~ 0
+SQ1_PH2
+$Comp
+L 74xx:74HCT244 U3
+U 1 1 69E00002
+P 8200 1900
+F 0 "U3" H 8300 2200 50 0000 L CNN
+F 1 "SN74AHCT244N" H 8300 2100 50 0000 L CNN
+F 2 "Package_DIP:DIP-20_W7.62mm" H 8200 1900 50 0001 C CNN
+	1 8200 1900
+	1 0 0 -1
+$EndComp
+Text Label 7700 2300 0 39 ~ 0
+GND
+Text Label 8200 2700 0 39 ~ 0
+GND
+Text Label 7700 2100 0 39 ~ 0
+ROOT3_1
+Text Label 8700 1700 0 39 ~ 0
+AL1_PH3
+Text Label 7700 2000 0 39 ~ 0
+ROOT3_1
+Text Label 8700 1600 0 39 ~ 0
+PC1_PH3
+Text Label 7700 1900 0 39 ~ 0
+ROOT3_1
+Text Label 8700 1500 0 39 ~ 0
+SQ1_PH3
+Text Label 7700 1800 0 39 ~ 0
+ROOT3_0
+Text Label 8700 1400 0 39 ~ 0
+ME1_PH2
+Text Label 7700 2400 0 39 ~ 0
+GND
+Text Label 7700 1400 0 39 ~ 0
+ROOT2_0
+Text Label 8200 1100 0 39 ~ 0
+5V
+Text Label 8700 1800 0 39 ~ 0
+RG1_PH3
+Text Label 7700 1500 0 39 ~ 0
+ROOT3_0
+Text Label 8700 1900 0 39 ~ 0
+SP1_PH3
+Text Label 7700 1600 0 39 ~ 0
+ROOT3_0
+Text Label 8700 2000 0 39 ~ 0
+MA1_PH3
+Text Label 7700 1700 0 39 ~ 0
+ROOT3_0
+Text Label 8700 2100 0 39 ~ 0
+ME1_PH3
+$Comp
+L Connector_Generic:Conn_01x06 J1
+U 1 1 69E00003
+P 11300 1900
+F 0 "J1" H 11400 2200 50 0000 L CNN
+F 1 "J1" H 11400 2100 50 0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 11300 1900 50 0001 C CNN
+	1 11300 1900
+	1 0 0 -1
+$EndComp
+Text Label 11100 1700 0 39 ~ 0
+5V
+Text Label 11100 1800 0 39 ~ 0
+GND
+Text Label 11100 1900 0 39 ~ 0
+PH0
+Text Label 11100 2000 0 39 ~ 0
+PH1
+Text Label 11100 2100 0 39 ~ 0
+PH2
+Text Label 11100 2200 0 39 ~ 0
+PH3
+$Comp
+L Connector_Generic:Conn_01x18 J2
+U 1 1 69E00004
+P 14400 1900
+F 0 "J2" H 14500 2200 50 0000 L CNN
+F 1 "J2" H 14500 2100 50 0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical" H 14400 1900 50 0001 C CNN
+	1 14400 1900
+	1 0 0 -1
+$EndComp
+Text Label 14200 1100 0 39 ~ 0
+5V
+Text Label 14200 2000 0 39 ~ 0
+SQ1_PH2
+Text Label 14200 2100 0 39 ~ 0
+ME1_PH2
+Text Label 14200 2200 0 39 ~ 0
+SQ1_PH3
+Text Label 14200 2300 0 39 ~ 0
+PC1_PH3
+Text Label 14200 2400 0 39 ~ 0
+AL1_PH3
+Text Label 14200 2500 0 39 ~ 0
+RG1_PH3
+Text Label 14200 2600 0 39 ~ 0
+SP1_PH3
+Text Label 14200 2700 0 39 ~ 0
+MA1_PH3
+Text Label 14200 2800 0 39 ~ 0
+ME1_PH3
+Text Label 14200 1200 0 39 ~ 0
+GND
+Text Label 14200 1300 0 39 ~ 0
+SQ1_PH0
+Text Label 14200 1400 0 39 ~ 0
+ME1_PH0
+Text Label 14200 1500 0 39 ~ 0
+CW1_PH1
+Text Label 14200 1600 0 39 ~ 0
+SQ1_PH1
+Text Label 14200 1700 0 39 ~ 0
+AL1_PH1
+Text Label 14200 1800 0 39 ~ 0
+SP1_PH1
+Text Label 14200 1900 0 39 ~ 0
+MA1_PH1
+$Comp
+L Device:C C1
+U 1 1 69E00005
+P 17500 1900
+F 0 "C1" H 17600 2200 50 0000 L CNN
+F 1 "100nF" H 17600 2100 50 0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 17500 1900 50 0001 C CNN
+	1 17500 1900
+	1 0 0 -1
+$EndComp
+Text Label 17500 1750 0 39 ~ 0
+5V
+Text Label 17500 2050 0 39 ~ 0
+GND
+$Comp
+L Device:C C2
+U 1 1 69E00006
+P 20600 1900
+F 0 "C2" H 20700 2200 50 0000 L CNN
+F 1 "100nF" H 20700 2100 50 0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 20600 1900 50 0001 C CNN
+	1 20600 1900
+	1 0 0 -1
+$EndComp
+Text Label 20600 1750 0 39 ~ 0
+5V
+Text Label 20600 2050 0 39 ~ 0
+GND
+$Comp
+L Device:C C3
+U 1 1 69E00007
+P 23700 1900
+F 0 "C3" H 23800 2200 50 0000 L CNN
+F 1 "100nF" H 23800 2100 50 0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 23700 1900 50 0001 C CNN
+	1 23700 1900
+	1 0 0 -1
+$EndComp
+Text Label 23700 1750 0 39 ~ 0
+5V
+Text Label 23700 2050 0 39 ~ 0
+GND
+$EndSCHEMATC

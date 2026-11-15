@@ -33,8 +33,10 @@ Text GLabel 2050 7750 2    39   Input ~ 0
 H_clock
 Text GLabel 2050 7850 2    39   Input ~ 0
 L_clock
-NoConn ~ 1050 8050
-NoConn ~ 1050 8150
+Text GLabel 1050 8050 0    39   Input ~ 0
+GND
+Text GLabel 1050 8150 0    39   Input ~ 0
+GND
 NoConn ~ 2050 8150
 NoConn ~ 2050 8050
 Text GLabel 2600 7450 0    50   Input ~ 0
@@ -529,9 +531,9 @@ L 74xx:74HC245 U10
 U 1 1 5EB80D5C
 P 8600 1600
 F 0 "U10" H 8600 1400 50  0000 C CNN
-F 1 "74HC245" H 8600 1300 50  0000 C CNN
+F 1 "74HCT245" H 8600 1300 50  0000 C CNN
 F 2 "Package_DIP:DIP-20_W7.62mm" H 8600 1600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74HC245" H 8600 1600 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74hct245.pdf" H 8600 1600 50  0001 C CNN
 	1    8600 1600
 	1    0    0    -1  
 $EndComp
@@ -615,9 +617,9 @@ L 74xx:74HC245 U15
 U 1 1 5EBD5A44
 P 12600 1600
 F 0 "U15" H 12600 1400 50  0000 C CNN
-F 1 "74HC245" H 12600 1300 50  0000 C CNN
+F 1 "74HCT245" H 12600 1300 50  0000 C CNN
 F 2 "Package_DIP:DIP-20_W7.62mm" H 12600 1600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74HC245" H 12600 1600 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74hct245.pdf" H 12600 1600 50  0001 C CNN
 	1    12600 1600
 	1    0    0    -1  
 $EndComp
@@ -1699,9 +1701,9 @@ L 74xx:74HC245 U16
 U 1 1 5F599FD5
 P 8600 5250
 F 0 "U16" H 8600 5050 50  0000 C CNN
-F 1 "74HC245" H 8600 4950 50  0000 C CNN
+F 1 "74HCT245" H 8600 4950 50  0000 C CNN
 F 2 "Package_DIP:DIP-20_W7.62mm" H 8600 5250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74HC245" H 8600 5250 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74hct245.pdf" H 8600 5250 50  0001 C CNN
 	1    8600 5250
 	1    0    0    -1  
 $EndComp
@@ -1710,9 +1712,9 @@ L 74xx:74HC245 U17
 U 1 1 5F59EE9B
 P 12600 5250
 F 0 "U17" H 12600 5050 50  0000 C CNN
-F 1 "74HC245" H 12600 4950 50  0000 C CNN
+F 1 "74HCT245" H 12600 4950 50  0000 C CNN
 F 2 "Package_DIP:DIP-20_W7.62mm" H 12600 5250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74HC245" H 12600 5250 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74hct245.pdf" H 12600 5250 50  0001 C CNN
 	1    12600 5250
 	1    0    0    -1  
 $EndComp
@@ -1881,4 +1883,64 @@ Text GLabel 9100 5450 2    39   Input ~ 0
 A15
 Text Notes 3850 9900 0    118  ~ 0
 TODO: Decoupling
+Text Notes 13600 700 0    60   ~ 0
+Gate supplies and spare-input termination
+$Comp
+L 74xx:74HCT02 U1
+U 5 1 69173001
+P 14000 1600
+F 0 "U1" H 14230 1646 50 0000 L CNN
+F 1 "74HCT02" H 14230 1555 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 14000 1600 50 0001 C CNN
+	5    14000 1600
+	1    0    0    -1
+$EndComp
+Text GLabel 14000 1100 1    39   Input ~ 0
+5V
+Text GLabel 14000 2100 3    39   Input ~ 0
+GND
+$Comp
+L 74xx:74LS32 U4
+U 5 1 69173002
+P 15400 1600
+F 0 "U4" H 15630 1646 50 0000 L CNN
+F 1 "74HCT32" H 15630 1555 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 15400 1600 50 0001 C CNN
+	5    15400 1600
+	1    0    0    -1
+$EndComp
+Text GLabel 15400 1100 1    39   Input ~ 0
+5V
+Text GLabel 15400 2100 3    39   Input ~ 0
+GND
+$Comp
+L 74xx:74LS32 U4
+U 3 1 69173101
+P 14000 3400
+F 0 "U4" H 14000 3700 50 0000 C CNN
+F 1 "74HCT32" H 14000 3600 50 0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 14000 3400 50 0001 C CNN
+	3    14000 3400
+	1    0    0    -1
+$EndComp
+Text GLabel 13700 3300 0    39   Input ~ 0
+GND
+Text GLabel 13700 3500 0    39   Input ~ 0
+GND
+NoConn ~ 14300 3400
+$Comp
+L 74xx:74LS32 U4
+U 4 1 69173102
+P 15400 3400
+F 0 "U4" H 15400 3700 50 0000 C CNN
+F 1 "74HCT32" H 15400 3600 50 0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 15400 3400 50 0001 C CNN
+	4    15400 3400
+	1    0    0    -1
+$EndComp
+Text GLabel 15100 3300 0    39   Input ~ 0
+GND
+Text GLabel 15100 3500 0    39   Input ~ 0
+GND
+NoConn ~ 15700 3400
 $EndSCHEMATC

@@ -1,0 +1,97 @@
+{
+  "retrieved": "2026-11-14",
+  "files": [
+    {
+      "id": "ecs-100x",
+      "url": "https://ecsxtal.goidp.com/store/pdf/ecs-100x.pdf",
+      "pdf_sha256": "b032d231b16f8f27ae4ccddfa06cabc1aba234e7665dd87ab9804ea1fa96498b",
+      "pages": [
+        1,
+        2
+      ],
+      "file": "ecs-100x.txt",
+      "sha256": "7b5f9a003e1cd451e3c987e750849ab5e0d61d35d9bfd73e7a481e20a5872af4"
+    },
+    {
+      "id": "cd74ac175",
+      "url": "https://www.ti.com/lit/ds/symlink/cd74ac175.pdf",
+      "pdf_sha256": "935175fd4317d36846cb064e740c389b288d38b72659be0cde53a7d4dd5ef82d",
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "file": "cd74ac175.txt",
+      "sha256": "a2ee64ebf0c4457b776cb419513940c4b20114135e6cee0676a9ea59f83ba96d"
+    },
+    {
+      "id": "sn74ahc74",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf",
+      "pdf_sha256": "48edcc29fc5a6fa517a0d54a5f4459c0a784fc3342cb01ce100c75b4befb8db4",
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "file": "sn74ahc74.txt",
+      "sha256": "39191b3c1f1a772b6dc528145f774604873414e1b1ab37c29a74872e1478d773"
+    },
+    {
+      "id": "sn74ahct04",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74ahct04.pdf",
+      "pdf_sha256": "79e359c70a08e3a6a9318beea502f99e101b304f9ff1d4fe205c40c2d9c48c78",
+      "pages": [
+        3,
+        4,
+        5
+      ],
+      "file": "sn74ahct04.txt",
+      "sha256": "a14032fc99f3b95e9c9da48e93ab882ee580c19f53e2cf2dd5180590dbc64c11"
+    },
+    {
+      "id": "sn74ahct244",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74ahct244.pdf",
+      "pdf_sha256": "23be049aaa49559a91367f84eed4b2f4cde6e6f6932e683ea2bd645d0dec6c28",
+      "pages": [
+        3,
+        4,
+        5
+      ],
+      "file": "sn74ahct244.txt",
+      "sha256": "abadbb03897afac800e057c62f3b83afcd9705a47f56c8ef1248450a6331cf5d"
+    },
+    {
+      "id": "sn74ahc08",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74ahc08.pdf",
+      "pdf_sha256": "5b2bcbcf6b40a36fe9ddccda528bd5bb5ab7516356f540d879129a7d5c3f9036",
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "file": "sn74ahc08.txt",
+      "sha256": "22f238d5687ecea1d46d742fe7a2f91b9e3dba79ce61bbca8f8d5bca7c820fc9"
+    },
+    {
+      "id": "sn74ahc32",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74ahc32.pdf",
+      "pdf_sha256": "8c1e2f6b2999874ca37e228dee0dad8f20a8cb58969c764fb63feee684c16e41",
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "file": "sn74ahc32.txt",
+      "sha256": "d7dcd70939439afb0e20000cb6e6a2f4796c3ec6869eddf43e8ce9d9e0d48eda"
+    }
+  ]
+}

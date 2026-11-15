@@ -1,0 +1,95 @@
+{
+  "retrieved": "2026-11-14",
+  "files": [
+    {
+      "id": "at27c512r",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/MPD/ProductDocuments/DataSheets/AT27C512R-512-Kbit-OTP-ROM-Data-Sheet-DS20006752.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        21
+      ],
+      "file": "at27c512r.txt",
+      "pdf_sha256": "738ffe7bade71d9e71d875f991aa813f4269c844d9e5072d1bea7ef9348d71f0",
+      "sha256": "291088e5242ea99fd783f76c4f9370dad4613f918538a2dbc1273b85f15b3f5c"
+    },
+    {
+      "id": "sn74hct574",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74hct574.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        11
+      ],
+      "file": "sn74hct574.txt",
+      "pdf_sha256": "741ea0d0fbeb1d5c18125cca106df860bb2fc2b2eca236db99de1d2b09f9ec8c",
+      "sha256": "d69a39a44ada64b9d0c899b241098123797bba593dee601e249737ed0861d3ac"
+    },
+    {
+      "id": "cd74hct154",
+      "url": "https://www.ti.com/lit/ds/symlink/cd74hct154.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "file": "cd74hct154.txt",
+      "pdf_sha256": "280e5cce6eb56861d775f57e6646fea2035bf98a727be62db6d13860f3fb2734",
+      "sha256": "5b649a75e89b39ea2629372ccb27f551c791b79be642df7d1446c0d05a458eb4"
+    },
+    {
+      "id": "sn74ahct00",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74ahct00.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        15,
+        16
+      ],
+      "file": "sn74ahct00.txt",
+      "pdf_sha256": "65c82205835d0bcf571090bada2ee7acb97b012edd6b2e856fcb43f17a8e9fbc",
+      "sha256": "04718da1edbc3dbc954e616de7c2abd122ac8961615f5cfb11449e2004a7956d"
+    },
+    {
+      "id": "sn74ahct574",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74ahct574.pdf",
+      "pages": [
+        1,
+        5,
+        6,
+        8
+      ],
+      "file": "sn74ahct574-review.txt",
+      "pdf_sha256": "0ea57a1593d19ff12d69ee56f45d6f84a4f7d642c7b424ea2426fc20d027d352",
+      "sha256": "4e1d6da89e20a1dc46a55daa23fa4c97ac73682a9fe6ee8efb429bf1f36e60d9",
+      "purpose": "Rejected timing source; CW1 uses SN74HCT574N instead."
+    }
+  ]
+}

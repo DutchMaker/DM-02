@@ -1,0 +1,309 @@
+{
+  "created_at": "2026-11-15T13:50:34.611511+00:00",
+  "model_sha256": "80938faeab0e16bac1b0c4e319376c6f3f30a358eb5b74c53019449ffe58a177",
+  "method_hashes": {
+    "transient.py": "00c355df46bb90d44ac92580a7346095291967a7296c233e2e93ca3992b06c93",
+    "explore.py": "d7e74ed872d47301a500f5f8b3469ffa010b825a7589477dc19649f29e1d2bac",
+    "contract.json": "ed5a68a460a0e586a918ddf2cf46d3cdc4e84a8a7a123011b8d9937fab3257d5"
+  },
+  "audit_sha256": "6131a7f1c7f9de4346866b6cc37d3fb87378bb61248e9e648312cb0e2a0e954c",
+  "package_pin_rlc": [
+    0.047,
+    7.118e-09,
+    4.39e-13
+  ],
+  "tools": {
+    "python": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "ngspice": "******\n** ngspice-47 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2026, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n******\n"
+  },
+  "correlation": [
+    {
+      "case": "correlation-1-rising-0.0",
+      "max_difference_v": 0.008586919999999942,
+      "rms_difference_v": 0.0006023794362564551,
+      "threshold_difference_ns": 0.000963187626240942
+    },
+    {
+      "case": "correlation-1-rising-5.0",
+      "max_difference_v": 0.008331590000000055,
+      "rms_difference_v": 0.000708408832301936,
+      "threshold_difference_ns": 0.001451945743082514
+    },
+    {
+      "case": "correlation-1-falling-5.0",
+      "max_difference_v": 0.0031572749999999594,
+      "rms_difference_v": 0.00032007625514667666,
+      "threshold_difference_ns": 0.0018591157577397502
+    },
+    {
+      "case": "correlation-1-falling-0.0",
+      "max_difference_v": 0.0046447020000000006,
+      "rms_difference_v": 0.0003816571446455409,
+      "threshold_difference_ns": 0.000766820755764411
+    },
+    {
+      "case": "correlation-2-rising-0.0",
+      "max_difference_v": 0.003976669999997462,
+      "rms_difference_v": 0.0003481838911061733,
+      "threshold_difference_ns": 0.0007128891621875746
+    },
+    {
+      "case": "correlation-2-rising-4.5",
+      "max_difference_v": 0.004539199999997745,
+      "rms_difference_v": 0.00037155844380686167,
+      "threshold_difference_ns": 0.0007325420437544302
+    },
+    {
+      "case": "correlation-2-falling-4.5",
+      "max_difference_v": 0.001900869999998278,
+      "rms_difference_v": 0.0002311585756380325,
+      "threshold_difference_ns": 0.0003415737929326653
+    },
+    {
+      "case": "correlation-2-falling-0.0",
+      "max_difference_v": 0.00218008599999997,
+      "rms_difference_v": 0.0002640097825559325,
+      "threshold_difference_ns": 0.00046076822840756816
+    }
+  ],
+  "loads": [
+    {
+      "case": "rising-normal",
+      "edge": "rising",
+      "fault": "normal",
+      "capacitance_pf": 50.0,
+      "window_start_ns": 265.0,
+      "window_end_ns": 315.0,
+      "fixture_v": 0,
+      "fixture_r_ohm": 1000.0,
+      "passed": true,
+      "window_min_v": 4.90377397,
+      "window_max_v": 4.90377397,
+      "stable_threshold_ns": 193.0415413648352,
+      "setup_margin_ns": 71.95845863516479
+    },
+    {
+      "case": "rising-overload",
+      "edge": "rising",
+      "fault": "overload",
+      "capacitance_pf": 5000.0,
+      "window_start_ns": 265.0,
+      "window_end_ns": 315.0,
+      "fixture_v": 0,
+      "fixture_r_ohm": 1000.0,
+      "passed": false,
+      "window_min_v": 1.4014973182,
+      "window_max_v": 2.259272988325,
+      "stable_threshold_ns": 299.38408767645666,
+      "setup_margin_ns": -34.38408767645666
+    },
+    {
+      "case": "rising-premature-capture",
+      "edge": "rising",
+      "fault": "premature-capture",
+      "capacitance_pf": 50.0,
+      "window_start_ns": 145.0,
+      "window_end_ns": 195.0,
+      "fixture_v": 0,
+      "fixture_r_ohm": 1000.0,
+      "passed": false,
+      "window_min_v": 0.0133419311,
+      "window_max_v": 4.72230445,
+      "stable_threshold_ns": 193.0415413648352,
+      "setup_margin_ns": -48.04154136483521
+    },
+    {
+      "case": "rising-late-launch",
+      "edge": "rising",
+      "fault": "late-launch",
+      "capacitance_pf": 50.0,
+      "window_start_ns": 265.0,
+      "window_end_ns": 315.0,
+      "fixture_v": 0,
+      "fixture_r_ohm": 1000.0,
+      "passed": false,
+      "window_min_v": 0.0133498844,
+      "window_max_v": 0.0133593255,
+      "stable_threshold_ns": 320.0415413648352,
+      "setup_margin_ns": -55.04154136483521
+    },
+    {
+      "case": "rising-disabled",
+      "edge": "rising",
+      "fault": "disabled",
+      "capacitance_pf": 50.0,
+      "window_start_ns": 265.0,
+      "window_end_ns": 315.0,
+      "fixture_v": 0,
+      "fixture_r_ohm": 1000.0,
+      "passed": false,
+      "window_min_v": -3.81644002e-07,
+      "window_max_v": -3.79419828e-07,
+      "stable_threshold_ns": null,
+      "setup_margin_ns": null
+    },
+    {
+      "case": "falling-normal",
+      "edge": "falling",
+      "fault": "normal",
+      "capacitance_pf": 50.0,
+      "window_start_ns": 265.0,
+      "window_end_ns": 315.0,
+      "fixture_v": 5.0,
+      "fixture_r_ohm": 1000.0,
+      "passed": true,
+      "window_min_v": 0.142024043,
+      "window_max_v": 0.142024043,
+      "stable_threshold_ns": 199.610734459008,
+      "setup_margin_ns": 65.389265540992
+    },
+    {
+      "case": "falling-overload",
+      "edge": "falling",
+      "fault": "overload",
+      "capacitance_pf": 5000.0,
+      "window_start_ns": 265.0,
+      "window_end_ns": 315.0,
+      "fixture_v": 5.0,
+      "fixture_r_ohm": 1000.0,
+      "passed": false,
+      "window_min_v": 3.127124550425,
+      "window_max_v": 3.868388909095,
+      "stable_threshold_ns": null,
+      "setup_margin_ns": null
+    },
+    {
+      "case": "falling-premature-capture",
+      "edge": "falling",
+      "fault": "premature-capture",
+      "capacitance_pf": 50.0,
+      "window_start_ns": 145.0,
+      "window_end_ns": 195.0,
+      "fixture_v": 5.0,
+      "fixture_r_ohm": 1000.0,
+      "passed": false,
+      "window_min_v": 4.13840261,
+      "window_max_v": 4.93124952,
+      "stable_threshold_ns": 199.610734459008,
+      "setup_margin_ns": -54.610734459008
+    },
+    {
+      "case": "falling-late-launch",
+      "edge": "falling",
+      "fault": "late-launch",
+      "capacitance_pf": 50.0,
+      "window_start_ns": 265.0,
+      "window_end_ns": 315.0,
+      "fixture_v": 5.0,
+      "fixture_r_ohm": 1000.0,
+      "passed": false,
+      "window_min_v": 4.91297796,
+      "window_max_v": 4.91896455,
+      "stable_threshold_ns": 326.61073445900803,
+      "setup_margin_ns": -61.61073445900803
+    },
+    {
+      "case": "falling-disabled",
+      "edge": "falling",
+      "fault": "disabled",
+      "capacitance_pf": 50.0,
+      "window_start_ns": 265.0,
+      "window_end_ns": 315.0,
+      "fixture_v": 5.0,
+      "fixture_r_ohm": 1000.0,
+      "passed": false,
+      "window_min_v": 4.99999911,
+      "window_max_v": 4.99999911,
+      "stable_threshold_ns": null,
+      "setup_margin_ns": null
+    }
+  ],
+  "independent": [
+    {
+      "case": "rising-normal",
+      "max_voltage_difference_v": 0.00011248731506396936,
+      "measured": {
+        "passed": true,
+        "window_min_v": 4.9037739655513395,
+        "window_max_v": 4.9037739655513395,
+        "stable_threshold_ns": 193.04155892173947,
+        "setup_margin_ns": 71.95844107826053
+      }
+    },
+    {
+      "case": "rising-overload",
+      "max_voltage_difference_v": 2.675455578027286e-06,
+      "measured": {
+        "passed": false,
+        "window_min_v": 1.4014995465911828,
+        "window_max_v": 2.259275016403578,
+        "stable_threshold_ns": 299.3839630183807,
+        "setup_margin_ns": -34.38396301838071
+      }
+    },
+    {
+      "case": "falling-normal",
+      "max_voltage_difference_v": 6.469567117539654e-05,
+      "measured": {
+        "passed": true,
+        "window_min_v": 0.14202404332200239,
+        "window_max_v": 0.14202404332200239,
+        "stable_threshold_ns": 199.61074002818998,
+        "setup_margin_ns": 65.38925997181002
+      }
+    },
+    {
+      "case": "falling-overload",
+      "max_voltage_difference_v": 3.796027602476215e-06,
+      "measured": {
+        "passed": false,
+        "window_min_v": 3.1271261554864567,
+        "window_max_v": 3.8683905761387916,
+        "stable_threshold_ns": null,
+        "setup_margin_ns": null
+      }
+    }
+  ],
+  "refinements": [
+    {
+      "case": "rising-normal",
+      "threshold_difference_ns": 0.0001404123436543614,
+      "measured": {
+        "passed": true,
+        "window_min_v": 4.90377397,
+        "window_max_v": 4.90377397,
+        "stable_threshold_ns": 193.04168177717887,
+        "setup_margin_ns": 71.95831822282113
+      }
+    },
+    {
+      "case": "falling-normal",
+      "threshold_difference_ns": 0.00014519731968221095,
+      "measured": {
+        "passed": true,
+        "window_min_v": 0.142024043,
+        "window_max_v": 0.142024043,
+        "stable_threshold_ns": 199.61058926168832,
+        "setup_margin_ns": 65.38941073831168
+      }
+    }
+  ],
+  "rejected_corners": [
+    {
+      "corner": "max",
+      "edge": "rising",
+      "reason": "Singular/ill-conditioned two-fixture extraction",
+      "exception": "ZeroDivisionError"
+    }
+  ],
+  "conversion_faults": [
+    {
+      "fault": "die-capacitance-times-ten",
+      "max_difference_v": 3.04083509,
+      "rms_difference_v": 0.7014491518423502,
+      "threshold_difference_ns": 3.217627478311723
+    }
+  ]
+}

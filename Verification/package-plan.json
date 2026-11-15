@@ -1,0 +1,42 @@
+{
+  "revision": 1,
+  "basis": "Function follows the drawn symbol and pin geometry. Corrected ALU values use the sheet's HCT logic convention; exact manufacturer/speed grades remain unresolved. Gate sharing is explicit by instance stamp and unit, with geometry-preserving physical-pin remapping.",
+  "sheets": {
+    "ALU": [
+      {"ref":"U1","value":"74HCT74","instances":[["5F0EF992",1],["5F0F1338",2],["69172001",3]]},
+      {"ref":"U2","value":"74HCT74","instances":[["5F0FF161",1],["5F0FF16B",2],["69172002",3]]},
+      {"ref":"U3","value":"M27C322","instances":[["5F12C1E6",1]]},
+      {"ref":"U4","value":"74HCT240","instances":[["5F237668",1]]},
+      {"ref":"U5","value":"74HCT377","instances":[["5F279A4A",1]]},
+      {"ref":"U6","value":"74HCT377","instances":[["5F2AC7D4",1]]},
+      {"ref":"U7","value":"74HCT377","instances":[["5F2AD4C4",1]]},
+      {"ref":"U8","value":"74HCT244","instances":[["5F2AE932",1]]},
+      {"ref":"U9","value":"74HCT245","instances":[["5F2BC763",1]]},
+      {"ref":"U10","value":"74HCT32","instances":[["5F568C57",1],["5F56A35D",2],["5F56AF7E",3],["5F56BFCF",4],["69172003",5]]},
+      {"ref":"U11","value":"74HCT32","instances":[["5F56D51F",1],["69172101",2],["69172102",3],["69172103",4],["69172004",5]]},
+      {"ref":"U12","value":"74HCT04","instances":[["5F56FBFE",1],["5F570E1C",2],["69172104",3],["69172105",4],["69172106",5],["69172107",6],["69172005",7]]},
+      {"ref":"U13","value":"74HCT245","instances":[["69175001",1]]},
+      {"ref":"U14","value":"74HCT125","instances":[["69176001",1],["69176002",2],["69176003",3],["69176004",4],["69176005",5]]}
+    ],
+    "Memory": [
+      {"ref":"U1","value":"74HCT245","instances":[["5F5A661D",1]]},
+      {"ref":"U2","value":"74HCT245","instances":[["5F5A783D",1]]},
+      {"ref":"U3","value":"74HCT245","instances":[["5F5A8C71",1]]},
+      {"ref":"U4","value":"74HCT191","instances":[["5F5AA130",1]]},
+      {"ref":"U5","value":"27C256","instances":[["5F5AD161",1]]},
+      {"ref":"U6","value":"UM61512AK-15","instances":[["5F5AEABC",1]]},
+      {"ref":"U7","value":"74HCT32","instances":[["5F5AFCCB",1],["5F7DB936",2],["5FF7D14D",3],["600F0F45",4],["69171001",5]]},
+      {"ref":"U8","value":"74HCT08","instances":[["5F5B30F4",1],["5F61560B",2],["5F617420",3],["5FD39938",4],["69171002",5]]},
+      {"ref":"U9","value":"74HCT00","instances":[["5F5B5820",1],["5FFE46A9",2],["60170A74",3],["69171101",4],["69171003",5]]},
+      {"ref":"U10","value":"74HCT04","instances":[["5F5B7D3B",1],["603E13BE",2],["604130CD",3],["69171102",4],["69171103",5],["69171104",6],["69171004",7]]},
+      {"ref":"U11","value":"74HCT191","instances":[["5F4414B0",1]]},
+      {"ref":"U12","value":"74HCT191","instances":[["5F44204B",1]]},
+      {"ref":"U13","value":"74HCT191","instances":[["5F442A46",1]]},
+      {"ref":"U14","value":"74HCT08","instances":[["5FEF36D4",1],["5FF23E1B",2],["5FF3B239",3],["601D80D1",4],["69171005",5]]},
+      {"ref":"U15","value":"74LS21","instances":[["5FEF5707",1],["5FEF9971",2],["69171006",3]]},
+      {"ref":"U16","value":"74HCT02","instances":[["6033E2E7",1],["69171105",2],["69171106",3],["69171107",4],["69171007",5]]},
+      {"ref":"U17","value":"74HCT08","instances":[["6042B0F8",1],["69171108",2],["69171109",3],["6917110A",4],["69171008",5]]},
+      {"ref":"U18","value":"74HCT32","instances":[["69170001",1],["6917110B",2],["6917110C",3],["6917110D",4],["69171009",5]]}
+    ]
+  }
+}

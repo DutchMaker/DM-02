@@ -1,0 +1,8 @@
+# FlightDeck project configuration (<repo>/.flightdeck/config.toml).
+#
+# Only values that differ from the global config (~/.flightdeck/config.toml)
+# need to live here. Anything omitted is inherited from the global base.
+
+[project]
+name = "DM-02"
+default_base_branch = "master"

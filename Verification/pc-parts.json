@@ -1,0 +1,15 @@
+{
+  "revision":"PC1",
+  "devices":{
+    "CD74HCT161M96":{"function":"161","package":"SOIC-16","source":"cd74hct161","pages":[2,3,7,8,11],"clock_q_max_ns":59,"clock_tc_max_ns":63,"clear_max_ns":75,"data_setup_ns":15,"data_hold_ns":5,"enable_setup_ns":20,"enable_hold_ns":3,"load_setup_ns":18,"load_hold_ns":3,"recovery_ns":22,"reset_pulse_ns":30,"clock_low_ns":24,"input_cap_pf":10},
+    "CD74AC175M96":{"function":"175","package":"SOIC-16","source":"cd74ac175","pages":[6,7],"max_delay_ns":12.2,"setup_ns":2,"hold_ns":2,"recovery_ns":1,"input_cap_pf":10},
+    "SN74AHCT244N":{"function":"244","package":"PDIP-20","source":"sn74ahct244","pages":[5],"max_delay_ns":9.5,"enable_max_ns":13,"disable_max_ns":13,"input_cap_pf":10},
+    "SN74AHCT04N":{"function":"04","package":"PDIP-14","source":"sn74ahct04","pages":[5],"max_delay_ns":8.5,"input_cap_pf":10},
+    "SN74AHCT08DR":{"function":"08","package":"SOIC-14","source":"sn74ahct08","pages":[6],"max_delay_ns":9,"input_cap_pf":10},
+    "SN74AHCT32N":{"function":"32","package":"PDIP-14","source":"sn74ahct32","pages":[5],"max_delay_ns":10,"input_cap_pf":10}
+  },
+  "conditions":"HCT161 limits at 4.5 V, 50 pF, -55..125 C; other devices at 5 V +/-0.5 V, 50 pF and a specified range encompassing 0..50 C. Manufacturer input transition conditions still apply.",
+  "constraints":{"local_trace_cap_pf":5,"connector_load_pf":50,"routing_uncertainty_ns":10,"control_setup_ns":40,"control_hold_ns":10,"bus_dead_time_ns":40,"reset_pulse_ns":1000,"reset_release_guard_ns":100},
+  "procurement":"Exact logic/package candidates. TI lists CD74HCT161E and SN74AHCT08N as NRND in the retrieved addenda; active SOIC variants M96 and DR are selected instead. Stock, passive parts, assembly and footprint review remain open.",
+  "unqualified":["Input slew, PCB capacitance, clock skew and receiver reset sequencing are not measured.","Physical controller control-word latching and backplane hookup are not implemented.","Address-to-MAR same-edge transfer hold and shared-bus global arbitration require connected module timing.","No minimum HCT161 propagation delay is assumed; carry enables are staged on the opposite clock edge."]
+}

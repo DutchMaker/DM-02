@@ -1,0 +1,37 @@
+{
+  "revision": "prototype-baseline-1",
+  "scope": "TTL CPU, microcode, ROM/RAM, debugger and text output; graphics is a later integration target",
+  "status": "engineering baseline; physical operating envelope has not been demonstrated",
+  "operating_envelope": {"clock_hz": 1000000, "supply_min_v": 4.75, "supply_max_v": 5.25, "ambient_min_c": 0, "ambient_max_c": 50},
+  "architecture": {"data_bits": 8, "address_bits": 16, "rom_start": 0, "ram_start": 16384, "io_start": 65280, "registers": ["A", "B", "C", "H", "L"], "microcode_words": 65536, "alu_words": 2097152},
+  "pilot": {"documented_phase_ns": 120, "candidate_phase_ns": 300, "clock_period_ns": 1000, "source_tco_ns": 45, "rom_access_ns": 100, "buffer_delay_ns": 28, "setup_ns": 25, "hold_ns": 5, "clock_uncertainty_ns": 10, "minimum_pulse_ns": 20, "reset_guard_ns": 30},
+  "requirements": [
+    {"id": "BASE-01", "text": "Preserve source component instances and electrical connectivity through review migration", "gate": "migration"},
+    {"id": "BASE-02", "text": "Every physical part has an unambiguous function, manufacturer part number, package, speed grade and sourcing decision", "gate": "bom"},
+    {"id": "BASE-03", "text": "ALU and Memory instances have explicit physical gate/package allocation with preserved endpoint connectivity", "gate": "packages"},
+    {"id": "BASE-04", "text": "Schematic supply pins, unused units and logic inputs have no unresolved structural electrical findings", "gate": "electrical"},
+    {"id": "BASE-05", "text": "Independent electrical review accepts the component choices and circuit wiring", "gate": "electrical-review"},
+    {"id": "PILOT-01", "text": "Representative register-ROM-buffer path passes with explicit timing monitors", "gate": "pilot"},
+    {"id": "PILOT-02", "text": "Injected setup, hold, pulse, reset, contention and wiring faults are detected for the expected reason", "gate": "mutations"},
+    {"id": "PILOT-03", "text": "Loaded output reaches the required voltage before capture in a bounded analogue experiment", "gate": "analog"},
+    {"id": "PILOT-04", "text": "The implemented clock meets worst-case phase timing, including load, setup, hold and output-enable handover", "gate": "timing"},
+    {"id": "PILOT-05", "text": "The physical clock and driver models are qualified for the stated operating envelope", "gate": "physical-clock"},
+    {"id": "MOD-01", "text": "All 2097152 ALU addresses agree with the independently expressed data/flag contract", "gate": "alu"},
+    {"id": "MOD-02", "text": "Both microcode images contain 65536 words, match independent encoding and reproduce the checked-in copies", "gate": "microcode"},
+    {"id": "MOD-03", "text": "Compiled control-word execution agrees with the instruction contract under reviewed phase and flag-capture semantics", "gate": "control"},
+    {"id": "MOD-04", "text": "Compiled JMP/CALL reaches every target and handles conditional/operand boundaries under the extracted PC model", "gate": "control-flow"},
+    {"id": "MOD-05", "text": "Committed demo programs halt with expected text and bitmap through compiled control words and bounded host IO", "gate": "control-programs"},
+    {"id": "MOD-06", "text": "Schematic-derived memory decode passes independent MAR/external-address/read/write cases and byte pin-route checks", "gate": "memory"},
+    {"id": "MOD-07", "text": "Schematic-derived register slice captures every byte and releases the data bus", "gate": "registers"},
+     {"id": "MOD-08", "text": "ALU, controller, MAR/stack and IO modules have complete schematic-derived timed integration", "gate": "module-timing"},
+     {"id": "MOD-09", "text": "Schematic-derived ALU data and control paths preserve operands, ROM pin order, flag packing/hold, phase-qualified C/Z commands and bus isolation under connector stimulus", "gate": "alu-circuit"},
+    {"id": "SYS-01", "text": "All 227 opcodes execute correctly in a complete schematic-derived timed machine", "gate": "system"},
+    {"id": "PCB-01", "text": "Routed design passes electrical, timing, signal-integrity, connectivity and fabrication review", "gate": "pcb"},
+    {"id": "LAB-01", "text": "Instrumented hardware meets the operating envelope and repeats the diagnostic tests", "gate": "bench"}
+  ],
+  "milestones": [
+    {"number":1,"title":"Baseline & electrical inventory","requirements":["BASE-01","BASE-02","BASE-03","BASE-04","BASE-05"]},
+    {"number":2,"title":"Qualify the verification method","requirements":["PILOT-01","PILOT-02","PILOT-03","PILOT-04","PILOT-05"]},
+    {"number":3,"title":"Module verification","requirements":["MOD-01","MOD-02","MOD-03","MOD-04","MOD-05","MOD-06","MOD-07","MOD-08","MOD-09"]}
+  ]
+}

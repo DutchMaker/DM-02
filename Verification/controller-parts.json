@@ -1,0 +1,17 @@
+{
+  "revision":"CW1",
+  "devices":{
+    "AT27C512R-70PU":{"function":"27C512","package":"PDIP-28","source":"at27c512r","pages":[3,4,6,7,8,9,12,21],"max_delay_ns":70,"input_cap_pf":6,"capacitance_note":"CIN maximum is specified at 25 C; address drivers are external and require full-envelope qualification.","output_hold_ns":7},
+    "SN74HCT574N":{"function":"574","package":"PDIP-20","source":"sn74hct574","pages":[3,4,5,6],"max_delay_ns":45,"setup_ns":25,"hold_ns":5,"pulse_ns":20,"input_cap_pf":10},
+    "CD74HCT154M96":{"function":"154","package":"SOIC-24","source":"cd74hct154","pages":[1,2,4,5],"max_delay_ns":53,"input_cap_pf":10},
+    "CD74AC175M96":{"function":"175","package":"SOIC-16","source":"cd74ac175","pages":[6,7],"max_delay_ns":12.2,"setup_ns":2,"hold_ns":2,"recovery_ns":1,"input_cap_pf":10},
+    "SN74AHCT244N":{"function":"244","package":"PDIP-20","source":"sn74ahct244","pages":[5],"max_delay_ns":9.5,"input_cap_pf":10},
+    "SN74AHCT04N":{"function":"04","package":"PDIP-14","source":"sn74ahct04","pages":[5],"max_delay_ns":8.5,"input_cap_pf":10},
+    "SN74AHCT08DR":{"function":"08","package":"SOIC-14","source":"sn74ahct08","pages":[6],"max_delay_ns":9,"input_cap_pf":10},
+    "SN74AHCT00DR":{"function":"00","package":"SOIC-14","source":"sn74ahct00","pages":[5,6],"max_delay_ns":9,"input_cap_pf":10}
+  },
+  "conditions":"4.5 V timing bounds at 50 pF (ROM read timing uses 100 pF); logic temperature columns encompass 0..50 C. Input slew, actual capacitance and reset sequencing still require qualification.",
+  "constraints":{"local_trace_cap_pf":5,"connector_load_pf":25,"pc_increment_connector_load_pf":45,"routing_uncertainty_ns":10,"rom_address_setup_ns":150,"rom_address_hold_ns":20},
+  "scope":"ROM/latch/decode slice only. IR, t-state, live flags, fetch selection and HALT arbitration remain external. Decoder outputs are phase-windowed; sequencer must sample end/HALT while PH2 is high.",
+  "procurement":"Two active AT27C512R-70PU OTP ROM candidates replace the architectural 64Kx16 ROM with low/high byte banks. Logic candidates use current TI orderable variants. OTP programmer validation, stock commitment, passive MPNs and footprint release review are open. SN74HCT574N is used because the retrieved AHCT574 timing table labels LE falling edge despite its edge-triggered functional description."
+}

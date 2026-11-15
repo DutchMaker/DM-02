@@ -1,0 +1,928 @@
+Source: https://ww1.microchip.com/downloads/aemDocuments/documents/MPD/ProductDocuments/DataSheets/AT27C512R-512-Kbit-OTP-ROM-Data-Sheet-DS20006752.pdf
+Retrieved: 2026-11-14
+PDF pages: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 21]
+
+--- PDF page 1 ---
+                                                                                       AT27C512R
+
+                 512-Kbit (64K x 8) One-Time Programmable,
+                                          Read‑Only Memory
+
+Features
+
+  •    Fast Read Access Time: 45 ns
+  •    Low-Power CMOS Operation:
+       –   100 μA maximum standby
+       –   20 mA maximum active at 5 MHz
+  •    5V ± 10% Supply
+  •    High Reliability CMOS Technology:
+       –   2,000V ESD protection
+       –   200 mA latch-up immunity
+  •    Rapid Programming Algorithm – 100 μs/byte (typical)
+  •    CMOS and TTL Compatible Inputs and Outputs
+  •    Integrated Product Identification Code
+  •    Industrial Temperature Range: -40°C to +85°C
+  •    Green Package Options (Lead-free/Halide-free/RoHS compliant)
+
+Packages
+
+  •    32-Lead PLCC and 28-Lead PDIP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+© 2022 Microchip Technology Inc.                            Data Sheet                                  DS20006752A-page 1
+and its subsidiaries
+--- PDF page 2 ---
+                                                                                                                                                                     AT27C512R
+
+
+ Table of Contents
+
+
+ Features......................................................................................................................................................... 1
+
+ Packages  ......................................................................................................................................................1
+
+ 1.     Package Types (not to scale)..................................................................................................................3
+
+ 2.     Pin Description........................................................................................................................................4
+
+ 3.     Description.............................................................................................................................................. 5
+
+ 4.     Electrical Characteristics.........................................................................................................................6
+
+ 5.     Rapid Programming Algorithm.............................................................................................................. 12
+
+ 6.     Packaging Information.......................................................................................................................... 13
+
+ 7.     Revision History.................................................................................................................................... 19
+
+ Microchip Information...................................................................................................................................20
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+© 2022 Microchip Technology Inc.                                                                   Data Sheet                                                              DS20006752A-page 2
+and its subsidiaries
+--- PDF page 3 ---
+                                                                                                            AT27C512R
+                                                                                         Package Types (not to scale)
+
+
+1.        Package Types (not to scale)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Note:
+            1.     PLCC package pins 1, 12, 17 and 26 are not connected.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          © 2022 Microchip Technology Inc.                           Data Sheet                                DS20006752A-page 3
+          and its subsidiaries
+--- PDF page 4 ---
+                                                                                                                   AT27C512R
+                                                                                                                   Pin Description
+
+
+2.         Pin Description
+           The description of the pins are listed in Table 2.1.
+           Table 2-1. Pin Description
+
+                    Name                   32-Lead PLCC                    28-Lead PDIP                           Function
+                  A0 - A15                 2-11; 24; 27-31                 1-10; 21; 23-27          Address Inputs
+
+                   O0 - O7                  13-15; 18-22                    11-13; 15-19            Outputs
+                     CE                           23                             20                 Chip Enable
+
+                   OE/VPP                         25                             22                 Output Enable/Program Supply
+                     NC                     1; 12; 17; 26                         —                 Not Connected
+
+                     VCC                          32                             28                 Device Power Supply
+                    GND                           16                             14                 Ground
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          © 2022 Microchip Technology Inc.                               Data Sheet                                   DS20006752A-page 4
+          and its subsidiaries
+--- PDF page 5 ---
+                                                                                                                              AT27C512R
+                                                                                                                                      Description
+
+
+3.          Description
+            The Microchip AT27C512R is a low-power, high-performance, 524,288-bit, One-Time Programmable, Read-Only
+            memory (OTP EPROM) organized as 65,536 words of 8 bits each. It requires only one 5V power supply in normal
+            Read mode operation. Any byte can be accessed in less than 45 ns, eliminating the need for speed-reducing WAIT
+            states on high-performance microprocessor systems.
+            The Microchip-scaled CMOS technology provides low active power consumption and fast programming. Power
+            consumption is typically only 8 mA in Active mode and less than 10 μA in Standby mode.
+            The AT27C512R is available in a choice of industry-standard, JEDEC-approved, PDIP and PLCC packages. All
+            devices feature two-line control (CE, OE) to give designers the flexibility to prevent bus contention.
+            With 64 Kbyte storage capability, the AT27C512R allows firmware to be stored reliably and to be accessed by the
+            system without the delays of mass storage media.
+            The AT27C512R has additional features to ensure high-quality and efficient production use. The rapid programming
+            algorithm reduces the time required to program the part and guarantees reliable programming. Programming time
+            is typically only 100 μs/byte. The integrated product identification code electronically identifies the device and
+            manufacturer. This feature is used by industry-standard programming equipment to select the proper programming
+            algorithms and voltages.
+
+
+3.1         System Considerations
+            Switching between active and standby conditions via the chip enable pin may produce transient voltage excursions.
+            Unless accommodated by the system design, these transients may exceed data sheet limits, resulting in device
+            non-conformance. At a minimum, a 0.1 μF, high-frequency, low inherent inductance, ceramic capacitor should be
+            utilized for each device. This capacitor should be connected between the VCC and ground terminals of the device as
+            close to the device as possible. Additionally, to stabilize the supply voltage level on printed circuit boards with large
+            EPROM arrays, a 4.7 μF bulk electrolytic capacitor should be utilized and again connected between the VCC and
+            ground terminals. This capacitor should be positioned as close as possible to the point where the power supply is
+            connected to the array.
+
+
+3.2         Block Diagram
+            Figure 3-1. Block Diagram
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           © 2022 Microchip Technology Inc.                                     Data Sheet                                        DS20006752A-page 5
+           and its subsidiaries
+--- PDF page 6 ---
+                                                                                                                           AT27C512R
+                                                                                                            Electrical Characteristics
+
+
+4.          Electrical Characteristics
+
+
+4.1         Absolute Maximum Ratings
+
+             Temperature under bias                                                                           -55°C to +125°C
+             Storage temperature                                                                              -65°C to +150°C
+             Voltage on any pin with respect to ground                                                        -2.0V to +7.0V(1)
+             Voltage on A9 with respect to ground                                                             -2.0V to +14.0V(1)
+             VPP supply voltage with respect to ground                                                        -2.0V to +14.0V(1)
+
+            Note: Stresses above those listed under “Absolute Maximum Ratings” may cause permanent damage to the device.
+            This is a stress rating only and functional operation of the device at these or any other conditions above those
+            indicated in the operation listings of this specification is not implied. Exposure to absolute maximum rating conditions
+            for extended periods may affect device reliability.
+            Note:
+              1.     Minimum voltage is -0.6V DC, which may undershoot to -2.0V for pulses of less than 20 ns. Maximum output
+                    pin voltage is VCC +0.75V DC, which may overshoot to +7.0V for pulses of less than 20 ns.
+
+
+4.2         DC and AC Operating Range
+            Table 4-1. DC and AC Operating Range
+
+                        Mode/Pin                       CE            OE/VPP                      Ai                            Outputs
+
+             Read                                      VIL              VIL                       Ai                 DOUT
+             Output disable                            VIL              VIH                      X(1)                High-Z
+
+             Standby                                   VIH             X(1)                      X(1)                High-Z
+             Rapid program(2)                          VIL             VPP                        Ai                 DIN
+
+             PGM inhibit                               VIH             VPP                       X(1)                High-Z
+             Product identification(4)                 VIL              VIL        A9 = VH(3), A0 = VIH or VIL       Identification code
+                                                                                           A1-A15 = VIL
+
+            Notes:
+              1.     X can be VIL or VIH.
+              2.     Refer to programming characteristics.
+              3.     VH = 12.0 ± 0.5V.
+              4.     Two identifier bytes may be selected. All Ai inputs are held low (VIL), except A9, which is set to VH, and A0,
+                    which is toggled low (VIL) to select the manufacturer’s identification byte and high (VIH) to select the device
+                    code byte.
+
+
+
+            Table 4-2. DC and AC Operating Conditions for Read Operation
+
+                                               AT27C512R                                                   -45                       -70
+
+             Operating Temperature (Case)               Industrial Temperature Range             -40°C - 85°C             -40°C - 85°C
+             VCC Supply                                                                          5V ± 10%                 5V ± 10%
+
+
+
+
+           © 2022 Microchip Technology Inc.                                    Data Sheet                                      DS20006752A-page 6
+           and its subsidiaries
+--- PDF page 7 ---
+                                                                                                                    AT27C512R
+                                                                                                     Electrical Characteristics
+
+
+4.3        DC and Operating Characteristics for Read Operation
+           Table 4-3. DC and Operating Characteristics for Read Operation
+
+                       Parameter                Symbol      Minimum       Maximum        Units                   Condition
+
+            Input Load Current                     ILI           —            ±1          μA       Industrial        VIN = 0V to VCC
+            Output Leakage Current                 ILO           —            ±5          μA       Industrial       VOUT = 0V to VCC
+
+            VCC(1)Standby Current                  ISB           —            100         μA      ISB1 (CMOS), CE = VCC ±0.3V
+                                                                               1          mA      ISB2 (TTL), CE = 2.0 to VCC +0.5V
+
+            VCC Active Current                     ICC           —            20          mA      f = 5 MHz, IOUT = 0 mA, CE = VIL
+            Input Low Voltage                      VIL          -0.6          0.8          V
+
+            Input High Voltage                     VIH          2.0        VCC + 0.5       V
+            Output Low Voltage                     VOL           —            0.4          V      IOL = 2.1 mA
+
+            Output High Voltage                   VOH           2.4            —           —      IOH = -400 μA
+
+           Note:
+             1.     VCC must be applied simultaneously with or before OE/VPP, and removed simultaneously with or after OE/VPP.
+
+
+4.4        AC Characteristics for Read Operation
+           Table 4-4. AC Characteristics for Read Operation
+
+                                                             -45                          -70
+                 Parameter           Symbol                                                                 Units          Condition
+                                                  Minimum       Maximum       Minimum        Maximum
+            Address to Output         tACC(1)         —             45             —             70           ns      CE = OE/VPP = VIL
+            Delay
+
+            CE to Output Delay         tCE(1)         —             45             —             70           ns         OE/VPP = VIL
+            OE/VPP to Output           tOE(1)         —             20             —             30           ns            CE = VIL
+            Delay
+
+            OE/VPP or CE                                                                                                 OE/VPP or CE
+            High to Output             tDF(1)         —             20             —             25           ns         High to Output
+            Float, Whichever                                                                                           Float, Whichever
+            Occurred First                                                                                               Occurred First
+            Output hold from                                                                                           Output hold from
+            address, CE or              tOH           7             —              7             —            ns        address, CE or
+            OE/VPP, whichever                                                                                         OE/VPP, whichever
+            occurred first                                                                                               occurred first
+
+           Note:
+             1.     See Figure 4-1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+          © 2022 Microchip Technology Inc.                                Data Sheet                                   DS20006752A-page 7
+          and its subsidiaries
+--- PDF page 8 ---
+                                                                                                                   AT27C512R
+                                                                                                   Electrical Characteristics
+
+
+Figure 4-1. AC Waveform for Read Operation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Notes:
+  1.     Timing measurement reference level is 1.5V for -45 devices. Input AC drive levels are VIL = 0.0V and VIH =
+        3.0V. Timing measurement reference levels for all other speed grades are VOL = 0.8V and VOH = 2.0V. Input
+        AC drive levels are VIL = 0.45V and VIH = 2.4V.
+  2.    OE/VPP may be delayed up to tCE - tOE after the falling edge of CE without impact on tCE.
+  3.    OE/VPP may be delayed up to tACC - tOE after the address is valid without impact on tACC.
+  4.     This parameter is only sampled, and is not 100% tested.
+  5.     Output float is defined as the point when data is no longer driven.
+Figure 4-2. Input Test Waveforms and Measurement Levels
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+© 2022 Microchip Technology Inc.                                     Data Sheet                                       DS20006752A-page 8
+and its subsidiaries
+--- PDF page 9 ---
+                                                                                                                          AT27C512R
+                                                                                                           Electrical Characteristics
+
+
+            Figure 4-3. Output Test Load
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            Note:
+              1.     CL = 100 pF including jig capacitance, except for the -45 devices, where CL = 30 pF.
+
+
+4.5         Programming waveforms
+            Figure 4-4. Programming Waveforms
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            Notes:
+              1.     The input timing reference is 0.8V for VIL and 2.0V for VIH.
+              2.     tOE and tDFP are characteristics of the device, but must be accommodated by the programmer.
+              3.     When programming the AT27C512R, a 0.1 µF capacitor is required across VPP and ground to suppress
+                    spurious voltage transients.
+
+
+
+
+
+
+
+
+
+
+
+           © 2022 Microchip Technology Inc.                                   Data Sheet                                     DS20006752A-page 9
+           and its subsidiaries
+--- PDF page 10 ---
+                                                                                                                   AT27C512R
+                                                                                                     Electrical Characteristics
+
+
+4.6        DC Programming Characteristics
+           Table 4-5. DC Programming Characteristics (1)
+
+                                                                     Limits
+                      Parameter              Symbol                                          Units              Test Conditions
+                                                           Minimum         Maximum
+            Input Load Current                   ILI           —               ±10            μA       VIN = VIL, VIH
+
+            Input Low Level                     VIL           -0.6             0.8             V                        —
+            Input High Level                    VIH            2.0           VCC + 1           V                        —
+
+            Output Low Voltage                  VOL            —               0.4             V       IOL = 2.1 mA
+            Output High Voltage                 VOH            2.4              —              V       IOH = -400 μA
+
+            VCC Supply Current                  ICC2           —                25            mA                        —
+            (Program and Verify)
+            OE/VPP Current                      IPP2           —                25            mA       CE = VIL
+
+            A9 Product Identification           VID           11.5             12.5            V                        —
+            Voltage
+
+           Note:
+             1.     TA = +25 ± 5°C, VCC= 6.5 ± 0.25V, OE/VPP = 13.0 ± 0.25V.
+
+
+4.7        AC Programming Characteristics
+           Table 4-6. AC Programming Characteristics(1)
+
+                                                                        Limits
+                       Parameter                Symbol                                        Units             Test conditions
+                                                              Minimum         Maximum
+            Address Setup Time                     tAS            2                —            μs
+
+            OE/VPP Setup Time                     tOES            2                —            μs
+            OE/VPP Hold Time                      tOEH            2                —            μs
+
+            Data Setup Time                        tDS            2                —            μs
+            Address Hold Time                      tAH            0                —            μs     Input rise and fall times (10% to
+                                                                                                       90%) 20 ns
+            Data Hold Time                         tDH            2                —            μs     Input pulse levels 0.45V to 2.4V
+            CE High to Output Float               tDFP            0               130           ns     Input timing reference level
+            Delay(3)                                                                                   0.8V to 2.0V
+
+            VCC Setup Time                        tVCS            2                —            μs     Output timing reference level
+            CE Program Pulse Width(4)              tPW            95              105           μs     0.8V to 2.0V
+
+            Data Valid From CE(3)                  tDV            —                1            μs
+            OE/VPPRecovery Time                    tVR            2                —            μs
+
+            OE/VPP Pulse Rise Time                tPRT            50               —            ns
+            During Programming
+
+
+
+
+
+
+
+
+
+          © 2022 Microchip Technology Inc.                               Data Sheet                                  DS20006752A-page 10
+          and its subsidiaries
+--- PDF page 11 ---
+                                                                                                                        AT27C512R
+                                                                                                         Electrical Characteristics
+
+
+            Notes:
+              1.     TA = +25 ± 5°C, VCC= 6.5 ± 0.25V, OE/VPP = 13.0 ± 0.25V.
+              2.     VCC must be applied simultaneously with or before OE/VPP and removed simultaneously with or after OE/VPP.
+              3.     This parameter is only sampled, and is not 100% tested. Output float is defined as the point where data is no
+                   longer driven. See timing diagram.
+              4.     Program pulse width tolerance is 100 μs ± 5%.
+
+
+4.8         Electrical Specifications
+
+4.8.1       Pin Capacitance
+            Table 4-7. Pin Capacitance(1,2)
+
+                    Symbol                  Typical                   Maximum                     Units                  Conditions
+
+                      CIN                       4                          6                        pF         VIN = 0V
+                     COUT                       8                          12                       pF         VOUT = 0V
+
+            Notes:
+              1.     Typical values for nominal supply voltage. This parameter is only sampled, and is not 100% tested.
+              2.     f = 1 MHz, TA = 25°C
+
+
+4.9         Integrated Product Identification Code
+            Table 4-8. Integrated Product Identification Code
+
+                        Codes                                                         Pins                                               Hex
+                                                A0        O7        O6        O5       O4        O3        O2        O1       O0        data
+
+             Manufacturer                        0         0         0         0        1         1         1         1        0         1E
+             Device type                         1         0         0         0        0         1         1         0        1         0D
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           © 2022 Microchip Technology Inc.                                 Data Sheet                                    DS20006752A-page 11
+           and its subsidiaries
+--- PDF page 12 ---
+                                                                                                                              AT27C512R
+                                                                                                     Rapid Programming Algorithm
+
+
+5.          Rapid Programming Algorithm
+            A 100 μs CE pulse width is used to program. The address is set to the first location. VCC is raised to 6.5V and
+            OE/VPP is raised to 13.0V. Each address is first programmed with one 100 μs CE pulse without verification. Then a
+            verification/reprogramming loop is executed for each address. In the event a byte fails to pass verification, up to 10
+            successive 100 μs pulses are applied with a verification after each pulse. If the byte fails to verify after 10 pulses
+            have been applied, the part is considered failed. After the byte verifies properly, the next address is selected until all
+            have been checked. OE/VPP is then lowered to VIL and VCC to 5.0V. All bytes are read again and compared with the
+            original data to determine if the device passes or fails.
+            Figure 5-1. Rapid Programming Algorithm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           © 2022 Microchip Technology Inc.                                     Data Sheet                                      DS20006752A-page 12
+           and its subsidiaries
+--- PDF page 21 ---
+                                                                                                                AT27C512R
+
+
+Product Identification System
+
+To order or obtain information, e.g., on pricing or delivery, refer to the factory or the listed sales office.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Examples
+
+                                                Package       Package
+            Device                Package       Drawing        Option         Shipping Carrier Option                Device Grade
+                                                  Code
+ AT27C512R‑45JU                    PLCC             L            JU                  Bulk (Tubes)
+
+ AT27C512R‑70JU                    PLCC             L            JU                  Bulk (Tubes)
+ AT27C512R‑45PU                     PDIP            P            PU                  Bulk (Tubes)                       Industrial
+                                                                                                                      Temperature
+ AT27C512R‑70PU                     PDIP            P            PU                  Bulk (Tubes)                  (-40°C to +85°C)
+ AT27C512R‑45JU-T                  PLCC             L            JU                 Tape and Reel
+
+ AT27C512R‑70JU-T                  PLCC             L            JU                 Tape and Reel
+
+
+Microchip Devices Code Protection Feature
+
+Note the following details of the code protection feature on Microchip products:
+  •    Microchip products meet the specifications contained in their particular Microchip Data Sheet.
+  •    Microchip believes that its family of products is secure when used in the intended manner, within operating
+      specifications, and under normal conditions.
+  •    Microchip values and aggressively protects its intellectual property rights. Attempts to breach the code
+      protection features of Microchip product is strictly prohibited and may violate the Digital Millennium Copyright
+      Act.
+  •    Neither Microchip nor any other semiconductor manufacturer can guarantee the security of its code. Code
+      protection does not mean that we are guaranteeing the product is “unbreakable”. Code protection is constantly
+      evolving. Microchip is committed to continuously improving the code protection features of our products.
+
+Legal Notice
+
+This publication and the information herein may be used only with Microchip products, including to design, test,
+and integrate Microchip products with your application. Use of this information in any other manner violates these
+terms. Information regarding device applications is provided only for your convenience and may be superseded
+by updates. It is your responsibility to ensure that your application meets with your specifications. Contact your
+
+
+
+
+© 2022 Microchip Technology Inc.                                   Data Sheet                                      DS20006752A-page 21
+and its subsidiaries

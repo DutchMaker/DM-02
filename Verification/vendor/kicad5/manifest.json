@@ -1,0 +1,56 @@
+{
+  "commit": "2777f4341e7d96346cb8c78574350d64033c615c",
+  "tag": "5.1.6",
+  "files": [
+    {
+      "name": "74xx.lib",
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-symbols/2777f4341e7d96346cb8c78574350d64033c615c/74xx.lib",
+      "sha256": "b07606526ccab450344194f37e5c4564a6147f7b9cb3e0a8467137e0840a2adb"
+    },
+    {
+      "name": "Connector.lib",
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-symbols/2777f4341e7d96346cb8c78574350d64033c615c/Connector.lib",
+      "sha256": "23fd55c31b959ffeb69b3a98b74daec4ccb08df9bbe8f37179f8a6f2f04e882d"
+    },
+    {
+      "name": "Connector_Generic.lib",
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-symbols/2777f4341e7d96346cb8c78574350d64033c615c/Connector_Generic.lib",
+      "sha256": "ebee787e339d021d726e15d20d3f46ce9e49eb47976a7f32569bd8723319a16a"
+    },
+    {
+      "name": "Device.lib",
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-symbols/2777f4341e7d96346cb8c78574350d64033c615c/Device.lib",
+      "sha256": "f81265d31f1006db065d213a376e7ed857e043c9ca1e9419249225cab366f84f"
+    },
+    {
+      "name": "Mechanical.lib",
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-symbols/2777f4341e7d96346cb8c78574350d64033c615c/Mechanical.lib",
+      "sha256": "f58ea5d40fcdd4c2c780a64c274dfd8917dcea4ade69a9a22acf5d3027ed084d"
+    },
+    {
+      "name": "Memory_EPROM.lib",
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-symbols/2777f4341e7d96346cb8c78574350d64033c615c/Memory_EPROM.lib",
+      "sha256": "8150b59ee4acd4413f9279a8daecbf2bce3c7e2a2948b7c9bc3b003244e9eab7"
+    },
+    {
+      "name": "Power_Supervisor.lib",
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-symbols/2777f4341e7d96346cb8c78574350d64033c615c/Power_Supervisor.lib",
+      "sha256": "059fc0fa13913f037500387d5d3f91d8f2b5170dc6f07ba9e9068d8b1f944456"
+    },
+    {
+      "name": "Switch.lib",
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-symbols/2777f4341e7d96346cb8c78574350d64033c615c/Switch.lib",
+      "sha256": "9b540ebf5568b76b402e7369430f08d42611a0b5d9e54ee844644981dafc6ac5"
+    },
+    {
+      "name": "power.lib",
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-symbols/2777f4341e7d96346cb8c78574350d64033c615c/power.lib",
+      "sha256": "45f1d0bb79a64566db52e189f9109c430fb364b4b4882397bcc9f9ebadf5516f"
+    },
+    {
+      "name": "LICENSE.md",
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-symbols/2777f4341e7d96346cb8c78574350d64033c615c/LICENSE.md",
+      "sha256": "285b027a721577d0bc0198f36e948c6c282ddaa4b58fef8ed826749576eb0aef"
+    }
+  ]
+}

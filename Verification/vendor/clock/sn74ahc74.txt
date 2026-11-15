@@ -1,0 +1,377 @@
+Source: https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf
+Retrieved: 2026-11-14
+PDF SHA256: 48edcc29fc5a6fa517a0d54a5f4459c0a784fc3342cb01ce100c75b4befb8db4
+Extraction: pypdf layout; page numbers are PDF pages. Tables require visual review of the linked PDF.
+
+--- PDF page 3 ---
+                                                                                                       SN54AHC74, SN74AHC74
+www.ti.com                                                                      SCLS255N – DECEMBER 1995 – REVISED FEBRUARY 2024
+
+4 Pin Configuration and Functions
+
+
+
+
+
+
+
+
+
+
+
+                     Figure 4-1. SN54AHC74 J or W Package, 14-Pin CDIP or CFP (Top View)
+
+
+
+
+
+
+
+
+
+
+
+
+   Figure 4-2. SN74AHC74 D, DB, DGV, N, NS, or PW Package, 14-Pin SOIC, SSOP, TVSOP, PDIP, SO, or
+                                                      TSSOP (Top View)
+
+
+
+
+
+
+
+
+
+
+
+
+  Figure 4-3. SN74AHC74 RGY or BQA Package, 14-Pin VQFN or WQFN With Exposed Thermal Pad (Top
+                                                              View)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     NC – No internal connection
+                            Figure 4-4. SN54AHC74 FK Package, 20-Pin LCCC (Top View)
+
+
+
+
+
+
+Copyright © 2024 Texas Instruments Incorporated                                                    Submit Document Feedback        3
+                                           Product Folder Links: SN54AHC74 SN74AHC74
+
+--- PDF page 4 ---
+SN54AHC74, SN74AHC74
+SCLS255N – DECEMBER 1995 – REVISED FEBRUARY 2024                                                                                                www.ti.com
+                                                             Table 4-1. Pin Functions
+                                  PIN
+                             SOIC,
+              CDIP or        SSOP,           VQFN,                        TYPE(1)                                DESCRIPTION
+ NAME           CFP         TVSOP,           WQFN            LCCC
+                         PDIP, SO, or
+                            TSSOP
+ 1CLK             3             3               3               4             I       Clock for channel 1, rising edge triggered
+
+ 1 CLR            1             1               1               2             I       Clear for channel 1, active low
+
+ 1D               2             2               2               3             I       Data for channel 1
+
+ 1 PRE            4             4               4               6             I       Preset for channel 1, active low
+
+ 1Q               5             5               5               8             O       Output for channel 1
+
+ 1 Q              6             6               6               9             O       Inverted output for channel 1
+
+ 2CLK            11            11              11              16             I       Clock for channel 2, rising edge triggered
+
+ 2 CLR           13            13              13              19             I       Clear for channel 2, active low
+
+ 2D              12            12              12              18             I       Data for channel 2
+
+ 2 PRE           10            10              10              14             I       Preset for channel 2, active low
+
+ 2Q               9             9               9              13             O       Output for channel 2
+
+ 2 Q              8             8               8              12             O       Inverted output for channel 2
+ GND              7             7               7              10             —       Ground
+ NC              —             —               —           1, 5, 7, 11,       —       No internal connection
+                                                             15, 17
+ VCC             14            14              14              20                     Positive supply
+ Thermal Pad                                                                  —       Thermal Pad
+
+(1)    I = input, O = output
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4      Submit Document Feedback                                                                               Copyright © 2024 Texas Instruments Incorporated
+                                                    Product Folder Links: SN54AHC74 SN74AHC74
+
+--- PDF page 5 ---
+                                                                                                                                  SN54AHC74, SN74AHC74
+www.ti.com                                                                                           SCLS255N – DECEMBER 1995 – REVISED FEBRUARY 2024
+
+5 Specifications
+5.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted)(1)
+                                                                                                                 MIN                 MAX                UNIT
+ VCC         Supply voltage                                                                                      –0.5                  7                  V
+ V ((2))     Input voltage                                                                                       –0.5                  7                  V
+   I
+ V   ((2))   Output voltage                                                                                      –0.5             V     + 0.5             V
+   O                                                                                                                                CC
+ IIK         Input clamp current                                            (VI < 0)                              –20                                    mA
+ IOK         Output clamp current                                           (VO < 0 or VO > VCC)                  –20                 20                 mA
+ IO          Continuous output current                                      (VO = 0 to VCC)                       –25                 25                 mA
+             Continuous current through VCC or GND                                                                –50                 50                 mA
+ Tstg        Storage temperature                                                                                  –65                150                  °C
+
+(1)    Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress
+       ratings only, which do not imply functional operation of the device at these or any other conditions beyond those indicated under
+       Recommended Operating Conditions. Exposure to absolute-maximum-rated conditions for extended periods may affect device
+       reliability.
+(2)    The input and output voltage ratings may be exceeded if the input and output current ratings are observed.
+5.2 ESD Ratings
+
+                                                                                                                                         VALUE            UNIT
+                                                Human-body model (HBM), per ANSI/ESDA/JEDEC JS-001(1)                                     ±2000
+ V(ESD)      Electrostatic discharge            Charged-device model (CDM), per JEDEC specification JESD22-                               ±1000             V
+                                                C101(2)
+
+(1)    JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process.
+(2)    JEDEC document JEP157 states that 250-V CDM allows safe manufacturing with a standard ESD control process.
+5.3 Recommended Operating Conditions
+over operating free-air temperature range (unless otherwise noted)(1)
+
+                                                                                            SN54AHC74                        SN74AHC74                    UNIT
+                                                                                              MIN             MAX              MIN             MAX
+       VCC        Supply voltage                                                                 2              5.5               2              5.5        V
+                                                   VCC = 2 V                                   1.5                              1.5
+       VIH        High-level input voltage         VCC = 3 V                                   2.1                              2.1                         V
+                                                   VCC = 5.5 V                                3.85                             3.85
+                                                   VCC = 2 V                                                    0.5                              0.5
+       VIL        Low-level input voltage          VCC = 3 V                                                    0.9                              0.9        V
+                                                   VCC = 5.5 V                                                1.65                             1.65
+        VI        Input voltage                                                                  0              5.5               0              5.5        V
+       VO         Output voltage                                                                 0             VCC                0             VCC         V
+                                                   VCC = 2 V                                                   –50                              –50        µA
+       IOH        High-level output current        VCC = 3.3 V ± 0.3 V                                          –4                               –4        mA
+                                                   VCC = 5 V ± 0.5 V                                            –8                               –8
+                                                   VCC = 2 V                                                    50                               50        µA
+       IOL        Low-level output current         VCC = 3.3 V ± 0.3 V                                            4                                4       mA
+                                                   VCC = 5 V ± 0.5 V                                              8                                8
+                                                   VCC = 3.3 V ± 0.3 V                                         100                              100
+      Δt/Δv       Input transition rise or fall rateV   = 5 V ± 0.5 V                                           20                               20       ns/V
+                                                    CC
+       TA         Operating free-air temperature                                               –55             125              –40             125         °C
+
+(1)    All unused inputs of the device must be held at VCC or GND to ensure proper device operation. See Implications of Slow or Floating
+       CMOS Inputs, SCBA004.
+
+
+Copyright © 2024 Texas Instruments Incorporated                                                                             Submit Document Feedback                5
+                                                      Product Folder Links: SN54AHC74 SN74AHC74
+
+--- PDF page 6 ---
+SN54AHC74, SN74AHC74
+SCLS255N – DECEMBER 1995 – REVISED FEBRUARY 2024                                                                                                  www.ti.com
+
+5.4 Thermal Information — SN74AHC74
+
+                                                                                             SNx4AHC74
+                                                  D        DB       DGV
+            THERMAL METRIC(1)                   (SOIC)   (SSOP)    (TVSO       N (PDIP)       NS (SO)      PW (TSSOP)      RGY (VQFN)    BQA (WQFN)      UNIT
+                                                                      P)
+                                                  14        14       14        14 PINS        14 PINS         14 PINS        14 PINS        14 PINS
+                                                 PINS     PINS      PINS
+ RθJA   Junction-to-ambient thermal             124.5       96       127          80             76            147.7           87.1           88.3       °C/W
+        resistance
+
+(1)    For more information about traditional and new thermal metrics, see the Semiconductor and IC Package Thermal Metrics application
+       report.
+5.5 Electrical Characteristics
+
+over recommended operating free-air temperature range (unless otherwise noted)
+                                                                                                –55°C to       –40°C to +85°C       –40°C to
+                                                                        TA = 25°C               +125°C          SN74AHC74            +125°C
+  PARAMETER           TEST CONDITIONS                VCC                                      SN54AHC74                           SN74AHC74           UNIT
+
+                                                                    MIN      TYP      MAX      MIN      MAX       MIN     MAX       MIN     MAX
+                                                     2 V             1.9        2               1.9                1.9               1.9
+                   IOH = –50 µA                      3 V             2.9        3               2.9                2.9               2.9
+       VOH                                          4.5 V            4.4      4.5               4.4                4.4               4.4                V
+                   IOH = –4 mA                       3 V            2.58                       2.48               2.48              2.48
+                   IOH = –8 mA                      4.5 V           3.94                        3.8                3.8               3.8
+                                                     2 V                               0.1               0.1                0.1               0.1
+                   IOL = 50 µA                       3 V                               0.1               0.1                0.1               0.1
+        VOL                                         4.5 V                              0.1               0.1                0.1               0.1       V
+                   IOL = 4 mA                        3 V                              0.36               0.5               0.44               0.5
+                   IOH = 8 mA                       4.5 V                             0.36               0.5               0.44               0.5
+         II        VI = 5.5 V or GND             0 V to 5.5 V                         ±0.1              ±1(1)               ±1                 ±1      µA
+
+        ICC        VI = VCC or       IO = 0         5.5 V                                2                20                20                 20      µA
+                   GND,
+        Ci         VI = VCC or GND                   5 V                        2       10                                  10                         pF
+
+(1)    On products compliant to MIL-PRF-38535, this parameter is not production tested at VCC = 0 V.
+5.6 Timing Requirements — VCC = 3.3 V ± 0.3 V
+
+over recommended operating free-air temperature range, (unless otherwise noted)
+                                                                         T   = 25°C          SN54AHC74          –40°C to +85°C      –40°C to +125°C
+                                                                           A                                     SN74AHC74            SN74AHC74         UNIT
+
+                                                                          MIN      MAX        MIN       MAX        MIN      MAX        MIN       MAX
+                                        PRE or CLR low                       6                   7                    7                   7
+ tw        Pulse duration               CLK                                  6                   7                    7                   7               ns
+
+ t         Setup time before CLK↑       Data                                 6                   7                    7                   7               ns
+  su                                    PRE or CLR inactive                  5                   5                    5                   5
+
+ th        Hold time, data after CLK↑                                      0.5                 0.5                  0.5                 0.5               ns
+
+5.7 Timing Requirements — VCC = 5 V ± 0.5 V
+
+over recommended operating free-air temperature range, (unless otherwise noted)
+                                                                         T   = 25°C          SN54AHC74          –40°C to +85°C      –40°C to +125°C
+                                                                           A                                     SN74AHC74            SN74AHC74         UNIT
+
+                                                                          MIN      MAX        MIN       MAX        MIN      MAX        MIN       MAX
+ t         Pulse duration               PRE or CLR low                       5                   5                    5                   5               ns
+  w                                     CLK                                  5                   5                    5                   5
+
+
+
+
+6       Submit Document Feedback                                                                               Copyright © 2024 Texas Instruments Incorporated
+                                                    Product Folder Links: SN54AHC74 SN74AHC74
+
+--- PDF page 7 ---
+                                                                                                                                 SN54AHC74, SN74AHC74
+www.ti.com                                                                                           SCLS255N – DECEMBER 1995 – REVISED FEBRUARY 2024
+
+over recommended operating free-air temperature range, (unless otherwise noted)
+                                                                            TA = 25°C          SN54AHC74           –40°C to +85°C       –40°C to +125°C
+                                                                                                                     SN74AHC74            SN74AHC74          UNIT
+                                                                            MIN       MAX        MIN       MAX        MIN       MAX         MIN      MAX
+ t          Setup time before CLK↑       Data                                  5                    5                    5                     5              ns
+  su                                     PRE or CLR inactive                   3                    3                    3                     3
+
+ th         Hold time, data after CLK↑                                       0.5                  0.5                  0.5                   0.5              ns
+
+5.8 Switching Characteristics — VCC = 3.3 V ± 0.5 V
+
+over recommended operating free-air temperature range, (unless otherwise noted)
+                                                                                                                          –40°C to         –40°C to
+  PARAMETER            FROM              TO                LOAD                  TA = 25°C            SN54AHC74            +85°C           +125°C          UNIT
+                      (INPUT)         (OUTPUT)        CAPACITANCE                                                      SN74AHC74         SN74AHC74
+                                                                             MIN     TYP      MAX      MIN      MAX      MIN     MAX      MIN     MAX
+                                                         CL = 15 pF         80(1)   125(1)             70(1)               70               70
+       fmax                                              C  = 50 pF           50       75                45                45               45              MHz
+                                                          L
+       tPLH                                                                         7.6(1)  12.3(1)     1(1)  14.5(1)       1     14.5       1     14.5
+                    PRE or CLR          Q or Q           CL = 15 pF                                      (1)       (1)                                       ns
+       tPHL                                                                           7.6     12.3      1     14.5          1     14.5       1     14.5
+       tPLH                                                                           6.7      11.9     1(1)    14(1)       1      14        1       14
+       t                CLK             Q or Q           CL = 15 pF                   6.7      11.9     1(1)    14(1)       1      14        1       14      ns
+        PHL
+       tPLH         PRE or CLR          Q or Q           C  = 50 pF                  10.1     15.8        1       18        1      18        1       18      ns
+       t                                                  L                          10.1     15.8        1       18        1      18        1       18
+        PHL
+       tPLH                                                                           9.2     15.4        1     17.5        1     17.5       1     17.5
+       t                CLK             Q or Q           CL = 50 pF                   9.2     15.4        1     17.5        1     17.5       1     17.5      ns
+        PHL
+
+(1)    On products compliant to MIL-PRF-38535, this parameter is not production tested.
+5.9 Switching Characteristics — VCC = 5 V ± 0.5 V
+over recommended operating free-air temperature range, (unless otherwise noted)
+                                                                                                                         –40°C to         –40°C to
+                       FROM               TO                LOAD                 TA = 25°C            SN54AHC74            +85°C           +125°C
+  PARAMETER           (INPUT)         (OUTPUT)         CAPACITANCE                                                     SN74AHC74        SN74AHC74          UNIT
+
+                                                                             MIN      TYP     MAX      MIN     MAX       MIN     MAX      MIN     MAX
+                                                         CL = 15 pF         130(1)  170(1)            110(1)             110               110
+       fmax                                                                                                                                                 MHz
+                                                         CL = 50 pF            90      115               75                75               75
+       tPLH                                                                          4.8(1)   7.7(1)    1(1)     9(1)       1        9       1        9
+       t            PRE or CLR          Q or Q           CL = 15 pF                  4.8(1)   7.7(1)    1(1)     9(1)       1        9       1        9      ns
+        PHL
+       tPLH                                                                          4.6(1)   7.3(1)    1(1)   8.5(1)       1      8.5       1      8.5
+                        CLK             Q or Q           CL = 15 pF                     (1)      (1)      (1)     (1)                                        ns
+       tPHL                                                                          4.6      7.3       1      8.5          1      8.5       1      8.5
+       tPLH         PRE or CLR          Q or Q           C   = 50 pF                   6.3      9.7       1       11        1      11        1       11      ns
+       t                                                   L                           6.3      9.7       1       11        1      11        1       11
+        PHL
+       tPLH             CLK             Q or Q           C   = 50 pF                   6.1      9.3       1     10.5        1    10.5        1     10.5      ns
+       t                                                   L                           6.1      9.3       1     10.5        1    10.5        1     10.5
+        PHL
+
+(1)    On products compliant to MIL-PRF-38535, this parameter is not production tested.
+5.10 Noise Characteristics
+VCC = 5 V, CL = 50 pF, TA = 25°C (see (1))
+
+                                                                                                                                       SN74AHCT74
+                                                            PARAMETER                                                                   MIN      MAX        UNIT
+
+ VOL(P)        Quiet output, maximum dynamic VOL                                                                                                  0.8         V
+ VOL(V)        Quiet output, minimum dynamic VOL                                                                                                 –0.8         V
+ VOH(V)        Quiet output, minimum dynamic VOH                                                                                        4.7                   V
+ VIH(D)        High-level dynamic input voltage                                                                                         3.5                   V
+
+
+
+Copyright © 2024 Texas Instruments Incorporated                                                                             Submit Document Feedback                7
+                                                      Product Folder Links: SN54AHC74 SN74AHC74

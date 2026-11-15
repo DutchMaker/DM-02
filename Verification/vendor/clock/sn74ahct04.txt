@@ -1,0 +1,214 @@
+Source: https://www.ti.com/lit/ds/symlink/sn74ahct04.pdf
+Retrieved: 2026-11-14
+PDF SHA256: 79e359c70a08e3a6a9318beea502f99e101b304f9ff1d4fe205c40c2d9c48c78
+Extraction: pypdf layout; page numbers are PDF pages. Tables require visual review of the linked PDF.
+
+--- PDF page 3 ---
+                                                                                                         SN54AHCT04, SN74AHCT04
+www.ti.com                                                                            SCLS232R – OCTOBER 1995 – REVISED FEBRUARY 2024
+
+4 Pin Configuration and Functions
+
+
+
+
+
+
+
+
+
+
+   Figure 4-1. SN54AHCT04 J or W Package, 14-Pin
+                            (Top View)                                Figure 4-2. SN74AHCT04 RGY or BQA Package, 14-
+  SN74AHCT04 D, DB, DGV, N, NS, or PW Package,                                                Pin (Top View)
+                       14-Pin (Top View)
+
+
+
+
+
+
+
+
+
+
+
+                                Figure 4-3. SN54AHCT04 FK Package, 20-Pin (Top View)
+
+
+                                                     Table 4-1. Pin Functions
+                                      PIN
+                              SN74AHCT04                   SN54AHCT04             TYPE(1)                  DESCRIPTION
+ NAME                    D, DB, DGV,       RGY,        J, W           FK
+                          N, NS, PW         BQA
+ 1A                            1             1           1             2              I     1A Input
+ 1Y                            2             2           2             3             O      1Y Output
+ 2A                            3             3           3             4              I     2A Input
+ 2Y                            4             4           4             6             O      2Y Output
+ 3A                            5             5           5             8              I     3A Input
+ 3Y                            6             6           6             9             O      3Y Output
+ 4A                            9             9           9            13              I     4A Input
+ 4Y                            8             8           8            12             O      4Y Output
+ 5A                            11            11         11            16              I     5A Input
+ 5Y                           10             10         10            14              I     5Y Output
+ 6A                           13             13         13            19              I     6A Input
+ 6Y                           12             12         12            18             O      6Y Output
+ GND                           7             7           7            10             —      Ground Pin
+ NC                            —             —          —           1, 5, 7,         —      No Connection
+                                                                   11, 15, 17
+ VCC                          14             14         14            20             —      Power Pin
+ Thermal Pad                   —            PAD         —              —             —      Thermal Pad
+
+(1)   I = input, O = output
+
+
+
+
+
+
+Copyright © 2024 Texas Instruments Incorporated                                                        Submit Document Feedback          3
+                                            Product Folder Links: SN54AHCT04 SN74AHCT04
+
+--- PDF page 4 ---
+SN54AHCT04, SN74AHCT04
+SCLS232R – OCTOBER 1995 – REVISED FEBRUARY 2024                                                                                                    www.ti.com
+
+5 Specifications
+5.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted)(1)
+                                                                                                                   MIN                 MAX          UNIT
+ VCC        Supply voltage range                                                                                   –0.5                     7         V
+ VI         Input voltage range(2)                                                                                 –0.5                     7         V
+ VO         Output voltage range(2)                                                                                –0.5           VCC + 0.5           V
+
+ IIK        Input clamp current                                        VI < 0                                                            –20         mA
+ IOK        Output clamp current                                       VO < 0 or VO > VCC                                                ±20         mA
+ IO         Continuous output current                                  VO = 0 to VCC                                                     ±25         mA
+            Continuous current through VCC or GND                                                                                        ±50         mA
+ Tstg       Storage temperature range                                                                               –65                  150          °C
+
+(1)    Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress
+       ratings only, which do not imply functional operation of the device at these or any other conditions beyond those indicated under
+       Recommended Operating Conditions. Exposure to absolute-maximum-rated conditions for extended periods may affect device
+       reliability.
+(2)    The input and output voltage ratings may be exceeded if the input and output current ratings are observed.
+5.2 ESD Ratings
+
+                                                                                                                                      Value           UNIT
+                                               Human body model (HBM), per ANSI/ESDA/JEDEC JS-001, all pins(1)                       ±2000
+ V(ESD)      Electrostatic discharge           Charged device model (CDM), per ANSI/ESDA/JEDEC JS-002, all                           ±1000              V
+                                               pins(2)
+
+(1)    JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process.
+(2)    JEDEC document JEP157 states that 250-V CDM allows safe manufacturing with a standard ESD control process.
+5.3 Recommended Operating Conditions
+over operating free-air temperature range (unless otherwise noted)(1)
+
+                                                                                              SN54AHCT04                   SN74AHCT04                 UNIT
+                                                                                                  MIN          MAX            MIN          MAX
+ VCC        Supply voltage                                                                         4.5           5.5           4.5           5.5        V
+ VIH        High-level input voltage                                                                 2                           2                      V
+ VIL        Low-level input voltage                                                                              0.8             0           0.8        V
+ VI         Input voltage                                                                            0           5.5             0           5.5        V
+ VO         Output voltage                                                                           0          VCC              0          VCC         V
+ IOH        High-level output current                                                                             –8                          –8       mA
+ IOL        Low-level output current                                                                               8                           8       mA
+ Δt/Δv      Input transition rise or fall rate                                                                    20                          20      ns/V
+ TA         Operating free-air temperature                                                        –55           125           –40           125        °C
+
+(1)    All unused inputs of the device must be held at VCC or GND to ensure proper device operation. Refer to the TI Application Report,
+       Implications of Slow or Floating CMOS Inputs, (SCBA004).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4       Submit Document Feedback                                                                               Copyright © 2024 Texas Instruments Incorporated
+                                                   Product Folder Links: SN54AHCT04 SN74AHCT04
+
+--- PDF page 5 ---
+                                                                                                                        SN54AHCT04, SN74AHCT04
+www.ti.com                                                                                       SCLS232R – OCTOBER 1995 – REVISED FEBRUARY 2024
+
+5.4 Thermal Information
+
+                                                                                             SN74AHCT04
+               THERMAL METRIC(1)                           D          DB         DGV          N          NS         PW         RGY        BQA        UNIT
+
+                                                                                                14 PINS
+ R            Junction-to-ambient thermal                124.5       113.1      138.7        61.1      120.9       147.7       63.7        88.3
+   θJA        resistance
+
+ R            Junction-to-case (top) thermal              78.8        65.6       60.6        48.0       78.2        77.4       77.6        90.9
+   θJC(top)   resistance
+
+ R            Junction-to-board thermal                    81         60.4       71.8        41.0       81.6        90.9       39.7        56.8
+   θJB        resistance
+              Junction-to-top characterization                                                                                                       °C/W
+ ψJT          parameter                                    37         25.5       10.6        32.4       42.8        27.2        5.7        9.9
+
+ ψ            Junction-to-board characterization          80.6        59.9       71.1        40.9       81.1        90.2       39.9        56.7
+   JB         parameter
+
+ R            Junction-to-case (bottom) thermal           N/A         N/A        N/A         N/A         N/A        N/A        19.9        33.4
+   θJC(bot)   resistance
+
+(1)    For more information about traditional and new thermal metrics, see the IC Package Thermal Metrics application report, (SPRA953).
+5.5 Electrical Characteristics
+over recommended operating free-air temperature range (unless otherwise noted)
+   PARAMETER                  TEST CONDITIONS                     V                  TA = 25°C             SN54AHCT04           SN74AHCT04          UNIT
+                                                                    CC          MIN      TYP       MAX       MIN       MAX         MIN      MAX
+
+ V                     IOH = –50 µA                              4.5 V            4.4      4.5                4.4                   4.4                V
+   OH                  I   = –8 mA                                              3.94                          3.8                   3.8
+                       OH
+ V                     IOL = 50 µA                               4.5 V                               0.1                 0.1                  0.1      V
+   OL                  I   = 8 mA                                                                  0.36                 0.44                 0.44
+                       OL
+ I                     V  = 5.5 V or GND                         0 V to                            ±0.1                ±1(1)                   ±1     µA
+  I                     I                                        5.5 V
+
+ ICC                   VI = VCC or GND, IO = 0                   5.5 V                                 2                  20                   20     µA
+ ΔI    (2)             One input at 3.4 V,                       5.5 V                             1.35                  1.5                  1.5     mA
+   CC                  Other inputs at VCC or GND
+
+ Ci                    VI = VCC or GND                            5 V                        4       10                                        10     pF
+
+(1)    On products compliant to MIL-PRF-38535, this parameter is not production tested at VCC = 0 V.
+(2)    This is the increase in supply current for each input at one of the specified TTL voltage levels, rather than 0 V or VCC.
+5.6 Switching Characteristics, VCC = 5 V ± 0.5 V
+over recommended operating free-air temperature range (unless otherwise noted) (see Figure 6-1)
+  PARAMETER             FROM              TO              LOAD                    TA = 25°C               SN54AHCT04            SN74AHCT04          UNIT
+                       (INPUT)       (OUTPUT)       CAPACITANCE             MIN       TYP        MAX        MIN         MAX        MIN     MAX
+
+ tPLH                                                                                4.7(1)      6.7(1)      1(1)      7.5(1)         1       7.5
+ t                         A              Y            CL = 15 pF                    4.7(1)      6.7(1)      1(1)      7.5(1)         1       7.5     ns
+  PHL
+ tPLH                      A              Y            C   = 50 pF                      5.5        7.7         1          8.5         1       8.5     ns
+ t                                                       L                              5.5        7.7         1          8.5         1       8.5
+  PHL
+
+(1)    On products compliant to MIL-PRF-38535, this parameter is not production tested.
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2024 Texas Instruments Incorporated                                                                       Submit Document Feedback              5
+                                                  Product Folder Links: SN54AHCT04 SN74AHCT04

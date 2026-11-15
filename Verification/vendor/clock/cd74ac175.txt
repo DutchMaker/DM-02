@@ -1,0 +1,359 @@
+Source: https://www.ti.com/lit/ds/symlink/cd74ac175.pdf
+Retrieved: 2026-11-14
+PDF SHA256: 935175fd4317d36846cb064e740c389b288d38b72659be0cde53a7d4dd5ef82d
+Extraction: pypdf layout; page numbers are PDF pages. Tables require visual review of the linked PDF.
+
+--- PDF page 3 ---
+                                                                                                                                CD74AC175
+www.ti.com                                                                                       SCHS347A – APRIL 2003 – REVISED APRIL 2024
+
+4 Pin Configurations and Functions
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                       Figure 4-1. D Package, 16-PIN SCOIC (Top View)
+
+
+                                                       Table 4-1. Pin Functions
+                     PIN                               TYPE                                       DESCRIPTION
+ NO.                          NAME
+ 1                             CLR                       I            Clear Pin
+ 2                              1Q                       O            1Q Output
+ 3                              1Q                       O            1Q Output
+ 4                              1D                       I            1D Input
+ 5                              2D                       I            2D Input
+ 6                              2Q                       O            2Q Output
+ 7                              2Q                       O            2Q Output
+ 8                             GND                       —            Ground Pin
+ 9                             CLK                       I            Clock Input
+ 10                             3Q                       O            3Q Output
+ 11                             3Q                       O            3QOutput
+ 12                             3D                       I            3D Input
+ 13                             4D                       I            4D Input
+ 14                             4Q                       O            4QOutput
+ 15                             4Q                       O            4Q Output
+ 16                            VCC                       —            Power Pin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2024 Texas Instruments Incorporated                                                            Submit Document Feedback          3
+                                                      Product Folder Links: CD74AC175
+
+--- PDF page 4 ---
+CD74AC175
+SCHS347A – APRIL 2003 – REVISED APRIL 2024                                                                                                          www.ti.com
+
+5 Specifications
+5.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted)(1)
+                                                                                                                             MIN         MAX          UNIT
+ VCC                 Supply voltage range                                                                                   –0.5              6         V
+ IIK                 Input clamp current                                          (VI < 0 V or VI > VCC) (2)                               ±20         mA
+ IOK                 Output clamp current                                         (VO < 0 V or VO > VCC)(2)                                ±50         mA
+
+ IO                  Continuous output current                                    (VO> 0 V or VO < VCC)                                    ±50         mA
+                     Continuous current through VCC or GND                                                                               ±200          mA
+ Tstg                Storage temperature range                                                                               –65           150         °C
+
+(1)    Stresses beyond those listed under “absolute maximum ratings” may cause permanent damage to the device. These are stress ratings
+       only, and functional operation of the device at these or any other conditions beyond those indicated under “recommended operating
+       conditions” is not implied. Exposure to absolute-maximum-rated conditions for extended periods may affect device reliability.
+(2)    The input and output voltage ratings may be exceeded if the input and output current ratings are observed.
+5.2 ESD Ratings
+
+                                                                                                                                      VALUE            UNIT
+ V(ESD)      Electrostatic discharge         Human body model (HBM), per ANSI/ESDA/JEDEC JS-001, all pins(1)                          ±2000              V
+
+(1)    JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process.
+5.3 Recommended Operating Conditions
+over operating free-air temperature range (unless otherwise noted)(1)
+                                                                                      TA = 25°C           –55°C to 125°C          –40°C to 85°C          UNIT
+                                                                                       MIN       MAX          MIN       MAX          MIN       MAX
+ VCC         Supply voltage                                                             1.5        5.5         1.5        5.5         1.5        5.5       V
+                                                          VCC = 1.5V                    1.2                    1.2                    1.2                  V
+ VIH         High-level input voltage                     VCC = 3V                      2.1                    2.1                    2.1
+                                                          VCC = 5.5V                   3.85                   3.85                   3.85
+                                                          VCC = 1.5V                               0.3                    0.3                    0.3       V
+ VIL         Low-level input voltage                      VCC = 3V                                 0.9                    0.9                    0.9
+                                                          VCC = 5.5V                              1.65                   1.65                   1.65
+ VI          Input voltage                                                                0        VCC           0        VCC           0        VCC       V
+ VO          Output voltage                                                               0        VCC           0        VCC           0        VCC       V
+ IOH         High-level output current                    VCC = 4.5V to 5.5V                       –24                    ‐24                    ‐24      mA
+ IOL         Low-level output current                     VCC = 4.5V to 5.5V                        24                     24                     24      mA
+ Δt/Δv       Input transition rise or fall rate           VCC= 1.5V to 3V                           50                     50                     50     ns/V
+                                                          VCC = 3.6V to 5.5V                        20                     20                     20
+
+(1)    All unused inputs of the device must be held at VCC or GND to ensure proper device operation. Refer to the TI application report,
+       Implications of Slow or Floating CMOS Inputs, literature number SCBA004.
+5.4 Thermal Information
+
+
+                                                                 (1)                                                D (SOIC)
+                                         THERMAL METRIC                                                              16 PINS                     UNIT
+
+ RθJA                    Junction-to-ambient thermal resistance                                                       106.6                      °C/W
+
+(1)    For more information about traditional and new thermal metrics, see the IC Package Thermal Metrics application report (SPRA953).
+       The package thermal impedance is calculated in accordance with JESD 51-7.
+
+
+
+
+4       Submit Document Feedback                                                                                Copyright © 2024 Texas Instruments Incorporated
+                                                             Product Folder Links: CD74AC175
+
+--- PDF page 5 ---
+                                                                                                                                           CD74AC175
+www.ti.com                                                                                                SCHS347A – APRIL 2003 – REVISED APRIL 2024
+
+5.5 Electrical Characteristics
+
+over recommended operating free-air temperature range (unless otherwise noted)
+   PARAMETER                   TEST CONDITIONS                         V              TA = 25 °C        –55°C to 125°C       –40°C to 85°C        UNIT
+                                                                        CC             MIN      MAX       MIN        MAX        MIN      MAX
+
+                                            IOH = ‐50μΑ               1.5V              1.4                1.4                   1.4
+                                                                       3V               2.9                2.9                   2.9
+                                                                      4.5V              4.4                4.4                   4.4
+ VOH                 VI = VIH or VIL        IOH = –4mA                 3V             2.58                 2.4                  2.48                V
+                                            IOH = –24mA               4.5V                                3.85
+
+                                                          (1)
+                                            IOH = –50mA               5.5V                                                      3.85
+
+                                                          (1)
+                                            IOH = –75mA               5.5V
+                                                                      1.5V                        0.1                  0.1                 0.1
+                                            IOL = 50μA                 3V                         0.1                  0.1                 0.1
+                                                                      4.5V                        0.1                  0.1                 0.1
+ VOL                 VI = VIH or VIL        IOL = 12mA                 3V                       0.36                   0.5                0.44      V
+                                            IOL = 24mA                4.5V                      0.36                   0.5                0.44
+                                            IOL = 50mA(1)             5.5V                                            1.65
+                                            I   = 75mA(1)             5.5 V                                                               1.65
+                                             OL
+ II                  VI = VCC or GND                                  5.5 V                     ±0.1                    ±1                  ±1     μA
+ ICC                 VI = VCC or GND,       IO = 0                    5.5 V                         8                  160                  80     μA
+ Ci                                                                                               10                    10                  10     pF
+
+(1)    Test one output at a time, not exceeding 1-second duration. Measurement is made by forcing indicated current and measuring voltage
+       to minimize power dissipation. Test verifies a minimum 50-Ω transmission-line drive capability at 85°C and 75-Ω transmission-line drive
+       capability at 125°C.
+                                                       Table 5-1. Act Input Load Table
+                                                        INPUT                               UNIT LOAD
+                                                          Data                                  0.58
+                                                          CLR                                   0.67
+                                                          CLK                                   0.92
+
+5.6 Timing Requirements, VCC = 1.5V
+over recommended operating free-air temperature range, VCC = 1.5V (unless otherwise noted)
+                                                                                                 -55°C to 125°C           -40°C to 85°C          UNIT
+                                                                                                     MIN        MAX          MIN        MAX
+ fclock         Clock frequency                                                                                     8                     114     MHz
+ t              Pulse duration                                 CLR low                                50                       44                  ns
+  w                                                            CLK high or low                        63                       55
+
+ tsu            Setup time before CLK↑                         Data                                     2                       2                  ns
+ th             Hold time, data after CLK ↑                                                             2                       2                  ns
+ trec           Recovery time, before CLK ↑                    CLR↑                                     1                       1                  ns
+
+5.7 Timing Requirements, VCC = 3.3V ± 0.3V
+over recommended operating free-air temperature range, VCC = 3.3V ± 0.3V (unless otherwise noted)
+                                                                                                 -55°C to 125°C           -40°C to 85°C          UNIT
+                                                                                                     MIN        MAX          MIN        MAX
+ fclock         Clock frequency                                                                                   71                       81     MHz
+
+
+
+
+Copyright © 2024 Texas Instruments Incorporated                                                                     Submit Document Feedback              5
+                                                          Product Folder Links: CD74AC175
+
+--- PDF page 6 ---
+CD74AC175
+SCHS347A – APRIL 2003 – REVISED APRIL 2024                                                                                             www.ti.com
+
+over recommended operating free-air temperature range, VCC = 3.3V ± 0.3V (unless otherwise noted)
+                                                                                             -55°C to 125°C          -40°C to 85°C         UNIT
+                                                                                                MIN        MAX         MIN        MAX
+ t             Pulse duration                               CLR low                              5.6                    4.9                 ns
+  w
+                                                            CLK high or low                        7                    6.1
+ tsu           Setup time before CLK↑                       Data                                   2                      2                 ns
+ th            Hold time, data after CLK ↑                                                         2                      2                 ns
+ trec          Recovery time, before CLK ↑                  CLR↑                                   1                      1                 ns
+
+5.8 Timing Requirements, VCC = 5V ± 0.5V
+over recommended operating free-air temperature range, VCC = 5V ± 0.5V (unless otherwise noted)
+                                                                                             -55°C to 125°C          -40°C to 85°C         UNIT
+                                                                                                MIN        MAX         MIN        MAX
+ fclock        Clock frequency                                                                              100                    114     MHz
+ t             Pulse duration                               CLR low                                4                    3.5                 ns
+  w                                                         CLK high or low                        5                    4.4
+
+ tsu           Setup time before CLK↑                       Data                                   2                      2                 ns
+ th            Hold time, data after CLK ↑                                                         2                      2                 ns
+ trec          Recovery time, before CLK ↑                  CLR↑                                   1                      1                 ns
+
+5.9 Switching Characteristics, VCC = 1.5V
+over recommended operating free-air temperature range, VCC = 1.5V, CL = 50pF (unless otherwise noted) (see Load Circuit
+and Voltage Waveforms)
+      PARAMETER                  FROM (INPUT)                  TO (OUTPUT)                -55°C to 125°C          -40°C to 85°C           UNIT
+                                                                                           MIN          MAX           MIN       MAX
+ fmax                                                                                          8                         9                MHz
+ tPLH                                  CLK                          Any Q                                153                     139       ns
+ tPHL                                                                                                    153                     139
+ tPLH                                  CLR                          Any Q                                153                     139       ns
+ tPHL                                                                                                    153                     139
+
+5.10 Switching Characteristics, VCC = 3.3V ± 0.3V
+
+over recommended operating free-air temperature range, VCC = 3.3V ± 0.3V, CL = 50pF (unless otherwise noted) (see Load
+Circuit and Voltage Waveforms)
+      PARAMETER                  FROM (INPUT)                  TO (OUTPUT)                -55°C to 125°C          -40°C to 85°C           UNIT
+                                                                                           MIN          MAX           MIN       MAX
+ fmax                                                                                        71                         81                MHz
+ tPLH                                  CLK                          Any Q                    4.3         17.1          4.4       15.5      ns
+ tPHL                                                                                        4.3         17.1          4.4       15.5
+ tPLH                                  CLR                          Any Q                    4.3         17.1          4.4       15.5      ns
+ tPHL                                                                                        4.3         17.1          4.4       15.5
+
+5.11 Switching Characteristics, VCC = 5V ± 0.5V
+over recommended operating free-air temperature range, VCC = 5V ± 0.5V, CL = 50pF (unless otherwise noted) (see Load
+Circuit and Voltage Waveforms)
+      PARAMETER                  FROM (INPUT)                  TO (OUTPUT)                -55°C to 125°C          -40°C to 85°C           UNIT
+                                                                                           MIN          MAX           MIN       MAX
+ fmax                                                                                       100                        114                MHz
+
+6      Submit Document Feedback                                                                        Copyright © 2024 Texas Instruments Incorporated
+                                                        Product Folder Links: CD74AC175
+
+--- PDF page 7 ---
+                                                                                                                                       CD74AC175
+www.ti.com                                                                                             SCHS347A – APRIL 2003 – REVISED APRIL 2024
+
+over recommended operating free-air temperature range, VCC = 5V ± 0.5V, CL = 50pF (unless otherwise noted) (see Load
+Circuit and Voltage Waveforms)
+      PARAMETER                   FROM (INPUT)                  TO (OUTPUT)                 -55°C to 125°C          -40°C to 85°C           UNIT
+                                                                                             MIN         MAX            MIN       MAX
+ tPLH                                   CLK                          Any Q                    3.1         12.2           3.2       11.1       ns
+ tPHL                                                                                         3.1         12.2           3.2       11.1
+ tPLH                                  CLR                           Any Q                    3.1         12.2           3.2       11.1       ns
+ tPHL                                                                                         3.1         12.2           3.2       11.1
+
+5.12 Operating Characteristics
+VCC = 5 V, TA = 25°C
+                                              PARAMETER                                                             TYP              UNIT
+ Cpd               Power dissipation capacitance                                                                      55              pF
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2024 Texas Instruments Incorporated                                                                  Submit Document Feedback            7
+                                                         Product Folder Links: CD74AC175

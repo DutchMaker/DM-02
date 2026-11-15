@@ -1,0 +1,15 @@
+{
+  "revision":"SQ1",
+  "device_sources":{
+    "CD74HCT161M96":"pc-parts.json",
+    "CD74AC175M96":"controller-parts.json",
+    "SN74HCT574N":"controller-parts.json",
+    "SN74AHCT244N":"controller-parts.json",
+    "SN74AHCT04N":"controller-parts.json",
+    "SN74AHCT08DR":"controller-parts.json",
+    "SN74AHCT00DR":"controller-parts.json"
+  },
+  "constraints":{"local_trace_cap_pf":5,"connector_load_pf":20,"pc_increment_connector_load_pf":45,"routing_uncertainty_ns":10,"ir_data_setup_ns":60,"ir_data_hold_ns":25},
+  "conditions":"Inherited manufacturer limits, 50 pF loads and 4.5 V timing bounds. External output allocations include all receiving inputs and interconnect. Source tables are shared with CW1 and PC1.",
+  "scope":"Fetch and execution sequencing; asynchronous HALT clear requires idle-only debounced RESUME with reset recovery guard. STEP goes directly to C1, advancing one complete microcycle even while HALTED. Memory/MAR, non-PC operands and live flags remain separate integration boundaries."
+}

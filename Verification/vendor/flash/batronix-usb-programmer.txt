@@ -1,0 +1,81 @@
+Source: https://www.batronix.com/pdf/USBChipProgrammer-I-DeviceList.pdf
+
+--- PDF page 75 ---
+SST39SF040-70-4C-WHE,      SST39SF040-70-4I-WH,    SST39SF040-70-4I-WHE
+Variants: SST39SF040-45-4C-WH,     SST39SF040-45-4C-WHE,      SST39SF040-45-4I-WH,     SST39SF040-45-4I-WHE,     SST39SF040-70-4C-WH,
+Required  Adapter: BA030:  TSOP32(8x14mm)-DIP32
+Manufacturer:  Microchip
+SST39SF040       [ TSOP    32  (8x14mm)     ]
+SST39SF040-70-4C-NHE,     SST39SF040-70-4I-NH,    SST39SF040-70-4I-NHE
+Variants: SST39SF040-45-4C-NH,     SST39SF040-45-4C-NHE,     SST39SF040-45-4I-NH,    SST39SF040-45-4I-NHE,     SST39SF040-70-4C-NH,
+Required  Adapter: BA005:  PLCC32-DIP32
+Manufacturer:  Microchip
+SST39SF040       [ PLCC    32  ]
+Variants: SST39SF040-70-4C-PH,     SST39SF040-70-4C-PHE
+Required  Adapter: None
+Manufacturer:  Microchip
+SST39SF040       [ DIP  32  ]
+                                                                                      Innovative      Tools.    Excellent      Service.
+--- PDF page 87 ---
+SST39VF512-90-4C-NHE,     SST39VF512-90-4I-NH,    SST39VF512-90-4I-NHE
+Variants: SST39VF512-70-4C-NH,     SST39VF512-70-4C-NHE,     SST39VF512-70-4I-NH,    SST39VF512-70-4I-NHE,     SST39VF512-90-4C-NH,
+Required  Adapter: BA005:  PLCC32-DIP32
+Manufacturer:  SST
+SST39VF512       [ PLCC    32  ]
+SST39VF040-90-4C-WHE,      SST39VF040-90-4I-WH,    SST39VF040-90-4I-WHE
+Variants: SST39VF040-70-4C-WH,     SST39VF040-70-4C-WHE,      SST39VF040-70-4I-WH,     SST39VF040-70-4I-WHE,     SST39VF040-90-4C-WH,
+Required  Adapter: BA030:  TSOP32(8x14mm)-DIP32
+Manufacturer:  SST
+SST39VF040       [ TSOP    32  (8x14mm)     ]
+SST39VF040-90-4C-NHE,     SST39VF040-90-4I-NH,    SST39VF040-90-4I-NHE
+Variants: SST39VF040-70-4C-NH,     SST39VF040-70-4C-NHE,     SST39VF040-70-4I-NH,    SST39VF040-70-4I-NHE,     SST39VF040-90-4C-NH,
+Required  Adapter: BA005:  PLCC32-DIP32
+Manufacturer:  SST
+SST39VF040       [ PLCC    32  ]
+SST39VF020-90-4C-WHE,      SST39VF020-90-4I-WH,    SST39VF020-90-4I-WHE
+Variants: SST39VF020-70-4C-WH,     SST39VF020-70-4C-WHE,      SST39VF020-70-4I-WH,     SST39VF020-70-4I-WHE,     SST39VF020-90-4C-WH,
+Required  Adapter: BA030:  TSOP32(8x14mm)-DIP32
+Manufacturer:  SST
+SST39VF020       [ TSOP    32  (8x14mm)     ]
+SST39VF020-90-4C-NHE,     SST39VF020-90-4I-NH,    SST39VF020-90-4I-NHE
+Variants: SST39VF020-70-4C-NH,     SST39VF020-70-4C-NHE,     SST39VF020-70-4I-NH,    SST39VF020-70-4I-NHE,     SST39VF020-90-4C-NH,
+Required  Adapter: BA005:  PLCC32-DIP32
+Manufacturer:  SST
+SST39VF020       [ PLCC    32  ]
+SST39VF010-90-4C-WHE,      SST39VF010-90-4I-WH,    SST39VF010-90-4I-WHE
+Variants: SST39VF010-70-4C-WH,     SST39VF010-70-4C-WHE,      SST39VF010-70-4I-WH,     SST39VF010-70-4I-WHE,     SST39VF010-90-4C-WH,
+Required  Adapter: BA030:  TSOP32(8x14mm)-DIP32
+Manufacturer:  SST
+SST39VF010       [ TSOP    32  (8x14mm)     ]
+SST39VF010-90-4C-NHE,     SST39VF010-90-4I-NH,    SST39VF010-90-4I-NHE
+Variants: SST39VF010-70-4C-NH,     SST39VF010-70-4C-NHE,     SST39VF010-70-4I-NH,    SST39VF010-70-4I-NHE,     SST39VF010-90-4C-NH,
+Required  Adapter: BA005:  PLCC32-DIP32
+Manufacturer:  SST
+SST39VF010       [ PLCC    32  ]
+Variants: SST39SF512-70-4C-WH,     SST39SF512-70-4I-WH,     SST39SF512-90-4C-WH,     SST39SF512-90-4I-WH
+Required  Adapter: BA030:  TSOP32(8x14mm)-DIP32
+Manufacturer:  SST
+SST39SF512       [ TSOP    32  (8x14mm)     ]
+Variants: SST39SF512-70-4C-NH,     SST39SF512-70-4I-NH,    SST39SF512-90-4C-NH,     SST39SF512-90-4I-NH
+Required  Adapter: BA005:  PLCC32-DIP32
+Manufacturer:  SST
+SST39SF512       [ PLCC    32  ]
+Variants: SST39SF512-70-4C-PH,     SST39SF512-70-4C-PHE,     SST39SF512-90-4C-PH,     SST39SF512-90-4C-PHE
+Required  Adapter: None
+Manufacturer:  SST
+SST39SF512       [ DIP  32  ]
+SST39SF040-70-4C-WHE,      SST39SF040-70-4I-WH,    SST39SF040-70-4I-WHE
+Variants: SST39SF040-45-4C-WH,     SST39SF040-45-4C-WHE,      SST39SF040-45-4I-WH,     SST39SF040-45-4I-WHE,     SST39SF040-70-4C-WH,
+Required  Adapter: BA030:  TSOP32(8x14mm)-DIP32
+Manufacturer:  SST
+SST39SF040       [ TSOP    32  (8x14mm)     ]
+SST39SF040-70-4C-NHE,     SST39SF040-70-4I-NH,    SST39SF040-70-4I-NHE
+Variants: SST39SF040-45-4C-NH,     SST39SF040-45-4C-NHE,     SST39SF040-45-4I-NH,    SST39SF040-45-4I-NHE,     SST39SF040-70-4C-NH,
+Required  Adapter: BA005:  PLCC32-DIP32
+Manufacturer:  SST
+SST39SF040       [ PLCC    32  ]
+Variants: SST39SF040-70-4C-PH,     SST39SF040-70-4C-PHE
+Required  Adapter: None
+Manufacturer:  SST
+SST39SF040       [ DIP  32  ]
+                                                                                      Innovative      Tools.    Excellent      Service.

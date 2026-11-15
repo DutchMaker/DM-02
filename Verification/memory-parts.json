@@ -1,0 +1,19 @@
+{
+  "revision":"ME1",
+  "device_sources":{
+    "AT27C512R-70PU":"controller-parts.json",
+    "CD74AC175M96":"controller-parts.json",
+    "SN74AHCT244N":"pc-parts.json",
+    "SN74AHCT157N":"alu-parts.json",
+    "SN74AHCT04N":"controller-parts.json",
+    "SN74AHCT08DR":"controller-parts.json",
+    "SN74AHCT00DR":"controller-parts.json",
+    "SN74AHCT32N":"pc-parts.json"
+  },
+  "devices":{
+    "AS6C1008-55PCN":{"function":"AS6C1008","source":"as6c1008","package":"PDIP-32","pages":[2,3,4,5,6,7,12,14],"max_delay_ns":55,"disable_max_ns":20,"input_cap_pf":6,"io_cap_pf":8,"write_cycle_ns":55,"address_write_setup_ns":50,"write_pulse_ns":45,"write_data_setup_ns":25,"write_data_hold_ns":0,"note":"Capacitance characterized at 25 C, not production tested. Read/write tri-state timing at CL=5 pF; full-load output release remains unqualified."}
+  },
+  "constraints":{"local_trace_cap_pf":5,"connector_load_pf":20,"data_bus_external_load_pf":50,"routing_uncertainty_ns":10},
+  "conditions":"Logic 4.5 V timing at 50 pF; SRAM 2.7..5.5 V -55 speed, read data CL=50 pF +1 TTL, disable timing CL=5 pF. ROM CL=100 pF. Physical shared-bus, internal SRAM turnaround, slew and reset qualification remain open.",
+  "scope":"ROM 0000..3FFF, SRAM 4000..FEFF, external IO page FF00..FFFF. SRAM write window ends at PH3 while DATA remains driven. IO output data/address capture PH3; strobe PH0. IO read connector input is external. SRAM and program-ROM initialization in tests is fixture loading, not a demonstrated boot loader."
+}

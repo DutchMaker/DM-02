@@ -1,0 +1,499 @@
+Source: https://www.ti.com/lit/ds/symlink/cd74hct161.pdf
+Retrieved: 2026-11-14
+PDF pages: [2, 3, 5, 7, 8, 11, 12]
+
+--- PDF page 2 ---
+              CD54/74HC161, CD54/74HCT161, CD54/74HC163, CD54/74HCT163
+
+Pinout
+
+                                   CD54HC161, CD54HCT161, CD54HC163, CD54HCT163
+                                                        (CERDIP)
+                                   CD74HC161, CD74HCT161, CD74HC163, CD74HCT163
+                                                       (PDIP, SOIC)
+                                                        TOP VIEW
+
+
+                                                MR   1              16 VCC
+
+                                                 CP  2              15 TC
+
+                                                 P0  3              14 Q0
+
+                                                 P1  4              13 Q1
+
+                                                 P2  5              12 Q2
+
+                                                 P3  6              11 Q3
+                                                 PE  7              10 TE
+
+                                               GND   8              9  SPE
+
+
+Functional Diagram
+
+
+
+                                                      P0     P1     P2     P3
+
+
+                                                    3456
+
+                                            SPE   9                     14 Q0
+
+
+                                             CP   2                     13 Q1
+
+
+                                            MR    1                     12 Q2
+
+
+                                             PE   7                     11 Q3
+
+
+                                             TE  10                     15 TC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                            2
+--- PDF page 3 ---
+                    CD54/74HC161, CD54/74HCT161, CD54/74HC163, CD54/74HCT163
+
+
+
+
+                                             MODE SELECT - FUNCTION TABLE FOR ’HC161 AND ’HCT161
+
+                                                                                     INPUTS                                                                       OUTPUTS
+
+     OPERATING MODE                         MR                CP                 PE                 TE           SPE                Pn                 Qn                 TC
+
+Reset (Clear)                                    L XXXXXLL
+
+Parallel Load                                    H                     ↑ XXllLL
+
+                                             H                     ↑                    X                   X                    l                    h                   H              (Note 1)
+
+Count                                               H                     ↑                    h                    h             h (Note 3)            X                Count          (Note 1)
+
+Inhibit                                               H                   X             I (Note 2)             X            h (Note 3)            X                  qn             (Note 1)
+
+                                             H                   X                   X             I (Note 2)      h (Note 3)            X                  qn                   L
+
+
+
+                                             MODE SELECT - FUNCTION TABLE FOR ’HC163 AND ’HCT163
+
+                                                                                     INPUTS                                                                       OUTPUTS
+
+     OPERATING MODE                         MR                CP                 PE                 TE           SPE                Pn                 Qn                 TC
+
+Reset (Clear)                                    l                      ↑ XXXXLL
+
+Parallel Load                             h (Note 3)              ↑ XXllLL
+
+                                        h (Note 3)              ↑                    X                   X                    l                    h                   H              (Note 1)
+
+Count                                        h (Note 3)              ↑                    h                    h             h (Note 3)            X                Count          (Note 1)
+
+Inhibit                                        h (Note 3)            X             I (Note 2)             X            h (Note 3)            X                  qn             (Note 1)
+
+                                        h (Note 3)            X                   X             I (Note 2)      h (Note 3)            X                  qn                   L
+
+H = High voltage level steady state; L = Low voltage level steady state; h = High voltage level one setup time prior to the Low-to-High clock
+transition; l = Low voltage level one setup time prior to the Low-to-High clock transition; X = Don’t Care; q = Lower case letters indicate the
+state of the referenced output prior to the Low-to-High clock transition; ↑ = Low-to-High clock transition.
+NOTES:
+ 1.  The TC output is High when TE is High and the counter is at Terminal Count (HHHH for HC/HCT161 and ’HC/HCT163).
+ 2.  The High-to-Low transition of PE or TE on the ’HC/HCT161 and the ’HC/HCT163 should only occur while CP is HIGH for conventional
+     operation.
+ 3.  The Low-to-High transition of         SPE on the ’HC/HCT161 and             SPE or    MR on the ’HC/HCT163 should only occur while CP is HIGH for
+conventional operation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                       3
+--- PDF page 5 ---
+                       CD54/74HC161, CD54/74HCT161, CD54/74HC163, CD54/74HCT163
+
+DC Electrical Speciﬁcations   (Continued)
+
+                                                             TEST
+                                                       CONDITIONS           VCC                             25oC                  -40oC TO 85oC   -55oC TO 125oC
+      PARAMETER         SYMBOL                        VI (V)       IO (mA)                     MIN       TYP      MAX       MIN       MAX       MIN        MAX(V)                       UNITS
+ Quiescent Device                      ICC          VCC or              0              6             -            -            8            -            80            -           160           µA
+ Current                                              GND
+ HCT TYPES
+ High Level Input                      VIH               -                -           4.5 to       2--2-2-V
+ Voltage                                                                             5.5
+ Low Level Input                       VIL                -                -           4.5 to       -            -          0.8           -           0.8            -            0.8           V
+ Voltage                                                                             5.5
+ High Level Output                    VOH       VIH or VIL     -0.02          4.5          4.4          -            -           4.4           -            4.4            -             V
+ Voltage
+ CMOS Loads
+ High Level Output                                                      -4            4.5         3.98         -            -          3.84          -            3.7            -             V
+ Voltage
+ TTL Loads
+ Low Level Output                     VOL       VIH or VIL      0.02          4.5            -            -          0.1           -           0.1            -            0.1           V
+ Voltage
+ CMOS Loads
+ Low Level Output                                                       4             4.5            -            -         0.26          -          0.33           -            0.4           V
+ Voltage
+ TTL Loads
+ Input Leakage                          II           VCC and            0             5.5            -                         ±0.1          -             ±1-±1            µA
+ Current                                              GND
+ Quiescent Device                      ICC          VCC or              0             5.5            -            -            8            -            80            -           160           µA
+ Current                                              GND
+ Additional Quiescent                 ∆ICC             VCC              -           4.5 to          -          100       360          -           450           -           490           µA
+ Device Current Per                (Note 5)            -2.1                          5.5
+ Input Pin: 1 Unit Load
+NOTE:
+ 5.  For dual-supply systems theoretical worst case (VI = 2.4V, VCC = 5.5V) speciﬁcation is 1.8mA.
+
+HCT Input Loading Table
+
+                   INPUT                                      UNIT LOADS
+
+                  P0 - P3                                            0.25
+
+                     PE                                                0.65
+
+                     CP                                                1.05
+
+                     MR                                                 0.8
+
+                    SPE                                                0.5
+
+                     TE                                                1.05
+
+NOTE:  Unit Load is ∆ICC limit speciﬁed in DC Electrical Table, e.g.,
+360µA max at 25oC.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                5
+--- PDF page 7 ---
+                         CD54/74HC161, CD54/74HCT161, CD54/74HC163, CD54/74HCT163
+
+Prerequisite For Switching Speciﬁcations    (Continued)
+
+                                                                               TEST               VCC                  25oC               -40oC TO 85oC    -55oC TO 125oC
+
+              PARAMETER                   SYMBOL                         CONDITIONS                (V)       MIN    TYP    MAX      MIN        MAX        MIN        MAX                              UNITS
+ HCT TYPES
+ Maximum CP Frequency                    fMAX                   -                4.5       30        -          -           24            -            20            -           MHz
+ CP Width (Low) (Note 6)                    tW(L)                   -                4.5       16        -          -           20            -            24            -            ns
+
+ MR Pulse Width (161)                          tW                     -                4.5       20        -          -           25            -            30            -            ns
+ Setup Time, Pn to CP                          tSU                    -                4.5       10        -          -           13            -            15            -            ns
+
+ Setup Time, PE or TE to CP                tSU                    -                4.5       13        -          -           16            -            20            -            ns
+ Setup Time,        SPE to CP                       tSU                    -                4.5       12        -          -           15            -            18            -            ns
+
+ Setup Time,        MR to CP (163)               tSU                    -                4.5       13        -          -           16            -            20            -            ns
+ Hold Time, PN to CP                            tH                     -                4.5        5         -          -            5             -             5             -            ns
+
+ Hold Time, TE or PE to CP                   tH                     -                4.5        3         -          -            3             -             3             -            ns
+ Hold Time,       SPE to CP                          tH                     -                4.5        3         -          -            3             -             3             -            ns
+
+ Recovery Time,           MR to CP (161)        tREC                   -                4.5       15        -          -           19            -            22            -            ns
+NOTE:
+ 6.  Applies to non-cascaded operation only. With cascaded counters clock to terminal count propagation delays, count enables (PE or TE)-
+      to-clock setup times, and count enables (PE or TE)-to-clock hold times determine maximum clock frequency. For example with these HC
+      devices:
+       fMAX (CP)        ==-----------------------------------------------------------------------------------------------------------------------------------------------------1-----------------------------    21MHz  min1≈()
+                           CP-to-TC prop. delay    TE-to-CP setup    TE-to-CP Hold++                                 37    10    0++
+
+Switching Speciﬁcations  CL = 50pF, Input tr, tf = 6ns
+
+                                                                                                                                                      -40oC TO                  -55oC TO
+                                                                                                                           25oC                          85oC                      125oC
+                                                                             TEST
+              PARAMETER                 SYMBOL                        CONDITIONS    VCC (V)                     MIN      TYP     MAX      MIN      MAX       MIN       MAX                             UNITS
+
+ HC TYPES
+ Propagation Delay                       tPHL, tPLH      CL = 50pF
+     CP to TC                                                                                     2             -           -         185         -          230          -           280         ns
+
+                                                                                                   4.5           -           -          37          -           46           -            56          ns
+
+                                                                         CL = 15pF            5             -          15          -            -            -             -             -            ns
+
+                                                                         CL = 50pF            6             -           -          31          -           39           -            48          ns
+
+     CP to Qn                                 tPHL, tPLH      CL = 50pF            2             -           -         185         -          230          -           280         ns
+
+                                                                                                   4.5           -           -          37          -           46           -            56          ns
+
+                                                                         CL = 15pF            5             -          15          -            -            -             -             -            ns
+
+                                                                         CL = 50pF            6             -           -          31          -           39           -            48          ns
+
+     TE to TC                                  tPHL, tPLH      CL = 50pF            2             -           -         120         -          150          -           180         ns
+
+                                                                                                   4.5           -           -          24          -           30           -            36          ns
+
+                                                                         CL = 15pF            5             -           9           -            -            -             -             -            ns
+
+                                                                         CL = 50pF            6             -           -          20          -           26           -            31          ns
+
+
+
+
+
+
+
+
+
+
+                                                                                                        7
+--- PDF page 8 ---
+                        CD54/74HC161, CD54/74HCT161, CD54/74HC163, CD54/74HCT163
+
+Switching Speciﬁcations  CL = 50pF, Input tr, tf = 6ns   (Continued)
+
+                                                                                                                                                -40oC TO                 -55oC TO
+                                                                                                                      25oC                         85oC                    125oC
+                                                                         TEST
+             PARAMETER                 SYMBOL                      CONDITIONS    VCC (V)                   MIN      TYP     MAX      MIN      MAX       MIN       MAX                          UNITS
+
+     MR to Qn (161)                            tPHL           CL = 50pF            2             -           -         210         -          265          -           315         ns
+
+                                                                                               4.5           -           -          42          -           53           -            63          ns
+
+                                                                      CL = 15pF            5             -          18          -            -            -             -             -            ns
+
+                                                                      CL = 50pF            6             -           -          36          -           45           -            54          ns
+
+     MR to TC (161)                            tPHL           CL = 50pF            2             -           -         210         -          265          -           315         ns
+
+                                                                                               4.5           -           -          42          -           53           -            63          ns
+
+                                                                      CL = 50pF            6             -           -          36          -           45           -            54          ns
+
+ Output Transition Time                tTHL, tTLH       CL = 50pF            2             -           -          75          -           95           -           110         ns
+
+                                                                                               4.5           -           -          15          -           19           -            22          ns
+
+                                                                                                6             -           -          13          -           16           -            19          ns
+
+ Power Dissipation Capacitance                       CPD -5-60-----pF
+ (Notes 7, 8)
+
+ Input Capacitance                             CIN            CL = 50pF             -            10          -          10          -           10           -            10          pF
+
+ HCT TYPES
+
+ Propagation Delay
+     CP to TC                                 tPHL, tPLH      CL = 50pF           4.5           -           -          42          -           53           -            63          ns
+
+                                                                      CL = 15pF            5             -          18          -            -            -             -             -            ns
+
+     CP to Qn                                 tPHL, tPLH      CL = 50pF           4.5           -           -          39          -           49           -            59          ns
+
+                                                                      CL = 15pF            5             -          16          -            -            -             -             -            ns
+
+     TE to TC                                  tPHL, tPLH      CL = 50pF           4.5           -           -          32          -           40           -            48          ns
+
+                                                                      CL = 15pF            5             -          13          -            -            -             -             -            ns
+
+     MR to Qn (161)                            tPHL           CL = 50pF           4.5           -           -          50          -           63           -            75          ns
+
+                                                                      CL = 15pF            5             -          21          -            -            -             -             -            ns
+
+     MR to TC (161)                            tPHL           CL = 50pF           4.5           -           -          50          -           63           -            75          ns
+
+ Output Transition Time                tTHL, tTLH       CL = 50pF           4.5           -           -          15          -           19           -            22          ns
+
+ Power Dissipation Capacitance                       CPD -5-63-----pF
+ (Notes 7, 8)
+
+ Input Capacitance                             CIN            CL = 50pF             -            10          -          10          -           10           -            10          pF
+
+NOTES:
+ 7.  CPD is used to determine the dynamic power consumption, per package.
+ 8.  PD=CPD VCC2 fi + ∑ (CL VCC2 fO) where fi = Input Frequency, fO = Output Frequency, CL = Output Load Capacitance, VCC = Supply
+      Voltage.
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                    8
+--- PDF page 11 ---
+                                                                                                                                                                       PACKAGE OPTION ADDENDUM
+
+
+
+    www.ti.com                                                                                                                                                                                                           18-Sep-2026
+
+
+
+PACKAGING INFORMATION
+
+   Orderable part number            Status     Material type       Package | Pins       Package qty | Carrier         RoHS             Lead finish/              MSL rating/             Op temp (°C)                Part marking
+                                      (1)            (2)                                                                (3)            Ball material             Peak reflow                                               (6)
+                                                                                                                                             (4)                      (5)
+         CD54HC161F                 Active      Production          CDIP (J) | 16              25 | TUBE                No                 SNPB               N/A for Pkg Type             -55 to 125               CD54HC161F
+        CD54HC161F.A                Active      Production          CDIP (J) | 16              25 | TUBE                No                 SNPB               N/A for Pkg Type             -55 to 125               CD54HC161F
+       CD54HC161F3A                 Active      Production          CDIP (J) | 16              25 | TUBE                No                 SNPB               N/A for Pkg Type             -55 to 125                 8407501EA
+                                                                                                                                                                                                                   CD54HC161F3A
+      CD54HC161F3A.A                Active      Production          CDIP (J) | 16              25 | TUBE                No                 SNPB               N/A for Pkg Type             -55 to 125                 8407501EA
+                                                                                                                                                                                                                   CD54HC161F3A
+       CD54HC163F3A                 Active      Production          CDIP (J) | 16              25 | TUBE                No                 SNPB               N/A for Pkg Type             -55 to 125                 8607601EA
+                                                                                                                                                                                                                   CD54HC163F3A
+      CD54HC163F3A.A                Active      Production          CDIP (J) | 16              25 | TUBE                No                 SNPB               N/A for Pkg Type             -55 to 125                 8607601EA
+                                                                                                                                                                                                                   CD54HC163F3A
+        CD54HCT163F                 Active      Production          CDIP (J) | 16              25 | TUBE                No                 SNPB               N/A for Pkg Type             -55 to 125               CD54HCT163F
+       CD54HCT163F.A                Active      Production          CDIP (J) | 16              25 | TUBE                No                 SNPB               N/A for Pkg Type             -55 to 125               CD54HCT163F
+       CD54HCT163F3A                Active      Production          CDIP (J) | 16              25 | TUBE                No                 SNPB               N/A for Pkg Type             -55 to 125             CD54HCT163F3A
+      CD54HCT163F3A.A               Active      Production          CDIP (J) | 16              25 | TUBE                No                 SNPB               N/A for Pkg Type             -55 to 125             CD54HCT163F3A
+         CD74HC161E                 Active      Production          PDIP (N) | 16              25 | TUBE               Yes                NIPDAU              N/A for Pkg Type             -55 to 125               CD74HC161E
+        CD74HC161E.A                Active      Production          PDIP (N) | 16              25 | TUBE               Yes                NIPDAU              N/A for Pkg Type             -55 to 125               CD74HC161E
+         CD74HC161M                Obsolete     Production          SOIC (D) | 16                   -                    -                 Call TI                  Call TI                -55 to 125                  HC161M
+       CD74HC161M96                 Active      Production          SOIC (D) | 16         2500 | LARGE T&R             Yes                NIPDAU            Level-1-260C-UNLIM             -55 to 125                  HC161M
+      CD74HC161M96.A                Active      Production          SOIC (D) | 16         2500 | LARGE T&R             Yes                NIPDAU            Level-1-260C-UNLIM             -55 to 125                  HC161M
+         CD74HC163E                 Active      Production          PDIP (N) | 16              25 | TUBE               Yes                NIPDAU              N/A for Pkg Type             -55 to 125               CD74HC163E
+        CD74HC163E.A                Active      Production          PDIP (N) | 16              25 | TUBE               Yes                NIPDAU              N/A for Pkg Type             -55 to 125               CD74HC163E
+         CD74HC163M                Obsolete     Production          SOIC (D) | 16                   -                    -                 Call TI                  Call TI                -55 to 125                  HC163M
+       CD74HC163M96                 Active      Production          SOIC (D) | 16         2500 | LARGE T&R             Yes                NIPDAU            Level-1-260C-UNLIM             -55 to 125                  HC163M
+      CD74HC163M96.A                Active      Production          SOIC (D) | 16         2500 | LARGE T&R             Yes                NIPDAU            Level-1-260C-UNLIM             -55 to 125                  HC163M
+        CD74HC163MT                Obsolete     Production          SOIC (D) | 16                   -                    -                 Call TI                  Call TI                -55 to 125                  HC163M
+        CD74HCT161E                 NRND        Production          PDIP (N) | 16              25 | TUBE               Yes                NIPDAU              N/A for Pkg Type             -55 to 125               CD74HCT161E
+       CD74HCT161E.A                NRND        Production          PDIP (N) | 16              25 | TUBE               Yes                NIPDAU              N/A for Pkg Type             -55 to 125               CD74HCT161E
+       CD74HCT161EE4                NRND        Production          PDIP (N) | 16              25 | TUBE               Yes                NIPDAU              N/A for Pkg Type             -55 to 125               CD74HCT161E
+        CD74HCT161M                Obsolete     Production          SOIC (D) | 16                   -                    -                 Call TI                  Call TI                -55 to 125                  HCT161M
+       CD74HCT161M96                Active      Production          SOIC (D) | 16         2500 | LARGE T&R             Yes                NIPDAU            Level-1-260C-UNLIM             -55 to 125                  HCT161M
+
+
+
+                                                                                                           Addendum-Page 1
+--- PDF page 12 ---
+                                                                                                                                                                                               PACKAGE OPTION ADDENDUM
+
+
+
+    www.ti.com                                                                                                                                                                                                                                          18-Sep-2026
+
+
+
+
+
+    Orderable part number                Status       Material type         Package | Pins           Package qty | Carrier             RoHS                Lead finish/                MSL rating/                  Op temp (°C)                   Part marking
+                                            (1)              (2)                                                                         (3)              Ball material                 Peak reflow                                                       (6)
+                                                                                                                                                                 (4)                          (5)
+      CD74HCT161M96.A                    Active        Production             SOIC (D) | 16            2500 | LARGE T&R                 Yes                  NIPDAU                Level-1-260C-UNLIM                 -55 to 125                     HCT161M
+         CD74HCT163E                     Active        Production             PDIP (N) | 16                 25 | TUBE                   Yes                  NIPDAU                  N/A for Pkg Type                 -55 to 125                  CD74HCT163E
+        CD74HCT163E.A                    Active        Production             PDIP (N) | 16                 25 | TUBE                   Yes                  NIPDAU                  N/A for Pkg Type                 -55 to 125                  CD74HCT163E
+         CD74HCT163M                    Obsolete       Production             SOIC (D) | 16                       -                       -                    Call TI                     Call TI                    -55 to 125                     HCT163M
+        CD74HCT163M96                    Active        Production             SOIC (D) | 16            2500 | LARGE T&R                 Yes                  NIPDAU                Level-1-260C-UNLIM                 -55 to 125                     HCT163M
+      CD74HCT163M96.A                    Active        Production             SOIC (D) | 16            2500 | LARGE T&R                 Yes                  NIPDAU                Level-1-260C-UNLIM                 -55 to 125                     HCT163M
+
+(1) Status:  For more details on status, see our product life cycle.
+
+(2) Material type:  When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+
+(3) RoHS values:  Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+
+(4) Lead finish/Ball material:  Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+
+(5) MSL rating/Peak reflow:  The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+
+(6) Part marking:  There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+
+ OTHER QUALIFIED VERSIONS OF CD54HC161, CD54HC163, CD54HCT163, CD74HC161, CD74HC163, CD74HCT163 :
+
+
+
+                                                                                                                          Addendum-Page 2

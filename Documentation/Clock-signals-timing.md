@@ -1,5 +1,10 @@
 # Clock signals and timing
 
+Verification update: the original 120 ns phase separation below fails the
+208 ns representative-path budget. A separate [counted-clock candidate](Counted-clock.md)
+now has a 375 ns nominal interval, pin-derived start/stop/single-step tests and
+a sourced conditional timing budget. It has not replaced the active circuit.
+
 The clock module of the DM-02 generates a 1 MHz clock that is essentially split into two phases (*see: [Clock phases](#clock-phases)*)
 
 There is no option for changing the clock speed (as opposed to the DM-01), but there is a `CONTINUE` function that allows to resume program execution after a `HALT` instruction was executed.

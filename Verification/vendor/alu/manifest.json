@@ -1,0 +1,93 @@
+{
+  "retrieved": "2026-11-14",
+  "files": [
+    {
+      "id": "m27c322",
+      "url": "https://media.digikey.com/pdf/Data%20Sheets/ST%20Microelectronics%20PDFS/M27C322.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "file": "m27c322.txt",
+      "sha256": "55ea0d1825054108821cff23f8c1d382882a9d92af614c46889cb6df21d0fcce",
+      "pdf_sha256": "72f49a81c164bba377e1ebce8f42c5882f709050e2f8a8ea537d4640ecdd488d"
+    },
+    {
+      "id": "cd74hct157",
+      "url": "https://www.ti.com/lit/ds/symlink/cd74hct157.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "file": "cd74hct157.txt",
+      "sha256": "bd7638b5b457b0fe2b3314686f5e5cdf541e9cfecbbd6320459671b1c56f8461",
+      "pdf_sha256": "b538c939c02289e99e55470e5b5ee193766386d0c388e07a1f1927b93f8cb3f6"
+    },
+    {
+      "id": "cd74hct377",
+      "url": "https://www.ti.com/lit/ds/symlink/cd74hct377.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "file": "cd74hct377.txt",
+      "sha256": "dfb3ad1c3585d303d771afb77b087e7ab58172678b8c10d15bbc301ea4feb8e9",
+      "pdf_sha256": "e31605c6c3b60b6d34324afafd8ce9dcc33ab9471cc9971087b261de48f36255"
+    },
+    {
+      "id": "sn74ahct157",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74ahct157.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "file": "sn74ahct157.txt",
+      "sha256": "4cb93299903734ae9c95c1a7e199c67ffaf7ef3850a736ebcb4852f26302ca89",
+      "pdf_sha256": "253c4ef1919a5088feaffd2fe3c481d49705ddedea70da88ed1f92156f9054a5"
+    }
+  ]
+}

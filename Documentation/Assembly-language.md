@@ -429,6 +429,36 @@ If a program needs to run from RAM, the bootloader code must be present in the R
 | POP HL                               |
 | POP F                                |
 
+### Address-building scratch registers
+
+Direct and memory-indirect addressing use architectural registers as scratch.
+This is part of the instruction contract, so programs must save a live pointer
+before an instruction that overwrites it:
+
+- MOV with `$address` uses HL to hold that address. `MOV $address,HL` uses BC
+  instead, preserving the value being stored. `MOV HL,$address` finishes with
+  the loaded value in HL.
+- MOV with `($address)` leaves the dereferenced effective address in HL.
+- ADD, ADC, SUB, SBC, AND, OR, XOR, NOT and CMP with `$address` or `($address)`
+  leave the effective operand address in HL.
+- Taken JMP/CALL and their conditional forms leave the destination in HL.
+  Untaken branches preserve HL. RET preserves HL.
+- Register-indirect `(BC)` and `(HL)` addressing preserves the address pair
+  unless that pair is also the explicit destination. Immediate addressing
+  does not use a scratch pair; SP loads only the stack pointer.
+
+The MOV and arithmetic effects were already noted in their instruction tables.
+The logical/comparison and taken-branch effects are now explicit extensions of
+that convention, matching the existing microcode. The emulator implements this
+contract, including its stack representation: CALL stores the address of its
+first operand, high byte first at SP and low byte at SP−1, then leaves SP two
+bytes lower. RET pops low then high and adds two to the restored address.
+PC, SP and memory addresses wrap to 16 bits. Conditional calls and returns
+leave the stack untouched when not taken. Code that constructs a return frame
+must store the desired return address minus two, rather than the return address
+itself. PUSH/POP F use C/O/Z/N in bits 0/1/2/3; bits 4–7 are zero on push and
+discarded on pop.
+
 <a name="ADD"></a>
 ### ADD
 

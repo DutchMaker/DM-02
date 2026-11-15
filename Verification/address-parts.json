@@ -1,0 +1,18 @@
+{
+  "revision":"SP1/MA1",
+  "device_sources":{
+    "CD74AC175M96":"controller-parts.json",
+    "SN74AHCT244N":"pc-parts.json",
+    "SN74AHCT157N":"alu-parts.json",
+    "SN74AHCT04N":"controller-parts.json",
+    "SN74AHCT08DR":"controller-parts.json",
+    "SN74AHCT00DR":"controller-parts.json",
+    "SN74AHCT32N":"pc-parts.json"
+  },
+  "devices":{
+    "CD74ACT283E":{"function":"283","package":"PDIP-16","source":"cd74ac283","pages":[3,4,5,6,7,15],"max_delay_ns":18.2,"input_cap_pf":10,"note":"Maximum includes 4.5 V and -55..125 C at 50 pF. All modeled contamination delays are zero. Datasheet pin-function table has VCC=14 typo; package drawing and legacy symbol correctly use pin 16."}
+  },
+  "constraints":{"local_trace_cap_pf":5,"connector_load_pf":20,"data_bus_external_load_pf":50,"routing_uncertainty_ns":10,"data_setup_ns":40,"data_hold_ns":40},
+  "conditions":"4.5 V logic bounds at 50 pF encompassing 0..50 C. Actual slew, reset, supply, connectors and shared DATA capacitance remain unqualified.",
+  "scope":"PH1 operand snapshots isolate PH3 updates from feedback. SP1 synchronous add/subtract and byte loads; MA1 early snapshot-address bypass with PH3 retained address, increment and byte loads. Dedicated continuously driven PC and stack address links replace the shared-address assumption for this integration."
+}

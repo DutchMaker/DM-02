@@ -1,0 +1,10 @@
+{
+  "revision":"FR1",
+  "retrieved":"2026-11-15",
+  "devices":{
+    "SST39SF040-70-4I-NHE":{"function":"SST39SF040","source":"sst39sf040","package":"PLCC32","source_pages":[3,11,12,13,24,30,31],"max_delay_ns":70,"oe_access_ns":35,"disable_max_ns":25,"input_cap_pf":6,"io_cap_pf":12,"timing_load_pf":100,"startup_ns":100000,"supply_min_v":4.5,"supply_max_v":5.5,"temperature_min_c":-40,"temperature_max_c":85,"capacitance_note":"Capacitance limits are qualification-tested at 25 C. Full-temperature and PCB loading remain unqualified.","procurement":"Manufacturer lists family In Production and this PLCC SKU. Physical purchase and programmer/readback validation remain open."}
+  },
+  "device_sources":{"SN74AHCT244N":"pc-parts.json","SN74AHCT157N":"alu-parts.json"},
+  "constraints":{"local_trace_cap_pf":5,"connector_load_pf":20,"data_bus_external_load_pf":50},
+  "scope":"Read-only array: CE/OE tied low, WE tied high, private flash outputs and mux-selected banks. No flash command/programming model or hardware startup supervisor. Physical programming and full-temperature loading remain unqualified."
+}

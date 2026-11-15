@@ -19,6 +19,20 @@ This is how microcode is managed in the DM-02:
   `xxxxxxxx|xxxx|xxxx` (16-bits)  
   `instruction|t-state|flags`
 
+The address is `(opcode << 8) | (tstate << 4) | flags`, with `N Z O C` from
+high to low in the four-bit flag field. The compiler writes all 65,536 words:
+131,072 little-endian bytes in `.rom`, and 65,536 hexadecimal words after the
+`v2.0 raw` header in `.img`. Unassigned words are zero-filled. This storage
+policy does not define a safe invalid-opcode response.
+
+The separate [CW1 controller candidate](./Control-word.md) implements this
+logical 64K×16 image with two AT27C512R-70PU 64K×8 byte banks. It captures the
+control word on C1 PH1, enables decoded controls during PH2 and drives PC1's
+PH3 capture. The historical CLOCK1/CLOCK2 descriptions below are architectural
+phase roles; CW1's explicit blanking and timing contract is documented separately.
+Fetch and t-state sequencing are external to CW1 and implemented in the separate
+[SQ1 candidate](./Sequencer.md), including retained HALT/request arbitration.
+
 
 
 ## Microcode control words
@@ -33,7 +47,7 @@ each type of word has its own bit format:
 ### Data operation word format
 
 `1|xxxx|xxxx|x|xxxxx|0`  
-`1|operand_out|operand_load|0|function|0`  
+`1|operand_out|operand_load|0|0|function|0`<br>
 `1|operand_out|operand_load|1|alu_operation|0`
 
 > The *out* operation starts at rising CLOCK1
@@ -62,7 +76,7 @@ The following operands can be used in this operation:
 | C          | C register                               | `0011` |
 | H          | H register                               | `0100` |
 | L          | L register                               | `0101` |
-| ALU        | ALU result *(load only)*                 | `0110` |
+| ALU        | Capture ALU result / output captured result | `0110` |
 | F          | Flags register                           | `0111` |
 | MAR_H      | Memory Access Register address high byte | `1000` |
 | MAR_L      | Memory Access Register address low byte  | `1001` |
@@ -121,21 +135,30 @@ TSTATE_1:   PC_inc           # Misc. microinstruction
 
 When compiled, this will result in 2 microinstruction words (the fetch cycle is hard-wired, so only the code for t-state 0 and 1 are compiled into the ROM).
 
-The first microinstruction is a data operation, so according to the format (`0|operand_out|operand_load|0|function` or `0|operand_out|operand_load|1|alu_operation`), the compiled instruction word  will be:
+The first word is `1|1010|0001|0|0|0110|0`, or `0xD08C`:
 
-- `0100100000001110` 
-  - `0` to indicate the microinstruction is a data operation.
-  - `1001` refers to `MEM` which will be output to the bus.
-  - `0000` refers to `A` which will load from the bus.
-  - `0` to indicate we are also enabling a function control line.
-  - `00111` refers to the `PC_MAR_transfer` control line.
-  - `0` because the last bit in the data operation word is not used.
+- Bit 15 selects a data operation.
+- Output `1010` selects MEM; load `0001` selects A.
+- Bit 6 is zero, selecting a function rather than an ALU operation; bit 5 is unused.
+- Function `0110` selects PC_MAR_transfer; bit 0 is unused.
 
-The second microinstruction is a function operation, so according to the format (`1|function|function|function`), the compiled instruction word will be:
+The second word is `0|0101|000000|0001|0`, or `0x2802`:
 
-- `1001010000100000`
-  - `1` to indicate the microinstruction is a function operation.
-  - `00101` refers to the `PC_inc` control line.
-  - `00001` refers to the `TSTATE_reset` control line.
-  - `00000` refers to no control line.
+- Bit 15 selects a function operation.
+- Function `0101` selects PC_inc; function `0001` selects TSTATE_reset.
+- Bits 10–5 and bit 0 are unused.
 
+For `MOV A,value` (opcode `0x17`), these words occupy addresses `0x1700`–`0x170F`
+and `0x1710`–`0x171F`, respectively, covering all 16 flag states.
+
+## Execution verification
+
+`Verification/dm02/microcode.py` independently expands source definitions and
+checks every generated word. `Verification/dm02/control.py` executes the compiled
+words with the generated ALU ROM and compares architectural effects under six
+explicit phase/flag-capture profiles, including extracted Logisim PC logic.
+JMP and CALL no longer assert PC_inc alongside PC_L_load: the old low byte could
+otherwise produce a carry into the target high byte. The boundary audit checks
+204,800 target/flag/operand-PC cases and reproduces the old defect by mutation.
+See [the verification runbook](../Verification/README.md) for scope, the scratch
+register contract and remaining physical controller/flag-wiring work.

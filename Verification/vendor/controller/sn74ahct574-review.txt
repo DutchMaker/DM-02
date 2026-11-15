@@ -1,0 +1,296 @@
+Source: https://www.ti.com/lit/ds/symlink/sn74ahct574.pdf
+Retrieved: 2026-11-14
+Review only: not used for CW1 timing. LE timing labels conflict with the clocked functional description.
+
+--- PDF page 1 ---
+                                                                                                             SN54AHCT574, SN74AHCT574
+                                                                                                  SCLS245N – OCTOBER 1995 – REVISED JULY 2024
+            SNx4AHCT574 Octal Transparent D-Type Latches With 3-State Outputs
+
+1 Features                                                                  3 Description
+•   Inputs are TTL-voltage compatible                                       The SNx4AHCT574 devices are octal edge-triggered
+•   Latch-up performance exceeds 250mA per JESD                             D-type flip-flops that feature 3-state outputs designed
+    17                                                                      specifically  for  driving  highly  capacitive  or  relatively
+•   On products compliant to MIL-PRF-38535,                                 low-impedance loads.
+    all parameters are tested unless otherwise noted.                                             Device Information
+    On all other products, production processing does                         PART NUMBER        PACKAGE(1)     PACKAGE SIZE(2)     BODY SIZE(3)
+    not necessarily include testing of all parameters.                                         DB (SSOP, 20)   7.2mm × 7.8mm    7.50mm x 5.30mm
+•   ESD protection exceeds JESD 22                                                             DGV (TVSOP, 20) 5.00mm x 6.4mm   5.00mm x 4.40mm
+    –   2000V human-body model (A114-A)                                                                        12.80mm ×
+                                                                             SNx4AHCT574       DW (SOIC, 20)   10.3mm           12.8mm x 7.5mm
+    –   1000V charged-device model (C101)
+                                                                                               N (PDIP, 20)    24.33mm x 9.4mm  25.40mm x 6.35mm
+2 Applications                                                                                 PW (TSSOP, 20)  6.50mm × 6.4mm   6.50mm x 4.40mm
+•   Smartphone Handsets                                                     (1)   For more information, see Section 11.
+•   PDAs                                                                    (2)   The package size (length × width) is a nominal value and
+•   Network Switches                                                              includes pins, where applicable.
+•   Wearable Health and Fitness Devices                                     (3)   The body size (length × width) is a nominal value and does
+                                                                                  not include pins.
+•   Televisions (LCDs)
+•   Power Infrastructures
+
+
+
+
+
+
+
+
+
+
+
+                                                          Simplified Schematic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications,
+      intellectual property matters and other important disclaimers. PRODUCTION DATA.
+--- PDF page 5 ---
+                                                                                                                        SN54AHCT574, SN74AHCT574
+www.ti.com                                                                                                 SCLS245N – OCTOBER 1995 – REVISED JULY 2024
+
+5.4 Thermal Information
+
+                                                                                                     SN74AHCT574
+                      THERMAL METRIC(1)                              DW (SOIC)           DB           DGV        N (PDIP)    NS (SOP)         PW         UNIT
+                                                                                      (SSOP)        (TVSOP)                                (TSSOP)
+                                                                                                         20 PINS
+ RθJA          Junction-to-ambient thermal resistance                    81.1           97.9          117.2         53.3         79.2        116.8
+ RθJC(top)     Junction-to-case (top) thermal resistance                 48.9           59.6          32.7          40.0         45.7         58.5
+ RθJB          Junction-to-board thermal resistance                      53.8           53.1          58.7          34.2         46.8         78.7       °C/W
+ ψJT           Junction-to-top characterization parameter                19.5           21.3          1.15          26.4         19.3         12.6
+ ψJB           Junction-to-board characterization parameter              53.1           52.7          58.0          34.1         46.4         77.9
+ RθJC(bot)     Junction-to-case (bottom) thermal resistance               N/A           N/A            N/A          N/A          N/A          N/A
+
+(1)    For more information about traditional and new thermal metrics, see the IC Package Thermal Metrics application report (SPRA953).
+5.5 Electrical Characteristics
+
+over recommended operating free-air temperature range (unless otherwise noted)
+                                                                   T   = 25°C          SN54AHCT574            –40°C to 85°C        –40°C to 125°C
+  PARAMETER            TEST CONDITIONS              V                A                                       SN74AHCT574           SN74AHCT574           UNIT
+                                                      CC
+                                                               MIN     TYP     MAX         MIN      MAX         MIN       MAX         MIN        MAX
+       V           IOH = −50 µA                     4.5 V       4.4     4.5                 4.4                  4.4                   4.4                 V
+         OH        I   = −8 mA                                 3.94                         3.8                  3.8                   3.8
+                    OH
+                   IOL = 50 µA                                                   0.1                  0.1                   0.1                   0.1
+        VOL        I   = 8 mA                       4.5 V                       0.36                 0.44                  0.44                  0.44      V
+                    OL
+         I         V  = 5.5 V or GND                0 V to                      ±0.1                ±1(1)                    ±1                    ±1     µA
+         I           I                              5.5 V
+
+        IOZ        VO = VCC or GND                  5.5 V                     ±0.25                  ±2.5                  ±2.5                  ±2.5     µA
+        ICC        VI = VCC or GND, IO = 0          5.5 V                          4                   40                    40                    40     µA
+      ΔICC (2)     One input at 3.4 V,              5.5 V                       1.35                  1.5                   1.5                   1.5     mA
+                   Other inputs at VCC or GND
+        Ci         VI = VCC or GND                   5 V                  3       10                                         10                           pF
+        Co         VO = VCC or GND                   5 V                  3                                                                               pF
+
+(1)    On products compliant to MIL-PRF-38535, this parameter is not production tested at VCC = 0 V.
+(2)    This is the increase in supply current for each input at one of the specified TTL voltage levels, rather than 0 V or VCC.
+5.6 Timing Requirements
+over recommended operating free-air temperature range, VCC = 5 V ± 0.5 V (unless otherwise noted) (see Load Circuit and
+Voltage Waveforms)
+                                                    T   = 25°C          SN54AHCT574             SN74AHCT574            TA = –40°C to 125°C
+                                                      A                                                                   SN74AHCT574                 UNIT
+
+                                                      MIN     MAX           MIN        MAX          MIN       MAX               MIN        MAX
+ tw       Pulse duration, LE high                      5.5                   5.5                     5.5                         5.5                    ns
+ tsu      Setup time, data before LE↓                  3.5                   3.5                     3.5                         3.5                    ns
+ th       Hold time, data after LE↓                    1.5                   1.5                     1.5                         1.5                    ns
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2024 Texas Instruments Incorporated                                                                          Submit Document Feedback               5
+                                                  Product Folder Links: SN54AHCT574 SN74AHCT574
+--- PDF page 6 ---
+SN54AHCT574, SN74AHCT574
+SCLS245N – OCTOBER 1995 – REVISED JULY 2024                                                                                                                  www.ti.com
+
+5.7 Switching Characteristics
+
+over recommended operating free-air temperature range, VCC = 5 V ± 0.5 V (unless otherwise noted) (see Load Circuit and
+Voltage Waveforms)
+                                                                       T  = 25°C              SN54AHCT574            SN74AHCT574          TA = –40°C to 125°C
+  PARAMETER         FROM          TO            LOAD                    A                                                                    SN74AHCT574            UNIT
+                  (OUTPUT)      (INPUT)     CAPACITANCE
+                                                                 MIN       TYP      MAX          MIN        MAX        MIN       MAX           MIN          MAX
+                                              CL = 15 pF       130(1)     180(1)               110(1)                   110                     110
+ fmax                                                                                                                                                                ns
+                                              CL = 50 pF          85        115                   75                     75                      75
+ tPLH                                                                     5.5(1)    8.6(1)        1(1)      10(1)         1        10             1           11
+                     CLK           Q          CL = 15 pF                     (1)       (1)         (1)        (1)                                                    ns
+ tPHL                                                                     5.5       8.6           1         10            1        10             1           11
+ tPZH                                                                       5(1)      9(1)        1(1)    10.5(1)         1       10.5            1          11.5
+                     OE            Q          CL = 15 pF                     (1)       (1)         (1)        (1)                                                    ns
+ tPZL                                                                       5         9           1       10.5            1       10.5            1          11.5
+ tPHZ                                                                     5.5(1)      9(1)        1(1)    10.5(1)         1       10.5            1          11.5
+                     OE            Q          CL = 15 pF                     (1)       (1)         (1)        (1)                                                    ns
+ tPLZ                                                                     5.5         9           1       10.5            1       10.5            1          11.5
+
+ tPLH                CLK           Q          C   = 50 pF                     7      10.6          1          12          1        12             1           13     ns
+ t                                              L                             7      10.6          1          12          1        12             1           13
+  PHL
+ tPZH                                                                         6        11          1        12.5          1       12.5            1          13.5
+ t                   OE            Q          CL = 50 pF                      6        11          1        12.5          1       12.5            1          13.5    ns
+  PZL
+ tPHZ                                                                         7      10.1          1        11.5          1       11.5            1           13
+ t                   OE            Q          CL = 50 pF                      7      10.1          1        11.5          1       11.5            1           13     ns
+  PLZ
+ tsk(o)                                       CL = 50 pF                              1(2)                                           1                               ns
+
+(1)     On products compliant to MIL-PRF-38535, this parameter is not production tested.
+(2)     On products compliant to MIL-PRF-38535, this parameter does not apply.
+5.8 Operating Characteristics
+VCC = 5 V, TA = 25°C
+                                  PARAMETER                                                         TEST CONDITIONS                                  TYP        UNIT
+ Cpd          Power dissipation capacitance                                                  No load,                  f = 1 MHz                        28        pF
+
+5.9 Typical Characteristics
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                       Figure 5-1. TPD vs Temperature at 5 V
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6       Submit Document Feedback                                                                                       Copyright © 2024 Texas Instruments Incorporated
+                                                     Product Folder Links: SN54AHCT574 SN74AHCT574
+--- PDF page 8 ---
+SN54AHCT574, SN74AHCT574
+SCLS245N – OCTOBER 1995 – REVISED JULY 2024                                                                                     www.ti.com
+
+7 Detailed Description
+7.1 Overview
+The  SNx4AHCT574  devices  are  octal  edge-triggered  D-type  flip-flops  that  feature  3-state  outputs  designed
+specifically for driving highly capacitive or relatively low-impedance loads. These devices are particularly suitable
+for implementing buffer registers, IO ports, bidirectional bus drivers, and working registers.
+Regarding the positive transition of the clock (CLK) input, the Q outputs are set to the logic levels of the data
+(D) inputs. A buffered output-enable ( OE) input places the eight outputs in either a normal logic state (high or
+low) or the high-impedance state. In the high-impedance state, the outputs neither load nor drive the bus lines
+significantly. The high-impedance state and the increased drive provide the capability to drive bus lines without
+interface or pull-up components.
+7.2 Functional Block Diagram
+
+
+
+
+
+
+
+
+
+
+
+
+
+7.3 Feature Description
+•   TTL inputs
+    –   Lowered switching threshold allows up translation 3.3 V to 5 V
+•   Slow edges reduce output ringing
+7.4 Device Functional Modes
+                                                      Table 7-1. Function Table
+                                                            (Each Flip-Flop)
+                                                           INPUTS           OUTPUT
+                                                       OE    CLK      D         Q
+
+                                                        L      ↑      H         H
+                                                        L      ↑      L         L
+                                                        L    H or     X         Q
+                                                               L                 0
+
+                                                       H      X       X         Z
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8      Submit Document Feedback                                                                  Copyright © 2024 Texas Instruments Incorporated
+                                           Product Folder Links: SN54AHCT574 SN74AHCT574

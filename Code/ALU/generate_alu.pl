@@ -97,7 +97,7 @@ sub ASR {
 }
 
 # Two digit BCD addition of $A and $B.
-# Any result >100 is reduced by 100 and carry set.
+# Any result >=100 is reduced by 100 and carry set.
 # Result is also two BCD digits.
 sub BCD_ADD {
   # Convert both to 8-bit values
@@ -107,13 +107,13 @@ sub BCD_ADD {
   my $c=0;
   $result= $a + $b;
   if ($result > 99) {
-    $result -= 99;
+    $result -= 100;
     $c= CARRYFLAG;	# This is active high at this point
   }
   $result= $NumtoBCD[ $result] + $c;
 }
 
-# Two digit BCD addition of $A and $B.
+# Two digit BCD subtraction of $B from $A.
 # Any result <0 is incremented by 100 and carry set.
 # Result is also two BCD digits.
 sub BCD_SUB {
@@ -124,7 +124,7 @@ sub BCD_SUB {
   my $c=0;
   $result= $a - $b;
   if ($result < 0) {
-    $result += 99;
+    $result += 100;
     $c= CARRYFLAG;	# This is active high at this point
   }
   $result= $NumtoBCD[ $result] + $c;
@@ -164,7 +164,7 @@ my @Opsub= (
   sub { $result= (~$A) & 0xff; },			# NOT A
   sub { $result= (~$B) & 0xff; },			# NOT B
   \&BCD_ADD,						# BCD A + B
-  \&BCD_SUB,						# BCD A + B
+  \&BCD_SUB,						# BCD A - B
 );
 
 ### MAIN PROGRAM ###
@@ -200,12 +200,31 @@ foreach my $aluop (0x00 .. 0x1f) {
       # Flip the zero bit for special ALUop 12
       $result ^= ZEROFLAG if ($aluop==12);
 
-      # Add on any active low negative flag
+      # Add on any active high negative flag
       $result |= NEGFLAG if ($rsign);
 
-      # If A's sign is the same as B's sign, and the
-      # result sign is different, set the overflow flag
-      $result |= OFLOWFLAG if (($asign==$bsign) && ($asign != $rsign));
+      # Signed arithmetic overflow depends on the operation. Unary operations
+      # must not depend on the unused operand. Subtraction compares opposite
+      # operand signs and the sign of its minuend (B for reverse subtraction).
+      # V describes signed two's-complement arithmetic only. Logical, move,
+      # multiply/divide, shift/rotate and BCD operations clear V.
+      my $overflow=0;
+      if    ($aluop==3)             { $overflow= ($A==0x80); }
+      elsif ($aluop==4)             { $overflow= ($B==0x80); }
+      elsif ($aluop==5)             { $overflow= ($A==0x7f); }
+      elsif ($aluop==6)             { $overflow= ($B==0x7f); }
+      elsif ($aluop==7)             { $overflow= ($A==0x80); }
+      elsif ($aluop==8)             { $overflow= ($B==0x80); }
+      elsif ($aluop==11 || $aluop==12 || $aluop==14) {
+        $overflow= ($asign!=$bsign && $asign!=$rsign);
+      }
+      elsif ($aluop==13 || $aluop==15) {
+        $overflow= ($asign!=$bsign && $bsign!=$rsign);
+      }
+      elsif ($aluop==9 || $aluop==10) {
+        $overflow= ($asign==$bsign && $asign!=$rsign);
+      }
+      $result |= OFLOWFLAG if $overflow;
 
       # Put in the divide-by-zero flag if B is zero and we did a DIV or MOD
       $result |= DIVFLAG if ($isdivmod && $B==0);

@@ -5,7 +5,7 @@ namespace Mcc
 {
     class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
             Console.WriteLine();
             Console.WriteLine("---------------------------------");
@@ -16,12 +16,12 @@ namespace Mcc
             //args = new [] { @"/Users/ruud/Projects/DM-02/Code/Microcode/microcode.src" };
             //args = new [] { @"D:\Projects\Active\DM-02\Code\Microcode\microcode.src" };
 
-            if (args.Length == 0)
+            if (args.Length != 1)
             {
                 Console.WriteLine("Usage: mcc.exe \"filename.src\"");
                 Console.WriteLine("Outputs \"filename.img\" (for Logisim) and \"filename.rom\" files.");
                 Console.WriteLine();
-                return;
+                return 2;
             }
 
             string fileName = args[0];
@@ -30,7 +30,7 @@ namespace Mcc
             {
                 Console.WriteLine($"Could not find source file {fileName}");
                 Console.WriteLine();
-                return;
+                return 2;
             }
 
             try
@@ -41,9 +41,11 @@ namespace Mcc
             {
                 Console.WriteLine("Compilation failed:");
                 Console.WriteLine(ex?.Message);
+                return 1;
             }
 
             Console.WriteLine();
+            return 0;
         }
     }
 }

@@ -1,0 +1,32 @@
+{
+  "revision": "counted-clock-C1",
+  "scope": "Candidate clock core only; limits are conditional on the stated loads, input transitions and routing. No procurement or board qualification is implied.",
+  "retrieved": "2026-11-14",
+  "oscillator": {"mpn":"ECS-100AX-080", "frequency_hz":8000000, "stability_ppm":100, "duty_min":0.4, "duty_max":0.6, "startup_max_ms":20, "supply_min_v":4.75, "supply_max_v":5.25, "temperature_min_c":0, "temperature_max_c":70, "source":"ecs-100x", "source_pages":[1,2]},
+  "devices": {
+    "CD74AC175M96": {"function":"175", "package":"SOIC-16", "source":"cd74ac175", "source_pages":[6,7], "max_delay_ns":12.2, "setup_ns":2, "hold_ns":2, "reset_setup_ns":1, "pulse_ns":5, "input_cap_pf":10},
+    "SN74AHC74N": {"function":"74", "package":"PDIP-14", "source":"sn74ahc74", "source_pages":[6,7], "max_delay_ns":11, "clock_q_max_ns":10.5, "setup_ns":5, "hold_ns":0.5, "reset_setup_ns":3, "pulse_ns":5, "input_cap_pf":10},
+    "SN74AHCT04N": {"function":"04", "package":"PDIP-14", "source":"sn74ahct04", "source_pages":[5], "max_delay_ns":8.5, "input_cap_pf":10},
+    "SN74AHC32N": {"function":"32", "package":"PDIP-14", "source":"sn74ahc32", "source_pages":[7], "max_delay_ns":8.5, "max_delay_15pf_ns":6.5, "input_cap_pf":10},
+    "SN74AHC08N": {"function":"08", "package":"PDIP-14", "source":"sn74ahc08", "source_pages":[8], "max_delay_ns":9, "max_delay_15pf_ns":7, "input_cap_pf":10},
+    "SN74AHCT244N": {"function":"244", "package":"PDIP-20", "source":"sn74ahct244", "source_pages":[5], "max_delay_ns":9.5, "input_cap_pf":10}
+  },
+  "constraints": {
+    "local_trace_cap_pf":5,
+    "phase_connector_load_pf":50,
+    "clock_routing_and_jitter_ns":2,
+    "output_routing_and_jitter_ns":10,
+    "minimum_reset_input_ns":1000,
+    "power_on_reset_after_valid_supply_ms":25,
+    "request_protocol":"RUN high requests continuous cycles. RUN low finishes an already-started cycle, after synchronization latency. A rising debounced STEP while READY and idle sets a pending latch; ACTIVE clears it after acceptance. Holding STEP high does not repeat. STEP during an active cycle is ignored. Raw switch debounce and HALT/CONTINUE arbitration are external to this core.",
+    "reset_protocol":"RESET_IN_n asynchronously aborts the current cycle. Receivers must remain inhibited during reset and until controller initialization. Release only after supply is valid and the oscillator startup interval has elapsed. READY is an internal reset-sequencing indication, not a power-good detector."
+  },
+  "unqualified": [
+    "Oscillator cycle-to-cycle jitter is not bounded in the cited data sheet; 2 ns internal and 10 ns output uncertainty are allocated design limits.",
+    "Maximum propagation bounds are used at their data-sheet input-slew and load conditions; source-to-receiver slew compatibility needs electrical modelling or measurements.",
+    "Trace capacitance, connector loading and clock routing allocations need extracted PCB evidence.",
+    "The asynchronous request and reset entry stages have no metastability MTBF qualification.",
+    "Front-panel debounce, HALT/CONTINUE arbitration, power supervisor, receiver reset inhibition and backplane hookup remain to be implemented.",
+    "Exact passive parts, distributor availability, footprint review and independent review remain open."
+  ]
+}

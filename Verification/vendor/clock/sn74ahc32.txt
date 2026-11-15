@@ -1,0 +1,382 @@
+Source: https://www.ti.com/lit/ds/symlink/sn74ahc32.pdf
+Retrieved: 2026-11-14
+PDF SHA256: 8c1e2f6b2999874ca37e228dee0dad8f20a8cb58969c764fb63feee684c16e41
+Extraction: pypdf layout; page numbers are PDF pages. Tables require visual review of the linked PDF.
+
+--- PDF page 3 ---
+                                                                                                             SN74AHC32, SN54AHC32
+www.ti.com                                                                            SCLS247L – OCTOBER 1995 – REVISED FEBRUARY 2024
+
+4 Pin Configuration and Functions
+
+
+
+
+
+
+
+
+
+
+               Figure 4-1. SN54AHC32 J or W
+    SN74AHC32 D, DB, DGV, N, NS or PW Package,
+                       14-Pin (Top View)
+
+
+
+                                                                       Figure 4-2. SN74AHC32 RGY or BQA Package, 14-
+                                                                                              Pin (Top View)
+
+
+
+
+
+
+
+
+
+
+
+                                 Figure 4-3. SN54AHC32 FK Package, 20-Pin (Top View)
+
+                                                     Table 4-1. Pin Functions
+                           PIN
+                 SN74AHC32              SN54AHC32          TYPE(1)                              DESCRIPTION
+ NAME        D, DB, DGV, N, NS,       J, W        FK
+                PW, RGY, BQA
+ 1A                    1                1          2           I      1A Input
+
+ 1B                    2               23          3           I      1B Input
+
+ 1Y                    3                3          4          O       1Y Output
+
+ 2A                    4                4          6           I      2A Input
+
+ 2B                    5                5          8           I      2B Input
+
+ 2Y                    6                6          9          O       2Y Output
+
+ 3A                    9                9          13          I      3A Input
+
+ 3B                   10               10          14          I      3B Input
+
+ 3Y                    8                8          12         O       3Y Output
+
+ 4A                   12               12          18          I      4A Input
+
+ 4B                   13               13          19          I      4B Input
+
+ 4Y                   11               11          16         O       4Y Output
+ GND                   7                7          10         —       Ground Pin
+ NC                   —                —        1, 5, 7,      —       No Connection
+                                               11, 15, 17
+
+
+
+Copyright © 2024 Texas Instruments Incorporated                                                         Submit Document Feedback         3
+                                             Product Folder Links: SN74AHC32 SN54AHC32
+
+--- PDF page 4 ---
+SN74AHC32, SN54AHC32
+SCLS247L – OCTOBER 1995 – REVISED FEBRUARY 2024                                                                                           www.ti.com
+                                                 Table 4-1. Pin Functions (continued)
+                              PIN
+                  SN74AHC32                SN54AHC32             TYPE(1)                                DESCRIPTION
+ NAME          D, DB, DGV, N, NS,         J, W         FK
+                 PW, RGY, BQA
+ VCC                    14                 14          20           —       Power Pin
+
+ Thermal                 –                 –            –           –       Thermal Pad
+ Pad(2)
+
+(1)    Signal Types: I = Input, O = Output, I/O = Input or Output.
+(2)    RGY and BQA Package Only
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4      Submit Document Feedback                                                                          Copyright © 2024 Texas Instruments Incorporated
+                                                 Product Folder Links: SN74AHC32 SN54AHC32
+
+--- PDF page 5 ---
+                                                                                                                              SN74AHC32, SN54AHC32
+www.ti.com                                                                                          SCLS247L – OCTOBER 1995 – REVISED FEBRUARY 2024
+
+5 Specifications
+5.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted)(1)
+                                                                                                                 MIN                     MAX         UNIT
+ Supply voltage range, VCC                                                                                       –0.5                         7        V
+ Input voltage range, VI (2)                                                                                     –0.5                         7        V
+
+ Output voltage range, VO (2)                                                                                    –0.5               VCC + 0.5          V
+
+ Input clamp current, IIK (VI < 0)                                                                                                         -20        mA
+
+ Output clamp current, IOK (VO < 0 or VO > VCC)                                                                                            ±20        mA
+
+ Continuous output current, IO (VO = 0 to VCC)                                                                                             ±25        mA
+
+ Continuous current through VCC or GND                                                                                                     ±50        mA
+
+ Storage temperature range, Tstg                                                                                 –65                       150        °C
+
+(1)    Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress ratings
+       only, and functional operation of the device at these or any other conditions beyond those indicated under Recommended Operating
+       Conditions is not implied. Exposure to absolute-maximum-rated conditions for extended periods may affect device reliability.
+(2)    The input and output voltage ratings may be exceeded if the input and output current ratings are observed.
+
+5.2 ESD Ratings
+                                                                                                                                         VALUE        UNIT
+                                                  Human-body model (HBM), per ANSI/ESDA/JEDEC JS-001(1)                                   ±2000
+ V (ESD)     Electrostatic discharge              Charged device model (CDM), per ANSI/ESDA/JEDEC JS-002(2)                               ±1000         V
+
+
+(1)    JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process.
+(2)    JEDEC document JEP157 states that 250-V CDM allows safe manufacturing with a standard ESD control process.
+5.3 Recommended Operating Conditions
+
+                                                                                                 SN54AHC32                 SN74AHC32                 UNIT
+                                                                                                   MIN         MAX           MIN         MAX
+ VCC          Supply voltage                                                                           2         5.5             2          5.5        V
+                                                                  VCC= 2 V                          1.5                        1.5
+ VIH          High-level input voltage                            VCC= 3V                           2.1                        2.1                     V
+                                                                  VCC= 5.5 V                       3.85                      3.85
+                                                                  VCC= 2 V                                       0.5                        0.5
+ VIL          Low-level Input voltage                             VCC= 3 V                                       0.9                        0.9        V
+                                                                  VCC= 5.5 V                                    1.65                      1.65
+ VI           Input voltage                                                                            0         5.5             0          5.5        V
+ VO           Output voltage                                                                           0         VCC             0         VCC         V
+                                                                  VCC= 2 V                                       –50                       –50
+ IOH          High-level output current                           VCC= 3.3 V ± 0.3 V                              –4                        –4        mA
+                                                                  VCC= 5 V ± 0.5 V                                –8                        –8
+                                                                  VCC= 2 V                                        50                        50
+ IOL          Low-level output current                            VCC= 3.3 V ± 0.3 V                                4                         4       mA
+                                                                  VCC= 5 V ± 0.5 V                                  8                         8
+ Δt/Δv        Input Transition rise or fall rate                  VCC= 3.3 V ± 0.3 V                             100                       100       ns/V
+                                                                  VCC= 5 V ± 0.5 V                                20                        20
+ TA           Operating free-air temperature                                                        –55          125          –40          125        °C
+
+
+
+
+Copyright © 2024 Texas Instruments Incorporated                                                                         Submit Document Feedback               5
+                                                     Product Folder Links: SN74AHC32 SN54AHC32
+
+--- PDF page 6 ---
+SN74AHC32, SN54AHC32
+SCLS247L – OCTOBER 1995 – REVISED FEBRUARY 2024                                                                                                      www.ti.com
+
+5.4 Thermal Information
+                                                                                       SNx4AHC32
+        THERMAL METRIC(1)                    D(2)         DB(2)       DGV(2)          N(2)        NS(2)         PW(2)       RGY(3)         BQA          UNIT
+
+                                              14            14           14           14            14           14            14           14
+    R           Junction-to-ambient         124.6           96          127           80            76          147.7          47          88.3         °C/W
+       θJA       thermal resistance
+
+(1)    For more information about traditional and new thermal metrics, see the Semiconductor and IC package thermal metrics application
+       report.
+(2)    The package thermal impedance is calculated in accordance with JESD 51-7.
+(3)    The package thermal impedance is calculated in accordance with JESD 51-5
+
+5.5 Electrical Characteristics
+over operating free-air temperature range (unless otherwise noted)
+                                                                                            T   = –55°C TO        T  = –40°C TO        TA = –40°C TO
+                                                                                             A                     A                        125°C
+                                                                       TA = 25°C                 125°C                 85°C            Recommended
+   PARAMETER            TEST CONDITIONS              VCC                                                                                                   UNIT
+                                                                                             SN54AHC32             SN74AHC32            SN74AHC32
+                                                                  MIN      TYP     MAX         MIN       MAX        MIN       MAX         MIN       MAX
+                                                     2 V           1.9        2                 1.9                  1.9                   1.9
+                     IOH = –50 µA                    3 V           2.9        3                 2.9                  2.9                   2.9
+         VOH                                         4.5 V         4.4      4.5                 4.4                  4.4                   4.4               V
+                     IOH = –4 mA                     3 V          2.58                         2.48                 2.48                  2.48
+                     IOH = –8 mA                     4.5 V        3.94                          3.8                  3.8                   3.8
+                                                     2 V                             0.1                   0.1                  0.1                   0.1
+                     IOL = 50 µA                     3 V                             0.1                   0.1                  0.1                   0.1
+         VOL                                         4.5 V                           0.1                   0.1                  0.1                   0.1    V
+                     IOH = 4 mA                      3 V                            0.36                   0.5                 0.44                   0.5
+                     IOH = 8 mA                      4.5 V                          0.36                   0.5                 0.44                   0.5
+          I          V = 5.5 V or GND             0 V to 5.5                        ±0.1                 ±1(1)                   ±1                   ±1    µA
+           I           I                              V
+
+         I           VI = VCC or        I  = 0       5.5 V                             2                   20                    20                   20    µA
+          CC         GND,               O
+
+          Ci         VI = VCC or GND                 5 V                      2       10                                         10                         pF
+
+(1)    On products compliant to MIL-PRF-38535, this parameter is not production tested at VCC = 0 V.
+5.6 Switching Characteristics, VCC = 3.3 V ± 0.3 V
+over recommended operating free-air temperature range (unless otherwise noted) (see Figure 6-1)
+                                                                                                 T   = –55°C TO     T   = –40°C TO     TA = –40°C TO
+                                                                                                   A                  A                     125°C
+                          FROM                TO               LOAD              TA = 25°C            125°C              85°C          Recommended
+   PARAMETER             (INPUT)          (OUTPUT)        CAPACITANCE                                                                                      UNIT
+                                                                                                  SN54AHC32          SN74AHC32          SN74AHC32
+                                                                                 TYP      MAX     MIN      MAX       MIN      MAX       MIN      MAX
+         tPLH                                                                   5.5(1)    7.9(1)     1(1)    9.5(1)       1       9.5        1       9.5
+         t                A or B               Y             CL = 15 pF         5.5(1)    7.9(1)     1(1)    9.5(1)       1       9.5        1       9.5    ns
+         PHL
+         tPLH             A or B               Y             C  = 50 pF             8      11.4        1       13         1       13         1       13     ns
+         t                                                    L                     8      11.4        1       13         1       13         1       13
+         PHL
+
+(1)    On products compliant to MIL-PRF-38535, this parameter is not production tested.
+
+
+
+
+
+
+
+
+6       Submit Document Feedback                                                                                 Copyright © 2024 Texas Instruments Incorporated
+                                                     Product Folder Links: SN74AHC32 SN54AHC32
+
+--- PDF page 7 ---
+                                                                                                                          SN74AHC32, SN54AHC32
+www.ti.com                                                                                       SCLS247L – OCTOBER 1995 – REVISED FEBRUARY 2024
+
+5.7 Switching Characteristics, VCC = 5 V ± 0.5 V
+
+over recommended operating free-air temperature range(unless otherwise noted) (see Figure 6-1)
+                                                                                          T  = –55°C TO     T  = –40°C TO      TA = –40°C TO
+                                                                                           A                 A                      125°C
+                        FROM              TO              LOAD             TA = 25°C          125°C             85°C           Recommended
+   PARAMETER           (INPUT)         (OUTPUT)       CAPACITANCE                                                                                   UNIT
+                                                                                           SN54AHC32         SN74AHC32          SN74AHC32
+                                                                           TYP     MAX     MIN     MAX      MIN      MAX       MIN        MAX
+        tPLH                                                              3.8(1)   5.5(1)    1(1)   6.5(1)       1      6.5          1        6.5
+        t               A or B             Y            CL = 15 pF        3.8(1)   5.5(1)    1(1)   6.5(1)       1      6.5          1        6.5    ns
+        PHL
+        tPLH            A or B             Y            C   = 50 pF         5.3      7.5       1      8.5        1      8.5          1        8.5    ns
+        t                                                 L                 5.3      7.5       1      8.5        1      8.5          1        8.5
+        PHL
+
+5.8 Noise Characteristics
+VCC = 5 V, CL = 50 pF, TA = 25°C(1)
+
+                                                    PARAMETER                                                                SN74AHC32             UNIT
+                                                                                                                          MIN      TYP     MAX
+ VOL(P)         Quiet output, maximum dynamic VOL                                                                                   0.3      0.8     V
+ VOL(V)         Quiet output, minimum dynamic VOL                                                                                  –0.3     –0.8     V
+ VOH(V)         Quiet output, minimum dynamic VOH                                                                                   4.7              V
+ VIH(D)         High-level dynamic input voltage                                                                           3.5                       V
+ VIL(D)         Low-level dynamic input voltage                                                                                              1.5     V
+
+(1)    Characteristics are for surface-mount packages only.
+5.9 Operating Characteristics
+
+VCC = 5 V, TA = 25°C
+                                     PARAMETER                                                TEST CONDITIONS                      TYP         UNIT
+ Cpd          Power dissipation capacitance                                              No load,         f = 1 MHz                  14         pF
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2024 Texas Instruments Incorporated                                                                     Submit Document Feedback              7
+                                                   Product Folder Links: SN74AHC32 SN54AHC32

@@ -1,0 +1,14 @@
+{
+  "revision": "FD1-distribution",
+  "devices": {},
+  "device_sources": {
+    "SN74AHCT244N": "pc-parts.json",
+    "SN74AHCT157N": "alu-parts.json",
+    "SN74AHCT08DR": "controller-parts.json"
+  },
+  "constraints": {
+    "local_trace_cap_pf": 5,
+    "connector_load_pf": 5,
+    "data_bus_external_load_pf": 0
+  }
+}

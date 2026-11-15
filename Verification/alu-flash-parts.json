@@ -1,0 +1,18 @@
+{
+  "revision":"AL2",
+  "device_sources":{
+    "CD74AC175M96":"controller-parts.json",
+    "SN74HCT574N":"controller-parts.json",
+    "SN74AHCT244N":"pc-parts.json",
+    "SN74AHCT04N":"controller-parts.json",
+    "SN74AHCT08DR":"controller-parts.json",
+    "SN74AHCT00DR":"controller-parts.json",
+    "CD74HCT377M96":"alu-parts.json",
+    "SN74AHCT157N":"alu-parts.json",
+    "SST39SF040-70-4I-NHE":"flash-parts.json"
+  },
+  "devices":{},
+  "constraints":{"local_trace_cap_pf":5,"connector_load_pf":20,"data_bus_external_load_pf":50,"routing_uncertainty_ns":10,"data_setup_ns":40,"data_hold_ns":40},
+  "conditions":"4.5 V, 50 pF logic tables and 100 pF flash read timing. Zero minimum contamination delays. Flash capacitance applies at 25 C. Hold reset for at least 100 us after valid flash supply; the test fixture waits an additional 101 us before normal startup.",
+  "scope":"AL1 staged datapath with eight private-output PLCC32 flash devices replacing the obsolete M27C322. AL1 remains a separate historical timing candidate. Physical programming, supply startup, shared DATA, clock/reset and PCB qualification remain open."
+}

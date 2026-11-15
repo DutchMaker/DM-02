@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>DM-02 · Verification control room</title>
+  <link rel="stylesheet" href="/dashboard/style.css">
+  <script defer src="/dashboard/app.js"></script>
+</head>
+<body>
+  <header><a class="wordmark" href="/">DM<span>—</span>02 <small>TTL COMPUTER / ENGINEERING</small></a><nav><a href="#evidence">Evidence</a><a href="#risks">Open work</a><a href="/README.md">Runbook</a></nav></header>
+  <main>
+    <div class="eyebrow">PRE-FABRICATION VERIFICATION <span id="freshness" role="status">CONNECTING</span></div>
+    <section class="hero"><div><h1>Know what works.<br><span>See what’s missing.</span></h1><p>Source-linked tests for the DM-02. Every result has a scope, every failure has evidence, and every open gate stays visible.</p></div><div class="release"><span class="dot"></span> FABRICATION GATE<h2>Blocked</h2><p>Partial virtual evidence.<br>Hardware qualification outstanding.</p><a href="#risks">View release blockers ↓</a></div></section>
+    <div id="notice" role="alert" hidden></div>
+    <div class="runline"><span id="run">Loading latest run…</span><button id="refresh" type="button">Refresh status ↻</button><a href="/build/report.json">Download report JSON ↗</a></div>
+    <section id="milestones" class="milestones" aria-label="Milestone status"></section>
+    <section id="layout-studies" class="panel"><div class="eyebrow">CD1 / PHYSICAL DESIGN STUDIES</div><h2>Routing, clock loading and manufacturing evidence</h2><p>Each study retains its own source hashes and checks. P3 shortens and widens the local capacitor feeds while preserving signal routing. Physical decoupling, assembly fit and the 5 pF trace allocation remain unqualified.</p><ul><li><a href="/build/cd1-decoupling/">P3 capacitor placement, feed geometry and assembly conditions</a></li><li><a href="/build/cd1-fabrication-screen/">Supplier rules, CAM previews and coating sensitivity</a></li><li><a href="/build/cd1-capacitance/">Numerical capacitance benchmarks and ground-neighborhood survey</a></li><li><a href="/build/cd1-stitching/">P2 ground stitching and remaining 2 mm target</a></li><li><a href="/build/cd1-electrical/">P0/P1 return-path comparison</a></li><li><a href="/build/cd1-layout/">P0 routing trial</a></li></ul></section>
+    <section class="split">
+      <article class="panel"><div class="eyebrow">CRITICAL-PATH PILOT</div><h2>Time available vs. time required</h2><div id="timing"></div><p class="muted">The active RC-clock baseline fails the budget. C1 uses counted oscillator periods; its bounds depend on input slew, jitter and PCB load limits that still need qualification. The 300 ns comparison uses ideal stimulus.</p></article>
+      <article class="panel"><div class="eyebrow">CHECK THE CHECKERS</div><h2>Fault-injection results</h2><div class="tablewrap"><table><thead><tr><th>Scenario</th><th>Observed</th><th>Qualification</th></tr></thead><tbody id="mutations"></tbody></table></div><p class="muted">A green fault row means the expected violation was detected. It does not mean that faulty design passed.</p></article>
+    </section>
+    <section class="panel wavepanel"><div class="sectionhead"><div><div class="eyebrow">SIMULATION TRACE</div><h2>First transfer, at signal level</h2></div><label>Scenario <select id="wavecase"></select></label></div><div id="waveform" aria-live="polite"></div><p class="muted">First 1,000 ns from the actual Icarus VCD. Timing units converted from the file. <a id="vcd" href="#">Download full waveform ↗</a></p></section>
+    <section id="evidence"><div class="sectionhead"><div><div class="eyebrow">REPRODUCIBLE RESULTS</div><h2>Evidence ledger</h2></div><div class="filters"><label class="sr-only" for="search">Search evidence</label><input id="search" placeholder="Search checks…" type="search"><label class="sr-only" for="status">Filter status</label><select id="status"><option value="all">All statuses</option><option>pass</option><option>fail</option><option>blocked</option><option>limited</option><option>error</option></select></div></div><div id="counts" class="counts"></div><div id="checks" class="checks"></div></section>
+    <section class="panel"><div class="eyebrow">MILESTONE 3 / ROM AUDIT</div><h2>Every ALU address, checked independently</h2><p class="muted">Generator opcode order. Data errors and provisional flag-contract differences are counted separately. Open an operation for counterexamples.</p><div id="alu" class="alu"></div></section>
+    <section id="risks"><div class="eyebrow">WORK REQUIRED BEFORE RELEASE</div><h2>Open engineering work</h2><div id="risklist"></div></section>
+    <section class="panel"><h2>Requirements & provenance</h2><div class="tablewrap"><table><thead><tr><th>Requirement</th><th>Acceptance criterion</th><th>Current evidence</th></tr></thead><tbody id="trace"></tbody></table></div><details><summary>Source hashes, model assumptions and tool versions</summary><pre id="provenance"></pre></details></section>
+    <footer>DM-02 / TTL prototype verification <span>Run: <code>python3 Verification/run.py</code></span></footer>
+  </main>
+</body>
+</html>

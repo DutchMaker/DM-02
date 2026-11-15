@@ -1,0 +1,943 @@
+EESchema Schematic File Version 4
+LIBS:74xx
+EELAYER 29 0
+EELAYER END
+$Descr User 90000 46811
+Sheet 1 1
+Title "DM-02 counted-clock candidate"
+Date "2026-11-14"
+Rev "C1"
+Comp "DM-02"
+Comment1 "8 MHz / 8; opposite-edge staging; request/ack interface"
+Comment2 "Candidate core: front-panel, supervisor and backplane integration pending"
+Comment3 "See Verification/clock-parts.json and Documentation/Counted-clock.md"
+Comment4 ""
+$EndDescr
+Text Notes 800 700 0    60   ~ 0
+C1 candidate: 1 MHz full cycle; PH1/PH3 lag PH0/PH2 by three oscillator periods
+Text Notes 800 950 0    60   ~ 0
+RUN high = continuous cycles; rising debounced STEP while idle = one complete cycle
+$Comp
+L DM02-Clock:ECS-100AX Y1
+U 1 1 69A00001
+P 1800 2000
+F 0 "Y1" H 1950 2300 50 0000 L CNN
+F 1 "ECS-100AX-080" H 1950 2200 50 0000 L CNN
+F 2 "Oscillator:Oscillator_DIP-14" H 1800 2000 50 0001 C CNN
+	1    1800 2000
+	1    0    0    -1
+$EndComp
+NoConn ~ 1300 2000
+Text Label 1800 2400 0    39   ~ 0
+GND
+Text Label 2300 2000 0    39   ~ 0
+OSC_TTL
+Text Label 1800 1600 0    39   ~ 0
+5V
+$Comp
+L 74xx:74HCT04 U3
+U 1 1 69A00002
+P 3400 1600
+F 0 "U3" H 3550 1900 50 0000 L CNN
+F 1 "SN74AHCT04N" H 3550 1800 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 3400 1600 50 0001 C CNN
+	1    3400 1600
+	1    0    0    -1
+$EndComp
+Text Label 3100 1600 0    39   ~ 0
+OSC_TTL
+Text Label 3700 1600 0    39   ~ 0
+ROOT_P
+$Comp
+L 74xx:74HCT04 U3
+U 2 1 69A00003
+P 3400 2300
+F 0 "U3" H 3550 2600 50 0000 L CNN
+F 1 "SN74AHCT04N" H 3550 2500 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 3400 2300 50 0001 C CNN
+	2    3400 2300
+	1    0    0    -1
+$EndComp
+Text Label 3100 2300 0    39   ~ 0
+ROOT_P
+Text Label 3700 2300 0    39   ~ 0
+ROOT_N
+$Comp
+L 74xx:74HCT04 U3
+U 3 1 69A00004
+P 3400 3000
+F 0 "U3" H 3550 3300 50 0000 L CNN
+F 1 "SN74AHCT04N" H 3550 3200 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 3400 3000 50 0001 C CNN
+	3    3400 3000
+	1    0    0    -1
+$EndComp
+Text Label 3100 3000 0    39   ~ 0
+RUN
+Text Label 3700 3000 0    39   ~ 0
+RUN_n
+$Comp
+L 74xx:74HCT04 U3
+U 4 1 69A00005
+P 3400 3700
+F 0 "U3" H 3550 4000 50 0000 L CNN
+F 1 "SN74AHCT04N" H 3550 3900 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 3400 3700 50 0001 C CNN
+	4    3400 3700
+	1    0    0    -1
+$EndComp
+Text Label 3700 3700 0    39   ~ 0
+RUN_CMOS
+Text Label 3100 3700 0    39   ~ 0
+RUN_n
+$Comp
+L 74xx:74HCT04 U3
+U 5 1 69A00006
+P 3400 4400
+F 0 "U3" H 3550 4700 50 0000 L CNN
+F 1 "SN74AHCT04N" H 3550 4600 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 3400 4400 50 0001 C CNN
+	5    3400 4400
+	1    0    0    -1
+$EndComp
+Text Label 3700 4400 0    39   ~ 0
+RESET_IN
+Text Label 3100 4400 0    39   ~ 0
+RD_LEAF0
+$Comp
+L 74xx:74HCT04 U3
+U 6 1 69A00007
+P 3400 5100
+F 0 "U3" H 3550 5400 50 0000 L CNN
+F 1 "SN74AHCT04N" H 3550 5300 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 3400 5100 50 0001 C CNN
+	6    3400 5100
+	1    0    0    -1
+$EndComp
+Text Label 3700 5100 0    39   ~ 0
+RESET_RAW_n
+Text Label 3100 5100 0    39   ~ 0
+RESET_IN
+$Comp
+L 74xx:74HCT04 U3
+U 7 1 69A00008
+P 3400 6400
+F 0 "U3" H 3550 6700 50 0000 L CNN
+F 1 "SN74AHCT04N" H 3550 6600 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 3400 6400 50 0001 C CNN
+	7    3400 6400
+	1    0    0    -1
+$EndComp
+Text Label 3400 5900 0    39   ~ 0
+5V
+Text Label 3400 6900 0    39   ~ 0
+GND
+$Comp
+L 74xx:74HCT244 U10
+U 1 1 69A00009
+P 5400 1900
+F 0 "U10" H 5550 2200 50 0000 L CNN
+F 1 "SN74AHCT244N" H 5550 2100 50 0000 L CNN
+F 2 "Package_DIP:DIP-20_W7.62mm" H 5400 1900 50 0001 C CNN
+	1    5400 1900
+	1    0    0    -1
+$EndComp
+Text Label 4900 2300 0    39   ~ 0
+GND
+Text Label 5400 2700 0    39   ~ 0
+GND
+Text Label 4900 2100 0    39   ~ 0
+GND
+NoConn ~ 5900 1700
+Text Label 4900 2000 0    39   ~ 0
+GND
+NoConn ~ 5900 1600
+Text Label 4900 1900 0    39   ~ 0
+GND
+Text Label 5900 1500 0    39   ~ 0
+CLK_N
+Text Label 4900 1800 0    39   ~ 0
+GND
+Text Label 5900 1400 0    39   ~ 0
+CLK_P
+Text Label 4900 2400 0    39   ~ 0
+GND
+Text Label 4900 1400 0    39   ~ 0
+ROOT_P
+Text Label 5400 1100 0    39   ~ 0
+5V
+NoConn ~ 5900 1800
+Text Label 4900 1500 0    39   ~ 0
+ROOT_N
+NoConn ~ 5900 1900
+Text Label 4900 1600 0    39   ~ 0
+GND
+NoConn ~ 5900 2000
+Text Label 4900 1700 0    39   ~ 0
+GND
+NoConn ~ 5900 2100
+$Comp
+L 74xx:74LS175 U1
+U 1 1 69A0000A
+P 12000 2300
+F 0 "U1" H 12150 2600 50 0000 L CNN
+F 1 "CD74AC175M96" H 12150 2500 50 0000 L CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 12000 2300 50 0001 C CNN
+	1    12000 2300
+	1    0    0    -1
+$EndComp
+Text Label 11500 2800 0    39   ~ 0
+RESET_P_n
+Text Label 12500 2300 0    39   ~ 0
+Q2
+Text Label 12500 2400 0    39   ~ 0
+Q2_n
+Text Label 11500 2300 0    39   ~ 0
+S2
+Text Label 11500 2500 0    39   ~ 0
+S3
+Text Label 12500 2600 0    39   ~ 0
+Q3_n
+Text Label 12500 2500 0    39   ~ 0
+Q3
+Text Label 12000 1600 0    39   ~ 0
+5V
+Text Label 12500 1900 0    39   ~ 0
+Q0
+Text Label 12500 2000 0    39   ~ 0
+Q0_n
+Text Label 11500 1900 0    39   ~ 0
+S0
+Text Label 11500 2100 0    39   ~ 0
+S1
+Text Label 12500 2200 0    39   ~ 0
+Q1_n
+Text Label 12500 2100 0    39   ~ 0
+Q1
+Text Label 12000 3100 0    39   ~ 0
+GND
+Text Label 11500 2700 0    39   ~ 0
+CLK_P
+$Comp
+L 74xx:74LS175 U2
+U 1 1 69A0000B
+P 9300 2300
+F 0 "U2" H 9450 2600 50 0000 L CNN
+F 1 "CD74AC175M96" H 9450 2500 50 0000 L CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 9300 2300 50 0001 C CNN
+	1    9300 2300
+	1    0    0    -1
+$EndComp
+Text Label 8800 2800 0    39   ~ 0
+RESET_N_n
+Text Label 9800 2300 0    39   ~ 0
+S2
+NoConn ~ 9800 2400
+Text Label 8800 2300 0    39   ~ 0
+Q1
+Text Label 8800 2500 0    39   ~ 0
+Q2
+NoConn ~ 9800 2600
+Text Label 9800 2500 0    39   ~ 0
+S3
+Text Label 9300 1600 0    39   ~ 0
+5V
+Text Label 9800 1900 0    39   ~ 0
+S0
+NoConn ~ 9800 2000
+Text Label 8800 1900 0    39   ~ 0
+NEXT0
+Text Label 8800 2100 0    39   ~ 0
+Q0
+NoConn ~ 9800 2200
+Text Label 9800 2100 0    39   ~ 0
+S1
+Text Label 9300 3100 0    39   ~ 0
+GND
+Text Label 8800 2700 0    39   ~ 0
+CLK_N
+Text Notes 7400 1100 0    60   ~ 0
+U2 captures next state on CLK_N; U1 publishes it on CLK_P
+$Comp
+L 74xx:74LS32 U4
+U 1 1 69A0000C
+P 5500 4550
+F 0 "U4" H 5650 4850 50 0000 L CNN
+F 1 "SN74AHC32N" H 5650 4750 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 5500 4550 50 0001 C CNN
+	1    5500 4550
+	1    0    0    -1
+$EndComp
+Text Label 5200 4450 0    39   ~ 0
+Q0
+Text Label 5200 4650 0    39   ~ 0
+REQUEST_SYNC
+Text Label 5800 4550 0    39   ~ 0
+ADVANCE
+$Comp
+L 74xx:74LS32 U4
+U 2 1 69A0000D
+P 5500 5200
+F 0 "U4" H 5650 5500 50 0000 L CNN
+F 1 "SN74AHC32N" H 5650 5400 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 5500 5200 50 0001 C CNN
+	2    5500 5200
+	1    0    0    -1
+$EndComp
+Text Label 5200 5100 0    39   ~ 0
+Q0
+Text Label 5200 5300 0    39   ~ 0
+Q3
+Text Label 5800 5200 0    39   ~ 0
+ACTIVE_RAW
+$Comp
+L 74xx:74LS32 U4
+U 3 1 69A0000E
+P 5500 5850
+F 0 "U4" H 5650 6150 50 0000 L CNN
+F 1 "SN74AHC32N" H 5650 6050 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 5500 5850 50 0001 C CNN
+	3    5500 5850
+	1    0    0    -1
+$EndComp
+Text Label 5200 5950 0    39   ~ 0
+STEP_PENDING
+Text Label 5800 5850 0    39   ~ 0
+REQUEST_CMOS
+Text Label 5200 5750 0    39   ~ 0
+RUN_CMOS
+$Comp
+L 74xx:74LS32 U4
+U 4 1 69A0000F
+P 5500 6500
+F 0 "U4" H 5650 6800 50 0000 L CNN
+F 1 "SN74AHC32N" H 5650 6700 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 5500 6500 50 0001 C CNN
+	4    5500 6500
+	1    0    0    -1
+$EndComp
+NoConn ~ 5800 6500
+Text Label 5200 6400 0    39   ~ 0
+GND
+Text Label 5200 6600 0    39   ~ 0
+GND
+$Comp
+L 74xx:74LS32 U4
+U 5 1 69A00010
+P 5500 7900
+F 0 "U4" H 5650 8200 50 0000 L CNN
+F 1 "SN74AHC32N" H 5650 8100 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 5500 7900 50 0001 C CNN
+	5    5500 7900
+	1    0    0    -1
+$EndComp
+Text Label 5500 7400 0    39   ~ 0
+5V
+Text Label 5500 8400 0    39   ~ 0
+GND
+$Comp
+L 74xx:74LS08 U5
+U 1 1 69A00011
+P 7400 4550
+F 0 "U5" H 7550 4850 50 0000 L CNN
+F 1 "SN74AHC08N" H 7550 4750 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 7400 4550 50 0001 C CNN
+	1    7400 4550
+	1    0    0    -1
+$EndComp
+Text Label 7100 4450 0    39   ~ 0
+ADVANCE
+Text Label 7100 4650 0    39   ~ 0
+Q3_n
+Text Label 7700 4550 0    39   ~ 0
+NEXT0
+$Comp
+L 74xx:74LS08 U5
+U 2 1 69A00012
+P 7400 5200
+F 0 "U5" H 7550 5500 50 0000 L CNN
+F 1 "SN74AHC08N" H 7550 5400 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 7400 5200 50 0001 C CNN
+	2    7400 5200
+	1    0    0    -1
+$EndComp
+Text Label 7100 5100 0    39   ~ 0
+Q0_n
+Text Label 7100 5300 0    39   ~ 0
+Q3_n
+Text Label 7700 5200 0    39   ~ 0
+IDLE_RAW
+$Comp
+L 74xx:74LS08 U5
+U 3 1 69A00013
+P 7400 5850
+F 0 "U5" H 7550 6150 50 0000 L CNN
+F 1 "SN74AHC08N" H 7550 6050 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 7400 5850 50 0001 C CNN
+	3    7400 5850
+	1    0    0    -1
+$EndComp
+Text Label 7100 5950 0    39   ~ 0
+RESET_N_n
+Text Label 7700 5850 0    39   ~ 0
+STEP_CLEAR_n
+Text Label 7100 5750 0    39   ~ 0
+IDLE_RAW
+$Comp
+L 74xx:74LS08 U5
+U 4 1 69A00014
+P 7400 6500
+F 0 "U5" H 7550 6800 50 0000 L CNN
+F 1 "SN74AHC08N" H 7550 6700 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 7400 6500 50 0001 C CNN
+	4    7400 6500
+	1    0    0    -1
+$EndComp
+NoConn ~ 7700 6500
+Text Label 7100 6400 0    39   ~ 0
+GND
+Text Label 7100 6600 0    39   ~ 0
+GND
+$Comp
+L 74xx:74LS08 U5
+U 5 1 69A00015
+P 7400 7900
+F 0 "U5" H 7550 8200 50 0000 L CNN
+F 1 "SN74AHC08N" H 7550 8100 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 7400 7900 50 0001 C CNN
+	5    7400 7900
+	1    0    0    -1
+$EndComp
+Text Label 7400 7400 0    39   ~ 0
+5V
+Text Label 7400 8400 0    39   ~ 0
+GND
+Text Notes 8800 4200 0    60   ~ 0
+Asynchronous assertion; reset release crosses opposite edges
+$Comp
+L 74xx:74HC74 U6
+U 1 1 69A00016
+P 9400 5000
+F 0 "U6" H 9550 5300 50 0000 L CNN
+F 1 "SN74AHC74N" H 9550 5200 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 9400 5000 50 0001 C CNN
+	1    9400 5000
+	1    0    0    -1
+$EndComp
+Text Label 9400 5300 0    39   ~ 0
+RESET_RAW_n
+Text Label 9100 4900 0    39   ~ 0
+5V
+Text Label 9100 5000 0    39   ~ 0
+CLK_P
+Text Label 9400 4700 0    39   ~ 0
+5V
+Text Label 9700 4900 0    39   ~ 0
+RESET_STAGE0
+NoConn ~ 9700 5100
+$Comp
+L 74xx:74HC74 U6
+U 2 1 69A00017
+P 11600 5000
+F 0 "U6" H 11750 5300 50 0000 L CNN
+F 1 "SN74AHC74N" H 11750 5200 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 11600 5000 50 0001 C CNN
+	2    11600 5000
+	1    0    0    -1
+$EndComp
+Text Label 11600 4700 0    39   ~ 0
+5V
+Text Label 11300 5000 0    39   ~ 0
+CLK_N
+Text Label 11300 4900 0    39   ~ 0
+RESET_STAGE0
+Text Label 11600 5300 0    39   ~ 0
+RESET_RAW_n
+NoConn ~ 11900 5100
+Text Label 11900 4900 0    39   ~ 0
+RESET_P_n
+$Comp
+L 74xx:74HC74 U7
+U 1 1 69A00018
+P 13800 5000
+F 0 "U7" H 13950 5300 50 0000 L CNN
+F 1 "SN74AHC74N" H 13950 5200 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 13800 5000 50 0001 C CNN
+	1    13800 5000
+	1    0    0    -1
+$EndComp
+Text Label 13800 5300 0    39   ~ 0
+RESET_RAW_n
+Text Label 13500 4900 0    39   ~ 0
+RESET_P_n
+Text Label 13500 5000 0    39   ~ 0
+CLK_P
+Text Label 13800 4700 0    39   ~ 0
+5V
+Text Label 14100 4900 0    39   ~ 0
+RESET_N_n
+NoConn ~ 14100 5100
+$Comp
+L 74xx:74HC74 U7
+U 2 1 69A00019
+P 13800 6300
+F 0 "U7" H 13950 6600 50 0000 L CNN
+F 1 "SN74AHC74N" H 13950 6500 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 13800 6300 50 0001 C CNN
+	2    13800 6300
+	1    0    0    -1
+$EndComp
+Text Label 13800 6000 0    39   ~ 0
+5V
+Text Label 13500 6300 0    39   ~ 0
+STEP_CMOS
+Text Label 13500 6200 0    39   ~ 0
+5V
+Text Label 13800 6600 0    39   ~ 0
+STEP_CLEAR_n
+NoConn ~ 14100 6400
+Text Label 14100 6200 0    39   ~ 0
+STEP_PENDING
+$Comp
+L 74xx:74HC74 U6
+U 3 1 69A0001A
+P 9500 7200
+F 0 "U6" H 9650 7500 50 0000 L CNN
+F 1 "SN74AHC74N" H 9650 7400 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 9500 7200 50 0001 C CNN
+	3    9500 7200
+	1    0    0    -1
+$EndComp
+Text Label 9500 6800 0    39   ~ 0
+5V
+Text Label 9500 7600 0    39   ~ 0
+GND
+$Comp
+L 74xx:74HC74 U7
+U 3 1 69A0001B
+P 11500 7200
+F 0 "U7" H 11650 7500 50 0000 L CNN
+F 1 "SN74AHC74N" H 11650 7400 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 11500 7200 50 0001 C CNN
+	3    11500 7200
+	1    0    0    -1
+$EndComp
+Text Label 11500 6800 0    39   ~ 0
+5V
+Text Label 11500 7600 0    39   ~ 0
+GND
+Text Notes 8800 8000 0    60   ~ 0
+Request synchronizer: metastability MTBF still requires device/system qualification
+$Comp
+L 74xx:74HC74 U8
+U 1 1 69A0001C
+P 9500 8800
+F 0 "U8" H 9650 9100 50 0000 L CNN
+F 1 "SN74AHC74N" H 9650 9000 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 9500 8800 50 0001 C CNN
+	1    9500 8800
+	1    0    0    -1
+$EndComp
+Text Label 9500 9100 0    39   ~ 0
+RESET_N_n
+Text Label 9200 8700 0    39   ~ 0
+REQUEST_CMOS
+Text Label 9200 8800 0    39   ~ 0
+CLK_N
+Text Label 9500 8500 0    39   ~ 0
+5V
+Text Label 9800 8700 0    39   ~ 0
+REQUEST_STAGE0
+NoConn ~ 9800 8900
+$Comp
+L 74xx:74HC74 U8
+U 2 1 69A0001D
+P 11500 8800
+F 0 "U8" H 11650 9100 50 0000 L CNN
+F 1 "SN74AHC74N" H 11650 9000 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 11500 8800 50 0001 C CNN
+	2    11500 8800
+	1    0    0    -1
+$EndComp
+Text Label 11500 8500 0    39   ~ 0
+5V
+Text Label 11200 8800 0    39   ~ 0
+CLK_P
+Text Label 11200 8700 0    39   ~ 0
+REQUEST_STAGE0
+Text Label 11500 9100 0    39   ~ 0
+RESET_P_n
+NoConn ~ 11800 8900
+Text Label 11800 8700 0    39   ~ 0
+REQUEST_SYNC
+$Comp
+L 74xx:74HC74 U8
+U 3 1 69A0001E
+P 13800 8800
+F 0 "U8" H 13950 9100 50 0000 L CNN
+F 1 "SN74AHC74N" H 13950 9000 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 13800 8800 50 0001 C CNN
+	3    13800 8800
+	1    0    0    -1
+$EndComp
+Text Label 13800 8400 0    39   ~ 0
+5V
+Text Label 13800 9200 0    39   ~ 0
+GND
+$Comp
+L 74xx:74HCT244 U9
+U 1 1 69A0001F
+P 14400 2300
+F 0 "U9" H 14550 2600 50 0000 L CNN
+F 1 "SN74AHCT244N" H 14550 2500 50 0000 L CNN
+F 2 "Package_DIP:DIP-20_W7.62mm" H 14400 2300 50 0001 C CNN
+	1    14400 2300
+	1    0    0    -1
+$EndComp
+Text Label 13900 2700 0    39   ~ 0
+GND
+Text Label 14400 3100 0    39   ~ 0
+GND
+Text Label 13900 2500 0    39   ~ 0
+GND
+Text Label 14900 2100 0    39   ~ 0
+CLOCK_PH3
+Text Label 13900 2400 0    39   ~ 0
+STEP
+Text Label 14900 2000 0    39   ~ 0
+CLOCK_PH2
+Text Label 13900 2300 0    39   ~ 0
+RESET_N_n
+Text Label 14900 1900 0    39   ~ 0
+CLOCK_PH1
+Text Label 13900 2200 0    39   ~ 0
+ACTIVE_RAW
+Text Label 14900 1800 0    39   ~ 0
+CLOCK_PH0
+Text Label 13900 2800 0    39   ~ 0
+GND
+Text Label 13900 1800 0    39   ~ 0
+Q0_n
+Text Label 14400 1500 0    39   ~ 0
+5V
+Text Label 14900 2200 0    39   ~ 0
+ACTIVE
+Text Label 13900 1900 0    39   ~ 0
+Q3_n
+Text Label 14900 2300 0    39   ~ 0
+READY
+Text Label 13900 2000 0    39   ~ 0
+Q0
+Text Label 14900 2400 0    39   ~ 0
+STEP_CMOS
+Text Label 13900 2100 0    39   ~ 0
+Q3
+NoConn ~ 14900 2500
+$Comp
+L Connector_Generic:Conn_01x08 J1
+U 1 1 69A00020
+P 1700 3900
+F 0 "J1" H 1850 4200 50 0000 L CNN
+F 1 "CONTROL" H 1850 4100 50 0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 1700 3900 50 0001 C CNN
+	1    1700 3900
+	1    0    0    -1
+$EndComp
+Text Label 1500 3600 0    39   ~ 0
+5V
+Text Label 1500 3700 0    39   ~ 0
+GND
+Text Label 1500 3800 0    39   ~ 0
+RESET_IN_n
+Text Label 1500 3900 0    39   ~ 0
+RUN
+Text Label 1500 4000 0    39   ~ 0
+ACTIVE
+Text Label 1500 4100 0    39   ~ 0
+READY
+Text Label 1500 4200 0    39   ~ 0
+GND
+Text Label 1500 4300 0    39   ~ 0
+STEP
+$Comp
+L Connector_Generic:Conn_01x08 J2
+U 1 1 69A00021
+P 1700 5700
+F 0 "J2" H 1850 6000 50 0000 L CNN
+F 1 "PHASES" H 1850 5900 50 0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 1700 5700 50 0001 C CNN
+	1    1700 5700
+	1    0    0    -1
+$EndComp
+Text Label 1500 5400 0    39   ~ 0
+5V
+Text Label 1500 5500 0    39   ~ 0
+GND
+Text Label 1500 5600 0    39   ~ 0
+CLOCK_PH0
+Text Label 1500 5700 0    39   ~ 0
+CLOCK_PH1
+Text Label 1500 5800 0    39   ~ 0
+CLOCK_PH2
+Text Label 1500 5900 0    39   ~ 0
+CLOCK_PH3
+Text Label 1500 6000 0    39   ~ 0
+GND
+NoConn ~ 1500 6100
+$Comp
+L Device:R R1
+U 1 1 69A00022
+P 1900 7600
+F 0 "R1" H 2050 7900 50 0000 L CNN
+F 1 "10k" H 2050 7800 50 0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 1900 7600 50 0001 C CNN
+	1    1900 7600
+	1    0    0    -1
+$EndComp
+Text Label 1900 7450 0    39   ~ 0
+RUN
+Text Label 1900 7750 0    39   ~ 0
+GND
+$Comp
+L Device:R R2
+U 1 1 69A00023
+P 2800 7600
+F 0 "R2" H 2950 7900 50 0000 L CNN
+F 1 "10k" H 2950 7800 50 0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 2800 7600 50 0001 C CNN
+	1    2800 7600
+	1    0    0    -1
+$EndComp
+Text Label 2800 7450 0    39   ~ 0
+RESET_IN_n
+Text Label 2800 7750 0    39   ~ 0
+GND
+$Comp
+L Device:R R3
+U 1 1 69A00024
+P 3700 7600
+F 0 "R3" H 3850 7900 50 0000 L CNN
+F 1 "10k" H 3850 7800 50 0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 3700 7600 50 0001 C CNN
+	1    3700 7600
+	1    0    0    -1
+$EndComp
+Text Label 3700 7450 0    39   ~ 0
+STEP
+Text Label 3700 7750 0    39   ~ 0
+GND
+Text Notes 800 9100 0    60   ~ 0
+100nF per logic package + oscillator; placement and exact passive sourcing pending
+$Comp
+L Device:C C1
+U 1 1 69A00025
+P 1100 10000
+F 0 "C1" H 1250 10300 50 0000 L CNN
+F 1 "100nF" H 1250 10200 50 0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 1100 10000 50 0001 C CNN
+	1    1100 10000
+	1    0    0    -1
+$EndComp
+Text Label 1100 9850 0    39   ~ 0
+5V
+Text Label 1100 10150 0    39   ~ 0
+GND
+$Comp
+L Device:C C2
+U 1 1 69A00026
+P 2350 10000
+F 0 "C2" H 2500 10300 50 0000 L CNN
+F 1 "100nF" H 2500 10200 50 0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 2350 10000 50 0001 C CNN
+	1    2350 10000
+	1    0    0    -1
+$EndComp
+Text Label 2350 9850 0    39   ~ 0
+5V
+Text Label 2350 10150 0    39   ~ 0
+GND
+$Comp
+L Device:C C3
+U 1 1 69A00027
+P 3600 10000
+F 0 "C3" H 3750 10300 50 0000 L CNN
+F 1 "100nF" H 3750 10200 50 0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 3600 10000 50 0001 C CNN
+	1    3600 10000
+	1    0    0    -1
+$EndComp
+Text Label 3600 9850 0    39   ~ 0
+5V
+Text Label 3600 10150 0    39   ~ 0
+GND
+$Comp
+L Device:C C4
+U 1 1 69A00028
+P 4850 10000
+F 0 "C4" H 5000 10300 50 0000 L CNN
+F 1 "100nF" H 5000 10200 50 0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 4850 10000 50 0001 C CNN
+	1    4850 10000
+	1    0    0    -1
+$EndComp
+Text Label 4850 9850 0    39   ~ 0
+5V
+Text Label 4850 10150 0    39   ~ 0
+GND
+$Comp
+L Device:C C5
+U 1 1 69A00029
+P 6100 10000
+F 0 "C5" H 6250 10300 50 0000 L CNN
+F 1 "100nF" H 6250 10200 50 0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 6100 10000 50 0001 C CNN
+	1    6100 10000
+	1    0    0    -1
+$EndComp
+Text Label 6100 9850 0    39   ~ 0
+5V
+Text Label 6100 10150 0    39   ~ 0
+GND
+$Comp
+L Device:C C6
+U 1 1 69A0002A
+P 7350 10000
+F 0 "C6" H 7500 10300 50 0000 L CNN
+F 1 "100nF" H 7500 10200 50 0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 7350 10000 50 0001 C CNN
+	1    7350 10000
+	1    0    0    -1
+$EndComp
+Text Label 7350 9850 0    39   ~ 0
+5V
+Text Label 7350 10150 0    39   ~ 0
+GND
+$Comp
+L Device:C C7
+U 1 1 69A0002B
+P 8600 10000
+F 0 "C7" H 8750 10300 50 0000 L CNN
+F 1 "100nF" H 8750 10200 50 0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 8600 10000 50 0001 C CNN
+	1    8600 10000
+	1    0    0    -1
+$EndComp
+Text Label 8600 9850 0    39   ~ 0
+5V
+Text Label 8600 10150 0    39   ~ 0
+GND
+$Comp
+L Device:C C8
+U 1 1 69A0002C
+P 9850 10000
+F 0 "C8" H 10000 10300 50 0000 L CNN
+F 1 "100nF" H 10000 10200 50 0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 9850 10000 50 0001 C CNN
+	1    9850 10000
+	1    0    0    -1
+$EndComp
+Text Label 9850 9850 0    39   ~ 0
+5V
+Text Label 9850 10150 0    39   ~ 0
+GND
+$Comp
+L Device:C C9
+U 1 1 69A0002D
+P 11100 10000
+F 0 "C9" H 11250 10300 50 0000 L CNN
+F 1 "100nF" H 11250 10200 50 0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 11100 10000 50 0001 C CNN
+	1    11100 10000
+	1    0    0    -1
+$EndComp
+Text Label 11100 9850 0    39   ~ 0
+5V
+Text Label 11100 10150 0    39   ~ 0
+GND
+$Comp
+L Device:C C10
+U 1 1 69A0002E
+P 12350 10000
+F 0 "C10" H 12500 10300 50 0000 L CNN
+F 1 "100nF" H 12500 10200 50 0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 12350 10000 50 0001 C CNN
+	1    12350 10000
+	1    0    0    -1
+$EndComp
+Text Label 12350 9850 0    39   ~ 0
+5V
+Text Label 12350 10150 0    39   ~ 0
+GND
+$Comp
+L Device:C C11
+U 1 1 69A0002F
+P 13600 10000
+F 0 "C11" H 13750 10300 50 0000 L CNN
+F 1 "100nF" H 13750 10200 50 0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 13600 10000 50 0001 C CNN
+	1    13600 10000
+	1    0    0    -1
+$EndComp
+Text Label 13600 9850 0    39   ~ 0
+5V
+Text Label 13600 10150 0    39   ~ 0
+GND
+$Comp
+L 74xx:74HCT244 U900
+U 1 1 69E00000
+P 36000 1900
+F 0 "U900" H 36100 2200 50 0000 L CNN
+F 1 "SN74AHCT244N" H 36100 2100 50 0000 L CNN
+F 2 "Package_DIP:DIP-20_W7.62mm" H 36000 1900 50 0001 C CNN
+	1 36000 1900
+	1 0 0 -1
+$EndComp
+Text Label 35500 2300 0 39 ~ 0
+GND
+Text Label 36000 2700 0 39 ~ 0
+GND
+Text Label 35500 2100 0 39 ~ 0
+GND
+NoConn ~ 36500 1700
+Text Label 35500 2000 0 39 ~ 0
+GND
+NoConn ~ 36500 1600
+Text Label 35500 1900 0 39 ~ 0
+GND
+Text Label 36500 1500 0 39 ~ 0
+RD_LEAF0
+Text Label 35500 1800 0 39 ~ 0
+GND
+Text Label 36500 1400 0 39 ~ 0
+RD_ROOT0
+Text Label 35500 2400 0 39 ~ 0
+GND
+Text Label 35500 1400 0 39 ~ 0
+RESET_IN_n
+Text Label 36000 1100 0 39 ~ 0
+5V
+NoConn ~ 36500 1800
+Text Label 35500 1500 0 39 ~ 0
+RD_ROOT0
+NoConn ~ 36500 1900
+Text Label 35500 1600 0 39 ~ 0
+GND
+NoConn ~ 36500 2000
+Text Label 35500 1700 0 39 ~ 0
+GND
+NoConn ~ 36500 2100
+$Comp
+L Device:C C900
+U 1 1 69E00001
+P 39100 1900
+F 0 "C900" H 39200 2200 50 0000 L CNN
+F 1 "100nF" H 39200 2100 50 0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 39100 1900 50 0001 C CNN
+	1 39100 1900
+	1 0 0 -1
+$EndComp
+Text Label 39100 1750 0 39 ~ 0
+5V
+Text Label 39100 2050 0 39 ~ 0
+GND
+$EndSCHEMATC

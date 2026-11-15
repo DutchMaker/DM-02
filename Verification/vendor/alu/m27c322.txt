@@ -1,0 +1,1417 @@
+Source: https://media.digikey.com/pdf/Data%20Sheets/ST%20Microelectronics%20PDFS/M27C322.pdf
+Retrieved: 2026-11-14
+
+--- PDF page 1 ---
+                                                                                                          M27C322
+
+                                           32 Mbit (2Mb x16) UV EPROM and OTP EPROM
+
+
+             Feature summary
+
+             ■  5V ± 10% supply voltage in read operation
+
+             ■  Access time: 80ns
+
+             ■  Word-wide configurable
+
+             ■  32 Mbit mask ROM replacement                                        42
+
+             ■  Low power consumption
+                 –   Active current 50mA at 5MHz                                           1
+                 –   Standby Current 100µA                                                    FDIP42W (F)
+
+             ■  Programming voltage: 12V ± 0.25V
+
+             ■  Programming time: 50µs/word
+
+             ■  Electronic signature
+                 –   Manufacturer Code: 0020h
+                 –   Device Code: 0034h
+                                                                                    42
+             ■  ECOPACK® packages available
+
+
+                                                                                           1
+                                                                                              PDIP42 (B)
+
+
+
+
+
+
+
+
+
+
+                                                                                        42
+
+
+
+                                                                                             1
+                                                                                              SDIP42 (S)
+      Obsolete Product(s) - Obsolete Product(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             March 2006                                                                     Rev 3                                                                               1/24
+
+                                                                                                                      www.st.com     1
+--- PDF page 2 ---
+                  Contents                                                                                                                                     M27C322
+
+                  Contents
+
+
+                  1               Summary description  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+                  2               Device operation  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+                                     2.1       Read mode . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  7
+                                     2.2       Standby mode   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  7
+                                     2.3       Two line output control  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  7
+                                     2.4       System Considerations   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  8
+                                     2.5       Programming  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  8
+                                     2.6       PRESTO III Programming Algorithm  . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  8
+                                     2.7       Program Inhibit . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  9
+                                     2.8       Program Verify  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  9
+                                     2.9       Electronic Signature  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  10
+                                     2.10     Erasure operation (applies to UV EPROM)  . . . . . . . . . . . . . . . . . . . . . . .  10
+
+                  3               Maximum rating . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+
+                  4               DC and AC parameters  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+
+                  5               Package mechanical  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+
+                  6               Part numbering  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+
+                  7               Revision history   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+
+      Obsolete Product(s) - Obsolete Product(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  2/24
+--- PDF page 3 ---
+                  M27C322                                                                                                                                 List of tables
+
+                  List of tables
+
+
+
+                  Table 1.       Signal Names . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+                  Table 2.       Operating Modes  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+                  Table 3.       Electronic Signature . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+                  Table 4.       Absolute Maximum Ratings  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+                  Table 5.       AC Measurement Conditions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+                  Table 6.       Capacitance (TA = 25 °C, f = 1 MHz) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+                  Table 7.       Read Mode DC Characteristics    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+                  Table 8.       Programming Mode DC Characteristics   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+                  Table 9.       Read Mode AC Characteristics  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+                  Table 10.     MARGIN MODE AC Characteristics  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+                  Table 11.     Programming Mode AC Characteristics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+                  Table 12.     FDIP42W - 42 pin Ceramic Frit-seal DIP, with window (0.370" x 0.450"),
+                                     package mechanical data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+                  Table 13.     PDIP42 - 42 pin Plastic DIP, 600 mils width, package mechanical data  . . . . . . . . . . . . . . 20
+                  Table 14.     SDIP42 - 42 pin Shrink Plastic DIP, 600 mils width, package mechanical data . . . . . . . . . 21
+                  Table 15.     Ordering information scheme . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+                  Table 16.     Document revision history  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+
+
+
+
+
+
+
+      Obsolete Product(s) - Obsolete Product(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                 3/24
+--- PDF page 4 ---
+                  List of figures                                                                                                                             M27C322
+
+                  List of figures
+
+
+
+                  Figure 1.      Logic Diagram. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+                  Figure 2.      DIP Connections. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+                  Figure 3.      Programming Flowchart . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+                  Figure 4.      AC Testing Input Output Waveform . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+                  Figure 5.      AC Testing Load Circuit . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+                  Figure 6.      Read Mode AC Waveforms  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+                  Figure 7.      MARGIN MODE AC Waveforms. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+                  Figure 8.      Programming and Verify Modes AC Waveforms  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+                  Figure 9.      FDIP42W - 42 pin Ceramic Frit-seal DIP, with window (0.370" x 0.450"),
+                                      package outline. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+                  Figure 10.    PDIP42 - 42 pin Plastic DIP, 600 mils width, package outline . . . . . . . . . . . . . . . . . . . . . . 20
+                  Figure 11.    SDIP42 - 42 pin Shrink Plastic DIP, 600 mils width, package outline. . . . . . . . . . . . . . . . . 21
+
+
+
+
+
+
+
+
+
+      Obsolete Product(s) - Obsolete Product(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  4/24
+--- PDF page 5 ---
+              M27C322                                                                                                                  Summary description
+
+              1 Summary description
+
+
+                              The M27C322 is a 32 Mbit EPROM offered in the UV range (ultra violet erase). It is ideally
+                              suited for microprocessor systems requiring large data or program storage. It is organised
+                              as 2 MWords of 16 bit. The pin-out is compatible with a 32 Mbit Mask ROM.
+                              The FDIP42W (window ceramic frit-seal package) has a transparent lid which allows the
+                              user to expose the chip to ultraviolet light to erase the bit pattern. A new pattern can then be
+                              written rapidly to the device by following the programming procedure.
+                              For applications where the content is programmed only one time and erasure is not
+                              required, the M27C322 is offered in PDIP42 and SDIP42 packages.
+                              In order to meet environmental requirements, ST offers the M27C322 in ECOPACK®
+                              packages.
+                              ECOPACK packages are Lead-free. The category of second Level Interconnect is marked
+                              on the package and on the inner box label, in compliance with JEDEC Standard JESD97.
+                              The maximum ratings related to soldering conditions are also marked on the inner box label.
+                              ECOPACK is an ST trademark. ECOPACK specifications are available at: www.st.com.
+
+                              Figure 1.     Logic Diagram
+
+                                                                                VCC
+
+
+                                                                        21                      16
+                                                             A0-A20                                   Q0-Q15
+
+
+                                                                    E            M27C322
+
+                                                               GVPP
+
+
+
+
+
+
+                                                                                VSS
+                                                                                                       AI02156
+
+
+                              Table 1.       Signal Names
+      Obsolete Product(s) - Obsolete Product(s)A0-A20                                   Address Inputs
+                              Q0-Q15                                   Data Outputs
+                              E                               Chip Enable
+                              GVPP                                      Output Enable / Program Supply
+                              VCC                                        Supply Voltage
+                              VSS                                         Ground
+
+
+
+
+
+
+                                                                              5/24
+--- PDF page 6 ---
+              Summary description                                                                                                                  M27C322
+
+
+                              Figure 2.     DIP Connections
+
+                                                                     A18                                    A19142
+                                                                     A17    2                41   A8
+                                                                      A7    3                40   A9
+                                                                      A6    4                39   A10
+                                                                      A5    5                38   A11
+                                                                      A4    6                37   A12
+                                                                      A3    7                36   A13
+                                                                      A2    8                35   A14
+                                                                      A1    9                34   A15
+                                                                      A0    10  M27C322      33   A16
+                                                                        E   11               32   A20
+                                                                    VSS     12               31   VSS
+                                                                   GVPP     13               30   Q15
+                                                                      Q0    14               29   Q7
+                                                                      Q8    15               28   Q14
+                                                                      Q1    16               27   Q6
+                                                                      Q9    17               26   Q13
+                                                                      Q2    18               25   Q5
+                                                                     Q10    19               24   Q12
+                                                                      Q3    20               23   Q4
+                                                                     Q11    21               22   VCC
+
+                                                                                          AI02157
+
+
+
+
+
+
+      Obsolete Product(s) - Obsolete Product(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              6/24
+--- PDF page 7 ---
+              M27C322                                                                                                                          Device operation
+
+              2 Device operation
+
+
+                            The operating modes of the M27C322 are listed in the Operating Modes Table. A single
+                            power supply is required in the read mode. All inputs are TTL compatible except for VPP and
+                            12V on A9 for the Electronic Signature.
+
+              2.1 Read mode
+
+                            The M27C322 has a word-wide organization. Chip Enable (E) is the power control and
+                            should be used for device selection. Output Enable (G) is the output control and should be
+                            used to gate data to the output pins independent of device selection. Assuming that the
+                            addresses are stable, the address access time (tAVQV) is equal to the delay from E to output
+                            (tELQV). Data is available at the output after a delay of tGLQV from the falling edge of GVPP,
+                            assuming that E has been low and the addresses have been stable for at least tAVQV-tGLQV.
+
+              2.2 Standby mode
+
+                            The M27C322 has a standby mode which reduces the supply current from 50mA to 100µA.
+                            The M27C322 is placed in the standby mode by applying a CMOS high signal to the E
+                            input.When in the standby mode, the outputs are in a high impedance state, independent of
+                            the GVPP input.
+
+              2.3          Two line output control
+
+                            Because EPROMs are usually used in larger memory arrays, this product features a 2 line
+                            control function which accommodates the use of multiple memory connection. The two line
+                            control function allows:
+                            1.     the lowest possible memory power dissipation,
+                            2.     complete assurance that output bus contention will not occur.
+                            For the most efficient use of these two control lines, E should be decoded and used as the
+                            primary device selecting function, while GVPP should be made a common connection to all
+                            devices in the array and connected to the READ line from the system control bus. This
+                            ensures that all deselected memory devices are in their low power standby mode and that
+                            the output pins are only active when data is required from a particular memory device.
+      Obsolete Product(s) - Obsolete Product(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                          7/24
+--- PDF page 8 ---
+              Device operation                                                                                                                        M27C322
+
+              2.4 System Considerations
+
+                              The power switching characteristics of Advanced CMOS EPROMs require careful
+                              decoupling of the supplies to the devices. The supply current ICC has three segments of
+                              importance to the system designer: the standby current, the active current and the transient
+                              peaks that are produced by the falling and rising edges of E. The magnitude of the transient
+                              current peaks is dependent on the capacitive and inductive loading of the device outputs.
+                              The associated transient voltage peaks can be suppressed by complying with the two line
+                              output control and by properly selected decoupling capacitors. It is recommended that a
+                              0.1µF ceramic capacitor is used on every device between VCC and VSS. This should be a
+                              high frequency type of low inherent inductance and should be placed as close as possible to
+                              the device. In addition, a 4.7µF electrolytic capacitor should be used between VCC and VSS
+                              for every eight devices. This capacitor should be mounted near the power supply connection
+                              point. The purpose of this capacitor is to overcome the voltage drop caused by the inductive
+                              effects of PCB traces.
+
+              2.5 Programming
+
+                              When delivered (and after each erasure for UV EPROM), all bits of the M27C322 are in the
+                              "1" state. Data is introduced by selectively programming "0"s into the desired bit locations.
+                              Although only "0"s will be programmed, both "1"s and "0"s can be present in the data word.
+                              The only way to change a "0" to a "1" is by die exposition to ultraviolet light (UV EPROM).
+                              The M27C322 is in the programming mode when VPP input is at 12.V, GVPP is at VIH and E
+                              is pulsed to VIL. The data to be programmed is applied to 16 bits in parallel to the data
+                              output pins. The levels required for the address and data inputs are TTL. VCC is specified to
+                              be 6.25V ± 0.25V.
+
+              2.6          PRESTO III Programming Algorithm
+
+                              The PRESTO III Programming Algorithm allows the whole array to be programed with a
+                              guaranteed margin in a typical time of 100 seconds. Programming with PRESTO III consists
+                              of applying a sequence of 50µs program pulses to each word until a correct verify occurs
+                              (see Figure 3). During programing and verify operation a MARGIN MODE circuit must be
+                              activated to guarantee that each cell is programed with enough margin. No overprogram
+                              pulse is applied since the verify in MARGIN MODE provides the necessary margin to each
+                              programmed cell.
+
+      Obsolete Product(s) - Obsolete Product(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              8/24
+--- PDF page 9 ---
+             M27C322                                                                                                                          Device operation
+
+
+                            Figure 3.     Programming Flowchart
+
+                                                                   VCC = 6.25V, VPP = 12V
+
+
+                                                                     SET MARGIN MODE
+
+
+                                                                           n = 0
+
+
+                                                                       E = 50µs Pulse
+
+                                                          NO
+
+                                                             ++n      NO  VERIFY         ++ Addr
+                                                            = 25
+
+                                                         YES                   YES
+
+
+                                                            FAIL            Last   NO
+                                                                            Addr
+
+                                                                               YES
+
+                                                                   RESET MARGIN MODE
+
+
+                                                                    CHECK ALL WORDS
+                                                                       1st: VCC = 6V
+                                                                      2nd: VCC = 4.2V
+
+                                                                                              AI02206
+
+             2.7 Program Inhibit
+
+                            Programming of multiple M27C322s in parallel with different data is also easily
+                            accomplished. Except for E, all like inputs including GVPP of the parallel M27C322 may be
+                            common. A TTL low level pulse applied to a M27C322's E input and VPP at 12V, will
+                            program that M27C322. A high level E input inhibits the other M27C322s from being
+                            programmed.
+
+             2.8 Program Verify
+
+                            A verify (read) should be performed on the programmed bits to determine that they were
+                            correctly programmed. The verify is accomplished with GVPP at VIL. Data should be verified
+                            with tELQV after the falling edge of E.
+      Obsolete Product(s) - Obsolete Product(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                        9/24
+--- PDF page 10 ---
+              Device operation                                                                                                                        M27C322
+
+              2.9 Electronic Signature
+
+                              The Electronic Signature (ES) mode allows the reading out of a binary code from an
+                              EPROM that will identify its manufacturer and type. This mode is intended for use by
+                              programming equipment to automatically match the device to be programmed with its
+                              corresponding programming algorithm. The ES mode is functional in the 25°C ± 5°C
+                              ambient temperature range that is required when programming the M27C322. To activate
+                              the ES mode, the programming equipment must force 11.5V to 12.5V on address line A9 of
+                              the M27C322, with VPP = VCC = 5V. Two identifier bytes may then be sequenced from the
+                              device outputs by toggling address line A0 from VIL to VIH. All other address lines must be
+                              held at VIL during Electronic Signature mode.
+                              Byte 0 (A0 = VIL) represents the manufacturer code and byte 1 (A0 = VIH) the device
+                              identifier code. For the STMicroelectronics M27C322, these two identifier bytes are given in
+                              Table 3. and can be read-out on outputs Q0 to Q7.
+
+              2.10        Erasure operation (applies to UV EPROM)
+
+                              The erasure characteristics of the M27C322 is such that erasure begins when the cells are
+                              exposed to light with wavelengths shorter than approximately 4000 Å. It should be noted
+                              that sunlight and some type of fluorescent lamps have wavelengths in the 3000-4000 Å
+                              range. Research shows that constant exposure to room level fluorescent lighting could
+                              erase a typical M27C322 in about 3 years, while it would take approximately 1 week to
+                              cause erasure when exposed to direct sunlight. If the M27C322 is to be exposed to these
+                              types of lighting conditions for extended periods of time, it is suggested that opaque labels
+                              be put over the M27C322 window to prevent unintentional erasure. The recommended
+                              erasure procedure for M27C322 is exposure to short wave ultraviolet light which has a
+                              wavelength of 2537 Å. The integrated dose (i.e. UV intensity x exposure time) for erasure
+                              should be a minimum of 30 W-sec/cm2. The erasure time with this dosage is approximately
+                              30 to 40 minutes using an ultraviolet lamp with 12000 µW/cm2 power rating. The M27C322
+                              should be placed within 2.5cm (1 inch) of the lamp tubes during the erasure. Some lamps
+                              have a filter on their tubes which should be removed before erasure.
+
+
+
+      Obsolete Product(s) - Obsolete Product(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              10/24
+--- PDF page 11 ---
+                 M27C322                                                                                                                          Device operation
+
+
+                                  Table 2.       Operating Modes(1)
+                                                  Mode                                 E              GVPP                     A9                   Q15-Q0
+
+                                   Read                                                    VIL                       VIL                        X                   Data Out
+                                   Output Disable                                    VIL                       VIH                        X                       Hi-Z
+                                   Program                                         VIL Pulse                  VPP                       X                     Data In
+                                   Program Inhibit                                   VIH                      VPP                        X                       Hi-Z
+                                   Standby                                               VIH                        X                          X                       Hi-Z
+                                   Electronic Signature                            VIL                       VIL                       VID                    Codes
+
+                                  1.   X = VIH or VIL, VID = 12V ± 0.5V.
+                                  Table 3.       Electronic Signature(1)
+
+                                          Identifier             A0        Q7        Q6        Q5        Q4        Q3        Q2        Q1        Q0     Hex Data
+
+                                   Manufacturer’s                                                                                                        0h
+                                   Code                           VIL 001000002
+                                   Device Code               VIH 0011010034h
+
+                                  1.   Outputs Q15-Q8 are set to '0'.
+
+
+
+
+
+
+
+      Obsolete Product(s) - Obsolete Product(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                          11/24
+--- PDF page 12 ---
+                  Maximum rating                                                                                                                         M27C322
+
+                  3 Maximum rating
+
+
+                                    Stressing the device above the rating listed in the Absolute Maximum Ratings table may
+                                    cause permanent damage to the device. These are stress ratings only and operation of the
+                                    device at these or any other conditions above those indicated in the Operating sections of
+                                    this specification is not implied. Exposure to Absolute Maximum Rating conditions for
+                                    extended periods may affect device reliability. Refer also to the STMicroelectronics SURE
+                                    Program and other relevant quality documents.
+
+                                    Table 4.       Absolute Maximum Ratings
+                                        Symbol                                          Parameter                                                 Value               Unit
+
+                                            TA          Ambient Operating Temperature(1)                                                  –40 to 125             °C
+                                          TBIAS        Temperature Under Bias                                                           –50 to 125             °C
+                                          TSTG        Storage Temperature                                                                –65 to 150             °C
+                                          VIO(2)        Input or Output Voltage (except A9)                                            –2 to 7                 V
+                                           VCC         Supply Voltage                                                                              –2 to 7                 V
+                                          VA9(2)        A9 Voltage                                                                                 –2 to 13.5              V
+                                           VPP         Program Supply Voltage                                                             –2 to 14                V
+
+                                    1.   Depends on range.
+                                    2.   Minimum DC voltage on Input or Output is –0.5V with possible undershoot to –2.0V for a period less than
+                                         20ns. Maximum DC voltage on Output is VCC +0.5V with possible overshoot to VCC +2V for a period less
+                                         than 20ns.
+
+
+
+
+
+      Obsolete Product(s) - Obsolete Product(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  12/24
+--- PDF page 13 ---
+               M27C322                                                                                                                DC and AC parameters
+
+               4           DC and AC parameters
+
+
+                                This section summarizes the operating and measurement conditions, and the DC and AC
+                                characteristics of the device. The parameters in the DC and AC Characteristic tables that
+                                follow are derived from tests performed under the Measurement Conditions summarized in
+                                the relevant tables. Designers should check that the operating conditions in their circuit
+                                match the measurement conditions when relying on the quoted parameters.
+
+                                Table 5.       AC Measurement Conditions
+                                                                                        High Speed                                Standard
+
+                                 Input Rise and Fall Times                                             ≤ 10ns                                             ≤ 20ns
+                                 Input Pulse Voltages                                               0 to 3V                                  0.4V to 2.4V
+                                 Input and Output Timing Ref.
+                                 Voltages                                                                    1.5V                                    0.8V and 2V
+
+                                Figure 4.     AC Testing Input Output Waveform
+
+                                                               High Speed
+
+                                                                   3V
+
+                                                                                                                1.5V
+
+                                                                   0V
+
+
+
+                                                               Standard
+
+                                                                 2.4V                                           2.0V
+
+
+                                                                 0.4V                                           0.8V
+
+
+                                                                                                                AI01822
+
+
+      Obsolete Product(s) - Obsolete Product(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                   13/24
+--- PDF page 14 ---
+                  DC and AC parameters                                                                                                                M27C322
+
+
+                                     Figure 5.     AC Testing Load Circuit
+
+                                                                                                   1.3V
+
+
+                                                                                                           1N914
+
+
+
+                                                                                                           3.3kΩ
+
+
+                                                                            DEVICE
+                                                                            UNDER                                           OUT
+                                                                             TEST
+                                                                                                             CL
+
+
+
+
+                                                                          CL = 30pF for High Speed
+                                                                          CL = 100pF for Standard
+                                                                          CL includes JIG capacitance                         AI01823B
+
+
+                                     Table 6.       Capacitance (TA = 25 °C, f = 1 MHz)(1)
+                                         Symbol                Parameter                 Test Condition             Min             Max             Unit
+
+                                             CIN           Input Capacitance                    VIN = 0V                                         10                pF
+                                           COUT         Output Capacitance                 VOUT = 0V                                       12                pF
+
+                                     1.   Sampled only, not 100% tested.
+
+
+
+
+
+      Obsolete Product(s) - Obsolete Product(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  14/24
+--- PDF page 15 ---
+                   M27C322                                                                                                                DC and AC parameters
+
+
+                                        Table 7.       Read Mode DC Characteristics (1) (2)
+                                         Symbol                  Parameter                                Test Condition                   Min        Max     Unit
+
+                                             ILI       Input Leakage Current                                0v ≤ VIN ≤ VCC                                     ±1        µA
+                                             ILO       Output Leakage Current                            0V ≤ VOUT ≤ VCC                                  ±10       µA
+                                                                                                      E = VIL, GVPP = VIL, IOUT = 0mA,
+                                             ICC       Supply Current                                                   f = 8MHz                                        70        mA
+                                                                                                      E = VIL, GVPP = VIL, IOUT = 0mA,
+                                                                                                                        f = 5MHz                                        50        mA
+                                            ICC1      Supply Current (Standby) TTL                         E = VIH    1mA
+
+                                            ICC2      Supply Current (Standby) CMOS                                                       E > VCC – 0.2V                                 100       µA
+
+                                             IPP       Program Current                                           VPP = VCC                                       10        µA
+                                             VIL       Input Low Voltage                                                                                 –0.3        0.8         V
+                                           VIH(3)      Input High Voltage                                                                                  2       VCC + 1     V
+                                            VOL      Output Low Voltage                                     IOL = 2.1mA                                     0.4         V
+                                            VOH      Output High Voltage TTL                            IOH = –400µA                     2.4                       V
+
+                                        1.   VCC must be applied simultaneously with or before VPP and removed simultaneously or after VPP.
+                                        2.   (TA = 0 to 70 °C, –40 to 85 °C or –40 to 125 °C; VCC = 5V ± 10%; VPP = VCC)
+                                        3.   Maximum DC voltage on Output is VCC +0.5V.
+
+                                        Table 8.       Programming Mode DC Characteristics(1) (2)
+                                          Symbol                   Parameter                        Test Condition              Min           Max           Unit
+
+                                              ILI        Input Leakage Current                       VIL ≤ VIN ≤ VIH                                  ±10              µA
+                                             ICC       Supply Current                                                                                         50             mA
+                                              IPP       Program Current                                    E = VIL                                        50             mA
+                                              VIL       Input Low Voltage                                                                  –0.3            0.8              V
+
+                                             VIH       Input High Voltage                                                                  2.4          VCC + 0.5              V
+
+                                             VOL       Output Low Voltage                            IOL = 2.1mA                                   0.4              V
+                                             VOH       Output High Voltage TTL                  IOH = –2.5mA                3.5                                V
+                                             VID       A9 Voltage                                                                             11.5           12.5             V
+
+                                        1.   TA = 25 °C; VCC = 6.25V ± 0.25V; VPP = 12V ± 0.25V
+      Obsolete Product(s) - Obsolete Product(s)2.   VCC must be applied simultaneously with or before VPP and removed simultaneously or after VPP.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                        15/24
+--- PDF page 16 ---
+                  DC and AC parameters                                                                                                                M27C322
+
+
+                                     Figure 6.     Read Mode AC Waveforms
+
+
+                                           A0-A20                                       VALID                                             VALID
+
+                                                                                 tAVQV                                        tAXQX
+
+                                           E
+
+                                                                                        tGLQV                                            tEHQZ
+
+
+                                           GVPP
+
+                                                                                 tELQV                                                   tGHQZ
+
+                                           Q0-Q15                                                                                                                   Hi-Z
+
+
+
+
+                                                                                                                                                                 AI02207
+
+
+                                     Table 9.       Read Mode AC Characteristics(1) (2)
+
+                                                                                                                                             M27C322
+
+                                       Symbol     Alt                   Parameter                     Test Condition                   -80(3)            -100        Unit
+
+                                                                                                                                    Min   Max   Min   Max
+
+                                        tAVQV      tACC   Address Valid to Output Valid    E = VIL, GVPP = VIL              80               100     ns
+
+                                        tELQV       tCE    Chip Enable Low to Output Valid                                                  GVPP = VIL                     80               100     ns
+
+
+                                        tGLQV       tOE    Output Enable Low to Output Valid                                                     E = VIL                        40                50      ns
+
+
+                                       tEHQZ(4)      tDF    Chip Enable High to Output Hi-Z                                                   GVPP = VIL            0       40       0       40      ns
+
+
+                                       tGHQZ(4)     tDF    Output Enable High to Output Hi-Z                                                      E = VIL               0       40       0       40      ns
+
+
+                                        tAXQX      tOH   Address Transition to Output Tr a n s i t i o n                                    E = VIL, GVPP = VIL55ns
+
+                                     1.   (TA = 0 to 70 °C, –40 to 85 °C or –40 to 125 °C; VCC = 5V ± 10%; VPP = VCC)
+                                     2.   VCC must be applied simultaneously with or before VPP and removed simultaneously or after VPP
+                                     3.   Speed obtained with High Speed AC measurement conditions.
+                                     4.   Sampled only, not 100% tested.
+      Obsolete Product(s) - Obsolete Product(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  16/24
+--- PDF page 17 ---
+              M27C322                                                                                                                DC and AC parameters
+
+
+                             Figure 7.     MARGIN MODE AC Waveforms
+
+
+                                 VCC
+
+
+
+                                 A8
+
+
+
+                                 A9
+
+                                                                     tA9HVPH                                         tVPXA9X
+
+                                 GVPP
+
+                                                                           tVPHEL           tEXVPX
+
+                                 E
+                                                                                    tA10HEH                    tEXA10X
+
+                                 A10 Set
+
+
+
+                                 A10 Reset
+
+                                                                                     tA10LEH
+
+                                                                                                                              AI00736B
+
+                             1.   A8 High level = 5V; A9 High level = 12V.
+
+                             Table 10.     MARGIN MODE AC Characteristics(1) (2)
+
+                               Symbol       Alt                          Parameter                              Test Condition        Min         Max       Unit
+
+                               tA9HVPH      tAS9     VA9 High to VPP High                                                         2                           µs
+                                tVPHEL       tVPS     VPP High to Chip Enable Low                                            2                           µs
+
+                               tA10HEH      tAS10    VA10 High to Chip Enable High (Set)                                 1                           µs
+
+                                tA10LEH      tAS10    VA10 Low to Chip Enable High (Reset)   1µs
+
+
+                                tEXA10X      tAH10    Chip Enable Transition to VA10 Transition   1µs
+
+
+                                tEXVPX       tVPH     Chip Enable Transition to VPP Transition   2µs
+
+                               tVPXA9X       tAH9     VPP Transition to VA9 Transition                                         2                           µs
+      Obsolete Product(s) - Obsolete Product(s)1.   TA = 25 °C; VCC = 6.25V ± 0.25V; VPP = 12V ± 0.25V)
+
+                             2.   VCC must be applied simultaneously with or before VPP and removed simultaneously or after VPP.
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                             17/24
+--- PDF page 18 ---
+                    DC and AC parameters                                                                                                                M27C322
+
+
+                                        Figure 8.     Programming and Verify Modes AC Waveforms
+
+
+                                                  A0-A20                                                      VALID
+
+                                                                                  tAVEL                                                                                 tEHAX
+
+                                                  Q0-Q15                                  DATA IN                                                            DATA OUT
+
+                                                                                  tQVEL                                tEHQX                                             tEHQZ
+
+                                                  VCC
+                                                                                 tVCHEL                                  tEHVPX                  tELQV
+
+                                                  GVPP
+
+                                                                                 tVPHEL                                                   tVPLEL
+
+                                                  E
+
+                                                                                                               tELEH
+
+
+                                                                                                  PROGRAM                                      VERIFY
+
+                                                                                                                                                                            AI02205
+
+                                        1.   GVPP High level = 12V.
+
+                                        Table 11.     Programming Mode AC Characteristics(1) (2)
+
+                                           Symbol        Alt                              Parameter                                           Test Condition       Min      Max     Unit
+
+                                             tAVEL          tAS       Address Valid to Chip Enable Low                                         1                       µs
+                                             tQVEL          tDS      Input Valid to Chip Enable Low                                              1                      µs
+                                            tVCHEL        tVCS     VCC High to Chip Enable Low                                                2                       µs
+                                            tVPHEL        tOES     VPP High to Chip Enable Low                                                1                      µs
+                                           tVPLVPH       tPRT      VPP Rise Time                                                                       50                      ns
+
+                                             tELEH          tPW      Chip Enable Program Pulse Width (Initial)                                                                                    45         55         µs
+
+                                             tEHQX          tDH      Chip Enable High to Input Transition                                     2                      µs
+                                            tEHVPX        tOEH     Chip Enable High to VPP Transition                                       2                      µs
+                                            tVPLEL         tVR      VPP Low to Chip Enable Low                                                1                      µs
+                                             tELQV          tDV       Chip Enable Low to Output Valid                                                       1         µs
+                                           tEHQZ(3)          tDFP     Chip Enable High to Output Hi-Z                                           0         130        ns
+      Obsolete Product(s) - Obsolete Product(s)tEHAX          tAH      Chip Enable High to Address Transition                                0                      ns
+
+
+                                        1.   TA = 25 °C; VCC = 6.25V ± 0.25V; VPP = 12V ± 0.25V)
+                                        2.   VCC must be applied simultaneously with or before VPP and removed simultaneously or after VPP.
+                                        3.   Sampled only, not 100% tested.
+
+
+
+
+
+
+
+
+
+                    18/24
+--- PDF page 19 ---
+                   M27C322                                                                                                                    Package mechanical
+
+                   5 Package mechanical
+
+
+                                        Figure 9.     FDIP42W - 42 pin Ceramic Frit-seal DIP, with window (0.370" x 0.450"),
+                                                             package outline
+
+
+                                                                                                              A2    A
+
+                                                                                                            A1       L                 α
+                                                                            B1                     B              e                             C
+                                                                                            D2                                            eA
+                                                                                                                                           eB
+                                                                                             D
+                                                                                      S
+
+                                                                                  N
+
+                                                                                                       K       E1    E
+
+
+                                                                                  1                    K1
+                                                                                                                                              FDIPW-C
+
+                                        1.   Drawing is not to scale.
+
+                                        Table 12.     FDIP42W - 42 pin Ceramic Frit-seal DIP, with window (0.370" x 0.450"),
+                                                             package mechanical data
+                                                                                    millimeters                                                     inches
+                                             Symbol
+                                                                     Typ                 Min                 Max                 Typ                 Min                 Max
+
+                                                 A                                                                 5.71                                                              0.225
+                                                 A1                                         0.50                1.78                                      0.020              0.070
+                                                 A2                                         3.90                5.08                                      0.154              0.200
+                                                 B                                          0.40                0.55                                      0.016              0.022
+                                                 B1                                         1.27                1.52                                      0.050              0.060
+                                                 C                                          0.22                0.31                                      0.009              0.012
+                                                 D                                                                54.81                                                            2.158
+                                                D2                50.80                  –                     –                  2.000                  –                     –
+                                                 E                 15.24                                                            0.600
+                                                 E1                                       14.50              14.90                                     0.571              0.587
+                                                  e                                          2.29                2.79                                      0.090              0.110
+      Obsolete Product(s) - Obsolete Product(s)eA                                        15.40              15.80                                     0.606              0.622
+                                                 eB                                        16.17              18.32                                     0.637              0.721
+                                                 K                                          9.32                9.47                                      0.367              0.373
+                                                 K1                                       11.30              11.55                                     0.445              0.455
+                                                  L                                          3.18                4.10                                      0.125              0.161
+                                                 S                                          1.52                2.49                                      0.060              0.098
+                                                  α                                           4°                   15°                                          4°                   15°
+                                                 N42 42
+
+
+
+                                                                                                        19/24
+--- PDF page 20 ---
+                   Package mechanical                                                                                                                  M27C322
+
+
+                                       Figure 10.   PDIP42 - 42 pin Plastic DIP, 600 mils width, package outline
+
+                                                                                                          A2    A
+
+                                                                                                        A1      L                 α
+                                                                         B1                     B              e1                     eA   C
+
+                                                                                         D2                                           eB
+
+                                                                                          D
+                                                                                  S
+
+                                                                               N
+
+                                                                                                          E1    E
+
+
+                                                                               1
+                                                                                                                                             PDIP
+
+                                       1.   Drawing is not to scale.
+
+                                       Table 13.     PDIP42 - 42 pin Plastic DIP, 600 mils width, package mechanical data
+
+                                                                                 millimeters                                                      inches
+                                           Symbol
+                                                                  Typ                      Min                      Max                      Typ                      Min                      Max
+
+                                                A                                            –                   5.08                                          –                  0.200
+                                               A1                                        0.25                  –                                        0.010                 –
+                                               A2                                        3.56                4.06                                      0.140              0.160
+                                                B                                          0.38                0.53                                      0.015              0.021
+                                               B1                                        1.27                1.65                                      0.050              0.065
+                                                C                                         0.20                0.36                                      0.008              0.014
+                                                D                                        52.20              52.71                                     2.055              2.075
+                                               D250.80––2.000––
+                                                E                 15.24                 –                     –                 0.600                 –                     –
+                                               E1                                       13.59              13.84                                     0.535              0.545
+                                               e1                 2.54                  –                     –                 0.100                 –                     –
+                                               eA                14.99                  –                     –                  0.590                  –                     –
+                                               eB                                        15.24              17.78                                     0.600              0.700
+                                                L                                          3.18                3.43                                      0.125              0.135
+                                                S                                          0.86                1.37                                      0.034              0.054
+      Obsolete Product(s) - Obsolete Product(s)α                                           0°                   10°                                          0°                   10°
+
+                                                N42 42
+
+
+
+
+
+
+
+
+
+
+
+
+                   20/24
+--- PDF page 21 ---
+                 M27C322                                                                                                                    Package mechanical
+
+
+                                   Figure 11.   SDIP42 - 42 pin Shrink Plastic DIP, 600 mils width, package outline
+
+
+                                                                                                 A2    A
+
+                                                                                                A1     L
+                                                                   b2                      b               e               eA   c
+                                                                                  D2                                       eB
+
+                                                                                  D
+                                                                            S
+
+                                                                        N
+
+                                                                                                 E1    E
+
+                                                                         1
+                                                                                                                                  SDIP
+
+
+                                   1.   Drawing is not to scale.
+
+                                   Table 14.     SDIP42 - 42 pin Shrink Plastic DIP, 600 mils width, package mechanical
+                                                      data
+                                                                          millimeters                                                     inches
+                                       Symbol
+                                                             Typ                 Min                 Max                 Typ                 Min                 Max
+
+                                            A                                                                 5.08                                                              0.200
+                                           A1                                        0.51                                                             0.020
+                                           A2                 3.81                3.05                4.57               0.150              0.120              0.180
+                                            b                   0.46                0.38                0.56               0.018              0.015              0.022
+                                           b2                 1.02                0.89                1.14               0.040              0.035              0.045
+                                            c                   0.25                0.23                0.38               0.010              0.009              0.015
+                                            D                 36.83              36.58              37.08              1.450              1.440              1.460
+                                            e1.78––0.070––
+                                            E                                         15.24              16.00                                     0.600              0.630
+                                           E1                13.72              12.70              14.48              0.540              0.500              0.570
+                                           eA                15.24                  –                     –                  0.600                  –                     –
+                                           eB                                                               18.54                                                            0.730
+                                            L                   3.30                2.54                3.56               0.130              0.100              0.140
+                                            S                   0.63                                                              0.025
+      Obsolete Product(s) - Obsolete Product(s)N42 42
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                            21/24
+--- PDF page 22 ---
+               Part numbering                                                                                                                          M27C322
+
+               6 Part numbering
+
+
+                                Table 15.     Ordering information scheme
+
+                                 Example:                                                                     M27C322                  -80    F     1
+
+
+                                 Device Type
+                                 M27
+
+
+                                 Supply Voltage
+                                 C = 5V ±10%
+
+
+                                 Device Function
+                                 322 = 32 Mbit (2Mb x16)
+
+
+                                 Speed
+                                 -80(1) = 80 ns
+                                 -100 = 100 ns
+
+
+                                 Package
+                                 F = FDIP42W
+                                 B = PDIP42
+                                 S = SDIP42
+
+
+                                 Temperature Range
+                                 1 = 0 to 70 °C
+                                 3 = –40 to 125 °C
+                                 6 = –40 to 85 °C
+
+                                1.   High Speed, see AC Characteristics section for further information.
+                                For a list of available options (Speed, Package, etc...) or for further information on any
+      Obsolete Product(s) - Obsolete Product(s)aspect of this device, please contact the STMicroelectronics Sales Office nearest to you.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               22/24
+--- PDF page 23 ---
+               M27C322                                                                                                                           Revision history
+
+               7 Revision history
+
+
+                               Table 16.     Document revision history
+                                      Date             Revision                                                    Changes
+
+                                July 1999                    1          First Issue
+                                                                  Programming Time changed
+                                24-Feb-2000                2      Programming Flowchart changed (Figure 3)
+                                                                  Presto III Programming Algorithm paragraph changed
+                                                                  –40 to 85 °C and –40 to 125 °C temperature ranges added (Table 7.,
+                                04-Apr-2000              2.1      Table 9. and Table 15.)
+                                                                  80ns speed class in High Speed AC measurement conditions
+                                20-Sep-2000              2.2         AN620 Reference removed
+                                29-Nov-2000              2.3         Note changed (Figure 8.)
+                                27-Feb-2001              2.4         SDIP42 Package added (Figure 11., Ta b l e  1 4)
+                                27-Nov-2003              2.5         FDIP42W package lens changed
+                                                                  Document converted to new template (sections added, information
+                                28-Mar-2006               3       moved).
+                                                                  Packages are ECOPACK® compliant.
+
+
+
+
+
+
+      Obsolete Product(s) - Obsolete Product(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                  23/24
+--- PDF page 24 ---
+                                                                                                                                                              M27C322
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                  Please Read Carefully:
+
+
+                  Information in this document is provided solely in connection with ST products. STMicroelectronics NV and its subsidiaries (“ST”) reserve the
+                  right to make changes, corrections, modifications or improvements, to this document, and the products and services described herein at any
+                  time, without notice.
+                  All ST products are sold pursuant to ST’s terms and conditions of sale.
+
+                  Purchasers are solely responsible for the choice, selection and use of the ST products and services described herein, and ST assumes no
+                  liability whatsoever relating to the choice, selection or use of the ST products and services described herein.
+
+                  No license, express or implied, by estoppel or otherwise, to any intellectual property rights is granted under this document. If any part of this
+                  document refers to any third party products or services it shall not be deemed a license grant by ST for the use of such third party products
+                  or services, or any intellectual property contained therein or considered as a warranty covering the use in any manner whatsoever of such
+                  third party products or services or any intellectual property contained therein.
+
+
+                  UNLESS OTHERWISE SET FORTH IN ST’S TERMS AND CONDITIONS OF SALE ST DISCLAIMS ANY EXPRESS OR IMPLIED
+                  WARRANTY WITH RESPECT TO THE USE AND/OR SALE OF ST PRODUCTS INCLUDING WITHOUT LIMITATION IMPLIED
+                  WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE (AND THEIR EQUIVALENTS UNDER THE LAWS
+                  OF ANY JURISDICTION), OR INFRINGEMENT OF ANY PATENT, COPYRIGHT OR OTHER INTELLECTUAL PROPERTY RIGHT.
+                  UNLESS EXPRESSLY APPROVED IN WRITING BY AN AUTHORIZE REPRESENTATIVE OF ST, ST PRODUCTS ARE NOT DESIGNED,
+                  AUTHORIZED OR WARRANTED FOR USE IN MILITARY, AIR CRAFT, SPACE, LIFE SAVING, OR LIFE SUSTAINING APPLICATIONS,
+                  NOR IN PRODUCTS OR SYSTEMS, WHERE FAILURE OR MALFUNCTION MAY RESULT IN PERSONAL INJURY, DEATH, OR
+                  SEVERE PROPERTY OR ENVIRONMENTAL DAMAGE.
+
+
+                  Resale of ST products with provisions different from the statements and/or technical features set forth in this document shall immediately void
+                  any warranty granted by ST for the ST product or service described herein and shall not create or extend in any manner whatsoever, any
+                  liability of ST.
+
+
+                                               ST and the ST logo are trademarks or registered trademarks of ST in various countries.
+
+                                              Information in this document supersedes and replaces all information previously supplied.
+      Obsolete Product(s) - Obsolete Product(s)
+                            The ST logo is a registered trademark of STMicroelectronics. All other names are the property of their respective owners.
+
+
+                                                                     © 2006 STMicroelectronics - All rights reserved
+
+
+                                                                         STMicroelectronics group of companies
+                    Australia - Belgium - Brazil - Canada - China - Czech Republic - Finland - France - Germany - Hong Kong - India - Israel - Italy - Japan -
+                               Malaysia - Malta - Morocco - Singapore - Spain - Sweden - Switzerland - United Kingdom - United States of America
+                                                                                        www.st.com
+
+
+
+                  24/24

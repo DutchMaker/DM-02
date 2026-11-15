@@ -1,0 +1,28 @@
+{
+  "retrieved": "2026-11-14",
+  "files": [
+    {
+      "id": "cd74ac283",
+      "url": "https://www.ti.com/lit/ds/symlink/cd74ac283.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "file": "cd74ac283.txt",
+      "sha256": "a7d96563e8010678b0a1e102deefee2625f976f31ef6cbaf563dbb216f4bffbf",
+      "pdf_sha256": "cae2652bf4486f8dda8385afbd6217749d0105f34addea74760636d021562c46"
+    }
+  ]
+}

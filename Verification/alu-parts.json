@@ -1,0 +1,19 @@
+{
+  "revision":"AL1",
+  "device_sources":{
+    "CD74AC175M96":"controller-parts.json",
+    "SN74HCT574N":"controller-parts.json",
+    "SN74AHCT244N":"pc-parts.json",
+    "SN74AHCT04N":"controller-parts.json",
+    "SN74AHCT08DR":"controller-parts.json",
+    "SN74AHCT00DR":"controller-parts.json"
+  },
+  "devices":{
+    "M27C322-100F1":{"function":"M27C322","source":"m27c322","package":"FDIP42W","pages":[4,5,6,14,15,16,19,22],"max_delay_ns":100,"input_cap_pf":10,"output_hold_ns":5,"timing_load_pf":100,"status":"Obsolete; legacy timing-study part, not a procurement selection","capacitance_note":"Maximum CIN specified at 25 C only; full-temperature loading remains unqualified."},
+    "CD74HCT377M96":{"function":"377","source":"cd74hct377","package":"SOIC-20","pages":[1,2,5,6,10],"max_delay_ns":57,"setup_ns":18,"hold_ns":3,"enable_hold_ns":5,"pulse_ns":30,"input_cap_pf":10},
+    "SN74AHCT157N":{"function":"157","source":"sn74ahct157","package":"PDIP-16","pages":[3,4,5,6,12],"max_delay_ns":12,"input_cap_pf":10}
+  },
+  "constraints":{"local_trace_cap_pf":5,"connector_load_pf":20,"data_bus_external_load_pf":50,"routing_uncertainty_ns":10,"data_setup_ns":40,"data_hold_ns":40},
+  "conditions":"4.5 V, logic CL=50 pF bounds encompassing 0..50 C; M27C322-100 standard read timing CL=100 pF. Minimum contamination delays modeled as zero. Slew, reset, PCB loads and shared-bus timing remain unqualified.",
+  "scope":"PH1 isolates ROM result before PH3 A/flag feedback. Synchronous flags replace baseline asynchronous C/Z commands and tri-state feedback selection. A and flags reset to zero; B/function/result initialize through normal operand capture. The obsolete ROM and shared DATA load prevent hardware release."
+}

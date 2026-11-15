@@ -1,0 +1,127 @@
+Source: https://ecsxtal.goidp.com/store/pdf/ecs-100x.pdf
+Retrieved: 2026-11-14
+PDF SHA256: b032d231b16f8f27ae4ccddfa06cabc1aba234e7665dd87ab9804ea1fa96498b
+Extraction: pypdf layout; page numbers are PDF pages. Tables require visual review of the linked PDF.
+
+--- PDF page 1 ---
+                                       Not Recommended for New Designs
+                                                                                                           ECS-100X Series
+                                                                                                           Clock Oscillator
+    The ECS-100X clock oscillator is fully compatible with TTL                                                                     Request a Sample
+    circuitry. The metal package with pin #7 case ground acts as
+    shielding to minimize radiation.
+
+                                         OPERATING CONDITIONS / ELECTRICAL CHARACTERISTICS
+
+        ECS-100X                                    Parameters                  Frequency Range             Conditions            MIN          TYP           MAX         Units
+                                         Frequency (FO)                           1.000 ~ 150.000                                1.000                     150.000        MHz
+                                         Operating Temperature                    1.000 ~ 150.000                                  0                         +70           °C
+                                         Range (TOPR)
+                                         Storage Temperature Range                1.000 ~ 150.000                                 -55                        +125          °C
+                                         (TSTG)
+                                         Frequency Stability                      1.000 ~ 150.000         All Conditions*        -100                        +100        PPM
+                                                                                   1.000 ~ 7.999             Max. load                                        15          mA
+                                         Input Current (I     )                   8.000 ~ 23.999             Max. load                                        30          mA
+                                                            DD
+                                                                                  24.000 ~ 69.999            Max. load                                        70          mA
+                                                                                 70.000 ~ 150.000            Max. load                                        80          mA
+•    10 TTL output load                                                            1.000 ~ 7.999             1.4V level           45          50 ± 3          55           %
+•    Low cost                            Output Symmetry                          8.000 ~ 150.000            1.4V level           40          50 ± 3          60           %
+•    Wide frequency range
+•    Industry standard                                                            1.000 ~ 24.999            0.4V ~2.4V                                        10           nS
+     footprint                           Rise Time (TR)                           25.000 ~ 69.999           0.5V ~ 2.4V                                        5           nS
+•    Resistance weld                                                             70.000 ~ 150.000           0.5V ~ 2.4V                                        4           nS
+     package
+•    PbFree/RoHS Compliant                                                        1.000 ~ 24.999            2.4V ~ 0.4V                                       10           nS
+
+                                         Fall Time (TF)                           25.000 ~ 69.999           2.4V ~ 0.5V                                        5           nS
+                                                                                 70.000 ~ 150.000           2.4V ~ 0.5V                                        4           nS
+                                                                                   (VOL) 1.000 ~ 24.999    IOL = 20 mA                                        0.4          V
+                                         Output Voltage                (VOL)      25.000 ~ 69.999          IOL = 20 mA                                        0.5          V
+                                                                                   (VOH) 70.000 ~ 150.000   IOH = 1 mA            2.4                                      V
+
+                                         Output Current                 (IOL)     1.000 ~ 150.000           VOL = 0.5V                                        20          mA
+                                                                                    (IOH) 1.000 ~ 150.000  VOH = 2.4V                                         1.0         mA
+                                         Output Load                              1.000 ~ 150.000                                                             10          TTL
+                                                                                   1.000 ~ 3.499                                                              20          mS
+                                                                                   3.500 ~ 3.999                                                              35          mS
+                                         Start-Up Time (TS)                        4.000 ~ 5.999                                                              30          mS
+                                                                                  6.000 ~ 19.999                                                              20          mS
+                                                                                 20.000 ~ 150.000                                                             15          mS
+                                         Supply Voltage                           1.000 ~ 150.000                                +4.75         +5.0         +5.25        VDC
+
+                                          * Inclusive of 25° C tolerance, operating temperature range, input voltage change, load change, aging, shock and vibration.
+
+                                                    Part Numbering Guide:  Example ECS-100AX-100
+
+                                      ECS      -          Series            -         Stability         -    Frequency Abbreviations
+
+                                       ECS               100                              AX = ±100 PPM                            100 = 10.000 MHz
+                                                         +5V TTL                          BX = ±50 PPM
+                                                         Full Size                        CX = ±25 PPM
+
+
+
+ 15351 West 109th Street  |  Lenexa, KS 66219  |  Phone: 913.782.7787  |  Fax: 913.782.6991  | www.ecsxtal.com
+
+--- PDF page 2 ---
+                                                                               ECS-100X Series
+                                                                               Clock Oscillator
+
+
+
+
+
+ Package Dimensions (mm)
+
+
+
+
+
+
+
+                                                                                               Pin Connections
+                                                                                                #1               NC
+                                                                                                #7           Case GND
+                                                                                                #8             Output
+                                                                                               #14            +5 V DC
+
+            Figure 1) Side and Bottom view  s                                              Figure 3) Pin Connections
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Figure 2) Output Wave Form
+
+
+
+
+
+
+
+
+
+
+
+15351 West 109th Street  |  Lenexa, KS 66219  |  Phone: 913.782.7787  |  Fax: 913.782.6991  | www.ecsxtal.com

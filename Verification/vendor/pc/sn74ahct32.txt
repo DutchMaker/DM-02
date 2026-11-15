@@ -1,0 +1,319 @@
+Source: https://www.ti.com/lit/ds/symlink/sn74ahct32.pdf
+Retrieved: 2026-11-14
+PDF pages: [3, 4, 5, 12, 14]
+
+--- PDF page 3 ---
+                                                                                                         SN54AHCT32, SN74AHCT32
+www.ti.com                                                                                  SCLS248O – OCTOBER 1995 – REVISED JULY 2023
+
+5 Pin Configuration and Functions
+
+
+
+
+
+
+
+
+
+
+   Figure 5-1. SN54AHCT32 J or W Package, 14-Pin
+                            (Top View)
+  SN74AHCT32 D, DB, DGV, N, NS, or PW Package,
+                       14-Pin (Top View)
+
+
+                                                                        Figure 5-2. SN74AHCT32 RGY or BQA Package,
+                                                                                            14-Pin (Top View)
+
+
+
+
+
+
+
+
+
+
+
+                                 Figure 5-3. SN54AHCT32 FK Package, 20-Pin (Top View)
+
+                                                     Table 5-1. Pin Functions
+                                         PIN
+                           SN74AHCT32                        SN54AHCT32               TYPE(1)   DESCRIPTION
+ NAME              D, DB, DGV,       RGY, BQA            J, W              FK
+                    N, NS, PW
+ 1A                      1                1                1                2             I     1A Input
+ 1B                      2                2                2                3             I     1B Input
+ 1Y                      3                3                3                4            O      1Y Output
+ 2A                      4                4                4                6             I     2A Input
+ 2B                      5                5                5                8             I     2B Input
+ 2Y                      6                6                6                9            O      2Y Output
+ 3Y                      8                8                8               12            O      3Y Output
+ 3A                      9                9                9               13             I     3A Input
+ 3B                     10               10               10               14             I     3B Input
+ 4Y                      11              11               11               16            O      4Y Output
+ 4A                     12               12               12               18             I     4A Input
+ 4B                     13               13               13               19             I     4B Input
+ GND                     7                7                7               10            —      Ground Pin
+ NC                      —               —                —              1, 5, 7,        —      No Connection
+                                                                        11, 15, 17
+ VCC                    14               14               14               20             I     Power Pin
+ Thermal Pad             —              PAD               —                —             —      Thermal Pad
+
+(1)   I = input, O = output
+
+
+
+Copyright © 2023 Texas Instruments Incorporated                                                         Submit Document Feedback         3
+
+                                            Product Folder Links: SN54AHCT32 SN74AHCT32
+--- PDF page 4 ---
+SN54AHCT32, SN74AHCT32
+SCLS248O – OCTOBER 1995 – REVISED JULY 2023                                                                                                       www.ti.com
+
+6 Specifications
+6.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted) (1)
+                                                                                                                                MIN           MAX      UNIT
+ VCC       Supply voltage range                                                                                                –0.5               7      V
+ VI        Input voltage range(2)                                                                                              –0.5               7      V
+ VO        Output voltage range(2)                                                                                             –0.5     VCC + 0.5        V
+
+ IIK       Input clamp current                                                               VI < 0                                            –20      mA
+ IOK       Output clamp current                                                              VO < 0 or VO > VCC                                ±20      mA
+ IO        Continuous output current                                                         VO = 0 to VCC                                     ±25      mA
+           Continuous current through VCC or GND                                                                                               ±50      mA
+ Tstg      Storage temperature range                                                                                            –65            150      °C
+
+(1)    Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress ratings
+       only, and functional operation of the device at these or any other conditions beyond those indicated under Recommended Operating
+       Conditions is not implied. Exposure to absolute-maximum-rated conditions for extended periods may affect device reliability.
+(2)    The input and output voltage ratings may be exceeded if the input and output current ratings are observed.
+6.2 ESD Ratings
+
+                                                                                                                                    VALUE            UNIT
+ V           Electrostatic discharge           Human body model (HBM)                                                                ±1000             V
+   (ESD)                                       Charged device model (CDM)                                                             ±750
+
+6.3 Recommended Operating Conditions
+over operating free-air temperature range (unless otherwise noted)(1)
+                                                                                                  SN54AHCT32               SN74AHCT32                UNIT
+                                                                                                     MIN        MAX          MIN          MAX
+ VCC        Supply voltage                                                                            4.5         5.5         4.5           5.5        V
+ VIH        High-level input voltage                                                                    2                       2                      V
+ VIL        Low-level input voltage                                                                               0.8                       0.8        V
+ VI         Input voltage                                                                               0         5.5           0           5.5        V
+ VO         Output voltage                                                                              0        VCC            0          VCC         V
+ IOH        High-level output current                                                                              –8                       –8        mA
+ IOL        Low-level output current                                                                                8                         8       mA
+ ∆t/∆v      Input transition rise or fall rate                                                                     20                       20       ns/V
+ TA         Operating free-air temperature                                                           –55         125          –40          125        °C
+
+(1)    All unused inputs of the device must be held at VCC or GND to ensure proper device operation. Refer to the TI application report,
+       Implications of Slow or Floating CMOS Inputs (SCBA004).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4       Submit Document Feedback                                                                               Copyright © 2023 Texas Instruments Incorporated
+
+                                                   Product Folder Links: SN54AHCT32 SN74AHCT32
+--- PDF page 5 ---
+                                                                                                                            SN54AHCT32, SN74AHCT32
+www.ti.com                                                                                                  SCLS248O – OCTOBER 1995 – REVISED JULY 2023
+
+6.4 Thermal Information
+
+                                                                                           SN74AHCT32
+           THERMAL METRIC(1)                          D            DB          DGV            N            NS          PW           RGY         BQA        UNIT
+
+                                                                                               14 PINS
+ RθJA         Junction-to-ambient                   97.5          109.5        133.3         59.7         92.2        147.7         59.0        88.3
+              thermal resistance
+ RθJC(top)    Junction-to-case (top)                58.7          62.1         55.6          47.3         49.8         77.4         72.5        90.9
+              thermal resistance
+ RθJB         Junction-to-board thermal             51.8          56.9         66.3          39.5         51.0         90.9         35.0        56.8
+              resistance                                                                                                                                   °C/W
+ ψJT          Junction-to-top                       22.6          22.6          7.8          32.4         15.7         27.2          3.9         9.9
+              characterization parameter
+ ψJB          Junction-to-board                     51.6          56.3         56.6          39.4         50.6         90.2         35.1        56.7
+              characterization parameter
+ RθJC(bot)    Junction-to-case (bottom)              —              —            —            —            —            —           15.4        33.4
+              thermal resistance
+
+(1)    For more information about traditional and new thermal metrics, see the IC Package Thermal Metrics application report (SPRA953).
+6.5 Electrical Characteristics
+
+over recommended operating free-air temperature range (unless otherwise noted)
+                                                                     T   = 25°C           SN54AHCT32         SN74AHCT32            –40°C to 125°C
+  PARAMETER             TEST CONDITIONS              V                A                                                             SN74AHCT32             UNIT
+                                                       CC
+                                                                MIN     TYP       MAX        MIN      MAX        MIN    MAX           MIN         MAX
+ V                 IOH = −50 µA                     4.5 V        4.4     4.5                  4.4                 4.4                  4.4                   V
+   OH              I   = −8 mA                                  3.94                          3.8                 3.8                  3.8
+                    OH
+                   IOL = 50 µA                                                     0.1                 0.1                0.1                       0.1
+ VOL               I   = 8 mA                       4.5 V                         0.36                0.44               0.44                      0.44      V
+                    OL
+ I                 V  = 5.5 V or GND                0 V to                        ±0.1                ±1(1)                ±1                        ±1     µA
+  I                  I                              5.5 V
+
+ ICC               VI = VCC or GND, IO = 0          5.5 V                            2                  20                 20                        20     µA
+ ΔICC (2)          One input at 3.4 V,              5.5 V                         1.35                 1.5                1.5                       1.5     mA
+                   Other inputs at VCC or GND
+ Ci                VI = VCC or GND                   5 V                   2        10                  10                 10                        10     pF
+
+(1)    On products compliant to MIL-PRF-38535, this parameter is not production tested at VCC = 0 V.
+(2)    This is the increase in supply current for each input at one of the specified TTL voltage levels, rather than 0 V or VCC.
+6.6 Switching Characteristics
+
+over recommended operating free-air temperature range, VCC = 5 V ± 0.5 V (unless otherwise noted) (see Figure 7-1)
+                      FROM            TO             LOAD              TA = 25°C          SN54AHCT32            SN74AHCT32            –40°C to 125°C
+  PARAMETER                                                                                                                            SN74AHCT32          UNIT
+                     (INPUT)      (OUTPUT)      CAPACITANCE             TYP     MAX       MIN          MAX         MIN       MAX            MIN     MAX
+
+ tPLH                                                                    5(1)   6.9(1)     1(1)         8(1)         1           8            1         9
+                      A or B           Y           CL = 15 pF              (1)     (1)      (1)           (1)                                                ns
+ tPHL                                                                    5      6.9        1            8            1           8            1         9
+ tPLH                                                                     5.5     7.9        1             9         1           9            1        10
+ t                    A or B           Y           CL = 50 pF             5.5     7.9        1             9         1           9            1        10    ns
+  PHL
+
+(1)    On products compliant to MIL-PRF-38535, this parameter is not production tested.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2023 Texas Instruments Incorporated                                                                           Submit Document Feedback                5
+
+                                                    Product Folder Links: SN54AHCT32 SN74AHCT32
+--- PDF page 12 ---
+                                                                                                                                                                    PACKAGE OPTION ADDENDUM
+
+
+
+    www.ti.com                                                                                                                                                                                                       18-Sep-2026
+
+
+
+PACKAGING INFORMATION
+
+   Orderable part number           Status     Material type       Package | Pins       Package qty | Carrier        RoHS             Lead finish/             MSL rating/             Op temp (°C)               Part marking
+                                      (1)           (2)                                                               (3)            Ball material            Peak reflow                                              (6)
+                                                                                                                                           (4)                     (5)
+      5962-9682601Q2A              Active       Production        LCCC (FK) | 20             55 | TUBE                No                SNPB                N/A for Pkg Type            -55 to 125                   5962-
+                                                                                                                                                                                                                 9682601Q2A
+                                                                                                                                                                                                                 SNJ54AHCT
+                                                                                                                                                                                                                     32FK
+      5962-9682601QCA              Active       Production         CDIP (J) | 14             25 | TUBE                No                SNPB                N/A for Pkg Type            -55 to 125             5962-9682601QC
+                                                                                                                                                                                                                       A
+                                                                                                                                                                                                               SNJ54AHCT32J
+      5962-9682601QDA              Active       Production         CFP (W) | 14              25 | TUBE                No                SNPB                N/A for Pkg Type            -55 to 125             5962-9682601QD
+                                                                                                                                                                                                                       A
+                                                                                                                                                                                                               SNJ54AHCT32W
+     SN74AHCT32BQAR                Active       Production      WQFN (BQA) | 14         3000 | LARGE T&R             Yes                  SN             Level-1-260C-UNLIM             -40 to 125                 AHCT32
+    SN74AHCT32BQAR.A               Active       Production      WQFN (BQA) | 14         3000 | LARGE T&R             Yes                  SN             Level-1-260C-UNLIM             -40 to 125                 AHCT32
+        SN74AHCT32D               Obsolete      Production         SOIC (D) | 14                  -                    -                Call TI                  Call TI                 -40 to 85                 AHCT32
+      SN74AHCT32DBR                Active       Production        SSOP (DB) | 14        2000 | LARGE T&R             Yes               NIPDAU            Level-1-260C-UNLIM             -40 to 125                   HB32
+     SN74AHCT32DBR.A               Active       Production        SSOP (DB) | 14        2000 | LARGE T&R             Yes               NIPDAU            Level-1-260C-UNLIM             -40 to 125                   HB32
+     SN74AHCT32DGVR                Active       Production      TVSOP (DGV) | 14        2000 | LARGE T&R             Yes               NIPDAU            Level-1-260C-UNLIM             -40 to 125                   HB32
+    SN74AHCT32DGVR.A               Active       Production      TVSOP (DGV) | 14        2000 | LARGE T&R             Yes               NIPDAU            Level-1-260C-UNLIM             -40 to 125                   HB32
+       SN74AHCT32DR                Active       Production         SOIC (D) | 14        2500 | LARGE T&R             Yes               NIPDAU            Level-1-260C-UNLIM             -40 to 125                 AHCT32
+      SN74AHCT32DR.A               Active       Production         SOIC (D) | 14        2500 | LARGE T&R             Yes               NIPDAU            Level-1-260C-UNLIM             -40 to 125                 AHCT32
+        SN74AHCT32N                Active       Production         PDIP (N) | 14             25 | TUBE               Yes               NIPDAU               N/A for Pkg Type            -40 to 125              SN74AHCT32N
+       SN74AHCT32N.A               Active       Production         PDIP (N) | 14             25 | TUBE               Yes               NIPDAU               N/A for Pkg Type            -40 to 125              SN74AHCT32N
+      SN74AHCT32NSR                Active       Production        SOP (NS) | 14         2000 | LARGE T&R             Yes               NIPDAU            Level-1-260C-UNLIM             -40 to 125                 AHCT32
+     SN74AHCT32NSR.A               Active       Production        SOP (NS) | 14         2000 | LARGE T&R             Yes               NIPDAU            Level-1-260C-UNLIM             -40 to 125                 AHCT32
+       SN74AHCT32PW               Obsolete      Production       TSSOP (PW) | 14                  -                    -                Call TI                  Call TI                -40 to 125                   HB32
+      SN74AHCT32PWR                Active       Production       TSSOP (PW) | 14        2000 | LARGE T&R             Yes             NIPDAU | SN         Level-1-260C-UNLIM             -40 to 125                   HB32
+     SN74AHCT32PWR.A               Active       Production       TSSOP (PW) | 14        2000 | LARGE T&R             Yes               NIPDAU            Level-1-260C-UNLIM             -40 to 125                   HB32
+     SN74AHCT32RGYR                Active       Production       VQFN (RGY) | 14        3000 | LARGE T&R             Yes               NIPDAU            Level-2-260C-1 YEAR            -40 to 125                   HB32
+    SN74AHCT32RGYR.A               Active       Production       VQFN (RGY) | 14        3000 | LARGE T&R             Yes               NIPDAU            Level-2-260C-1 YEAR            -40 to 125                   HB32
+       SNJ54AHCT32FK               Active       Production        LCCC (FK) | 20             55 | TUBE                No                SNPB                N/A for Pkg Type            -55 to 125                   5962-
+                                                                                                                                                                                                                 9682601Q2A
+                                                                                                                                                                                                                 SNJ54AHCT
+                                                                                                                                                                                                                     32FK
+
+
+                                                                                                         Addendum-Page 1
+--- PDF page 14 ---
+                                                                                                                                                                                              PACKAGE OPTION ADDENDUM
+
+
+
+    www.ti.com                                                                                                                                                                                                                                        18-Sep-2026
+
+
+
+
+
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+
+ OTHER QUALIFIED VERSIONS OF SN54AHCT32, SN74AHCT32 :
+• Catalog : SN74AHCT32
+• Automotive : SN74AHCT32-Q1, SN74AHCT32-Q1
+• Enhanced Product : SN74AHCT32-EP, SN74AHCT32-EP
+• Military : SN54AHCT32
+
+ NOTE: Qualified Version Definitions:
+         • Catalog - TI's standard catalog product
+         • Automotive - Q100 devices qualified for high-reliability automotive applications targeting zero defects
+         • Enhanced Product - Supports Defense, Aerospace and Medical Applications
+         • Military - QML certified for Military and Defense Applications
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                          Addendum-Page 3

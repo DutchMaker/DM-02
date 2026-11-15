@@ -320,6 +320,7 @@ var emulator = {
 
 emulator.state.memory.get = function(address) 
 { 
+  address &= 0xFFFF;
   return (address >= 0xFF00)
     ? emulator.handle_input(address)
     : emulator.state.memory.data[address];
@@ -327,6 +328,8 @@ emulator.state.memory.get = function(address)
 
 emulator.state.memory.set = function(address, data) 
 {
+  address &= 0xFFFF;
+  data &= 0xFF;
   if (address >= 0xFF00) {
     emulator.handle_output(address, data);
     return;

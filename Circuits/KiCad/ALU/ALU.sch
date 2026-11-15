@@ -874,123 +874,123 @@ Connection ~ 1450 750
 Wire Wire Line
 	1450 750  1700 750 
 $Comp
-L 74xx:74HC74 U?
+L 74xx:74HC74 U1
 U 1 1 5F0EF992
 P 9500 1350
-F 0 "U?" H 9500 1831 50  0000 C CNN
-F 1 "74HCT04" H 9500 1740 50  0000 C CNN
+F 0 "U1" H 9500 1831 50  0000 C CNN
+F 1 "74HCT74" H 9500 1740 50  0000 C CNN
 F 2 "" H 9500 1350 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 9500 1350 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74hct74.pdf" H 9500 1350 50  0001 C CNN
 	1    9500 1350
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74HC74 U?
+L 74xx:74HC74 U1
 U 2 1 5F0F1338
 P 9500 2400
-F 0 "U?" H 9500 2881 50  0000 C CNN
-F 1 "74HCT32" H 9500 2790 50  0000 C CNN
+F 0 "U1" H 9500 2881 50  0000 C CNN
+F 1 "74HCT74" H 9500 2790 50  0000 C CNN
 F 2 "" H 9500 2400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 9500 2400 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74hct74.pdf" H 9500 2400 50  0001 C CNN
 	2    9500 2400
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74HC74 U?
+L 74xx:74HC74 U2
 U 1 1 5F0FF161
 P 10650 1350
-F 0 "U?" H 10650 1831 50  0000 C CNN
-F 1 "74HCT04" H 10650 1740 50  0000 C CNN
+F 0 "U2" H 10650 1831 50  0000 C CNN
+F 1 "74HCT74" H 10650 1740 50  0000 C CNN
 F 2 "" H 10650 1350 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 10650 1350 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74hct74.pdf" H 10650 1350 50  0001 C CNN
 	1    10650 1350
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74HC74 U?
+L 74xx:74HC74 U2
 U 2 1 5F0FF16B
 P 10650 2400
-F 0 "U?" H 10650 2881 50  0000 C CNN
-F 1 "74HCT32" H 10650 2790 50  0000 C CNN
+F 0 "U2" H 10650 2881 50  0000 C CNN
+F 1 "74HCT74" H 10650 2790 50  0000 C CNN
 F 2 "" H 10650 2400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 10650 2400 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74hct74.pdf" H 10650 2400 50  0001 C CNN
 	2    10650 2400
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx-Computer-Symbols:M27C322 U?
+L 74xx-Computer-Symbols:M27C322 U3
 U 1 1 5F12C1E6
 P 11450 5100
-F 0 "U?" H 11450 6381 50  0000 C CNN
-F 1 "74HCT04" H 11450 6290 50  0000 C CNN
+F 0 "U3" H 11450 6381 50  0000 C CNN
+F 1 "M27C322" H 11450 6290 50  0000 C CNN
 F 2 "" H 11450 5100 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 11450 5100 50  0001 C CNN
+F 3 "" H 11450 5100 50  0001 C CNN
 	1    11450 5100
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74HCT240 U?
+L 74xx:74HCT240 U4
 U 1 1 5F237668
 P 6150 2500
-F 0 "U?" H 6150 3481 50  0000 C CNN
-F 1 "74HCT04" H 6150 3390 50  0000 C CNN
+F 0 "U4" H 6150 3481 50  0000 C CNN
+F 1 "74HCT240" H 6150 3390 50  0000 C CNN
 F 2 "" H 6150 2500 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 6150 2500 50  0001 C CNN
+F 3 "" H 6150 2500 50  0001 C CNN
 	1    6150 2500
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74LS377 U?
+L 74xx:74LS377 U5
 U 1 1 5F279A4A
 P 1850 5300
-F 0 "U?" H 1850 6281 50  0000 C CNN
-F 1 "74HCT04" H 1850 6190 50  0000 C CNN
+F 0 "U5" H 1850 6281 50  0000 C CNN
+F 1 "74HCT377" H 1850 6190 50  0000 C CNN
 F 2 "" H 1850 5300 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 1850 5300 50  0001 C CNN
+F 3 "" H 1850 5300 50  0001 C CNN
 	1    1850 5300
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74LS377 U?
+L 74xx:74LS377 U6
 U 1 1 5F2AC7D4
 P 3450 5300
-F 0 "U?" H 3450 6281 50  0000 C CNN
-F 1 "74HCT04" H 3450 6190 50  0000 C CNN
+F 0 "U6" H 3450 6281 50  0000 C CNN
+F 1 "74HCT377" H 3450 6190 50  0000 C CNN
 F 2 "" H 3450 5300 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 3450 5300 50  0001 C CNN
+F 3 "" H 3450 5300 50  0001 C CNN
 	1    3450 5300
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74LS377 U?
+L 74xx:74LS377 U7
 U 1 1 5F2AD4C4
 P 4950 5300
-F 0 "U?" H 4950 6281 50  0000 C CNN
-F 1 "74HCT04" H 4950 6190 50  0000 C CNN
+F 0 "U7" H 4950 6281 50  0000 C CNN
+F 1 "74HCT377" H 4950 6190 50  0000 C CNN
 F 2 "" H 4950 5300 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 4950 5300 50  0001 C CNN
+F 3 "" H 4950 5300 50  0001 C CNN
 	1    4950 5300
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74HCT244 U?
+L 74xx:74HCT244 U8
 U 1 1 5F2AE932
 P 6600 4800
-F 0 "U?" H 6600 5781 50  0000 C CNN
-F 1 "74HCT04" H 6600 5690 50  0000 C CNN
+F 0 "U8" H 6600 5781 50  0000 C CNN
+F 1 "74HCT244" H 6600 5690 50  0000 C CNN
 F 2 "" H 6600 4800 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 6600 4800 50  0001 C CNN
+F 3 "" H 6600 4800 50  0001 C CNN
 	1    6600 4800
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74LS245 U?
+L 74xx:74LS245 U9
 U 1 1 5F2BC763
 P 8350 5750
-F 0 "U?" H 8350 6731 50  0000 C CNN
-F 1 "74HCT04" H 8350 6640 50  0000 C CNN
+F 0 "U9" H 8350 6731 50  0000 C CNN
+F 1 "74HCT245" H 8350 6640 50  0000 C CNN
 F 2 "" H 8350 5750 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 8350 5750 50  0001 C CNN
+F 3 "" H 8350 5750 50  0001 C CNN
 	1    8350 5750
 	1    0    0    -1  
 $EndComp
@@ -1112,21 +1112,21 @@ B6
 Text Label 10750 4900 0    50   ~ 0
 B7
 Text Label 10750 5000 0    50   ~ 0
-A0
+ALU_A0
 Text Label 10750 5100 0    50   ~ 0
-A1
+ALU_A1
 Text Label 10750 5200 0    50   ~ 0
-A2
+ALU_A2
 Text Label 10750 5300 0    50   ~ 0
-A3
+ALU_A3
 Text Label 10750 5400 0    50   ~ 0
-A4
+ALU_A4
 Text Label 10750 5500 0    50   ~ 0
-A5
+ALU_A5
 Text Label 10750 5600 0    50   ~ 0
-A6
+ALU_A6
 Text Label 10750 5700 0    50   ~ 0
-A7
+ALU_A7
 Text Label 10750 5800 0    50   ~ 0
 FUNC0
 Text Label 10750 5900 0    50   ~ 0
@@ -1170,7 +1170,7 @@ Wire Bus Line
 Text GLabel 10600 4100 0    50   Input ~ 0
 B
 Text GLabel 10600 4900 0    50   Input ~ 0
-A
+ALU_A
 Wire Bus Line
 	10650 4900 10600 4900
 Text GLabel 10600 5700 0    50   Input ~ 0
@@ -1178,7 +1178,7 @@ FUNC
 Text GLabel 12400 4100 2    50   Input ~ 0
 RESULT
 Text GLabel 12400 4900 2    50   Input ~ 0
-FLAGS
+ALU_FLAGS
 NoConn ~ 11850 5500
 NoConn ~ 11850 5600
 NoConn ~ 11850 5700
@@ -1225,15 +1225,15 @@ RESULT6
 Text Label 12250 4900 2    50   ~ 0
 RESULT7
 Text Label 12250 5000 2    50   ~ 0
-FLAGS0
+ALU_FLAGS0
 Text Label 12250 5100 2    50   ~ 0
-FLAGS1
+ALU_FLAGS1
 Text Label 12250 5200 2    50   ~ 0
-FLAGS2
+ALU_FLAGS2
 Text Label 12250 5300 2    50   ~ 0
-FLAGS3
+ALU_FLAGS3
 Text Label 12250 5400 2    50   ~ 0
-FLAGS4
+ALU_FLAGS4
 Wire Bus Line
 	10650 5700 10650 6100
 Wire Bus Line
@@ -1245,21 +1245,21 @@ Wire Bus Line
 Wire Bus Line
 	12350 4100 12350 4800
 $Comp
-L 74xx:74LS32 U?
+L 74xx:74LS32 U10
 U 1 1 5F568C57
 P 2050 7100
-F 0 "U?" H 2050 7425 50  0000 C CNN
-F 1 "74HCT04" H 2050 7334 50  0000 C CNN
+F 0 "U10" H 2050 7425 50  0000 C CNN
+F 1 "74HCT32" H 2050 7334 50  0000 C CNN
 F 2 "" H 2050 7100 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 2050 7100 50  0001 C CNN
+F 3 "" H 2050 7100 50  0001 C CNN
 	1    2050 7100
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74LS32 U?
+L 74xx:74LS32 U10
 U 2 1 5F56A35D
 P 3400 7100
-F 0 "U?" H 3400 7425 50  0000 C CNN
+F 0 "U10" H 3400 7425 50  0000 C CNN
 F 1 "74HCT32" H 3400 7334 50  0000 C CNN
 F 2 "" H 3400 7100 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 3400 7100 50  0001 C CNN
@@ -1267,43 +1267,43 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 3400 7100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74LS32 U?
+L 74xx:74LS32 U10
 U 3 1 5F56AF7E
 P 4550 7200
-F 0 "U?" H 4550 7525 50  0000 C CNN
-F 1 "74HCT04" H 4550 7434 50  0000 C CNN
+F 0 "U10" H 4550 7525 50  0000 C CNN
+F 1 "74HCT32" H 4550 7434 50  0000 C CNN
 F 2 "" H 4550 7200 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 4550 7200 50  0001 C CNN
+F 3 "" H 4550 7200 50  0001 C CNN
 	3    4550 7200
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74LS32 U?
+L 74xx:74LS32 U10
 U 4 1 5F56BFCF
 P 5650 7100
-F 0 "U?" H 5650 7425 50  0000 C CNN
-F 1 "74HCT04" H 5650 7334 50  0000 C CNN
+F 0 "U10" H 5650 7425 50  0000 C CNN
+F 1 "74HCT32" H 5650 7334 50  0000 C CNN
 F 2 "" H 5650 7100 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 5650 7100 50  0001 C CNN
+F 3 "" H 5650 7100 50  0001 C CNN
 	4    5650 7100
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74LS32 U?
+L 74xx:74LS32 U11
 U 1 1 5F56D51F
 P 2000 7750
-F 0 "U?" H 2000 8075 50  0000 C CNN
-F 1 "74HCT04" H 2000 7984 50  0000 C CNN
+F 0 "U11" H 2000 8075 50  0000 C CNN
+F 1 "74HCT32" H 2000 7984 50  0000 C CNN
 F 2 "" H 2000 7750 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 2000 7750 50  0001 C CNN
+F 3 "" H 2000 7750 50  0001 C CNN
 	1    2000 7750
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74HCT04 U?
+L 74xx:74HCT04 U12
 U 1 1 5F56FBFE
 P 1850 8450
-F 0 "U?" H 1850 8767 50  0000 C CNN
+F 0 "U12" H 1850 8767 50  0000 C CNN
 F 1 "74HCT04" H 1850 8676 50  0000 C CNN
 F 2 "" H 1850 8450 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 1850 8450 50  0001 C CNN
@@ -1311,14 +1311,629 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 1850 845
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74HCT04 U?
+L 74xx:74HCT04 U12
 U 2 1 5F570E1C
 P 3000 8500
-F 0 "U?" H 3000 8817 50  0000 C CNN
+F 0 "U12" H 3000 8817 50  0000 C CNN
 F 1 "74HCT04" H 3000 8726 50  0000 C CNN
 F 2 "" H 3000 8500 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 3000 8500 50  0001 C CNN
 	2    3000 8500
 	1    0    0    -1  
 $EndComp
+Text GLabel 11400 6400 3    39   Input ~ 0
+GND
+Text GLabel 11500 6400 3    39   Input ~ 0
+GND
+Text GLabel 11450 4000 1    39   Input ~ 0
+5V
+Text GLabel 6150 3300 3    39   Input ~ 0
+GND
+Text GLabel 6150 1700 1    39   Input ~ 0
+5V
+Text GLabel 1850 6100 3    39   Input ~ 0
+GND
+Text GLabel 1850 4500 1    39   Input ~ 0
+5V
+Text GLabel 3450 6100 3    39   Input ~ 0
+GND
+Text GLabel 3450 4500 1    39   Input ~ 0
+5V
+Text GLabel 4950 6100 3    39   Input ~ 0
+GND
+Text GLabel 4950 4500 1    39   Input ~ 0
+5V
+Text GLabel 6600 5600 3    39   Input ~ 0
+GND
+Text GLabel 6600 4000 1    39   Input ~ 0
+5V
+Text GLabel 8350 6550 3    39   Input ~ 0
+GND
+Text GLabel 8350 4950 1    39   Input ~ 0
+5V
+Text Notes 12500 700 0    60   ~ 0
+Gate supplies and spare-input termination
+$Comp
+L 74xx:74HC74 U1
+U 3 1 69172001
+P 13000 1600
+F 0 "U1" H 13230 1646 50 0000 L CNN
+F 1 "74HCT74" H 13230 1555 50 0000 L CNN
+	3    13000 1600
+	1    0    0    -1
+$EndComp
+Text GLabel 13000 1200 1    39   Input ~ 0
+5V
+Text GLabel 13000 2000 3    39   Input ~ 0
+GND
+$Comp
+L 74xx:74HC74 U2
+U 3 1 69172002
+P 14200 1600
+F 0 "U2" H 14430 1646 50 0000 L CNN
+F 1 "74HCT74" H 14430 1555 50 0000 L CNN
+	3    14200 1600
+	1    0    0    -1
+$EndComp
+Text GLabel 14200 1200 1    39   Input ~ 0
+5V
+Text GLabel 14200 2000 3    39   Input ~ 0
+GND
+$Comp
+L 74xx:74LS32 U10
+U 5 1 69172003
+P 15400 1600
+F 0 "U10" H 15630 1646 50 0000 L CNN
+F 1 "74HCT32" H 15630 1555 50 0000 L CNN
+	5    15400 1600
+	1    0    0    -1
+$EndComp
+Text GLabel 15400 1100 1    39   Input ~ 0
+5V
+Text GLabel 15400 2100 3    39   Input ~ 0
+GND
+$Comp
+L 74xx:74LS32 U11
+U 5 1 69172004
+P 13000 3400
+F 0 "U11" H 13230 3446 50 0000 L CNN
+F 1 "74HCT32" H 13230 3355 50 0000 L CNN
+	5    13000 3400
+	1    0    0    -1
+$EndComp
+Text GLabel 13000 2900 1    39   Input ~ 0
+5V
+Text GLabel 13000 3900 3    39   Input ~ 0
+GND
+$Comp
+L 74xx:74HCT04 U12
+U 7 1 69172005
+P 14200 3400
+F 0 "U12" H 14430 3446 50 0000 L CNN
+F 1 "74HCT04" H 14430 3355 50 0000 L CNN
+	7    14200 3400
+	1    0    0    -1
+$EndComp
+Text GLabel 14200 2900 1    39   Input ~ 0
+5V
+Text GLabel 14200 3900 3    39   Input ~ 0
+GND
+$Comp
+L 74xx:74LS32 U11
+U 2 1 69172101
+P 13000 5200
+F 0 "U11" H 13000 5500 50 0000 C CNN
+F 1 "74HCT32" H 13000 5400 50 0000 C CNN
+	2    13000 5200
+	1    0    0    -1
+$EndComp
+Text GLabel 12700 5100 0    39   Input ~ 0
+GND
+Text GLabel 12700 5300 0    39   Input ~ 0
+GND
+NoConn ~ 13300 5200
+$Comp
+L 74xx:74LS32 U11
+U 3 1 69172102
+P 14200 5200
+F 0 "U11" H 14200 5500 50 0000 C CNN
+F 1 "74HCT32" H 14200 5400 50 0000 C CNN
+	3    14200 5200
+	1    0    0    -1
+$EndComp
+Text GLabel 13900 5100 0    39   Input ~ 0
+GND
+Text GLabel 13900 5300 0    39   Input ~ 0
+GND
+NoConn ~ 14500 5200
+$Comp
+L 74xx:74LS32 U11
+U 4 1 69172103
+P 15400 5200
+F 0 "U11" H 15400 5500 50 0000 C CNN
+F 1 "74HCT32" H 15400 5400 50 0000 C CNN
+	4    15400 5200
+	1    0    0    -1
+$EndComp
+Text GLabel 15100 5100 0    39   Input ~ 0
+GND
+Text GLabel 15100 5300 0    39   Input ~ 0
+GND
+NoConn ~ 15700 5200
+$Comp
+L 74xx:74HCT04 U12
+U 3 1 69172104
+P 13000 6000
+F 0 "U12" H 13000 6300 50 0000 C CNN
+F 1 "74HCT04" H 13000 6200 50 0000 C CNN
+	3    13000 6000
+	1    0    0    -1
+$EndComp
+Text GLabel 12700 6000 0    39   Input ~ 0
+CLOCK_PH3
+Text Label 13300 6000 0    39   ~ 0
+ALU_PHASE_n
+$Comp
+L 74xx:74HCT04 U12
+U 4 1 69172105
+P 14200 6000
+F 0 "U12" H 14200 6300 50 0000 C CNN
+F 1 "74HCT04" H 14200 6200 50 0000 C CNN
+	4    14200 6000
+	1    0    0    -1
+$EndComp
+Text GLabel 13900 6000 0    39   Input ~ 0
+GND
+NoConn ~ 14500 6000
+$Comp
+L 74xx:74HCT04 U12
+U 5 1 69172106
+P 15400 6000
+F 0 "U12" H 15400 6300 50 0000 C CNN
+F 1 "74HCT04" H 15400 6200 50 0000 C CNN
+	5    15400 6000
+	1    0    0    -1
+$EndComp
+Text GLabel 15100 6000 0    39   Input ~ 0
+GND
+NoConn ~ 15700 6000
+$Comp
+L 74xx:74HCT04 U12
+U 6 1 69172107
+P 13000 6800
+F 0 "U12" H 13000 7100 50 0000 C CNN
+F 1 "74HCT04" H 13000 7000 50 0000 C CNN
+	6    13000 6800
+	1    0    0    -1
+$EndComp
+Text GLabel 12700 6800 0    39   Input ~ 0
+GND
+NoConn ~ 13300 6800
+Text Notes 1100 4400 0    50   ~ 0
+Operand A / operand B / operation: shared CLOCK_PH3, active-low enables
+Text GLabel 1350 4800 0    39   Input ~ 0
+DATA0
+Text GLabel 1350 4900 0    39   Input ~ 0
+DATA1
+Text GLabel 1350 5000 0    39   Input ~ 0
+DATA2
+Text GLabel 1350 5100 0    39   Input ~ 0
+DATA3
+Text GLabel 1350 5200 0    39   Input ~ 0
+DATA4
+Text GLabel 1350 5300 0    39   Input ~ 0
+DATA5
+Text GLabel 1350 5400 0    39   Input ~ 0
+DATA6
+Text GLabel 1350 5500 0    39   Input ~ 0
+DATA7
+Text GLabel 1350 5800 0    39   Input ~ 0
+~A_load
+Text Label 2350 4800 0    39   ~ 0
+ALU_A0
+Text Label 2350 4900 0    39   ~ 0
+ALU_A1
+Text Label 2350 5000 0    39   ~ 0
+ALU_A2
+Text Label 2350 5100 0    39   ~ 0
+ALU_A3
+Text Label 2350 5200 0    39   ~ 0
+ALU_A4
+Text Label 2350 5300 0    39   ~ 0
+ALU_A5
+Text Label 2350 5400 0    39   ~ 0
+ALU_A6
+Text Label 2350 5500 0    39   ~ 0
+ALU_A7
+Text GLabel 2950 4800 0    39   Input ~ 0
+DATA0
+Text GLabel 2950 4900 0    39   Input ~ 0
+DATA1
+Text GLabel 2950 5000 0    39   Input ~ 0
+DATA2
+Text GLabel 2950 5100 0    39   Input ~ 0
+DATA3
+Text GLabel 2950 5200 0    39   Input ~ 0
+DATA4
+Text GLabel 2950 5300 0    39   Input ~ 0
+DATA5
+Text GLabel 2950 5400 0    39   Input ~ 0
+DATA6
+Text GLabel 2950 5500 0    39   Input ~ 0
+DATA7
+Text GLabel 2950 5800 0    39   Input ~ 0
+~ALU_load
+Text Label 3950 4800 0    39   ~ 0
+B0
+Text Label 3950 4900 0    39   ~ 0
+B1
+Text Label 3950 5000 0    39   ~ 0
+B2
+Text Label 3950 5100 0    39   ~ 0
+B3
+Text Label 3950 5200 0    39   ~ 0
+B4
+Text Label 3950 5300 0    39   ~ 0
+B5
+Text Label 3950 5400 0    39   ~ 0
+B6
+Text Label 3950 5500 0    39   ~ 0
+B7
+Text GLabel 4450 4800 0    39   Input ~ 0
+ALUFUNC0
+Text GLabel 4450 4900 0    39   Input ~ 0
+ALUFUNC1
+Text GLabel 4450 5000 0    39   Input ~ 0
+ALUFUNC2
+Text GLabel 4450 5100 0    39   Input ~ 0
+ALUFUNC3
+Text GLabel 4450 5200 0    39   Input ~ 0
+ALUFUNC4
+Text GLabel 4450 5300 0    39   Input ~ 0
+GND
+Text GLabel 4450 5400 0    39   Input ~ 0
+GND
+Text GLabel 4450 5500 0    39   Input ~ 0
+GND
+Text GLabel 4450 5800 0    39   Input ~ 0
+~ALU_load
+Text Label 5450 4800 0    39   ~ 0
+FUNC0
+Text Label 5450 4900 0    39   ~ 0
+FUNC1
+Text Label 5450 5000 0    39   ~ 0
+FUNC2
+Text Label 5450 5100 0    39   ~ 0
+FUNC3
+Text Label 5450 5200 0    39   ~ 0
+FUNC4
+NoConn ~ 5450 5300
+NoConn ~ 5450 5400
+NoConn ~ 5450 5500
+Text GLabel 11850 6100 2    39   Input ~ 0
+GND
+Text Notes 6000 3850 0    50   ~ 0
+Flags C/O/Z/N: result, bus or feedback; shared CLOCK_PH3 capture
+Text Label 6100 4300 2    39   ~ 0
+ALU_FLAGS0
+Text Label 6100 4400 2    39   ~ 0
+ALU_FLAGS1
+Text Label 6100 4500 2    39   ~ 0
+ALU_FLAGS2
+Text Label 6100 4600 2    39   ~ 0
+ALU_FLAGS3
+Text GLabel 6100 4700 0    39   Input ~ 0
+DATA0
+Text GLabel 6100 4800 0    39   Input ~ 0
+DATA1
+Text GLabel 6100 4900 0    39   Input ~ 0
+DATA2
+Text GLabel 6100 5000 0    39   Input ~ 0
+DATA3
+Text GLabel 6100 5200 0    39   Input ~ 0
+~ALU_out
+Text GLabel 6100 5300 0    39   Input ~ 0
+~F_load
+Text Label 7100 4300 0    39   ~ 0
+FLAG_D0
+Text Label 7100 4400 0    39   ~ 0
+FLAG_D1
+Text Label 7100 4500 0    39   ~ 0
+FLAG_D2
+Text Label 7100 4600 0    39   ~ 0
+FLAG_D3
+Text Label 7100 4700 0    39   ~ 0
+FLAG_D0
+Text Label 7100 4800 0    39   ~ 0
+FLAG_D1
+Text Label 7100 4900 0    39   ~ 0
+FLAG_D2
+Text Label 7100 5000 0    39   ~ 0
+FLAG_D3
+Text Label 9200 1250 2    39   ~ 0
+FLAG_D0
+Text Label 9200 2300 2    39   ~ 0
+FLAG_D2
+Text Label 10350 1250 2    39   ~ 0
+FLAG_D1
+Text Label 10350 2300 2    39   ~ 0
+FLAG_D3
+Text GLabel 9800 1250 2    39   Output ~ 0
+FLAGS0
+Text GLabel 9800 2300 2    39   Output ~ 0
+FLAGS2
+Text GLabel 10950 1250 2    39   Output ~ 0
+FLAGS1
+Text GLabel 10950 2300 2    39   Output ~ 0
+FLAGS3
+NoConn ~ 9800 1450
+NoConn ~ 9800 2500
+NoConn ~ 10950 1450
+NoConn ~ 10950 2500
+Text GLabel 10650 1050 1    39   Input ~ 0
+5V
+Text GLabel 10650 1650 3    39   Input ~ 0
+5V
+Text GLabel 10650 2100 1    39   Input ~ 0
+5V
+Text GLabel 10650 2700 3    39   Input ~ 0
+5V
+Text GLabel 7850 5250 0    39   Input ~ 0
+FLAGS0
+Text GLabel 7850 5350 0    39   Input ~ 0
+FLAGS1
+Text GLabel 7850 5450 0    39   Input ~ 0
+FLAGS2
+Text GLabel 7850 5550 0    39   Input ~ 0
+FLAGS3
+Text GLabel 7850 5650 0    39   Input ~ 0
+GND
+Text GLabel 7850 5750 0    39   Input ~ 0
+GND
+Text GLabel 7850 5850 0    39   Input ~ 0
+GND
+Text GLabel 7850 5950 0    39   Input ~ 0
+GND
+Text GLabel 7850 6150 0    39   Input ~ 0
+5V
+Text GLabel 7850 6250 0    39   Input ~ 0
+~F_out
+Text GLabel 8850 5250 2    39   BiDi ~ 0
+DATA0
+Text GLabel 8850 5350 2    39   BiDi ~ 0
+DATA1
+Text GLabel 8850 5450 2    39   BiDi ~ 0
+DATA2
+Text GLabel 8850 5550 2    39   BiDi ~ 0
+DATA3
+Text GLabel 8850 5650 2    39   BiDi ~ 0
+DATA4
+Text GLabel 8850 5750 2    39   BiDi ~ 0
+DATA5
+Text GLabel 8850 5850 2    39   BiDi ~ 0
+DATA6
+Text GLabel 8850 5950 2    39   BiDi ~ 0
+DATA7
+Text Notes 7400 6800 0    50   ~ 0
+ALU result bus driver
+$Comp
+L 74xx:74LS245 U13
+U 1 1 69175001
+P 8350 7900
+F 0 "U13" H 8350 8881 50 0000 C CNN
+F 1 "74HCT245" H 8350 8790 50 0000 C CNN
+F 2 "Package_DIP:DIP-20_W7.62mm" H 8350 7900 50 0001 C CNN
+	1    8350 7900
+	1    0    0    -1
+$EndComp
+Text GLabel 8350 7100 1    39   Input ~ 0
+5V
+Text GLabel 8350 8700 3    39   Input ~ 0
+GND
+Text Label 7850 7400 2    39   ~ 0
+RESULT0
+Text Label 7850 7500 2    39   ~ 0
+RESULT1
+Text Label 7850 7600 2    39   ~ 0
+RESULT2
+Text Label 7850 7700 2    39   ~ 0
+RESULT3
+Text Label 7850 7800 2    39   ~ 0
+RESULT4
+Text Label 7850 7900 2    39   ~ 0
+RESULT5
+Text Label 7850 8000 2    39   ~ 0
+RESULT6
+Text Label 7850 8100 2    39   ~ 0
+RESULT7
+Text GLabel 7850 8300 0    39   Input ~ 0
+5V
+Text GLabel 7850 8400 0    39   Input ~ 0
+~ALU_out
+Text GLabel 8850 7400 2    39   BiDi ~ 0
+DATA0
+Text GLabel 8850 7500 2    39   BiDi ~ 0
+DATA1
+Text GLabel 8850 7600 2    39   BiDi ~ 0
+DATA2
+Text GLabel 8850 7700 2    39   BiDi ~ 0
+DATA3
+Text GLabel 8850 7800 2    39   BiDi ~ 0
+DATA4
+Text GLabel 8850 7900 2    39   BiDi ~ 0
+DATA5
+Text GLabel 8850 8000 2    39   BiDi ~ 0
+DATA6
+Text GLabel 8850 8100 2    39   BiDi ~ 0
+DATA7
+Text Notes 5600 3600 0    50   ~ 0
+Former tri-state clock buffer disabled; clocks now driven directly
+Text GLabel 5650 2000 0    39   Input ~ 0
+GND
+Text GLabel 5650 2100 0    39   Input ~ 0
+GND
+Text GLabel 5650 2200 0    39   Input ~ 0
+GND
+Text GLabel 5650 2300 0    39   Input ~ 0
+GND
+Text GLabel 5650 2400 0    39   Input ~ 0
+GND
+Text GLabel 5650 2500 0    39   Input ~ 0
+GND
+Text GLabel 5650 2600 0    39   Input ~ 0
+GND
+Text GLabel 5650 2700 0    39   Input ~ 0
+GND
+Text GLabel 5650 2900 0    39   Input ~ 0
+5V
+Text GLabel 5650 3000 0    39   Input ~ 0
+5V
+NoConn ~ 6650 2000
+NoConn ~ 6650 2100
+NoConn ~ 6650 2200
+NoConn ~ 6650 2300
+NoConn ~ 6650 2400
+NoConn ~ 6650 2500
+NoConn ~ 6650 2600
+NoConn ~ 6650 2700
+Text GLabel 1350 5700 0    39   Input ~ 0
+CLOCK_PH3
+Text GLabel 2950 5700 0    39   Input ~ 0
+CLOCK_PH3
+Text GLabel 4450 5700 0    39   Input ~ 0
+CLOCK_PH3
+Text GLabel 9200 1350 0    39   Input ~ 0
+CLOCK_PH3
+Text GLabel 9200 2400 0    39   Input ~ 0
+CLOCK_PH3
+Text GLabel 10350 1350 0    39   Input ~ 0
+CLOCK_PH3
+Text GLabel 10350 2400 0    39   Input ~ 0
+CLOCK_PH3
+Text Label 9500 1650 0    39   ~ 0
+FCLR_c_PHASE_n
+Text Label 9500 1050 0    39   ~ 0
+FSET_c_PHASE_n
+Text Label 9500 2700 0    39   ~ 0
+FCLR_z_PHASE_n
+Text Label 9500 2100 0    39   ~ 0
+FSET_z_PHASE_n
+Text GLabel 1750 7000 0    39   Input ~ 0
+~FCLR_c
+Text Label 1750 7200 2    39   ~ 0
+ALU_PHASE_n
+Text Label 2350 7100 0    39   ~ 0
+FCLR_c_PHASE_n
+Text GLabel 3100 7000 0    39   Input ~ 0
+~FCLR_z
+Text Label 3100 7200 2    39   ~ 0
+ALU_PHASE_n
+Text Label 3700 7100 0    39   ~ 0
+FCLR_z_PHASE_n
+Text GLabel 4250 7100 0    39   Input ~ 0
+~FSET_c
+Text Label 4250 7300 2    39   ~ 0
+ALU_PHASE_n
+Text Label 4850 7200 0    39   ~ 0
+FSET_c_PHASE_n
+Text GLabel 5350 7000 0    39   Input ~ 0
+~FSET_z
+Text Label 5350 7200 2    39   ~ 0
+ALU_PHASE_n
+Text Label 5950 7100 0    39   ~ 0
+FSET_z_PHASE_n
+Text GLabel 1550 8450 0    39   Input ~ 0
+~ALU_out
+Text Label 2150 8450 0    39   ~ 0
+ALU_RESULT_SELECTED
+Text GLabel 2700 8500 0    39   Input ~ 0
+~F_load
+Text Label 3300 8500 0    39   ~ 0
+F_BUS_SELECTED
+Text Label 1700 7650 2    39   ~ 0
+ALU_RESULT_SELECTED
+Text Label 1700 7850 2    39   ~ 0
+F_BUS_SELECTED
+Text Label 2300 7750 0    39   ~ 0
+FLAG_NEW_DATA
+Text Notes 9700 7000 0    50   ~ 0
+Flag feedback enabled only while both result and bus captures are inactive
+$Comp
+L 74xx:74LS125 U14
+U 1 1 69176001
+P 10400 7400
+F 0 "U14" H 10400 7700 50 0000 C CNN
+F 1 "74HCT125" H 10400 7600 50 0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 10400 7400 50 0001 C CNN
+	1    10400 7400
+	1    0    0    -1
+$EndComp
+Text GLabel 10100 7400 0    39   Input ~ 0
+FLAGS0
+Text Label 10700 7400 0    39   ~ 0
+FLAG_D0
+Text Label 10400 7650 0    39   ~ 0
+FLAG_NEW_DATA
+$Comp
+L 74xx:74LS125 U14
+U 2 1 69176002
+P 11800 7400
+F 0 "U14" H 11800 7700 50 0000 C CNN
+F 1 "74HCT125" H 11800 7600 50 0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 11800 7400 50 0001 C CNN
+	2    11800 7400
+	1    0    0    -1
+$EndComp
+Text GLabel 11500 7400 0    39   Input ~ 0
+FLAGS1
+Text Label 12100 7400 0    39   ~ 0
+FLAG_D1
+Text Label 11800 7650 0    39   ~ 0
+FLAG_NEW_DATA
+$Comp
+L 74xx:74LS125 U14
+U 3 1 69176003
+P 10400 8600
+F 0 "U14" H 10400 8900 50 0000 C CNN
+F 1 "74HCT125" H 10400 8800 50 0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 10400 8600 50 0001 C CNN
+	3    10400 8600
+	1    0    0    -1
+$EndComp
+Text GLabel 10100 8600 0    39   Input ~ 0
+FLAGS2
+Text Label 10700 8600 0    39   ~ 0
+FLAG_D2
+Text Label 10400 8850 0    39   ~ 0
+FLAG_NEW_DATA
+$Comp
+L 74xx:74LS125 U14
+U 4 1 69176004
+P 11800 8600
+F 0 "U14" H 11800 8900 50 0000 C CNN
+F 1 "74HCT125" H 11800 8800 50 0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 11800 8600 50 0001 C CNN
+	4    11800 8600
+	1    0    0    -1
+$EndComp
+Text GLabel 11500 8600 0    39   Input ~ 0
+FLAGS3
+Text Label 12100 8600 0    39   ~ 0
+FLAG_D3
+Text Label 11800 8850 0    39   ~ 0
+FLAG_NEW_DATA
+$Comp
+L 74xx:74LS125 U14
+U 5 1 69176005
+P 15400 3400
+F 0 "U14" H 15630 3446 50 0000 L CNN
+F 1 "74HCT125" H 15630 3355 50 0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 15400 3400 50 0001 C CNN
+	5    15400 3400
+	1    0    0    -1
+$EndComp
+Text GLabel 15400 2900 1    39   Input ~ 0
+5V
+Text GLabel 15400 3900 3    39   Input ~ 0
+GND
 $EndSCHEMATC

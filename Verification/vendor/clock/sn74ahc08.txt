@@ -1,0 +1,460 @@
+Source: https://www.ti.com/lit/ds/symlink/sn74ahc08.pdf
+Retrieved: 2026-11-14
+PDF SHA256: 5b2bcbcf6b40a36fe9ddccda528bd5bb5ab7516356f540d879129a7d5c3f9036
+Extraction: pypdf layout; page numbers are PDF pages. Tables require visual review of the linked PDF.
+
+--- PDF page 3 ---
+                                                                                                         SN54AHC08, SN74AHC08
+www.ti.com                                                                         SCLS236L – OCTOBER 1995 – REVISED FEBRUARY 2024
+
+4 Pin Configuration and Functions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Figure 4-1. D, DB, DGV, N, NS, PW, or W Package
+   14-Pin SOIC, SSOP, TVSOP, PDIP, SO, or TSSOP                       Figure 4-2. FK Package 20-Pin LCCC (Top View)
+                           (Top View)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        Figure 4-3. RGY or BQA Package 14-Pin VQFN or WQFN (Top View)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2024 Texas Instruments Incorporated                                                     Submit Document Feedback         3
+                                            Product Folder Links: SN54AHC08 SN74AHC08
+
+--- PDF page 4 ---
+SN54AHC08, SN74AHC08
+SCLS236L – OCTOBER 1995 – REVISED FEBRUARY 2024                                                                                                    www.ti.com
+                                                              Table 4-1. Pin Functions
+                                  PIN
+                  SOIC, SSOP,                                                    I/O                                    DESCRIPTION
+ NAME            TVSOP, PDIP,      VQFN, WQFN             LCCC
+                  SO, TSSOP
+ 1A                     1                1                  2                      I           1A Input
+ 1B                     2                2                  3                      I           1B Input
+ 1Y                     3                3                  4                     O            1Y Output
+ 2A                     4                4                  6                      I           2A Input
+ 2B                     5                5                  8                      I           2B Input
+ 2Y                     6                6                  9                     O            2Y Output
+ 3Y                     8                8                  12                    O            3Y Output
+ 3A                     9                9                  13                     I           3A Input
+ 3B                    10                10                 14                     I           3B Input
+ 4Y                    11                11                 16                    O            4Y Output
+ 4A                    12                12                 18                     I           4A Input
+ 4B                    13                13                 19                     I           4B Input
+ GND                    7                7                  10                    —            Ground Pin
+ NC                    —                 —          1, 5, 7, 11, 15, 17           —            No Connection
+ VCC                   14                14                 20                    —            Power Pin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4       Submit Document Feedback                                                                                Copyright © 2024 Texas Instruments Incorporated
+                                                     Product Folder Links: SN54AHC08 SN74AHC08
+
+--- PDF page 5 ---
+                                                                                                                                 SN54AHC08, SN74AHC08
+www.ti.com                                                                                             SCLS236L – OCTOBER 1995 – REVISED FEBRUARY 2024
+
+5 Specifications
+5.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted)(1)
+                                                                                                                          MIN                    MAX       UNIT
+ VCC        Supply voltage                                                                                               –0.5                         7      V
+ VI         Input voltage(2)                                                                                             –0.5                         7      V
+ VO         Output voltage, VO (2)                                                                                       –0.5               VCC + 0.5        V
+
+ IIK        Input clamp current                                        VI < 0                                                                      -20      mA
+ IOK        Output clamp current                                       VO < 0 or VO > VCC                                                          ±20      mA
+ IO         Continuous output current                                  VO = 0 to VCC                                                               ±25      mA
+            Continuous current through VCC or GND                                                                                                  ±50      mA
+ TJ         Junction temperature                                                                                                                   150       °C
+ Tstg       Storage temperature                                                                                           –65                      150       °C
+
+(1)    Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress
+       ratings only, which do not imply functional operation of the device at these or any other conditions beyond those indicated under
+       Recommended Operating Conditions. Exposure to absolute-maximum-rated conditions for extended periods may affect device
+       reliability.
+(2)    The input and output voltage ratings may be exceeded if the input and output current ratings are observed.
+5.2 ESD Ratings
+
+                                                                                                                                        VALUE            UNIT
+             Electrostatic            Human body model (HBM), per ANSI/ESDA/JEDEC JS-001(1)                                              ±2000
+ V(ESD)      discharge                Charged device model (CDM), per JEDEC specification JESD22-C101(2)                                 ±1000              V
+
+
+(1)    JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process. Manufacturing with
+       less than 500-V HBM is possible with the necessary precautions.
+(2)    JEDEC document JEP157 states that 250-V CDM allows safe manufacturing with a standard ESD control process. Manufacturing with
+       less than 250-V CDM is possible with the necessary precautions.
+5.3 Recommended Operating Conditions
+over operating free-air temperature range (unless otherwise noted)(1)
+
+                                                                                                                            MIN             MAX         UNIT
+ VCC           Supply voltage                                                                                                  2              5.5         V
+                                                                       VCC= 2 V                                              1.5
+ VIH           High-level input voltage                                VCC= 3V                                               2.1                          V
+                                                                       VCC= 5.5 V                                           3.85
+                                                                       VCC= 2 V                                                               0.5
+ VIL           Low-level Input voltage                                 VCC= 3 V                                                               0.9         V
+                                                                       VCC= 5.5 V                                                           1.65
+ VI            Input voltage                                                                                                   0              5.5         V
+ VO            Output voltage                                                                                                  0             VCC          V
+                                                                       VCC= 2 V                                                              –50
+ IOH           High-level output current                               VCC= 3.3 V ± 0.3 V                                                     –4         mA
+                                                                       VCC= 5 V ± 0.5 V                                                       –8
+                                                                       VCC= 2 V                                                               50
+ IOL           Low-level output current                                VCC= 3.3 V ± 0.3 V                                                       4        mA
+                                                                       VCC= 5 V ± 0.5 V                                                         8
+                                                                       VCC= 3.3 V ± 0.3 V                                                    100
+ Δt/Δv         Input Transition rise or fall rate                      V   = 5 V ± 0.5 V                                                      20         ns/V
+                                                                        CC
+
+
+
+
+
+
+Copyright © 2024 Texas Instruments Incorporated                                                                             Submit Document Feedback                5
+                                                      Product Folder Links: SN54AHC08 SN74AHC08
+
+--- PDF page 6 ---
+SN54AHC08, SN74AHC08
+SCLS236L – OCTOBER 1995 – REVISED FEBRUARY 2024                                                                                                   www.ti.com
+
+over operating free-air temperature range (unless otherwise noted)(1)
+                                                                                                                         MIN            MAX         UNIT
+ T            Operating free-air temperature                         SN54AHC08                                           –55             125         °C
+  A                                                                  SN74AHC08                                           –40             125
+
+
+(1)    All unused inputs of the device must be held at VCC or GND to ensure proper device operation. Refer to the TI application report,
+       Implications of Slow or Floating CMOS Inputs, SCBA004.
+5.4 Thermal Information
+
+                                                                                        SN74AHC08
+        THERMAL METRIC(1)                 D (SOIC)        DB          DGV        N (PDIP)     NS (SO)         PW           RGY           BQA           UNIT
+                                                       (SSOP)       (TVSOP)                                (TSSOP)       (VQFN)         (WQFN)
+                                           14 PINS     14 PINS      14 PINS      14 PINS      14 PINS      14 PINS       14 PINS        14 PINS
+ R          Junction-to-ambient             124.5         96           127           80          76          147.7         87.1           88.3         °C/W
+   θJA      thermal resistance
+
+(1)    For more information about traditional and new thermal metrics, see the Semiconductor and IC Package Thermal Metrics application
+       report, SPRA953.
+5.5 Electrical Characteristics, TA = 25°C
+
+over operating free-air temperature range (unless otherwise noted)
+        PARAMETER                        TEST CONDITIONS                          VCC                         MIN             TYP            MAX       UNIT
+                                                                                  2 V                          1.9               2
+                               IOH = –50 µA                                       3 V                          2.9               3
+ VOH                                                                              4.5 V                        4.4             4.5                      V
+                               IOH = –4 mA                                        3 V                         2.58
+                               IOH = –8 mA                                        4.5 V                       3.94
+                                                                                  2 V                                                          0.1
+                               IOL = 50 µA                                        3 V                                                          0.1
+ VOL                                                                              4.5 V                                                        0.1      V
+                               IOH = 4 mA                                         3 V                                                         0.36
+                               IOH = 8 mA                                         4.5 V                                                       0.36
+ II                            VI = 5.5 V or GND                              0 V to 5.5 V                                                    ±0.1      µA
+ ICC                           VI = VCC or GND,           IO = 0                  5.5 V                                                          2      µA
+ Ci                            VI = VCC or GND                                    5 V                                            4             10       pF
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6       Submit Document Feedback                                                                               Copyright © 2024 Texas Instruments Incorporated
+                                                     Product Folder Links: SN54AHC08 SN74AHC08
+
+--- PDF page 7 ---
+                                                                                                                                 SN54AHC08, SN74AHC08
+www.ti.com                                                                                            SCLS236L – OCTOBER 1995 – REVISED FEBRUARY 2024
+
+5.6 Electrical Characteristics, TA = –55°C to 125°C
+
+over operating free-air temperature range (unless otherwise noted)
+           PARAMETER                               TEST CONDITIONS                              V                         SN54AHC08                      UNIT
+                                                                                                  CC                        MIN               MAX
+
+                                                                                                 2 V                         1.9
+                                      IOH = –50 µA                                               3 V                         2.9
+ VOH                                                                                            4.5 V                        4.4                           V
+                                      IOH = –4 mA                                                3 V                        2.48
+                                      IOH = –8 mA                                               4.5 V                        3.8
+                                                                                                 2 V                                            0.1
+                                      IOL = 50 µA                                                3 V                                            0.1
+ VOL                                                                                            4.5 V                                           0.1        V
+                                      IOH = 4 mA                                                 3 V                                            0.5
+                                      IOH = 8 mA                                                4.5 V                                           0.5
+ II                                   VI = 5.5 V or GND                                     0 V to 5.5 V                                       ±1(1)      µA
+
+ ICC                                  VI = VCC or GND,                IO = 0                    5.5 V                                            20       µA
+ Ci                                   VI = VCC or GND                                            5 V                                                       pF
+
+(1)    On products compliant to MIL-PRF-38535, this parameter is not production tested at VCC = 0 V.
+5.7 Electrical Characteristics, TA = –40°C to 125°C
+
+over operating free-air temperature range (unless otherwise noted)
+         PARAMETER                        TEST CONDITIONS                        V                      T                       SN74AHC08                 UNIT
+                                                                                   CC                     A                      MIN             MAX
+
+                                                                                  2 V                                             1.9
+                                IOH = –50 µA                                      3 V                                             2.9
+ VOH                                                                             4.5 V                                            4.4                       V
+                                IOH = –4 mA                                       3 V                                            2.48
+                                IOH = –8 mA                                      4.5 V                                            3.8
+                                                                                  2 V                                                              0.1
+                                IOL = 50 µA                                       3 V                                                              0.1
+                                                                                 4.5 V                                                             0.1
+                                                                                                TA = –40°C to 85°C                               0.44
+ VOL                            IOH = 4 mA                                        3 V          T   = –40°C to125°C                                          V
+                                                                                                 A                                                 0.5
+                                                                                                  Recommended
+                                                                                                TA = –40°C to 85°C                               0.44
+                                IOH = 8 mA                                       4.5 V         TA = –40°C to125°C                                  0.5
+                                                                                                  Recommended
+ II                             VI = 5.5 V or GND                            0 V to 5.5 V                                                          ±1       µA
+ ICC                            VI = VCC or GND, IO = 0                          5.5 V                                                             20       µA
+ Ci                             VI = VCC or GND                                   5 V           TA = –40°C to 85°C                                 10       pF
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2024 Texas Instruments Incorporated                                                                            Submit Document Feedback                7
+                                                      Product Folder Links: SN54AHC08 SN74AHC08
+
+--- PDF page 8 ---
+SN54AHC08, SN74AHC08
+SCLS236L – OCTOBER 1995 – REVISED FEBRUARY 2024                                                                                                    www.ti.com
+
+5.8 Switching Characteristics, VCC = 3.3 V ± 0.3 V
+
+over recommended operating free-air temperature range (unless otherwise noted) (see Load Circuit and Voltage Waveforms)
+  PARAMETER           FROM            TO              LOAD                             T                                MIN          TYP        MAX     UNIT
+                     (INPUT)       (OUTPUT)      CAPACITANCE                            A
+                                                                                   TA = 25°C                                        6.2(1)     8.8(1)
+                                                                       TA = –55°C to 125°C, SN54AHC08                                 1(1)    10.5(1)
+ tPLH, tPHL           A or B           Y           CL = 15 pF           TA = –40°C to 85°C, SN74AHC08                                   1       10.5      ns
+
+                                                                      TA = –40°C to 125°C Recommended,                                  1       10.5
+                                                                                  SN74AHC08
+                                                                                   TA = 25°C                                          8.7       12.3
+                                                                       TA = –55°C to 125°C, SN54AHC08                                   1         14
+ tPLH, tPHL           A or B           Y           CL = 50 pF           TA = –40°C to 85°C, SN74AHC08                                   1         14      ns
+
+                                                                      TA = –40°C to 125°C Recommended,                                  1         14
+                                                                                  SN74AHC08
+
+(1)    On products compliant to MIL-PRF-38535, this parameter is not production tested.
+5.9 Switching Characteristics, VCC = 5 V ± 0.5 V
+over recommended operating free-air temperature range (unless otherwise noted) (see Load Circuit and Voltage Waveforms)
+  PARAMETER           FROM              TO              LOAD                            TA                             MIN          TYP        MAX      UNIT
+                      (INPUT)       (OUTPUT)       CAPACITANCE
+                                                                                     TA = 25°C                                     4.3(1)      5.9(1)
+                                                                        TA = –55°C to 125°C, SN54AHC08                               1(1)        7(1)
+ tPLH, tPHL            A or B           Y             CL = 15 pF         TA = –40°C to 85°C, SN74AHC08                                 1           7     ns
+
+                                                                       TA = –40°C to 125°C Recommended,                                1           7
+                                                                                   SN74AHC08
+                                                                                     TA = 25°C                                       5.8         7.9
+                                                                        TA = –55°C to 125°C, SN54AHC08                                 1           9
+ tPLH, tPHL            A or B           Y             CL = 50 pF         TA = –40°C to 85°C, SN74AHC08                                 1           9     ns
+
+                                                                       TA = –40°C to 125°C Recommended,                                1           9
+                                                                                   SN74AHC08
+
+(1)    On products compliant to MIL-PRF-38535, this parameter is not production tested.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8       Submit Document Feedback                                                                                Copyright © 2024 Texas Instruments Incorporated
+                                                     Product Folder Links: SN54AHC08 SN74AHC08

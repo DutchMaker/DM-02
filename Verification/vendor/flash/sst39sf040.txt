@@ -1,0 +1,2387 @@
+Source: https://ww1.microchip.com/downloads/aemDocuments/documents/MPD/ProductDocuments/DataSheets/SST39SF010A-SST39SF020A-SST39SF040-Data-Sheet-DS20005022.pdf
+
+--- PDF page 1 ---
+                                                                                      SST39SF010A/
+                                            SST39SF020A/SST39SF040
+
+              1-Mbit/2-Mbit/4-Mbit (x8) Multi-Purpose Flash
+
+
+Features                                                                Product Description
+
+•  Organized as 128K x 8/256K x 8/512K x 8                              The SST39SF010A/020A/040 devices are CMOS
+•  Single 4.5V-5.5V Read and Write Operations                           Multi-Purpose Flash (MPF) manufactured with
+•  Superior Reliability:                                                Microchip’s proprietary, high-performance CMOS
+  -  Endurance: 100,000 Cycles (typical)                                SuperFlash® technology. The split-gate cell design and
+  -  Greater than 100 years data retention                              thick oxide tunneling injector attain better reliability and
+                                                                        manufacturability compared with alternate approaches.
+•  Low-Power Consumption (typical values at                             The SST39SF010A/020A/040 devices write (Program
+  14 MHz):                                                              or Erase) with a 4.5V-5.5V power supply and conform
+  -  Active current: 10 mA (typical)                                    to JEDEC® standard pin assignments for x8 memories.
+  -  Standby current: 30 µA (typical)                                   Featuring a high-performance Byte Program, the
+•  Sector Erase Capability:                                             SST39SF010A/020A/040 devices provide a maximum
+  -  Uniform 4-Kbyte sectors                                            Byte Program time of 20µsec. These devices use
+•  Fast Read Access Time:                                               Toggle Bit or Data# Polling to indicate the completion of
+  -  55 ns                                                              Program operation. To protect against inadvertent
+                                                                        writes, they have on-chip hardware and software data
+  -  70 ns                                                              protection schemes.
+•   Latched Address and Data                                            The SST39SF010A/020A/040 devices provide
+•  Automatic Write Timing:                                              superior reliability, being designed, manufactured and
+  -  Internal VPP Generation                                            tested for a wide spectrum of applications.
+•  Fast Erase and Byte Program:                                         These devices are suited for applications that require
+  -  Sector Erase time: 18 ms (typical)                                 convenient and economical updating of program,
+  -  Chip Erase time: 70 ms (typical)                                   configuration or data memory. For all system
+  -  Byte Program time: 14 µs (typical)                                 applications, they significantly improve performance
+  -  Chip Rewrite time:                                                 and reliability while lowering power consumption. They
+     -  2 seconds (typical) for SST39SF010A                             inherently use less energy during Erase and Program
+                                                                        times than alternative Flash technologies. The total
+     -  4 seconds (typical) for SST39SF020A                             energy consumed is a function of the applied voltage,
+     -  8 seconds (typical) for SST39SF040                              current and time of application. Since, for any given
+•  End-of-Write Detection:                                              voltage range, the SuperFlash technology uses less
+  -  Toggle Bit                                                         current to program and has a shorter erase time, the
+  -  Data# Polling                                                      total energy consumed during any Erase or Program
+                                                                        operation is less than alternative Flash technologies.
+•  TTL I/O Compatibility                                                These devices also improve flexibility while lowering
+•  JEDEC® Standard:                                                     the cost for program, data and configuration storage
+  -  Flash EEPROM pinouts and command sets                              applications.
+•  All Devices are RoHS Compliant                                       The SuperFlash technology provides fixed Erase and
+                                                                        Program times, independent of the number of
+Packages                                                                Erase/Program cycles that have occurred. Therefore,
+•  32-Pin PDIP, 32-Lead PLCC and 32-Lead TSOP                           the system software or hardware does not have to be
+                                                                        modified or derated as is necessary with alternative
+                                                                        Flash technologies, whose Erase and Program times
+                                                                        increase with accumulated Erase/Program cycles.
+                                                                        See Figure 2-1 for pin assignments and Table 2-1 for
+                                                                        pin descriptions.
+
+
+
+
+
+
+
+
+
+ 2002-2025 Microchip Technology Inc. and its subsidiaries                                                                        DS20005022F-page 1--- PDF page 2 ---
+SST39SF010A/SST39SF020A/SST39SF040
+
+
+1.0      BLOCK DIAGRAM
+
+FIGURE 1-1:           FUNCTIONAL BLOCK DIAGRAM
+
+
+
+
+                                                                                     SuperFlash®
+                                                     X-Decoder                         Memory
+
+
+
+  Memory Address           Address Buffers & Latches
+                                                                                      Y-Decoder
+
+                     CE#
+                     OE#                  Control Logic                      I/O Buffers and Data Latches
+
+                    WE#
+                                                                                     DQ7 - DQ0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DS20005022F-page 2                                                           2002-2025 Microchip Technology Inc. and its subsidiaries--- PDF page 3 ---
+         SST39SF010A/SST39SF020A/SST39SF040
+
+
+2.0      PIN DESCRIPTION
+
+FIGURE 2-1:           PIN ASSIGNMENTS
+
+
+                                                        PIN ASSIGNMENT FOR 32-LEAD PDIP
+
+                                                         NC/A18(1)      1                32      VDD
+                                                               A16      2                31      WE#
+                                                               A15      3                30      NC/A17(2)
+                                                               A12      4                29      A14
+                                                                A7      5                28      A13
+                                                                A6      6                27      A8
+                                                                A5      7                26      A9
+                                                                A4      8   Top View     25      A11
+                                                                A3      9                24      OE#
+                                                                A2      10               23      A10
+                                                                A1      11               22      CE#
+                                                                A0      12               21      DQ7
+                                                              DQ0       13               20      DQ6
+                                                              DQ1       14               19      DQ5
+                                                              DQ2       15               18      DQ4
+                                                              VSS       16               17      DQ3
+
+                                         Note 1: Pin 1 is NC for SST39SF010A and SST39SF020A and A18 for SST39SF040.
+                                                  2: Pin 30 is NC for SST39SF010A and A17 for SST39SF020A and SST39SF040.
+
+
+
+      PIN ASSIGNMENT FOR 32-LEAD PLCC
+                              NC/              NC/                                   PIN ASSIGNMENT FOR 32-LEAD TSOP
+              A12   A15   A16 A18(1) VDD  WE#  A17(2)
+
+
+                                                                     A11        1                                                            32        OE#
+               4      3      2      1     32    31    30              A9        2                                                            31        A10
+   A7       5                                     29      A14         A8        3                                                            30        CE#
+   A6       6                                     28      A13        A13        4                                                            29        DQ7
+                                                                     A14        5                                                            28        DQ6
+   A5       7                                     27      A8    NC/A17(1)       6                                                            27        DQ5
+   A4       8                                     26      A9        WE#         7                      Standard Pinout                       26        DQ4
+                                                                     VDD        8                          Top View                          25        DQ3
+   A3       9              Top View               25      A11   NC/A18(2)       9                           Die Up                           24        VSS
+   A2       10                                    24      OE#        A16        10                                                           23        DQ2
+                                                                     A15        11                                                           22        DQ1
+   A1       11                                    23      A10        A12        12                                                           21        DQ0
+   A0       12                                    22      CE#         A7        13                                                           20        A0
+                                                                      A6        14                                                           19        A1
+  DQ0       13                                    21      DQ7         A5        15                                                           18        A2
+                14    15    16    17    18    19    20                A4        16                                                           17        A3
+
+
+              DQ1  DQ2  Vඛඛ  DQ3  DQ4  DQ5  DQ6                          Note 1: Pin 6 is NC for SST39SF010A
+                                                                                      and A17 for SST39SF020A and SST39SF040.
+  Note 1: Pin 1 is NC for SST39SF010A                                             2: Pin 9 is NC for SST39SF010A
+               and SST39SF020A and A18 for SST39SF040.                                and SST39SF020A and A18 for SST39SF040.
+
+           2: Pin 30 is NC for SST39SF010A
+               and A17 for SST39SF020A and SST39SF040.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 2002-2025 Microchip Technology Inc. and its subsidiaries                                                                     DS20005022F-page 3--- PDF page 4 ---
+SST39SF010A/SST39SF020A/SST39SF040
+
+
+
+
+TABLE 2-1:       PIN DESCRIPTION
+   Symbol            Pin Name                                                                   Functions
+
+AMS(1)-A0     Address Inputs       Provide memory addresses. During Sector Erase AMS-A12 address lines will select the sector.
+
+                                         Output data during Read cycles and receive input data during Write cycles.
+DQ7-DQ0     Data Input/Output            Data are internally latched during a Write cycle.
+                                         The outputs are in tri-state when OE# or CE# is high.
+CE#              Chip Enable            Activate the device when CE# is low.
+OE#              Output Enable        Gate the data output buffers.
+WE#             Write Enable           Control the Write operations.
+VDD              Power Supply         Provide power supply voltage: 4.5V-5.5V.
+VSS               Ground
+NC                No Connection        Unconnected pins.
+Note  1:    AMS = Most significant address
+              AMS = A16 for SST39SF010A, A17 for SST39SF020A and A18 for SST39SF040
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DS20005022F-page 4                                                           2002-2025 Microchip Technology Inc. and its subsidiaries--- PDF page 5 ---
+        SST39SF010A/SST39SF020A/SST39SF040
+
+
+3.0      DEVICE OPERATION
+
+Commands are used to initiate the memory operation                       3.3       Sector Erase Operation
+functions of the device. Commands are written to the                     The Sector Erase operation allows the system to erase
+device using standard microprocessor write                               the device on a sector-by-sector basis. The sector
+sequences. A command is written by asserting WE#                         architecture is based on uniform sector size of
+low while keeping CE# low. The address bus is latched
+on the falling edge of WE# or CE#, whichever occurs                      4 Kbytes. The Sector Erase operation is initiated by
+last. The data bus is latched on the rising edge of WE#                  executing a six-byte command load sequence for
+or CE#, whichever occurs first.                                          Software Data Protection with Sector Erase command
+                                                                         (30H) and Sector Address (SA) in the last bus cycle.
+3.1       Read                                                           The sector address is latched on the falling edge of the
+                                                                         sixth WE# pulse, while the command (30H) is latched
+The Read operation of the SST39SF010A/020A/040 is                        on the rising edge of the sixth WE# pulse. The internal
+controlled by CE# and OE#, and both must be low for                      Erase operation begins after the sixth WE# pulse. The
+the system to obtain data from the outputs. CE# is used                  End-of-Erase can be determined using either Data#
+for device selection. When CE# is high, the chip is                      Polling or Toggle Bit methods. See Figure 7-6 for timing
+deselected and only standby power is consumed. OE#                       waveforms. Any commands written during the Sector
+is the output control and is used to gate data from the                  Erase operation will be ignored.
+output pins. The data bus is in a high-impedance state
+when either CE# or OE# is high. Refer to the Read                        3.4       Chip Erase Operation
+cycle timing diagram (Figure 7-1) for further details.
+                                                                         The SST39SF010A/020A/040 devices provide Chip
+3.2       Byte Program Operation                                         Erase operation, which allows the user to erase the
+                                                                         entire memory array to the ‘1’s state. This is useful
+The SST39SF010A/020A/040 devices are                                     when the entire device must be quickly erased.
+programmed on a byte-by-byte basis. Before                               The Chip Erase operation is initiated by executing a
+programming, the sector containing the byte must be                      six- byte Software Data Protection command sequence
+completely erased. The Program operation is                              with Chip Erase command (10H) with address 5555H
+accomplished in three steps.                                             in the last byte sequence. The internal Erase operation
+1.     The first step is the three-byte load sequence for                begins with the rising edge of the sixth WE# or CE#,
+     Software Data Protection.                                           whichever occurs first. During the internal Erase
+2.   The second step is to load byte address and                         operation, the only valid read is Toggle Bit or Data#
+     byte data. During the Byte Program operation,                       Polling. See Ta b l e  4 - 2 for the command sequence,
+     the addresses are latched on the falling edge of                    Figure 7-7 for the timing diagram and Figure 7-15 for
+     either CE# or WE#, whichever occurs last. The                       the flowchart. Any commands written during the Chip
+     data are latched on the rising edge of either CE#                   Erase operation will be ignored.
+     or WE#, whichever occurs first.
+3.     The third step is the internal Program operation,                 3.5       Write Operation Status Detection
+     which is initiated after the rising edge of the                     The SST39SF010A/020A/040 devices offer two
+     fourth WE# or CE#, whichever occurs first.                          software methods to detect the completion of a Write
+Once initiated, the Program operation will be                            (Program or Erase) cycle, thereby optimizing the
+completed within 20 µs. See Figure 7-2 and Figure 7-3                    system’s Write cycle time. The software detection
+for WE# and CE# controlled Program operation timing                      includes two status bits: Data# Polling (DQ7) and
+diagrams and Figure 7-12 for a flowchart. During the                     Toggle Bit (DQ6). The End-of-Write detection mode is
+Program operation, the only valid reads are Data#                        enabled after the rising edge of WE#, which initiates
+Polling and Toggle Bit. During the internal Program                      the internal Program or Erase operation.
+operation, the host is free to perform additional tasks.                 The actual completion of the nonvolatile write is
+Any commands written during the internal Program                         asynchronous with the system. Therefore, Data#
+operation will be ignored.                                               Polling or Toggle Bit maybe be read concurrently with
+                                                                         the completion of the write cycle. If this occurs, the
+                                                                         system may receive incorrect results from the status
+                                                                         detection process. For example, valid data may appear
+                                                                         to conflict with either DQ7 or DQ6. To prevent false
+                                                                         results upon detection of failures, the software routine
+                                                                         should loop to read the accessed location an additional
+                                                                         two times. If both reads are valid, then the device has
+                                                                         completed the Write cycle; otherwise the failure is valid.
+
+
+
+
+ 2002-2025 Microchip Technology Inc. and its subsidiaries                                                                     DS20005022F-page 5--- PDF page 6 ---
+SST39SF010A/SST39SF020A/SST39SF040
+
+
+3.6       Data# Polling (DQ7)                                              3.9       Hardware Data Protection
+When the SST39SF010A/020A/040 devices are                                  Noise/Glitch Protection: A WE# or CE# pulse of less
+undergoing an internal Program operation, any attempt                      than 5 ns will not initiate a Write cycle.
+to read DQ7 will produce the complement of the true                        VDD Power-Up/Down Detection: The Write operation is
+data. Once the Program operation is completed, DQ7                         inhibited when VDD is less than 2.5V.
+will produce true data. Note that even though DQ7 may                      Write Inhibit Mode: Forcing OE# low, CE# high or WE#
+have valid data immediately following the completion of
+an internal Write operation, the remaining data outputs                    high will inhibit the Write operation, preventing
+may still be invalid. Valid data on the entire data bus will               inadvertent writes during power-up or power-down.
+appear in subsequent successive Read cycles after an
+interval of 1 µs. During an internal Erase operation, any                  3.10     Software Data Protection (SDP)
+attempt to read DQ7 will produce a ‘0’. Once the                           The SST39SF010A/020A/040 devices provide the
+internal Erase operation is completed, DQ7 will                            JEDEC®-approved Software Data Protection scheme
+produce a ‘1’. The Data# Polling is valid after the rising                 for all data alteration operations, i.e., Program and
+edge of fourth WE# (or CE#) pulse for Program                              Erase. Any Program operation requires the inclusion of
+operation. For Sector or Chip Erase, Data# Polling is                      a series of three-byte sequence. The three-byte load
+valid after the rising edge of sixth WE# (or CE#) pulse.                   sequence is used to initiate the Program operation,
+See  Figure 7-4 for the Data# Polling timing diagram                       providing optimal protection from inadvertent Write
+and Figure 7-13 for a flowchart.                                           operations, e.g., during the system power-up or
+3.7       Toggle Bit (DQ6)                                                 power-down. Any Erase operation requires the
+                                                                           inclusion of six-byte load sequence.
+During the internal Program or Erase operation,                            The SST39SF010A/020A/040 devices are shipped
+consecutive attempts to read DQ6 will produce                              with the Software Data Protection permanently
+alternating ‘0’s and ‘1’s, i.e., toggling between ‘0’                      enabled. See Ta b l e  4 - 2 for the specific software
+and ‘1’. When the internal Program or Erase operation                      command codes. During the SDP command sequence,
+is completed, the toggling will stop. The device is then                   invalid commands will abort the device to Read mode,
+ready for the next operation. The Toggle Bit is valid                      within TRC.
+after the rising edge of fourth WE# (or CE#) pulse for
+Program operation. For Sector or Chip Erase, the                           3.11     Product Identification
+Toggle Bit is valid after the rising edge of sixth WE# (or
+CE#) pulse. See Figure 7-5 for the Toggle Bit timing                       The Product Identification mode identifies the device as
+diagram and Figure 7-13 for a flowchart.                                   the SST39SF010A, SST39SF020A or SST39SF040
+                                                                           and the manufacturer as Microchip. This mode may be
+3.8       Data Protection                                                  accessed through software operations. Users may
+                                                                           wish to utilize the software Product Identification
+The SST39SF010A/020A/040 devices provide both                              operation to identify the part (i.e., using the device ID)
+hardware and software features to protect nonvolatile                      when multiple manufacturers are used in the same
+data from inadvertent writes.                                              socket. For further details, see Ta b l e  4 - 2 for software
+                                                                           operation,  Figure 7-8 for the software ID Entry and
+                                                                           Read timing diagram and Figure 7-14 for the ID Entry
+                                                                           command sequence flowchart.
+
+TABLE 3-1:       PRODUCT IDENTIFICATION
+                                                                     Address                                           Data
+Manufacturer’s ID                                                                0000H                                             BFH
+                         SST39SF010A                                     0001H                                              B5H
+Device ID:               SST39SF020A                                     0001H                                              B6H
+                         SST39SF040                                       0001H                                              B7H
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DS20005022F-page 6                                                           2002-2025 Microchip Technology Inc. and its subsidiaries--- PDF page 7 ---
+       SST39SF010A/SST39SF020A/SST39SF040
+
+
+3.12     Product Identification Mode
+         Exit/Reset
+To return to the standard Read mode, the Software
+Product Identification mode must be exited. Exit is
+accomplished by issuing the Exit ID command
+sequence, which returns the device to the Read
+operation. Please note that the software reset
+command is ignored during an internal Program or
+Erase operation. See Ta b l e  4 - 2 for the software
+command codes, Figure 7-9 for the timing waveform
+and Figure 7-14 for a flowchart.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 2002-2025 Microchip Technology Inc. and its subsidiaries                                                                     DS20005022F-page 7--- PDF page 8 ---
+SST39SF010A/SST39SF020A/SST39SF040
+
+
+4.0      OPERATIONS
+
+
+TABLE 4-1:       OPERATION MODES SELECTION
+            Mode                   CE#       OE#     WE#               DQ                                           Address
+ Read                                   VIL         VIL        VIH               DOUT            AIN
+ Program                              VIL         VIH        VIL                 DIN              AIN
+ Erase                                  VIL         VIH        VIL                X(1)              Sector or block address, XXH for Chip Erase
+ Standby                              VIH          X          X               High-Z           X
+ Write Inhibit  XVIL         X          High-Z/DOUT       X
+                                       XXVIH         High-Z/DOUT       X
+ Product Identification
+ Software Mode                   VIL         VIH        VIL                                    see Table 4-2
+ Note  1:    X can be VIL or VIH, but no other value.
+
+TABLE 4-2:       SOFTWARE COMMAND SEQUENCE
+
+                             1st Bus Write         2nd Bus Write          3rd Bus Write         4th Bus Write          5th Bus Write         6th Bus Write
+      Command                     Cycle                 Cycle                  Cycle                 Cycle                  Cycle                 Cycle
+      Sequence
+                           Addr(1)   Data(2)   Addr(1)   Data(2)   Addr(1)   Data(2)   Addr(1)   Data(2)   Addr(1)   Data(2)   Addr(1)   Data(2)
+ Byte Program              5555H      AAH     2AAAH     55H      5555H      A0H       BA(2)
+ Sector Erase               5555H      AAH     2AAAH      55H      5555H      80H      5555H      AAH     2AAAH      55H      SAX(3)      30H
+ Chip Erase                  5555H      AAH     2AAAH      55H      5555H      80H      5555H      AAH     2AAAH      55H      5555H      10H
+ Software ID
+ Entry(4,5)                      5555H      AAH     2AAAH      55H      5555H      90H
+ Software ID Exit(6)        XXH        F0H
+ Software ID Exit(6)        555H       AAH     2AAAH      55H      5555H      F0H
+ Note   1:     Address format A14-A0 (Hex), Addresses AMS- A15 can be VIL or VIH, but no other value, for the command sequence.
+               AMS = Most significant address
+               AMS = A16 for SST39SF010A, A17 for SST39SF020A and A18 for SST39SF040
+         2:     BA = Program Byte address.
+         3:     SAx for Sector Erase; uses AMS = A12 address lines.
+         4:     The device does not remain in Software Product ID Mode if powered down.
+         5:      With AMS-A1 = 0; SST Manufacturer’s ID =  BFH, is read with A0 = 0,
+                                           SST39SF010A Device ID = B5H, is read with A0 = 1.
+                                           SST39SF020A Device ID = B6H, is read with A0 = 1.
+                                           SST39SF040 Device ID = B7H, is read with A0 = 1.
+         6:     Both Software ID Exit operations are equivalent.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DS20005022F-page 8                                                           2002-2025 Microchip Technology Inc. and its subsidiaries--- PDF page 9 ---
+          SST39SF010A/SST39SF020A/SST39SF040
+
+
+5.0      ELECTRICAL SPECIFICATIONS
+
+Absolute Maximum Ratings (†)
+Temperature under bias ..........................................................................................................................-55°C to +125°C
+Storage temperature ...............................................................................................................................-65°C to +150°C
+DC voltage on any pin to ground potential...........................................................................................-0.5V to VDD+0.5V
+Transient voltage (<20 ns) on any pin to ground potential...................................................................-2.0V to VDD+2.0V
+Voltage on A9 pin to ground potential  ....................................................................................................... -0.5V to 13.2V
+Package power dissipation capability (TA = +25°C).....................................................................................................1W
+Through hold lead soldering temperature (10 seconds) ....................................................................................... +300°C
+Surface mount lead soldering temperature (3 seconds) ....................................................................................... +240°C
+Output short circuit current(1) ................................................................................................................................100 mA
+ † NOTICE: Stresses above those listed under “Absolute Maximum Ratings” may cause permanent damage to the
+ device. This is a stress rating only, and functional operation of the device at those or any other conditions above those
+ indicated in the operational listings of this specification is not implied. Exposure to maximum rating conditions for
+ extended periods may affect device reliability.
+
+
+    Note 1:   Output shorted for no more than one second. No more than one output shorted at a time.
+
+
+TABLE 5-1:       OPERATING RANGE
+                      Range                                             Ambient Temperature                                         VDD
+ Commercial                                                                      0°C to +70°C                                             4.5V-5.5V
+ Industrial                                                                       -40°C to +85°C                                           4.5V-5.5V
+
+
+TABLE 5-2:       AC CONDITIONS OF TEST(1)
+                     Input Rise/Fall Time                                                                 Output Load
+
+                                 5ns                                                                         CL = 30 pF for 55 nsCL = 100 pF for 70 ns
+
+ Note  1:    See Figure 7-10 and Figure 7-11.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 2002-2025 Microchip Technology Inc. and its subsidiaries                                                                     DS20005022F-page 9--- PDF page 10 ---
+SST39SF010A/SST39SF020A/SST39SF040
+
+
+6.0      DC CHARACTERISTICS
+TABLE 6-1:       DC OPERATING CHARACTERISTICS (VDD=4.5V-4.5V)(1)
+                                                                Limits
+ Symbol                  Parameter                      Min.       Max.    Unit                           Test Conditions
+
+             Power Supply Current                     —           —                Address Input = VILT/VILT, @ f = 1/TRC minimumVDD = VDD maximum
+IDD          Read(2)                                            —25mACE# = VIL, OE# = WE# = VIH all I/Os open
+
+             Program and Erase                         —          35       mA    CE# = WE# = VIL, OE# = VIH
+
+ISB1         Standby Current VDD (TTL input)                                      —3mACE# = VIH, VDD = VDD maximum
+
+ISB2         Standby Current VDD (CMOS input)                                  —         100      µA     CE# = VIHC, VDD = VDD maximum
+
+ILI            Input Leakage Current                     —            1        µA     VIN = GND to VDD, VDD = VDD maximum
+ILO           Output Leakage Current                 —          10       µA     VOUT = GND to VDD, VDD = VDD maximum
+VIL           Input Low Voltage                            —          0.8        V      VDD = VDD minimum
+VIH          Input High Voltage                          2.0          —         V      VDD = VDD maximum
+VIHC        Input High Voltage (CMOS)        VDD-0.3      —         V      VDD = VDD maximum
+VOL         Output Low Voltage                        —          0.4        V      IOL = 2.1 mA, VDD = VDD minimum
+VOH         Output High Voltage                       2.4          —        V      IOH = 400 µA, VDD = VDD minimum
+Note  1:    Typical conditions for the Active Current shown on the front page of the data sheet are average values at
+              +25°C (room temperature) and VDD = 5V for SF devices. Not 100% tested.
+         2:    Values are for 70 ns conditions. See the Multi-Purpose Flash Power Rating application note for further
+              information.
+
+
+TABLE 6-2:       RECOMMENDED SYSTEM POWER-UP TIMINGS
+        Symbol                                                       Parameter                                                  Minimum           Units
+TPU-READ(1)               Power-Up to Read Operation                                                                      100                   µs
+TPU-WRITE(1)              Power-Up to Erase/Program Operation                                                     100                   µs
+Note  1:    This parameter is measured only for initial qualification and after a design or process change that could
+              affect this parameter.
+
+TABLE 6-3:       CAPACITANCE (TA = +25°C, F = 1 MHZ, OTHER PINS OPEN)
+         Parameter                          Description                          Test Condition                             Maximum
+            CI/O(1)                       I/O Pin Capacitance                        VI/O=0V                  12pF
+             CIN(1)                          Input Capacitance                           VIN =0V                   6pF
+Note  1:    This parameter is measured only for initial qualification and after a design or process change that could
+              affect this parameter.
+
+
+TABLE 6-4:       RELIABILITY CHARACTERISTICS
+  Symbol            Parameter          Minimum Specification         Unit                               Test Method
+NEND(1,2)      Endurance                               10,000                     Cycles                    JEDEC® Standard A117
+TDR(1)          Data Retention                           100                        Years                     JEDEC® Standard A103
+ILTH(1)           Latch Up                                100 + IDD                     mA                        JEDEC® Standard A78
+Note  1:    This parameter is measured only for initial qualification and after a design or process change that could
+              affect this parameter.
+         2:    NEND endurance rating is qualified as 10,000 cycles minimum for the whole device. A sector or block level
+              rating would result in a higher minimum specification.
+
+
+
+
+DS20005022F-page 10                                                          2002-2025 Microchip Technology Inc. and its subsidiaries--- PDF page 11 ---
+           SST39SF010A/SST39SF020A/SST39SF040
+
+
+7.0      AC CHARACTERISTICS
+
+
+TABLE 7-1:       READ CYCLE TIMING PARAMETERS (VDD = 4.5V-5.5V)
+
+ Symbol                     Parameter                      SST39SF010A/020A/040–55   SST39SF010A/020A/040–70     Unit
+                                                                           Minimum         Maximum         Minimum         Maximum
+ TRC         Read Cycle Time                                        55                     —                     70                      —                 ns
+ TCE          Chip Enable Access Time                          —                     55                     —                      70                ns
+ TAA            Address Access Time                                       —                          55                          —                          70                    ns
+ TOE         Output Enable Access Time                       —                     35                     —                      35                ns
+ TCLZ(1)    CE# Low to Active Output                          0                      —                      0                      —                ns
+ TOLZ(1)    OE# Low to Active Output                           0                      —                      0                       —                 ns
+ TCHZ(1)    CE# High to High-Z Output                       —                     20                     —                     25                ns
+ TOHZ(1)    OE# High to High-Z Output                        —                     20                     —                      25                ns
+ TOH(1)      Output Hold from Address Change            0                      —                      0                      —                ns
+ Note  1:    This parameter is measured only for initial qualification and after a design or process change that could
+                  affect this parameter.
+
+
+TABLE 7-2:       PROGRAM/ERASE CYCLE TIMING PARAMETERS
+  Symbol                                                   Parameter                                                  Minimum    Maximum      Unit
+ TBP             Byte Program Time                                                                                          —                10             µs
+ TAS             Address Setup Time                                                                                         0                 —              ns
+ TAH            Address Hold Time                                                                                          30                —              ns
+ TCS             WE# and CE# Setup Time                                                                                  0                 —              ns
+ TCH            WE# and CE# Hold Time                                                                                    0                 —              ns
+ TOES          OE# High Setup Time                                                                                       0                 —              ns
+ TOEH          OE# High Hold Time                                                                                        10                —              ns
+ TCP            CE# Pulse Width                                                                                              40                —              ns
+ TWP            WE# Pulse Width                                                                                             40                —              ns
+ TWPH(1)      WE# Pulse Width High                                                                                     30                —              ns
+ TCPH(1)       CE# Pulse Width High                                                                                     30                —              ns
+ TDS            Data Setup Time                                                                                              40                —              ns
+ TDH(1)         Data Hold Time                                                                                                 0                 —              ns
+ TIDA(1)        Software ID, Bypass Entry and Exit Times                                                       —               150            ns
+ TSE             Sector Erase                                                                                                      —                25             ms
+ TSCE           Chip Erase                                                                                                         —               100            ms
+ Note  1:    This parameter is measured only for initial qualification and after a design or process change that could
+                  affect this parameter.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 2002-2025 Microchip Technology Inc. and its subsidiaries                                                                    DS20005022F-page 11--- PDF page 12 ---
+SST39SF010A/SST39SF020A/SST39SF040
+
+
+FIGURE 7-1:           READ CYCLE TIMING DIAGRAM
+
+
+                                                                 TRC                                  TAA
+
+  ADDRESS AMS-0
+                                                             TCE
+
+                CE#
+
+                                                                TOE
+
+                OE#
+                             VIH                                  TOLZ                                                TOHZ
+
+               WE#
+
+                                                        TCLZ                                       TOH                                      TCHZ
+              DQ7-0    High-Z                                                 DATA VALID                   DATA VALID           High-Z
+
+
+  Note 1:   AMS = Most significant address
+             AMS = A16 for SST39SF010A, A17 for SST39SF020A and A18 for SST39SF040
+
+
+FIGURE 7-2:           WE# CONTROLLED PROGRAM CYCLE TIMING DIAGRAM
+
+
+                                                                                 INTERNAL PROGRAM OPERATION STARTS
+                                                                                                     TBP
+
+    ADDRESS AMS-0               5555            2AAA          5555         ADDR
+                                  TAH
+                                TWP                                                TDH
+
+                 WE#
+                    TAS               TWPH                                      TDS
+
+                  OE#
+
+                                                                    TCH
+                  CE#
+                                                TCS
+
+                DQ7-0               AA             55              A0             DATA
+
+
+                                   SW0          SW1          SW2      BYTE
+                                                                  (ADDR/DATA)
+
+
+
+   Note 1:   AMS = Most significant address
+               AMS = A16 for SST39SF010A, A17 for SST39SF020A and A18 for SST39SF040
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DS20005022F-page 12                                                          2002-2025 Microchip Technology Inc. and its subsidiaries--- PDF page 13 ---
+       SST39SF010A/SST39SF020A/SST39SF040
+
+
+FIGURE 7-3:           CE# CONTROLLED PROGRAM CYCLE TIMING DIAGRAM
+
+
+                                                                    INTERNAL PROGRAM OPERATION STARTS
+                                                                                     TBP
+
+  ADDRESS AMS-0           5555            2AAA          5555         ADDR
+                            TAH                                        TDH
+                           TCP
+              CE#
+                 TAS            TCPH                                       TDS
+
+              OE#
+
+                                                         TCH
+
+             WE#
+                                        TCS
+
+            DQ7-0             AA            55              A0             DATA
+
+
+                           SW0            SW1            SW2BYTE
+                                                        (ADDR/DATA)
+
+
+
+   Note 1:   AMS = Most significant address
+            AMS = A16 for SST39SF010A, A17 for SST39SF020A and A18 for SST39SF040
+
+
+FIGURE 7-4:           DATA# POLLING TIMING DIAGRAM
+
+
+
+   ADDRESS AMS-0
+
+                                           TCE
+
+              CE#
+
+                                    TOEH                                                               TOES
+
+              OE#
+
+                                                  TOE
+
+             WE#
+
+
+
+              DQ7 DD#D#D
+
+
+
+
+   Note 1:   AMS = Most significant address
+            AMS = A16 for SST39SF010A, A17 for SST39SF020A and A18 for SST39SF040
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 2002-2025 Microchip Technology Inc. and its subsidiaries                                                                    DS20005022F-page 13--- PDF page 14 ---
+SST39SF010A/SST39SF020A/SST39SF040
+
+
+FIGURE 7-5:           TOGGLE BIT TIMING DIAGRAM
+
+
+   ADDRESS AMS-0
+                                                 TCE
+
+                 CE#
+                                         TOEH                                                                            TOES
+                                                         TOE
+
+                 OE#
+
+
+
+                WE#
+
+
+                 DQ6                                    Note
+
+
+
+                                                                                             TWO READ CYCLES
+                                                                                            WITH SAME OUTPUTS
+
+
+   Note 1:   Toggle bit output is always high first.
+               AMS = Most significant address
+               AMS = A16 for SST39SF010A, A17 for SST39SF020A and A18 for SST39SF040
+
+
+
+FIGURE 7-6:           WE# CONTROLLED SECTOR ERASE TIMING DIAGRAM
+
+
+                                               SIX-BYTE CODE FOR SECTOR-ERASE                                      TSE
+
+
+   ADDRESS AMS-0             5555         2AAA                                               2AAA5555           5555SAX
+
+
+
+                CE#
+
+
+
+                OE#
+
+                                 TWP
+
+                WE#
+
+
+
+               DQ7-0             AA                                  80               AA5555                  30
+
+                                SW0           SW1            SW2           SW3            SW4             SW5
+
+
+
+   Note 1:   This device also supports CE# controlled Sector Erase operation. The WE# and CE# signals are
+               interchangeable as long as minimum timings are met (see Ta b l e  6 - 4).
+               SAXX = Sector Address
+               Toggle bit output is always high first.
+               AMS = Most significant address
+               AMS = A16 for SST39SF010A, A17 for SST39SF020A and A18 for SST39SF040
+
+
+
+
+
+
+
+
+
+DS20005022F-page 14                                                          2002-2025 Microchip Technology Inc. and its subsidiaries--- PDF page 15 ---
+        SST39SF010A/SST39SF020A/SST39SF040
+
+
+FIGURE 7-7:           WE# CONTROLLED CHIP ERASE TIMING DIAGRAM
+
+
+                                                    SIX-BYTE CODE FOR CHIP-ERASE                                         TSCE
+
+   ADDRESS AMS-0               5555         2AAA                                               2AAA5555           55555555
+
+
+
+                 CE#
+
+
+
+                 OE#
+
+                                   TWP
+
+                 WE#
+
+
+
+               DQ7-0               AA                                 80               AA5555                 10
+
+                                   SW0          SW1            SW2           SW3            SW4             SW5
+
+
+   Note 1:   This device also supports CE# controlled Chip Erase operation. The WE# and CE# signals are
+               interchangeable as long as minimum timings are met (see Table 6-4).
+               SAXX = Sector Address
+               Toggle bit output is always high first.
+               AMS = Most significant address
+
+
+FIGURE 7-8:           SOFTWARE ID ENTRY AND READ
+
+                                      Three-byte Sequence for
+                                          Software ID Entry
+
+   ADDRESS A14-0             5555          2AAA          5555                                     0000          0001
+
+
+
+                 CE#
+
+
+
+                 OE#
+                                  TWP                                   TIDA
+
+                WE#
+                                                   TWPH                                TAA
+
+               DQ7-0                AA                            9055                  BF           Device ID
+
+                                  SW0          SW1            SW2
+
+
+    Note 1:   Device ID = B5H for SST39SF010A, B6H for SST39SF020A and B7H for SST39SF040
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 2002-2025 Microchip Technology Inc. and its subsidiaries                                                                    DS20005022F-page 15--- PDF page 16 ---
+SST39SF010A/SST39SF020A/SST39SF040
+
+
+FIGURE 7-9:           SOFTWARE ID EXIT AND RESET
+
+
+                                 THREE-BYTE SEQUENCE FOR
+                                SOFTWARE ID EXIT AND RESET
+
+   ADDRESS A14-0            5555           2AAA        5555
+
+
+
+              DQ7-0               AA               55              F0
+
+                                                                   TIDA
+
+                CE#
+
+
+
+                OE#
+
+                                TWP
+               WE#
+                                                TWHP
+                                SW0              SW1             SW2
+
+
+
+FIGURE 7-10:         AC INPUT/OUTPUT REFERENCE WAVEFORMS
+
+
+    VIHT
+
+
+                   INPUT                   VIT            REFERENCE POINTS                                         OUTPUTVOT
+
+     VILT
+
+
+    Note 1:    AC test inputs are driven at VIHT (3.0V) for a logic ‘1’ and VILT (0V) for a logic ‘0’. Measurement reference
+               points for inputs and outputs are VIT (1.5V) and VOT (1.5 V). Input rise and fall times (10%  90%) are
+               <5 ns.
+          2:   VIT = VINPUT Test
+               VOT = VOUTPUT Test
+               VIHT = VINPUT HIGH Test
+               VILT = VINPUT LOW Test
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DS20005022F-page 16                                                          2002-2025 Microchip Technology Inc. and its subsidiaries--- PDF page 17 ---
+       SST39SF010A/SST39SF020A/SST39SF040
+
+
+FIGURE 7-11:          A TEST LOAD EXAMPLE
+
+
+                                                                                                VDD
+
+                                                    TO TESTER
+
+                                                                                                RL HIGH
+
+
+
+
+                  TO DUT
+
+                                              CL                                  RL LOW
+
+
+
+
+
+
+
+FIGURE 7-12:         BYTE PROGRAM ALGORITHM
+
+
+                                                       Start
+
+
+
+                                                 Load data: AAH
+                                                Address: 5555H
+
+
+
+                                                 Load data: 55H
+                                                Address: 2AAAH
+
+
+
+                                                 Load data: A0H
+                                                Address: 5555H
+
+
+
+                                                    Load Byte
+                                                  Address/Byte
+                                                       Data
+
+
+                                                  Wait for end of
+                                                 Program (TBP 
+                                                Data# Polling bit,
+                                                   or Toggle bit
+                                                    operation)
+
+
+                                                     Program
+                                                   Completed
+
+
+
+
+
+
+
+
+
+ 2002-2025 Microchip Technology Inc. and its subsidiaries                                                                    DS20005022F-page 17--- PDF page 18 ---
+SST39SF010A/SST39SF020A/SST39SF040
+
+
+FIGURE 7-13:         WAIT OPTIONS
+
+
+            Internal Timer                                      Toggle Bit                Data#  Polling
+
+                 Byte                                    Byte                                   Byte
+           Program/Erase                           Program/Erase                          Program/Erase
+                Initiated                              Initiated                              Initiated
+
+
+
+
+              Wait TBP,                               Read byte                             Read DQ7
+
+            TSCE or TSE
+
+
+                                                     Read same                    No         Is DQ7 =
+           Program/Erase                                 byte                                true data?
+              Completed                                                                              Yes
+
+
+                                            No        Does DQ6                            Program/Erase
+                                                        match?                              Completed
+
+                                                             Yes
+
+
+                                                   Program/Erase
+                                                      Completed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DS20005022F-page 18                                                          2002-2025 Microchip Technology Inc. and its subsidiaries--- PDF page 19 ---
+      SST39SF010A/SST39SF020A/SST39SF040
+
+
+FIGURE 7-14:         SOFTWARE PRODUCT COMMAND FLOWCHARTS
+
+
+           Software Product ID Entry                        Software Product ID Exit &
+              Command Sequence                              Reset Command Sequence
+
+
+                 Load data: AAH                      Load data: AAH                Load data: F0H
+                 Address: 5555H                     Address: 5555H                  Address: XXH
+
+
+
+                 Load data: 55H                      Load data: 55H                   Wait TIDA
+                Address: 2AAAH                      Address: 2AAAH
+
+
+
+                 Load data: 90H                      Load data: F0H               Return to normal
+                 Address: 5555H                     Address: 5555H                    operation
+
+
+
+
+                    Wait TIDA                           Wait TIDA
+
+
+
+
+                Read Software ID                    Return to normal
+                                                        operation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 2002-2025 Microchip Technology Inc. and its subsidiaries                                                                    DS20005022F-page 19--- PDF page 20 ---
+SST39SF010A/SST39SF020A/SST39SF040
+
+
+FIGURE 7-15:         ERASE COMMAND SEQUENCE
+
+
+                     Chip Erase                                           Sector Erase
+                Command Sequence                                      Command Sequence
+
+                   Load data: AAH                                        Load data: AAH
+                   Address: 5555H                                        Address: 5555H
+
+
+
+                   Load data: 55H                                        Load data: 55H
+                  Address: 2AAAH                                        Address: 2AAAH
+
+
+
+                   Load data: 80H                                        Load data: 80H
+                   Address: 5555H                                        Address: 5555H
+
+
+
+                   Load data: AAH                                        Load data: AAH
+                   Address: 5555H                                        Address: 5555H
+
+
+
+                   Load data: 55H                                        Load data: 55H
+                  Address: 2AAAH                                        Address: 2AAAH
+
+
+
+                   Load data: 10H                                        Load data: 30H
+                   Address: 5555H                                         Address: SAX
+
+
+
+
+                     Wait TSCE                                              Wait TSE
+
+
+
+
+                     Chip erased                                          Sector erased
+                        to FFH                                                to FFH
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DS20005022F-page 20                                                          2002-2025 Microchip Technology Inc. and its subsidiaries--- PDF page 21 ---
+        SST39SF010A/SST39SF020A/SST39SF040
+
+
+8.0      PACKAGING INFORMATION
+
+8.1       Package Marking
+
+                           32-Lead PDIP                                                                        Example
+
+
+
+
+                                                                                              39SF010A
+                                                                                              70-4C-PHE
+                                                                                              245013F-J
+
+
+
+
+
+
+
+                           32-Lead PLCC                                                                        Example
+
+
+
+
+                          ;;;;;;;;;;                                                           39SF020A
+                          ;;;;;;;;;;                                                           55-4C-NHE
+                          <<::111 -                                                            245013F-J
+
+
+
+
+
+
+
+                          32-Lead TSOP                                                          Example
+
+
+
+
+
+                                                                                                39SF040
+                                                                                                    TU
+                                                                                                245013F
+
+
+
+
+
+
+
+                 Legend:   XX...X    Part number or part number code
+                             Y            Year code (last digit of calendar year)
+                             YY          Year code (last 2 digits of calendar year)
+                             WW        Week code (week of January 1 is week ‘01’)
+                             NNN       Alphanumeric traceability code
+
+
+
+
+                 Note:    In the event the full Microchip part number cannot be marked on one line, it will
+                           be carried over to the next line, thus limiting the number of available characters
+                           for customer-specific information.
+
+
+
+
+
+ 2002-2025 Microchip Technology Inc. and its subsidiaries                                                                    DS20005022F-page 21--- PDF page 22 ---
+SST39SF010A/SST39SF020A/SST39SF040
+
+
+9.0      PACKAGING DIAGRAMS
+
+
+
+   32-Lead Plastic Dual In-Line (P2X) - 600 mil Body [PDIP]
+
+
+    Note:    For the most current package drawings, please see the Microchip Packaging Specification located at
+             http://www.microchip.com/packaging
+
+
+
+                                                          D                            A
+                                    N                                                       B
+
+
+
+
+                   NOTE 1                                                                  E1
+
+
+
+
+                                    12
+                         (DATUM B)
+
+                             (DATUM A)
+                                                     TOP VIEW
+
+
+                 A                                                                          A1
+
+                         C
+               SEATING       A
+                 PLANE                                                                      L
+
+
+                 A                      e                                   32X b1
+                                                                           32X b
+                                                                                0.010     C
+                                                    SIDE VIEW
+
+
+                                                          E
+
+
+
+
+
+
+
+                                                                          c
+                                                          eB
+                                                     VIEW A-A
+
+
+
+
+                                                        Microchip Technology Drawing  C04-106-P2X Rev ASheet 1 of 2
+
+
+
+
+
+
+
+DS20005022F-page 22                                                          2002-2025 Microchip Technology Inc. and its subsidiaries--- PDF page 23 ---
+        SST39SF010A/SST39SF020A/SST39SF040
+
+
+
+
+
+     32-Lead Plastic Dual In-Line (P2X) - 600 mil Body [PDIP]
+
+
+       Note:     For the most current package drawings, please see the Microchip Packaging Specification located at
+                 http://www.microchip.com/packaging
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                           Units                  INCHES
+                                                             Dimension Limits         MIN           NOM           MAX
+                               Number of Pins                               N                        32
+                               Pitch                                         e                   .100 BSC
+                               Top to Seating Plane                         A         .170            -           .200
+                               Base to Seating Plane                        A1        .015            -                .050
+                               Shoulder to Shoulder Width                   E         .600            -           .625
+                               Molded Package Width                         E1        .530            -           .550
+                               Overall Length                               D        1.645            -           1.655
+                               Tip to Seating Plane                          L        .120            -           .150
+                               Lead Thickness                                c        .008            -           .012
+                               Upper Lead Width                             b1        .045            -           .065
+                               Lower Lead Width                              b        .016            -           .022
+                               Overall Row Spacing       §                  eB                   .600 BSC
+
+
+          Notes:
+          1.  Pin 1 visual index feature may vary, but must be located within the hatched area.
+          2. § Significant Characteristic
+          3. Dimensions D and E do not include mold flash or protrusions.  Mold flash or
+               protrusions shall not exceed .005" per side.
+          4. Dimensioning and tolerancing per ASME Y14.5M
+                   BSC: Basic Dimension. Theoretically exact value shown without tolerances.
+                                                                  Microchip Technology Drawing  C04-106-P2X Rev A        Sheet 2 of 2
+
+
+
+
+
+
+
+
+
+
+ 2002-2025 Microchip Technology Inc. and its subsidiaries                                                                    DS20005022F-page 23--- PDF page 24 ---
+SST39SF010A/SST39SF020A/SST39SF040
+
+
+
+
+   32-Lead Plastic Leaded Chip Carrier (L) - Rectangle [PLCC]
+
+
+     Note:    For the most current package drawings, please see the Microchip Packaging Specification located at
+              http://www.microchip.com/packaging
+
+                                                                                   .007    H  A–B     D
+                                                             D
+                                                                  D
+                                       CH2        20                   14                       .007    H  A–B     D
+
+
+
+
+                                         21                                     13
+
+
+
+                                       A                                           B
+
+                                E1                                                        E
+
+
+
+
+
+
+
+
+                                         29                                     5
+
+
+        .007    H  A–B     D
+                                                             1N2                CH1
+        .002  A–B
+                                                 NOTE 1
+                                                                  CH1
+                                                            D1
+                     .007    H  A–B      D              TOP VIEW
+                      .002  A–B
+
+
+                                   C  A                                                  A1
+                         SEATING
+                           PLANE
+                                                               e                  A3
+
+                                                             b1
+                                                            b
+                                                                .007   C
+
+                                                            D2
+                                                        END VIEW
+                                                                                     H
+
+
+                             CH3
+
+
+
+                                                            E2
+                                                        SIDE VIEW
+
+
+                                                               Microchip Technology Drawing C04-023 Rev C  Sheet 1 of 2
+
+
+
+
+
+
+
+
+
+
+
+DS20005022F-page 24                                                          2002-2025 Microchip Technology Inc. and its subsidiaries--- PDF page 25 ---
+        SST39SF010A/SST39SF020A/SST39SF040
+
+
+
+
+    32-Lead Plastic Leaded Chip Carrier (L) - Rectangle [PLCC]
+
+
+     Note:      For the most current package drawings, please see the Microchip Packaging Specification located at
+                http://www.microchip.com/packaging
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                    Units                INCHES
+                                                       Dimension Limits       MIN          NOM           MAX
+                              Number of Pins                         N                       32
+                              Pitch                                   e                  .050 BSC
+                              Pins along Length                     ND                       7
+                              Pins along Width                       NE                      9
+                              Overall Height                         A        .125          .132         .140
+                              Contact Height                         A1       .060         .0775         .095
+                              Standoff §                             A3       .015            -            -
+                              Corner Chamfer                        CH1       .042          .045         .048
+                              Chamfers                              CH2         -             -          .020
+                              Side Chamfer Height                   CH3       .023          .026         .029
+                              Overall Length                         D        .485          .490         .495
+                              Overall Width                          E        .585          .590         .595
+                              Molded Package Length                  D1       .447          .450         .453
+                              Molded Package Width                   E1       .547          .550         .553
+                              Footprint Length                       D2       .376          .411         .446
+                              Footprint Width                        E2       .476          .511         .546
+                              Lead Thickness                          c       .008          .010         .013
+                              Upper Lead Width                       b1       .026          .029         .032
+         Notes:               Lower Lead Width                        b       .013          .017         .021
+
+         1.  Pin 1 visual index feature may vary, but must be located within the hatched area.
+         2.  Dimensioning and tolerancing per ASME Y14.5M
+                 BSC: Basic Dimension. Theoretically exact value shown without tolerances.
+                 REF: Reference Dimension, usually without tolerance, for information purposes only.
+
+                                                                         Microchip Technology Drawing C04-023 Rev C          Sheet 2 of 2
+
+
+
+
+
+
+
+
+
+
+
+ 2002-2025 Microchip Technology Inc. and its subsidiaries                                                                    DS20005022F-page 25--- PDF page 26 ---
+SST39SF010A/SST39SF020A/SST39SF040
+
+
+
+
+      32-Lead Plastic Leaded Chip Carrier (L) - Rectangle [PLCC]
+
+
+        Note:     For the most current package drawings, please see the Microchip Packaging Specification located at
+                  http://www.microchip.com/packaging
+
+
+
+
+
+
+                                                                       C1
+
+
+
+
+
+                                                                                                      G
+
+
+
+                                              C2
+
+
+
+
+
+
+                                                                                                     Y1
+
+
+                                       SILK SCREEN                                         X1
+
+                                                              E
+
+
+                                               RECOMMENDED LAND PATTERN
+
+                                                                      Units                INCHES
+                                                         Dimension Limits       MIN          NOM          MAX
+                               Contact Pitch                           E                  .050 BSC
+                               Contact Pad Spacing                                                            .425C1
+                               Contact Pad Spacing                     C2                    .524
+                               Contact Pad Width (X32)                 X1                                 .026
+                               Contact Pad Length (X32)                Y1                                 .100
+                               Contact Pad to Center Pad (X28)        G           .008
+
+
+
+
+
+
+            Notes:
+            1.  Dimensioning and tolerancing per ASME Y14.5M
+                    BSC: Basic Dimension. Theoretically exact value shown without tolerances.
+            2.  For best soldering results, thermal vias, if used, should be filled or tented to avoid solder loss during
+                reflow process
+
+                                                                                       Microchip Technology Drawing C04-2023 Rev C
+
+
+
+
+
+DS20005022F-page 26                                                          2002-2025 Microchip Technology Inc. and its subsidiaries--- PDF page 27 ---
+      SST39SF010A/SST39SF020A/SST39SF040
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 2002-2025 Microchip Technology Inc. and its subsidiaries                                                                    DS20005022F-page 27--- PDF page 28 ---
+SST39SF010A/SST39SF020A/SST39SF040
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DS20005022F-page 28                                                          2002-2025 Microchip Technology Inc. and its subsidiaries--- PDF page 29 ---
+      SST39SF010A/SST39SF020A/SST39SF040
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 2002-2025 Microchip Technology Inc. and its subsidiaries                                                                    DS20005022F-page 29--- PDF page 30 ---
+SST39SF010A/SST39SF020A/SST39SF040
+
+
+APPENDIX A:     REVISION HISTORY                                 Revision 04 (October 2003)
+                                                                 Document status changed from “Preliminary
+Revision F (May 2025)                                            Specification” to “Data Sheet”; Changed IDD Program
+Corrected pin assignments for 32-Lead PLCC;                      and Erase maximum values from 25 to 35 in Table 7 on
+Updated 32-Lead TSOP package marking.                            page 12.
+
+Revision E (November 2024)                                       Revision 03 (March 2003)
+
+Updated Package Marking section.                                 Changes to Table 7 on page 12; Added footnote for
+                                                                 MPF power usage and Typical conditions; Clarified the
+Revision D (September 2024)                                      Test Conditions for Power Supply Current and Read
+                                                                 parameters; Clarified IDD Write to be Program and
+Replaced WHE package type with TU package type.                  Erase.
+
+Revision C (April 2016)                                          Revision 02 (May 2002)
+Corrected typo in “Product Ordering Information”                 2002 Data Book
+section.
+
+Revision B (April 2013)
+
+End of Life for all 45 ns valid combinations; Updated
+Table 6 and Table 11.
+
+Revision A (July 2011)
+All 45ns parts reinstated; Applied new document
+format; Released document under letter revision
+system; Updated spec number from S71147 to
+DS25022.
+
+Revision 09 (January 2010)
+End of Life for all 45ns valid combinations. See
+S71147(02); Added replacement 55ns valid
+combinations.
+
+Revision 08 (September 2009)
+
+Changed endurance from 10,000 to 100,000 in
+“Product Description” section.
+
+Revision 07 (March 2009)
+Removed leaded parts from valid combinations. See
+PSN-D0PB0001.
+
+Revision 06 (August 2004)
+Corrected Revision History for Version 04: IDD
+maximum value was incorrectly stated as 30mA
+instead of 35 mA.
+
+Revision 05 (November 2003)
+2004 Data Book; Added non-Pb MPNs and removed
+footnote.
+
+
+
+
+
+
+
+
+DS20005022F-page 30                                                          2002-2025 Microchip Technology Inc. and its subsidiaries--- PDF page 31 ---
+SST39SF010A/SST39SF020A/SST39SF040
+
+
+PRODUCT IDENTIFICATION SYSTEM
+
+To order or obtain information, e.g., on pricing or delivery, refer to the factory or the listed sales office.
+
+                                      SST   39 SF 010A - 70 - 4C - NHE - T
+                                               XX  XX XXXX   XX   XX     XXX  - X---
+
+
+                                                                                            Shipping Carrier Option
+                                                                                            Blank = Standard Packaging (tube or tray)
+                                                                                            T = Tape and Reel
+
+
+
+                Product Series                                                          Package Type
+        39 = Multi-Purpose Flash                                                        PHE = PDIP, 32-Pins or Leads, non-Pb
+                                                                                        NHE = PLCC, 32-Pins or Leads, non-Pb
+                                                                                        TU = TSOP, 32-Pins or Leads, non-Pb
+
+
+                     Voltage
+               S = 4.5V-5.5V                                                         Temperature Range
+                                                                                     C = Commercial = 0°C to +70°C
+                                                                                     I = Industrial = -40°C to +85°C
+
+                              Device Density
+                                 040 = 4 Mbit                                 Minimum Endurance
+                                 020 = 2 Mbit                                 4 = 10,000 cycles
+                                 010 = 1 Mbit
+
+
+                                           Version                        Read Access Speed
+                           A = Version Letter                             55 = 55 ns
+                                                                          70 = 70 ns
+
+
+
+                                            Valid Combinations for SST39SF010A(1)
+SST39SF010A–55–4C–NHE                SST39SF010A–55–4C–TU
+SST39SF010A–70–4C–NHE                          SST39SF010A–70–4C–TU                          SST39SF010A–70–4C–PHE
+SST39SF010A–55–4I–NHE                          SST39SF010A–55–4I–TU
+SST39SF010A–70–4I–NHE                  SST39SF010A–70–4I–TU
+                                            Valid Combinations for SST39SF020A(1)
+SST39SF020A–55–4C–NHE                SST39SF020A–55–4C–TU
+SST39SF020A–70–4C–NHE                SST39SF020A–70–4C–TU                                    SST39SF020A–70–4C–PHE
+SST39SF020A–55–4I–NHE                  SST39SF020A–55–4I–TU
+SST39SF020A–70–4I–NHE                  SST39SF020A–70–4I–TU
+                                             Valid Combinations for SST39SF040(1)
+SST39SF040–55–4C–NHE                   SST39SF040–55–4C–TU
+SST39SF040–70–4C–NHE                   SST39SF040–70–4C–TU                                   SST39SF040–70–4C–PHE
+SST39SF040–55–4I–NHE                    SST39SF040–55–4I–TU
+SST39SF040–70–4I–NHE                    SST39SF040–70–4I–TU
+Note  1:    For Tape and Reel, add “-T”.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 2002-2025 Microchip Technology Inc. and its subsidiaries                                                                      DS20005022F-page 31--- PDF page 32 ---
+MICROCHIP INFORMATION
+
+Trademarks
+
+The “Microchip” name and logo, the “M” logo, and other names, logos, and brands are registered and unregistered
+trademarks of Microchip Technology Incorporated or its affiliates and/or subsidiaries in the United States and/or other
+countries (“Microchip Trademarks”). Information regarding Microchip Trademarks can be found at
+https://www.microchip.com/en-us/about/legal-information/microchip-trademarks.
+
+ISBN: 979-8-3371-0428-7
+
+Legal Notice
+
+This publication and the information herein may be used only with Microchip products, including to design, test, and
+integrate Microchip products with your application. Use of this information in any other manner violates these terms.
+Information regarding device applications is provided only for your convenience and may be superseded by updates. It
+is your responsibility to ensure that your application meets with your specifications. Contact your local Microchip sales
+office for additional support or, obtain additional support at
+www.microchip.com/en-us/support/design-help/client-support-services.
+THIS INFORMATION IS PROVIDED BY MICROCHIP "AS IS". MICROCHIP MAKES NO REPRESENTATIONS OR
+WARRANTIES OF ANY KIND WHETHER EXPRESS OR IMPLIED, WRITTEN OR ORAL, STATUTORY OR
+OTHERWISE, RELATED TO THE INFORMATION INCLUDING BUT NOT LIMITED TO ANY IMPLIED WARRANTIES
+OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR PURPOSE, OR
+WARRANTIES RELATED TO ITS CONDITION, QUALITY, OR PERFORMANCE.
+IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL, OR
+CONSEQUENTIAL LOSS, DAMAGE, COST, OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE
+INFORMATION OR ITS USE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS BEEN ADVISED OF THE
+POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT ALLOWED BY LAW,
+MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THE INFORMATION OR ITS USE
+WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR
+THE INFORMATION.
+Use of Microchip devices in life support and/or safety applications is entirely at the buyer's risk, and the buyer agrees
+to defend, indemnify and hold harmless Microchip from any and all damages, claims, suits, or expenses resulting from
+such use. No licenses are conveyed, implicitly or otherwise, under any Microchip intellectual property rights unless
+otherwise stated.
+
+Microchip Devices Code Protection Feature
+
+Note the following details of the code protection feature on Microchip products:
+•  Microchip products meet the specifications contained in their particular Microchip Data Sheet.
+•  Microchip believes that its family of products is secure when used in the intended manner, within operating
+  specifications, and under normal conditions.
+•  Microchip values and aggressively protects its intellectual property rights. Attempts to breach the code protection
+  features of Microchip product is strictly prohibited and may violate the Digital Millennium Copyright Act.
+•  Neither Microchip nor any other semiconductor manufacturer can guarantee the security of its code. Code
+  protection does not mean that we are guaranteeing the product is “unbreakable”. Code protection is constantly
+  evolving. Microchip is committed to continuously improving the code protection features of our products.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DS20005022F-page 32                                                  2002-2025 Microchip Technology Inc. and its subsidiaries

@@ -1,0 +1,919 @@
+Source: https://www.alliancememory.com/wp-content/uploads/AS6C1008_Mar_2023V1.2.pdf
+Retrieved: 2026-11-14
+
+--- PDF page 1 ---
+                                                                        ®
+  Mar 2023                                                                                                     AS6C1008
+
+
+
+                                   128K X 8 BIT LOW POWER CMOS SRAM
+
+Revision History
+128K       x 8 BIT LOW POWER CMOS SRAM
+
+Revision      Details                                                                                        Date
+Rev 1.0    Initial Release                                                                                                 Feb         2007
+Rev 1.1      Revise DC ELECTRICAL CHARACTERISTICS                                                            July         2021
+Rev       1.2    Revise  P-DIP Package Outline Dimension                                                     Mar         2023
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       .
+  13/Mar/202    3, v 1.2                         Alliance Memory Inc.                                        Page 1 of 15--- PDF page 2 ---
+                                                                                 ®
+
+
+
+
+FEATURES                                                                    GENERA  L DESCRIPTION
+
+    Access time :55ns                                                       The  AS6C1008 is a 1,048,57 6-bit low power
+    Low p     ower consumption:                                             CMOS static random access memory organized         as
+   Operating   current:10                   mA (TYP.)                       131,072  words b    y 8  bits.  It   is  fabricated            using v        ery
+   Standby current:                         1 µA (TYP.)                     high  perf      ormance, high rel            iability  CMO S  technology.  Its
+   Single  2.7V ~ 5.5V power supply                                         standby  currentis stable within the range  of
+   Fully Compatible with all Competitors 5V product                         operating  temperature.
+   Fully Compatible with all Competitors 3.3V product                       The AS6C1008  is well designed   for very low power
+   Fully static operation                                                   system applications, a  nd  particularly well suited fo r
+   Tri-st  ate  outp ut                                                     battery  back-up  non-volatile  memory application.
+   Dat     a  retentio          n voltage  : 1.5V (MIN.)                    The AS6C1008 operates from a single power supply
+   All products are ROHS Compliant                                          of   2.7V        ~   5.5V.
+   Package :   32-pin 450 mil SOP
+                  32-pin         600  mil P-DIP
+                  32-pin         8mm x 20mm  TSOP-I
+                  32-pin         8mm x 13.4mm sTSOP
+                  36-ball 6mm x 8mm  TFBGA
+
+  PRODUCT FAMILY
+        Product                Operating
+        Family               Temperature       VCC Range             Speed                            Power Dissipation Standby(ISB1,TYP.)     Operating(ICC,TYP.)
+   AS6C1008                      0 ~ 70℃              2.7 ~ 5.5V               55ns                       1µA                        10mA
+   AS6C1008                   -40 ~ 85℃              2.7 ~ 5.5V                55ns                       1µA                        10mA
+
+FUNCTIONAL BLOCK DIAGRAM                                                    PIN DESCRIPTION
+
+                                                                             SYMBOL       DESCRIPTION
+
+      Vcc                                                                    A0  - A16              Address  Inputs
+      Vss                                                                    DQ0  –  DQ7       Da ta  Inputs/Outputs
+
+
+                                                128Kx8                       CE#,   CE2            Chip Enable Inputs
+   A0-A16           DECODER                MEMORY ARRAY
+                                                                             WE#                      Write Enable Input
+                                                                             OE#                       Output Enable Input
+                                                                             V C C                        Pow er Supply
+                                                                             V SS                         G round
+                                                                             NC                         No  C onnection
+   DQ0-DQ7           I/O DATA                COLUMN I/O
+                     CIRCUIT
+
+
+
+     CE#
+     CE2            CONTROL
+     WE#             CIRCUIT
+     OE#
+
+
+
+
+
+
+
+       13/Mar/2023, v 1.2--- PDF page 3 ---
+                                                                                                        ®
+
+
+
+
+
+
+
+PIN CONFIGURATION
+
+
+   NC              1                             32            Vcc
+  A16              2                             31           A15
+  A14              3                             30           CE2
+  A12              4                             29           WE#        A11              1                                                                       32            OE #
+   A7              5                             28           A13         A9              2                                                                       31            A10
+                                                                          A8              3                                                                       30            CE  #
+   A6              6                             27            A8        A13              4                                                                       29            DQ7
+   A5              7                             26            A9        WE #             5                                                                       28            DQ6
+                                                                         CE  2            6                                                                       27            DQ5
+   A4              8                             25           A11        A15              7                                                                       26            DQ4
+                                                                         Vc c             8                     AS6C1008                                          25            DQ3
+   A3              9                             24           OE#         NC              9                                                                       24            V ss
+                                                                         A16             10                                                                       23            DQ2
+   A2             10                             23           A10        A14             11                                                                       22            DQ1
+                                                                         A12             12                                                                       21            DQ0
+   A1             11                             22           CE#         A7             13                                                                       20             A0
+   A0             12                             21           DQ7         A6             14                                                                       19             A1
+                                                                          A5             15                                                                       18             A2
+  DQ0             13                             20           DQ6         A4                                                                                                                                                                             A31617
+
+  DQ1             14                             19           DQ5                                                    T S OP -I/sTSOP
+  DQ2             15                             18           DQ4
+   Vss            16                             17           DQ3
+
+
+                            SOP/P-DIP
+
+
+
+
+        A       A0     A1               A3CE2A6 A8
+
+        B      DQ4     A2   WE#     A4    A7   DQ0
+
+        C      DQ5           N          5CA    DQ1
+
+        D       Vss                             Vcc
+
+        E       Vcc                             Vss
+
+        F      DQ6           NC    NC          DQ2
+
+        G      DQ7    OE#   CE#    A16   A15   DQ3
+
+        H       A9    A10                                A14A           211A1A13
+
+
+                 1      2      3      4      5      6
+                             TFBGA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          13/Mar/2023, v 1.2--- PDF page 4 ---
+                                                                                               ®
+
+
+
+
+ ABSOLUTE MAXIMUM RATINGS*
+
+                       PARAMETER                                 SYMBOL                        RATING                        UNIT
+Voltage on VCC relative to VSS                                      VT1                           -0.5 to 6.5                         V
+Voltage on any other pin relative to VSS                      VT2                       -0.5 to VCC+0.5                     V
+
+Operating Temperature                                                TA                       0 to 70(C grade)           ℃-40 to 85(I grade)
+
+Storage Temperature                                                  TSTG                           -65 to 150              ℃
+Power Dissipation                                                        PD                                    1                                W
+DC Output Current                                                      IOUT                                  50                            mA
+*Stresses greater than those listed under “Absolute Maximum Ratings” may cause permanent damage to the device. This is a stress rating
+only and functional operation of the device or any other conditions above those indicated in the operational sections of this specification is
+not implied. Exposure to the absolute maximum rating conditions for extended period may affect device reliability.
+
+
+
+TRUTH TABLE
+
+             MODE                   CE#        CE2        OE#       WE#        I/O OPERATION       SUPPLY CURRENT
+Standby                                X             L             X             X                   High-Z                            ISB1H             X             X             X                   High-Z                            ISB1
+
+
+Output Disable                      L             H            H            H                   High-Z                         ICC,ICC1
+Read                                     L             H             L             H                    DOUT                           ICC,ICC1
+Write                                     L             H             X             L                      DIN                            ICC,ICC1
+Note:    H = VIH, L = VIL, X = Don't care.
+
+DC ELECTRICAL CHARACTERISTICS
+
+       PARAMETER        SYMBOL           TEST CONDITION               MIN.        TYP. *4       MAX.        UNIT
+Supply Voltage                   VCC                                                                                                                      2.73.05.5V
+Input High Voltage             VIH*1                                                                                           V0                                                CC+0.3         V .7*Vcc-
+Input Low Voltage               VIL*2                                                                                                                     -0.2-0.6V
+Input Leakage Current         ILI      VCC≧ VIN ≧ VSS                              - 1              -               1              µA
+Output Leakage
+Current                                ILO      VCC≧ VOUT ≧ VSS,Output Disabled                                - 1              -               1              µA
+Output High Voltage           VOH     IOH                                                                                                           =-1mA2.4 2.7-V
+Output Low Voltage            VOL     IOL = 2mA                                            -                -              0.4             V
+                                                     Cycle time = Min.
+                                           ICC       CE# = VIL and CE2 = VIH,- 55            -              10             60            mA
+Average Operating                                    II/O = 0mA
+Power supply Current                                 Cycle time = 1µs
+                                           ICC1      CE#≦0.2V and CE2≧VCC-0.2V,                                 -               1              10            mA
+                                                     II/O = 0mA
+                                                     other pins at 0.2V or VCC-0.2V
+ Standby Power                                               ≧   CC-0.2V                C*                   -                1                 15               µA
+Supply Current                    ISB1     CE#     Vor CE2≦0.2V             I*                      -                           1              30                µA
+
+*C=Commercial temperature/I= Industrial temperature
+
+
+
+
+
+           13/Mar/2023, v 1.2--- PDF page 5 ---
+      Mar 2023                                                                                                                                   AS6C1008
+                                                                                          ®
+
+                                                128K X 8 BIT LOW POWER CMOS SRAM
+
+
+Notes:
+1. VIH(max) = VCC + 3.0V for pulse width less than 10ns.
+2. VIL(min) = VSS - 3.0V for pulse width less than 10ns.
+3. Over/Undershoot specifications are characterized, not 100% tested.
+4. Typical values are included for reference only and are not guaranteed or tested.
+  Typical valued are measured at VCC = VCC(TYP.) and TA = 25ºC
+
+CAPACITANCE  (TA = 25    , f℃                      = 1.0MHz)
+
+                 PARAMETER                         SYMBOL                 MIN.                     MAX                    UNIT
+I                                                                                                       IN                       -                           6                          pFnputCapacitanceC
+Input/Output Capacitance                              CI/O                       -                           8                          pF
+Note : These parameters are guaranteed by device characterization, but not production tested.
+
+AC TEST CONDITIONS
+
+I                                                                                                                                               CC - 0.2VnputPulseLevels0.2VtoV
+Input   Rise    and    Fall  Times                                                3ns
+Input and Output Timing Reference Levels                   1.5V
+Output     Load                                                                   CL  =50pF          +   1TTL,        IOH/IOL    =   -1mA/2mA
+
+AC ELECTRICAL CHARACTERISTICS
+
+(1) READ CYCLE
+                  PARAMETER                      SYM.                    AS6C1008-55                UNIT
+                                                                         MIN.      MAX.
+Read Cycle Time                                 tRC              55           -            ns
+Address Access Time                          tAA               -           55           ns
+Chip Enable Access Time                    tACE             -           55           ns
+Output Enable Access Time                tOE               -           30           ns
+Chip Enable to Output in Low-Z          tCLZ*           10           -            ns
+Output Enable to Output in Low-Z       tOLZ*            5            -            ns
+Chip Disable to Output in High-Z         tCHZ*            -           20           ns
+Output Disable to Output in High-Z     tOHZ*            -           20           ns
+Output Hold from Address Change      tOH             10           -            ns
+
+(2) WRITE CYCLE
+                 PARAMETER                       SYM.                    AS6C1008-55                UNIT
+                                                                          MIN.      MAX.
+Write Cycle Time                                  tWC             55           -           ns
+Address Valid to End of Write              tAW             50           -           ns
+Chip Enable to End of Write                tCW             50           -           ns
+Address Set-up Time                           tAS               0            -           ns
+Write Pulse Width                                tWP             45           -           ns
+Write Recovery Time                           tWR              0            -           ns
+Data to Write Time Overlap                 tDW             25           -           ns
+Data Hold from End of Write Time       tDH               0            -           ns
+Output Active from End of Write          tOW*             5            -           ns
+Write to Output in High-Z                     tWHZ*            -           20          ns
+*These parameters are guaranteed by device characterization, but not production tested.--- PDF page 6 ---
+     Mar 2023                                                                     ®                                             AS6C1008
+
+
+
+                                          128K X 8 BIT LOW POWER CMOS SRAM
+
+
+TIMING WAVEFORMS
+
+READ CYCLE 1 (Address Controlled) (1,2)
+
+                                                       tRC
+
+ Address
+
+                                                tAA                                               tOH
+
+   Dout            Previous Data Valid                                                Data Valid
+
+
+READ CYCLE 2 (CE# and CE2 and OE# Controlled) (1,3,4,5)
+
+                                                       tRC
+
+ Address
+
+                                                tAA
+
+   CE#
+
+                                                   tACE
+
+   CE2
+
+
+   OE#
+
+                                                        tOE                                  tOH
+                                                 tOLZ                                           tOHZ
+                                             tCLZ                                             tCHZ
+   Dout                           High-Z                                         Data Valid                      High-Z
+
+
+
+
+Notes :
+1.WE# is high for read cycle.
+2.Device is continuously selected OE# = low, CE# = low., CE2 = high.
+3.Address must be valid prior to or coincident with CE# = low, CE2 = high; otherwise tAA is the limiting parameter.
+4.tCLZ, tOLZ, tCHZ and tOHZ are specified with CL = 5pF. Transition is measured ±500mV from steady state.
+5.At any given temperature and voltage condition, tCHZ is less than tCLZ , tOHZ is less than tOLZ.--- PDF page 7 ---
+     Mar 2023                                                                   ®                                                   AS6C1008
+
+
+
+                                         128K X 8 BIT LOW POWER CMOS SRAM
+
+WRITE CYCLE 1 (WE# Controlled) (1,2,3,5,6)
+
+                                                                     tWC
+
+ Address
+
+                                                           tAW
+
+   CE#
+
+                                                              tCW
+
+   CE2
+
+                                  tAS                              tWP                                 tWR
+
+   WE#
+
+                                                   tWHZ                                                TOW
+   Dout                                      (4)                                      High-Z                          (4)
+
+                                                                                     tDW             tDH
+
+    Din                                                                                 Data Valid
+
+WRITE CYCLE 2 (CE# and CE2 Controlled) (1,2,5,6)
+
+                                                                     tWC
+
+ Address
+
+                                                              tAW
+
+   CE#                                tAS                                                           tWR
+
+                                                                     tCW
+   CE2
+
+                                                                tWP
+
+   WE#
+
+                                             tWHZ
+   Dout                                      (4)                                      High-Z
+
+                                                                                     tDW             tDH
+
+    Din                                                                                 Data Valid
+
+
+Notes :
+1.WE#, CE# must be high or CE2 must be low during all address transitions.
+2.A write occurs during the overlap of a low CE#, high CE2, low WE#.
+3.During a WE#controlled write cycle with OE# low, tWP must be greater than tWHZ + tDW to allow the drivers to turn off and data to be
+  placed on the bus.
+4.During this period, I/O pins are in the output state, and input signals must not be applied.
+5.If the CE#low transition and CE2 high transition occurs simultaneously with or after WE# low transition, the outputs remain in a high
+  impedance state.
+6.tOW and tWHZ are specified with CL = 5pF. Transition is measured ±500mV from steady state.--- PDF page 8 ---
+        Mar 2023                                                             ®®                                                  AS6C1008
+
+
+
+                                        128K X 8 BIT LOW POWER CMOS SRAM
+
+DATA RETENTION CHARACTERISTICS
+
+        PARAMETER         SYMBOL         TEST CONDITION            MIN.        TYP.       MAX.       UNIT
+VCC for Data Retention          VDR      CE#      V≧     CC - 0.2V
+                                                 or CE2 ≦ 0.2V                             1.5             -             5.5            V
+                                                VCC = 1.5V                  C**                  -            0.5           12               µA
+Data Retention Current           IDR             CE#      V≧     CC - 0.2V
+                                                 or CE2 ≦ 0.2V           I**                               0.5           30               µA
+
+Chip Disable to Data
+Retention Time                      tCDR      See Data RetentionWaveforms (below)                        0              -               -             ns
+Recovery Time                        tR                                                             tRC*             -               -             ns
+tRC* = Read Cycle Time  C=Commercial temp/I = Industrial temp**
+DATA RETENTION WAVEFORM
+Low Vcc Data Retention Waveform (1) (CE# controlled)
+
+
+                                                             VDR ≧ 1.5V
+
+    Vcc                         Vcc(min.)                                                     Vcc(min.)
+
+                                    tCDR                                                          tR
+   CE#                             VIH                    CE#      V≧    cc-0.2V                    VIH
+
+
+
+Low Vcc Data Retention Waveform (2) (CE2 controlled)
+
+
+                                                             VDR ≧ 1.5V
+
+    Vcc                         Vcc(min.)                                                     Vcc(min.)
+
+                                    tCDR                                                          tR
+   CE2                                                       CE2 ≦ 0.2V
+                                   VIL                                                              VIL--- PDF page 9 ---
+    Mar 2023                                                                                                       AS6C1008
+
+                                                                         ®
+
+                                     128K X 8 BIT LOW POWER CMOS SRAM
+
+
+PACKAGE OUTLINE DIMENSION
+
+32 pin 450 mil SOP Package Outline Dimension
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                UNIT
+                                       SYM.              INCH.(BASE)       MM(REF)
+                                             A         0.118 (MAX)      2.997 (MAX)
+                                             A1        0.004(MIN)        0.102(MIN)
+                                             A2        0.111(MAX)       2.82(MAX)
+                                              b         0.016(TYP)       0.406(TYP)
+                                              c          0.008(TYP)       0.203(TYP)
+                                             D         0.817(MAX)      20.75(MAX)
+                                             E         0.445 ±0.005    11.303 ±0.127
+                                             E1        0.555 ±0.012    14.097 ±0.305
+                                              e         0.050(TYP)       1.270(TYP)
+                                              L         0.0347 ±0.008  0.881 ±0.203
+                                             L1        0.055 ±0.008    1.397 ±0.203
+                                             S         0.026(MAX)      0.660 (MAX)
+                                              y          0.004(MAX)      0.101(MAX)
+                                             Θ         0o -10o               0o -10o--- PDF page 10 ---
+   Mar 2023                                                                                                    AS6C1008
+
+                                                                   ®®
+
+                                 128K X 8 BIT LOW POWER CMOS SRAM
+
+
+
+32 pin 600 mil P-DIP Package Outline Dimension
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                           UNIT
+                                  SYM.  INCH(BASE) MM(REF)
+                                        A1               0.001 (MIN)              0.254 (MIN)
+                                        A2            0.150 ± 0.005     3.810 ± 0.127
+                                        B             0.018 ± 0.005     0.457 ± 0.127
+                                        D             1.650 ± 0.005     41.910 ± 0.127
+                                        E             0.600 ± 0.010     15.240 ± 0.254
+                                        E1            0.544 ± 0.004     13.818 ± 0.102
+                                         e                0.100 (TYP)             2.540 (TYP)
+                                        eB            0.640 ± 0.020    16.256 ± 0.508.
+                                         L              0.130 ± 0.010     3.302 ± 0.254
+                                        S             0.075 ± 0.010     1.905 ± 0.254
+                                       Q1            0.070 ± 0.005     1.778 ± 0.127
+                                        X            10.4 ± 0.7              0.265      ± 0.015
+
+
+
+ Note : D/E1/S dimension do not include mold flash.--- PDF page 11 ---
+   Mar 2023                                                                                                        AS6C1008
+
+
+
+                                  128K X 8 BIT LOW POWER CMOS SRAM
+
+
+32 pin 8mm x 20mm TSOP-I Package Outline Dimension
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                 UNIT
+                                        SYM.               INCH(BASE)        MM(REF)
+                                              A         0.047 (MAX)      1.20 (MAX)
+                                             A1        0.004 ±0.002    0.10 ±0.05
+                                             A2        0.039 ±0.002    1.00 ±0.05
+                                              b         0.008 + 0.002      0.20 + 0.05
+                                                                 - 0.001            -0.03
+                                              c         0.005 (TYP)       0.127 (TYP)
+                                              D         0.724 ±0.004    18.40 ±0.10
+                                              E         0.315 ±0.004    8.00 ±0.10
+                                              e         0.020 (TYP)       0.50 (TYP)
+                                             HD        0.787 ±0.008    20.00 ±0.20
+                                              L         0.0197 ±0.004  0.50 ±0.10
+                                             L1        0.0315 ±0.004  0.08 ±0.10
+                                              y         0.003 (MAX)      0.076 (MAX)
+                                              Θ         0o～5o                0o～5o--- PDF page 12 ---
+     Mar 2023                                                                                                                             AS6C1008
+
+                                                                                      ®®
+
+                                             128K X 8 BIT LOW POWER CMOS SRAM
+
+
+32 pin 8mm x 13.4mm sTSOP Package              Outline Dimension
+                                       HD
+                                       cL
+                                                                                            12°  (2x)     12°  (2x)
+
+    1                                                                      32
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    16                                                                                                                                                17
+                                                                            "A"
+                                       D                                                                    Seating Plane     y
+
+
+
+
+
+
+
+
+                                                                                                                              12°  (2X)
+
+
+
+
+   16                                                                      17
+
+
+                                                                                                                                                   GAUGE PLANE
+
+
+
+
+
+
+
+                                                                                                                                                        0
+
+
+                                                                                                       SEATING PLANE       12°  (2X)         L
+
+                                                                                                                                          L1
+                                                                                                   "A" DE   TAIL VIEW
+
+    1                                                                      32
+
+
+
+
+                                                          UNIT
+                                               SYM.               INCH(BASE)        MM(REF)
+                                                       A         0.049 (MAX)      1.25 (MAX)
+                                                      A1        0.005 ±0.002    0.130 ±0.05
+                                                      A2        0.039 ±0.002    1.00 ±0.05
+                                                       b         0.008 ±0.01      0.20±0.025
+                                                       c         0.005 (TYP)       0.127 (TYP)
+                                                      D         0.465 ±0.004    11.80 ±0.10
+                                                       E         0.315 ±0.004    8.00 ±0.10
+                                                       e         0.020 (TYP)       0.50 (TYP)
+                                                     HD        0.528±0.008      13.40 ±0.20.
+                                                       L         0.0197 ±0.004  0.50 ±0.10
+                                                      L1        0.0315 ±0.004  0.8 ±0.10
+                                                       y         0.003 (MAX)      0.076 (MAX)
+                                                      Θ         0o～5o                0o～5o--- PDF page 13 ---
+  Mar 2023                                                                             AS6C1008
+
+
+
+                           128K X 8 BIT LOW POWER CMOS SRAM
+36 ball 6mm × 8mm TFBGA Package Outline Dimension--- PDF page 14 ---
+      Mar 2023                                                                                                                            AS6C1008
+
+                                                                                       ®®
+
+                                              128K X 8 BIT LOW POWER CMOS SRAM
+
+
+          Alliance              Organization              VCC                   Package                     Operating Temp                  Speed
+                                                        Range                                                                                 ns
+
+    AS6C1008-55PCN                 128K x 8           2.7  - 5.5V      32 pin 600mil PDIP                 Commercial  ~ 0 C - 70℃              55
+
+    AS6C1008-55PIN                 128K x 8           2.7  - 5.5V                                                      Industrial ~ -40 C - 85℃           5532 pin 600mil PDIP
+
+    AS6C1008-55SIN                 128K x 8           2.7  - 5.5V      32 pin 450mil SOP                 Industrial ~ -40 C - 85℃                     55
+
+    AS6C1008-55TIN                 128K x 8          2.7     - 5.5V   32 pin TSOP-1(8x20mm)               Industrial ~ -40 C - 85℃             55
+
+    AS6C1008-55STIN                128K x 8          2.7     - 5.5V   32 pin sTSOP     (8x13.4mm)         Industrial ~ -40 C - 85℃             55
+
+    AS6C1008-55BIN                 128K x 8          2.7     - 5.5V   36     pin TFBGA             (6x8mm)Industrial ~ -40 C - 85℃             55
+
+
+
+
+
+
+
+PART NUMBERING SYSTEM
+
+ AS6C   1008                  - 55                                   X                                                X                         N
+                                        Package Options:
+                                        P = 32 pin 600 mil P-DIP
+                                        S = 32 pin 450 mil S  OP                                       Temperature Ra   nge:
+  low     Device                        T = 32 pin TSO           P 1    (8mm x           20 mm)            C = Commercial                  N = Lead
+powe    r  Number                       ST = 32 pin sTSOP            (8mm x 13.4 mm)                        (0ºC to    +70º C)           Free     ROHS
+SRAM      10   = 1M        Access B = 36 pin TFBGA (6mm x 8mm)                                               I = Industrial               Compliant
+prefix       08 = by 8        Time                                                                         (-40º     to    +85º C)              Part
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       13/Mar/2023, v 1.2                                       Alliance Memory Inc.                                                  Page 14 of 15--- PDF page 15 ---
+Mar 2023                                                                                                                                                       AS6C1008
+
+                                                                                                 ®®
+
+                                                128K X 8 BIT LOW POWER CMOS SRAM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                           ®
+
+     Alliance Memory, Inc.                                                                                                           Copyright © Alliance Memory
+     12815 NE 124th st. STE#D,                                                                                                       All Rights Reserved
+     Kirkland, WA 98034                                                                                                              Part Number: AS6C1008
+     Tel: 425-898-4456                                                                                                               Document V                 ersion: v. 1.2
+     Fax: 425-896-8628
+     www.alliancememory.com
+
+
+
+     © Copyright 2003 Alliance Memory, Inc. All rights reserved. Our three-point logo, our name and Intelliwatt are trademarks or registered trademarks of
+     Alliance. All other brand and product names may be the trademarks of their respective companies. Alliance reserves the right to make changes to this
+     document and its products at any time without notice. Alliance assumes no responsibility for any errors that may appear in this document. The data
+     contained herein represents Alliance's best data and/or estimates at the time of issuance. Alliance reserves the right to change or correct this data at any
+     time, without notice. If the product described herein is under development, significant changes to these specifications are possible. The information in
+     this product data sheet is intended to be general descriptive information for potential customers and users, and is not intended to operate as, or provide,
+     any guarantee or warrantee to any user or customer. Alliance does not assume any responsibility or liability arising out of the application or use of any
+     product described herein, and disclaims any express or implied warranties related to the sale and/or use of Alliance products including liability or
+     warranties related to fitness for a particular purpose, merchantability, or infringement of any intellectual property rights, except as express agreed to in
+     Alliance's Terms and Conditions of Sale (which are available from Alliance). All sales of Alliance products are made exclusively according to Alliance's
+     Terms and Conditions of Sale. The purchase of products from Alliance does not convey a license under any patent rights, copyrights; mask works rights,
+     trademarks, or any other intellectual property rights of Alliance or third parties. Alliance does not authorize its products fo                 r use as critical components in
+     life-supporting systems where a malfunction or failure may reasonably be expected to result in significant injury to the user, and the inclusion of
+     Alliance products in such life-supporting systems implies that the manufacturer assumes all risk of such use and agrees to indemnify Alliance against all
+     claims arising from such use.

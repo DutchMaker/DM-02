@@ -57,6 +57,10 @@ namespace Mcc.Models
             {
                 this.Negative = false;
             }
+            if (this.Carry == null && this.Overflow == null && this.Zero == null && this.Negative == null)
+            {
+                throw new CompilerException($"Unknown flag condition '{flagString}'");
+            }
         }
 
         public string ToBits()

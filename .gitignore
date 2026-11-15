@@ -20,3 +20,8 @@ Code/Assembler/app/*
 .vscode
 *.code-workspace
 *.sch-bak
+.flightdeck/state.json
+.flightdeck/worktrees/
+.flightdeck/agent-status
+.flightdeck/runtime/
+.flightdeck/hooks.toml

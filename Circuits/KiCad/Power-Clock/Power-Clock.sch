@@ -1755,12 +1755,12 @@ F 3 "~" H 6650 1150 50  0001 C CNN
 	1    6650 1150
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	6650 2250 6650 2750
+Text Label 6650 2750 0    50   ~ 0
+RESET_OK_LED
 Text Notes 6000 2950 0    50   ~ 0
 Power indicator
 Text Notes 5900 800  0    50   ~ 0
-Supervisory circuit holds the ~RESET~\nline low for 350ms after powering up.
+MCP100 push-pull output is isolated from the manual reset switch.\nPower-on release delay: 150 ms minimum, 350 ms typical (DS11187F).
 $Comp
 L power:GND #PWR011
 U 1 1 5D782444
@@ -1781,9 +1781,8 @@ Wire Wire Line
 	6150 1050 6150 1150
 Wire Wire Line
 	6650 2250 7100 2250
-Connection ~ 6650 2250
-Wire Wire Line
-	6650 2000 6650 2250
+Text Label 6650 2000 0    50   ~ 0
+~POR
 Wire Wire Line
 	6150 2250 6650 2250
 $Comp
@@ -1840,7 +1839,7 @@ L Device:R R9
 U 1 1 5D77F199
 P 6200 2750
 F 0 "R9" V 6350 2750 50  0000 C CNN
-F 1 "330" V 6450 2750 50  0000 C CNN
+F 1 "2k2" V 6450 2750 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6130 2750 50  0001 C CNN
 F 3 "~" H 6200 2750 50  0001 C CNN
 	1    6200 2750
@@ -1858,7 +1857,7 @@ F 3 "~" H 6500 2750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 7100 2250 2    50   Input ~ 0
-~RESET
+~RESET_BUTTON
 $Comp
 L Switch:SW_Push SW5
 U 1 1 5D77B0A8
@@ -1876,4 +1875,106 @@ Wire Wire Line
 	7900 5050 7900 3000
 Wire Wire Line
 	12750 2800 12750 3600
+Text Notes 13800 1700 0    60   ~ 0
+Reset combination / isolated indicator; remaining spare inputs terminated
+$Comp
+L 74xx-Computer-Symbols:74LS32 U8
+U 3 1 69174101
+P 14400 2500
+F 0 "U8" H 14400 2800 50 0000 C CNN
+F 1 "74HCT32" H 14400 2700 50 0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 14400 2500 50 0001 C CNN
+	3    14400 2500
+	1    0    0    -1
+$EndComp
+Text GLabel 13800 2400 0    39   Input ~ 0
+POR_ACTIVE
+Text GLabel 13800 2600 0    39   Input ~ 0
+BUTTON_RESET_ACTIVE
+Text Label 15000 2500 0    39   ~ 0
+RESET_ACTIVE
+$Comp
+L 74xx-Computer-Symbols:74LS32 U8
+U 4 1 69174102
+P 14400 3500
+F 0 "U8" H 14400 3800 50 0000 C CNN
+F 1 "74HCT32" H 14400 3700 50 0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 14400 3500 50 0001 C CNN
+	4    14400 3500
+	1    0    0    -1
+$EndComp
+Text GLabel 13800 3400 0    39   Input ~ 0
+~RESET
+Text GLabel 13800 3600 0    39   Input ~ 0
+GND
+Text Label 15000 3500 0    39   ~ 0
+RESET_OK_LED
+$Comp
+L 74xx-Computer-Symbols:74LS04 U2
+U 4 1 69174103
+P 14400 4500
+F 0 "U2" H 14400 4800 50 0000 C CNN
+F 1 "74HCT04" H 14400 4700 50 0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 14400 4500 50 0001 C CNN
+	4    14400 4500
+	1    0    0    -1
+$EndComp
+Text GLabel 13950 4500 0    39   Input ~ 0
+~POR
+Text Label 14850 4500 0    39   ~ 0
+POR_ACTIVE
+$Comp
+L 74xx-Computer-Symbols:74LS04 U2
+U 5 1 69174104
+P 14400 5500
+F 0 "U2" H 14400 5800 50 0000 C CNN
+F 1 "74HCT04" H 14400 5700 50 0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 14400 5500 50 0001 C CNN
+	5    14400 5500
+	1    0    0    -1
+$EndComp
+Text GLabel 13950 5500 0    39   Input ~ 0
+~RESET_BUTTON
+Text Label 14850 5500 0    39   ~ 0
+BUTTON_RESET_ACTIVE
+$Comp
+L 74xx-Computer-Symbols:74LS04 U2
+U 6 1 69174105
+P 14400 6500
+F 0 "U2" H 14400 6800 50 0000 C CNN
+F 1 "74HCT04" H 14400 6700 50 0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 14400 6500 50 0001 C CNN
+	6    14400 6500
+	1    0    0    -1
+$EndComp
+Text GLabel 13950 6500 0    39   Input ~ 0
+RESET_ACTIVE
+Text GLabel 14850 6500 2    39   Output ~ 0
+~RESET
+$Comp
+L 74xx-Computer-Symbols:74HC14 U7
+U 5 1 69174106
+P 14400 7500
+F 0 "U7" H 14400 7800 50 0000 C CNN
+F 1 "74HCT14" H 14400 7700 50 0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 14400 7500 50 0001 C CNN
+	5    14400 7500
+	1    0    0    -1
+$EndComp
+Text GLabel 13950 7500 0    39   Input ~ 0
+GND
+NoConn ~ 14850 7500
+$Comp
+L 74xx-Computer-Symbols:74HC14 U7
+U 6 1 69174107
+P 14400 8500
+F 0 "U7" H 14400 8800 50 0000 C CNN
+F 1 "74HCT14" H 14400 8700 50 0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 14400 8500 50 0001 C CNN
+	6    14400 8500
+	1    0    0    -1
+$EndComp
+Text GLabel 13950 8500 0    39   Input ~ 0
+GND
+NoConn ~ 14850 8500
 $EndSCHEMATC
