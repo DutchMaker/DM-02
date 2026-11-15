@@ -4,7 +4,7 @@ import importlib.util,json,struct,time
 HERE=Path(__file__).resolve().parent
 def module(name):
     s=importlib.util.spec_from_file_location('cp_'+name,HERE/(name+'.py'));m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m
-r=module('run');counters=module('counters');registers=module('registers');faults=module('faults');modules=module('module_checks')
+r=module('run');counters=module('counters');registers=module('registers');faults=module('faults');modules=module('module_checks');mar=module('mar_checks')
 from dm02.common import ROOT,VROOT,BUILD,write_json,command,digest
 from dm02.compact_hardware import Circuit
 from dm02.alu import expected
@@ -62,6 +62,10 @@ def main():
         for board,corner,quick in [('AL1',1,False),('ME1',1,False),('AL1',4,True),('ME1',4,True)]:
             x=modules.run(board,corner,quick);module_runs.append(x);assert x['passed']
         write_json(HERE/'module-check.json',dict(passed=True,complete=True,runs=module_runs))
+        mar_runs=[]
+        for corner,full,fault in [(1,True,False),(4,False,False),(1,False,True)]:
+            x=mar.run(corner,full,fault);mar_runs.append(x);assert x['passed']
+        write_json(HERE/'mar-check.json',dict(passed=True,complete=True,runs=mar_runs))
         for corner in range(12):
             x=r.profile(corner);results.append(x);assert x['passed']
         for corner in (1,4,7):

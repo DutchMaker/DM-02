@@ -32,6 +32,8 @@ The selected memories are M27C322-100F1, M27C1024-10F1, W27C512-45Z and UM61512A
 
 `verification-state.json` is authoritative for the serial regression's completion. A running or interrupted record is not a pass. `native-audit.json`, `physical-review.json`, `interconnect-check.json` and the dedicated `*-check.json` receipts have narrower scopes.
 
+The standalone memory suite passed 131,073 reads, 48,897 SRAM writes, 16,384 protected ROM writes and 256 IO writes. The MAR suite passed 197,376 rows: complete 16-bit increment/wrap, byte loads, every PC/SP snapshot address and fetch-address transfers. These fixtures test the physical modules independently; the integrated CPU profiles include the actual distribution and shared-bus circuits.
+
 The complete isolated source snapshot and native KiCad evidence are preserved in the release archive. Git tracks the changed/new candidate sources. On a fresh checkout, `restore.py` fills unchanged snapshot files from the checksum-pinned baseline commit. Unpack the evidence archive to restore ROM/compiler outputs and original execution artifacts, or regenerate those with the baseline verification toolchain.
 
 From the repository root:
@@ -41,8 +43,10 @@ python3 Verification/build/compact-design/restore.py
 python3 Verification/build/compact-design/run.py --prepare
 python3 Verification/build/compact-design/audit.py --native
 python3 Verification/build/compact-design/physical.py
+python3 Verification/build/compact-design/component_review.py
 python3 Verification/build/compact-design/verify.py
 python3 Verification/build/compact-design/interconnect.py
+python3 Verification/build/compact-design/finalize.py
 python3 Verification/build/compact-design/publish.py
 ```
 

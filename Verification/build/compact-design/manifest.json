@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-11-15T22:05:19.823864+00:00",
+  "created_at": "2026-11-15T22:11:18.171546+00:00",
   "state": "verification-in-progress",
   "files": {
     "DM-02-compact-BOM.xlsx": {
@@ -7,8 +7,8 @@
       "sha256": "3fe390ca37e814be905f3fc672e68b66e0dac154bf86d6ca908598a88469180c"
     },
     "README.md": {
-      "bytes": 5294,
-      "sha256": "476208a2597ef65aae1a2d7081556c85227e2ab79dca3f46adf7135da8452ca8"
+      "bytes": 5806,
+      "sha256": "ebfb555223303414af85bad507c8809240a963401a3631e7e5d43338b01c4eaa"
     },
     "audit.json": {
       "bytes": 4368,
@@ -1346,6 +1346,30 @@
       "bytes": 82,
       "sha256": "8a4a078ee11e12cef28b19d7afe3853e73d867ecf574f78bbbba48ba113bbf43"
     },
+    "candidate/Verification/build/compact/mar-c1-full0-fault1/result.json": {
+      "bytes": 511,
+      "sha256": "7c2746cd66b98eaaaf215878307bf8c678fb3557968350a5c4d2ad456b5cc0f2"
+    },
+    "candidate/Verification/build/compact/mar-c1-full0-fault1/simulation.log": {
+      "bytes": 102,
+      "sha256": "269034ec8aced51637fdc694f216a8c2a494e1b697556f361e4c49a9f5fc891f"
+    },
+    "candidate/Verification/build/compact/mar-c1-full1-fault0/result.json": {
+      "bytes": 511,
+      "sha256": "dc9f88f3e9b0c53256583c7306a8e69d781a06a979d6f1d962197c688840821e"
+    },
+    "candidate/Verification/build/compact/mar-c1-full1-fault0/simulation.log": {
+      "bytes": 78,
+      "sha256": "38ac1db844ccc75cb6ee135d3e187849328f27e84f917e261206f054cb1f6ba1"
+    },
+    "candidate/Verification/build/compact/mar-c4-full0-fault0/result.json": {
+      "bytes": 512,
+      "sha256": "f36044ed2059c33a9698c2bd7e74ac5785558d8fa2b3f9afd9ab3aa6a4776829"
+    },
+    "candidate/Verification/build/compact/mar-c4-full0-fault0/simulation.log": {
+      "bytes": 74,
+      "sha256": "87e9cf9d7e40026fe626d18877f07c0069aa563f0f384e3b85727e97626cb2fd"
+    },
     "candidate/Verification/build/compact/memory-module-c1-quick0/result.json": {
       "bytes": 641,
       "sha256": "cc12577449e4791802721111caf5d5bc96137fd6dce1747dc8c942f4fd170684"
@@ -2078,6 +2102,10 @@
       "bytes": 1090,
       "sha256": "b6420f84d8aa457d3b3dc5effd1742f9c3b973e0ad3b66927e1eeed5d8ee05d2"
     },
+    "finalize.py": {
+      "bytes": 3999,
+      "sha256": "bf1dbf67c124cb218227e824820d31e6a22f2a87523f56df85dc3740799e9b1c"
+    },
     "fixture-inputs.json": {
       "bytes": 4428,
       "sha256": "cffbc92bf1ee8a56055cc755ef60ce78b619e662cac93b77b161f55b1bc81d84"
@@ -2202,6 +2230,14 @@
       "bytes": 923234,
       "sha256": "14c3d436006d89a3bf00298b630452cd1b1ca74814f007bc50864ef2b61787b2"
     },
+    "mar-check.json": {
+      "bytes": 1750,
+      "sha256": "d1f47a786fa6cf7c6d7ac6deb0b149b02d95182a5d44e25b9b8b751892a7d2b3"
+    },
+    "mar_checks.py": {
+      "bytes": 3816,
+      "sha256": "d71123e52d2d76f2477b1a20b87be1e1e9bc520d0e4650b46ac67899456e4222"
+    },
     "module-check.json": {
       "bytes": 2841,
       "sha256": "14a8f524585fc8a34a8b5d0134f1369f29c58922f95b42742240cdf2911a5a03"
@@ -2243,8 +2279,8 @@
       "sha256": "ac92ed24cc8a70bb1d24705586dc522607fa3bc3e41409771487ea4e59335b9c"
     },
     "publish.py": {
-      "bytes": 10594,
-      "sha256": "9490387b5c7c0995a7f390ad75c481411953f131f00f60d979e51dff255c3423"
+      "bytes": 10771,
+      "sha256": "50dffa30f8044937f2f0387431166a6fa6a016cbf8659382908358183f1b2e5e"
     },
     "recalculation.json": {
       "bytes": 431,
@@ -2359,16 +2395,16 @@
       "sha256": "96897ba0db5abbe71562c4f9ccf51f4056012c29d24b4dee9388b5e1ef8f942d"
     },
     "summary.json": {
-      "bytes": 89470,
-      "sha256": "b03849b1458c86fab157b2c647f138f19822e285eac82eb17c6ae0d4f07c0e0f"
+      "bytes": 91325,
+      "sha256": "aa5e4ac9c64a58b2d89bcbf41fceb926f998ee8f6f46450cb235cddf1f23025c"
     },
     "verification-state.json": {
       "bytes": 836,
       "sha256": "f3bd1b69d0eb4c8e95224700a82a5be4eee2c85acb20f5b1e114c73ee01404eb"
     },
     "verify.py": {
-      "bytes": 5409,
-      "sha256": "35e538da4261593418759c24f72d3b0e5dc44f257d201fdf6a6061c58690e6a8"
+      "bytes": 5703,
+      "sha256": "1ec3b231da1e06d696ce2d989c9a1271851636b49883cc87feaf64ced86ded3f"
     },
     "verify_publication.py": {
       "bytes": 1471,

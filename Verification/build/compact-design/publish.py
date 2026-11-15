@@ -13,7 +13,8 @@ def main():
     s=importlib.util.spec_from_file_location('cp_sources',HERE/'source_manifest.py');m=importlib.util.module_from_spec(s);s.loader.exec_module(m);sources=m.main()
     audit=read('audit.json');native=read('native-audit.json');physical=read('physical-review.json')
     state=read('verification-state.json');modules=read('module-check.json') if (HERE/'module-check.json').exists() else {}
-    complete=state.get('state')=='complete' and state.get('passed') is True and modules.get('passed') and modules.get('complete')
+    mar=read('mar-check.json') if (HERE/'mar-check.json').exists() else {}
+    complete=bool(state.get('state')=='complete' and state.get('passed') is True and modules.get('passed') and modules.get('complete') and mar.get('passed') and mar.get('complete'))
     assert audit['all_ic_dip'] and audit['structure_passed'] and not audit['load_over_allocations']
     assert native['native_passed'] and physical['passed']
     for board,b in native['boards'].items():assert sha(HERE/'candidate/Circuits/KiCad/Compact/candidates'/f'{board}.sch')==b['source_sha256']
@@ -49,7 +50,7 @@ def main():
         clock_profiles=len(read('clock-check.json')['runs']),clock_profiles_passed=read('clock-check.json')['passed'],
         register_checks=read('register-check.json'),counter_full_rows_per_profile=131584,
         fault_checks=read('fault-check.json'),minimum_sampled_source_blank_ns=min(gaps) if gaps else None,
-        completed_profiles=len(runs),runs=runs,module_checks=modules,normal_sources_unchanged=sources['normal_sources_unchanged'],
+        completed_profiles=len(runs),runs=runs,module_checks=modules,mar_checks=mar,normal_sources_unchanged=sources['normal_sources_unchanged'],
         normal_milestones=previous['milestones'],normal_run_errors=[x['id'] for x in previous['checks'] if x['status']=='error'],
         milestone_scope='The unchanged normal requirements remain authoritative. CP1 is a separately verified staged redesign; its evidence is not silently promoted into the failed normal run.',
         physical_qualification=False,open_items=physical['open_items'],rom_programming_readback=False,
@@ -79,14 +80,14 @@ def main():
 <h2>Sources and preservation</h2><p><a href="source-manifest.json">Candidate source hashes</a> · <a href="manifest.json">Publication hashes</a> · <a href="https://github.com/DutchMaker/DM-02">GitHub repository</a></p></html>''')
     # Only stable, deliberately published files. Large complete execution/native
     # artifacts are additionally preserved by the checksum-verified release.
-    excluded={'manifest.json','remote-validation.json','browser-check.json','desktop.png','mobile.png','verification.log','resume.log','module-check.log'}
+    excluded={'manifest.json','remote-validation.json','browser-check.json','desktop.png','mobile.png','verification.log','resume.log','module-check.log','mar-check.log'}
     selected=[p for p in HERE.iterdir() if p.is_file() and p.name not in excluded]
     selected += [HERE/'candidate'/name for name in sources['candidate_sources']]
     for directory in ('sources','footprints','programming-images'):
         selected += [p for p in (HERE/directory).rglob('*') if p.is_file()]
     for x in runs:
         selected.append(HERE/x['log']);selected.append((HERE/x['log']).parent/'result.json')
-    for x in modules.get('runs',[]):
+    for x in modules.get('runs',[])+mar.get('runs',[]):
         selected.append(HERE/x['log']);selected.append((HERE/x['log']).parent/'result.json')
     files={str(p.relative_to(HERE)):dict(bytes=p.stat().st_size,sha256=sha(p)) for p in sorted(set(selected))}
     write('manifest.json',dict(created_at=datetime.now(timezone.utc).isoformat(),state=summary['state'],files=files))

@@ -1,0 +1,15 @@
+{
+  "release": "https://github.com/DutchMaker/DM-02/releases/tag/analog-retry-timeout-2026-11-15",
+  "git_commit": "6666d90205408da6da5685002b219b30cab43184",
+  "download_verified": true,
+  "files_verified": 3796,
+  "manifest_sha256": "6180cf54375acf11c64e42f7a26ec5e7c5b64fed6aecd9ea0ebf97ecbd8c38b2",
+  "archives": {
+    "completed-runs.tar.gz": {
+      "bytes": 158486439,
+      "sha256": "b108a2b91b6718d17bd90817057e115d73020b01d729d4d9a531041937cd0a61",
+      "files": 3796
+    }
+  },
+  "acceptance_complete": false
+}

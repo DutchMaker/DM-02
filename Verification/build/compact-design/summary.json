@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-11-15T22:05:19.755774+00:00",
+  "created_at": "2026-11-15T22:11:18.085798+00:00",
   "revision": "CP1",
   "state": "verification-in-progress",
   "digital_verification_passed": false,
@@ -1493,6 +1493,51 @@
           "module.sv": "f46c84a97018c2f8de11b739e5372c2de7dc487e6c7bd57efe5cbc8b539d661c"
         },
         "scope": "Standalone physical module, fixture-looped SOURCE to DATA. Complete BF1/DT1 machine is a separate profile."
+      }
+    ]
+  },
+  "mar_checks": {
+    "passed": true,
+    "complete": true,
+    "runs": [
+      {
+        "corner": 1,
+        "full": true,
+        "fault": false,
+        "passed": true,
+        "log": "candidate/Verification/build/compact/mar-c1-full1-fault0/simulation.log",
+        "model_hashes": {
+          "support.sv": "cedc1088908342702904cc60caf4e58062a3604d259fb1c89328f69028344c60",
+          "tb.sv": "7318d739ea944324131265684fb3ecad006f3a16201918a0821caafcf5ec887b",
+          "mar.sv": "bf2c1b034ba9dbd4625299f05e45dea8d012c1f12d1a971655cdac8eb57b9fd0",
+          "clock.sv": "3fe5fdb06d626e932e6f7ca33345fb57834b283ebab585c947173676175800e5"
+        }
+      },
+      {
+        "corner": 4,
+        "full": false,
+        "fault": false,
+        "passed": true,
+        "log": "candidate/Verification/build/compact/mar-c4-full0-fault0/simulation.log",
+        "model_hashes": {
+          "support.sv": "cedc1088908342702904cc60caf4e58062a3604d259fb1c89328f69028344c60",
+          "tb.sv": "7318d739ea944324131265684fb3ecad006f3a16201918a0821caafcf5ec887b",
+          "mar.sv": "c7995a62f051c9d9fc7780c6e133e577044dc397486b57559ecf8891e6311cc0",
+          "clock.sv": "b838e6a6797ac8655a5ca3dd9cfb503dcc08bb1bda1b83d6c74501cd8402071c"
+        }
+      },
+      {
+        "corner": 1,
+        "full": false,
+        "fault": true,
+        "passed": true,
+        "log": "candidate/Verification/build/compact/mar-c1-full0-fault1/simulation.log",
+        "model_hashes": {
+          "support.sv": "cedc1088908342702904cc60caf4e58062a3604d259fb1c89328f69028344c60",
+          "tb.sv": "7318d739ea944324131265684fb3ecad006f3a16201918a0821caafcf5ec887b",
+          "mar.sv": "caa7ec063cb628e58173eb1717b98d92e616af2812bfc372bef1f12865d1b610",
+          "clock.sv": "3fe5fdb06d626e932e6f7ca33345fb57834b283ebab585c947173676175800e5"
+        }
       }
     ]
   },
