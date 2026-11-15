@@ -1,24 +1,24 @@
 {
   "files": {
     "DM-02-BOM-owned-stock-update.xlsx": {
-      "bytes": 81783,
-      "sha256": "529580a40af2f71134d984e5f2cbb81ddec338ff6a6bffa2a60b322d5d6336a2"
+      "bytes": 82055,
+      "sha256": "892b2db3ee018594ba21a5307fedf30c1e4e787d002fc85dda265a743c3d236a"
     },
     "assessment.json": {
-      "bytes": 5927,
-      "sha256": "b339fcb840d7c2b9465524fb31274bc1a293af53b807f46f1d1d0383f6d86494"
+      "bytes": 7399,
+      "sha256": "845128e62f91b652e0b7a48448a82f6e818e18fbf3d10c4ed34af8e7527e7d0e"
     },
     "browser_check.cjs": {
-      "bytes": 2095,
-      "sha256": "81358934dda5441f8cc7a5919e099bbb5f2437899e05338543cc3953dc8fdf17"
+      "bytes": 2583,
+      "sha256": "72f3b1bb8781ea96d1c87c021ed9786589af663b42b2d1d1da729d8e6ef521da"
     },
     "fetch_sources.py": {
       "bytes": 1888,
       "sha256": "4e5d748c54451dc04663d518de432eaf89a700b347d940882ffbec6a8c4ce619"
     },
     "index.html": {
-      "bytes": 7018,
-      "sha256": "ca7b9298979b84b8ba2377d685882a67f828365feb3e9c1d74c73421ee94269a"
+      "bytes": 8650,
+      "sha256": "a2ce2d09a1b73791b67270d444b1dd0ccb6d4f715ef8eed964d36768606de4e4"
     },
     "sources/m27c1024-source.json": {
       "bytes": 483,
@@ -61,16 +61,16 @@
       "sha256": "7b5cb4eb2b1a9dc6cd9b429d3ce2902707a09903efb8ad2ff7b4da59c728d5dd"
     },
     "stock.json": {
-      "bytes": 2121,
-      "sha256": "c4a1eb190b0b68e9bdd137d350ce1fc646f78f2b2b265acf4e32765e320787f2"
+      "bytes": 2615,
+      "sha256": "a026cca6500332c1bbb4934648b51cfe108d8219db76d079b2a55e76574e2d38"
     },
     "update.py": {
-      "bytes": 8618,
-      "sha256": "9ffc38140d1fa07a9b4cab5d28ef871882a4a46d4bf4a37308f16d666721d062"
+      "bytes": 9502,
+      "sha256": "61bce2ad40f5790985ea691e4fdf91038f27c19d84cf9d0fb6eb74add44df92b"
     },
     "validation.json": {
-      "bytes": 854,
-      "sha256": "36dde17494fabb76628e7885d3803edf3bd5f306237f00b7fb5a6661f96728b1"
+      "bytes": 969,
+      "sha256": "c48f3ea1e9ed18c7e2ee27206024e8abfe7ea6f88834bccec0d54874be34e90a"
     },
     "verify.py": {
       "bytes": 387,

@@ -1,26 +1,26 @@
 {
   "passed": true,
-  "checked_at": "2026-11-15T19:39:29.984498+00:00",
+  "checked_at": "2026-11-15T19:57:13.920143+00:00",
   "base_url": "https://ruud-macbook-pro-2023.tail668f59.ts.net:8020/build/owned-inventory/",
-  "manifest_sha256": "df9fc0b3df724c05b12a8b0bf7f3facd534ffc822cc4e9d756625f4af2e0b8fe",
+  "manifest_sha256": "059e7f1ddffcb9b80c1ad095c953be465309ded36483faa52d3bfa113175ceb4",
   "files_checked": 19,
   "files": [
     {
       "file": "DM-02-BOM-owned-stock-update.xlsx",
-      "sha256": "529580a40af2f71134d984e5f2cbb81ddec338ff6a6bffa2a60b322d5d6336a2",
-      "bytes": 81783,
+      "sha256": "892b2db3ee018594ba21a5307fedf30c1e4e787d002fc85dda265a743c3d236a",
+      "bytes": 82055,
       "matched": true
     },
     {
       "file": "assessment.json",
-      "sha256": "b339fcb840d7c2b9465524fb31274bc1a293af53b807f46f1d1d0383f6d86494",
-      "bytes": 5927,
+      "sha256": "845128e62f91b652e0b7a48448a82f6e818e18fbf3d10c4ed34af8e7527e7d0e",
+      "bytes": 7399,
       "matched": true
     },
     {
       "file": "browser_check.cjs",
-      "sha256": "81358934dda5441f8cc7a5919e099bbb5f2437899e05338543cc3953dc8fdf17",
-      "bytes": 2095,
+      "sha256": "72f3b1bb8781ea96d1c87c021ed9786589af663b42b2d1d1da729d8e6ef521da",
+      "bytes": 2583,
       "matched": true
     },
     {
@@ -31,8 +31,8 @@
     },
     {
       "file": "index.html",
-      "sha256": "ca7b9298979b84b8ba2377d685882a67f828365feb3e9c1d74c73421ee94269a",
-      "bytes": 7018,
+      "sha256": "a2ce2d09a1b73791b67270d444b1dd0ccb6d4f715ef8eed964d36768606de4e4",
+      "bytes": 8650,
       "matched": true
     },
     {
@@ -97,20 +97,20 @@
     },
     {
       "file": "stock.json",
-      "sha256": "c4a1eb190b0b68e9bdd137d350ce1fc646f78f2b2b265acf4e32765e320787f2",
-      "bytes": 2121,
+      "sha256": "a026cca6500332c1bbb4934648b51cfe108d8219db76d079b2a55e76574e2d38",
+      "bytes": 2615,
       "matched": true
     },
     {
       "file": "update.py",
-      "sha256": "9ffc38140d1fa07a9b4cab5d28ef871882a4a46d4bf4a37308f16d666721d062",
-      "bytes": 8618,
+      "sha256": "61bce2ad40f5790985ea691e4fdf91038f27c19d84cf9d0fb6eb74add44df92b",
+      "bytes": 9502,
       "matched": true
     },
     {
       "file": "validation.json",
-      "sha256": "36dde17494fabb76628e7885d3803edf3bd5f306237f00b7fb5a6661f96728b1",
-      "bytes": 854,
+      "sha256": "c48f3ea1e9ed18c7e2ee27206024e8abfe7ea6f88834bccec0d54874be34e90a",
+      "bytes": 969,
       "matched": true
     },
     {
