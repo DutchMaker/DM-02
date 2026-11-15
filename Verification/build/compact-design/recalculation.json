@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "engine": "LibreOffice 26.8.3 aarch64, isolated read-only temporary image",
+  "engine_image_sha256": "de943203795e5057785f65515063e2db5eb60b0bb6d8e2534fec59e5cc5fb988",
+  "total_formulas": 46,
+  "total_errors": 0,
+  "prior_attempts": [
+    "Skill recalculator initially returned soffice not found.",
+    "Installed Excel did not respond to recalculation AppleEvents; no Excel result was accepted."
+  ]
+}

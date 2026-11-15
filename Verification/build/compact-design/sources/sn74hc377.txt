@@ -1,0 +1,1637 @@
+
+--- PDF page 1 ---
+                                                                                                                 SN54HC377, SN74HC377
+                                                                                                SCLS307D – JANUARY 1996 – REVISED MAY 2022
+                         SNx4HC377 Octal D-Type Flip-Flops With Clock Enable
+
+1 Features                                                                3 Description
+•   Wide operating voltage range of 2 V to 6 V                            These  devices  are  positive-edge-triggered  octal  D-
+•   Outputs can drive up to 10 LSTTL loads                                type   flip-flops   with   an   enable   input.   The   ’HC377
+•   Low power consumption, 80-µA max ICC                                  devices are similar to the ’HC273 devices, but feature
+•   Typical tpd = 12 ns                                                   a  latched  clock-enable  (CLKEN)  input  instead  of  a
+•   ±4-mA output drive at 5 V                                             common clear.
+•   Low input current of 1 µA max                                                              Device Information
+•   Eight flip-flops with single-rail outputs                             PART NUMBER            PACKAGE(1)       BODY SIZE (NOM)
+•   Clock enable latched to avoid false clocking
+                                                                          SN74HC377DW            SOIC (20)        12.80 mm × 7.50 mm
+2 Applications                                                            SN74HC377N             PDIP (20)        25.40 mm × 6.35 mm
+•   Buffer/storage registers                                              SN74HC377NS            SO (20)          15.00 mm × 5.30 mm
+•   Shift registers                                                       SN54HC377J             CDIP (20)        26.92 mm × 6.92 mm
+•   Pattern generators                                                    SNJ54HC377FK           LCCC (20)        8.89 mm × 8.45 mm
+
+
+                                                                          (1)   For all available packages, see the orderable addendum at
+                                                                                the end of the data sheet.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     Functional Block Diagram
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications,
+      intellectual property matters and other important disclaimers. PRODUCTION DATA.
+
+--- PDF page 2 ---
+SN54HC377, SN74HC377
+SCLS307D – JANUARY 1996 – REVISED MAY 2022                                                                                                                            www.ti.com
+
+                                                                         Table of Contents
+
+1 Features............................................................................1          8.1 Overview.....................................................................8
+2 Applications.....................................................................   1          8.2 Functional Block Diagram...........................................8
+3 Description.......................................................................1            8.3 Device Functional Modes............................................9
+4 Revision History..............................................................      2       9 Power Supply Recommendations................................10
+5 Pin Configuration and Functions...................................3                         10 Layout...........................................................................10
+6 Specifications..................................................................    4          10.1 Layout Guidelines...................................................       10
+    6.1 Absolute Maximum Ratings........................................(1)           4       11 Device and Documentation Support..........................11
+    6.2 Recommended Operating Conditions                          .....................4         11.1 Documentation Support...........................................11
+    6.3 Thermal Information....................................................4                 11.2 Receiving Notification of Documentation Updates..                           11
+    6.4 Electrical Characteristics.............................................5                 11.3 Support Resources..................................................11
+    6.5 Timing Requirements..................................................5                   11.4 Trademarks.............................................................     11
+    6.6 Switching Characteristics ...........................................6                   11.5 Electrostatic Discharge Caution..............................               11
+    6.7 Operating Characteristics...........................................          6          11.6 Glossary..................................................................  11
+7 Parameter Measurement Information............................7                              12 Mechanical, Packaging, and Orderable
+8 Detailed Description........................................................8                  Information....................................................................  11
+
+
+4 Revision History
+NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+Changes from Revision C (January 2022) to Revision D (May 2022)                                                                                                             Page
+•     Junction-to-ambient thermal resistance values increased. DW was 58 is now 109.1, N was 69 is now 84.6,
+      NS was 60 is now 113.4......................................................................................................................................4
+
+Changes from Revision B (January 2003) to Revision C (January 2022)                                                                                                         Page
+•     Updated the numbering, formatting, tables, figures, and cross-references throughout the document to reflect
+      modern data sheet standards.............................................................................................................................1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2        Submit Document Feedback                                                                                               Copyright © 2022 Texas Instruments Incorporated
+
+                                                            Product Folder Links: SN54HC377 SN74HC377
+
+--- PDF page 3 ---
+                                                                                                            SN54HC377, SN74HC377
+www.ti.com                                                                                  SCLS307D – JANUARY 1996 – REVISED MAY 2022
+
+5 Pin Configuration and Functions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   J, DW, N, or NS package
+                20-Pin CDIP, SOIC, PDIP, SO                                                    FK package
+                            Top View                                                          20-Pin LCCC
+                                                                                                 Top View
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2022 Texas Instruments Incorporated                                                          Submit Document Feedback         3
+
+                                             Product Folder Links: SN54HC377 SN74HC377
+
+--- PDF page 4 ---
+SN54HC377, SN74HC377
+SCLS307D – JANUARY 1996 – REVISED MAY 2022                                                                                                         www.ti.com
+
+6 Specifications
+6.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted)(1)
+                                                                                                                           MIN              MAX        UNIT
+ VCC                         Supply voltage range                                                                          -0.5                  7       V
+
+                                                   (2)
+ IIK                         Input clamp current                    (VI < 0 or VI > VCC)                                                      ±20       mA
+
+                                                     (2)
+ IOK                         Output clamp current                   (VO < 0 or VO > VCC)                                                      ±20       mA
+ IO                          Continuous output current              (VO = 0 to VCC)                                                           ±25       mA
+                             Continuous current through VCC or GND                                                                            ±50       mA
+ TJ                          Junction temperature                                                                                             150       °C
+ Tstg                        Storage temperature                                                                            -65               150       °C
+
+(1)    Stresses beyond those listed under absolute maximum ratings may cause permanent damage to the device. These are stress ratings
+       only and functional operation of the device at these or any other conditions beyond those indicated under recommended operating
+       conditions is not implied. Exposure to absolute-maximum-rated conditions for extended periods may affect device reliability.
+(2)    The input and output voltage ratings may be exceeded if the input and output current ratings are observed.
+6.2 Recommended Operating Conditions(1)
+
+                                                                                               SN54HC377                        SN74HC377                UNIT
+                                                                                           MIN       NOM        MAX         MIN       NOM        MAX
+ VCC         Supply voltage                                                                    2          5          6          2          5         6     V
+                                                       VCC = 2 V                            1.5                              1.5
+ VIH         High-level input voltage                  VCC = 4.5 V                         3.15                             3.15                           V
+                                                       VCC = 6 V                            4.2                              4.2
+                                                       VCC = 2 V                                                  0.5                              0.5
+ VIL         Low-level input voltage                   VCC = 4.5 V                                               1.35                             1.35     V
+                                                       VCC = 6 V                                                  1.8                              1.8
+ VI          Input voltage                                                                     0                 VCC            0                 VCC      V
+ VO          Output voltage                                                                    0                 VCC            0                 VCC      V
+                                                       VCC = 2 V                                                1000                             1000
+ tt          Input transition rise/fall time           VCC = 4.5 V                                                500                              500     ns
+                                                       VCC = 6 V                                                  400                              400
+ TA          Operating free-air temperature                                                – 55                   125       – 40                    85     °C
+
+(1)    All unused inputs of the device must be held at VCC or GND to ensure proper device operation. Refer to the TI application report
+       Implications of Slow or Floating SMOS Inputs, literature number SCBA004.
+
+6.3 Thermal Information
+                                                                          DW (SOIC)               N (PDIP)               NS (SO)
+ THERMAL METRIC                                                             20 PINS                20 PINS               20 PINS                  UNIT
+
+                                                                 (1)
+ RθJA               Junction-to-ambient thermal resistance                   109.1                   84.6                  113.4                  °C/W
+ RθJC(top)          Junction-to-case (top) thermal resistance                  76                    72.5                   78.6                  °C/W
+ RθJB               Junction-to-board thermal resistance                      77.6                   65.3                   78.4                  °C/W
+ ψJT                Junction-to-top characterization                          51.5                   55.3                   47.1                  °C/W
+                    parameter
+ ψJB                Junction-to-top characterization                          77.1                   65.2                   78.1                  °C/W
+                    parameter
+
+
+
+
+
+
+
+4       Submit Document Feedback                                                                                  Copyright © 2022 Texas Instruments Incorporated
+
+                                                     Product Folder Links: SN54HC377 SN74HC377
+
+--- PDF page 5 ---
+                                                                                                                         SN54HC377, SN74HC377
+www.ti.com                                                                                             SCLS307D – JANUARY 1996 – REVISED MAY 2022
+6.3 Thermal Information (continued)
+                                                                      DW (SOIC)               N (PDIP)              NS (SO)
+ THERMAL METRIC                                                         20 PINS               20 PINS               20 PINS                UNIT
+ RθJC(bot)         Junction-to-case (bottom) thermal                       N/A                  N/A                   N/A                  °C/W
+                   resistance
+
+(1)    For more information about traditional and new thermal metrics, see the Semiconductor and IC package thermal metrics application
+       report.
+
+6.4 Electrical Characteristics
+
+                                           (1)                          TA = 25°C                  SN74HC377               SN74HC377
+ PARAMETER           TEST CONDITIONS              VCC (V)         MIN         TYP        MAX         MIN        MAX          MIN       MAX      UNIT
+
+                                                     2             1.9      1.998                     1.9                     1.9
+                   IOH = –20 μA                     4.5            4.4      4.499                     4.4                     4.4
+ VOH                                                 6             5.9      5.999                     5.9                     5.9                 V
+                   IOH = –4 mA                      4.5           3.98         4.3                    3.7                   3.84
+                   IOH = – 5.2 mA                    6            5.48         5.8                    5.2                   5.34
+                                                     2                      0.002          0.1                    0.1                    0.1
+                   IOL = 20 μA                      4.5                     0.001          0.1                    0.1                    0.1
+ VOL                                                 6                      0.001          0.1                    0.1                    0.1      V
+                   IOL = 4 mA                       4.5                       0.17       0.26                     0.4                   0.33
+                   IOL = 5.2 mA                      6                        0.15       0.26                     0.4                   0.33
+ II                VI = VCC or 0                     6                        ±0.1       ±100                  ±1000                  ±1000       nA
+ ICC               VI = VCC or 0. IO = 0             6                                       8                   160                      80      μA
+ Ci                                                2 to 6                        3         10                      10                     10      pF
+
+(1)    VI = VIH or VIL, unless otherwise noted.
+
+6.5 Timing Requirements
+                                                                            V           TA = 25°C          SN54HC377           SN74HC377          UNIT
+                                                                             CC         MIN      MAX         MIN      MAX        MIN      MAX
+
+                                                                             2                       5                    3                   4
+ fclock    Clock frequency                                                  4.5                     25                   16                  20   MHz
+                                                                             6                      29                   19                  23
+                                                                             2          100                  150                  125
+ tW        Pulse duration, CLK high or low                                  4.5           20                  30                   25              ns
+                                                                             6            17                  25                   21
+                                                                             2          100                  150                  125
+                                            D                               4.5           20                  30                   25
+ t         Setup time, data before                                           6            17                  25                   21              ns
+  su       CLK↑
+                                                                             2          100                  150                  125
+                                            CLKEN high or low               4.5           20                  30                   25
+                                                                             6            17                  25                   21
+                                                                             2             5                    5                   5
+ t         Hold time, data after LE↑        CLKEN inactive or active,       4.5            5                    5                   5              ns
+  h                                         data
+                                                                             6             5                    5                   5
+
+
+
+
+
+
+
+
+
+
+Copyright © 2022 Texas Instruments Incorporated                                                                      Submit Document Feedback             5
+
+                                                   Product Folder Links: SN54HC377 SN74HC377
+
+--- PDF page 6 ---
+SN54HC377, SN74HC377
+SCLS307D – JANUARY 1996 – REVISED MAY 2022                                                                                           www.ti.com
+
+6.6 Switching Characteristics
+over recommended operating free-air temperature range, CL = 50 pF (unless otherwise noted) See Parameter Measurement
+Information
+ PARAM       FROM (INPUT)         TO (OUTPUT)        V    (V)           TA = 25°C                SN54HC377            SN74HC377          UNIT
+  ETER                                                 CC           MIN       TYP      MAX         MIN      MAX        MIN       MAX
+
+                                                        2              5        11                    3                   4
+ fmax                                                  4.5           25         54                  16                   20              MHz
+                                                        6            29         64                  19                   23
+                                                        2                       56       160                 240                  200
+ tpd       CLK                          Any            4.5                      15        32                   48                  40     ns
+                                                        6                       12        27                   41                  34
+                                                        2                       38        75                 110                   95
+ tt                                     Any            4.5                       8        15                   22                  19     ns
+                                                        6                        6        13                   19                  16
+
+
+6.7 Operating Characteristics
+TA = 25°C
+                                                                                       Test Conditions                    TYP           UNIT
+ Cpd               Power dissipation capacitance per flip-flop                             No load                         30            pF
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6      Submit Document Feedback                                                                        Copyright © 2022 Texas Instruments Incorporated
+
+                                                Product Folder Links: SN54HC377 SN74HC377
+
+--- PDF page 7 ---
+                                                                                                                SN54HC377, SN74HC377
+www.ti.com                                                                                     SCLS307D – JANUARY 1996 – REVISED MAY 2022
+
+7 Parameter Measurement Information
+Phase  relationships  between  waveforms  were  chosen  arbitrarily.  All  input  pulses  are  supplied  by  generators
+having the following characteristics: PRR ≤ 1 MHz, ZO = 50 Ω, tt < 2.5 ns.
+For clock inputs, fmax is measured when the input duty cycle is 50%.
+The outputs are measured one at a time with one input transition per measurement.
+
+
+
+
+
+
+
+
+
+
+
+
+
+      (1) CL includes probe and test-fixture capacitance.
+                                        Figure 7-1. Load Circuit for Push-Pull Outputs
+
+
+
+
+
+
+
+   Figure 7-2. Voltage Waveforms, Standard CMOS
+                     Inputs Pulse Duration
+
+
+                                                                          Figure 7-3. Voltage Waveforms, Standard CMOS
+                                                                                      Inputs Setup and Hold Times
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                            (1) The greater between tr and tf is the same as tt.
+                                                                         Figure 7-5. Voltage Waveforms, Input and Output
+                                                                             Transition Times for Standard CMOS Inputs
+
+      (1) The greater between tPLH and tPHL is the same as tpd.
+      Figure 7-4. Voltage Waveforms, Propagation
+             Delays for Standard CMOS Inputs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2022 Texas Instruments Incorporated                                                             Submit Document Feedback          7
+
+                                               Product Folder Links: SN54HC377 SN74HC377
+
+--- PDF page 8 ---
+SN54HC377, SN74HC377
+SCLS307D – JANUARY 1996 – REVISED MAY 2022                                                                                        www.ti.com
+
+8 Detailed Description
+8.1 Overview
+These devices are positive-edge-triggered octal D-type flip-flops with an enable input. The ’HC377 devices are
+similar to the ’HC273 devices, but feature a latched clock-enable (CLKEN) input instead of a common clear.
+Information at the data (D) inputs meeting the setup time requirements is transferred to the Q outputs on the
+positive-going edge of the clock (CLK) pulse, if CLKEN is low. Clock triggering occurs at a particular voltage level
+and is not directly related to the transition time of the positive-going pulse. When CLK is at either the high or low
+level, the D input has no effect at the output. These devices are designed to prevent false clocking by transitions
+at CLKEN.
+8.2 Functional Block Diagram
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8      Submit Document Feedback                                                                     Copyright © 2022 Texas Instruments Incorporated
+
+                                               Product Folder Links: SN54HC377 SN74HC377
+
+--- PDF page 9 ---
+                                                                                                                SN54HC377, SN74HC377
+www.ti.com                                                                                     SCLS307D – JANUARY 1996 – REVISED MAY 2022
+
+8.3 Device Functional Modes
+                                                             Function Table
+                                                            (Each Flip-Flop)
+                                                        INPUTS                             OUTPUT
+                                       CLKEN          CLK                D                    Q
+
+                                          H             X                X                    Q0
+                                          L             ↑                H                     H
+                                          L             ↑                 L                    L
+                                          X             L                X                    Q0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2022 Texas Instruments Incorporated                                                             Submit Document Feedback          9
+
+                                               Product Folder Links: SN54HC377 SN74HC377
+
+--- PDF page 10 ---
+SN54HC377, SN74HC377
+SCLS307D – JANUARY 1996 – REVISED MAY 2022                                                                                       www.ti.com
+
+9 Power Supply Recommendations
+The power supply can be any voltage between the minimum and maximum supply voltage rating located in the
+Recommended Operating Conditions. Each VCC terminal should have a good bypass capacitor to prevent power
+disturbance. A 0.1-μF capacitor is recommended for this device. It is acceptable to parallel multiple bypass caps
+to  reject  different  frequencies  of  noise.  The  0.1-μF  and  1-μF  capacitors  are  commonly  used  in  parallel.  The
+bypass capacitor should be installed as close to the power terminal as possible for best results.
+10 Layout
+10.1 Layout Guidelines
+When  using  multiple-input  and  multiple-channel  logic  devices  inputs  must  not  ever  be  left  floating.  In  many
+cases, functions or parts of functions of digital logic devices are unused; for example, when only two inputs of a
+triple-input AND gate are used or only 3 of the 4 buffer gates are used. Such unused input pins must not be left
+unconnected because the undefined voltages at the outside connections result in undefined operational states.
+All unused inputs of digital logic devices must be connected to a logic high or logic low voltage, as defined by the
+input voltage specifications, to prevent them from floating. The logic level that must be applied to any particular
+unused input depends on the function of the device. Generally, the inputs are tied to GND or VCC, whichever
+makes more sense for the logic function or is more convenient.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10     Submit Document Feedback                                                                     Copyright © 2022 Texas Instruments Incorporated
+
+                                               Product Folder Links: SN54HC377 SN74HC377
+
+--- PDF page 11 ---
+                                                                                                                  SN54HC377, SN74HC377
+www.ti.com                                                                                       SCLS307D – JANUARY 1996 – REVISED MAY 2022
+
+11 Device and Documentation Support
+TI offers an extensive line of development tools. Tools and software to evaluate the performance of the device,
+generate code, and develop solutions are listed below.
+11.1 Documentation Support
+11.1.1 Related Documentation
+
+11.2 Receiving Notification of Documentation Updates
+To  receive  notification  of  documentation  updates,  navigate  to  the  device  product  folder  on                     ti.com.  Click  on
+Subscribe to updates to register and receive a weekly digest of any product information that has changed. For
+change details, review the revision history included in any revised document.
+11.3 Support Resources
+TI E2E™ support forums are an engineer's go-to source for fast, verified answers and design help — straight
+from the experts. Search existing answers or ask your own question to get the quick design help you need.
+Linked content is provided "AS IS" by the respective contributors. They do not constitute TI specifications and do
+not necessarily reflect TI's views; see TI's Terms of Use.
+11.4 Trademarks
+TI E2E™ is a trademark of Texas Instruments.
+All trademarks are the property of their respective owners.
+11.5 Electrostatic Discharge Caution
+                   This integrated circuit can be damaged by ESD. Texas Instruments recommends that all integrated circuits be handled
+                   with appropriate precautions. Failure to observe proper handling and installation procedures can cause damage.
+                   ESD damage can range from subtle performance degradation to complete device failure. Precision integrated circuits may
+                   be more susceptible to damage because very small parametric changes could cause the device not to meet its published
+                   specifications.
+
+11.6 Glossary
+
+ TI Glossary            This glossary lists and explains terms, acronyms, and definitions.
+12 Mechanical, Packaging, and Orderable Information
+The  following  pages  include  mechanical,  packaging,  and  orderable  information.  This  information  is  the  most
+current data available for the designated devices. This data is subject to change without notice and revision of
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2022 Texas Instruments Incorporated                                                               Submit Document Feedback          11
+
+                                               Product Folder Links: SN54HC377 SN74HC377
+
+--- PDF page 12 ---
+                                                                                                                                                                        PACKAGE OPTION ADDENDUM
+
+
+
+    www.ti.com                                                                                                                                                                                                           18-Sep-2026
+
+
+
+PACKAGING INFORMATION
+
+   Orderable part number            Status     Material type       Package | Pins        Package qty | Carrier        RoHS              Lead finish/             MSL rating/              Op temp (°C)               Part marking
+                                      (1)            (2)                                                                (3)             Ball material            Peak reflow                                               (6)
+                                                                                                                                              (4)                      (5)
+       5962-87807012A               Active       Production        LCCC (FK) | 20              55 | TUBE                No                 SNPB                N/A for Pkg Type             -55 to 125                   5962-
+                                                                                                                                                                                                                      87807012A
+                                                                                                                                                                                                                       SNJ54HC
+                                                                                                                                                                                                                         377FK
+       5962-8780701RA               Active       Production         CDIP (J) | 20              20 | TUBE                No                 SNPB                N/A for Pkg Type             -55 to 125             5962-8780701RA
+                                                                                                                                                                                                                     SNJ54HC377J
+         SN54HC377J                 Active       Production         CDIP (J) | 20              20 | TUBE                No                 SNPB                N/A for Pkg Type             -55 to 125               SN54HC377J
+        SN54HC377J.A                Active       Production         CDIP (J) | 20              20 | TUBE                No                 SNPB                N/A for Pkg Type             -55 to 125               SN54HC377J
+        SN74HC377DW                Obsolete      Production        SOIC (DW) | 20                   -                    -                 Call TI                  Call TI                 -40 to 85                    HC377
+       SN74HC377DWR                 Active       Production        SOIC (DW) | 20         2000 | LARGE T&R              Yes               NIPDAU             Level-1-260C-UNLIM             -40 to 85                    HC377
+      SN74HC377DWR.A                Active       Production        SOIC (DW) | 20         2000 | LARGE T&R              Yes               NIPDAU             Level-1-260C-UNLIM             -40 to 85                    HC377
+         SN74HC377N                 Active       Production         PDIP (N) | 20              20 | TUBE                Yes               NIPDAU               N/A for Pkg Type             -40 to 85                SN74HC377N
+        SN74HC377N.A                Active       Production         PDIP (N) | 20              20 | TUBE                Yes               NIPDAU               N/A for Pkg Type             -40 to 85                SN74HC377N
+       SN74HC377NE4                 Active       Production         PDIP (N) | 20              20 | TUBE                Yes               NIPDAU               N/A for Pkg Type             -40 to 85                SN74HC377N
+       SN74HC377NSR                 Active       Production         SOP (NS) | 20         2000 | LARGE T&R              Yes               NIPDAU             Level-1-260C-UNLIM             -40 to 85                    HC377
+      SN74HC377NSR.A                Active       Production         SOP (NS) | 20         2000 | LARGE T&R              Yes               NIPDAU             Level-1-260C-UNLIM             -40 to 85                    HC377
+        SNJ54HC377FK                Active       Production        LCCC (FK) | 20              55 | TUBE                No                 SNPB                N/A for Pkg Type             -55 to 125                   5962-
+                                                                                                                                                                                                                      87807012A
+                                                                                                                                                                                                                       SNJ54HC
+                                                                                                                                                                                                                         377FK
+      SNJ54HC377FK.A                Active       Production        LCCC (FK) | 20              55 | TUBE                No                 SNPB                N/A for Pkg Type             -55 to 125                   5962-
+                                                                                                                                                                                                                      87807012A
+                                                                                                                                                                                                                       SNJ54HC
+                                                                                                                                                                                                                         377FK
+         SNJ54HC377J                Active       Production         CDIP (J) | 20              20 | TUBE                No                 SNPB                N/A for Pkg Type             -55 to 125             5962-8780701RA
+                                                                                                                                                                                                                     SNJ54HC377J
+       SNJ54HC377J.A                Active       Production         CDIP (J) | 20              20 | TUBE                No                 SNPB                N/A for Pkg Type             -55 to 125             5962-8780701RA
+                                                                                                                                                                                                                     SNJ54HC377J
+
+(1) Status:  For more details on status, see our product life cycle.
+
+
+
+
+
+
+                                                                                                           Addendum-Page 1
+
+--- PDF page 13 ---
+                                                                                                                                                                                                     PACKAGE OPTION ADDENDUM
+
+
+
+    www.ti.com                                                                                                                                                                                                                                                  18-Sep-2026
+
+
+
+
+
+
+
+(2) Material type:  When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+
+(3) RoHS values:  Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+
+(4) Lead finish/Ball material:  Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+
+(5) MSL rating/Peak reflow:  The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+
+(6) Part marking:  There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+
+ OTHER QUALIFIED VERSIONS OF SN54HC377, SN74HC377 :
+• Catalog : SN74HC377
+• Military : SN54HC377
+
+ NOTE: Qualified Version Definitions:
+         • Catalog - TI's standard catalog product
+         • Military - QML certified for Military and Defense Applications
+
+
+
+
+
+
+
+                                                                                                                               Addendum-Page 2
+
+--- PDF page 14 ---
+                                                                         PACKAGE MATERIALS INFORMATION
+
+
+
+
+
+
+www.ti.com                                                                                                                              10-Aug-2026
+
+TAPE AND REEL INFORMATION
+
+
+       REEL DIMENSIONS                                                           TAPE DIMENSIONS
+                                                                              K0      P1
+
+
+
+                                                                                                           B0  W
+
+                                         Reel
+                                      Diameter
+                                                                           Cavity         A0
+
+                                                         A0    Dimension designed to accommodate the component width
+                                                         B0    Dimension designed to accommodate the component length
+                                                         K0    Dimension designed to accommodate the component thickness
+                                                          W    Overall width of the carrier tape
+                                                          P1   Pitch between successive cavity centers
+
+
+                                        Reel Width (W1)
+                              QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+
+                                                                                           Sprocket Holes
+
+
+                                                Q1    Q2        Q1    Q2
+
+                                                Q3    Q4        Q3    Q4               User Direction of Feed
+
+
+
+                                                        Pocket Quadrants
+
+
+*All dimensions are nominal
+          Device            Package    Package    Pins     SPQ       Reel       Reel      A0       B0      K0      P1       W       Pin1
+                              Type     Drawing                     Diameter    Width     (mm)    (mm)     (mm)    (mm)    (mm)    Quadrant
+                                                                     (mm)     W1 (mm)
+    SN74HC377DWR              SOIC        DW       20     2000       330.0      24.4      10.8    13.3     2.7    12.0     24.0      Q1
+     SN74HC377NSR              SOP        NS       20     2000       330.0      24.4      8.4     13.0     2.5    12.0     24.0      Q1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                Pack Materials-Page 1
+
+--- PDF page 15 ---
+                                                                  PACKAGE MATERIALS INFORMATION
+
+
+
+
+
+
+www.ti.com                                                                                                                  10-Aug-2026
+
+
+TAPE AND REEL BOX DIMENSIONS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                  Width (mm)  H
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 W                                            L
+
+
+
+
+
+
+
+*All dimensions are nominal
+         Device             Package Type     Package Drawing     Pins      SPQ      Length (mm)    Width (mm)     Height (mm)
+    SN74HC377DWR                 SOIC               DW            20      2000         356.0          356.0           45.0
+     SN74HC377NSR                SOP                 NS           20      2000         356.0          356.0           45.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                          Pack Materials-Page 2
+
+--- PDF page 16 ---
+                                                                  PACKAGE MATERIALS INFORMATION
+
+
+
+
+
+
+www.ti.com                                                                                                                 10-Aug-2026
+
+TUBE
+
+
+      T - Tube
+       height                                                      L - Tube length
+
+
+
+                W - Tube
+                   width
+
+
+        B - Alignment groove width
+
+
+
+*All dimensions are nominal
+         Device             Package Name     Package Type      Pins       SPQ       L (mm)    W (mm)      T (µm)       B (mm)
+     5962-87807012A               FK             LCCC           20         55       506.98      12.06      2030          NA
+      SN74HC377N                  N              PDIP           20         20        506        13.97      11230        4.32
+     SN74HC377N.A                 N              PDIP           20         20        506        13.97      11230        4.32
+     SN74HC377NE4                 N              PDIP           20         20        506        13.97      11230        4.32
+     SNJ54HC377FK                 FK             LCCC           20         55       506.98      12.06      2030          NA
+    SNJ54HC377FK.A                FK             LCCC           20         55       506.98      12.06      2030          NA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                         Pack Materials-Page 3
+
+--- PDF page 17 ---
+
+
+--- PDF page 18 ---
+
+
+--- PDF page 19 ---
+                                                                         GENERIC PACKAGE VIEW
+FK 20                                                                          LCCC - 2.03 mm max height
+8.89 x 8.89, 1.27 mm pitch                                                           LEADLESS CERAMIC CHIP CARRIER
+
+
+
+                 This image is a representation of the package family, actual package may vary.
+                                Refer to the product data sheet for package details.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                              4229370\/A\
+
+
+
+
+                                                          www.ti.com
+
+--- PDF page 20 ---
+
+
+--- PDF page 21 ---
+                                                                                                                   PACKAGE OUTLINE
+DW0020A                                                                                                       SOIC - 2.65 mm max height
+
+
+
+
+
+
+
+
+
+                                                                             SCALE  1.200
+                                                                                                                                                            SOIC
+
+
+
+
+                                                                                                                                        C
+
+                                           10.63 TYP                                                              SEATING PLANE
+                                           9.97
+           A                                        PIN 1 ID                                                                      0.1  C
+                                                    AREA
+                                                                                          18X  1.27
+                  1                                                                                    20
+
+
+
+
+
+
+
+
+
+         13.0                                                                             2X
+         12.6                                                                           11.43
+       NOTE 3
+
+
+
+
+
+
+
+
+
+
+                 10
+                                                                           11
+                                                                                      20X 0.510.31                     2.65 MAX
+                     B                                  7.67.4                              0.25      C  A  B
+                                             NOTE 4
+
+
+
+
+                                                                                        0.33 TYP
+                                                                                        0.10
+
+
+                                                                                                   0.25
+                                        SEE DETAIL A                                    GAGE PLANE
+
+
+
+                                                                                                                                    1.27                   0.3
+                                                                                               0  - 8                               0.40                   0.1
+
+                                                                                                                                    DETAIL A
+                                                                                                                                      TYPICAL
+
+
+                                                                                                                                           4220724/A   05/2016
+
+NOTES:
+
+1. All linear dimensions are in millimeters. Dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed 0.15 mm per side.
+4. This dimension does not include interlead flash. Interlead flash shall not exceed 0.43 mm per side.
+5. Reference JEDEC registration MS-013.
+
+
+
+
+
+                                                                                www.ti.com
+
+--- PDF page 22 ---
+                                                                                    EXAMPLE BOARD LAYOUT
+DW0020A                                                                                       SOIC - 2.65 mm max height
+
+                                                                                                                                      SOIC
+
+
+
+
+
+
+                                 20X (2)                             SYMM
+
+                                           1
+                                                                                                    20
+
+                            20X (0.6)
+
+
+
+                               18X (1.27)
+
+
+
+                                                                                                        SYMM
+
+
+
+
+
+
+                              (R       )0.05
+                              TYP
+
+
+
+
+                                         10                                                                                           11
+
+
+                                                                      (9.3)
+
+                                                       LAND PATTERN EXAMPLE
+                                                                   SCALE:6X
+
+
+
+
+
+                 SOLDER MASK                          METAL             METAL UNDER                             SOLDER MASK
+                 OPENING                                                SOLDER MASK                             OPENING
+
+
+
+
+
+                                     0.07 MAX                                                  0.07 MIN
+                                     ALL AROUND                                                ALL AROUND
+
+                                NON SOLDER MASK                                               SOLDER MASK
+                                      DEFINED                                                    DEFINED
+
+                                                            SOLDER MASK DETAILS
+
+                                                                                                                       4220724/A   05/2016
+NOTES: (continued)
+
+6. Publication IPC-7351 may have alternate designs.
+7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+
+
+
+
+
+
+
+
+
+
+
+                                                                    www.ti.com
+
+--- PDF page 23 ---
+                                                                                        EXAMPLE STENCIL DESIGN
+DW0020A                                                                                             SOIC - 2.65 mm max height
+
+                                                                                                                                               SOIC
+
+
+
+
+
+
+
+
+                                     20X (2)                              SYMM
+
+                                              1
+                                                                                                           20
+
+                               20X (0.6)
+
+
+
+                                 18X (1.27)
+
+
+
+                                                                                                                SYMM
+
+
+
+
+
+
+
+
+
+
+
+
+                                             10                                                                                          11
+
+                                                                           (9.3)
+
+
+                                                           SOLDER PASTE EXAMPLE
+                                                         BASED ON 0.125 mm THICK STENCIL
+                                                                        SCALE:6X
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                4220724/A   05/2016
+NOTES: (continued)
+
+8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.
+9. Board assembly site may have different recommendations for stencil design.
+
+
+
+
+
+
+
+
+
+
+                                                                         www.ti.com
+
+--- PDF page 24 ---
+                                            IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS”
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale,                       TI’s General Quality Guidelines, or other applicable terms available either on
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+
+
+                                                    Copyright © 2026, Texas Instruments Incorporated
+                                                                     Last updated 10/2025

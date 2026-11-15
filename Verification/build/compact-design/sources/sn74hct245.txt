@@ -1,0 +1,2711 @@
+
+--- PDF page 1 ---
+                                                                                                              SN54HCT245, SN74HCT245
+                                                                                           SCLS020H – MARCH 1984 – REVISED DECEMBER 2022
+                      SNx4HCT245 Octal Bus Transceivers With 3-State Outputs
+
+1 Features                                                                3 Description
+•   Operating voltage range of 4.5 V to 5.5 V                             The      SNx4HCT245      octal      bus      transceivers
+•   High-Current 3-state outputs drive bus lines                          are       designed       for       asynchronous       two-way
+    directly or up to 15-LSTTL loads                                      communication   between   data   buses.   The   control-
+•   Low power consumption, 80-µA maximum ICC                              function   implementation   minimizes   external   timing
+•   Typical tpd = 14 ns                                                   requirements.
+•   ±6-mA output drive at 5 V                                             The  SNx4HCT245  devices  allow  data  transmission
+•   Low input current of 1 µA maximum                                     from the A bus to the B bus or from the B bus to the
+•   Inputs are TTL-voltage compatible                                     A bus, depending upon the logic level at the direction-
+2 Applications                                                            control (DIR) input. The output-enable ( OE) input can
+•   Factory Automation and Control                                        be  used  to  disable  the  device  so  that  the  buses  are
+•   Grid Infrastructure                                                   effectively isolated.
+•   Electronic Point of Sale                                                                    Device Information
+•   Multi-Function Printers                                                PART NUMBER            PACKAGE(1)            BODY SIZE (NOM)
+•   Motor Drives                                                                             J (CDIP, 20)             24.20 mm × 6.92 mm
+•   Storage                                                                SN54HCT245        FK (LCCC, 20)            8.89 mm × 8.89 mm
+•   Telecom Infrastructure                                                                   W (CFP, 20)              13.09 mm × 6.92 mm
+
+                                                                                             DW (SOIC, 20)            12.80 mm × 7.50 mm
+                                                                                             N (PDIP, 20)             24.33 mm × 6.35 mm
+                                                                           SN74HCT245        NS (SO, 20)              12.60 mm × 5.30 mm
+                                                                                             PW (TSSOP, 20)           6.50 mm × 4.40 mm
+                                                                                             DB (SSOP, 20)            7.80 mm × 7.20 mm
+                                                                                             DGS (VSSOP, 20)          5.10 mm × 3.00 mm
+
+                                                                          (1)   For all available packages, see the orderable addendum at
+                                                                                the end of the data sheet.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                  Logic Diagram (Positive Logic)
+
+
+
+
+
+
+
+
+
+
+
+
+      An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications,
+      intellectual property matters and other important disclaimers. PRODUCTION DATA.
+
+--- PDF page 2 ---
+SN54HCT245, SN74HCT245
+SCLS020H – MARCH 1984 – REVISED DECEMBER 2022                                                                                                                      www.ti.com
+
+                                                                       Table of Contents
+
+1 Features............................................................................1        8.3 Feature Description.....................................................9
+2 Applications..................................................................... 1          8.4 Device Functional Modes............................................9
+3 Description.......................................................................1       9 Application and Implementation..................................10
+4 Revision History..............................................................    2          9.1 Application Information.............................................       10
+5 Pin Configuration and Functions...................................3                          9.2 Typical Application....................................................    10
+6 Specifications..................................................................  4       10 Power Supply Recommendations..............................12
+    6.1 Absolute Maximum Ratings........................................            4       11 Layout...........................................................................12
+    6.2 ESD Ratings...............................................................  4          11.1 Layout Guidelines...................................................      12
+    6.3 Recommended Operating Conditions.........................4                             11.2 Layout Example......................................................      12
+    6.4 Thermal Information....................................................5            12 Device and Documentation Support..........................13
+    6.5 Electrical Characteristics.............................................5               12.1 Documentation Support..........................................           13
+    6.6 Switching Characteristics: CL = 50 pF........................               6          12.2 Related Links..........................................................   13
+    6.7 Switching Characteristics: CL = 150 pF......................                7          12.3 Receiving Notification of Documentation Updates..13
+    6.8 Operating Characteristics...........................................        7          12.4 Support Resources.................................................        13
+    6.9 Typical Characteristics................................................     7          12.5 Trademarks.............................................................13
+7 Parameter Measurement Information............................                     8          12.6 Electrostatic Discharge Caution..............................13
+8 Detailed Description........................................................9                12.7 Glossary..................................................................13
+    8.1 Overview.....................................................................9      13 Mechanical, Packaging, and Orderable
+    8.2 Functional Block Diagram...........................................         9          Information....................................................................13
+
+
+4 Revision History
+NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+
+Changes from Revision G (September 2022) to Revision H (December 2022)                                                                                                   Page
+•    Added DGS package information.......................................................................................................................                       1
+•    Added DGS package values in the Thermal Information table...........................................................................5
+
+
+Changes from Revision F (August 2016) to Revision G (September 2022)                                                                                                     Page
+•    Updated the numbering format for tables, figures and cross-references throughout the document...................1
+
+Changes from Revision E (August 2003) to Revision F (August 2016)                                                                                                        Page
+•    Deleted Ordering Information, see POA at the end of the datasheet.................................................................                                         1
+•    Added ESD Ratings table, Feature Description section, Device Functional Modes, Application and
+     Implementation section, Power Supply Recommendations section, Layout section, Device and
+     Documentation Support section, and Mechanical, Packaging, and Orderable Information section ..................                                                             1
+•    Updated values in the Thermal Information table...............................................................................................5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2       Submit Document Feedback                                                                                              Copyright © 2022 Texas Instruments Incorporated
+
+                                                         Product Folder Links: SN54HCT245 SN74HCT245
+
+--- PDF page 3 ---
+                                                                                                                    SN54HCT245, SN74HCT245
+www.ti.com                                                                                      SCLS020H – MARCH 1984 – REVISED DECEMBER 2022
+
+5 Pin Configuration and Functions
+
+
+
+
+
+
+
+
+
+
+
+
+     J, W, DB, DW, N, NS, PW or DGS Packages 20-                                        FK Package 20-Pin LCCC Top View
+    Pin CDIP, CFP, SSOP, SOIC, PDIP, SO, TSSOP or
+                          VSSOP Top View
+
+                                                                 Pin Functions
+               PIN                    TYPE(1)                                               DESCRIPTION
+ NO.                  NAME
+ 1                     DIR                I        Direction select. High = A to B, Low = B to A
+ 2                      A1              I/O        Channel 1 port A
+ 3                      A2              I/O        Channel 2 port A
+ 4                      A3              I/O        Channel 3 port A
+ 5                      A4              I/O        Channel 4 port A
+ 6                      A5              I/O        Channel 5 port A
+ 7                      A6              I/O        Channel 6 port A
+ 8                      A7              I/O        Channel 7 port A
+ 9                      A8              I/O        Channel 8 port A
+ 10                    GND               —         Ground
+ 11                     B8              O/I        Channel 8 port B
+ 12                     B7              O/I        Channel 7 port B
+ 13                     B6              O/I        Channel 6 port B
+ 14                     B5              O/I        Channel 5 port B
+ 15                     B4              O/I        Channel 4 port B
+ 16                     B3              O/I        Channel 3 port B
+ 17                     B2              O/I        Channel 2 port B
+ 18                     B1              O/I        Channel 1 port B
+ 19                     OE                I        Output enable, active low. High = all ports in high impedance mode, Low = all ports active
+ 20                    VCC               —         Power supply
+
+(1)    Signal Types: I = Input, O = Output, I/O = Input or Output
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2022 Texas Instruments Incorporated                                                                    Submit Document Feedback             3
+
+                                                Product Folder Links: SN54HCT245 SN74HCT245
+
+--- PDF page 4 ---
+SN54HCT245, SN74HCT245
+SCLS020H – MARCH 1984 – REVISED DECEMBER 2022                                                                                                      www.ti.com
+
+6 Specifications
+6.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted)(1)
+                                                                                                                      MIN           MAX             UNIT
+ VCC        Supply voltage                                                                                            –0.5            7               V
+ IIK        Input clamp current(2)                                     VI < 0 or VI > VCC                                           ±20              mA
+ IOK        Output clamp current(2)                                    VO < 0 or VO > VCC                                           ±20              mA
+
+ IO         Continuous output current                                  VO = 0 to VCC                                                ±35              mA
+            Continuous current through VCC or GND                                                                                   ±70              mA
+ TJ         Operating virtual junction temperature                                                                                  150               °C
+ Tstg       Storage temperature                                                                                       –65           150               °C
+
+(1)    Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress
+       ratings only, which do not imply functional operation of the device at these or any other conditions beyond those indicated under
+       Recommended Operating Conditions. Exposure to absolute-maximum-rated conditions for extended periods may affect device
+       reliability.
+(2)    The input and output voltage ratings may be exceeded if the input and output current ratings are observed.
+6.2 ESD Ratings
+
+                                                                                                                                     VALUE           UNIT
+                                               Human-body model (HBM), per ANSI/ESDA/JEDEC JS-001(1)                                 ±1500
+ V(ESD)      Electrostatic discharge           Charged-device model (CDM), per JEDEC specification JESD22-                           ±2000              V
+                                               C101(2)
+
+(1)    JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process.
+(2)    JEDEC document JEP157 states that 250-V CDM allows safe manufacturing with a standard ESD control process.
+6.3 Recommended Operating Conditions
+over operating free-air temperature range (unless otherwise noted)(1)
+
+                                                                                                                         MIN      NOM         MAX      UNIT
+ VCC      Supply voltage                                                                                                  4.5          5        5.5      V
+ VIH      High-level input voltage                      VCC = 4.5 V to 5.5 V                                                 2                           V
+ VIL      Low-level input voltage                       VCC = 4.5 V to 5.5 V                                                                    0.8      V
+ VI       Input voltage                                                                                                      0                 VCC       V
+ VO       Output voltage                                                                                                     0                 VCC       V
+ Δt/Δv    Input transition rise and fall time                                                                                                   500      ns
+ T        Operating free-air temperature                SN54HCT245                                                        –55                   125      °C
+   A                                                    SN74HCT245                                                        –40                    85
+
+
+(1)    All unused inputs of the device must be held at VCC or GND to ensure proper device operation. See the TI application report,
+       Implications of Slow or Floating CMOS Inputs (SCBA004).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4       Submit Document Feedback                                                                                 Copyright © 2022 Texas Instruments Incorporated
+
+                                                   Product Folder Links: SN54HCT245 SN74HCT245
+
+--- PDF page 5 ---
+                                                                                                                      SN54HCT245, SN74HCT245
+www.ti.com                                                                                       SCLS020H – MARCH 1984 – REVISED DECEMBER 2022
+
+6.4 Thermal Information
+
+                                                                                              SNx4HCT245
+                                                                J        W         FK       DB        DW         N       NS       PW     DGS
+                  THERMAL METRIC(1)                          (CDIP)    (CFP)    (LCCC)    (SSOP)    (SOIC)    (PDIP)    (SO)     (TSS    (VSS     UNIT
+                                                                                                                                  OP)    OP)
+                                                               20        20        20        20        20       20        20      20     20
+                                                              PINS     PINS      PINS      PINS      PINS      PINS     PINS     PINS    PINS
+ RθJA        Junction-to-ambient thermal resistance            —         —         —        84.6      70.4     43.4      68.9    94.9    118.4    °C/W
+ RθJC(top)   Junction-to-case (top) thermal resistance        38.7      60.8      37.1      44.3      36.5     29.5      34.7    30.2     57.7    °C/W
+ RθJB        Junction-to-board thermal resistance             49.8     100.4      36.1      40.2      38.1     24.3      36.4    45.7     73.1    °C/W
+ ψJT         Junction-to-top characterization parameter        —         —         —        11.1      11.3      15       11.6     1.5     5.7     °C/W
+ ψ           Junction-to-board characterization                —         —         —        39.7      37.7     24.2       36     45.1     72.7    °C/W
+   JB        parameter
+
+ R           Junction-to-case (bottom) thermal                11.5      8.5       4.3        —         —        —         —       —        —      °C/W
+   θJC(bot)  resistance
+
+(1)    For more information about traditional and new thermal metrics, see the Semiconductor and IC Package Thermal Metrics application
+       report.
+6.5 Electrical Characteristics
+
+over recommended operating free-air temperature range (unless otherwise noted)
+                       PARAMETER                                           TEST CONDITIONS                      VCC       MIN     TYP     MAX     UNIT
+                                                                                     I   =   TA = 25°C                     4.4   4.499
+                                                                                      OH
+                                                                                     –20     SN54HCT245                    4.4
+                                                                                     µA      SN74HCT245                    4.4
+ VOH         High-Level Output Voltage                        VI = VIH or VIL                T   = 25°C        4.5 V      3.98      4.3             V
+                                                                                               A
+                                                                                     IOH =   SN54HCT245                    3.7
+                                                                                     –6 mA
+                                                                                             SN74HCT245                   3.84
+                                                                                             TA = 25°C                           0.001      0.1
+                                                                                     IOL =   SN54HCT245                                     0.1
+                                                                                     20 µA
+ V           Low-Level Output Voltage                         V   = V   or V                 SN74HCT245        4.5 V                        0.1     V
+   OL                                                           I    IH     IL
+                                                                                             TA = 25°C                            0.17     0.26
+                                                                                     IOL =   SN54HCT245                                     0.4
+                                                                                     6 mA
+                                                                                             SN74HCT245                                    0.33
+                                                                                     TA = 25°C                                    ±0.1    ±100
+ I           Input Current                          DIR or    V   = V    or 0        SN54HCT245                5.5 V                     ±1000     nA
+  I                                                 OE          I    CC
+                                                                                     SN74HCT245                                          ±1000
+                                                                                     TA = 25°C                                   ±0.01     ±0.5
+ IOZ         Off-State Output Current               A or B    VO = VCC or 0          SN54HCT245                5.5 V                       ±10     µA
+                                                                                     SN74HCT245                                              ±5
+                                                                                             TA = 25°C                                        8
+ ICC         Supply Current                                   VI = VCC or 0          IO = 0  SN54HCT245        5.5 V                       160     µA
+                                                                                             SN74HCT245                                      80
+                                                              One input at 0.5 V     TA = 25°C                                      1.4     2.4
+ ∆I    (1)   Supply-Current Change                            or 2.4 V,              SN54HCT245                5.5 V                          3    mA
+   CC                                                         Other inputs at 0 or
+                                                              VCC                    SN74HCT245                                             2.9
+
+
+
+
+
+
+
+
+
+
+Copyright © 2022 Texas Instruments Incorporated                                                                      Submit Document Feedback             5
+
+                                                 Product Folder Links: SN54HCT245 SN74HCT245
+
+--- PDF page 6 ---
+SN54HCT245, SN74HCT245
+SCLS020H – MARCH 1984 – REVISED DECEMBER 2022                                                                                           www.ti.com
+
+over recommended operating free-air temperature range (unless otherwise noted)
+                       PARAMETER                                         TEST CONDITIONS                     VCC      MIN     TYP     MAX    UNIT
+                                                             TA = 25°C                                      4.5 V                 3      10
+ C (2)       Input Capacitance                    DIR or     SN54HCT245                                       to                         10    pF
+   i                                              OE
+                                                             SN74HCT245                                     5.5 V                        10
+
+
+(1)    This is the increase in supply current for each input that is at one of the specified TTL voltage levels, rather than 0 V or VCC.
+(2)    Parameter Ci does not apply to transceiver I/O ports.
+6.6 Switching Characteristics: CL = 50 pF
+
+over recommended operating free-air temperature range, CL = 50 pF (unless otherwise noted) (see Figure 7-1)
+ PARAMETER            FROM              TO             V          TEST CONDITIONS                   MIN            TYP         MAX        UNIT
+                     (INPUT)        (OUTPUT)            CC
+
+                                                                 TA = 25°C                                           16           22
+                                                      4.5 V      SN54HCT245                                                       33
+ t                    A or B          B or A                     SN74HCT245                                                       28        ns
+  pd                                                             T  = 25°C                                           14           20
+                                                                  A
+                                                      5.5 V      SN54HCT245                                                       30
+                                                                 SN74HCT245                                                       25
+                                                                 TA = 25°C                                           25           46
+                                                      4.5 V      SN54HCT245                                                       69
+ t                     OE             A or B                     SN74HCT245                                                       58        ns
+  en                                                             T  = 25°C                                           22           41
+                                                                  A
+                                                      5.5 V      SN54HCT245                                                       62
+                                                                 SN74HCT245                                                       52
+                                                                 TA = 25°C                                           26           40
+                                                      4.5 V      SN54HCT245                                                       60
+ t                     OE             A or B                     SN74HCT245                                                       50        ns
+  dis
+                                                                 TA = 25°C                                           23           36
+                                                      5.5 V      SN54HCT245                                                       54
+                                                                 SN74HCT245                                                       45
+                                                                 TA = 25°C                                            9           12
+                                                      4.5 V      SN54HCT245                                                       18
+ t                                    A or B                     SN74HCT245                                                       15        ns
+  t                                                              T  = 25°C                                            8           11
+                                                                  A
+                                                      5.5 V      SN54HCT245                                                       16
+                                                                 SN74HCT245                                                       14
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6      Submit Document Feedback                                                                          Copyright © 2022 Texas Instruments Incorporated
+
+                                                Product Folder Links: SN54HCT245 SN74HCT245
+
+--- PDF page 7 ---
+                                                                                                            SN54HCT245, SN74HCT245
+www.ti.com                                                                               SCLS020H – MARCH 1984 – REVISED DECEMBER 2022
+
+6.7 Switching Characteristics: CL = 150 pF
+
+over recommended operating free-air temperature range, CL = 150 pF (unless otherwise noted) (see Figure 7-1)
+   PARAMETER              FROM                 TO               V         TEST CONDITIONS             MIN        TYP        MAX     UNIT
+                         (INPUT)           (OUTPUT)              CC
+
+                                                                          TA = 25°C                                20         30
+                                                               4.5 V      SN54HCT245                                          45
+ t                        A or B             B or A                       SN74HCT245                                          38      ns
+ pd                                                                       T  = 25°C                                18         27
+                                                                           A
+                                                               5.5 V      SN54HCT245                                          41
+                                                                          SN74HCT245                                          34
+                                                                          TA = 25°C                                36         59
+                                                               4.5 V      SN54HCT245                                          89
+ t                          OE               A or B                       SN74HCT245                                          74      ns
+ en                                                                       T  = 25°C                                30         53
+                                                                           A
+                                                               5.5 V      SN54HCT245                                          80
+                                                                          SN74HCT245                                          67
+                                                                          TA = 25°C                                17         42
+                                                               4.5 V      SN54HCT245                                          63
+ t                                           A or B                       SN74HCT245                                          53      ns
+ t
+                                                                          TA = 25°C                                14         38
+                                                               5.5 V      SN54HCT245                                          57
+                                                                          SN74HCT245                                          48
+
+6.8 Operating Characteristics
+
+TA = 25°C
+                                 PARAMETER                                              TEST CONDITIONS                    TYP      UNIT
+ Cpd            Power dissipation capacitance per transceiver                    No load                                     40      pF
+
+6.9 Typical Characteristics
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                       Figure 6-1. Propagation Delay Over Operating Voltage Range, TA = 25°C
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2022 Texas Instruments Incorporated                                                            Submit Document Feedback           7
+
+                                             Product Folder Links: SN54HCT245 SN74HCT245
+
+--- PDF page 8 ---
+SN54HCT245, SN74HCT245
+SCLS020H – MARCH 1984 – REVISED DECEMBER 2022                                                                                                          www.ti.com
+
+7 Parameter Measurement Information
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A.    CL includes probe and test-fixture capacitance.
+B.    Waveform 1 is for an output with internal conditions such that the output is low except when disabled by the output control.
+      Waveform 2 is for an output with internal conditions such that the output is high except when disabled by the output control.
+C.    Phase relationships between waveforms were chosen arbitrarily. All input pulses are supplied by generators having the following
+      characteristics: PRR ≤ 1 MHz, ZO = 50 Ω, tr = 6 ns, tf = 6 ns.
+D.    The outputs are measured one at a time with one input transition per measurement.
+E.    tPLZ and tPHZ are the same as tdis.
+F.    tPZL and tPZH are the same as ten.
+G.    tPLH and tPHL are the same as tpd.
+                                             Figure 7-1. Load Circuit and Voltage Waveforms
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8       Submit Document Feedback                                                                                     Copyright © 2022 Texas Instruments Incorporated
+
+                                                     Product Folder Links: SN54HCT245 SN74HCT245
+
+--- PDF page 9 ---
+                                                                                                              SN54HCT245, SN74HCT245
+www.ti.com                                                                                 SCLS020H – MARCH 1984 – REVISED DECEMBER 2022
+
+8 Detailed Description
+8.1 Overview
+The  SNx4HCT245  is  a  bidirectional  buffer  with  direction  control  and  active  low  output  enable.  This  device  is
+commonly used in logic systems for isolation and increasing drive strength.
+8.2 Functional Block Diagram
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                           Figure 8-1. Logic Diagram (Positive Logic)
+
+8.3 Feature Description
+Voltage operating range from 4.5 V to 5.5 V is forgiving of 5-V power supply rail accuracy. Outputs can operate
+up to 15 LSTTL loads. This device has balanced propagation delay, typically 14 ns, and balanced output drive of
+±6 mA at 5 V. It has low power consumption of only 80-µA maximum static supply current. The center VCC and
+GND pin configurations minimize high-speed switching noise. Inputs are TTL-voltage compatible.
+8.4 Device Functional Modes
+This  device  is  a  standard  '245  logic  function.  It  has  an  active  low  output  enable,  a  direction  pin,  and  eight
+communication channels.
+                                                      Table 8-1. Function Table
+                                                   INPUTS(1)
+                                            OE                  DIR                  OPERATION
+
+                                             L                    L                 B data to A bus
+                                             L                   H                  A data to B bus
+                                             H                    X                    Isolation
+
+                                    (1)   H = High Voltage Level, L = Low Voltage Level, X = Don’t Care
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2022 Texas Instruments Incorporated                                                              Submit Document Feedback           9
+
+                                              Product Folder Links: SN54HCT245 SN74HCT245
+
+--- PDF page 10 ---
+SN54HCT245, SN74HCT245
+SCLS020H – MARCH 1984 – REVISED DECEMBER 2022                                                                                   www.ti.com
+
+9 Application and Implementation
+
+                                                                   Note
+       Information  in  the  following  applications  sections  is  not  part  of  the  TI  component  specification,
+       and   TI   does   not   warrant   its   accuracy   or   completeness.   TI’s   customers   are   responsible   for
+       determining suitability of components for their purposes, as well as validating and testing their design
+       implementation to confirm system functionality.
+
+9.1 Application Information
+The SNx4HCT245 is a versatile device with many available applications. The application chosen as an example
+here  is  connecting  a  master  and  slave  device  through  a  ribbon  cable.  This  configuration  is  common  due  to
+losses in this type of cable.
+9.2 Typical Application
+Logic transceivers are commonly seen in back plane and ribbon cable applications where a signal direct from
+an FPGA or MCU would be too weak to reach the distant end. The transceiver acts as an amplifier to get the
+signal across the line, and since it is bidirectional, data can be sent from master to slave or slave to master. The
+additional buffer on the direction line is necessary to ensure the direction signal can always reach the distant
+end.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Figure 9-1. Typical application for SNx4HC245
+
+9.2.1 Design Requirements
+This device uses CMOS technology and has balanced output drive. Care must be taken to avoid bus contention
+because it can drive currents that would exceed maximum limits. Outputs can be combined to produce higher
+drive,  but  the  high  drive  also  creates  faster  edges  into  light  loads,  so  routing  and  load  conditions  must  be
+considered to prevent ringing.
+9.2.2 Detailed Design Procedure
+1.   Recommended Input Conditions
+     •   Rise time and fall time specs: See (Δt/ΔV) in the Recommended Operating Conditions.
+     •   Specified high and low levels: See (VIH and VIL) in the Recommended Operating Conditions.
+2.   Recommended Output Conditions
+     •   Load currents should not exceed 35 mA per output and 70 mA total for the part.
+     •   Outputs should not be pulled above VCC.
+
+
+
+
+10     Submit Document Feedback                                                                    Copyright © 2022 Texas Instruments Incorporated
+
+                                             Product Folder Links: SN54HCT245 SN74HCT245
+
+--- PDF page 11 ---
+                                                                                                                    SN54HCT245, SN74HCT245
+www.ti.com                                                                                      SCLS020H – MARCH 1984 – REVISED DECEMBER 2022
+
+9.2.3 Application Curve
+It  is  common  to  see  significant  losses  in  ribbon  cables  and  back  planes.  The  plot  shown  in                        Figure  9-2  is  a
+simplified  simulation  of  a  ribbon  cable  from  a  5-V,  10-MHz  low  drive  strength  source.  It  shows  the  difference
+between  an  input  signal  from  a  weak  driver  like  an  MCU  or  FPGA  compared  to  a  strong  driver  like  the
+SN74HCT245 when measured at the distant end of the cable. By adding a high-current drive transceiver before
+the cable, the signal strength can be significantly improved, and subsequently the cable can be longer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       Unbuffered line is directly connected to low current source, SN74HCT245 line is buffered through the transceiver. Both signals are
+       measured at the distant end of the ribbon cable.
+                     Figure 9-2. Simulated Outputs From Ribbon Cable With a 5-V, 10-MHz Source
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2022 Texas Instruments Incorporated                                                                    Submit Document Feedback            11
+
+                                                Product Folder Links: SN54HCT245 SN74HCT245
+
+--- PDF page 12 ---
+SN54HCT245, SN74HCT245
+SCLS020H – MARCH 1984 – REVISED DECEMBER 2022                                                                                  www.ti.com
+
+10 Power Supply Recommendations
+The  power  supply  can  be  any  voltage  between  the  MIN  and  MAX  supply  voltage  rating  located  in  the
+Recommended  Operating  Conditions.  Each  VCC  pin  must  have  a  good  bypass  capacitor  to  prevent  power
+disturbance. For devices with a single supply, 0.1 µF is recommended; if there are multiple VCC pins, then 0.01
+µF or 0.022 µF is recommended for each power pin. It is acceptable to parallel multiple bypass capacitors to
+reject different frequencies of noise. A 0.1 µF and a 1 µF are commonly used in parallel. The bypass capacitor
+should be installed as close to the power pin as possible for best results.
+11 Layout
+11.1 Layout Guidelines
+When using multiple-bit logic devices, inputs should never float.
+In many cases, functions or parts of functions of digital logic devices are unused, for example, when only six
+channels of an eight channel transceiver are used. Such input pins should not be left unconnected because the
+undefined voltages at the outside connections result in undefined operational states. All unused inputs of digital
+logic devices must be connected to a high or low bias to prevent them from floating. The logic level that should
+be applied to any particular unused input depends on the function of the device. Generally they are tied to GND
+or VCC, whichever makes more sense or is more convenient.
+The output enable pin disables the output section of the part when asserted. This does not disable the input
+section of the IOs, so they cannot float when disabled.
+Figure 11-1 shows the proper method to terminate unused channels using a large resistance (in this example,
+10-kΩ resistors). This avoids overloading the outputs , and maintains a valid voltage on the inputs. Note that it is
+also valid to tie both sides of an unused transceiver directly to ground or VCC; however, the two sides must never
+be tied to different states directly.
+11.2 Layout Example
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                      Figure 11-1. Proper Termination of OE Pin And Unused Channels 7 and 8
+
+
+
+
+
+
+
+
+
+
+12     Submit Document Feedback                                                                   Copyright © 2022 Texas Instruments Incorporated
+
+                                             Product Folder Links: SN54HCT245 SN74HCT245
+
+--- PDF page 13 ---
+                                                                                                              SN54HCT245, SN74HCT245
+www.ti.com                                                                                 SCLS020H – MARCH 1984 – REVISED DECEMBER 2022
+
+12 Device and Documentation Support
+12.1 Documentation Support
+12.1.1 Related Documentation
+For related documentation see the following:
+Implications of Slow or Floating CMOS Inputs (SCBA004)
+12.2 Related Links
+The  table  below  lists  quick  access  links.  Categories  include  technical  documents,  support  and  community
+resources, tools and software, and quick access to sample or buy.
+                                                       Table 12-1. Related Links
+        PARTS            PRODUCT FOLDER            SAMPLE & BUY              TECHNICAL                TOOLS &               SUPPORT &
+                                                                            DOCUMENTS                SOFTWARE               COMMUNITY
+     SN54HCT245                Click here              Click here             Click here              Click here              Click here
+     SN74HCT245                Click here              Click here             Click here              Click here              Click here
+
+12.3 Receiving Notification of Documentation Updates
+To  receive  notification  of  documentation  updates,  navigate  to  the  device  product  folder  on                    ti.com.  Click  on
+Subscribe to updates to register and receive a weekly digest of any product information that has changed. For
+change details, review the revision history included in any revised document.
+12.4 Support Resources
+TI E2E™ support forums are an engineer's go-to source for fast, verified answers and design help — straight
+from the experts. Search existing answers or ask your own question to get the quick design help you need.
+Linked content is provided "AS IS" by the respective contributors. They do not constitute TI specifications and do
+not necessarily reflect TI's views; see TI's Terms of Use.
+12.5 Trademarks
+TI E2E™ is a trademark of Texas Instruments.
+All trademarks are the property of their respective owners.
+12.6 Electrostatic Discharge Caution
+                   This integrated circuit can be damaged by ESD. Texas Instruments recommends that all integrated circuits be handled
+                   with appropriate precautions. Failure to observe proper handling and installation procedures can cause damage.
+                   ESD damage can range from subtle performance degradation to complete device failure. Precision integrated circuits may
+                   be more susceptible to damage because very small parametric changes could cause the device not to meet its published
+                   specifications.
+
+12.7 Glossary
+ TI Glossary           This glossary lists and explains terms, acronyms, and definitions.
+13 Mechanical, Packaging, and Orderable Information
+The  following  pages  include  mechanical,  packaging,  and  orderable  information.  This  information  is  the  most
+current data available for the designated devices. This data is subject to change without notice and revision of
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2022 Texas Instruments Incorporated                                                              Submit Document Feedback          13
+
+                                              Product Folder Links: SN54HCT245 SN74HCT245
+
+--- PDF page 14 ---
+                                                                                                                                                                       PACKAGE OPTION ADDENDUM
+
+
+
+    www.ti.com                                                                                                                                                                                                           27-Oct-2026
+
+
+
+PACKAGING INFORMATION
+
+   Orderable part number            Status     Material type       Package | Pins       Package qty | Carrier         RoHS             Lead finish/             MSL rating/              Op temp (°C)               Part marking
+                                      (1)            (2)                                                                (3)            Ball material             Peak reflow                                              (6)
+                                                                                                                                             (4)                      (5)
+      5962-8550601VRA               Active      Production          CDIP (J) | 20              20 | TUBE               No                  SNPB               N/A for Pkg Type             -55 to 125             5962-8550601VR
+                                                                                                                                                                                                                           A
+                                                                                                                                                                                                                   SNV54HCT245J
+     5962-8550601VRA.A              Active      Production          CDIP (J) | 20              20 | TUBE               No                  SNPB               N/A for Pkg Type             -55 to 125             5962-8550601VR
+                                                                                                                                                                                                                           A
+                                                                                                                                                                                                                   SNV54HCT245J
+      5962-8550601VSA               Active      Production          CFP (W) | 20               25 | TUBE               No                  SNPB               N/A for Pkg Type             -55 to 125             5962-8550601VS
+                                                                                                                                                                                                                           A
+                                                                                                                                                                                                                  SNV54HCT245W
+     5962-8550601VSA.A              Active      Production          CFP (W) | 20               25 | TUBE               No                  SNPB               N/A for Pkg Type             -55 to 125             5962-8550601VS
+                                                                                                                                                                                                                           A
+                                                                                                                                                                                                                  SNV54HCT245W
+          85506012A                 Active      Production         LCCC (FK) | 20              55 | TUBE               No                  SNPB               N/A for Pkg Type             -55 to 125                85506012A
+                                                                                                                                                                                                                     SNJ54HCT
+                                                                                                                                                                                                                        245FK
+          8550601RA                 Active      Production          CDIP (J) | 20              20 | TUBE               No                  SNPB               N/A for Pkg Type             -55 to 125                8550601RA
+                                                                                                                                                                                                                   SNJ54HCT245J
+     JM38510/65553BRA               Active      Production          CDIP (J) | 20              20 | TUBE               No                  SNPB               N/A for Pkg Type             -55 to 125                 JM38510/
+                                                                                                                                                                                                                      65553BRA
+    JM38510/65553BRA.A              Active      Production          CDIP (J) | 20              20 | TUBE               No                  SNPB               N/A for Pkg Type             -55 to 125                 JM38510/
+                                                                                                                                                                                                                      65553BRA
+     JM38510/65553BSA               Active      Production          CFP (W) | 20               25 | TUBE               No                  SNPB               N/A for Pkg Type             -55 to 125                 JM38510/
+                                                                                                                                                                                                                      65553BSA
+    JM38510/65553BSA.A              Active      Production          CFP (W) | 20               25 | TUBE               No                  SNPB               N/A for Pkg Type             -55 to 125                 JM38510/
+                                                                                                                                                                                                                      65553BSA
+      M38510/65553BRA               Active      Production          CDIP (J) | 20              20 | TUBE               No                  SNPB               N/A for Pkg Type             -55 to 125                 JM38510/
+                                                                                                                                                                                                                      65553BRA
+      M38510/65553BSA               Active      Production          CFP (W) | 20               25 | TUBE               No                  SNPB               N/A for Pkg Type             -55 to 125                 JM38510/
+                                                                                                                                                                                                                      65553BSA
+        SN54HCT245J                 Active      Production          CDIP (J) | 20              20 | TUBE               No                  SNPB               N/A for Pkg Type             -55 to 125               SN54HCT245J
+       SN54HCT245J.A                Active      Production          CDIP (J) | 20              20 | TUBE               No                  SNPB               N/A for Pkg Type             -55 to 125               SN54HCT245J
+      SN74HCT245DBR                 Active      Production         SSOP (DB) | 20         2000 | LARGE T&R             Yes               NIPDAU             Level-1-260C-UNLIM              -40 to 85                   HT245
+     SN74HCT245DBR.A                Active      Production         SSOP (DB) | 20         2000 | LARGE T&R             Yes               NIPDAU             Level-1-260C-UNLIM              -40 to 85                   HT245
+
+
+
+                                                                                                           Addendum-Page 1
+
+--- PDF page 15 ---
+                                                                                                                                                                      PACKAGE OPTION ADDENDUM
+
+
+
+    www.ti.com                                                                                                                                                                                                         27-Oct-2026
+
+
+
+
+
+   Orderable part number           Status     Material type       Package | Pins        Package qty | Carrier        RoHS             Lead finish/             MSL rating/              Op temp (°C)               Part marking
+                                      (1)           (2)                                                                (3)            Ball material            Peak reflow                                               (6)
+                                                                                                                                            (4)                      (5)
+     SN74HCT245DBRG4                Active      Production        SSOP (DB) | 20         2000 | LARGE T&R             Yes               NIPDAU             Level-1-260C-UNLIM             -40 to 85                   HT245
+     SN74HCT245DGSR                 Active      Production      VSSOP (DGS) | 20         5000 | LARGE T&R             Yes               NIPDAU             Level-1-260C-UNLIM            -40 to 125                   HT245
+    SN74HCT245DGSR.A                Active      Production      VSSOP (DGS) | 20         5000 | LARGE T&R             Yes               NIPDAU             Level-1-260C-UNLIM            -40 to 125                   HT245
+       SN74HCT245DW               Obsolete      Production        SOIC (DW) | 20                   -                    -                Call TI                  Call TI                 -40 to 85                  HCT245
+      SN74HCT245DWR                 Active      Production        SOIC (DW) | 20         2000 | LARGE T&R             Yes               NIPDAU             Level-1-260C-UNLIM             -40 to 85                  HCT245
+     SN74HCT245DWR.A                Active      Production        SOIC (DW) | 20         2000 | LARGE T&R             Yes               NIPDAU             Level-1-260C-UNLIM             -40 to 85                  HCT245
+     SN74HCT245DWRE4                Active      Production        SOIC (DW) | 20         2000 | LARGE T&R             Yes               NIPDAU             Level-1-260C-UNLIM             -40 to 85                  HCT245
+    SN74HCT245DWRG4                 Active      Production        SOIC (DW) | 20         2000 | LARGE T&R             Yes               NIPDAU             Level-1-260C-UNLIM             -40 to 85                  HCT245
+        SN74HCT245N                 Active      Production         PDIP (N) | 20              20 | TUBE               Yes               NIPDAU               N/A for Pkg Type             -40 to 85               SN74HCT245N
+       SN74HCT245N.A                Active      Production         PDIP (N) | 20              20 | TUBE               Yes               NIPDAU               N/A for Pkg Type             -40 to 85               SN74HCT245N
+       SN74HCT245NE4                Active      Production         PDIP (N) | 20              20 | TUBE               Yes               NIPDAU               N/A for Pkg Type             -40 to 85               SN74HCT245N
+      SN74HCT245NSR                 Active      Production         SOP (NS) | 20         2000 | LARGE T&R             Yes               NIPDAU             Level-1-260C-UNLIM             -40 to 85                  HCT245
+     SN74HCT245NSR.A                Active      Production         SOP (NS) | 20         2000 | LARGE T&R             Yes               NIPDAU             Level-1-260C-UNLIM             -40 to 85                  HCT245
+       SN74HCT245PW               Obsolete      Production       TSSOP (PW) | 20                   -                    -                Call TI                  Call TI                 -40 to 85                   HT245
+      SN74HCT245PWR                 Active      Production       TSSOP (PW) | 20         2000 | LARGE T&R             Yes               NIPDAU             Level-1-260C-UNLIM             -40 to 85                   HT245
+     SN74HCT245PWR.A                Active      Production       TSSOP (PW) | 20         2000 | LARGE T&R             Yes               NIPDAU             Level-1-260C-UNLIM             -40 to 85                   HT245
+     SN74HCT245PWRE4                Active      Production       TSSOP (PW) | 20         2000 | LARGE T&R             Yes               NIPDAU             Level-1-260C-UNLIM             -40 to 85                   HT245
+     SN74HCT245PWRG4                Active      Production       TSSOP (PW) | 20         2000 | LARGE T&R             Yes               NIPDAU             Level-1-260C-UNLIM             -40 to 85                   HT245
+   SN74HCT245PWRG4.A                Active      Production       TSSOP (PW) | 20         2000 | LARGE T&R             Yes               NIPDAU             Level-1-260C-UNLIM             -40 to 85                   HT245
+      SN74HCT245PWT               Obsolete      Production       TSSOP (PW) | 20                   -                    -                Call TI                  Call TI                 -40 to 85                   HT245
+       SNJ54HCT245FK                Active      Production        LCCC (FK) | 20              55 | TUBE                No                 SNPB               N/A for Pkg Type            -55 to 125                 85506012A
+                                                                                                                                                                                                                    SNJ54HCT
+                                                                                                                                                                                                                      245FK
+      SNJ54HCT245FK.A               Active      Production        LCCC (FK) | 20              55 | TUBE                No                 SNPB               N/A for Pkg Type            -55 to 125                 85506012A
+                                                                                                                                                                                                                    SNJ54HCT
+                                                                                                                                                                                                                      245FK
+        SNJ54HCT245J                Active      Production          CDIP (J) | 20             20 | TUBE                No                 SNPB               N/A for Pkg Type            -55 to 125                 8550601RA
+                                                                                                                                                                                                                 SNJ54HCT245J
+       SNJ54HCT245J.A               Active      Production          CDIP (J) | 20             20 | TUBE                No                 SNPB               N/A for Pkg Type            -55 to 125                 8550601RA
+                                                                                                                                                                                                                 SNJ54HCT245J
+       SNJ54HCT245W                 Active      Production          CFP (W) | 20              25 | TUBE                No                 SNPB               N/A for Pkg Type            -55 to 125              SNJ54HCT245W
+      SNJ54HCT245W.A                Active      Production          CFP (W) | 20              25 | TUBE                No                 SNPB               N/A for Pkg Type            -55 to 125              SNJ54HCT245W
+
+
+
+                                                                                                          Addendum-Page 2
+
+--- PDF page 16 ---
+                                                                                                                                                                                                     PACKAGE OPTION ADDENDUM
+
+
+
+    www.ti.com                                                                                                                                                                                                                                                 27-Oct-2026
+
+
+
+
+
+
+
+(1) Status:  For more details on status, see our product life cycle.
+
+(2) Material type:  When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+
+(3) RoHS values:  Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+
+(4) Lead finish/Ball material:  Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+
+(5) MSL rating/Peak reflow:  The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+
+(6) Part marking:  There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+
+ OTHER QUALIFIED VERSIONS OF SN54HCT245, SN54HCT245-SP, SN74HCT245 :
+• Catalog : SN74HCT245, SN54HCT245
+• Military : SN54HCT245
+• Space : SN54HCT245-SP
+
+ NOTE: Qualified Version Definitions:
+         • Catalog - TI's standard catalog product
+
+
+
+
+                                                                                                                              Addendum-Page 3
+
+--- PDF page 17 ---
+                                                                                                                                                                    PACKAGE OPTION ADDENDUM
+
+
+
+www.ti.com                                                                                                                                                                                                            27-Oct-2026
+
+
+
+    • Military - QML certified for Military and Defense Applications
+    • Space - Radiation tolerant, ceramic packaging and qualified for use in Space-based application
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                       Addendum-Page 4
+
+--- PDF page 18 ---
+                                                                        PACKAGE MATERIALS INFORMATION
+
+
+
+
+
+
+www.ti.com                                                                                                                            10-Aug-2026
+
+TAPE AND REEL INFORMATION
+
+
+       REEL DIMENSIONS                                                          TAPE DIMENSIONS
+                                                                             K0      P1
+
+
+
+                                                                                                         B0   W
+
+                                        Reel
+                                      Diameter
+                                                                          Cavity         A0
+
+                                                         A0   Dimension designed to accommodate the component width
+                                                         B0   Dimension designed to accommodate the component length
+                                                         K0   Dimension designed to accommodate the component thickness
+                                                         W    Overall width of the carrier tape
+                                                         P1   Pitch between successive cavity centers
+
+
+                                       Reel Width (W1)
+                             QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+
+                                                                                          Sprocket Holes
+
+
+                                               Q1     Q2       Q1    Q2
+
+                                               Q3    Q4        Q3    Q4               User Direction of Feed
+
+
+
+                                                        Pocket Quadrants
+
+
+*All dimensions are nominal
+          Device            Package    Package   Pins     SPQ       Reel       Reel      A0      B0       K0      P1      W        Pin1
+                              Type     Drawing                    Diameter    Width     (mm)    (mm)    (mm)    (mm)     (mm)   Quadrant
+                                                                    (mm)     W1 (mm)
+    SN74HCT245DBR            SSOP         DB      20      2000      330.0      16.4      8.2     7.5     2.5     12.0    16.0      Q1
+   SN74HCT245DGSR            VSSOP       DGS      20      5000      330.0      16.4      5.4     5.4     1.45     8.0    16.0      Q1
+    SN74HCT245DWR             SOIC       DW       20      2000      330.0      24.4      10.9    13.3    2.7     12.0    24.0      Q1
+    SN74HCT245NSR             SOP         NS      20      2000      330.0      24.4      8.4     13.0    2.5     12.0    24.0      Q1
+    SN74HCT245PWR            TSSOP       PW       20      2000      330.0      16.4      6.95    7.0     1.4      8.0    16.0      Q1
+  SN74HCT245PWRG4            TSSOP       PW       20      2000      330.0      16.4      6.95    7.0     1.4      8.0    16.0      Q1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                               Pack Materials-Page 1
+
+--- PDF page 19 ---
+                                                                  PACKAGE MATERIALS INFORMATION
+
+
+
+
+
+
+www.ti.com                                                                                                                  10-Aug-2026
+
+
+TAPE AND REEL BOX DIMENSIONS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                  Width (mm) H
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 W                                            L
+
+
+
+
+
+
+
+*All dimensions are nominal
+         Device             Package Type     Package Drawing     Pins     SPQ      Length (mm)     Width (mm)    Height (mm)
+    SN74HCT245DBR               SSOP                 DB           20      2000         353.0          353.0          32.0
+   SN74HCT245DGSR               VSSOP               DGS           20      5000         353.0          353.0          32.0
+    SN74HCT245DWR                SOIC               DW            20      2000         356.0          356.0          45.0
+    SN74HCT245NSR                SOP                 NS           20      2000         356.0          356.0          45.0
+    SN74HCT245PWR               TSSOP               PW            20      2000         353.0          353.0          32.0
+  SN74HCT245PWRG4               TSSOP               PW            20      2000         353.0          353.0          32.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                          Pack Materials-Page 2
+
+--- PDF page 20 ---
+                                                                  PACKAGE MATERIALS INFORMATION
+
+
+
+
+
+
+www.ti.com                                                                                                                  10-Aug-2026
+
+TUBE
+
+
+      T - Tube
+       height                                                       L - Tube length
+
+
+
+                 W - Tube
+                   width
+
+
+        B - Alignment groove width
+
+
+
+*All dimensions are nominal
+         Device             Package Name     Package Type      Pins        SPQ       L (mm)    W (mm)      T (µm)       B (mm)
+    5962-8550601VSA               W               CFP           20          25       506.98      26.16      6220          NA
+   5962-8550601VSA.A              W               CFP           20          25       506.98      26.16      6220          NA
+       85506012A                  FK             LCCC           20          55       506.98      12.06      2030          NA
+   JM38510/65553BSA               W               CFP           20          25       506.98      26.16      6220          NA
+  JM38510/65553BSA.A              W               CFP           20          25       506.98      26.16      6220          NA
+    M38510/65553BSA               W               CFP           20          25       506.98      26.16      6220          NA
+     SN74HCT245N                   N              PDIP          20          20        506        13.97      11230         4.32
+    SN74HCT245N.A                  N              PDIP          20          20        506        13.97      11230         4.32
+    SN74HCT245NE4                  N              PDIP          20          20        506        13.97      11230         4.32
+    SNJ54HCT245FK                 FK             LCCC           20          55       506.98      12.06      2030          NA
+   SNJ54HCT245FK.A                FK             LCCC           20          55       506.98      12.06      2030          NA
+     SNJ54HCT245W                 W               CFP           20          25       506.98      26.16      6220          NA
+    SNJ54HCT245W.A                W               CFP           20          25       506.98      26.16      6220          NA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                          Pack Materials-Page 3
+
+--- PDF page 21 ---
+
+
+--- PDF page 22 ---
+                                                                                                                   PACKAGE OUTLINE
+DW0020A                                                                                                       SOIC - 2.65 mm max height
+
+
+
+
+
+
+
+
+
+                                                                             SCALE  1.200
+                                                                                                                                                            SOIC
+
+
+
+
+                                                                                                                                        C
+
+                                           10.63 TYP                                                              SEATING PLANE
+                                           9.97
+           A                                        PIN 1 ID                                                                      0.1  C
+                                                    AREA
+                                                                                          18X  1.27
+                  1                                                                                    20
+
+
+
+
+
+
+
+
+
+         13.0                                                                             2X
+         12.6                                                                           11.43
+       NOTE 3
+
+
+
+
+
+
+
+
+
+
+                 10
+                                                                           11
+                                                                                      20X 0.510.31                     2.65 MAX
+                     B                                  7.67.4                              0.25      C  A  B
+                                             NOTE 4
+
+
+
+
+                                                                                        0.33 TYP
+                                                                                        0.10
+
+
+                                                                                                   0.25
+                                        SEE DETAIL A                                    GAGE PLANE
+
+
+
+                                                                                                                                    1.27                   0.3
+                                                                                               0  - 8                               0.40                   0.1
+
+                                                                                                                                    DETAIL A
+                                                                                                                                      TYPICAL
+
+
+                                                                                                                                           4220724/A   05/2016
+
+NOTES:
+
+1. All linear dimensions are in millimeters. Dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed 0.15 mm per side.
+4. This dimension does not include interlead flash. Interlead flash shall not exceed 0.43 mm per side.
+5. Reference JEDEC registration MS-013.
+
+
+
+
+
+                                                                                www.ti.com
+
+--- PDF page 23 ---
+                                                                                    EXAMPLE BOARD LAYOUT
+DW0020A                                                                                       SOIC - 2.65 mm max height
+
+                                                                                                                                      SOIC
+
+
+
+
+
+
+                                 20X (2)                             SYMM
+
+                                           1
+                                                                                                    20
+
+                            20X (0.6)
+
+
+
+                               18X (1.27)
+
+
+
+                                                                                                        SYMM
+
+
+
+
+
+
+                              (R       )0.05
+                              TYP
+
+
+
+
+                                         10                                                                                           11
+
+
+                                                                      (9.3)
+
+                                                       LAND PATTERN EXAMPLE
+                                                                   SCALE:6X
+
+
+
+
+
+                 SOLDER MASK                          METAL             METAL UNDER                             SOLDER MASK
+                 OPENING                                                SOLDER MASK                             OPENING
+
+
+
+
+
+                                     0.07 MAX                                                  0.07 MIN
+                                     ALL AROUND                                                ALL AROUND
+
+                                NON SOLDER MASK                                               SOLDER MASK
+                                      DEFINED                                                    DEFINED
+
+                                                            SOLDER MASK DETAILS
+
+                                                                                                                       4220724/A   05/2016
+NOTES: (continued)
+
+6. Publication IPC-7351 may have alternate designs.
+7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+
+
+
+
+
+
+
+
+
+
+
+                                                                    www.ti.com
+
+--- PDF page 24 ---
+                                                                                        EXAMPLE STENCIL DESIGN
+DW0020A                                                                                             SOIC - 2.65 mm max height
+
+                                                                                                                                               SOIC
+
+
+
+
+
+
+
+
+                                     20X (2)                              SYMM
+
+                                              1
+                                                                                                           20
+
+                               20X (0.6)
+
+
+
+                                 18X (1.27)
+
+
+
+                                                                                                                SYMM
+
+
+
+
+
+
+
+
+
+
+
+
+                                             10                                                                                          11
+
+                                                                           (9.3)
+
+
+                                                           SOLDER PASTE EXAMPLE
+                                                         BASED ON 0.125 mm THICK STENCIL
+                                                                        SCALE:6X
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                4220724/A   05/2016
+NOTES: (continued)
+
+8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.
+9. Board assembly site may have different recommendations for stencil design.
+
+
+
+
+
+
+
+
+
+
+                                                                         www.ti.com
+
+--- PDF page 25 ---
+
+
+--- PDF page 26 ---
+                                                                         GENERIC PACKAGE VIEW
+FK 20                                                                          LCCC - 2.03 mm max height
+8.89 x 8.89, 1.27 mm pitch                                                           LEADLESS CERAMIC CHIP CARRIER
+
+
+
+                 This image is a representation of the package family, actual package may vary.
+                                Refer to the product data sheet for package details.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                              4229370\/A\
+
+
+
+
+                                                          www.ti.com
+
+--- PDF page 27 ---
+
+
+--- PDF page 28 ---
+                                                                                                            PACKAGE OUTLINE
+PW0020A                                                                                               TSSOP - 1.2 mm max height
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                       SCALE  2.500
+                                                                                                                         SMALL OUTLINE PACKAGE
+
+
+
+
+
+                                                                                                                          C                 SEATING
+                                            6.6 TYP                                                                                         PLANE
+           A                                6.2
+                                               PIN 1 INDEX AREA                                                                               0.1  C
+                                                                                        18X  0.65
+                  1                                                          20
+
+
+
+
+
+
+
+
+                                                                                         2X
+          6.6                                                                           5.85
+          6.4
+        NOTE 3
+
+
+
+
+
+
+
+                 10
+                                                                              11
+                                              4.5                                       20X 0.300.19                     1.2 MAX
+                    B                         4.3
+                                            NOTE 4                                          0.1     C  A  B
+
+
+
+
+
+
+
+
+
+                                                                 (0.15) TYP
+                                          SEE DETAIL  A
+
+
+                                                                                       0.25
+                                                                            GAGE PLANE                                                       0.15
+                                                                                                                                             0.05
+
+
+
+                                                                                                         0.75
+                                                                                                         0.50
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                           A  20
+                                                                                         0  -8                        DETAIL A
+                                                                                                                        TYPICAL
+
+                                                                                                                                   4220206/A   02/2017
+
+NOTES:
+
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed 0.15 mm per side.
+4. This dimension does not include interlead flash. Interlead flash shall not exceed 0.25 mm per side.
+5. Reference JEDEC registration MO-153.
+
+
+
+
+
+                                                                           www.ti.com
+
+--- PDF page 29 ---
+                                                                                   EXAMPLE BOARD LAYOUT
+PW0020A                                                                                     TSSOP - 1.2 mm max height
+
+                                                                                                             SMALL OUTLINE PACKAGE
+
+
+
+
+
+
+
+
+                                          20X (1.5)                SYMM
+                                       1                                                                 (R0.05) TYP
+
+                             20X (0.45)                                                             20
+
+
+
+
+
+
+
+
+                                                                                                       SYMM
+                           18X (0.65)
+
+
+
+
+
+
+
+
+
+                                      10                                                                                                 11
+
+
+
+                                                                    (5.8)
+
+                                                     LAND PATTERN EXAMPLE
+                                                         EXPOSED METAL SHOWN
+                                                                SCALE: 10X
+
+
+
+
+                SOLDER MASK                      METAL                       METAL UNDER                    SOLDER MASK
+                      OPENING                                                SOLDER MASK                    OPENING
+
+
+        EXPOSED METAL                                                                                             EXPOSED METAL
+
+                                     0.05 MAX                                                    0.05 MIN
+                                     ALL AROUND                                                  ALL AROUND
+
+                             NON-SOLDER MASK                                                 SOLDER MASK
+                                   DEFINED                                                      DEFINED
+
+
+
+
+
+
+                                                                15.000
+                                 (PREFERRED)            SOLDER MASK DETAILS
+
+
+
+
+                                                                                                                      4220206/A   02/2017
+NOTES: (continued)
+
+6. Publication IPC-7351 may have alternate designs.
+7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+
+
+
+
+
+
+
+
+
+
+
+                                                                    www.ti.com
+
+--- PDF page 30 ---
+                                                                                        EXAMPLE STENCIL DESIGN
+PW0020A                                                                                            TSSOP - 1.2 mm max height
+
+                                                                                                                      SMALL OUTLINE PACKAGE
+
+
+
+
+
+
+
+
+                                              20X (1.5)                 SYMM
+                                          1                                                                       (R0.05) TYP
+
+                               20X (0.45)                                                                   20
+
+
+
+
+
+
+
+
+                                                                                                              SYMM
+                             18X (0.65)
+
+
+
+
+
+
+
+
+
+                                         10                                                                                                 11
+
+
+
+                                                                         (5.8)
+
+
+                                                         SOLDER PASTE EXAMPLE
+                                                       BASED ON 0.125 mm THICK STENCIL
+                                                                     SCALE: 10X
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                4220206/A   02/2017
+NOTES: (continued)
+
+8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.
+9. Board assembly site may have different recommendations for stencil design.
+
+
+
+
+
+
+
+
+
+
+                                                                         www.ti.com
+
+--- PDF page 31 ---
+                                                                                                                PACKAGE OUTLINE
+DGS0020A                                                                                                 VSSOP - 1.1 mm max height
+
+                                                                                                                             SMALL OUTLINE PACKAGE
+
+
+
+
+
+
+
+
+               PIN 1 INDEX
+                       AREA                                                                                                C
+                                                 5.1                                                                                            SEATING
+                       A                         4.7 TYP                                                              0.1  C                    PLANE
+                                                                                       18X  0.5
+                              1                                              20
+
+
+
+
+
+
+
+                      5.2                                                           2X  4.5
+                      5.0
+                   NOTE 3
+
+
+                                                                                                           4X (0  -15  )
+
+
+                            10                                                                 11
+                                                                                      20X 0.2750.165
+                               B                            3.12.9                         0.1     C  A  B
+
+
+
+
+
+
+      SEE DETAIL  A                                                   4X (7  -15  )
+
+
+                                                                                      (0.15) TYP
+
+
+
+
+
+                                                                                               0.25
+                                                                                    GAGE PLANE                                                    1.1 MAX
+
+
+
+
+                                                                                                                             0.7                     0.15
+                                                                                          0  -8                              0.4                     0.05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                    A  20
+                                                                                                                              DETAIL A
+                                                                                                                                TYPICAL
+
+
+                                                                                                                                        4226367/A   10/2020
+NOTES:                                                                                                   PowerPAD is a trademark of Texas Instruments.
+
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed 0.15 mm per side.
+4. No JEDEC registration as of September 2020.
+5. Features may differ or may not be present.
+
+
+
+
+
+                                                                              www.ti.com
+
+--- PDF page 32 ---
+                                                                                           EXAMPLE BOARD LAYOUT
+DGS0020A                                                                                            VSSOP - 1.1 mm max height
+
+                                                                                                                       SMALL OUTLINE PACKAGE
+
+
+
+
+
+
+
+
+                    20X (1.45)                                           SYMM
+
+
+                                  1                                                                                   20
+
+                 20X (0.3)
+
+              (R0.05) TYP
+
+
+
+                  18X (0.5)
+
+                                                                                                                       SYMM
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                10                                                                                                                           11
+
+
+                                                                          (4.4)
+                                                          LAND PATTERN EXAMPLE
+                                                                      SCALE: 16X
+
+
+
+
+
+                  SOLDER MASK                            METAL                    METAL UNDER                           SOLDER MASK
+                        OPENING                                                   SOLDER MASK                           OPENING
+
+
+
+
+                   0.05 MAX                                 EXPOSED METAL           0.05 MIN                                 EXPOSED METAL
+              ALL AROUND          NON-SOLDER MASK                              ALL AROUND            SOLDER MASK
+                                        DEFINED                                                         DEFINED
+                                     (PREFERRED)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                      15.000
+                                                             SOLDER MASK DETAILS
+                                                                                                                                 4226367/A   10/2020
+NOTES: (continued)
+
+  6. Publication IPC-7351 may have alternate designs.
+  7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+  8. This package is designed to be soldered to a thermal pad on the board. For more information, see Texas Instruments literature
+      numbers SLMA002 (www.ti.com/lit/slma002) and SLMA004 (www.ti.com/lit/slma004).
+  9. Size of metal pad may vary due to creepage requirement.
+10. Vias are optional depending on application, refer to device data sheet. It is recommended that vias under paste be filled, plugged
+      or tented.
+
+
+
+
+
+
+                                                                          www.ti.com
+
+--- PDF page 33 ---
+                                                                                          EXAMPLE STENCIL DESIGN
+DGS0020A                                                                                             VSSOP - 1.1 mm max height
+
+                                                                                                                        SMALL OUTLINE PACKAGE
+
+
+
+
+
+
+
+
+
+
+
+                   20X (1.45)                                            SYMM
+                  20X (0.3)
+
+                                  1                                                                                   20
+
+
+
+
+              (R0.05) TYP
+
+
+
+
+
+                                                                                                                        SYMM
+
+                 (18X 0.5)
+
+
+
+
+
+
+
+
+
+
+
+                                10                                                                                                                           11
+
+
+                                                                          (4.4)
+                                                          SOLDER PASTE EXAMPLE
+                                                        BASED ON 0.125 mm THICK STENCIL
+                                                                       SCALE: 16X
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                  4226367/A   10/2020
+NOTES: (continued)
+
+11. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+      design recommendations.
+12. Board assembly site may have different recommendations for stencil design.
+
+
+
+
+
+
+
+
+
+
+                                                                          www.ti.com
+
+--- PDF page 34 ---
+                                                                                                               PACKAGE OUTLINE
+DB0020A                                                                                                      SSOP - 2 mm max height
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                        SCALE  2.000
+                                                                                                                           SMALL OUTLINE PACKAGE
+
+
+
+
+
+
+                                         8.2                                                                                   C
+        A                                7.4 TYP
+                                             PIN 1 INDEX AREA                                                           0.1  C                  SEATING
+
+                                                                                       18X  0.65                                                PLANE
+               1                                                          20
+
+
+
+
+
+
+                                                                                        2X
+        7.5                                                                            5.85
+        6.9
+     NOTE 3
+
+
+
+
+
+              10
+                                                                       11            20X 0.38
+                                                                                          0.22
+                 B                                    5.65.0                              0.1     C  A  B
+                                         NOTE 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                               0.25                                             2 MAX
+                                     SEE DETAIL  A            (0.15) TYP            GAGE PLANE
+
+
+
+
+
+                                                                                        0  -8                  0.95                               0.05 MIN
+                                                                                                               0.55
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                 A  15
+                                                                                                                            DETAIL A
+                                                                                                                              TYPICAL
+
+                                                                                                                                      4214851/B   08/2019
+
+NOTES:
+
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed 0.15 mm per side.
+4. This dimension does not include interlead flash. Interlead flash shall not exceed 0.25 mm per side.
+5. Reference JEDEC registration MO-150.
+
+
+
+
+
+                                                                            www.ti.com
+
+--- PDF page 35 ---
+                                                                                    EXAMPLE BOARD LAYOUT
+DB0020A                                                                                           SSOP - 2 mm max height
+
+                                                                                                               SMALL OUTLINE PACKAGE
+
+
+
+
+
+
+
+
+                                      20X (1.85)                    SYMM
+                                 1                                                                               (R0.05) TYP
+                       20X (0.45)                                                                           20
+
+
+
+
+
+
+
+
+                     18X (0.65)                                                                                SYMM
+
+
+
+
+
+
+
+
+
+
+                                10                                                                                                                     11
+
+
+                                                                      (7)
+
+                                                      LAND PATTERN EXAMPLE
+                                                          EXPOSED METAL SHOWN
+                                                                 SCALE: 10X
+
+
+
+
+
+
+
+               SOLDER MASK                        METAL                         METAL UNDER                     SOLDER MASK
+                     OPENING                                                    SOLDER MASK                     OPENING
+
+
+      EXPOSED METAL                                                                                                     EXPOSED METAL
+
+                                    0.07 MAX                                                     0.07 MIN
+                                    ALL AROUND                                                   ALL AROUND
+
+                            NON-SOLDER MASK                                                       SOLDER MASK
+                                  DEFINED                                                            DEFINED
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                15.000
+                               (PREFERRED)              SOLDER MASK DETAILS
+
+                                                                                                                        4214851/B   08/2019
+NOTES: (continued)
+
+6. Publication IPC-7351 may have alternate designs.
+7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+
+
+
+
+
+
+
+
+
+
+
+                                                                     www.ti.com
+
+--- PDF page 36 ---
+                                                                                          EXAMPLE STENCIL DESIGN
+DB0020A                                                                                                   SSOP - 2 mm max height
+
+                                                                                                                        SMALL OUTLINE PACKAGE
+
+
+
+
+
+
+
+
+                                         20X (1.85)                      SYMM
+                                    1                                                                                      (R0.05) TYP
+                         20X (0.45)                                                                                  20
+
+
+
+
+
+
+
+
+                       18X (0.65)                                                                                      SYMM
+
+
+
+
+
+
+
+
+
+
+                                   10                                                                                                                     11
+
+
+
+                                                                           (7)
+
+
+                                                          SOLDER PASTE EXAMPLE
+                                                        BASED ON 0.125 mm THICK STENCIL
+                                                                      SCALE: 10X
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                  4214851/B   08/2019
+NOTES: (continued)
+
+8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.
+9. Board assembly site may have different recommendations for stencil design.
+
+
+
+
+
+
+
+
+
+
+                                                                          www.ti.com
+
+--- PDF page 37 ---
+
+
+--- PDF page 38 ---
+                                            IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS”
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale,                       TI’s General Quality Guidelines, or other applicable terms available either on
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+
+
+                                                    Copyright © 2026, Texas Instruments Incorporated
+                                                                     Last updated 10/2025

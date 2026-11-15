@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "name": "enable-low-clock",
+      "expected": "CP191 enable changed with low clock",
+      "detected": true,
+      "log": "candidate/Verification/build/compact/faults/enable-low-clock/simulation.log"
+    },
+    {
+      "name": "direction-low-clock",
+      "expected": "CP191 direction changed with low clock",
+      "detected": true,
+      "log": "candidate/Verification/build/compact/faults/direction-low-clock/simulation.log"
+    },
+    {
+      "name": "load-short-pulse",
+      "expected": "CP191 load pulse/data setup",
+      "detected": true,
+      "log": "candidate/Verification/build/compact/faults/load-short-pulse/simulation.log"
+    },
+    {
+      "name": "load-data-setup",
+      "expected": "CP191 load pulse/data setup",
+      "detected": true,
+      "log": "candidate/Verification/build/compact/faults/load-data-setup/simulation.log"
+    },
+    {
+      "name": "load-data-hold",
+      "expected": "CP191 data hold",
+      "detected": true,
+      "log": "candidate/Verification/build/compact/faults/load-data-hold/simulation.log"
+    },
+    {
+      "name": "clock-pulse",
+      "expected": "CP191 clock high pulse",
+      "detected": true,
+      "log": "candidate/Verification/build/compact/faults/clock-pulse/simulation.log"
+    },
+    {
+      "name": "load-recovery",
+      "expected": "CP191 clock pulse/load recovery",
+      "detected": true,
+      "log": "candidate/Verification/build/compact/faults/load-recovery/simulation.log"
+    },
+    {
+      "name": "count-setup",
+      "expected": "CP191 direction changed with low clock",
+      "detected": true,
+      "log": "candidate/Verification/build/compact/faults/count-setup/simulation.log"
+    },
+    {
+      "name": "bus-contention",
+      "detected": true,
+      "log": "candidate/Verification/build/compact/faults/bus-contention/simulation.log"
+    }
+  ]
+}

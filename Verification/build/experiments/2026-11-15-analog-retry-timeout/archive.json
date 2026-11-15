@@ -1,0 +1,204 @@
+{
+  "finished_at": "2026-11-15T21:32:45.166153+00:00",
+  "errors": [
+    {
+      "id": "hardware-programs",
+      "title": "hardware-programs execution",
+      "status": "error",
+      "summary": "Command '['vvp', 'alu.vvp']' timed out after 3600 seconds",
+      "artifacts": [
+        "hardware-programs-error.log"
+      ]
+    },
+    {
+      "id": "boot",
+      "title": "boot execution",
+      "status": "error",
+      "summary": "boot requires successful hardware-programs evidence from this run",
+      "artifacts": [
+        "boot-error.log"
+      ]
+    }
+  ],
+  "status_counts": {
+    "pass": 23,
+    "blocked": 6,
+    "limited": 14,
+    "fail": 1,
+    "error": 2
+  },
+  "milestones": [
+    {
+      "number": 1,
+      "title": "Baseline & electrical inventory",
+      "requirements": [
+        "BASE-01",
+        "BASE-02",
+        "BASE-03",
+        "BASE-04",
+        "BASE-05"
+      ],
+      "status": "blocked",
+      "passed": 3,
+      "total": 5,
+      "gates": [
+        {
+          "id": "BASE-01",
+          "text": "Preserve source component instances and electrical connectivity through review migration",
+          "gate": "migration",
+          "status": "pass"
+        },
+        {
+          "id": "BASE-02",
+          "text": "Every physical part has an unambiguous function, manufacturer part number, package, speed grade and sourcing decision",
+          "gate": "bom",
+          "status": "blocked"
+        },
+        {
+          "id": "BASE-03",
+          "text": "ALU and Memory instances have explicit physical gate/package allocation with preserved endpoint connectivity",
+          "gate": "packages",
+          "status": "pass"
+        },
+        {
+          "id": "BASE-04",
+          "text": "Schematic supply pins, unused units and logic inputs have no unresolved structural electrical findings",
+          "gate": "electrical",
+          "status": "pass"
+        },
+        {
+          "id": "BASE-05",
+          "text": "Independent electrical review accepts the component choices and circuit wiring",
+          "gate": "electrical-review",
+          "status": "blocked"
+        }
+      ],
+      "summary": "3/5 acceptance gates passed. Open: BASE-02, BASE-05."
+    },
+    {
+      "number": 2,
+      "title": "Qualify the verification method",
+      "requirements": [
+        "PILOT-01",
+        "PILOT-02",
+        "PILOT-03",
+        "PILOT-04",
+        "PILOT-05"
+      ],
+      "status": "fail",
+      "passed": 3,
+      "total": 5,
+      "gates": [
+        {
+          "id": "PILOT-01",
+          "text": "Representative register-ROM-buffer path passes with explicit timing monitors",
+          "gate": "pilot",
+          "status": "pass"
+        },
+        {
+          "id": "PILOT-02",
+          "text": "Injected setup, hold, pulse, reset, contention and wiring faults are detected for the expected reason",
+          "gate": "mutations",
+          "status": "pass"
+        },
+        {
+          "id": "PILOT-03",
+          "text": "Loaded output reaches the required voltage before capture in a bounded analogue experiment",
+          "gate": "analog",
+          "status": "pass"
+        },
+        {
+          "id": "PILOT-04",
+          "text": "The implemented clock meets worst-case phase timing, including load, setup, hold and output-enable handover",
+          "gate": "timing",
+          "status": "fail"
+        },
+        {
+          "id": "PILOT-05",
+          "text": "The physical clock and driver models are qualified for the stated operating envelope",
+          "gate": "physical-clock",
+          "status": "limited"
+        }
+      ],
+      "summary": "3/5 acceptance gates passed. Open: PILOT-04, PILOT-05."
+    },
+    {
+      "number": 3,
+      "title": "Module verification",
+      "requirements": [
+        "MOD-01",
+        "MOD-02",
+        "MOD-03",
+        "MOD-04",
+        "MOD-05",
+        "MOD-06",
+        "MOD-07",
+        "MOD-08",
+        "MOD-09"
+      ],
+      "status": "blocked",
+      "passed": 7,
+      "total": 9,
+      "gates": [
+        {
+          "id": "MOD-01",
+          "text": "All 2097152 ALU addresses agree with the independently expressed data/flag contract",
+          "gate": "alu",
+          "status": "pass"
+        },
+        {
+          "id": "MOD-02",
+          "text": "Both microcode images contain 65536 words, match independent encoding and reproduce the checked-in copies",
+          "gate": "microcode",
+          "status": "pass"
+        },
+        {
+          "id": "MOD-03",
+          "text": "Compiled control-word execution agrees with the instruction contract under reviewed phase and flag-capture semantics",
+          "gate": "control",
+          "status": "limited"
+        },
+        {
+          "id": "MOD-04",
+          "text": "Compiled JMP/CALL reaches every target and handles conditional/operand boundaries under the extracted PC model",
+          "gate": "control-flow",
+          "status": "pass"
+        },
+        {
+          "id": "MOD-05",
+          "text": "Committed demo programs halt with expected text and bitmap through compiled control words and bounded host IO",
+          "gate": "control-programs",
+          "status": "pass"
+        },
+        {
+          "id": "MOD-06",
+          "text": "Schematic-derived memory decode passes independent MAR/external-address/read/write cases and byte pin-route checks",
+          "gate": "memory",
+          "status": "pass"
+        },
+        {
+          "id": "MOD-07",
+          "text": "Schematic-derived register slice captures every byte and releases the data bus",
+          "gate": "registers",
+          "status": "pass"
+        },
+        {
+          "id": "MOD-08",
+          "text": "ALU, controller, MAR/stack and IO modules have complete schematic-derived timed integration",
+          "gate": "module-timing",
+          "status": "blocked"
+        },
+        {
+          "id": "MOD-09",
+          "text": "Schematic-derived ALU data and control paths preserve operands, ROM pin order, flag packing/hold, phase-qualified C/Z commands and bus isolation under connector stimulus",
+          "gate": "alu-circuit",
+          "status": "pass"
+        }
+      ],
+      "summary": "7/9 acceptance gates passed. Open: MOD-03, MOD-08."
+    }
+  ],
+  "acceptance_complete": false,
+  "hashes_verified": true,
+  "scope": "Normal analogue retry: hardware-programs exceeded 3600 seconds; boot dependency blocked. No identical retry scheduled. Compact CP1 has separate inputs and evidence."
+}

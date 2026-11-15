@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "complete": true,
+  "runs": [
+    {
+      "board": "AL1",
+      "corner": 1,
+      "quick": false,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/alu-module-c1-quick0/simulation.log",
+      "model_hashes": {
+        "support.sv": "fb6795f167e0a34e0a4177c4a2a6f49613c6edb7a3b2257dccc85c24302bc3b7",
+        "tb.sv": "acb0670a6934a3a2b90dc493fbad075ed9a8be941ef1829e3fd710d5c32c1c8c",
+        "clock.sv": "3fe5fdb06d626e932e6f7ca33345fb57834b283ebab585c947173676175800e5",
+        "module.sv": "ec1c9d1e03fd85b2f08c75f87fe6f9762309fd1281c070616faecff10b6acec4"
+      },
+      "scope": "Standalone physical module, fixture-looped SOURCE to DATA. Complete BF1/DT1 machine is a separate profile."
+    },
+    {
+      "board": "ME1",
+      "corner": 1,
+      "quick": false,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/memory-module-c1-quick0/simulation.log",
+      "model_hashes": {
+        "support.sv": "fb6795f167e0a34e0a4177c4a2a6f49613c6edb7a3b2257dccc85c24302bc3b7",
+        "tb.sv": "f8a4e6753c33f6a9671e0e49d28f4153044463e0718956c92c9f4480e5f207c1",
+        "clock.sv": "3fe5fdb06d626e932e6f7ca33345fb57834b283ebab585c947173676175800e5",
+        "module.sv": "38c5acd12d23d44ca136f169e127fa60c80da85655271c468b2afe84ec750177"
+      },
+      "scope": "Standalone physical module, fixture-looped SOURCE to DATA. Complete BF1/DT1 machine is a separate profile."
+    },
+    {
+      "board": "AL1",
+      "corner": 4,
+      "quick": true,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/alu-module-c4-quick1/simulation.log",
+      "model_hashes": {
+        "support.sv": "fb6795f167e0a34e0a4177c4a2a6f49613c6edb7a3b2257dccc85c24302bc3b7",
+        "tb.sv": "acb0670a6934a3a2b90dc493fbad075ed9a8be941ef1829e3fd710d5c32c1c8c",
+        "clock.sv": "b838e6a6797ac8655a5ca3dd9cfb503dcc08bb1bda1b83d6c74501cd8402071c",
+        "module.sv": "166c617bcd77518e33422bad8ea50ae7dbb0cee34a223ba0a876bc970feb06c2"
+      },
+      "scope": "Standalone physical module, fixture-looped SOURCE to DATA. Complete BF1/DT1 machine is a separate profile."
+    },
+    {
+      "board": "ME1",
+      "corner": 4,
+      "quick": true,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/memory-module-c4-quick1/simulation.log",
+      "model_hashes": {
+        "support.sv": "fb6795f167e0a34e0a4177c4a2a6f49613c6edb7a3b2257dccc85c24302bc3b7",
+        "tb.sv": "f8a4e6753c33f6a9671e0e49d28f4153044463e0718956c92c9f4480e5f207c1",
+        "clock.sv": "b838e6a6797ac8655a5ca3dd9cfb503dcc08bb1bda1b83d6c74501cd8402071c",
+        "module.sv": "f46c84a97018c2f8de11b739e5372c2de7dc487e6c7bd57efe5cbc8b539d661c"
+      },
+      "scope": "Standalone physical module, fixture-looped SOURCE to DATA. Complete BF1/DT1 machine is a separate profile."
+    }
+  ]
+}

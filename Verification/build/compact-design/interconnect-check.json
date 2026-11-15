@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "connector_pins": 605,
+  "assembly_groups": 230,
+  "backplane_sha256": "5bd190847273346873a52f9c7100dbe45f35c641728bd53e2ed584e338904b40",
+  "connection_index_sha256": "31e9750b496245916469804229fac9ec81da9647c33cc13e85a74226b12338d7",
+  "bench_sha256": "6b64c81fc9f80b5a30473082a9dd21c724a63fce86a8522ee8afcd6abda3e87f",
+  "model_hashes": {
+    "C1": "3fe5fdb06d626e932e6f7ca33345fb57834b283ebab585c947173676175800e5",
+    "CW1": "a40d35f327bbd91f5556fae1fb21ae75b7dac1516698ebbf428ae024dccdc738",
+    "SQ1": "a0612d913daa199c7d698f0594ac0a3dfe7e06716e988073282702d8eaffb694",
+    "PC1": "44ffc639a4ada265916803361ffdef3b0e7f4476b37eda896357ddc604192200",
+    "AL1": "ec1c9d1e03fd85b2f08c75f87fe6f9762309fd1281c070616faecff10b6acec4",
+    "RG1": "1c9df64151234f4785996e5e06373ceb620faabed39fbc8fba07f9a82ce4d0ea",
+    "SP1": "ccc14fedfbbcdfce44b2236f9eb5649e11578ef65e57601b90a0b67fed17fe3c",
+    "MA1": "bf2c1b034ba9dbd4625299f05e45dea8d012c1f12d1a971655cdac8eb57b9fd0",
+    "ME1": "38c5acd12d23d44ca136f169e127fa60c80da85655271c468b2afe84ec750177",
+    "BF1": "9c195c33ea2830d8df7dee889c4d94286592d6bca4d5694d01c8d9b340e5af11",
+    "DT1": "b1da7a7293d70ee6183b3c91d1460b1e8c31e4470b791235842db4868c5f68f8"
+  },
+  "scope": "Physical BP1 net partition equals generated module-port/testbench scalar wiring partition, including supplies and reset/clock branches; NC pins excluded."
+}

@@ -1,0 +1,2479 @@
+
+--- PDF page 1 ---
+                                                                                                                                                                                                      /C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0048/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0048
+                                                                                                                 /C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0053/C0052/C0072/C0067/C0084/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0084/C0049/C0057/C0049
+                                                    /C0083/C0089/C0078/C0067/C0072/C0082/C0079/C0078/C0079/C0085/C0083 /C0085/C0080/C0047/C0068/C0079/C0087/C0078 /C0067/C0079/C0085/C0078/C0084/C0069/C0082/C0083 /C0087/C0073/C0084/C0072 /C0068/C0079/C0087/C0078/C0047/C0085/C0080 /C0077/C0079/C0068/C0069 /C0067/C0079/C0078/C0084/C0082/C0079/C0076
+                                                                                                                                                                              SCHS275E − MARCH 2002 − REVISED OCTOBER 2003
+     /C0068    2-V to 6-V VCC Operation (’HC190, 191)                                                                                                        CD54HC190, 191; CD54HCT191...F  PACKAGE
+     /C0068    4.5-V to 5.5-V VCC Operation (’HCT191)                                                                                                               CD74HC190 . . . E, NS, OR PW PACKAGE
+                                                                                                                                                            CD74HC191, CD74HCT191 ...E OR M PACKAGE
+     /C0068    Wide Operating Temperature Range of                                                                                                                                                (TOP VIEW)
+               −55°C to 125°C                                                                                                                                                              B        1               16        VCC
+     /C0068    Synchronous Counting and Asynchronous                                                                                                                                    QB          2               15        A
+               Loading                                                                                                                                                                  QA          3               14        CLK
+     /C0068    Two Outputs for n-Bit Cascading                                                                                                                                   CTEN               4               13        RCO
+     /C0068    Look-Ahead Carry for High-Speed Counting                                                                                                                               D/U           5               12        MAX/MIN
+     /C0068    Balanced Propagation Delays and                                                                                                                                         QC           6               11        LOAD
+               Transition Times                                                                                                                                                        QD           7               10        C
+     /C0068    Standard Outputs Drive Up To 15 LS-TTL                                                                                                                               GND             8                 9       D
+               Loads
+     /C0068    Significant Power Reduction Compared to
+               LS-TTL Logic ICs
+
+description/ordering information
+
+            The CD54/74HC190 are asynchronously presettable BCD decade counters, whereas the CD54/74HC191 and
+            CD54/74HCT191 are asynchronously presettable binary counters.
+            Presetting the counter to the number on preset data inputs (A−D) is accomplished by a low asynchronous
+            parallel load (LOAD) input. Counting occurs when LOAD is high, count enable (CTEN) is low, and the down/up
+            (D/U) input is either high for down counting or low for up counting. The counter is decremented or incremented
+            synchronously with the low-to-high transition of the clock.
+
+                                                                                                     ORDERING INFORMATION
+                                                          TA                                         PACKAGE†                                           ORDERABLE                                     TOP-SIDE
+                                                                                                                                                      PART NUMBER                                     MARKING
+                                                                                                                                                     CD74HC190E                                CD74HC190E
+                                                                                   PDIP − E                        Tube of 25                        CD74HC191E                                CD74HC191E
+                                                                                   PDIP − E                        Tube of 25
+                                                                                                                                                     CD74HCT191E                               CD74HCT191E
+                                                                                                                   Tube of 40                        CD74HC191M
+                                                                                                                   Reel of 2500                      CD74HC191M96                              HC191MHC191M
+                                                                                   SOIC − MSOIC − M                Reel of 250                       CD74HC191MT
+
+                                                                                                                   Tube of 40                        CD74HCT191M                               HCT191M
+                                             −55°C to 125°C−55°C to 125°C          SOP − NS                        Reel of 2000                      CD74HC190NSR                              HC190M
+
+                                                                                                                   Tube of 90                        CD74HC190PW
+                                                                                   TSSOP − PWTSSOP − PW            Reel of 2000                      CD74HC190PWR                              HJ190HJ190
+                                                                                                                   Reel of 250                       CD74HC190PWT
+                                                                                                                                                     CD54HC190F3A                              CD54HC190F3A
+                                                                                   CDIP − FCDIP − F                Tube of 25Tube of 25              CD54HC191F3A                              CD54HC191F3A
+                                                                                                                                                     CD54HCT191F3A                             CD54HCT191F3A
+                                          † Package drawings, standard packing quantities, thermal data, symbolization, and PCB design
+                                             guidelines are available at www.ti.com/sc/package.
+
+
+
+
+
+                           Please be aware that an important notice concerning availability, standard warranty, and use in critical applications of
+                           Texas Instruments semiconductor products and disclaimers thereto appears at the end of this data sheet.
+
+
+
+/C0080/C0082/C0079/C0068/C0085/C0067/C0084/C0073/C0079/C0078  /C0068/C0065/C0084/C0065  /C0105/C0110/C0102/C0111/C0114/C0109/C0097/C0116/C0105/C0111/C0110  /C0105/C0115  /C0099/C0117/C0114/C0114/C0101/C0110/C0116  /C0097/C0115  /C0111/C0102  /C0112/C0117/C0098/C0108/C0105/C0099/C0097/C0116/C0105/C0111/C0110  /C0100/C0097/C0116/C0101/C0046Copyright  2003, Texas Instruments Incorporated
+/C0080/C0114/C0111/C0100/C0117/C0099/C0116/C0115 /C0099/C0111/C0110/C0102/C0111/C0114/C0109 /C0116/C0111 /C0115/C0112/C0101/C0099/C0105/C0102/C0105/C0099/C0097/C0116/C0105/C0111/C0110/C0115 /C0112/C0101/C0114 /C0116/C0104/C0101 /C0116/C0101/C0114/C0109/C0115 /C0111/C0102 /C0084/C0101/C0120/C0097/C0115 /C0073/C0110/C0115/C0116/C0114/C0117/C0109/C0101/C0110/C0116/C0115/C0079/C0110 /C0112/C0114/C0111/C0100/C0117/C0099/C0116/C0115 /C0099/C0111/C0109/C0112/C0108/C0105/C0097/C0110/C0116 /C0116/C0111 /C0077/C0073/C0076/C0262/C0080/C0082/C0070/C0262/C0051/C0056/C0053/C0051/C0053/C0044 /C0097/C0108/C0108 /C0112/C0097/C0114/C0097/C0109/C0101/C0116/C0101/C0114/C0115 /C0097/C0114/C0101 /C0116/C0101/C0115/C0116/C0101/C0100
+/C0115/C0116/C0097/C0110/C0100/C0097/C0114/C0100 /C0119/C0097/C0114/C0114/C0097/C0110/C0116/C0121/C0046 /C0080/C0114/C0111/C0100/C0117/C0099/C0116/C0105/C0111/C0110 /C0112/C0114/C0111/C0099/C0101/C0115/C0115/C0105/C0110/C0103 /C0100/C0111/C0101/C0115 /C0110/C0111/C0116 /C0110/C0101/C0099/C0101/C0115/C0115/C0097/C0114/C0105/C0108/C0121 /C0105/C0110/C0099/C0108/C0117/C0100/C0101/C0117/C0110/C0108/C0101/C0115/C0115   /C0111/C0116/C0104/C0101/C0114/C0119/C0105/C0115/C0101   /C0110/C0111/C0116/C0101/C0100/C0046   /C0079/C0110   /C0097/C0108/C0108   /C0111/C0116/C0104/C0101/C0114   /C0112/C0114/C0111/C0100/C0117/C0099/C0116/C0115/C0044   /C0112/C0114/C0111/C0100/C0117/C0099/C0116/C0105/C0111/C0110
+/C0116/C0101/C0115/C0116/C0105/C0110/C0103 /C0111/C0102 /C0097/C0108/C0108 /C0112/C0097/C0114/C0097/C0109/C0101/C0116/C0101/C0114/C0115/C0046                                              /C0112/C0114/C0111/C0099/C0101/C0115/C0115/C0105/C0110/C0103 /C0100/C0111/C0101/C0115 /C0110/C0111/C0116 /C0110/C0101/C0099/C0101/C0115/C0115/C0097/C0114/C0105/C0108/C0121 /C0105/C0110/C0099/C0108/C0117/C0100/C0101 /C0116/C0101/C0115/C0116/C0105/C0110/C0103 /C0111/C0102 /C0097/C0108/C0108 /C0112/C0097/C0114/C0097/C0109/C0101/C0116/C0101/C0114/C0115/C0046
+
+
+
+                                                                                               POST OFFICE BOX 655303 • DALLAS, TEXAS 75265                                                                                                                                   1
+
+--- PDF page 2 ---
+/C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0048/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0048
+/C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0053/C0052/C0072/C0067/C0084/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0084/C0049/C0057/C0049
+/C0083/C0089/C0078/C0067/C0072/C0082/C0079/C0078/C0079/C0085/C0083 /C0085/C0080/C0047/C0068/C0079/C0087/C0078 /C0067/C0079/C0085/C0078/C0084/C0069/C0082/C0083 /C0087/C0073/C0084/C0072 /C0068/C0079/C0087/C0078/C0047/C0085/C0080 /C0077/C0079/C0068/C0069 /C0067/C0079/C0078/C0084/C0082/C0079/C0076
+ SCHS275E − MARCH 2002 − REVISED OCTOBER 2003
+
+description/ordering information (continued)
+
+         When an overflow or underflow of the counter occurs, the MAX/MIN output, which is low during counting, goes
+         high and remains high for one clock cycle. This output can be used for look-ahead carry in high-speed cascading
+         (see Figure 1). The MAX/MIN output also initiates the ripple clock (RCO) output, which normally is high, goes
+         low, and remains low for the low-level portion of the clock pulse. These counters can be cascaded using RCO
+         (see Figure 2).
+         If a decade counter is preset to an illegal state or assumes an illegal state when power is applied, it returns to
+         the normal sequence in one or two counts, as shown in the state diagrams (see Figure 3).
+
+                                                                                       FUNCTION TABLE
+                                                                           INPUTS                                           FUNCTIONFUNCTION
+                                                     LOAD            CTEN             D/U             CLK
+
+                                                         H               L              L                              Count up
+                                                         H               L              H                              Count down
+                                                         L              X               X               X              Asynchronous preset
+                                                         H              H               X               X              No change
+                                                  D/U or CTEN should be changed only when clock is high.
+                                                  X = Don’t care
+                                                       Low-to-high clock transition
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2                                                                    POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+
+--- PDF page 3 ---
+                                                                                                                                                                                                   /C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0048/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0048
+                                                                                                               /C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0053/C0052/C0072/C0067/C0084/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0084/C0049/C0057/C0049
+                                                   /C0083/C0089/C0078/C0067/C0072/C0082/C0079/C0078/C0079/C0085/C0083 /C0085/C0080/C0047/C0068/C0079/C0087/C0078 /C0067/C0079/C0085/C0078/C0084/C0069/C0082/C0083 /C0087/C0073/C0084/C0072 /C0068/C0079/C0087/C0078/C0047/C0085/C0080 /C0077/C0079/C0068/C0069 /C0067/C0079/C0078/C0084/C0082/C0079/C0076
+                                                                                                                                                                            SCHS275E − MARCH 2002 − REVISED OCTOBER 2003
+
+’HC190 logic diagram
+
+                                                                            A                                                                                      B
+                                                                                 15                                                                     1
+
+
+     CLK        14                                                                                                                                                                                                                                                   b
+
+
+                  5
+      D/U                                                                                                                                                                                                                                                            c
+
+  LOAD          11                                                                                                                                                                                                                                                   d
+
+                                                                                                                                                                                                                                                                     e
+                                                                                                                                                                                                                                                                     f
+                                                                                                                                                                                                                                                                     g
+                                                                                                                                                                                                                                                                     h
+                                                                                                                                                                                                                                                                     i
+
+
+
+
+
+
+
+                                                                                  LOAD                                                                                 LOAD
+                                                                                  DATA                                                                                  DATA
+                                                                                   T      Q                                                                             T       Q                                                                                    j
+
+                                                                                 CLKQ                                                                                  CLKQ
+
+                                                                                   FF0                                                                                   FF1
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                     k
+                                                                                                                                                                                                                                                                     l
+                                                                                                                                                                                                                                                                     m
+                                                                                                                                                                                                                                                                     n
+                                                                                                                                                                                                                                                                     o
+
+                   4                                                                                                                                                                                                                                                 p
+    CTEN
+
+
+
+
+
+
+                                                                                                                32QA                                                                   QB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                             POST OFFICE BOX 655303 • DALLAS, TEXAS 75265                                                                                                                                 3
+
+--- PDF page 4 ---
+/C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0048/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0048
+/C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0053/C0052/C0072/C0067/C0084/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0084/C0049/C0057/C0049
+/C0083/C0089/C0078/C0067/C0072/C0082/C0079/C0078/C0079/C0085/C0083 /C0085/C0080/C0047/C0068/C0079/C0087/C0078 /C0067/C0079/C0085/C0078/C0084/C0069/C0082/C0083 /C0087/C0073/C0084/C0072 /C0068/C0079/C0087/C0078/C0047/C0085/C0080 /C0077/C0079/C0068/C0069 /C0067/C0079/C0078/C0084/C0082/C0079/C0076
+ SCHS275E − MARCH 2002 − REVISED OCTOBER 2003
+
+’HC190 logic diagram (continued)
+
+              C                                                                                                                           D
+                   10                                                                                                                         9
+
+
+ b                                                                                                                                                                                                                                                                                    13
+                                                                                                                                                                                                                                                                                               RCO
+
+ c
+
+ d                                                                                                                                                                                                                                                                                    12 MAX/MIN
+ e
+ gf
+ hi
+
+
+
+
+
+
+                        LOAD                                                                                                                     LOAD
+                        DATA                                                                                                                      DATA
+  j                    T          Q                                                                                                               T         Q
+
+                       CLKQ                                                                                                                      CLKQ
+                          FF2                                                                                                                      FF3
+
+
+
+
+
+
+
+
+ k
+  l
+m
+ n
+ o
+
+ p
+
+
+
+                                                              6     QC                                                                                       QD7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4                                                                                                        POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+
+--- PDF page 5 ---
+                                                                                                                                                                                                   /C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0048/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0048
+                                                                                                               /C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0053/C0052/C0072/C0067/C0084/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0084/C0049/C0057/C0049
+                                                   /C0083/C0089/C0078/C0067/C0072/C0082/C0079/C0078/C0079/C0085/C0083 /C0085/C0080/C0047/C0068/C0079/C0087/C0078 /C0067/C0079/C0085/C0078/C0084/C0069/C0082/C0083 /C0087/C0073/C0084/C0072 /C0068/C0079/C0087/C0078/C0047/C0085/C0080 /C0077/C0079/C0068/C0069 /C0067/C0079/C0078/C0084/C0082/C0079/C0076
+                                                                                                                                                                            SCHS275E − MARCH 2002 − REVISED OCTOBER 2003
+
+’HC191, ’HCT191 logic diagram
+
+                                                                        A                                                                  B                                                                 C
+                                                                            15                                                     1                                                                            10
+
+
+
+CLK       14                                                                                                                                                                                                                                                            b
+
+ D/U      5                                                                                                                                                                                                                                                             c
+
+                                                                                                                                                                                                                                                                        d
+          11                                                                                                                                                                                                                                                            e
+LOAD                                                                                                                                                                                                                                                                    f
+                                                                                                                                                                                                                                                                        g
+
+
+
+
+
+
+
+
+
+                                                                               LOAD                                                               LOAD                                                             LOAD
+                                                                               DATA                                                               DATA                                                              DATA
+                                                                               T        Q                                                          T      Q                                                         T      Q                                            h
+                                                                                                                                                                                                                                                                        i
+                                                                              CLK       Q                                                         CLKQ                                                             CLKQ
+
+                                                                                  FF0                                                               FF1                                                              FF2
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                        j
+                                                                                                                                                                                                                                                                        k
+                                                                                                                                                                                                                                                                        l
+          4                                                                                                                                                                                                                                                             M
+CTEN                                                                                                                                                                                                                                                                    N
+
+
+
+
+
+                                                                                                                  32QA                                                                                                      QCQB                   6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                             POST OFFICE BOX 655303 • DALLAS, TEXAS 75265                                                                                                                                 5
+
+--- PDF page 6 ---
+/C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0048/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0048
+/C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0053/C0052/C0072/C0067/C0084/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0084/C0049/C0057/C0049
+/C0083/C0089/C0078/C0067/C0072/C0082/C0079/C0078/C0079/C0085/C0083 /C0085/C0080/C0047/C0068/C0079/C0087/C0078 /C0067/C0079/C0085/C0078/C0084/C0069/C0082/C0083 /C0087/C0073/C0084/C0072 /C0068/C0079/C0087/C0078/C0047/C0085/C0080 /C0077/C0079/C0068/C0069 /C0067/C0079/C0078/C0084/C0082/C0079/C0076
+ SCHS275E − MARCH 2002 − REVISED OCTOBER 2003
+
+’HC191, ’HCT191 logic diagram (continued)
+
+                                                                                            D
+                                                                                                9
+
+
+                                                       b                                                                                                                                                                                                                              13
+                                                                                                                                                                                                                                                                                               RCO
+
+                                                      c
+                                                      d                                                                                                                                                                                                                               12    MAX/MIN
+                                                      e
+                                                       f
+                                                      g
+
+
+
+
+
+                                                                                                        LOAD
+                                                      h                                               DATA
+                                                       i                                              T              Q
+
+                                                                                                      CLK            Q
+                                                                                                           FF3
+
+
+
+
+                                                       j
+                                                      k
+                                                       l
+                                                     m
+                                                      n
+
+
+
+
+
+                                                                                                                                                  7      QD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6                                                                                                            POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+
+--- PDF page 7 ---
+                                                                                                                                                                                                                               /C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0048/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0048
+                                                                                                                               /C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0053/C0052/C0072/C0067/C0084/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0084/C0049/C0057/C0049
+                                                           /C0083/C0089/C0078/C0067/C0072/C0082/C0079/C0078/C0079/C0085/C0083 /C0085/C0080/C0047/C0068/C0079/C0087/C0078 /C0067/C0079/C0085/C0078/C0084/C0069/C0082/C0083 /C0087/C0073/C0084/C0072 /C0068/C0079/C0087/C0078/C0047/C0085/C0080 /C0077/C0079/C0068/C0069 /C0067/C0079/C0078/C0084/C0082/C0079/C0076
+                                                                                                                                                                                                     SCHS275E − MARCH 2002 − REVISED OCTOBER 2003
+
+’HC190 and ’HC191/HCT191 flip-flop
+
+                                                                                                                                                         DATA
+
+
+
+
+                                                                                                                                     LOAD
+
+
+
+
+                                                                                                                                                       np                         LOAD
+                                        LOAD                                                         LOAD
+
+                                                                                                                                                                                                    CL
+                                                                             CL
+
+                                                                                                                                                                                                      p
+                                                                                                                                                                                                      n                                                                                                Q
+                                                                              p                                                           p
+                                                                               n                                                          n
+
+
+                                                                                                                                     LOAD                                                                                 p          n                CK
+                                                                                                 p          n             CLK                                                                                                                                                                           Q
+
+                                                                          CLK                                                                                                                    CLK
+
+
+
+
+
+
+
+
+
+
+
+                     T
+
+
+
+                                                     CLK
+
+
+
+                               CLK                                                                         CLK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                           POST OFFICE BOX 655303 • DALLAS, TEXAS 75265                                                                                                                                                          7
+
+--- PDF page 8 ---
+/C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0048/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0048
+/C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0053/C0052/C0072/C0067/C0084/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0084/C0049/C0057/C0049
+/C0083/C0089/C0078/C0067/C0072/C0082/C0079/C0078/C0079/C0085/C0083 /C0085/C0080/C0047/C0068/C0079/C0087/C0078 /C0067/C0079/C0085/C0078/C0084/C0069/C0082/C0083 /C0087/C0073/C0084/C0072 /C0068/C0079/C0087/C0078/C0047/C0085/C0080 /C0077/C0079/C0068/C0069 /C0067/C0079/C0078/C0084/C0082/C0079/C0076
+ SCHS275E − MARCH 2002 − REVISED OCTOBER 2003
+
+typical load, count, and inhibit sequence for ’HC190
+
+          The following sequence is illustrated below:
+                  1.   Load (preset) to BCD 7
+                  2.   Count up to 8, 9 (maximum), 0, 1, and 2
+                  3.   Inhibit
+                  4.   Count down to 1, 0 (minimum), 9, 8, and 7
+
+
+          Parallel Load                             L
+
+
+
+                            P0                     H
+
+
+
+                            P1                     H
+         Preset
+            Input
+             Data           P2                     H
+
+
+
+                            P3
+
+
+                       Clock
+
+
+
+                 Down/Up                            L
+
+
+          Clock Enable                              L                                                                            H
+
+
+                            Q0                     H                                                                             L
+
+
+
+                            Q1                                      L                                                            H
+
+
+
+                            Q2                                      L                                                                                                                          L
+
+
+
+                            Q3                                      H                                                                                                                           H
+
+
+      Terminal Count                                                                                                                                                                             L
+
+
+
+           Ripple Clock
+
+                                                    7890122210987
+
+                                                                                    Count Up                                   Inhibit                                            Count Down
+
+                                                 Load
+
+
+
+
+
+
+
+
+
+
+8                                                                           POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+
+--- PDF page 9 ---
+                                                                                                                                                                  /C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0048/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0048
+                                                                                            /C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0053/C0052/C0072/C0067/C0084/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0084/C0049/C0057/C0049
+                                           /C0083/C0089/C0078/C0067/C0072/C0082/C0079/C0078/C0079/C0085/C0083 /C0085/C0080/C0047/C0068/C0079/C0087/C0078 /C0067/C0079/C0085/C0078/C0084/C0069/C0082/C0083 /C0087/C0073/C0084/C0072 /C0068/C0079/C0087/C0078/C0047/C0085/C0080 /C0077/C0079/C0068/C0069 /C0067/C0079/C0078/C0084/C0082/C0079/C0076
+                                                                                                                                               SCHS275E − MARCH 2002 − REVISED OCTOBER 2003
+
+typical load, count, and inhibit sequence for ’HC191 and ’HCT191
+
+          The following sequence is illustrated below:
+                  1.   Load (preset) to binary 13
+                  2.   Count up to 14, 15 (maximum), 0, 1, and 2
+                  3.   Inhibit
+                  4.   Count down to 1, 0 (minimum), 15, 14, and 13
+
+
+                           LOAD
+
+
+                                    A
+
+
+         Data                       B
+
+      Inputs
+                                    C
+
+
+                                    D
+
+
+
+                               CLK
+
+
+                                D/U
+
+
+                             CTEN                                                                                                    H
+
+
+                                 QA                                                                                                  L
+
+
+        Data                     QB                                                                                                  H
+
+  Outputs
+                                 QC                                                                                                  L
+
+
+                                 QD
+
+
+                       MAX/MIN                                                                                                                                              H
+
+
+                              RCO                                                                                                                                              L
+
+                                                             13            14         15        0        1      2                                    2210151413
+
+                                                                                      Count Up                                  Inhibit                                      Count Down
+
+
+
+                                                           Load
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                              POST OFFICE BOX 655303 • DALLAS, TEXAS 75265                                                                                                   9
+
+--- PDF page 10 ---
+/C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0048/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0048
+/C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0053/C0052/C0072/C0067/C0084/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0084/C0049/C0057/C0049
+/C0083/C0089/C0078/C0067/C0072/C0082/C0079/C0078/C0079/C0085/C0083 /C0085/C0080/C0047/C0068/C0079/C0087/C0078 /C0067/C0079/C0085/C0078/C0084/C0069/C0082/C0083 /C0087/C0073/C0084/C0072 /C0068/C0079/C0087/C0078/C0047/C0085/C0080 /C0077/C0079/C0068/C0069 /C0067/C0079/C0078/C0084/C0082/C0079/C0076
+ SCHS275E − MARCH 2002 − REVISED OCTOBER 2003
+
+          Direction
+            Control
+
+             Enable
+
+
+
+
+
+                                                      D/U                                                            D/U                                                             D/U
+                                                     CE                                                              CE                                                              CE
+                                                     CP         TC                                                   CP         TC                                                   CP         TC
+
+
+               Clock
+
+               Figure 1. ’HC190 Synchronous n-Stage Counter With Parallel Gated Terminal Count
+
+                     Direction
+                        Control
+
+
+                                                          D/U            RC                                   D/U           RC                                    D/U           RC
+                        Enable                            CE                                                  CE                                                  CE
+
+                                                          CP                                                  CP                                                  CP
+
+
+
+                          Clock
+
+    Figure 2. ’HC191, ’HCT191 Synchronous n-Stage Counter With Parallel Gated Terminal Count
+
+
+                         0             1              234                                                                       0               1              234
+
+
+
+                        15                                                         5                                            15                                                          5
+
+
+
+                        14                                                         6                                            14                                                          6
+
+
+
+                        13                                                         7                                            13                                                          7
+
+
+
+                        12            11             10             9              8                                            12             11             10              9             8
+
+
+                                         Count Up                                                                                                      Count Down
+
+     NOTE:  Illegal states in BCD counters corrected in one count                                                NOTE:   Illegal states in BCD counters corrected in one or two counts
+
+                                                                         Figure 3. ’HC190 State Diagram
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10                                                                       POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+
+--- PDF page 11 ---
+                                                                                                                                            /C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0048/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0048
+                                                                                /C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0053/C0052/C0072/C0067/C0084/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0084/C0049/C0057/C0049
+                                     /C0083/C0089/C0078/C0067/C0072/C0082/C0079/C0078/C0079/C0085/C0083 /C0085/C0080/C0047/C0068/C0079/C0087/C0078 /C0067/C0079/C0085/C0078/C0084/C0069/C0082/C0083 /C0087/C0073/C0084/C0072 /C0068/C0079/C0087/C0078/C0047/C0085/C0080 /C0077/C0079/C0068/C0069 /C0067/C0079/C0078/C0084/C0082/C0079/C0076
+                                                                                                                            SCHS275E − MARCH 2002 − REVISED OCTOBER 2003
+
+absolute maximum ratings over operating free-air temperature range (unless otherwise noted)†
+
+         Supply voltage range, VCC                                                                                                             −0.5 V to 7 V. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+         Input clamp current, IIK (VI < 0 or VI > VCC) (see Note 1)                                                                             ±20 mA. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+         Output clamp current, IOK (VO < 0 or VO > VCC) (see Note 1)                                                                    ±20 mA. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+         Continuous output drain current per output, IO (VO = 0 to VCC)                                                                  ±35 mA. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+         Continuous output source or sink current per output, IO (VO = 0 to VCC)                                                  ±25 mA. . . . . . . . . . . . . . . . . . . . . . .
+         Continuous current through VCC or GND                                                                                                         ±50 mA. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+         Package thermal impedance, θJA (see Note 2): E package                                                                  67°C/W. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+                                                                                          M package                                                                 73°C/W. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+                                                                                          NS package                                                               64°C/W. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+                                                                                          PW package                                                             108°C/W. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+         Storage temperature range, Tstg −65°C to 150°C. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+† Stresses beyond those listed under “absolute maximum ratings” may cause permanent damage to the device. These are stress ratings only, and
+  functional operation of the device at these or any other conditions beyond those indicated under “recommended operating conditions” is not
+  implied. Exposure to absolute-maximum-rated conditions for extended periods may affect device reliability.
+NOTES:   1.   The input and output voltage ratings may be exceeded if the input and output current ratings are observed.
+              2.   The package thermal impedance is calculated in accordance with JESD 51-7.
+
+recommended operating conditions for ’HC190 and ’HC191 (see Note 3)
+
+                                                                                                                  TA = 25°C             TA = −55°C             TA = −40°C
+                                                                                                                                         TO 125°C                TO 85°C              UNITUNIT
+                                                                                                                  MIN       MAX          MIN       MAX          MIN       MAX
+  VCC          Supply voltage                                                                                         2          6           2          6           2          6        V
+                                                                               VCC = 2 V                           1.5                    1.5                    1.5
+  VVIHIH       High-level input voltage                                      VCC = 4.5 VHigh-level input voltage 3.15                   3.15                   3.15                     VV
+                                                                               VCC = 6 V                           4.2                    4.2                    4.2
+                                                                               VCC = 2 V                                       0.5                    0.5                    0.5
+  VVILIL       Low-level input voltage                                      VCC = 4.5 VLow-level input voltage               1.35                   1.35                   1.35         VV
+                                                                               VCC = 6 V                                       1.8                    1.8                    1.8
+  VI           Input voltage                                                                                          0     VCC              0     VCC              0     VCC           V
+  VO           Output voltage                                                                                         0     VCC              0     VCC              0     VCC           V
+                                                                               VCC = 2 V                                    1000                   1000                   1000
+  tttt         Input transition (rise and fall) time                      VCC = 4.5 VInput transition (rise and fall) time    500                    500                    500         nsns
+                                                                               VCC = 6 V                                      400                    400                    400
+NOTE 3:   All unused inputs of the device must be held at VCC or GND to ensure proper device operation. Refer to the TI application report,
+              Implications of Slow or Floating CMOS Inputs, literature number SCBA004.
+
+recommended operating conditions for ’HCT191 (see Note 4)
+
+                                                                                                                  TA = 25°C             TA = −55°C             TA = −40°C
+                                                                                                                                         TO 125°C                TO 85°C              UNITUNIT
+                                                                                                                  MIN       MAX          MIN       MAX          MIN       MAX
+  VCC       Supply voltage                                                                                         4.5         5.5        4.5         5.5        4.5         5.5        V
+  VIH       High-level input voltage                                                                                  2                      2                      2                   V
+  VIL       Low-level input voltage                                                                                            0.8                    0.8                    0.8        V
+  VI        Input voltage                                                                                                   VCC                    VCC                    VCC           V
+  VO        Output voltage                                                                                                  VCC                    VCC                    VCC           V
+  tt        Input transition (rise and fall) time                                                                             500                    500                    500         ns
+NOTE 4:   All unused inputs of the device must be held at VCC or GND to ensure proper device operation. Refer to the TI application report,
+              Implications of Slow or Floating CMOS Inputs, literature number SCBA004.
+
+
+
+
+
+
+
+
+
+
+                                                                   POST OFFICE BOX 655303 • DALLAS, TEXAS 75265                                                                               11
+
+--- PDF page 12 ---
+/C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0048/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0048
+/C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0053/C0052/C0072/C0067/C0084/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0084/C0049/C0057/C0049
+/C0083/C0089/C0078/C0067/C0072/C0082/C0079/C0078/C0079/C0085/C0083 /C0085/C0080/C0047/C0068/C0079/C0087/C0078 /C0067/C0079/C0085/C0078/C0084/C0069/C0082/C0083 /C0087/C0073/C0084/C0072 /C0068/C0079/C0087/C0078/C0047/C0085/C0080 /C0077/C0079/C0068/C0069 /C0067/C0079/C0078/C0084/C0082/C0079/C0076
+ SCHS275E − MARCH 2002 − REVISED OCTOBER 2003
+
+’HC190, ’HC191
+electrical characteristics over recommended operating free-air temperature range (unless
+otherwise noted)
+
+                                                                                                             TA = 25°C             TA = −55°C            TA = −40°C
+        PARAMETERPARAMETER                         TEST CONDITIONSTEST CONDITIONS                VCCVCC                             TO 125°C               TO 85°C             UNITUNIT
+                                                                                                             MIN       MAX          MIN      MAX          MIN       MAX
+                                                                                                  2 V          1.9                   1.9                   1.9
+                                                                   I     = −20 µA               4.5 V          4.4                   4.4                   4.4
+                                                                   IOH = −20 µAOH
+              VVOHOH                VVI = VIH or VILI = VIH or VIL                                6 V          5.9                   5.9                   5.9                   VV
+                                                                   IOH = −4 mA                  4.5 V        3.98                    3.7                 3.84
+                                                                   IOH = −5.2 mA                  6 V        5.48                    5.2                 5.34
+                                                                                                  2 V                     0.1                   0.1                   0.1
+                                                                   IIOL = 20 µAOL = 20 µA       4.5 V                     0.1                   0.1                   0.1
+              VVOLOL                VVI = VIH or VILI = VIH or VIL                                6 V                     0.1                   0.1                   0.1        VV
+                                                                   IOL = 4 mA                   4.5 V                   0.26                    0.4                 0.33
+                                                                   IOL = 5.2 mA                   6 V                   0.26                    0.4                 0.33
+              II                    VI = VCC or 0                                                 6 V                   ±0.1                     ±1                    ±1       µA
+              ICC                   VI = VCC or 0,                 IO = 0                         6 V                       8                  160                     80       µA
+              Ci                                                                                                           10                    10                    10       pF
+
+’HCT191
+electrical characteristics over recommended operating free-air temperature range (unless
+otherwise noted)
+
+                                                                                                        TA = 25°C                  TA = −55°C            TA = −40°C
+ PARAMETERPARAMETER               TEST CONDITIONSTEST CONDITIONS                 VCCVCC                                             TO 125°C               TO 85°C             UNITUNIT
+                                                                                                  MIN        TYP       MAX          MIN      MAX          MIN       MAX
+                                                   IOH = −20 µA                                     4.4                              4.4                   4.4
+        VOHVOH         VI = VIH or VILVI = VIH or VILIOH = −4 mA                4.5 V4.5 V        3.98                               3.7                 3.84                    VV
+
+                                                   IOL = 20 µA                                                            0.1                   0.1                   0.1
+        VOLVOL         VI = VIH or VILVI = VIH or VILIOL = 4 mA                 4.5 V4.5 V                              0.26                    0.4                 0.33         VV
+
+        II             VI = VCC to GND                                          5.5 V                                   ±0.1                     ±1                    ±1       µA
+        ICC            VI = VCC or 0,              IO = 0                       5.5 V                                       8                  160                     80       µA
+        ∆ICC†          One input at VCC − 2.1 V,                           4.5 V to 5.5 V                     100        360                   490                   450        µA
+                       Other inputs at 0 or VCC
+        Ci                                                                                                                 10                    10                    10       pF
+† Additional quiescent supply current per input pin, TTL inputs high, 1 unit load
+
+                                                                        HCT INPUT LOADING TABLE
+                                                                       INPUTS                      UNIT LOADS
+                                                                          A-D                             0.4
+                                                                          CLK                             1.5
+                                                                         LOAD                             1.5
+                                                                          D/U                             1.2
+                                                                         CTEN                             1.5
+                                                             Unit load is /C0110ICC limit specified in electrical
+                                                             characteristics table, (e.g., 360 µA max at 25°C).
+
+
+
+
+
+
+
+
+
+
+12                                                             POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+
+--- PDF page 13 ---
+                                                                                                                                                     /C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0048/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0048
+                                                                                     /C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0053/C0052/C0072/C0067/C0084/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0084/C0049/C0057/C0049
+                                       /C0083/C0089/C0078/C0067/C0072/C0082/C0079/C0078/C0079/C0085/C0083 /C0085/C0080/C0047/C0068/C0079/C0087/C0078 /C0067/C0079/C0085/C0078/C0084/C0069/C0082/C0083 /C0087/C0073/C0084/C0072 /C0068/C0079/C0087/C0078/C0047/C0085/C0080 /C0077/C0079/C0068/C0069 /C0067/C0079/C0078/C0084/C0082/C0079/C0076
+                                                                                                                                    SCHS275E − MARCH 2002 − REVISED OCTOBER 2003
+
+’HC190, ’HC191 timing requirements over recommended operating free-air temperature range
+(unless otherwise noted) (see Figure 4)
+
+                                                                                                                         TA = 25°C               TA = −55°C              TA = −40°C
+                                                                                                           VCCVCC                                 TO 125°C                 TO 85°C               UNITUNIT
+                                                                                                                         MIN        MAX           MIN        MAX          MIN        MAX
+                                                                                                            2 V                           6                       4                       5
+  ffclockclock  Clock frequency†                                                                         4.5 VClock frequency†          30                      20                       25       MHzMHz
+                                                                                                            6 V                         35                      23                       29
+                                                                                                            2 V             80                    120                      100
+                                                             LOADLOAD low low                              4.5 V            16                      24                      20
+  tw            Pulse duration                                                                              6 V             14                      20                      17                     ns
+  tw            Pulse duration                                                                              2 V           100                     150                      125                     ns
+
+                                                             CLK high or lowCLK high or low                4.5 V            20                      30                      25
+                                                                                                            6 V             17                      26                      21
+                                                                                                            2 V             60                      90                      75
+                                                             Data before LOADData before LOAD↑↑            4.5 V            12                      18                      15
+                                                                                                            6 V             10                      15                      13
+                                                                                                            2 V             60                      90                      75
+  ttsusu        Setup time                                CTENSetup timeCTEN before CLK↑ before CLK↑       4.5 V            12                      18                      15                     nsns
+                                                                                                            6 V             10                      15                      13
+                                                                                                            2 V             90                    135                      115
+                                                             D/UD/U before CLK↑ before CLK↑                4.5 V            18                      27                      23
+                                                                                                            6 V             15                      23                      20
+                                                                                                            2 V              2                        2                       2
+                                                             Data before LOADData before LOAD↑             4.5 V             2                        2                       2
+                                                                                                            6 V              2                        2                       2
+                                                                                                            2 V              2                        2                       2
+  tthh          Hold time                                  CTENHold timeCTEN before CLK before CLK↑        4.5 V             2                        2                       2                    nsns
+                                                                                                            6 V              2                        2                       2
+                                                                                                            2 V              0                        0                       0
+                                                             D/UD/U before CLK before CLK↑                 4.5 V             0                        0                       0
+                                                                                                            6 V              0                        0                       0
+                                                                                                            2 V             60                      90                      75
+  ttrecrec      Recovery time                           LOADRecovery timeLOAD inactive before CLK↑ inactive before CLK↑4.5 V12                      18                      15                     nsns
+                                                                                                            6 V             10                      15                      13
+† Applies to noncascaded operation only. With cascaded counters, clock-to-terminal count propagation delays, CTEN-to-clock setup times, and
+  CTEN-to-clock hold times determine maximum clock frequency. For example, with these HC devices:
+
+    fmax(CLK) /C0043                                                                         1CLK-to-MAX/C0324MIN propagation delay /C0041 CTEN-to-CLK setup time /C0041 CTEN-to-CLK hold time/C0043          142/C0041 12 /C0041 2/C0091 18 MHz
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                       POST OFFICE BOX 655303 • DALLAS, TEXAS 75265                                                                                       13
+
+--- PDF page 14 ---
+/C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0048/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0048
+/C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0053/C0052/C0072/C0067/C0084/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0084/C0049/C0057/C0049
+/C0083/C0089/C0078/C0067/C0072/C0082/C0079/C0078/C0079/C0085/C0083 /C0085/C0080/C0047/C0068/C0079/C0087/C0078 /C0067/C0079/C0085/C0078/C0084/C0069/C0082/C0083 /C0087/C0073/C0084/C0072 /C0068/C0079/C0087/C0078/C0047/C0085/C0080 /C0077/C0079/C0068/C0069 /C0067/C0079/C0078/C0084/C0082/C0079/C0076
+ SCHS275E − MARCH 2002 − REVISED OCTOBER 2003
+
+’HC190, ’HC191
+
+switching characteristics over recommended operating free-air temperature range (unless
+otherwise noted) (see Figure 4)
+
+                                                                                                           TA = 25°C                  TA = −55°C             TA = −40°C
+  PARAMETER                 FROM                 TO                  LOAD               VCC                                            TO 125°C                TO 85°C             UNIT
+  PARAMETER                (INPUT)(INPUT)   (OUTPUT)(OUTPUT)  CAPACITANCECAPACITANCE    VCC                                                                                        UNIT
+                                                                                                     MIN        TYP        MAX         MIN       MAX          MIN       MAX
+                                                                                         2 V             6                                 4                      5
+         ffmaxmax                                                                       4.5 V          30                                20                     25                  MHzMHz
+                                                                                         6 V           35                                23                     29
+                                                                                         2 V                                195                    295                    245
+                                                                 CCL = 50 pFL = 50 pF   4.5 V                                 39                     59                    49
+                            LOADLOAD              QQ                                     6 V                                  33                     50                    42
+
+                                                                 CL = 15 pF              5 V                       16
+                                                                                         2 V                                175                    265                    220
+                           A, B, C,A, B, C,                      CCL = 50  pFL = 50  pF 4.5 V                                 35                     53                    44
+                             or Dor D             QQ                                     6 V                                  30                     45                    37
+
+                                                                 CL =  15 pF             5 V                       14
+                                                                                         2 V                                170                    255                    215
+                                                                 CCL = 50 pFL = 50 pF   4.5 V                                 34                     51                    43
+                             CLKCLK               QQ                                     6 V                                  29                     43                    37
+
+                                                                 CL = 15 pF              5 V                       14
+                                                                                         2 V                                125                    190                    155
+                             CLKCLK             RCORCO           CCL = 50 pFL = 50 pF   4.5 V                                 25                     38                    31
+                                                                                         6 V                                  21                     32                    26
+         tpdtpd                                                  CL = 15 pF              5 V                       10                                                                nsns
+                                                                                         2 V                                210                    315                    265
+                                                                 CCL = 50 pFL = 50 pF   4.5 V                                 42                     63                    53
+                             CLKCLK          MAX/MINMAX/MIN                              6 V                                  36                     54                    45
+
+                                                                 CL = 15 pF              5 V                       18
+                                                                                         2 V                                150                    225                    190
+                                                                 CCL = 50 pFL = 50 pF   4.5 V                                 30                     45                    38
+                              D/UD/U            RCORCO                                   6 V                                  26                     38                    33
+
+                                                                 CL = 15 pF              5 V                       12
+                                                                                         2 V                                165                    250                    205
+                                                                 CCL = 50 pFL = 50 pF   4.5 V                                 33                     50                    41
+                              D/UD/U         MAX/MINMAX/MIN                              6 V                                  28                     43                    35
+
+                                                                 CL = 15 pF              5 V                       13
+                                                                                         2 V                                125                    190                    155
+                            CTENCTEN            RCORCO           CCL = 50 pFL = 50 pF   4.5 V                                 25                     38                    31
+                                                                                         6 V                                  21                     32                    26
+                                                                 CL = 15 pF              5 V                       10
+                                                                                         2 V                                  75                   110                     95
+         tttt                                   AnyAny           CCL = 50 pFL = 50 pF   4.5 V                                 15                     22                    19        nsns
+                                                                                         6 V                                  13                     19                    16
+
+
+
+
+
+
+
+
+
+
+14                                                               POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+
+--- PDF page 15 ---
+                                                                                                                                       /C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0048/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0048
+                                                                             /C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0053/C0052/C0072/C0067/C0084/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0084/C0049/C0057/C0049
+                                   /C0083/C0089/C0078/C0067/C0072/C0082/C0079/C0078/C0079/C0085/C0083 /C0085/C0080/C0047/C0068/C0079/C0087/C0078 /C0067/C0079/C0085/C0078/C0084/C0069/C0082/C0083 /C0087/C0073/C0084/C0072 /C0068/C0079/C0087/C0078/C0047/C0085/C0080 /C0077/C0079/C0068/C0069 /C0067/C0079/C0078/C0084/C0082/C0079/C0076
+                                                                                                                       SCHS275E − MARCH 2002 − REVISED OCTOBER 2003
+
+’HCT191
+
+timing requirements over recommended operating free-air temperature range VCC = 4.5 V (unless
+otherwise noted) (see Figure 5)
+
+                                                                                                              TA = 25°C            TA = −55°C            TA = −40°C
+                                                                                                                                    TO 125°C               TO 85°C             UNIT
+                                                                                                                                                                               UNIT
+                                                                                                              MIN       MAX         MIN       MAX         MIN       MAX
+  fclock      Clock frequency                                                                                              30                    20                    25       MHz
+                                                                  LOAD low                                      16                    24                    20
+  twtw        Pulse durationPulse duration                                        CLK high or low               20                    30                    25                   nsns
+
+                                                                  Data before LOAD↑                             12                    18                    15
+  ttsusu      Setup time                                              CTENSetup time before CLK↑                12                    18                    15                   nsns
+                                                                  D/U before CLK↑                               18                    27                    23
+                                                                  Data before LOAD↑                              2                      2                     2
+  thth        Hold time                                                CTENHold time before CLK↑                 2                      2                     2                  nsns
+                                                                  D/U before CLK↑                                0                      0                     0
+  trec        Recovery time                                       LOAD inactive before CLK↑                     12                    18                    15                   ns
+
+’HCT191
+
+switching characteristics over recommended operating free-air temperature range (unless
+otherwise noted) (see Figure 5)
+
+                                                                                                        TA = 25°C                  TA = −55°C            TA = −40°C
+ PARAMETERPARAMETER       FROM                 TO                  LOAD               VCCVCC                                        TO 125°C               TO 85°C             UNITUNIT
+                         (INPUT)(INPUT)   (OUTPUT)(OUTPUT)   CAPACITANCECAPACITANCE                MIN       TYP        MAX         MIN       MAX         MIN       MAX
+
+         fmax                                                                        4.5 V           30                               20                    25                  MHz
+                                                                CL = 50 pF           4.5 V                                 40                    60                    50
+                           LOADLOAD             QQ              CL = 15 pF             5 V                      17
+
+                         A, B, C,A, B, C,                      CL = 50  pF           4.5 V                                 38                    57                    48
+                            or D                QQ             CL =  15 pF             5 V                      16
+
+                            CLKCLK                              CL = 50 pF           4.5 V                                 35                    53                    44
+                                              RCORCO            CL = 15 pF             5 V                      14
+
+                            CLKCLK              QQ              CL = 50 pF           4.5 V                                 27                    41                    34
+                                                                CL = 15 pF             5 V                      11
+         tpdtpd                                                 CL = 50 pF           4.5 V                                 42                    63                    53        nsns
+                            CLKCLK         MAX/MINMAX/MIN       CL = 15 pF             5 V                      18
+
+                                                                CL = 50 pF           4.5 V                                 30                    45                    38
+                            D/UD/U            RCORCO            CL = 15 pF             5 V                      12
+
+                                                                CL = 50 pF           4.5 V                                 38                    57                    48
+                            D/UD/U         MAX/MINMAX/MIN       CL = 15 pF             5 V                      16
+
+                                                                CL = 50 pF           4.5 V                                 27                    41                    34
+                           CTENCTEN           RCORCO            CL = 15 pF             5 V                      11
+
+         tt                                    Any              CL = 50 pF           4.5 V                                 15                    22                    19        ns
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                 POST OFFICE BOX 655303 • DALLAS, TEXAS 75265                                                                          15
+
+--- PDF page 16 ---
+/C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0048/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0048
+/C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0053/C0052/C0072/C0067/C0084/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0084/C0049/C0057/C0049
+/C0083/C0089/C0078/C0067/C0072/C0082/C0079/C0078/C0079/C0085/C0083 /C0085/C0080/C0047/C0068/C0079/C0087/C0078 /C0067/C0079/C0085/C0078/C0084/C0069/C0082/C0083 /C0087/C0073/C0084/C0072 /C0068/C0079/C0087/C0078/C0047/C0085/C0080 /C0077/C0079/C0068/C0069 /C0067/C0079/C0078/C0084/C0082/C0079/C0076
+ SCHS275E − MARCH 2002 − REVISED OCTOBER 2003
+
+operating characteristics, VCC = 5 V, TA = 25°C
+
+                                                                                                                   PARAMETER                                                                                                                                               TYP              UNIT
+                                                                                                                                                                                                                                          ’HC190                               59
+    CpdCpd          Power dissipation capacitance                                                                                                                 ’HC191Power dissipation capacitance                                                                          55             pFpF
+                                                                                                                                                                                                                                          ’HCT191                              68
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+16                                                                                                    POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+
+--- PDF page 17 ---
+                                                                                                                                          /C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0048/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0048
+                                                                               /C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0053/C0052/C0072/C0067/C0084/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0084/C0049/C0057/C0049
+                                    /C0083/C0089/C0078/C0067/C0072/C0082/C0079/C0078/C0079/C0085/C0083 /C0085/C0080/C0047/C0068/C0079/C0087/C0078 /C0067/C0079/C0085/C0078/C0084/C0069/C0082/C0083 /C0087/C0073/C0084/C0072 /C0068/C0079/C0087/C0078/C0047/C0085/C0080 /C0077/C0079/C0068/C0069 /C0067/C0079/C0078/C0084/C0082/C0079/C0076
+                                                                                                                          SCHS275E − MARCH 2002 − REVISED OCTOBER 2003
+
+                               PARAMETER MEASUREMENT INFORMATION − ’HC190, ’HC191
+
+                                                                                VCC                                       PARAMETER                  S1             S2
+
+                                                                                                                                      tPZH         Open       Closed
+                                         Test                            S1                                               ten         tPZL
+                                        Point       RL = 1 kΩ                                                                                     Closed       Open
+                From Output                                                                                                           tPHZ         Open       Closed
+                  Under Test                                                                                              tdis
+                                   CL                                    S2                                                           tPLZ        Closed       Open
+                     (see Note A)                                                                                         tpd or tt                Open         Open
+
+
+                                                                                                                                                tw
+                                        LOAD CIRCUIT                                                                                                                                  VCC
+
+                                                                                                            Input                   50% VCC                          50% VCC
+                                                                                                                                                                                      0 V
+                                                                                                                                VOLTAGE WAVEFORMS
+                                                                                                                                    PULSE DURATION
+
+                                                                                                     Reference                                                                        VCC
+                                                                                     VCC                                                          50% VCC
+       LOAD                                           50% VCC                                               Input                                                                     0 V
+        Input                                                                        0 V
+                                                                                                                                      tsu                  th
+                                                                   trec                                                                                                               VCC
+                                                                                     VCC                     Data       50%                                                        10%90%                        90%50% VCC
+          CLK                                                  50% VCC                                      Input     10%                                                             0 V
+
+                                                                                     0 V                                                 tr                                       tf
+
+                                  VOLTAGE WAVEFORMS                                                                             VOLTAGE WAVEFORMS
+                                       RECOVERY TIME                                                       SETUP AND HOLD AND INPUT RISE AND FALL TIMES
+
+                                                                                            VCC                                                                                      VCC
+           Input            50% VCC                            50% VCC                                             Output
+                                                                                            0 V                   Control                      50% VCC           50% VCC
+                               tPLH                                tPHL                                                                                                              0 V
+
+                                                                                            VOH                                 tPZL                                         tPLZ
+      In-Phase                      50%                                                 10%90%                 90%50% VCCOutput                                                      ≈VCC
+         Output                    10%                                                                      Waveform 1                               50% VCC         10%
+                                                                                            VOL             (see Note B)
+                                                     tr                                 tf                                                                                           VOL
+                               tPHL                                tPLH                                                         tPZH                                         tPHZ
+
+Out-of-Phase                       90%                                                            VOH50% VCC              50%90%Output                                               VOH
+         Output                                  10%                 10%                    VOL             Waveform 2                               50% VCC             90%
+                                                     tf                                 tr                 (see Note B)                                                              ≈0 V
+
+                                  VOLTAGE WAVEFORMS                                                                             VOLTAGE WAVEFORMS
+         PROPAGATION DELAY AND OUTPUT TRANSITION TIMES                                                               OUTPUT ENABLE AND DISABLE TIMES
+
+NOTES:   A.   CL includes probe and test-fixture capacitance.
+              B.   Waveform 1 is for an output with internal conditions such that the output is low except when disabled by the output control.
+                   Waveform 2 is for an output with internal conditions such that the output is high except when disabled by the output control.
+              C.   Phase relationships between waveforms were chosen arbitrarily. All input pulses are supplied by generators having the following
+                   characteristics: PRR ≤ 1 MHz, ZO = 50 Ω, tr = 6 ns, tf = 6 ns.
+              D.   For clock inputs, fmax is measured with the input duty cycle at 50%.
+              E.   The outputs are measured one at a time with one input transition per measurement.
+              F.   tPLZ and tPHZ are the same as tdis.
+              G.   tPZL and tPZH are the same as ten.
+              H.   tPLH and tPHL are the same as tpd.
+
+                                                     Figure 4. Load Circuit and Voltage Waveforms
+
+
+
+
+
+
+
+
+
+                                                                  POST OFFICE BOX 655303 • DALLAS, TEXAS 75265                                                                             17
+
+--- PDF page 18 ---
+/C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0048/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0048
+/C0067/C0068/C0053/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0049/C0057/C0049/C0044 /C0067/C0068/C0053/C0052/C0072/C0067/C0084/C0049/C0057/C0049/C0044 /C0067/C0068/C0055/C0052/C0072/C0067/C0084/C0049/C0057/C0049
+/C0083/C0089/C0078/C0067/C0072/C0082/C0079/C0078/C0079/C0085/C0083 /C0085/C0080/C0047/C0068/C0079/C0087/C0078 /C0067/C0079/C0085/C0078/C0084/C0069/C0082/C0083 /C0087/C0073/C0084/C0072 /C0068/C0079/C0087/C0078/C0047/C0085/C0080 /C0077/C0079/C0068/C0069 /C0067/C0079/C0078/C0084/C0082/C0079/C0076
+ SCHS275E − MARCH 2002 − REVISED OCTOBER 2003
+
+                                       PARAMETER MEASUREMENT INFORMATION − ’HCT191
+
+                                                                                 VCC                                      PARAMETER                   S1             S2
+
+                                                                          S1                                                           tPZH         Open       Closed
+                                          Test                                                                             ten         tPZL
+                From Output              Point      RL = 1 kΩ                                                                                     Closed       Open
+                   Under Test                                                                                                          tPHZ         Open       Closed
+                                   CL                                                                                      tdis
+                     (see Note A)                                         S2                                                           tPLZ        Closed       Open
+
+                                                                                                                           tpd or tt                Open         Open
+
+                                             LOAD CIRCUIT                                                                                        tw
+                                                                                                                                                                                    VCC
+                                                                                                            Input                    50% VCC                          50% VCC
+                                                                                                                                                                                    0 V
+                                                                                                                                 VOLTAGE WAVEFORMS
+                                                                                                                                     PULSE DURATION
+
+                                                                                                      Reference                                                                        VCC
+        LOAD                                                                          VCC                    Input                                 50% VCC
+         Input                                        50% VCC                                                                                                                          0 V
+                                                                                      0 V                                              tsu                  th
+                                                                    trec                                                                                                               VCC
+                                                                                      VCC                     Data       50%                                                        10%90%                        90%50% VCC
+           CLK                                                  50% VCC                                      Input     10%
+                                                                                                                                                                                       0 V
+                                                                                      0 V                                                 tr                                       tf
+
+                                  VOLTAGE WAVEFORMS                                                                              VOLTAGE WAVEFORMS
+                                       RECOVERY TIME                                                       SETUP AND HOLD AND INPUT RISE AND FALL TIMES
+
+                                                                                             VCC                                                                                      VCC
+            Input           50% VCC                             50% VCC                                             Output
+                                                                                             0 V                   Control                      50% VCC           50% VCC
+                                tPLH                               tPHL                                                                                                               0 V
+
+                                                                                             VOH                                 tPZL                                         tPLZ
+       In-Phase                      50%                                                 10%90%                 90%50% VCCOutput                                                      ≈VCC
+         Output                    10%                                                                       Waveform 1                              50% VCC        10%
+                                                                                             VOL            (see Note B)
+                                                      tr                                 tf                                                                                           VOL
+                                tPHL                               tPLH                                                         tPZH                                          tPHZ
+
+Out-of-Phase                       90%                                                            VOH50% VCC              50%90%Output                                                VOH
+         Output                                   10%                 10%                    VOL             Waveform 2                               50% VCC             90%
+                                                      tf                                 tr                 (see Note B)                                                              ≈0 V
+
+                                  VOLTAGE WAVEFORMS                                                                              VOLTAGE WAVEFORMS
+          PROPAGATION DELAY AND OUTPUT TRANSITION TIMES                                                               OUTPUT ENABLE AND DISABLE TIMES
+
+ NOTES:   A.   CL includes probe and test-fixture capacitance.
+               B.   Waveform 1 is for an output with internal conditions such that the output is low except when disabled by the output control.
+                    Waveform 2 is for an output with internal conditions such that the output is high except when disabled by the output control.
+              C.   Phase relationships between waveforms were chosen arbitrarily. All input pulses are supplied by generators having the following
+                    characteristics: PRR ≤ 1 MHz, ZO = 50 Ω, tr = 6 ns, tf = 6 ns.
+              D.   For clock inputs, fmax is measured with the input duty cycle at 50%.
+               E.   The outputs are measured one at a time with one input transition per measurement.
+               F.   tPLZ and tPHZ are the same as tdis.
+              G.   tPZL and tPZH are the same as ten.
+              H.   tPLH and tPHL are the same as tpd.
+
+                                                      Figure 5. Load Circuit and Voltage Waveforms
+
+
+
+
+
+
+18                                                               POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+
+--- PDF page 19 ---
+                                                                                                                                                                       PACKAGE OPTION ADDENDUM
+
+
+
+    www.ti.com                                                                                                                                                                                                          18-Sep-2026
+
+
+
+PACKAGING INFORMATION
+
+   Orderable part number            Status     Material type       Package | Pins       Package qty | Carrier         RoHS             Lead finish/             MSL rating/              Op temp (°C)               Part marking
+                                      (1)            (2)                                                                (3)            Ball material            Peak reflow                                               (6)
+                                                                                                                                             (4)                      (5)
+       5962-8867101EA               Active      Production          CDIP (J) | 16              25 | TUBE               No                  SNPB               N/A for Pkg Type             -55 to 125             5962-8867101EA
+                                                                                                                                                                                                                  CD54HCT191F3A
+       5962-8994601EA               Active      Production          CDIP (J) | 16              25 | TUBE               No                  SNPB               N/A for Pkg Type             -55 to 125             5962-8994601EA
+                                                                                                                                                                                                                  CD54HC190F3A
+       CD54HC190F3A                 Active      Production          CDIP (J) | 16              25 | TUBE               No                  SNPB               N/A for Pkg Type             -55 to 125             5962-8994601EA
+                                                                                                                                                                                                                  CD54HC190F3A
+      CD54HC190F3A.A                Active      Production          CDIP (J) | 16              25 | TUBE               No                  SNPB               N/A for Pkg Type             -55 to 125             5962-8994601EA
+                                                                                                                                                                                                                  CD54HC190F3A
+       CD54HC191F3A                 Active      Production          CDIP (J) | 16              25 | TUBE               No                  SNPB               N/A for Pkg Type             -55 to 125             5962-8689101EA
+                                                                                                                                                                                                                  CD54HC191F3A
+      CD54HC191F3A.A                Active      Production          CDIP (J) | 16              25 | TUBE               No                  SNPB               N/A for Pkg Type             -55 to 125             5962-8689101EA
+                                                                                                                                                                                                                  CD54HC191F3A
+       CD54HCT191F3A                Active      Production          CDIP (J) | 16              25 | TUBE               No                  SNPB               N/A for Pkg Type             -55 to 125             5962-8867101EA
+                                                                                                                                                                                                                  CD54HCT191F3A
+      CD54HCT191F3A.A               Active      Production          CDIP (J) | 16              25 | TUBE               No                  SNPB               N/A for Pkg Type             -55 to 125             5962-8867101EA
+                                                                                                                                                                                                                  CD54HCT191F3A
+         CD74HC190E                 Active      Production          PDIP (N) | 16              25 | TUBE               Yes               NIPDAU               N/A for Pkg Type             -55 to 125               CD74HC190E
+        CD74HC190E.A                Active      Production          PDIP (N) | 16              25 | TUBE               Yes               NIPDAU               N/A for Pkg Type             -55 to 125               CD74HC190E
+       CD74HC190NSR                 Active      Production         SOP (NS) | 16          2000 | LARGE T&R             Yes               NIPDAU             Level-1-260C-UNLIM             -55 to 125                  HC190M
+      CD74HC190NSR.A                Active      Production         SOP (NS) | 16          2000 | LARGE T&R             Yes               NIPDAU             Level-1-260C-UNLIM             -55 to 125                  HC190M
+        CD74HC190PW                Obsolete     Production        TSSOP (PW) | 16                   -                   -                 Call TI                   Call TI                -55 to 125                   HJ190
+       CD74HC190PWR                 Active      Production        TSSOP (PW) | 16         2000 | LARGE T&R             Yes               NIPDAU             Level-1-260C-UNLIM             -55 to 125                   HJ190
+      CD74HC190PWR.A                Active      Production        TSSOP (PW) | 16         2000 | LARGE T&R             Yes               NIPDAU             Level-1-260C-UNLIM             -55 to 125                   HJ190
+         CD74HC191E                 Active      Production          PDIP (N) | 16              25 | TUBE               Yes               NIPDAU               N/A for Pkg Type             -55 to 125               CD74HC191E
+        CD74HC191E.A                Active      Production          PDIP (N) | 16              25 | TUBE               Yes               NIPDAU               N/A for Pkg Type             -55 to 125               CD74HC191E
+         CD74HC191M                Obsolete     Production          SOIC (D) | 16                   -                   -                 Call TI                   Call TI                -55 to 125                  HC191M
+       CD74HC191M96                 Active      Production          SOIC (D) | 16         2500 | LARGE T&R             Yes               NIPDAU             Level-1-260C-UNLIM             -55 to 125                  HC191M
+      CD74HC191M96.A                Active      Production          SOIC (D) | 16         2500 | LARGE T&R             Yes               NIPDAU             Level-1-260C-UNLIM             -55 to 125                  HC191M
+        CD74HC191MT                Obsolete     Production          SOIC (D) | 16                   -                   -                 Call TI                   Call TI                -55 to 125                  HC191M
+        CD74HCT191E                 Active      Production          PDIP (N) | 16              25 | TUBE               Yes               NIPDAU               N/A for Pkg Type             -55 to 125              CD74HCT191E
+       CD74HCT191E.A                Active      Production          PDIP (N) | 16              25 | TUBE               Yes               NIPDAU               N/A for Pkg Type             -55 to 125              CD74HCT191E
+
+
+
+                                                                                                           Addendum-Page 1
+
+--- PDF page 20 ---
+                                                                                                                                                                                                 PACKAGE OPTION ADDENDUM
+
+
+
+    www.ti.com                                                                                                                                                                                                                                            18-Sep-2026
+
+
+
+
+
+    Orderable part number                Status       Material type          Package | Pins           Package qty | Carrier             RoHS                Lead finish/                  MSL rating/                 Op temp (°C)                    Part marking
+                                            (1)              (2)                                                                           (3)              Ball material                 Peak reflow                                                        (6)
+                                                                                                                                                                   (4)                          (5)
+         CD74HCT191M                      Active        Production             SOIC (D) | 16                  40 | TUBE                   Yes                  NIPDAU                Level-1-260C-UNLIM                 -55 to 125                      HCT191M
+        CD74HCT191M.A                     Active        Production             SOIC (D) | 16                  40 | TUBE                   Yes                  NIPDAU                Level-1-260C-UNLIM                 -55 to 125                      HCT191M
+
+(1) Status:  For more details on status, see our product life cycle.
+
+(2) Material type:  When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+
+(3) RoHS values:  Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+
+(4) Lead finish/Ball material:  Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+
+(5) MSL rating/Peak reflow:  The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+
+(6) Part marking:  There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+
+ OTHER QUALIFIED VERSIONS OF CD54HC190, CD54HC191, CD54HCT191, CD74HC190, CD74HC191, CD74HCT191 :
+• Catalog : CD74HC190, CD74HC191, CD74HCT191
+• Military : CD54HC190, CD54HC191, CD54HCT191
+
+
+
+
+
+                                                                                                                            Addendum-Page 2
+
+--- PDF page 21 ---
+                                                                                                                                                                      PACKAGE OPTION ADDENDUM
+
+
+
+    www.ti.com                                                                                                                                                                                                          18-Sep-2026
+
+
+
+ NOTE: Qualified Version Definitions:
+        • Catalog - TI's standard catalog product
+        • Military - QML certified for Military and Defense Applications
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                           Addendum-Page 3
+
+--- PDF page 22 ---
+                                                                         PACKAGE MATERIALS INFORMATION
+
+
+
+
+
+
+www.ti.com                                                                                                                              10-Aug-2026
+
+TAPE AND REEL INFORMATION
+
+
+       REEL DIMENSIONS                                                           TAPE DIMENSIONS
+                                                                              K0      P1
+
+
+
+                                                                                                           B0  W
+
+                                        Reel
+                                      Diameter
+                                                                           Cavity         A0
+
+                                                         A0    Dimension designed to accommodate the component width
+                                                         B0    Dimension designed to accommodate the component length
+                                                         K0    Dimension designed to accommodate the component thickness
+                                                          W    Overall width of the carrier tape
+                                                          P1   Pitch between successive cavity centers
+
+
+                                        Reel Width (W1)
+                             QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+
+                                                                                           Sprocket Holes
+
+
+                                                Q1    Q2        Q1    Q2
+
+                                                Q3    Q4        Q3    Q4               User Direction of Feed
+
+
+
+                                                        Pocket Quadrants
+
+
+*All dimensions are nominal
+          Device            Package    Package    Pins    SPQ        Reel       Reel      A0       B0      K0      P1       W       Pin1
+                              Type     Drawing                     Diameter    Width     (mm)    (mm)    (mm)     (mm)    (mm)   Quadrant
+                                                                     (mm)    W1 (mm)
+     CD74HC190NSR              SOP        NS       16     2000       330.0      16.4      8.1     10.4     2.5    12.0    16.0       Q1
+    CD74HC190PWR             TSSOP        PW       16     2000       330.0      12.4      6.9     5.6      1.6     8.0    12.0       Q1
+     CD74HC191M96             SOIC         D       16     2500       330.0      16.4      6.5     10.3     2.1     8.0    16.0       Q1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                               Pack Materials-Page 1
+
+--- PDF page 23 ---
+                                                                   PACKAGE MATERIALS INFORMATION
+
+
+
+
+
+
+www.ti.com                                                                                                                  10-Aug-2026
+
+
+TAPE AND REEL BOX DIMENSIONS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                  Width (mm)  H
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 W                                            L
+
+
+
+
+
+
+
+*All dimensions are nominal
+         Device             Package Type     Package Drawing     Pins      SPQ      Length (mm)    Width (mm)     Height (mm)
+     CD74HC190NSR                SOP                 NS           16       2000        353.0           353.0          32.0
+    CD74HC190PWR                TSSOP                PW           16       2000        353.0           353.0          32.0
+     CD74HC191M96                SOIC                 D           16       2500        353.0           353.0          32.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                          Pack Materials-Page 2
+
+--- PDF page 24 ---
+                                                                   PACKAGE MATERIALS INFORMATION
+
+
+
+
+
+
+www.ti.com                                                                                                                   10-Aug-2026
+
+TUBE
+
+
+      T - Tube
+       height                                                        L - Tube length
+
+
+
+                 W - Tube
+                   width
+
+
+         B - Alignment groove width
+
+
+
+*All dimensions are nominal
+         Device             Package Name      Package Type      Pins       SPQ       L (mm)     W (mm)      T (µm)       B (mm)
+      CD74HC190E                   N              PDIP           16         25         506       13.97      11230         4.32
+      CD74HC190E                   N              PDIP           16         25         506       13.97      11230         4.32
+     CD74HC190E.A                  N              PDIP           16         25         506       13.97      11230         4.32
+     CD74HC190E.A                  N              PDIP           16         25         506       13.97      11230         4.32
+      CD74HC191E                   N              PDIP           16         25         506       13.97      11230         4.32
+      CD74HC191E                   N              PDIP           16         25         506       13.97      11230         4.32
+     CD74HC191E.A                  N              PDIP           16         25         506       13.97      11230         4.32
+     CD74HC191E.A                  N              PDIP           16         25         506       13.97      11230         4.32
+     CD74HCT191E                   N              PDIP           16         25         506       13.97      11230         4.32
+     CD74HCT191E                   N              PDIP           16         25         506       13.97      11230         4.32
+    CD74HCT191E.A                  N              PDIP           16         25         506       13.97      11230         4.32
+    CD74HCT191E.A                  N              PDIP           16         25         506       13.97      11230         4.32
+     CD74HCT191M                   D              SOIC           16         40         507         8         3940         4.32
+    CD74HCT191M.A                  D              SOIC           16         40         507         8         3940         4.32
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                          Pack Materials-Page 3
+
+--- PDF page 25 ---
+
+
+--- PDF page 26 ---
+                                                                                                               PACKAGE OUTLINE
+PW0016A                                                                                                 TSSOP - 1.2 mm max height
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                        SCALE  2.500
+                                                                                                                           SMALL OUTLINE PACKAGE
+
+
+
+
+
+
+                                                                                                                                              SEATING
+                                                                                                                                              PLANE
+                                             6.6                                                                             C
+           A                                 6.2 TYP
+                                                PIN 1 INDEX AREA                                                                                 0.1  C
+                                                                                          14X  0.65
+                  1                                                            16
+
+
+
+
+
+                                                                                           2X
+           5.1                                                                            4.55
+           4.9
+        NOTE 3
+
+
+                                                                                                              4X (0  -12  )
+
+                  8
+                                                                               9
+                    B                                     4.5                             16X 0.300.17                      1.2 MAX
+                                               4.3                                            0.1     C  A  B
+                                             NOTE 4
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                  (0.15) TYP
+                                           SEE DETAIL  A
+
+                                                                                         0.25
+                                                                              GAGE PLANE
+                                                                                                                                                0.15
+                                                                                                                                                0.05
+
+
+
+                                                                                                           0.75
+                                                                                                           0.50
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                              A  20
+                                                                                           0 -8                          DETAIL A
+                                                                                                                           TYPICAL
+
+                                                                                                                                      4220204/B   12/2023
+
+NOTES:
+
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed 0.15 mm per side.
+4. This dimension does not include interlead flash. Interlead flash shall not exceed 0.25 mm per side.
+5. Reference JEDEC registration MO-153.
+
+
+
+
+
+                                                                             www.ti.com
+
+--- PDF page 27 ---
+                                                                                   EXAMPLE BOARD LAYOUT
+PW0016A                                                                                     TSSOP - 1.2 mm max height
+
+                                                                                                             SMALL OUTLINE PACKAGE
+
+
+
+
+
+
+
+
+
+
+                                          16X (1.5)                SYMM
+                                       1                                                                 (R0.05) TYP
+
+                             16X (0.45)                                                             16
+
+
+
+
+
+                                                                                                       SYMM
+
+
+                           14X (0.65)
+
+
+
+
+                                       8                                                                                                 9
+
+
+
+                                                                    (5.8)
+
+                                                     LAND PATTERN EXAMPLE
+                                                         EXPOSED METAL SHOWN
+                                                                SCALE: 10X
+
+
+
+
+
+
+                SOLDER MASK                      METAL                       METAL UNDER                    SOLDER MASK
+                      OPENING                                                SOLDER MASK                    OPENING
+
+
+        EXPOSED METAL                                                                                             EXPOSED METAL
+
+                                     0.05 MAX                                                    0.05 MIN
+                                     ALL AROUND                                                  ALL AROUND
+
+                             NON-SOLDER MASK                                                 SOLDER MASK
+                                   DEFINED                                                      DEFINED
+
+
+
+
+
+
+                                                                15.000
+                                 (PREFERRED)            SOLDER MASK DETAILS
+
+
+
+
+                                                                                                                      4220204/B   12/2023
+NOTES: (continued)
+
+6. Publication IPC-7351 may have alternate designs.
+7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+
+
+
+
+
+
+
+
+
+
+
+                                                                    www.ti.com
+
+--- PDF page 28 ---
+                                                                                        EXAMPLE STENCIL DESIGN
+PW0016A                                                                                            TSSOP - 1.2 mm max height
+
+                                                                                                                      SMALL OUTLINE PACKAGE
+
+
+
+
+
+
+
+
+
+
+                                              16X (1.5)                 SYMM
+                                          1                                                                       (R0.05) TYP
+
+                               16X (0.45)                                                                   16
+
+
+
+
+
+                                                                                                              SYMM
+
+
+                             14X (0.65)
+
+
+
+
+                                          8                                                                                                 9
+
+
+
+                                                                         (5.8)
+
+
+                                                         SOLDER PASTE EXAMPLE
+                                                       BASED ON 0.125 mm THICK STENCIL
+                                                                     SCALE: 10X
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                4220204/B   12/2023
+NOTES: (continued)
+
+8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.
+9. Board assembly site may have different recommendations for stencil design.
+
+
+
+
+
+
+
+
+
+
+                                                                         www.ti.com
+
+--- PDF page 29 ---
+
+
+--- PDF page 30 ---
+                                                                                                                 PACKAGE OUTLINE
+NS0016A                                                                                                      SOP - 2.00 mm max height
+
+
+
+
+
+
+
+
+
+                                                                                SCALE  1.500
+                                                                                                                                                           SOP
+
+
+
+                                                                                                                                            C
+
+                                                8.2                                                                   SEATING PLANE
+                                                7.4 TYP
+                   A                                      PIN 1 ID                                                                      0.1  C
+                                                          AREA                       14X  1.27
+
+                            1                                                               16
+
+
+
+
+
+
+                  10.4                                                                2X
+                  10.0                                                               8.89
+               NOTE 3
+
+
+
+
+
+
+
+                             8
+                                                                           9
+                                                                                   16X 0.510.35
+                              B                           5.45.2                         0.25      C  A  B                              2.00 MAX
+                                                NOTE 4
+
+
+
+
+
+                                                                                    0.15 TYP
+
+
+
+
+                                            SEE DETAIL A
+                                                                                                 0.25                                         0.3
+                                                                                     GAGE PLANE                                               0.1
+
+
+
+
+                                                                                          0  - 10
+                                                                                                       1.05                         DETAIL A
+                                                                                                       0.55                           TYPICAL
+                                                                                                                   (1.25)
+
+
+                                                                                                                                         4220735/A   12/2021
+
+NOTES:
+
+1. All linear dimensions are in millimeters. Dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed 0.15 mm, per side.
+4. This dimension does not include interlead flash. Interlead flash shall not exceed 0.25 mm, per side.
+
+
+
+
+
+
+
+
+                                                                              www.ti.com
+
+--- PDF page 31 ---
+                                                                                    EXAMPLE BOARD LAYOUT
+NS0016A                                                                                         SOP - 2.00 mm max height
+
+                                                                                                                                        SOP
+
+
+
+
+
+
+                                  16X (1.85)                            SYMM                           SEE
+                                                                                                       DETAILS
+
+                                               1                                                     16
+
+                                16X (0.6)
+
+
+
+
+
+
+                                                                                                       SYMM
+
+
+
+
+
+
+                              14X (1.27)
+
+
+
+                                               8                                                                                   9
+
+                               (R0.05) TYP
+
+                                                                         (7)
+
+                                                        LAND PATTERN EXAMPLE
+                                                                    SCALE:7X
+
+
+
+
+                           METAL                            SOLDER MASK      SOLDER MASK                         METAL
+                                                    OPENING                        OPENING
+
+
+
+
+
+
+                                       0.07 MAX                                                       0.07 MIN
+                                       ALL AROUND                                                     ALL AROUND
+
+                                NON SOLDER MASK                                                  SOLDER MASK
+                                      DEFINED                                                       DEFINED
+
+                                                          SOLDER MASK DETAILS
+
+
+                                                                                                                         4220735/A   12/2021
+
+
+NOTES: (continued)
+
+5. Publication IPC-7351 may have alternate designs.
+6. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+
+
+
+
+
+
+
+
+
+
+                                                                     www.ti.com
+
+--- PDF page 32 ---
+                                                                                       EXAMPLE STENCIL DESIGN
+NS0016A                                                                                              SOP - 2.00 mm max height
+
+                                                                                                                                               SOP
+
+
+
+
+
+
+
+
+
+
+
+                              16X (1.85)                             SYMM
+
+
+                                            1                                                      16
+
+                            16X (0.6)
+
+
+
+
+
+
+                                                                                                       SYMM
+
+
+
+
+
+
+                          14X (1.27)
+
+
+
+                                            8                                                                                   9
+
+
+                         (R0.05) TYP                                   (7)
+
+                                                     SOLDER PASTE EXAMPLE
+                                                   BASED ON 0.125 mm THICK STENCIL
+                                                                  SCALE:7X
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                               4220735/A   12/2021
+
+NOTES: (continued)
+
+7. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.
+8. Board assembly site may have different recommendations for stencil design.
+
+
+
+
+
+
+
+
+
+                                                                        www.ti.com
+
+--- PDF page 33 ---
+
+
+--- PDF page 34 ---
+                                            IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS”
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale,                       TI’s General Quality Guidelines, or other applicable terms available either on
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+
+
+                                                    Copyright © 2026, Texas Instruments Incorporated
+                                                                     Last updated 10/2025

@@ -1,0 +1,107 @@
+Part / value,Quantity,Footprint,References
+100nF,193,Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm,"C1:C1, C1:C2, C1:C3, C1:C4, C1:C5, C1:C6, C1:C7, C1:C8, C1:C9, C1:C10, C1:C11, CW1:C1, CW1:C2, CW1:C3, CW1:C4, CW1:C5, CW1:C6, CW1:C7, CW1:C8, CW1:C9, CW1:C10, CW1:C11, CW1:C12, CW1:C13, CW1:C14, SQ1:C1, SQ1:C2, SQ1:C3, SQ1:C4, SQ1:C5, SQ1:C6, SQ1:C7, SQ1:C8, SQ1:C9, SQ1:C10, SQ1:C11, SQ1:C12, SQ1:C13, SQ1:C14, SQ1:C15, SQ1:C16, SQ1:C17, SQ1:C18, SQ1:C19, SQ1:C20, SQ1:C21, PC1:C1, PC1:C2, PC1:C3, PC1:C4, PC1:C5, PC1:C6, PC1:C7, PC1:C8, PC1:C9, PC1:C10, PC1:C11, PC1:C12, PC1:C13, PC1:C14, PC1:C15, AL1:C1, AL1:C2, AL1:C3, AL1:C4, AL1:C5, AL1:C6, AL1:C7, AL1:C8, AL1:C9, AL1:C10, AL1:C11, AL1:C12, AL1:C13, AL1:C14, AL1:C15, AL1:C16, AL1:C17, AL1:C18, AL1:C19, AL1:C20, AL1:C21, RG1:C1, RG1:C2, RG1:C3, RG1:C4, RG1:C5, RG1:C6, RG1:C7, RG1:C8, RG1:C9, RG1:C10, RG1:C11, RG1:C12, RG1:C13, RG1:C14, RG1:C15, RG1:C16, RG1:C17, ME1:C1, ME1:C2, ME1:C3, ME1:C4, ME1:C5, ME1:C6, ME1:C7, ME1:C8, ME1:C9, ME1:C10, ME1:C11, ME1:C12, ME1:C13, ME1:C14, ME1:C15, ME1:C16, ME1:C17, ME1:C18, ME1:C19, ME1:C20, ME1:C21, ME1:C22, ME1:C23, ME1:C24, ME1:C25, SP1:C1, SP1:C2, SP1:C3, SP1:C4, SP1:C5, SP1:C6, SP1:C7, SP1:C8, SP1:C9, SP1:C10, SP1:C11, SP1:C12, SP1:C13, SP1:C14, SP1:C15, SP1:C16, SP1:C17, SP1:C18, SP1:C19, SP1:C20, MA1:C1, MA1:C2, MA1:C3, MA1:C4, MA1:C5, MA1:C6, MA1:C7, MA1:C8, MA1:C9, MA1:C10, MA1:C11, MA1:C12, MA1:C13, MA1:C14, MA1:C15, MA1:C16, MA1:C17, MA1:C18, MA1:C19, MA1:C20, MA1:C21, MA1:C22, MA1:C23, MA1:C24, MA1:C25, MA1:C26, MA1:C27, MA1:C28, MA1:C29, MA1:C30, MA1:C31, MA1:C32, MA1:C33, BF1:C1, BF1:C2, BF1:C3, BF1:C4, BF1:C5, BF1:C6, BF1:C7, BF1:C8, BF1:C9, BF1:C10, BF1:C11, DT1:C1, DT1:C2, DT1:C3, DT1:C4, DT1:C5"
+10k,3,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,"C1:R1, C1:R2, C1:R3"
+ACH-4.000MHZ-EK,1,Oscillator:Oscillator_DIP-8,C1:Y1
+CD74ACT175E,10,Package_DIP:DIP-16_W7.62mm,"C1:U1, C1:U2, CW1:U10, SQ1:U1, SQ1:U2, SQ1:U3, SQ1:U5, PC1:U11, AL1:U10, ME1:U19"
+CD74HCT154E,4,Package_DIP:DIP-24_W15.24mm,"CW1:U5, CW1:U6, CW1:U7, CW1:U8"
+CD74HCT161E,5,Package_DIP:DIP-16_W7.62mm,"SQ1:U4, PC1:U1, PC1:U2, PC1:U3, PC1:U4"
+CD74HCT191E,8,Package_DIP:DIP-16_W7.62mm,"SP1:U3, SP1:U4, SP1:U5, SP1:U6, MA1:U3, MA1:U4, MA1:U5, MA1:U6"
+CONTROL,1,Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical,C1:J1
+J1,1,Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical,CW1:J1
+J1,2,Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical,"ME1:J1, DT1:J1"
+J1,3,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,"PC1:J1, BF1:J1, BP1:J1"
+J1,1,Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical,SP1:J1
+J1,1,Connector_PinHeader_2.54mm:PinHeader_1x12_P2.54mm_Vertical,RG1:J1
+J1,1,Connector_PinHeader_2.54mm:PinHeader_1x13_P2.54mm_Vertical,MA1:J1
+J1,2,Connector_PinHeader_2.54mm:PinHeader_1x15_P2.54mm_Vertical,"SQ1:J1, AL1:J1"
+J10,1,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,BP1:J10
+J11,1,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,BP1:J11
+J12,1,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,BP1:J12
+J13,1,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,BP1:J13
+J14,1,Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical,BP1:J14
+J15,1,Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical,BP1:J15
+J16,1,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,BP1:J16
+J17,1,Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical,BP1:J17
+J18,1,Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical,BP1:J18
+J19,1,Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical,BP1:J19
+J2,9,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,"SQ1:J2, PC1:J2, AL1:J2, RG1:J2, ME1:J2, SP1:J2, MA1:J2, BF1:J2, BP1:J2"
+J2,1,Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical,CW1:J2
+J2,1,Connector_PinHeader_2.54mm:PinHeader_1x32_P2.54mm_Vertical,DT1:J2
+J20,1,Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical,BP1:J20
+J21,1,Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical,BP1:J21
+J22,1,Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical,BP1:J22
+J23,1,Connector_PinHeader_2.54mm:PinHeader_1x15_P2.54mm_Vertical,BP1:J23
+J24,1,Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical,BP1:J24
+J25,1,Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical,BP1:J25
+J26,1,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,BP1:J26
+J27,1,Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical,BP1:J27
+J28,1,Connector_PinHeader_2.54mm:PinHeader_1x15_P2.54mm_Vertical,BP1:J28
+J29,1,Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical,BP1:J29
+J3,2,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,"BF1:J3, BP1:J3"
+J3,1,Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical,AL1:J3
+J3,1,Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical,SQ1:J3
+J3,1,Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical,CW1:J3
+J3,4,Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical,"PC1:J3, ME1:J3, SP1:J3, MA1:J3"
+J30,1,Connector_PinHeader_2.54mm:PinHeader_1x12_P2.54mm_Vertical,BP1:J30
+J31,1,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,BP1:J31
+J32,1,Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical,BP1:J32
+J33,1,Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical,BP1:J33
+J34,1,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,BP1:J34
+J35,1,Connector_PinHeader_2.54mm:PinHeader_1x13_P2.54mm_Vertical,BP1:J35
+J36,1,Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical,BP1:J36
+J37,1,Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical,BP1:J37
+J38,1,Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical,BP1:J38
+J39,1,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,BP1:J39
+J4,2,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,"BF1:J4, BP1:J4"
+J4,1,Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical,SQ1:J4
+J4,1,Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical,CW1:J4
+J4,1,Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical,MA1:J4
+J4,1,Connector_PinHeader_2.54mm:PinHeader_1x19_P2.54mm_Vertical,ME1:J4
+J40,1,Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical,BP1:J40
+J41,1,Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical,BP1:J41
+J42,1,Connector_PinHeader_2.54mm:PinHeader_1x19_P2.54mm_Vertical,BP1:J42
+J43,1,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,BP1:J43
+J44,1,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,BP1:J44
+J45,1,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,BP1:J45
+J46,1,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,BP1:J46
+J47,1,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,BP1:J47
+J48,1,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,BP1:J48
+J49,1,Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical,BP1:J49
+J5,3,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,"ME1:J5, BF1:J5, BP1:J5"
+J5,1,Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical,CW1:J5
+J5,1,Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical,MA1:J5
+J50,1,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,BP1:J50
+J51,1,Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical,BP1:J51
+J52,1,Connector_PinHeader_2.54mm:PinHeader_1x32_P2.54mm_Vertical,BP1:J52
+J6,1,Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical,CW1:J6
+J6,1,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,BP1:J6
+J6,1,Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical,BF1:J6
+J7,1,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,BF1:J7
+J7,1,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,BP1:J7
+J8,1,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,BP1:J8
+J9,1,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,BP1:J9
+J90,1,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,RG1:J90
+J90,3,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,"C1:J90, SP1:J90, MA1:J90"
+J901,1,Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical,BP1:J901
+J902,1,Connector_PinHeader_2.54mm:PinHeader_1x19_P2.54mm_Vertical,BP1:J902
+J903,1,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,BP1:J903
+J904,1,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,BP1:J904
+J91,6,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,"PC1:J91, AL1:J91, RG1:J91, ME1:J91, SP1:J91, MA1:J91"
+M27C1024-10F1,1,Package_DIP:DIP-40_W15.24mm,CW1:U1
+M27C322-100F1,1,Package_DIP:DIP-42_W15.24mm,AL1:U1
+PHASES,1,Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical,C1:J2
+SN74AHC08N,1,Package_DIP:DIP-14_W7.62mm,C1:U5
+SN74AHC32N,1,Package_DIP:DIP-14_W7.62mm,C1:U4
+SN74AHC74N,7,Package_DIP:DIP-14_W7.62mm,"C1:U6, C1:U7, C1:U8, SP1:U2, SP1:U8, MA1:U2, MA1:U8"
+SN74AHCT00N,16,Package_DIP:DIP-14_W7.62mm,"CW1:U13, CW1:U14, CW1:U15, SQ1:U12, SQ1:U13, SQ1:U14, SQ1:U15, SQ1:U16, SQ1:U17, SQ1:U18, AL1:U20, AL1:U21, RG1:U106, ME1:U25, SP1:U108, MA1:U123"
+SN74AHCT04N,14,Package_DIP:DIP-14_W7.62mm,"C1:U3, CW1:U12, SQ1:U19, SQ1:U20, PC1:U10, AL1:U17, AL1:U18, RG1:U105, ME1:U20, SP1:U103, SP1:U104, MA1:U117, MA1:U118, BF1:U110"
+SN74AHCT08N,21,Package_DIP:DIP-14_W7.62mm,"CW1:U11, SQ1:U8, SQ1:U9, SQ1:U10, SQ1:U11, PC1:U12, PC1:U13, AL1:U19, RG1:U104, ME1:U21, ME1:U22, ME1:U23, ME1:U24, SP1:U106, SP1:U107, MA1:U121, MA1:U122, BF1:U106, BF1:U107, BF1:U108, BF1:U109"
+SN74AHCT157N,29,Package_DIP:DIP-16_W7.62mm,"AL1:U4, AL1:U5, AL1:U11, AL1:U12, RG1:U101, RG1:U102, RG1:U103, ME1:U5, ME1:U6, ME1:U7, ME1:U8, ME1:U12, ME1:U14, ME1:U16, ME1:U18, SP1:U101, SP1:U102, MA1:U105, MA1:U106, MA1:U107, MA1:U108, MA1:U109, MA1:U110, MA1:U111, MA1:U112, MA1:U113, MA1:U114, MA1:U115, MA1:U116"
+SN74AHCT244N,29,Package_DIP:DIP-20_W7.62mm,"C1:U10, C1:U9, CW1:U9, SQ1:U7, SQ1:U101, PC1:U7, PC1:U8, PC1:U9, PC1:U101, AL1:U16, AL1:U101, RG1:U1, RG1:U2, RG1:U107, ME1:U3, ME1:U4, ME1:U10, ME1:U101, SP1:U1, SP1:U22, SP1:U23, SP1:U109, MA1:U1, MA1:U124, DT1:U101, DT1:U102, DT1:U103, DT1:U104, DT1:U105"
+SN74AHCT32N,6,Package_DIP:DIP-14_W7.62mm,"PC1:U14, ME1:U26, SP1:U105, MA1:U119, MA1:U120, BF1:U111"
+SN74HC377N,6,Package_DIP:DIP-20_W7.62mm,"AL1:U6, AL1:U7, RG1:U3, RG1:U8, RG1:U13, RG1:U18"
+SN74HCT245N,19,Package_DIP:DIP-20_W7.62mm,"PC1:U5, PC1:U6, AL1:U13, AL1:U14, AL1:U15, RG1:U7, RG1:U12, RG1:U17, RG1:U22, ME1:U9, SP1:U20, SP1:U21, MA1:U20, MA1:U21, BF1:U101, BF1:U102, BF1:U103, BF1:U104, BF1:U105"
+SN74HCT273N,3,Package_DIP:DIP-20_W7.62mm,"AL1:U2, ME1:U11, ME1:U15"
+SN74HCT574N,9,Package_DIP:DIP-20_W7.62mm,"CW1:U3, CW1:U4, SQ1:U6, AL1:U8, AL1:U9, MA1:U101, MA1:U102, MA1:U103, MA1:U104"
+UM61512AK-15,1,Package_DIP:DIP-32_W7.62mm,ME1:U2
+W27C512-45Z,1,Package_DIP:DIP-28_W15.24mm,ME1:U1

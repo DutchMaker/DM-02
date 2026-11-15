@@ -1,0 +1,18 @@
+{
+  "goal": "Implement owned-DIP IC reductions with pin-derived integrated verification and unchanged milestone criteria.",
+  "route": "Isolated complete source snapshot; compact schematics and explicit models; reuse independent instruction/program oracles.",
+  "alternatives": [
+    "Incrementally change normal sources during an active run",
+    "Use only a behavioural CPU model"
+  ],
+  "rationale": "Isolation preserves the running normal evidence; actual component/net-derived HDL retains wiring and timing fault detection.",
+  "jev": "Installed guidance unavailable; no advisory result claimed.",
+  "acceptance": [
+    "DIP-only logic and memories",
+    "All proposed reduction areas implemented or experimentally rejected with evidence",
+    "Independent KiCad net parity and structural checks",
+    "Explicit reset and bus handover checks",
+    "All 227 opcodes, continuous programs and ROM boot",
+    "Published exact BOM, evidence and milestone accounting"
+  ]
+}

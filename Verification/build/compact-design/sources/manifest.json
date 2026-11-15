@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://www.ti.com/lit/ds/symlink/cd74hct191.pdf",
+    "file": "cd74hct191.pdf",
+    "sha256": "c9b6587e141f0d79220208f23f99a411b36447f4f7d2a02ada366a5df2a054fe",
+    "pages": 34
+  },
+  {
+    "url": "https://www.ti.com/lit/ds/symlink/sn74hct273.pdf",
+    "file": "sn74hct273.pdf",
+    "sha256": "83413739db9688f71430191622d260496733e113d76b69b612c6c0dfbda8e720",
+    "pages": 28
+  },
+  {
+    "url": "https://www.ti.com/lit/ds/symlink/sn74hct245.pdf",
+    "file": "sn74hct245.pdf",
+    "sha256": "7b48b14b34db864ed921932c20bd7dd69b53f7c7eeaf9147a5860a75948e1a41",
+    "pages": 38
+  }
+]

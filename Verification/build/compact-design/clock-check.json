@@ -1,0 +1,1055 @@
+{
+  "passed": true,
+  "runs": [
+    {
+      "corner": 0,
+      "duty": 0.37,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c0/d0.37-ppm-30.log"
+    },
+    {
+      "corner": 0,
+      "duty": 0.37,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c0/d0.37-ppm0.log"
+    },
+    {
+      "corner": 0,
+      "duty": 0.37,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c0/d0.37-ppm30.log"
+    },
+    {
+      "corner": 0,
+      "duty": 0.45,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c0/d0.45-ppm-30.log"
+    },
+    {
+      "corner": 0,
+      "duty": 0.45,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c0/d0.45-ppm0.log"
+    },
+    {
+      "corner": 0,
+      "duty": 0.45,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c0/d0.45-ppm30.log"
+    },
+    {
+      "corner": 0,
+      "duty": 0.5,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c0/d0.5-ppm-30.log"
+    },
+    {
+      "corner": 0,
+      "duty": 0.5,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c0/d0.5-ppm0.log"
+    },
+    {
+      "corner": 0,
+      "duty": 0.5,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c0/d0.5-ppm30.log"
+    },
+    {
+      "corner": 0,
+      "duty": 0.55,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c0/d0.55-ppm-30.log"
+    },
+    {
+      "corner": 0,
+      "duty": 0.55,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c0/d0.55-ppm0.log"
+    },
+    {
+      "corner": 0,
+      "duty": 0.55,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c0/d0.55-ppm30.log"
+    },
+    {
+      "corner": 0,
+      "duty": 0.63,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c0/d0.63-ppm-30.log"
+    },
+    {
+      "corner": 0,
+      "duty": 0.63,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c0/d0.63-ppm0.log"
+    },
+    {
+      "corner": 0,
+      "duty": 0.63,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c0/d0.63-ppm30.log"
+    },
+    {
+      "corner": 1,
+      "duty": 0.37,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c1/d0.37-ppm-30.log"
+    },
+    {
+      "corner": 1,
+      "duty": 0.37,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c1/d0.37-ppm0.log"
+    },
+    {
+      "corner": 1,
+      "duty": 0.37,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c1/d0.37-ppm30.log"
+    },
+    {
+      "corner": 1,
+      "duty": 0.45,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c1/d0.45-ppm-30.log"
+    },
+    {
+      "corner": 1,
+      "duty": 0.45,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c1/d0.45-ppm0.log"
+    },
+    {
+      "corner": 1,
+      "duty": 0.45,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c1/d0.45-ppm30.log"
+    },
+    {
+      "corner": 1,
+      "duty": 0.5,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c1/d0.5-ppm-30.log"
+    },
+    {
+      "corner": 1,
+      "duty": 0.5,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c1/d0.5-ppm0.log"
+    },
+    {
+      "corner": 1,
+      "duty": 0.5,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c1/d0.5-ppm30.log"
+    },
+    {
+      "corner": 1,
+      "duty": 0.55,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c1/d0.55-ppm-30.log"
+    },
+    {
+      "corner": 1,
+      "duty": 0.55,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c1/d0.55-ppm0.log"
+    },
+    {
+      "corner": 1,
+      "duty": 0.55,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c1/d0.55-ppm30.log"
+    },
+    {
+      "corner": 1,
+      "duty": 0.63,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c1/d0.63-ppm-30.log"
+    },
+    {
+      "corner": 1,
+      "duty": 0.63,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c1/d0.63-ppm0.log"
+    },
+    {
+      "corner": 1,
+      "duty": 0.63,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c1/d0.63-ppm30.log"
+    },
+    {
+      "corner": 2,
+      "duty": 0.37,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c2/d0.37-ppm-30.log"
+    },
+    {
+      "corner": 2,
+      "duty": 0.37,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c2/d0.37-ppm0.log"
+    },
+    {
+      "corner": 2,
+      "duty": 0.37,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c2/d0.37-ppm30.log"
+    },
+    {
+      "corner": 2,
+      "duty": 0.45,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c2/d0.45-ppm-30.log"
+    },
+    {
+      "corner": 2,
+      "duty": 0.45,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c2/d0.45-ppm0.log"
+    },
+    {
+      "corner": 2,
+      "duty": 0.45,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c2/d0.45-ppm30.log"
+    },
+    {
+      "corner": 2,
+      "duty": 0.5,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c2/d0.5-ppm-30.log"
+    },
+    {
+      "corner": 2,
+      "duty": 0.5,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c2/d0.5-ppm0.log"
+    },
+    {
+      "corner": 2,
+      "duty": 0.5,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c2/d0.5-ppm30.log"
+    },
+    {
+      "corner": 2,
+      "duty": 0.55,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c2/d0.55-ppm-30.log"
+    },
+    {
+      "corner": 2,
+      "duty": 0.55,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c2/d0.55-ppm0.log"
+    },
+    {
+      "corner": 2,
+      "duty": 0.55,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c2/d0.55-ppm30.log"
+    },
+    {
+      "corner": 2,
+      "duty": 0.63,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c2/d0.63-ppm-30.log"
+    },
+    {
+      "corner": 2,
+      "duty": 0.63,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c2/d0.63-ppm0.log"
+    },
+    {
+      "corner": 2,
+      "duty": 0.63,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c2/d0.63-ppm30.log"
+    },
+    {
+      "corner": 3,
+      "duty": 0.37,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c3/d0.37-ppm-30.log"
+    },
+    {
+      "corner": 3,
+      "duty": 0.37,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c3/d0.37-ppm0.log"
+    },
+    {
+      "corner": 3,
+      "duty": 0.37,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c3/d0.37-ppm30.log"
+    },
+    {
+      "corner": 3,
+      "duty": 0.45,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c3/d0.45-ppm-30.log"
+    },
+    {
+      "corner": 3,
+      "duty": 0.45,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c3/d0.45-ppm0.log"
+    },
+    {
+      "corner": 3,
+      "duty": 0.45,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c3/d0.45-ppm30.log"
+    },
+    {
+      "corner": 3,
+      "duty": 0.5,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c3/d0.5-ppm-30.log"
+    },
+    {
+      "corner": 3,
+      "duty": 0.5,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c3/d0.5-ppm0.log"
+    },
+    {
+      "corner": 3,
+      "duty": 0.5,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c3/d0.5-ppm30.log"
+    },
+    {
+      "corner": 3,
+      "duty": 0.55,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c3/d0.55-ppm-30.log"
+    },
+    {
+      "corner": 3,
+      "duty": 0.55,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c3/d0.55-ppm0.log"
+    },
+    {
+      "corner": 3,
+      "duty": 0.55,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c3/d0.55-ppm30.log"
+    },
+    {
+      "corner": 3,
+      "duty": 0.63,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c3/d0.63-ppm-30.log"
+    },
+    {
+      "corner": 3,
+      "duty": 0.63,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c3/d0.63-ppm0.log"
+    },
+    {
+      "corner": 3,
+      "duty": 0.63,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c3/d0.63-ppm30.log"
+    },
+    {
+      "corner": 4,
+      "duty": 0.37,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c4/d0.37-ppm-30.log"
+    },
+    {
+      "corner": 4,
+      "duty": 0.37,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c4/d0.37-ppm0.log"
+    },
+    {
+      "corner": 4,
+      "duty": 0.37,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c4/d0.37-ppm30.log"
+    },
+    {
+      "corner": 4,
+      "duty": 0.45,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c4/d0.45-ppm-30.log"
+    },
+    {
+      "corner": 4,
+      "duty": 0.45,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c4/d0.45-ppm0.log"
+    },
+    {
+      "corner": 4,
+      "duty": 0.45,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c4/d0.45-ppm30.log"
+    },
+    {
+      "corner": 4,
+      "duty": 0.5,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c4/d0.5-ppm-30.log"
+    },
+    {
+      "corner": 4,
+      "duty": 0.5,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c4/d0.5-ppm0.log"
+    },
+    {
+      "corner": 4,
+      "duty": 0.5,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c4/d0.5-ppm30.log"
+    },
+    {
+      "corner": 4,
+      "duty": 0.55,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c4/d0.55-ppm-30.log"
+    },
+    {
+      "corner": 4,
+      "duty": 0.55,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c4/d0.55-ppm0.log"
+    },
+    {
+      "corner": 4,
+      "duty": 0.55,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c4/d0.55-ppm30.log"
+    },
+    {
+      "corner": 4,
+      "duty": 0.63,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c4/d0.63-ppm-30.log"
+    },
+    {
+      "corner": 4,
+      "duty": 0.63,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c4/d0.63-ppm0.log"
+    },
+    {
+      "corner": 4,
+      "duty": 0.63,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c4/d0.63-ppm30.log"
+    },
+    {
+      "corner": 5,
+      "duty": 0.37,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c5/d0.37-ppm-30.log"
+    },
+    {
+      "corner": 5,
+      "duty": 0.37,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c5/d0.37-ppm0.log"
+    },
+    {
+      "corner": 5,
+      "duty": 0.37,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c5/d0.37-ppm30.log"
+    },
+    {
+      "corner": 5,
+      "duty": 0.45,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c5/d0.45-ppm-30.log"
+    },
+    {
+      "corner": 5,
+      "duty": 0.45,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c5/d0.45-ppm0.log"
+    },
+    {
+      "corner": 5,
+      "duty": 0.45,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c5/d0.45-ppm30.log"
+    },
+    {
+      "corner": 5,
+      "duty": 0.5,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c5/d0.5-ppm-30.log"
+    },
+    {
+      "corner": 5,
+      "duty": 0.5,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c5/d0.5-ppm0.log"
+    },
+    {
+      "corner": 5,
+      "duty": 0.5,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c5/d0.5-ppm30.log"
+    },
+    {
+      "corner": 5,
+      "duty": 0.55,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c5/d0.55-ppm-30.log"
+    },
+    {
+      "corner": 5,
+      "duty": 0.55,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c5/d0.55-ppm0.log"
+    },
+    {
+      "corner": 5,
+      "duty": 0.55,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c5/d0.55-ppm30.log"
+    },
+    {
+      "corner": 5,
+      "duty": 0.63,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c5/d0.63-ppm-30.log"
+    },
+    {
+      "corner": 5,
+      "duty": 0.63,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c5/d0.63-ppm0.log"
+    },
+    {
+      "corner": 5,
+      "duty": 0.63,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c5/d0.63-ppm30.log"
+    },
+    {
+      "corner": 6,
+      "duty": 0.37,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c6/d0.37-ppm-30.log"
+    },
+    {
+      "corner": 6,
+      "duty": 0.37,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c6/d0.37-ppm0.log"
+    },
+    {
+      "corner": 6,
+      "duty": 0.37,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c6/d0.37-ppm30.log"
+    },
+    {
+      "corner": 6,
+      "duty": 0.45,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c6/d0.45-ppm-30.log"
+    },
+    {
+      "corner": 6,
+      "duty": 0.45,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c6/d0.45-ppm0.log"
+    },
+    {
+      "corner": 6,
+      "duty": 0.45,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c6/d0.45-ppm30.log"
+    },
+    {
+      "corner": 6,
+      "duty": 0.5,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c6/d0.5-ppm-30.log"
+    },
+    {
+      "corner": 6,
+      "duty": 0.5,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c6/d0.5-ppm0.log"
+    },
+    {
+      "corner": 6,
+      "duty": 0.5,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c6/d0.5-ppm30.log"
+    },
+    {
+      "corner": 6,
+      "duty": 0.55,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c6/d0.55-ppm-30.log"
+    },
+    {
+      "corner": 6,
+      "duty": 0.55,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c6/d0.55-ppm0.log"
+    },
+    {
+      "corner": 6,
+      "duty": 0.55,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c6/d0.55-ppm30.log"
+    },
+    {
+      "corner": 6,
+      "duty": 0.63,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c6/d0.63-ppm-30.log"
+    },
+    {
+      "corner": 6,
+      "duty": 0.63,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c6/d0.63-ppm0.log"
+    },
+    {
+      "corner": 6,
+      "duty": 0.63,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c6/d0.63-ppm30.log"
+    },
+    {
+      "corner": 7,
+      "duty": 0.37,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c7/d0.37-ppm-30.log"
+    },
+    {
+      "corner": 7,
+      "duty": 0.37,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c7/d0.37-ppm0.log"
+    },
+    {
+      "corner": 7,
+      "duty": 0.37,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c7/d0.37-ppm30.log"
+    },
+    {
+      "corner": 7,
+      "duty": 0.45,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c7/d0.45-ppm-30.log"
+    },
+    {
+      "corner": 7,
+      "duty": 0.45,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c7/d0.45-ppm0.log"
+    },
+    {
+      "corner": 7,
+      "duty": 0.45,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c7/d0.45-ppm30.log"
+    },
+    {
+      "corner": 7,
+      "duty": 0.5,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c7/d0.5-ppm-30.log"
+    },
+    {
+      "corner": 7,
+      "duty": 0.5,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c7/d0.5-ppm0.log"
+    },
+    {
+      "corner": 7,
+      "duty": 0.5,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c7/d0.5-ppm30.log"
+    },
+    {
+      "corner": 7,
+      "duty": 0.55,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c7/d0.55-ppm-30.log"
+    },
+    {
+      "corner": 7,
+      "duty": 0.55,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c7/d0.55-ppm0.log"
+    },
+    {
+      "corner": 7,
+      "duty": 0.55,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c7/d0.55-ppm30.log"
+    },
+    {
+      "corner": 7,
+      "duty": 0.63,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c7/d0.63-ppm-30.log"
+    },
+    {
+      "corner": 7,
+      "duty": 0.63,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c7/d0.63-ppm0.log"
+    },
+    {
+      "corner": 7,
+      "duty": 0.63,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c7/d0.63-ppm30.log"
+    },
+    {
+      "corner": 8,
+      "duty": 0.37,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c8/d0.37-ppm-30.log"
+    },
+    {
+      "corner": 8,
+      "duty": 0.37,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c8/d0.37-ppm0.log"
+    },
+    {
+      "corner": 8,
+      "duty": 0.37,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c8/d0.37-ppm30.log"
+    },
+    {
+      "corner": 8,
+      "duty": 0.45,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c8/d0.45-ppm-30.log"
+    },
+    {
+      "corner": 8,
+      "duty": 0.45,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c8/d0.45-ppm0.log"
+    },
+    {
+      "corner": 8,
+      "duty": 0.45,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c8/d0.45-ppm30.log"
+    },
+    {
+      "corner": 8,
+      "duty": 0.5,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c8/d0.5-ppm-30.log"
+    },
+    {
+      "corner": 8,
+      "duty": 0.5,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c8/d0.5-ppm0.log"
+    },
+    {
+      "corner": 8,
+      "duty": 0.5,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c8/d0.5-ppm30.log"
+    },
+    {
+      "corner": 8,
+      "duty": 0.55,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c8/d0.55-ppm-30.log"
+    },
+    {
+      "corner": 8,
+      "duty": 0.55,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c8/d0.55-ppm0.log"
+    },
+    {
+      "corner": 8,
+      "duty": 0.55,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c8/d0.55-ppm30.log"
+    },
+    {
+      "corner": 8,
+      "duty": 0.63,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c8/d0.63-ppm-30.log"
+    },
+    {
+      "corner": 8,
+      "duty": 0.63,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c8/d0.63-ppm0.log"
+    },
+    {
+      "corner": 8,
+      "duty": 0.63,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c8/d0.63-ppm30.log"
+    },
+    {
+      "corner": 9,
+      "duty": 0.37,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c9/d0.37-ppm-30.log"
+    },
+    {
+      "corner": 9,
+      "duty": 0.37,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c9/d0.37-ppm0.log"
+    },
+    {
+      "corner": 9,
+      "duty": 0.37,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c9/d0.37-ppm30.log"
+    },
+    {
+      "corner": 9,
+      "duty": 0.45,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c9/d0.45-ppm-30.log"
+    },
+    {
+      "corner": 9,
+      "duty": 0.45,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c9/d0.45-ppm0.log"
+    },
+    {
+      "corner": 9,
+      "duty": 0.45,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c9/d0.45-ppm30.log"
+    },
+    {
+      "corner": 9,
+      "duty": 0.5,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c9/d0.5-ppm-30.log"
+    },
+    {
+      "corner": 9,
+      "duty": 0.5,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c9/d0.5-ppm0.log"
+    },
+    {
+      "corner": 9,
+      "duty": 0.5,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c9/d0.5-ppm30.log"
+    },
+    {
+      "corner": 9,
+      "duty": 0.55,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c9/d0.55-ppm-30.log"
+    },
+    {
+      "corner": 9,
+      "duty": 0.55,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c9/d0.55-ppm0.log"
+    },
+    {
+      "corner": 9,
+      "duty": 0.55,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c9/d0.55-ppm30.log"
+    },
+    {
+      "corner": 9,
+      "duty": 0.63,
+      "ppm": -30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c9/d0.63-ppm-30.log"
+    },
+    {
+      "corner": 9,
+      "duty": 0.63,
+      "ppm": 0,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c9/d0.63-ppm0.log"
+    },
+    {
+      "corner": 9,
+      "duty": 0.63,
+      "ppm": 30,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/clock-c9/d0.63-ppm30.log"
+    }
+  ]
+}
