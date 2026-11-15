@@ -1,0 +1,30 @@
+{
+  "repository": "DutchMaker/DM-02",
+  "source_commit": "6678e8b691778ff956b9c0a9444db462ad26ef52",
+  "release": "https://github.com/DutchMaker/DM-02/releases/tag/dip-logic-2026-11-15",
+  "release_author": "DutchMaker",
+  "asset_uploader": "DutchMaker",
+  "archived_files": 250,
+  "published_file_hashes_preserved": {"dip-logic": 221, "owned-inventory": 19},
+  "verification": {
+    "local_archive_members": "all matched",
+    "downloaded_archive_members": "all matched",
+    "downloaded_manifest_matches_original": true,
+    "github_asset_digests_match_local": true,
+    "release_published": true,
+    "desktop_browser": "pass for both publications",
+    "mobile_browser": "pass for both publications"
+  },
+  "assets": {
+    "checkpoint-manifest.json": {
+      "bytes": 57551,
+      "sha256": "ca444f843340b08822bec7c20264037072dc4044dc61fe20c3866d83ed3e843c"
+    },
+    "studies-and-workbook.tar.gz": {
+      "bytes": 6939989,
+      "files": 250,
+      "sha256": "f81f5e6a090e7322bb504262c7a941657fb24e96c8043f7387a44fad73bc2d39"
+    }
+  },
+  "scope": "DL1 replaces 91 SOIC logic packages with DIP selections across 14 native-checked sheets; four injected faults detected. The 48 CD74AC175M96 parts become CD74ACT175E. Four DIP HCT154 decoders still need sourcing. Integrated timing and physical qualification remain pending; eight PLCC flash ICs await the owned-M27C322 conversion. Normal sources unchanged. The owned-stock workbook opens on the new DIP candidate tabs and labels the earlier BOM as a reference."
+}
