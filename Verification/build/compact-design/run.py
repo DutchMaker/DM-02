@@ -88,6 +88,16 @@ def bench():
     t=t.replace('#320;','#600;').replace('@(posedge phase[3]);#100;','@(posedge phase[3]);#250;')
     return t
 
+def program_watchdog(coverage,ppm=0):
+    period_ns=250/(1+ppm/1.0e6)
+    expected_ns=coverage['microcycles']*8*period_ns
+    # Two complete expected schedules plus 1 ms for reset/startup. This is a
+    # deadlock watchdog, not the functional oracle: every cycle, IO event and
+    # final HALT still has to match the independent fixture exactly.
+    return dict(expected_microcycles=coverage['microcycles'],oscillator_period_ns=period_ns,
+        nominal_schedule_ns=expected_ns,watchdog_ns=2*expected_ns+1_000_000,
+        headroom_factor=2,startup_allowance_ns=1_000_000)
+
 def profile(corner=0,cases=False,demo=None,boot=False,duty=0.5,ppm=0):
     label='boot' if boot else demo or 'cases'+str(int(cases))
     if duty!=0.5 or ppm:label+=f'-d{duty}-ppm{ppm}'
@@ -114,7 +124,17 @@ def profile(corner=0,cases=False,demo=None,boot=False,duty=0.5,ppm=0):
         (folder/'ME1.sv').write_text(memory_hdl((folder/'ME1.sv').read_text()))
         text=(folder/'support.sv').read_text();assert text.count('initial $readmemh("program.hex",memory,0,65535);')==1
         (folder/'support.sv').write_text(text.replace('initial $readmemh("program.hex",memory,0,65535);','initial $readmemh("sram-power-on.hex",memory);'))
-        (folder/'tb.sv').write_text(testbench((folder/'tb.sv').read_text(),coverage))
+        text=testbench((folder/'tb.sv').read_text(),coverage)
+        watchdog=program_watchdog(coverage,ppm)
+        old='DEMO ? 4000000000.0';assert text.count(old)==1
+        text=text.replace(old,f'DEMO ? {watchdog["watchdog_ns"]:.3f}')
+        (folder/'tb.sv').write_text(text)
+        write_json(folder/'simulation-budget.json',watchdog)
+        # The inherited 128 KiB SRAM fixture's upper half is outside the actual
+        # UM61512's sixteen address pins. Preserve its exact first 64 KiB.
+        lines=(folder/'sram-power-on.hex').read_text().splitlines()
+        assert len(lines)==131072
+        (folder/'sram-power-on.hex').write_text('\n'.join(lines[:65536])+'\n')
     args=['iverilog','-g2012','-s','sequencer_tb','-o','compact.vvp']
     for k,v in dict(HARD_ALU=1,HARD_REGISTERS=1,HARD_ADDRESS=1,HARD_MEMORY=1,CASE_SUITE=int(cases),DEMO=int(bool(demo or boot)),OSC_DUTY=duty,OSC_PPM=ppm).items():args+=['-P',f'sequencer_tb.{k}={v}']
     args += [n+'.sv' for n in names]+['support.sv','tb.sv']

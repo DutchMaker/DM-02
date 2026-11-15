@@ -52,6 +52,8 @@ python3 Verification/build/compact-design/publish.py
 
 The full ROM-booted graphics run has millions of microcycles. `run.py` derives its timeout from measured completed profiles with 2.5× headroom. `resume.py` retains matching completed profiles after the execution-budget correction; it checks emitted HDL, schematic and completed-log hashes before accepting them.
 
+The first complete boot replay reached the inherited four-second **simulated-time** watchdog after correctly reconstructing 16,542 payload bytes with 24,326 SRAM writes. The independent fixture requires 2,840,175 microcycles: 5.68035 simulated seconds at CP1's rate. That failed run is preserved in `failed-runs/boot-watchdog-4s/`. The corrected watchdog allows two expected schedules plus 1 ms (11.3617 seconds). `check_program_budget.py` checks that real-valued delay in Icarus before replay. Circuit delays, cycle-by-cycle expectations and final HALT/IO checks are retained. The inherited 128 KiB SRAM fixture is cropped to its identical first 64 KiB for the actual UM61512.
+
 The normal analogue retry is separately preserved under `../experiments/2026-11-15-analog-retry-timeout/`. Its graphics simulation exceeded the inherited one-hour timeout, and its dependent boot stage did not run. CP1 does not turn that failed run into a pass.
 
 ## Electrical boundary

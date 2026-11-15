@@ -1,0 +1,14 @@
+{
+  "acceptance_complete": false,
+  "reason": "Inherited DEMO simulated-time watchdog is shorter than the known CP1 program schedule.",
+  "expected_microcycles": 2840175,
+  "nominal_microcycle_ns": 2000,
+  "minimum_schedule_ns": 5680350000,
+  "inherited_watchdog_ns": 4000000000,
+  "wall_timeout_seconds": 36658,
+  "wall_seconds": 4088.7390033742413,
+  "loader_payload_bytes": 16542,
+  "loader_sram_writes": 24326,
+  "loader_checked": true,
+  "graphics_halt_checked": false
+}

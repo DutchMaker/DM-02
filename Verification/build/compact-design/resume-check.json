@@ -35,11 +35,16 @@
     "counter-c1-full0-fault1"
   ],
   "checks_sha256": {
+    "mar-check.json": "d1f47a786fa6cf7c6d7ac6deb0b149b02d95182a5d44e25b9b8b751892a7d2b3",
     "fault-check.json": "8e6b62a195bf464d080906234335cced7a973acfd58725db01832570a96f2962",
     "rom-check.json": "26d723e0e3a9f0a99415b1b708792650934722e18f58ad68157b01452fd6ba51",
     "clock-check.json": "47727a0a9671a800524380985dfe31d6c95b419c32b04e6c0649dc4fd0d13353",
+    "module-check.json": "14a8f524585fc8a34a8b5d0134f1369f29c58922f95b42742240cdf2911a5a03",
     "register-check.json": "f2982e64b543db13d4bb7dc23b4fdfde38d95e64950bdae8d83637c103d51a1e",
-    "interconnect-check.json": "5bc58e016552f87eba365692c6aeebc3630c00a2497f7ce0039fb04366b6df54"
+    "program-budget-check.json": "1eb91c140f0263ada7a1abef899aca5f89b3563c16d5b5803a186a666326d1d9",
+    "interconnect-check.json": "5bc58e016552f87eba365692c6aeebc3630c00a2497f7ce0039fb04366b6df54",
+    "resume-check.json": "70a786d1bac6eed5d941ea21754cb4ec1ab3d1158db877599b8c2802fe71c379",
+    "browser-check.json": "35340edf19a3812a9f0d58bc65a419283464ff89816a5dfcda9ee1670c1ae626"
   },
-  "reason": "Execution budget only changed. Model, schematic and completed-log checks retain prior passing profiles. The interrupted boot has no accepted result."
+  "reason": "Wall/simulated-time execution budgets changed; SRAM fixture cropped to the unchanged decoded 64 KiB. Prior passing models/schematics remain hash-matched. The four-second-watchdog boot is preserved as a failed run, not accepted."
 }

@@ -1,0 +1,5 @@
+WARNING: support.sv:115: $readmemh(sram-power-on.hex): Too many words in the file for the requested range [0:65535].
+DONE BL1 payload_bytes=16542 writes=24326
+FATAL: tb.sv:329: SQ watchdog
+       Time: 4000000000000  Scope: sequencer_tb
+CP1 physical bus handovers=1085309 minimum_disabled_ns=1006.000

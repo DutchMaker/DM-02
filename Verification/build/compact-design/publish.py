@@ -55,6 +55,8 @@ def main():
         milestone_scope='The unchanged normal requirements remain authoritative. CP1 is a separately verified staged redesign; its evidence is not silently promoted into the failed normal run.',
         physical_qualification=False,open_items=physical['open_items'],rom_programming_readback=False,
         timing_scope='Sampled digital timing and allocated loads at the conditional 4 MHz oscillator / 500 kHz microcycle target. Not a full-supply worst-case electrical guarantee.')
+    failure=HERE/'failed-runs/boot-watchdog-4s/receipt.json'
+    if failure.exists():summary['preserved_boot_watchdog_failure']=json.loads(failure.read_text())
     write('summary.json',summary)
     byboard=''.join(f'<tr><td>{esc(k)}</td><td>{v}</td></tr>' for k,v in boardcounts.items())
     milestone_rows=''.join(f'<tr><td>{x["number"]}. {esc(x["title"])}</td><td>{x["passed"]}/{x["total"]}</td><td>{esc(", ".join(g["id"]+": "+g["status"] for g in x["gates"] if g["status"]!="pass"))}</td></tr>' for x in previous['milestones'][:3])
@@ -70,6 +72,7 @@ def main():
 <h2>Implemented reductions</h2><p>One M27C322 ALU ROM; one M27C1024 control ROM; owned W27C512 and UM61512 memories; enabled HC377 general registers; HCT191 SP/MAR counters; HCT273 snapshot consolidation; four buffered source groups and one shared DATA receiver. ACT175 count falls from 48 to 10, and 157 mux count from 84 to 29.</p>
 <table><thead><tr><th>Board</th><th>Logic/memory ICs</th></tr></thead><tbody>{byboard}</tbody></table>
 <h2>Verification</h2><p>Native KiCad connectivity matches on all {len(native['boards'])} boards. The simulated assembly matches 230 physical backplane net groups. All 497 package footprints have through-hole pads. No merged net exceeds its stated load allocation; those allocations still require physical qualification.</p>
+<p>The earlier boot replay correctly reconstructed the ROM payload, then reached an inherited four-second simulated-time watchdog. Its <a href="failed-runs/boot-watchdog-4s/receipt.json">failed-run receipt</a> is preserved. The <a href="program-budget-check.json">corrected watchdog</a> is sized for the full 2,840,175-cycle boot and graphics program.</p>
 <p>150 clock profiles; full 16-bit increment/decrement and every byte-load value; 4,096 register transfers per register profile; explicit counter timing and same-data bus-contention negative controls. The all-opcode profiles cover 227 opcodes in 454 cases each. See the completed profiles below and <a href="verification-state.json">serial-run state</a>.</p>
 <p><a href="summary.json">Summary</a> · <a href="native-audit.json">Native parity</a> · <a href="interconnect-check.json">Backplane/HDL equivalence</a> · <a href="physical-review.json">Pins, pads and electrical boundary</a> · <a href="loads.json">Merged load allocations</a> · <a href="fault-check.json">Fault detections</a> · <a href="workbook-validation.json">Workbook checks</a></p>
 <table><thead><tr><th>Completed profile</th><th>Passed</th><th>Evidence</th></tr></thead><tbody>{profiles}</tbody></table>
@@ -89,6 +92,9 @@ def main():
         selected.append(HERE/x['log']);selected.append((HERE/x['log']).parent/'result.json')
     for x in modules.get('runs',[])+mar.get('runs',[]):
         selected.append(HERE/x['log']);selected.append((HERE/x['log']).parent/'result.json')
+    for name in ('receipt.json','manifest.json','simulation/simulation.log','simulation/result.json'):
+        p=HERE/'failed-runs/boot-watchdog-4s'/name
+        if p.exists():selected.append(p)
     files={str(p.relative_to(HERE)):dict(bytes=p.stat().st_size,sha256=sha(p)) for p in sorted(set(selected))}
     write('manifest.json',dict(created_at=datetime.now(timezone.utc).isoformat(),state=summary['state'],files=files))
     print('Published',len(files),'files;',summary['state'])

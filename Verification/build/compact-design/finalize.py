@@ -19,6 +19,13 @@ def main():
         for name,h in x.get('schematic_hashes',{}).items():assert sha(HERE/'candidate/Circuits/KiCad/Compact/candidates'/f'{name}.sch')==h
         for name,h in x.get('fixture_hashes',{}).items():assert sha(folder/name)==h
     boot=next(x for x in cpu if x.get('boot'));assert boot['boot_check']['passed'] and not boot['coverage']['boot_injected']
+    budget_check=read('program-budget-check.json');assert budget_check['passed']
+    boot_folder=(HERE/boot['log']).parent
+    startup=bytes(int(x,16) for x in (boot_folder/'sram-power-on.hex').read_text().split())
+    assert len(startup)==65536 and hashlib.sha256(startup).hexdigest()==budget_check['decoded_sram_sha256']
+    budget=json.loads((boot_folder/'simulation-budget.json').read_text())
+    assert budget['expected_microcycles']==boot['coverage']['microcycles']
+    assert budget['watchdog_ns']>budget['nominal_schedule_ns']
     assert boot['output']['passed'] and boot['output']['pixels_checked']==48000 and boot['output']['pixel_errors']==0
     assert boot['output']['pixel_sha256']==boot['coverage']['output']['pixel_sha256']
     assert boot['output']['text']=='Hello world\r:-)'

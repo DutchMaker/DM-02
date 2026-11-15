@@ -1,0 +1,128 @@
+{
+  "files": {
+    "receipt.json": {
+      "bytes": 476,
+      "sha256": "3d85af97eb9056bf9bbd7152892caf7bc47f8308130d68cb781b4cd02cd2dadd"
+    },
+    "resume.log": {
+      "bytes": 1698,
+      "sha256": "5b99bee7cd62aa90901cd5edebaaf1c048778f7bf33f5329c7e4ff8d771cdafe"
+    },
+    "resume.py": {
+      "bytes": 4330,
+      "sha256": "9b83a6db2ad6a015ffa9b65c1fe13497256a6452035cbc8a311b306b3f0d1e9e"
+    },
+    "run.py": {
+      "bytes": 11138,
+      "sha256": "1583803171132b4ec3f68068859e86944a0553f78ddbffacb24a5c693c6cc048"
+    },
+    "simulation/AL1.sv": {
+      "bytes": 7906,
+      "sha256": "ec1c9d1e03fd85b2f08c75f87fe6f9762309fd1281c070616faecff10b6acec4"
+    },
+    "simulation/BF1.sv": {
+      "bytes": 4597,
+      "sha256": "9c195c33ea2830d8df7dee889c4d94286592d6bca4d5694d01c8d9b340e5af11"
+    },
+    "simulation/C1.sv": {
+      "bytes": 3854,
+      "sha256": "3fe5fdb06d626e932e6f7ca33345fb57834b283ebab585c947173676175800e5"
+    },
+    "simulation/CW1.sv": {
+      "bytes": 9214,
+      "sha256": "a40d35f327bbd91f5556fae1fb21ae75b7dac1516698ebbf428ae024dccdc738"
+    },
+    "simulation/DT1.sv": {
+      "bytes": 2099,
+      "sha256": "b1da7a7293d70ee6183b3c91d1460b1e8c31e4470b791235842db4868c5f68f8"
+    },
+    "simulation/MA1.sv": {
+      "bytes": 8916,
+      "sha256": "bf2c1b034ba9dbd4625299f05e45dea8d012c1f12d1a971655cdac8eb57b9fd0"
+    },
+    "simulation/ME1.sv": {
+      "bytes": 9791,
+      "sha256": "d4f3d9d28e0d1e158af19dc4ce66a9261af7d5efdb30d4aae8720d14571fd8a3"
+    },
+    "simulation/PC1.sv": {
+      "bytes": 7151,
+      "sha256": "44ffc639a4ada265916803361ffdef3b0e7f4476b37eda896357ddc604192200"
+    },
+    "simulation/RG1.sv": {
+      "bytes": 5859,
+      "sha256": "1c9df64151234f4785996e5e06373ceb620faabed39fbc8fba07f9a82ce4d0ea"
+    },
+    "simulation/SP1.sv": {
+      "bytes": 5540,
+      "sha256": "ccc14fedfbbcdfce44b2236f9eb5649e11578ef65e57601b90a0b67fed17fe3c"
+    },
+    "simulation/SQ1.sv": {
+      "bytes": 4319,
+      "sha256": "a0612d913daa199c7d698f0594ac0a3dfe7e06716e988073282702d8eaffb694"
+    },
+    "simulation/alu.bin": {
+      "bytes": 4194304,
+      "sha256": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad"
+    },
+    "simulation/boot-rom.hex": {
+      "bytes": 196608,
+      "sha256": "ff7db8f27a7a42068a10549700b08846bac9a0111e069a70c70044d6277009ae"
+    },
+    "simulation/compact.vvp": {
+      "bytes": 935802,
+      "sha256": "7538664c9c1a5960f3fee59ab2e18232b056cc9ca2af0a813c0947144e042bfb"
+    },
+    "simulation/control.hex": {
+      "bytes": 327680,
+      "sha256": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68"
+    },
+    "simulation/execution-budget.json": {
+      "bytes": 136,
+      "sha256": "dae461c54669fb0232607ad79306255960ca16e9c03bf85c4508daefd3d0c5e1"
+    },
+    "simulation/expected.txt": {
+      "bytes": 132722995,
+      "sha256": "df1cffce7b220bcbbdcc13ffa6ac3a7aeb3a49fbe3a92c39e18a18b99b4e429c"
+    },
+    "simulation/io-expected.txt": {
+      "bytes": 262974,
+      "sha256": "bef4a15142094d11010a5a921f5f71e540360eb2c2fbcfb34b2a4b0ae2abec49"
+    },
+    "simulation/io-observed.txt": {
+      "bytes": 165768,
+      "sha256": "aafc2c63bebb7a4d5b59224cc0c5fd3709340578841258dccb88180145952f78"
+    },
+    "simulation/loader-target.hex": {
+      "bytes": 196608,
+      "sha256": "d0525bca389b35ba2ec2af1735030412b29429ca80fb748f230d3d622b3ce6c3"
+    },
+    "simulation/program.hex": {
+      "bytes": 196608,
+      "sha256": "dce270f5d64c7193562d948aeb50e59513645b47b66750ebd83ecdab2fedcb6d"
+    },
+    "simulation/result.json": {
+      "bytes": 8860,
+      "sha256": "d2a9e77472f5de0f83d497eb537843b1f0c2981d8421e17842b04b23a25dee9c"
+    },
+    "simulation/simulation.log": {
+      "bytes": 301,
+      "sha256": "57fae20d3900ef4c6993d43b169f7e23a9727ff8b034d23eb03b31960142cb0b"
+    },
+    "simulation/sram-power-on.hex": {
+      "bytes": 393216,
+      "sha256": "38afb7bf8c4846679b66a0d1f4153c4cec8173d2101e46441c199f2ac7bba152"
+    },
+    "simulation/support.sv": {
+      "bytes": 6286,
+      "sha256": "90346087133d97a87283eb1e31e11579948cb3bc5e072ea7b74085c8be4db1c4"
+    },
+    "simulation/tb.sv": {
+      "bytes": 19266,
+      "sha256": "30f3991a60bebfd9e93f05f901f9eb87beba3028db6592894271eeba051705e4"
+    },
+    "verification-state.json": {
+      "bytes": 80878,
+      "sha256": "1ac8e410e14a17b70f6b859d8c507888c880da9b3be72aa9e54a6bb4cc530386"
+    }
+  }
+}

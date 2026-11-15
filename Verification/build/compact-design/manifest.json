@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-11-15T22:11:18.171546+00:00",
+  "created_at": "2026-11-15T23:06:40.655443+00:00",
   "state": "verification-in-progress",
   "files": {
     "DM-02-compact-BOM.xlsx": {
@@ -7,8 +7,8 @@
       "sha256": "3fe390ca37e814be905f3fc672e68b66e0dac154bf86d6ca908598a88469180c"
     },
     "README.md": {
-      "bytes": 5806,
-      "sha256": "ebfb555223303414af85bad507c8809240a963401a3631e7e5d43338b01c4eaa"
+      "bytes": 6485,
+      "sha256": "43f2152d58928dc2948891fd3f8ce0c34a7aef42ac11012d3c3d9b3397e3d07d"
     },
     "audit.json": {
       "bytes": 4368,
@@ -2070,6 +2070,10 @@
       "bytes": 10632,
       "sha256": "e0f623eda1a34dbc3a24cb069298fff30fdc5b1636d51396ce8f0c415c28a424"
     },
+    "check_program_budget.py": {
+      "bytes": 1961,
+      "sha256": "a38318cc00a9d6623d2b4c5566a74d0cf452ee05723d4637a1990f8688aae0cf"
+    },
     "clock-check.json": {
       "bytes": 25177,
       "sha256": "47727a0a9671a800524380985dfe31d6c95b419c32b04e6c0649dc4fd0d13353"
@@ -2090,6 +2094,22 @@
       "bytes": 973,
       "sha256": "5e16c1fa52009885930f74fa5256c237d239e06b5b85bedd32b0c459dcbf303f"
     },
+    "failed-runs/boot-watchdog-4s/manifest.json": {
+      "bytes": 4395,
+      "sha256": "f129d888c97a3ea80b23c07a12c9d63faa36f53872e0023d3b922756b2c6a758"
+    },
+    "failed-runs/boot-watchdog-4s/receipt.json": {
+      "bytes": 476,
+      "sha256": "3d85af97eb9056bf9bbd7152892caf7bc47f8308130d68cb781b4cd02cd2dadd"
+    },
+    "failed-runs/boot-watchdog-4s/simulation/result.json": {
+      "bytes": 8860,
+      "sha256": "d2a9e77472f5de0f83d497eb537843b1f0c2981d8421e17842b04b23a25dee9c"
+    },
+    "failed-runs/boot-watchdog-4s/simulation/simulation.log": {
+      "bytes": 301,
+      "sha256": "57fae20d3900ef4c6993d43b169f7e23a9727ff8b034d23eb03b31960142cb0b"
+    },
     "fault-check.json": {
       "bytes": 1877,
       "sha256": "8e6b62a195bf464d080906234335cced7a973acfd58725db01832570a96f2962"
@@ -2103,8 +2123,8 @@
       "sha256": "b6420f84d8aa457d3b3dc5effd1742f9c3b973e0ad3b66927e1eeed5d8ee05d2"
     },
     "finalize.py": {
-      "bytes": 3999,
-      "sha256": "bf1dbf67c124cb218227e824820d31e6a22f2a87523f56df85dc3740799e9b1c"
+      "bytes": 4534,
+      "sha256": "68311d3bd325f04aa598769f7570d1b1d014fe367ceedc1bcb604f8b53ce058c"
     },
     "fixture-inputs.json": {
       "bytes": 4428,
@@ -2215,8 +2235,8 @@
       "sha256": "58b4bad35c78cb7f33c76c99b8d8f08bb836b0ba742bcbbaffb6f7f73e5ffbe6"
     },
     "index.html": {
-      "bytes": 10310,
-      "sha256": "569f7a35b517a6d1aacf59dc688efc15b662f2f5f9b72b10eb2f0272bd51416f"
+      "bytes": 10666,
+      "sha256": "f7384a51d5b452e57a2009693fa1e8d9324967bdf2719093e5046f1017891a31"
     },
     "interconnect-check.json": {
       "bytes": 1405,
@@ -2270,6 +2290,14 @@
       "bytes": 2273,
       "sha256": "5da3805ae6dbcdba5292b7f6cb141eead87318918c8ff7efcab9793a169fb5b5"
     },
+    "preserve_boot_watchdog.py": {
+      "bytes": 1779,
+      "sha256": "b6e6e628204dccfedd27d1da52d0e3d0d06f2d2833132e783bbb9f0dac53749e"
+    },
+    "program-budget-check.json": {
+      "bytes": 586,
+      "sha256": "1eb91c140f0263ada7a1abef899aca5f89b3563c16d5b5803a186a666326d1d9"
+    },
     "programming-images/M27C1024-little-endian.bin": {
       "bytes": 131072,
       "sha256": "e041265358399b05135afb3a5c7ba5fb9de096743234fa143fc44008ef92deb5"
@@ -2279,8 +2307,8 @@
       "sha256": "ac92ed24cc8a70bb1d24705586dc522607fa3bc3e41409771487ea4e59335b9c"
     },
     "publish.py": {
-      "bytes": 10771,
-      "sha256": "50dffa30f8044937f2f0387431166a6fa6a016cbf8659382908358183f1b2e5e"
+      "bytes": 11482,
+      "sha256": "6f7fffe6a16d592d788c25c78d3eeb8bf7d65b68c18dfe9061329ba8059399c7"
     },
     "recalculation.json": {
       "bytes": 431,
@@ -2299,20 +2327,20 @@
       "sha256": "d4fcdbfec26c025490ba04f0c35c86fb99c904fe3674ab89e7578add57ccc782"
     },
     "resume-check.json": {
-      "bytes": 1455,
-      "sha256": "70a786d1bac6eed5d941ea21754cb4ec1ab3d1158db877599b8c2802fe71c379"
+      "bytes": 2005,
+      "sha256": "98b530394306096ea2b4bbbd4458ba797355b0c72c003dfa9a0e2ec3c9ba798c"
     },
     "resume.py": {
-      "bytes": 4330,
-      "sha256": "9b83a6db2ad6a015ffa9b65c1fe13497256a6452035cbc8a311b306b3f0d1e9e"
+      "bytes": 4409,
+      "sha256": "04093742345eaa7831339fa0be697d6ffcec4522bf4eba537a90e01bce0a1592"
     },
     "rom-check.json": {
       "bytes": 599,
       "sha256": "26d723e0e3a9f0a99415b1b708792650934722e18f58ad68157b01452fd6ba51"
     },
     "run.py": {
-      "bytes": 11138,
-      "sha256": "1583803171132b4ec3f68068859e86944a0553f78ddbffacb24a5c693c6cc048"
+      "bytes": 12307,
+      "sha256": "938a2b4d10b32bcec6af4ad403f7ea5eb4f1053da56e79894f6fc0e6b4f2919d"
     },
     "source-manifest.json": {
       "bytes": 52655,
@@ -2395,12 +2423,12 @@
       "sha256": "96897ba0db5abbe71562c4f9ccf51f4056012c29d24b4dee9388b5e1ef8f942d"
     },
     "summary.json": {
-      "bytes": 91325,
-      "sha256": "aa5e4ac9c64a58b2d89bcbf41fceb926f998ee8f6f46450cb235cddf1f23025c"
+      "bytes": 91865,
+      "sha256": "1f1cc04f1c04f80f90312967ca2b719c64fa1d40675cde1f0314e1bf1134f1d2"
     },
     "verification-state.json": {
-      "bytes": 836,
-      "sha256": "f3bd1b69d0eb4c8e95224700a82a5be4eee2c85acb20f5b1e114c73ee01404eb"
+      "bytes": 835,
+      "sha256": "0588ff79fcc2e041845fdd4b0b700141ae1724406d39d2d0d2ed158ab210e60d"
     },
     "verify.py": {
       "bytes": 5703,

@@ -1,0 +1,293 @@
+{
+  "corner": 1,
+  "cases": false,
+  "demo": null,
+  "boot": true,
+  "duty": 0.5,
+  "ppm": 0,
+  "passed": false,
+  "exit_code": 1,
+  "timeout_seconds": 36658,
+  "wall_seconds": 4088.7390033742413,
+  "log": "candidate/Verification/build/compact/c1-boot/simulation.log",
+  "model_hashes": {
+    "AL1.sv": "ec1c9d1e03fd85b2f08c75f87fe6f9762309fd1281c070616faecff10b6acec4",
+    "BF1.sv": "9c195c33ea2830d8df7dee889c4d94286592d6bca4d5694d01c8d9b340e5af11",
+    "C1.sv": "3fe5fdb06d626e932e6f7ca33345fb57834b283ebab585c947173676175800e5",
+    "CW1.sv": "a40d35f327bbd91f5556fae1fb21ae75b7dac1516698ebbf428ae024dccdc738",
+    "DT1.sv": "b1da7a7293d70ee6183b3c91d1460b1e8c31e4470b791235842db4868c5f68f8",
+    "MA1.sv": "bf2c1b034ba9dbd4625299f05e45dea8d012c1f12d1a971655cdac8eb57b9fd0",
+    "ME1.sv": "d4f3d9d28e0d1e158af19dc4ce66a9261af7d5efdb30d4aae8720d14571fd8a3",
+    "PC1.sv": "44ffc639a4ada265916803361ffdef3b0e7f4476b37eda896357ddc604192200",
+    "RG1.sv": "1c9df64151234f4785996e5e06373ceb620faabed39fbc8fba07f9a82ce4d0ea",
+    "SP1.sv": "ccc14fedfbbcdfce44b2236f9eb5649e11578ef65e57601b90a0b67fed17fe3c",
+    "SQ1.sv": "a0612d913daa199c7d698f0594ac0a3dfe7e06716e988073282702d8eaffb694",
+    "support.sv": "90346087133d97a87283eb1e31e11579948cb3bc5e072ea7b74085c8be4db1c4",
+    "tb.sv": "30f3991a60bebfd9e93f05f901f9eb87beba3028db6592894271eeba051705e4"
+  },
+  "schematic_hashes": {
+    "C1": "b52927c04b6cab5815c3836dbac9c2a8c01a2e6ae3b274d83e5c50ca1cb6fb70",
+    "CW1": "84c98f545bc21b27c37d41ea4527f3c7e16f264ca3e7f3ff5e55499b4c10da47",
+    "SQ1": "f397af2400bbe38fdf3ba1d895b2d010ad9d601589d4705d210d4dfe80eac3b9",
+    "PC1": "58826429e2bd2ceefdd1816050eca1ef9b99a3a7f3e42d2dc49ec9c046c591f7",
+    "AL1": "51effbc15c6b145184beba172caf0854e498c03afd2533543aa67b4d6a0809cc",
+    "RG1": "d05d21d35137625c8deaa24f7bbf4963c97f95ded7c3d5b9e1e4fc79386112f8",
+    "SP1": "c55e5861bb491ef35bc8ec82ae8f508e3e4a4be2e2bf2e0b30588657ae585f40",
+    "MA1": "f419d576b0309d7fff7635e231dafaa344a7f9baf390f0c813d693919608b8e5",
+    "ME1": "14e714af9a12ac4659902b28e5465bdfbaac2ff4c19a17b972e370c927906837",
+    "BF1": "76f6d83c712e7be921d41f326ca903f710454c9277eb42ef3818f305b36f5fda",
+    "DT1": "a794712b3580b079e18bb7a935a53da4eb3000338bc274df591971a413519f30"
+  },
+  "fixture_hashes": {
+    "alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad",
+    "boot-rom.hex": "ff7db8f27a7a42068a10549700b08846bac9a0111e069a70c70044d6277009ae",
+    "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68",
+    "expected.txt": "df1cffce7b220bcbbdcc13ffa6ac3a7aeb3a49fbe3a92c39e18a18b99b4e429c",
+    "io-expected.txt": "bef4a15142094d11010a5a921f5f71e540360eb2c2fbcfb34b2a4b0ae2abec49",
+    "loader-target.hex": "d0525bca389b35ba2ec2af1735030412b29429ca80fb748f230d3d622b3ce6c3",
+    "program.hex": "dce270f5d64c7193562d948aeb50e59513645b47b66750ebd83ecdab2fedcb6d",
+    "sram-power-on.hex": "38afb7bf8c4846679b66a0d1f4153c4cec8173d2101e46441c199f2ac7bba152"
+  },
+  "coverage": {
+    "image": {
+      "entry": 16384,
+      "payload_end": 32925,
+      "payload_bytes": 16542,
+      "rle_records": 2594,
+      "rle_bytes": 5189,
+      "loader_bytes": 50,
+      "rom_used_bytes": 5445,
+      "physical_rom_bytes": 65536,
+      "program_sha256": "37322291fa31aac5b8cef0af318d443afee3536be48b55387f0fd77c086332a8",
+      "payload_sha256": "da9ae4dba0b9e22c1fe1baa651cdc2abfa83fb5dcc826fe917a6e751cc5a5cae",
+      "rom_sha256": "2985923a419e33ef4fe65361a928e6224ebac9d8e35cfb559601972168c32fba",
+      "labels": {
+        "record": 10,
+        "value": 27,
+        "saved_pointer": 33,
+        "repeat": 39,
+        "done": 47
+      },
+      "listing": [
+        {
+          "address": 0,
+          "instruction": "SP address",
+          "operand": 32925,
+          "size": 3
+        },
+        {
+          "address": 3,
+          "instruction": "MOV B,value",
+          "operand": 1,
+          "size": 2
+        },
+        {
+          "address": 5,
+          "instruction": "MOV C,value",
+          "operand": 0,
+          "size": 2
+        },
+        {
+          "address": 7,
+          "instruction": "MOV address,BC",
+          "operand": 65272,
+          "size": 3
+        },
+        {
+          "address": 10,
+          "instruction": "MOV BC,address",
+          "operand": 65272,
+          "size": 3
+        },
+        {
+          "address": 13,
+          "instruction": "MOV A,(BC)",
+          "operand": null,
+          "size": 1
+        },
+        {
+          "address": 14,
+          "instruction": "CMP value",
+          "operand": 0,
+          "size": 2
+        },
+        {
+          "address": 16,
+          "instruction": "JZ address",
+          "operand": "done",
+          "size": 3
+        },
+        {
+          "address": 19,
+          "instruction": "MOV address,A",
+          "operand": 65274,
+          "size": 3
+        },
+        {
+          "address": 22,
+          "instruction": "INC C",
+          "operand": null,
+          "size": 1
+        },
+        {
+          "address": 23,
+          "instruction": "JNZ address",
+          "operand": "value",
+          "size": 3
+        },
+        {
+          "address": 26,
+          "instruction": "INC B",
+          "operand": null,
+          "size": 1
+        },
+        {
+          "address": 27,
+          "instruction": "MOV A,(BC)",
+          "operand": null,
+          "size": 1
+        },
+        {
+          "address": 28,
+          "instruction": "INC C",
+          "operand": null,
+          "size": 1
+        },
+        {
+          "address": 29,
+          "instruction": "JNZ address",
+          "operand": "saved_pointer",
+          "size": 3
+        },
+        {
+          "address": 32,
+          "instruction": "INC B",
+          "operand": null,
+          "size": 1
+        },
+        {
+          "address": 33,
+          "instruction": "MOV address,BC",
+          "operand": 65272,
+          "size": 3
+        },
+        {
+          "address": 36,
+          "instruction": "MOV B,address",
+          "operand": 65274,
+          "size": 3
+        },
+        {
+          "address": 39,
+          "instruction": "PUSH A",
+          "operand": null,
+          "size": 1
+        },
+        {
+          "address": 40,
+          "instruction": "DEC B",
+          "operand": null,
+          "size": 1
+        },
+        {
+          "address": 41,
+          "instruction": "JNZ address",
+          "operand": "repeat",
+          "size": 3
+        },
+        {
+          "address": 44,
+          "instruction": "JMP address",
+          "operand": "record",
+          "size": 3
+        },
+        {
+          "address": 47,
+          "instruction": "JMP address",
+          "operand": 16384,
+          "size": 3
+        }
+      ],
+      "workspace": {
+        "pointer": 65272,
+        "count": 65274
+      },
+      "expected_loader_sram_writes": 24326,
+      "scope": "64 KiB AT27C512R image; only 0000..3FFF is decoded as ROM. CPU reconstructs the unchanged graphics payload at 4000..payload_end, then jumps to 4000. FEF8..FEFA are CPU-initialized loader workspace. Physical programming/readback and actual device startup remain unverified."
+    },
+    "seed": 165,
+    "full_demo": true,
+    "instructions": 415659,
+    "microcycles": 2840175,
+    "io_events": 43829,
+    "ram_writes": 73733,
+    "boot": {
+      "instructions": 83377,
+      "microcycles": 558200,
+      "ram_writes": 24326,
+      "final": {
+        "registers": {
+          "A": 0,
+          "B": 21,
+          "C": 68,
+          "H": 64,
+          "L": 0
+        },
+        "pc": 16384,
+        "sp": 16383,
+        "flags": 4,
+        "halted": false
+      }
+    },
+    "final": {
+      "registers": {
+        "A": 255,
+        "B": 128,
+        "C": 30,
+        "H": 128,
+        "L": 116
+      },
+      "pc": 32885,
+      "sp": 65277,
+      "flags": 4,
+      "halted": true
+    },
+    "opcode_counts": {
+      "42": 2,
+      "18": 1,
+      "19": 1,
+      "26": 2595,
+      "21": 2595,
+      "30": 21588,
+      "bf": 51758,
+      "c5": 35360,
+      "23": 62934,
+      "79": 21585,
+      "c9": 21730,
+      "1f": 2594,
+      "43": 16542,
+      "7d": 16542,
+      "c3": 18993,
+      "78": 84,
+      "1c": 2,
+      "cc": 16384,
+      "d7": 16398,
+      "17": 29311,
+      "5d": 15,
+      "05": 15,
+      "1e": 31155,
+      "d5": 14583,
+      "ce": 16382,
+      "77": 16509,
+      "e2": 1
+    },
+    "boot_injected": false,
+    "output": {
+      "text": "Hello world\r:-)",
+      "pixels_checked": 48000,
+      "pixel_errors": 0,
+      "pixel_sha256": "e11d5df9f9ce7a06febad97cf50e170aa4487bced5da42d10864de1ee754b691"
+    },
+    "scope": "ROM-only initialization with deterministic poisoned SRAM. Every loader instruction is checked against the architectural oracle. Payload hash, exact SRAM write count and absence of loader IO/ROM writes are checked before application entry."
+  }
+}

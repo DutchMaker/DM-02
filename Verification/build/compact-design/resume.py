@@ -42,7 +42,7 @@ def main():
     for name in ('rom-check.json','clock-check.json','register-check.json','fault-check.json','native-audit.json','physical-review.json','interconnect-check.json','workbook-validation.json'):
         d=json.loads((HERE/name).read_text());assert d.get('passed',d.get('native_passed')),name
     receipt=dict(passed=True,profiles=verified,checks_sha256={p.name:digest(p) for p in HERE.glob('*check.json')},
-        reason='Execution budget only changed. Model, schematic and completed-log checks retain prior passing profiles. The interrupted boot has no accepted result.')
+        reason='Wall/simulated-time execution budgets changed; SRAM fixture cropped to the unchanged decoded 64 KiB. Prior passing models/schematics remain hash-matched. The four-second-watchdog boot is preserved as a failed run, not accepted.')
     write_json(HERE/'resume-check.json',receipt)
     write_json(HERE/'verification-state.json',dict(state='running',started_at=start,resumed=verified))
     try:

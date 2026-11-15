@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-11-15T22:11:18.085798+00:00",
+  "created_at": "2026-11-15T23:06:40.602040+00:00",
   "revision": "CP1",
   "state": "verification-in-progress",
   "digital_verification_passed": false,
@@ -1730,5 +1730,19 @@
     "Owned 191/245/574 manufacturer/suffix/counts and EPROM programmer/readback remain unresolved."
   ],
   "rom_programming_readback": false,
-  "timing_scope": "Sampled digital timing and allocated loads at the conditional 4 MHz oscillator / 500 kHz microcycle target. Not a full-supply worst-case electrical guarantee."
+  "timing_scope": "Sampled digital timing and allocated loads at the conditional 4 MHz oscillator / 500 kHz microcycle target. Not a full-supply worst-case electrical guarantee.",
+  "preserved_boot_watchdog_failure": {
+    "acceptance_complete": false,
+    "reason": "Inherited DEMO simulated-time watchdog is shorter than the known CP1 program schedule.",
+    "expected_microcycles": 2840175,
+    "nominal_microcycle_ns": 2000,
+    "minimum_schedule_ns": 5680350000,
+    "inherited_watchdog_ns": 4000000000,
+    "wall_timeout_seconds": 36658,
+    "wall_seconds": 4088.7390033742413,
+    "loader_payload_bytes": 16542,
+    "loader_sram_writes": 24326,
+    "loader_checked": true,
+    "graphics_halt_checked": false
+  }
 }
