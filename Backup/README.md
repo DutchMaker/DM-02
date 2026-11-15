@@ -55,6 +55,9 @@ For an incremental backup of a completed study, use
 `--study clock-integration` with `create_checkpoint.py`. The selected directory
 must have passing remote-hash and browser checks. This produces one archive
 and a manifest; keep the earlier release for the other project evidence.
+Use `--experiment <directory-name>` to select a preserved run beneath
+`Verification/build/experiments`. The options can be combined. Backup checks
+verify preservation; a failed run keeps its original acceptance status.
 
 ## ACH 4 MHz staging checkpoint
 

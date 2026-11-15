@@ -31,22 +31,27 @@ def main():
     parser.add_argument('output',type=Path)
     parser.add_argument('--study',action='append',default=[],
         help='Archive only this completed supplemental directory under Verification/build (repeatable).')
+    parser.add_argument('--experiment',action='append',default=[],
+        help='Archive only this preserved run under Verification/build/experiments (repeatable).')
     args=parser.parse_args();output=args.output.expanduser().resolve()
     assert not output.is_relative_to(ROOT),'Backup output must be outside the repository'
     output.mkdir(parents=True,exist_ok=True)
     groups={'completed-runs.tar.gz':[BUILD/'experiments'],
         'studies-and-workbook.tar.gz':[p for p in sorted(BUILD.iterdir()) if p.is_dir() and p.name not in LIVE|{'experiments'}]}
-    if args.study:
-        folders=[]
-        for name in args.study:
-            folder=BUILD/name
-            assert Path(name).parts==(name,) and name not in LIVE|{'experiments'},name
-            assert folder.is_dir() and not folder.is_symlink(),name
-            assert json.loads((folder/'remote-validation.json').read_text())['passed'],name
-            assert json.loads((folder/'browser-check.json').read_text())['passed'],name
-            folders.append(folder)
-        assert len(set(folders))==len(folders),'Duplicate study'
-        groups={'studies-and-workbook.tar.gz':folders}
+    if args.study or args.experiment:
+        groups={}
+        for names,parent,archive in ((args.study,BUILD,'studies-and-workbook.tar.gz'),
+                                    (args.experiment,BUILD/'experiments','completed-runs.tar.gz')):
+            folders=[]
+            for name in names:
+                folder=parent/name
+                assert Path(name).parts==(name,) and name not in LIVE|{'experiments'},name
+                assert folder.is_dir() and not folder.is_symlink(),name
+                assert json.loads((folder/'remote-validation.json').read_text())['passed'],name
+                assert json.loads((folder/'browser-check.json').read_text())['passed'],name
+                folders.append(folder)
+            assert len(set(folders))==len(folders),'Duplicate selection'
+            if folders:groups[archive]=folders
     for name in (*groups,'checkpoint-manifest.json'):
         assert not (output/name).exists(),'Existing checkpoint: '+str(output/name)
     manifest=dict(created_at=datetime.now(timezone.utc).isoformat(),
@@ -54,9 +59,10 @@ def main():
         git_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
         scope='Preserved experiments and supplemental studies; live normal-stage outputs are excluded.',
         archives={},files={})
-    if args.study:
-        manifest['scope']='Selected completed supplemental studies; requires the earlier source/evidence checkpoint for other project inputs.'
+    if args.study or args.experiment:
+        manifest['scope']='Selected preserved runs and completed supplemental studies; requires the earlier source/evidence checkpoint for other project inputs. Run acceptance is recorded in each archived report, independently of successful backup verification.'
         manifest['studies']=args.study
+        manifest['experiments']=args.experiment
     for name,folders in groups.items():
         paths=sorted(p for folder in folders for p in folder.rglob('*') if p.is_file()
             and not any(part in CACHES for part in p.relative_to(BUILD).parts))

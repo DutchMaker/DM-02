@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-11-15T18:40:15.965652+00:00",
+  "finished_at": "2026-11-15T18:42:52.101066+00:00",
+  "exit_code": 0,
+  "timed_out": false,
+  "wall_seconds": 156.12570087518543,
+  "cpu_seconds": 143.889012,
+  "source_hashes": {
+    "alu/sequences/slice.vvp": "d684bf8415479b4bf527f1f44a61cd57f8a1b29c4de9809975f4b533218fc641",
+    "alu/sequences/slice.sv": "473a71f4f539e127b730387503098ecd28cc9a4a92dee2d81b8319fbc57f4fd0",
+    "alu/sequences/sequences.hex": "048ddad233b8ba8d0765c1e29346768360e9e15eb7f3643baecdb5f98241f053",
+    "alu/circuit/rom.hex": "d000fb946eb4b162b001f686ae246223d3f321c2b1ffbf96157e57736b5821bd"
+  },
+  "expected_rows": 145536,
+  "timeout_seconds": 600,
+  "passed": true,
+  "scope": "Isolated replay of the failed run binary. Diagnostic only; does not repair or replace the completed full-run report."
+}

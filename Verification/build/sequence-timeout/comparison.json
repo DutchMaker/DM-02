@@ -1,0 +1,8 @@
+{
+  "previous_successful_run": "experiments/2026-11-15-refreshed-complete",
+  "identical": {
+    "alu/sequences/slice.sv": true,
+    "alu/sequences/sequences.hex": true,
+    "alu/circuit/rom.hex": true
+  }
+}
