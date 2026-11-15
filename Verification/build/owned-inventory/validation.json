@@ -1,8 +1,8 @@
 {
   "passed": true,
-  "created_at": "2026-11-15T19:57:10.541610+00:00",
+  "created_at": "2026-11-15T20:16:35.606292+00:00",
   "original_workbook_sha256": "d493a8e55cee418346068ef4bfea4ef6a61acaf1dc08e8b20889d1c751fe6d1a",
-  "updated_workbook_sha256": "892b2db3ee018594ba21a5307fedf30c1e4e787d002fc85dda265a743c3d236a",
+  "updated_workbook_sha256": "ab2662f6c8cbf9e560ac15050b1792e1f8b21cf16416ab20878df1e3bbea83a0",
   "changed_cells": [
     "H2",
     "J2",
@@ -51,5 +51,12 @@
   },
   "other_quantity_cells_left_unknown": true,
   "allow_soic": false,
-  "normal_sources_modified": false
+  "normal_sources_modified": false,
+  "dip_candidate_workbook_sha256": "45f49f9369b3f3340aa93f94f05b9abb9b1765b6edc07d32ef9d0986b69be34a",
+  "added_sheets": [
+    "DIP candidate guide",
+    "DIP candidate BOM",
+    "DIP substitutions"
+  ],
+  "renamed_reference_sheet": "Reference FD1 BOM"
 }

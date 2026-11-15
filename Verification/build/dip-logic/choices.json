@@ -1,0 +1,25 @@
+{
+  "scope": "DL1 staged SOIC-to-DIP logic conversion of the reference FD1 netlist. Pin/net/footprint checks only; integrated timing and physical qualification pending. Owned-memory architecture changes are separate.",
+  "choices": {
+    "CD74AC175M96": {"part":"CD74ACT175E","footprint":"Package_DIP:DIP-16_W7.62mm","quantity":48,"source":"Verification/build/dip-logic/sources/cd74act175.txt","reason":"Same four D flip-flops, active-low asynchronous clear, Q and inverted Q, same pin numbering. ACT TTL thresholds and timing require new integration checks.","sourcing":"Active PDIP listed in TI addendum dated 2025-11-08, downloaded 2026-11-15; distributor stock not confirmed."},
+    "CD74HCT154M96": {"part":"CD74HCT154E","footprint":"Package_DIP:DIP-24_W15.24mm","quantity":4,"source":"Verification/vendor/controller/cd74hct154.txt","reason":"Same HCT decoder in documented wide DIP-24 package. E is 600 mil; EN is a different 300-mil package.","sourcing":"Historical PDIP listing only; absent from current TI orderable addendum. Obtain verified old stock or redesign using DIP decoders; unresolved purchasing item."},
+    "CD74HCT161M96": {"part":"CD74HCT161E","footprint":"Package_DIP:DIP-16_W7.62mm","quantity":5,"source":"Verification/vendor/pc/cd74hct161.txt","reason":"Same counter and pin functions in DIP. User owns DIP HCT161; exact vendor/suffix still needs matching.","sourcing":"Owned HCT161 family; exact CD74HCT161E ownership not established."},
+    "CD74HCT377M96": {"part":"CD74HCT377E","footprint":"Package_DIP:DIP-20_W7.62mm","quantity":2,"source":"Verification/vendor/alu/cd74hct377.txt","reason":"Same enabled register and pin functions in DIP. User owns DIP HCT377; exact vendor/suffix still needs matching.","sourcing":"Owned HCT377 family; exact CD74HCT377E ownership not established."},
+    "SN74AHCT00DR": {"part":"SN74AHCT00N","footprint":"Package_DIP:DIP-14_W7.62mm","quantity":16,"source":"Verification/vendor/controller/sn74ahct00.txt","reason":"Same AHCT NAND function in documented DIP-14 package.","sourcing":"Manufacturer PDIP listing; ownership/available quantity not confirmed."},
+    "SN74AHCT08DR": {"part":"SN74AHCT08N","footprint":"Package_DIP:DIP-14_W7.62mm","quantity":16,"source":"Verification/vendor/pc/sn74ahct08.txt","reason":"Same AHCT AND function in documented DIP-14 package.","sourcing":"Manufacturer PDIP listing; ownership/available quantity not confirmed."}
+  },
+  "act175_limits": {
+    "part":"CD74ACT175E", "document":"SCHS345A, May 2024, pages 3-9 and orderable addendum",
+    "conditions":"4.5..5.5 V, -55..125 C, CL=50 pF; test edges 3 ns. Operating input transition limit 10 ns/V.",
+    "clock_to_q_ns":[2.9,11.5], "clear_to_q_ns":[3.3,13],
+    "setup_ns":2, "hold_ns":2, "recovery_ns":1, "clock_pulse_min_ns":5, "clear_pulse_min_ns":4,
+    "input_cap_max_pf":10, "vih_min_v":2, "vil_max_v":0.8,
+    "scope":"Reviewed component limits, not a promoted system timing model. Recompute hold, clear/recovery, clock receiver thresholds, loaded edges and supply current. AC175 analogue results cannot be inherited."
+  },
+  "decision": {
+    "selected":"Pin-compatible ACT175 DIP conversion before register consolidation",
+    "alternatives":["HCT175 DIP with slower timing", "HCT574 register redesign with new reset/inverted-output logic", "Eight-bit resettable 273 registers after clock/reset grouping and rewiring"],
+    "rationale":"ACT175 preserves asynchronous reset and both output polarities used in the netlist, with current manufacturer PDIP evidence. HCT574 is owned but has no reset and no complementary outputs.",
+    "jev":"Guidance skill unavailable; no Jev MCP interface/resources exposed. Continued with datasheet and netlist evidence; no advisory result claimed."
+  }
+}

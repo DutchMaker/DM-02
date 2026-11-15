@@ -1,0 +1,1106 @@
+{
+  "passed": true,
+  "scope": "DL1 staged SOIC-to-DIP logic conversion of the reference FD1 netlist. Pin/net/footprint checks only; integrated timing and physical qualification pending. Owned-memory architecture changes are separate.",
+  "changed_packages": 91,
+  "changed_types": 6,
+  "remaining_soic": 0,
+  "remaining_non_dip_memory": 8,
+  "boards": [
+    {
+      "board": "C1",
+      "original": "Circuits/KiCad/Distribution/candidates/Reset-C1.sch",
+      "original_sha256": "e99ca761a20d113b1bd11dc0aa68c0f1c956f723da45757612eed59b113d95e2",
+      "candidate": "circuits/Reset-C1.sch",
+      "sha256": "9e3682c0e923648c07c941cdd0ae98a30cab7c9f4b06f395f0ed463021fc21f5",
+      "native": {
+        "sheet": "Reset-C1",
+        "status": "pass",
+        "components": 29,
+        "net_groups": 74,
+        "connected_nets": 45,
+        "physical_pins": 226,
+        "differences": [],
+        "source_hash": "9e3682c0e923648c07c941cdd0ae98a30cab7c9f4b06f395f0ed463021fc21f5",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    },
+    {
+      "board": "CW1",
+      "original": "Circuits/KiCad/Distribution/candidates/Data-CW1.sch",
+      "original_sha256": "e117c7ae35b59571f180530f9007baacf9cbf98461c7fc2c89973d422ca63a18",
+      "candidate": "circuits/Data-CW1.sch",
+      "sha256": "ac92a746e9f0e31793ae837dee57f2f60441d06880b115b4fb01189e52aa10d9",
+      "native": {
+        "sheet": "Data-CW1",
+        "status": "pass",
+        "components": 41,
+        "net_groups": 171,
+        "connected_nets": 133,
+        "physical_pins": 459,
+        "differences": [],
+        "source_hash": "ac92a746e9f0e31793ae837dee57f2f60441d06880b115b4fb01189e52aa10d9",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    },
+    {
+      "board": "SQ1",
+      "original": "Circuits/KiCad/Distribution/candidates/Reset-SQ1.sch",
+      "original_sha256": "bd143b80a1600fba527b84c1bed9a0238147fef4ecf9c06a2e06a7967279f062",
+      "candidate": "circuits/Reset-SQ1.sch",
+      "sha256": "2086fddfb5d6319eeb5aa67d386b873dedd2f367293a4059881418d4c99c5052",
+      "native": {
+        "sheet": "Reset-SQ1",
+        "status": "pass",
+        "components": 46,
+        "net_groups": 140,
+        "connected_nets": 107,
+        "physical_pins": 414,
+        "differences": [],
+        "source_hash": "2086fddfb5d6319eeb5aa67d386b873dedd2f367293a4059881418d4c99c5052",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    },
+    {
+      "board": "PC1",
+      "original": "Circuits/KiCad/Distribution/candidates/Data-PC1.sch",
+      "original_sha256": "90021dbcb699be2b8daa54718ddc708250c921235b0e0eace27a79c3a79695fe",
+      "candidate": "circuits/Data-PC1.sch",
+      "sha256": "04573dd679acb7d9c48a0240d91b9188471a1121374cb3fbc1ce69a4c84a43b0",
+      "native": {
+        "sheet": "Data-PC1",
+        "status": "pass",
+        "components": 35,
+        "net_groups": 112,
+        "connected_nets": 85,
+        "physical_pins": 344,
+        "differences": [],
+        "source_hash": "04573dd679acb7d9c48a0240d91b9188471a1121374cb3fbc1ce69a4c84a43b0",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    },
+    {
+      "board": "AL1",
+      "original": "Circuits/KiCad/Distribution/candidates/Data-AL1.sch",
+      "original_sha256": "8222923c2187898b2e5dfcb2cb75f6f080bc8971235dcaae51192b197ade8877",
+      "candidate": "circuits/Data-AL1.sch",
+      "sha256": "b14565f63ab5b646d33d611ae59e11bc2c89d9e96676c83f8e5f97a5920183eb",
+      "native": {
+        "sheet": "Data-AL1",
+        "status": "pass",
+        "components": 102,
+        "net_groups": 332,
+        "connected_nets": 284,
+        "physical_pins": 1112,
+        "differences": [],
+        "source_hash": "b14565f63ab5b646d33d611ae59e11bc2c89d9e96676c83f8e5f97a5920183eb",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    },
+    {
+      "board": "RG1",
+      "original": "Circuits/KiCad/Distribution/candidates/Data-RG1.sch",
+      "original_sha256": "ada7c03705448a11dc6f31d6d8a667bc0cd4f0064575cd8a4ffc4a573bee0037",
+      "candidate": "circuits/Data-RG1.sch",
+      "sha256": "a41ed286827aa1ef67d6f49f47d2b466cae7f55bbc46d02ecd596ccbc3fcf689",
+      "native": {
+        "sheet": "Data-RG1",
+        "status": "pass",
+        "components": 60,
+        "net_groups": 192,
+        "connected_nets": 146,
+        "physical_pins": 568,
+        "differences": [],
+        "source_hash": "a41ed286827aa1ef67d6f49f47d2b466cae7f55bbc46d02ecd596ccbc3fcf689",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    },
+    {
+      "board": "SP1",
+      "original": "Circuits/KiCad/Distribution/candidates/Data-SP1.sch",
+      "original_sha256": "3d08e7d3d8ce5c88c81f994beb8f86ebc1d9458b4eb7957d8205c348f2a87a66",
+      "candidate": "circuits/Data-SP1.sch",
+      "sha256": "95be66b7e9f45992dd16a7a8b14bc38d7e4077891af10516d25c534ab11cdfdc",
+      "native": {
+        "sheet": "Data-SP1",
+        "status": "pass",
+        "components": 59,
+        "net_groups": 197,
+        "connected_nets": 146,
+        "physical_pins": 571,
+        "differences": [],
+        "source_hash": "95be66b7e9f45992dd16a7a8b14bc38d7e4077891af10516d25c534ab11cdfdc",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    },
+    {
+      "board": "MA1",
+      "original": "Circuits/KiCad/Distribution/candidates/Data-MA1.sch",
+      "original_sha256": "5c8f228aac203e630c83a32c4f9d60fca4d6fd027f28c15f29f54f55e7c77cca",
+      "candidate": "circuits/Data-MA1.sch",
+      "sha256": "8f7f546e053a701c9b0dc030bd539e43709d9abaff0adb3abbe150f89b5a6cc1",
+      "native": {
+        "sheet": "Data-MA1",
+        "status": "pass",
+        "components": 99,
+        "net_groups": 331,
+        "connected_nets": 250,
+        "physical_pins": 941,
+        "differences": [],
+        "source_hash": "8f7f546e053a701c9b0dc030bd539e43709d9abaff0adb3abbe150f89b5a6cc1",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    },
+    {
+      "board": "ME1",
+      "original": "Circuits/KiCad/Distribution/candidates/Data-ME1.sch",
+      "original_sha256": "b1d26e2417fc4ae6e35d6223e6cf57dd218dba10024ed74fcfc35e611f6bf1b7",
+      "candidate": "circuits/Data-ME1.sch",
+      "sha256": "67f17ab83493b88790f3d867b8bfcfa8e402b9822064384c6ac738364058ae7e",
+      "native": {
+        "sheet": "Data-ME1",
+        "status": "pass",
+        "components": 60,
+        "net_groups": 191,
+        "connected_nets": 153,
+        "physical_pins": 595,
+        "differences": [],
+        "source_hash": "67f17ab83493b88790f3d867b8bfcfa8e402b9822064384c6ac738364058ae7e",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    },
+    {
+      "board": "CD1",
+      "original": "Circuits/KiCad/Distribution/candidates/Clock-Distribution.sch",
+      "original_sha256": "724b3d3239256d6578027fa503ed4d7717eef002d303400795af643afbd3e403",
+      "candidate": "circuits/Clock-Distribution.sch",
+      "sha256": "724b3d3239256d6578027fa503ed4d7717eef002d303400795af643afbd3e403",
+      "native": {
+        "sheet": "Clock-Distribution",
+        "status": "pass",
+        "components": 8,
+        "net_groups": 30,
+        "connected_nets": 28,
+        "physical_pins": 90,
+        "differences": [],
+        "source_hash": "724b3d3239256d6578027fa503ed4d7717eef002d303400795af643afbd3e403",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    },
+    {
+      "board": "RD1",
+      "original": "Circuits/KiCad/Distribution/candidates/Reset-Distribution.sch",
+      "original_sha256": "420ec96f5ee27d78db49047976373a49d12ade725f25b4d977e3a4ba601c3c2d",
+      "candidate": "circuits/Reset-Distribution.sch",
+      "sha256": "420ec96f5ee27d78db49047976373a49d12ade725f25b4d977e3a4ba601c3c2d",
+      "native": {
+        "sheet": "Reset-Distribution",
+        "status": "pass",
+        "components": 8,
+        "net_groups": 27,
+        "connected_nets": 15,
+        "physical_pins": 80,
+        "differences": [],
+        "source_hash": "420ec96f5ee27d78db49047976373a49d12ade725f25b4d977e3a4ba601c3c2d",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    },
+    {
+      "board": "DF1",
+      "original": "Circuits/KiCad/Distribution/candidates/Data-Fabric.sch",
+      "original_sha256": "0aa88a4e7e4536696c4e37d963bbd1a47ccf18b47665ca9c725e1636ad904859",
+      "candidate": "circuits/Data-Fabric.sch",
+      "sha256": "0aa88a4e7e4536696c4e37d963bbd1a47ccf18b47665ca9c725e1636ad904859",
+      "native": {
+        "sheet": "Data-Fabric",
+        "status": "pass",
+        "components": 102,
+        "net_groups": 318,
+        "connected_nets": 318,
+        "physical_pins": 976,
+        "differences": [],
+        "source_hash": "0aa88a4e7e4536696c4e37d963bbd1a47ccf18b47665ca9c725e1636ad904859",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    },
+    {
+      "board": "SEL",
+      "original": "Circuits/KiCad/Distribution/candidates/Data-Selector.sch",
+      "original_sha256": "32341a868aab5cde6c9ae9fa0d4b81e9734ef91ac7e9e6595d9e15c040b60f18",
+      "candidate": "circuits/Data-Selector.sch",
+      "sha256": "8835339fbf7c2b8cd8b2e0dcbe994038b893e07ecbb522021b0f85ff9ca5dc57",
+      "native": {
+        "sheet": "Data-Selector",
+        "status": "pass",
+        "components": 8,
+        "net_groups": 21,
+        "connected_nets": 18,
+        "physical_pins": 67,
+        "differences": [],
+        "source_hash": "8835339fbf7c2b8cd8b2e0dcbe994038b893e07ecbb522021b0f85ff9ca5dc57",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    },
+    {
+      "board": "BP1",
+      "original": "Circuits/KiCad/Backplane/candidates/Backplane.sch",
+      "original_sha256": "45a1372e2face90b475b64470b0ccd257d7f1ba1aa2ddf44f27bb038af0de577",
+      "candidate": "circuits/Backplane.sch",
+      "sha256": "45a1372e2face90b475b64470b0ccd257d7f1ba1aa2ddf44f27bb038af0de577",
+      "native": {
+        "sheet": "Backplane",
+        "status": "pass",
+        "components": 81,
+        "net_groups": 362,
+        "connected_nets": 361,
+        "physical_pins": 884,
+        "differences": [],
+        "source_hash": "45a1372e2face90b475b64470b0ccd257d7f1ba1aa2ddf44f27bb038af0de577",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    }
+  ],
+  "changes": [
+    {
+      "board": "C1",
+      "reference": "U1",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "C1",
+      "reference": "U2",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "CW1",
+      "reference": "U5",
+      "before": "CD74HCT154M96",
+      "after": "CD74HCT154E",
+      "footprint": "Package_DIP:DIP-24_W15.24mm"
+    },
+    {
+      "board": "CW1",
+      "reference": "U6",
+      "before": "CD74HCT154M96",
+      "after": "CD74HCT154E",
+      "footprint": "Package_DIP:DIP-24_W15.24mm"
+    },
+    {
+      "board": "CW1",
+      "reference": "U7",
+      "before": "CD74HCT154M96",
+      "after": "CD74HCT154E",
+      "footprint": "Package_DIP:DIP-24_W15.24mm"
+    },
+    {
+      "board": "CW1",
+      "reference": "U8",
+      "before": "CD74HCT154M96",
+      "after": "CD74HCT154E",
+      "footprint": "Package_DIP:DIP-24_W15.24mm"
+    },
+    {
+      "board": "CW1",
+      "reference": "U10",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "CW1",
+      "reference": "U11",
+      "before": "SN74AHCT08DR",
+      "after": "SN74AHCT08N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "CW1",
+      "reference": "U13",
+      "before": "SN74AHCT00DR",
+      "after": "SN74AHCT00N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "CW1",
+      "reference": "U14",
+      "before": "SN74AHCT00DR",
+      "after": "SN74AHCT00N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "CW1",
+      "reference": "U15",
+      "before": "SN74AHCT00DR",
+      "after": "SN74AHCT00N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "SQ1",
+      "reference": "U1",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "SQ1",
+      "reference": "U2",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "SQ1",
+      "reference": "U3",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "SQ1",
+      "reference": "U4",
+      "before": "CD74HCT161M96",
+      "after": "CD74HCT161E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "SQ1",
+      "reference": "U5",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "SQ1",
+      "reference": "U8",
+      "before": "SN74AHCT08DR",
+      "after": "SN74AHCT08N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "SQ1",
+      "reference": "U9",
+      "before": "SN74AHCT08DR",
+      "after": "SN74AHCT08N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "SQ1",
+      "reference": "U10",
+      "before": "SN74AHCT08DR",
+      "after": "SN74AHCT08N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "SQ1",
+      "reference": "U11",
+      "before": "SN74AHCT08DR",
+      "after": "SN74AHCT08N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "SQ1",
+      "reference": "U12",
+      "before": "SN74AHCT00DR",
+      "after": "SN74AHCT00N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "SQ1",
+      "reference": "U13",
+      "before": "SN74AHCT00DR",
+      "after": "SN74AHCT00N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "SQ1",
+      "reference": "U14",
+      "before": "SN74AHCT00DR",
+      "after": "SN74AHCT00N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "SQ1",
+      "reference": "U15",
+      "before": "SN74AHCT00DR",
+      "after": "SN74AHCT00N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "SQ1",
+      "reference": "U16",
+      "before": "SN74AHCT00DR",
+      "after": "SN74AHCT00N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "SQ1",
+      "reference": "U17",
+      "before": "SN74AHCT00DR",
+      "after": "SN74AHCT00N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "SQ1",
+      "reference": "U18",
+      "before": "SN74AHCT00DR",
+      "after": "SN74AHCT00N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "PC1",
+      "reference": "U1",
+      "before": "CD74HCT161M96",
+      "after": "CD74HCT161E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "PC1",
+      "reference": "U2",
+      "before": "CD74HCT161M96",
+      "after": "CD74HCT161E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "PC1",
+      "reference": "U3",
+      "before": "CD74HCT161M96",
+      "after": "CD74HCT161E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "PC1",
+      "reference": "U4",
+      "before": "CD74HCT161M96",
+      "after": "CD74HCT161E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "PC1",
+      "reference": "U11",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "PC1",
+      "reference": "U12",
+      "before": "SN74AHCT08DR",
+      "after": "SN74AHCT08N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "PC1",
+      "reference": "U13",
+      "before": "SN74AHCT08DR",
+      "after": "SN74AHCT08N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "AL1",
+      "reference": "U2",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "AL1",
+      "reference": "U3",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "AL1",
+      "reference": "U6",
+      "before": "CD74HCT377M96",
+      "after": "CD74HCT377E",
+      "footprint": "Package_DIP:DIP-20_W7.62mm"
+    },
+    {
+      "board": "AL1",
+      "reference": "U7",
+      "before": "CD74HCT377M96",
+      "after": "CD74HCT377E",
+      "footprint": "Package_DIP:DIP-20_W7.62mm"
+    },
+    {
+      "board": "AL1",
+      "reference": "U10",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "AL1",
+      "reference": "U19",
+      "before": "SN74AHCT08DR",
+      "after": "SN74AHCT08N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "AL1",
+      "reference": "U20",
+      "before": "SN74AHCT00DR",
+      "after": "SN74AHCT00N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "AL1",
+      "reference": "U21",
+      "before": "SN74AHCT00DR",
+      "after": "SN74AHCT00N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "RG1",
+      "reference": "U3",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "RG1",
+      "reference": "U4",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "RG1",
+      "reference": "U8",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "RG1",
+      "reference": "U9",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "RG1",
+      "reference": "U13",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "RG1",
+      "reference": "U14",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "RG1",
+      "reference": "U18",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "RG1",
+      "reference": "U19",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "RG1",
+      "reference": "U25",
+      "before": "SN74AHCT08DR",
+      "after": "SN74AHCT08N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "RG1",
+      "reference": "U26",
+      "before": "SN74AHCT00DR",
+      "after": "SN74AHCT00N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "SP1",
+      "reference": "U3",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "SP1",
+      "reference": "U4",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "SP1",
+      "reference": "U5",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "SP1",
+      "reference": "U6",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "SP1",
+      "reference": "U7",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "SP1",
+      "reference": "U8",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "SP1",
+      "reference": "U9",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "SP1",
+      "reference": "U10",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "SP1",
+      "reference": "U25",
+      "before": "SN74AHCT08DR",
+      "after": "SN74AHCT08N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "SP1",
+      "reference": "U26",
+      "before": "SN74AHCT00DR",
+      "after": "SN74AHCT00N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "MA1",
+      "reference": "U3",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "MA1",
+      "reference": "U4",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "MA1",
+      "reference": "U5",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "MA1",
+      "reference": "U6",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "MA1",
+      "reference": "U7",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "MA1",
+      "reference": "U8",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "MA1",
+      "reference": "U9",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "MA1",
+      "reference": "U10",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "MA1",
+      "reference": "U11",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "MA1",
+      "reference": "U12",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "MA1",
+      "reference": "U13",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "MA1",
+      "reference": "U14",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "MA1",
+      "reference": "U15",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "MA1",
+      "reference": "U16",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "MA1",
+      "reference": "U17",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "MA1",
+      "reference": "U18",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "MA1",
+      "reference": "U43",
+      "before": "SN74AHCT08DR",
+      "after": "SN74AHCT08N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "MA1",
+      "reference": "U44",
+      "before": "SN74AHCT00DR",
+      "after": "SN74AHCT00N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "ME1",
+      "reference": "U11",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "ME1",
+      "reference": "U13",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "ME1",
+      "reference": "U15",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "ME1",
+      "reference": "U17",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "ME1",
+      "reference": "U19",
+      "before": "CD74AC175M96",
+      "after": "CD74ACT175E",
+      "footprint": "Package_DIP:DIP-16_W7.62mm"
+    },
+    {
+      "board": "ME1",
+      "reference": "U21",
+      "before": "SN74AHCT08DR",
+      "after": "SN74AHCT08N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "ME1",
+      "reference": "U22",
+      "before": "SN74AHCT08DR",
+      "after": "SN74AHCT08N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "ME1",
+      "reference": "U23",
+      "before": "SN74AHCT08DR",
+      "after": "SN74AHCT08N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "ME1",
+      "reference": "U24",
+      "before": "SN74AHCT08DR",
+      "after": "SN74AHCT08N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "ME1",
+      "reference": "U25",
+      "before": "SN74AHCT00DR",
+      "after": "SN74AHCT00N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    },
+    {
+      "board": "SEL",
+      "reference": "U3",
+      "before": "SN74AHCT08DR",
+      "after": "SN74AHCT08N",
+      "footprint": "Package_DIP:DIP-14_W7.62mm"
+    }
+  ],
+  "footprints": {
+    "Package_DIP:DIP-16_W7.62mm": {
+      "sha256": "d9f5f5a3dbebef059800781d37575e4120e5ae5e7fd96001eda365f65de94485",
+      "pads": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "all_through_hole": true
+    },
+    "Package_DIP:DIP-24_W15.24mm": {
+      "sha256": "af97eb233f980466643d3d4f300f4aa666c86ba3abd452dcc0f4afc27efaa13c",
+      "pads": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "2",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "all_through_hole": true
+    },
+    "Package_DIP:DIP-20_W7.62mm": {
+      "sha256": "d98cb2b932a5a4004d26d787249d6089bcc06f088d1a2d848420cdd489d48c98",
+      "pads": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "2",
+        "20",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "all_through_hole": true
+    },
+    "Package_DIP:DIP-14_W7.62mm": {
+      "sha256": "45cf0d69e6038dc3015e395a519a24069fcfff2d70340934683d4241b2098762",
+      "pads": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "all_through_hole": true
+    }
+  },
+  "manufacturer_evidence": [
+    {
+      "part": "CD74ACT175E",
+      "source": "Verification/build/dip-logic/sources/cd74act175.txt",
+      "sha256": "07fcdd7a953914945b0a79a03144e86e2fe03669c5dba109a678bf146fd8e177",
+      "listing": [
+        "CD74ACT175E                     Active        Production             PDIP (N) | 16                  25 | TUBE                   Yes                  NIPDAU                 N/A for Pkg Type                 -55 to 125                  CD74ACT175E",
+        "CD74ACT175E                  N              PDIP           16         25         506       13.97      11230         4.32",
+        "CD74ACT175E                  N              PDIP           16         25         506       13.97      11230         4.32"
+      ]
+    },
+    {
+      "part": "CD74HCT154E",
+      "source": "Verification/vendor/controller/cd74hct154.txt",
+      "sha256": "5b649a75e89b39ea2629372ccb27f551c791b79be642df7d1446c0d05a458eb4",
+      "listing": [
+        "-  Direct LSTTL Input Logic Compatibility,                                  CD74HCT154E                        -55 to 125               24 Ld PDIP"
+      ]
+    },
+    {
+      "part": "CD74HCT161E",
+      "source": "Verification/vendor/pc/cd74hct161.txt",
+      "sha256": "fded125bb151b7c5d3d5c009a0d9786d7c9f8685b6a28f860ab99832a24d2adb",
+      "listing": [
+        "CD74HCT161E                 NRND        Production          PDIP (N) | 16              25 | TUBE               Yes                NIPDAU              N/A for Pkg Type             -55 to 125               CD74HCT161E"
+      ]
+    },
+    {
+      "part": "CD74HCT377E",
+      "source": "Verification/vendor/alu/cd74hct377.txt",
+      "sha256": "dfb3ad1c3585d303d771afb77b087e7ab58172678b8c10d15bbc301ea4feb8e9",
+      "listing": [
+        "Type                -  High Noise Immunity: NIL = 30%, NIH = 30%of VCC at                      CD74HCT377E                        -55 to 125               20 Ld PDIP",
+        "CD74HCT377E                   Active       Production          PDIP (N) | 20               20 | TUBE                Yes                 NIPDAU               N/A for Pkg Type              -55 to 125                CD74HCT377E"
+      ]
+    },
+    {
+      "part": "SN74AHCT00N",
+      "source": "Verification/vendor/controller/sn74ahct00.txt",
+      "sha256": "04718da1edbc3dbc954e616de7c2abd122ac8961615f5cfb11449e2004a7956d",
+      "listing": [
+        "SN74AHCT00N                 Active      Production         PDIP (N) | 14             25 | TUBE               Yes               NIPDAU               N/A for Pkg Type             -40 to 85              SN74AHCT00N"
+      ]
+    },
+    {
+      "part": "SN74AHCT08N",
+      "source": "Verification/vendor/pc/sn74ahct08.txt",
+      "sha256": "224da1faa4ce013179ba62f661f16349e550c115c059c903ae71403b59558492",
+      "listing": [
+        "SN74AHCT08N                NRND        Production          PDIP (N) | 14             25 | TUBE               Yes               NIPDAU              N/A for Pkg Type            -40 to 125              SN74AHCT08N"
+      ]
+    }
+  ],
+  "source_hashes": {
+    "Circuits/KiCad/Distribution/candidates/Reset-C1.sch": "e99ca761a20d113b1bd11dc0aa68c0f1c956f723da45757612eed59b113d95e2",
+    "Circuits/KiCad/Libraries/DM02-Clock.lib": "a4923fba7511b412277c31d47a4e4ca3fd24b9109bc74b060b71d03863b8a52d",
+    "Verification/vendor/kicad5/74xx.lib": "b07606526ccab450344194f37e5c4564a6147f7b9cb3e0a8467137e0840a2adb",
+    "Verification/vendor/kicad5/Connector_Generic.lib": "ebee787e339d021d726e15d20d3f46ce9e49eb47976a7f32569bd8723319a16a",
+    "Verification/vendor/kicad5/Device.lib": "f81265d31f1006db065d213a376e7ed857e043c9ca1e9419249225cab366f84f",
+    "Circuits/KiCad/Distribution/candidates/Data-CW1.sch": "e117c7ae35b59571f180530f9007baacf9cbf98461c7fc2c89973d422ca63a18",
+    "Verification/vendor/kicad5/Memory_EPROM.lib": "8150b59ee4acd4413f9279a8daecbf2bce3c7e2a2948b7c9bc3b003244e9eab7",
+    "Circuits/KiCad/Distribution/candidates/Reset-SQ1.sch": "bd143b80a1600fba527b84c1bed9a0238147fef4ecf9c06a2e06a7967279f062",
+    "Circuits/KiCad/Distribution/candidates/Data-PC1.sch": "90021dbcb699be2b8daa54718ddc708250c921235b0e0eace27a79c3a79695fe",
+    "Circuits/KiCad/Distribution/candidates/Data-AL1.sch": "8222923c2187898b2e5dfcb2cb75f6f080bc8971235dcaae51192b197ade8877",
+    "Circuits/KiCad/Libraries/DM02-Flash.lib": "58a759fdaeb7fabd411d78477f205cf50ec55be1fdc6c9c07649d4cdd28ca18a",
+    "Circuits/KiCad/Distribution/candidates/Data-RG1.sch": "ada7c03705448a11dc6f31d6d8a667bc0cd4f0064575cd8a4ffc4a573bee0037",
+    "Circuits/KiCad/Distribution/candidates/Data-SP1.sch": "3d08e7d3d8ce5c88c81f994beb8f86ebc1d9458b4eb7957d8205c348f2a87a66",
+    "Circuits/KiCad/Distribution/candidates/Data-MA1.sch": "5c8f228aac203e630c83a32c4f9d60fca4d6fd027f28c15f29f54f55e7c77cca",
+    "Circuits/KiCad/Distribution/candidates/Data-ME1.sch": "b1d26e2417fc4ae6e35d6223e6cf57dd218dba10024ed74fcfc35e611f6bf1b7",
+    "Circuits/KiCad/Libraries/DM02-Memory.lib": "40f49c6fbe67ea3e9b362685e561dae7f64f241a428ce1ab0fb752cfdc83bf24",
+    "Circuits/KiCad/Distribution/candidates/Clock-Distribution.sch": "724b3d3239256d6578027fa503ed4d7717eef002d303400795af643afbd3e403",
+    "Circuits/KiCad/Distribution/candidates/Reset-Distribution.sch": "420ec96f5ee27d78db49047976373a49d12ade725f25b4d977e3a4ba601c3c2d",
+    "Circuits/KiCad/Distribution/candidates/Data-Fabric.sch": "0aa88a4e7e4536696c4e37d963bbd1a47ccf18b47665ca9c725e1636ad904859",
+    "Circuits/KiCad/Distribution/candidates/Data-Selector.sch": "32341a868aab5cde6c9ae9fa0d4b81e9734ef91ac7e9e6595d9e15c040b60f18",
+    "Circuits/KiCad/Backplane/candidates/Backplane.sch": "45a1372e2face90b475b64470b0ccd257d7f1ba1aa2ddf44f27bb038af0de577"
+  },
+  "faults": [
+    {
+      "fault": "restore-soic-value",
+      "detected": true,
+      "diagnostic": "Exported identities differ"
+    },
+    {
+      "fault": "restore-soic-footprint",
+      "detected": true,
+      "diagnostic": "Exported identities differ"
+    },
+    {
+      "fault": "remove-reset-pin",
+      "detected": true,
+      "diagnostic": "Exported pin groups differ"
+    },
+    {
+      "fault": "swap-q-qbar",
+      "detected": true,
+      "diagnostic": "Exported pin groups differ"
+    }
+  ],
+  "all_175_positions_require_reset": true,
+  "complement_output_positions": 3,
+  "potential_273_pairs": 14,
+  "normal_sources_unchanged": true,
+  "integrated_timing_qualified": false,
+  "physical_qualified": false,
+  "procurement_ready": false
+}

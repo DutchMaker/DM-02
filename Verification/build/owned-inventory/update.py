@@ -1,5 +1,6 @@
 """Record reported stock in a versioned workbook using its existing input cells."""
 from datetime import datetime,timezone
+from copy import copy
 import hashlib
 import html
 import json
@@ -77,17 +78,46 @@ def main():
     quantities={check['IC inventory'].cell(row,2).value:check['IC inventory'].cell(row,9).value for row in range(2,sheet.max_row+1) if check['IC inventory'].cell(row,9).value is not None}
     assert quantities=={'SN74AHCT157N':1}
     assert sha(BASE)==original_hash and sources()==before
+    # The active workbook now opens on actual staged DIP selections rather than
+    # the earlier SOIC reference BOM. Preserve all reference cell contents.
+    dip_path=HERE.parent/'dip-logic/DM-02-DIP-logic-candidate-BOM.xlsx'
+    dip_validation=read(HERE.parent/'dip-logic/workbook-validation.json')
+    assert dip_validation['passed'] and sha(dip_path)==dip_validation['sha256']
+    dip=load_workbook(dip_path)
+    check['Current BOM'].title='Reference FD1 BOM'
+    for position,(source_name,title) in enumerate([('Start','DIP candidate guide'),('Candidate BOM','DIP candidate BOM'),('SOIC replacements','DIP substitutions')]):
+        src=dip[source_name];dst=check.create_sheet(title,position)
+        for row in src:
+            for cell in row:
+                got=dst.cell(cell.row,cell.column,cell.value);got._style=copy(cell._style)
+                if cell.comment:got.comment=copy(cell.comment)
+        for key,dimension in src.column_dimensions.items():dst.column_dimensions[key]=copy(dimension)
+        dst.freeze_panes=src.freeze_panes;dst.sheet_view.showGridLines=False
+        dst.auto_filter.ref=dst.dimensions
+    check.active=0;check.save(OUTPUT)
+    final=load_workbook(OUTPUT)
+    for name in original.sheetnames:
+        reference='Reference FD1 BOM' if name=='Current BOM' else name
+        for row in original[name]:
+            for cell in row:
+                got=final[reference][cell.coordinate]
+                if name!='IC inventory' or cell.coordinate not in changed:assert got.value==cell.value
+                assert got._style==cell._style
+    assert not any(c.data_type in ('f','e') for s in final for row in s for c in row)
+    assert sha(BASE)==original_hash and sources()==before
     write(HERE/'validation.json',dict(passed=True,created_at=datetime.now(timezone.utc).isoformat(),
         original_workbook_sha256=original_hash,updated_workbook_sha256=sha(OUTPUT),
         changed_cells=changed,changed_rows=len(matched),all_other_cell_values_and_styles_preserved=True,
-        formula_count=formulas,formula_errors=errors,known_owned_quantities=known,other_quantity_cells_left_unknown=True,allow_soic=False,normal_sources_modified=False))
+        formula_count=formulas,formula_errors=errors,known_owned_quantities=known,other_quantity_cells_left_unknown=True,allow_soic=False,normal_sources_modified=False,
+        dip_candidate_workbook_sha256=sha(dip_path),added_sheets=['DIP candidate guide','DIP candidate BOM','DIP substitutions'],renamed_reference_sheet='Reference FD1 BOM'))
     entries=''.join(f'<tr><td>{html.escape(r["part"])}</td><td><strong>{html.escape(r["assessment"])}</strong><p>{html.escape(r["detail"])}</p></td></tr>' for r in assessment['parts'])
     (HERE/'index.html').write_text(f'''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DM-02 · owned inventory update</title><link rel="icon" href="data:,">
 <style>:root{{color-scheme:dark}}body{{margin:24px auto;padding:0 16px;max-width:1100px;background:#0c1420;color:#e2e8f0;font:16px/1.6 system-ui}}a{{color:#8acfff;overflow-wrap:anywhere}}table{{width:100%;table-layout:fixed;border-collapse:collapse}}td,th{{vertical-align:top;text-align:left;border-bottom:1px solid #304156;padding:10px;overflow-wrap:anywhere}}th:first-child{{width:21%}}.note{{color:#ffd082}}@media(max-width:650px){{table,tbody,tr,td{{display:block}}thead{{display:none}}td:first-child{{font-weight:bold}}td{{padding:10px 0}}}}</style>
 <nav><a href="/">Dashboard</a> · <a href="../bom-inventory/">Original BOM publication</a></nav><h1>Owned inventory changes the preferred parts</h1>
 <p><a id="workbook" href="{OUTPUT.name}">Download the BOM with your stock notes</a></p>
+<p id="dip-bom">The workbook now opens with the <a href="../dip-logic/">DIP logic candidate</a>: all 91 SOIC logic positions have staged DIP replacements, including 48 CD74ACT175E flip-flops. The earlier component list is labelled “Reference FD1 BOM”.</p>
 <p>Twelve reported stock types are recorded; the repeated W27C512 mention is counted once. One 74HCT157 is confirmed; other numeric quantities remain blank. The workbook records this HCT alternative against the reference AHCT157 row. Selected FD1 parts and design counts remain the original reference.</p>
-<p id="construction" class="note">{html.escape(stock['construction_constraint'])} The reference BOM still contains SOIC selections that require redesign before the owned-DIP variant can be built.</p>
+<p id="construction" class="note">{html.escape(stock['construction_constraint'])} DL1 has zero SOIC logic packages; eight PLCC flash ICs still await the owned-M27C322 conversion. Integrated timing and physical qualification remain pending.</p>
 <p id="scope" class="note">This is a suitability review and inventory update. An owned-parts circuit has not yet been simulated or promoted.</p>
 <p>{html.escape(assessment['recommendation'])}</p><table id="parts"><thead><tr><th>Owned part</th><th>Recommended use and required changes</th></tr></thead><tbody>{entries}</tbody></table>
 <h2>Remaining inventory details</h2><p>{html.escape('; '.join(assessment['needed_from_user']))}.</p>

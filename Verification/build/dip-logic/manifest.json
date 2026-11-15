@@ -1,0 +1,889 @@
+{
+  "created_at": "2026-11-15T20:16:26.593376+00:00",
+  "files": {
+    "DM-02-DIP-logic-candidate-BOM.xlsx": {
+      "bytes": 29278,
+      "sha256": "45f49f9369b3f3340aa93f94f05b9abb9b1765b6edc07d32ef9d0986b69be34a"
+    },
+    "browser_check.cjs": {
+      "bytes": 2406,
+      "sha256": "290bc89f8e6825e83189506f802d973378d972cd5b14a7f687e1002ba12e6783"
+    },
+    "candidate-BOM.csv": {
+      "bytes": 43421,
+      "sha256": "515008823396b799aaa9404b1ec7ce98bb197cd444aa210457e767238bd8994c"
+    },
+    "check.py": {
+      "bytes": 9314,
+      "sha256": "164c25447ca2618a947350615b8c7345944efaf7d49682bd05d6bb03faa4733d"
+    },
+    "choices.json": {
+      "bytes": 3745,
+      "sha256": "432b10d93fdd4607040fc98367d3a33b66871f0d4eeae78afd62ca99a4df9d75"
+    },
+    "circuits/Backplane.sch": {
+      "bytes": 57460,
+      "sha256": "45a1372e2face90b475b64470b0ccd257d7f1ba1aa2ddf44f27bb038af0de577"
+    },
+    "circuits/Clock-Distribution.sch": {
+      "bytes": 5616,
+      "sha256": "724b3d3239256d6578027fa503ed4d7717eef002d303400795af643afbd3e403"
+    },
+    "circuits/Data-AL1.sch": {
+      "bytes": 73517,
+      "sha256": "b14565f63ab5b646d33d611ae59e11bc2c89d9e96676c83f8e5f97a5920183eb"
+    },
+    "circuits/Data-CW1.sch": {
+      "bytes": 31884,
+      "sha256": "ac92a746e9f0e31793ae837dee57f2f60441d06880b115b4fb01189e52aa10d9"
+    },
+    "circuits/Data-Fabric.sch": {
+      "bytes": 62712,
+      "sha256": "0aa88a4e7e4536696c4e37d963bbd1a47ccf18b47665ca9c725e1636ad904859"
+    },
+    "circuits/Data-MA1.sch": {
+      "bytes": 62556,
+      "sha256": "8f7f546e053a701c9b0dc030bd539e43709d9abaff0adb3abbe150f89b5a6cc1"
+    },
+    "circuits/Data-ME1.sch": {
+      "bytes": 43464,
+      "sha256": "67f17ab83493b88790f3d867b8bfcfa8e402b9822064384c6ac738364058ae7e"
+    },
+    "circuits/Data-PC1.sch": {
+      "bytes": 25393,
+      "sha256": "04573dd679acb7d9c48a0240d91b9188471a1121374cb3fbc1ce69a4c84a43b0"
+    },
+    "circuits/Data-RG1.sch": {
+      "bytes": 39338,
+      "sha256": "a41ed286827aa1ef67d6f49f47d2b466cae7f55bbc46d02ecd596ccbc3fcf689"
+    },
+    "circuits/Data-SP1.sch": {
+      "bytes": 38074,
+      "sha256": "95be66b7e9f45992dd16a7a8b14bc38d7e4077891af10516d25c534ab11cdfdc"
+    },
+    "circuits/Data-Selector.sch": {
+      "bytes": 5554,
+      "sha256": "8835339fbf7c2b8cd8b2e0dcbe994038b893e07ecbb522021b0f85ff9ca5dc57"
+    },
+    "circuits/Reset-C1.sch": {
+      "bytes": 21505,
+      "sha256": "9e3682c0e923648c07c941cdd0ae98a30cab7c9f4b06f395f0ed463021fc21f5"
+    },
+    "circuits/Reset-Distribution.sch": {
+      "bytes": 5106,
+      "sha256": "420ec96f5ee27d78db49047976373a49d12ade725f25b4d977e3a4ba601c3c2d"
+    },
+    "circuits/Reset-SQ1.sch": {
+      "bytes": 39052,
+      "sha256": "2086fddfb5d6319eeb5aa67d386b873dedd2f367293a4059881418d4c99c5052"
+    },
+    "fetch_sources.py": {
+      "bytes": 1122,
+      "sha256": "eab21c392e7f7b8a3dcf194d07e3cd08dd69fd7c804c6ae9c4afaf15eafdeda7"
+    },
+    "footprints/Package_DIP.pretty/DIP-14_W7.62mm.kicad_mod": {
+      "bytes": 4453,
+      "sha256": "45cf0d69e6038dc3015e395a519a24069fcfff2d70340934683d4241b2098762"
+    },
+    "footprints/Package_DIP.pretty/DIP-16_W7.62mm.kicad_mod": {
+      "bytes": 4719,
+      "sha256": "d9f5f5a3dbebef059800781d37575e4120e5ae5e7fd96001eda365f65de94485"
+    },
+    "footprints/Package_DIP.pretty/DIP-20_W7.62mm.kicad_mod": {
+      "bytes": 5256,
+      "sha256": "d98cb2b932a5a4004d26d787249d6089bcc06f088d1a2d848420cdd489d48c98"
+    },
+    "footprints/Package_DIP.pretty/DIP-24_W15.24mm.kicad_mod": {
+      "bytes": 5814,
+      "sha256": "af97eb233f980466643d3d4f300f4aa666c86ba3abd452dcc0f4afc27efaa13c"
+    },
+    "index.html": {
+      "bytes": 4685,
+      "sha256": "c263070b5e392ae8ddecdcc2e82d318207f437d21cf8baf11ec0221f8220a6bd"
+    },
+    "native/AL1/74xx.kicad_sym": {
+      "bytes": 1138558,
+      "sha256": "73c2d2c1480c9cbc7d1ea0144a01a6357d0ec76b8d2294adee1470553df04e73"
+    },
+    "native/AL1/74xx.kicad_sym.kicad-save-25197-164": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/AL1/74xx.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/AL1/Connector_Generic.kicad_sym": {
+      "bytes": 4552404,
+      "sha256": "a92ca91d305591649e47dd0525175db1c6746ac1751567af6dd9a6fd604fa818"
+    },
+    "native/AL1/Connector_Generic.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/AL1/DM02-Flash.kicad_sym": {
+      "bytes": 9154,
+      "sha256": "25d7de85155593fd8d2d86aa330b909ac4d9c89adbcedd67f7f8546b2080249f"
+    },
+    "native/AL1/DM02-Flash.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/AL1/Data-AL1.kicad_sch": {
+      "bytes": 708643,
+      "sha256": "ba932dfc8ebda4e796e24cca4b1de28414cc7da6ba34c1879eb229c75fdb5d0e"
+    },
+    "native/AL1/Data-AL1.log": {
+      "bytes": 5061,
+      "sha256": "ab0c2a8aec9bf3f0b80c9efdeff9eee52c377a6d3a4b37632e89621ce1015cec"
+    },
+    "native/AL1/Data-AL1.xml": {
+      "bytes": 314086,
+      "sha256": "015c251b059a2869229b3b7a3f81fdb8b51ab233eec3ec0692437a42bd388a09"
+    },
+    "native/AL1/Device.kicad_sym": {
+      "bytes": 1920031,
+      "sha256": "b4a86e2469df9e0c0da8050d6ae5f3cb1a14149fcfcb5bd47533fbeebdfae4a6"
+    },
+    "native/AL1/Device.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/AL1/comparison.json": {
+      "bytes": 539,
+      "sha256": "18ec7f8b69077f40773355c1053902433835d6e10f032601bd2c79d0835e0751"
+    },
+    "native/AL1/libraries.json": {
+      "bytes": 1115,
+      "sha256": "f86a586a1e80705e166812ddf2154ecfd40661539a882f43bd2a874f42322547"
+    },
+    "native/BP1/Backplane.kicad_sch": {
+      "bytes": 645598,
+      "sha256": "c95164f4c64e918743e8971fdb9859d65aa26435eeed65962cb122239e27c5de"
+    },
+    "native/BP1/Backplane.log": {
+      "bytes": 5061,
+      "sha256": "ab0c2a8aec9bf3f0b80c9efdeff9eee52c377a6d3a4b37632e89621ce1015cec"
+    },
+    "native/BP1/Backplane.xml": {
+      "bytes": 267769,
+      "sha256": "29d2fa78159f311b44dae9356236554b09625495e3b681abfdfac14251b8e124"
+    },
+    "native/BP1/Connector_Generic.kicad_sym": {
+      "bytes": 4552404,
+      "sha256": "a92ca91d305591649e47dd0525175db1c6746ac1751567af6dd9a6fd604fa818"
+    },
+    "native/BP1/Connector_Generic.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/BP1/comparison.json": {
+      "bytes": 538,
+      "sha256": "e55dfa9e12bb579f06b06efe7ab97a1bc50e7a78994d3f419bf1b17502d047e7"
+    },
+    "native/BP1/libraries.json": {
+      "bytes": 297,
+      "sha256": "13289295c4c11dc61c2636fafbdaa0fe2aa740634f8093e57a184f42b162b31e"
+    },
+    "native/C1/74xx.kicad_sym": {
+      "bytes": 1138558,
+      "sha256": "73c2d2c1480c9cbc7d1ea0144a01a6357d0ec76b8d2294adee1470553df04e73"
+    },
+    "native/C1/74xx.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/C1/Connector_Generic.kicad_sym": {
+      "bytes": 4552404,
+      "sha256": "a92ca91d305591649e47dd0525175db1c6746ac1751567af6dd9a6fd604fa818"
+    },
+    "native/C1/Connector_Generic.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/C1/DM02-Clock.kicad_sym": {
+      "bytes": 2263,
+      "sha256": "e435c7c9f092827e00b2a0dea656f7cd82d31e742f54792c4f2d10abbb2342f4"
+    },
+    "native/C1/DM02-Clock.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/C1/Device.kicad_sym": {
+      "bytes": 1920031,
+      "sha256": "b4a86e2469df9e0c0da8050d6ae5f3cb1a14149fcfcb5bd47533fbeebdfae4a6"
+    },
+    "native/C1/Device.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/C1/Reset-C1.kicad_sch": {
+      "bytes": 185048,
+      "sha256": "a3f307f2917d22274f1d89d04316e2d87476987e0fe4bc57fb8c889be8cfd1ba"
+    },
+    "native/C1/Reset-C1.log": {
+      "bytes": 5061,
+      "sha256": "ab0c2a8aec9bf3f0b80c9efdeff9eee52c377a6d3a4b37632e89621ce1015cec"
+    },
+    "native/C1/Reset-C1.xml": {
+      "bytes": 76410,
+      "sha256": "7d0d379f0612fcff2ddc573cd775a3a887183d257af26461fd0bfa870db642ea"
+    },
+    "native/C1/comparison.json": {
+      "bytes": 535,
+      "sha256": "a6221a1a177d546c4030cd53d21f1cec7da41795b9bfdb2ffe030fce16b5eb01"
+    },
+    "native/C1/libraries.json": {
+      "bytes": 1115,
+      "sha256": "c3731a9f017b2e06ede7e2e6c592b971ae1500f7aa5cb05b45cf6826cb86dec6"
+    },
+    "native/CD1/74xx.kicad_sym": {
+      "bytes": 1138558,
+      "sha256": "73c2d2c1480c9cbc7d1ea0144a01a6357d0ec76b8d2294adee1470553df04e73"
+    },
+    "native/CD1/74xx.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/CD1/Clock-Distribution.kicad_sch": {
+      "bytes": 55885,
+      "sha256": "2e1e7457b6dd4558e94a2e2b341aa2baa7d9e1c767036f8b6c710711cfc7237c"
+    },
+    "native/CD1/Clock-Distribution.log": {
+      "bytes": 5061,
+      "sha256": "ab0c2a8aec9bf3f0b80c9efdeff9eee52c377a6d3a4b37632e89621ce1015cec"
+    },
+    "native/CD1/Clock-Distribution.xml": {
+      "bytes": 26529,
+      "sha256": "892f1ce802cb8b4fe4008d015f7c7a8688ad96ce8476595789d7cb114278ce5e"
+    },
+    "native/CD1/Connector_Generic.kicad_sym": {
+      "bytes": 4552404,
+      "sha256": "a92ca91d305591649e47dd0525175db1c6746ac1751567af6dd9a6fd604fa818"
+    },
+    "native/CD1/Connector_Generic.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/CD1/Device.kicad_sym": {
+      "bytes": 1920031,
+      "sha256": "b4a86e2469df9e0c0da8050d6ae5f3cb1a14149fcfcb5bd47533fbeebdfae4a6"
+    },
+    "native/CD1/Device.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/CD1/comparison.json": {
+      "bytes": 543,
+      "sha256": "406b79ab1a27859a7e6f59c513ebeb7b235773c9c82c295f5b3a38637fde0b93"
+    },
+    "native/CD1/libraries.json": {
+      "bytes": 837,
+      "sha256": "b62d4c88e8862b130b06ff726c4977a145b80dc04953d6148df4e37caeb7ffbd"
+    },
+    "native/CW1/74xx.kicad_sym": {
+      "bytes": 1138558,
+      "sha256": "73c2d2c1480c9cbc7d1ea0144a01a6357d0ec76b8d2294adee1470553df04e73"
+    },
+    "native/CW1/74xx.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/CW1/Connector_Generic.kicad_sym": {
+      "bytes": 4552404,
+      "sha256": "a92ca91d305591649e47dd0525175db1c6746ac1751567af6dd9a6fd604fa818"
+    },
+    "native/CW1/Connector_Generic.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/CW1/Data-CW1.kicad_sch": {
+      "bytes": 330715,
+      "sha256": "9f5a45c979f7561aabd515e7e2c70502c4c5cdfec1e69427d3d1c346dfe9ddaa"
+    },
+    "native/CW1/Data-CW1.log": {
+      "bytes": 5061,
+      "sha256": "ab0c2a8aec9bf3f0b80c9efdeff9eee52c377a6d3a4b37632e89621ce1015cec"
+    },
+    "native/CW1/Data-CW1.xml": {
+      "bytes": 132399,
+      "sha256": "24e54efcd2b51e733a7991fbec2d6cbce70fbb45c92b0e8b18da41c734218301"
+    },
+    "native/CW1/Device.kicad_sym": {
+      "bytes": 1920031,
+      "sha256": "b4a86e2469df9e0c0da8050d6ae5f3cb1a14149fcfcb5bd47533fbeebdfae4a6"
+    },
+    "native/CW1/Device.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/CW1/Memory_EPROM.kicad_sym": {
+      "bytes": 81903,
+      "sha256": "97bc09e5204e507602f2b9c2ffb55762898fc4d47c4b30ff447054b4270fd23e"
+    },
+    "native/CW1/Memory_EPROM.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/CW1/comparison.json": {
+      "bytes": 537,
+      "sha256": "69536245f7cc8b95d395d98654e5a4b9c1f85ca44b96248841475e1527865966"
+    },
+    "native/CW1/libraries.json": {
+      "bytes": 1121,
+      "sha256": "e9a8d76d0a353c085b63bd195c048dc94f7699ff6bc1f83d183e4c95fb8a2848"
+    },
+    "native/DF1/74xx.kicad_sym": {
+      "bytes": 1138558,
+      "sha256": "73c2d2c1480c9cbc7d1ea0144a01a6357d0ec76b8d2294adee1470553df04e73"
+    },
+    "native/DF1/74xx.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/DF1/Connector_Generic.kicad_sym": {
+      "bytes": 4552404,
+      "sha256": "a92ca91d305591649e47dd0525175db1c6746ac1751567af6dd9a6fd604fa818"
+    },
+    "native/DF1/Connector_Generic.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/DF1/Data-Fabric.kicad_sch": {
+      "bytes": 632604,
+      "sha256": "39cd77112ad55d0ce8cf4ab2ad3cc9f8855667f1711b14704b8bcda0a3a98381"
+    },
+    "native/DF1/Data-Fabric.log": {
+      "bytes": 5061,
+      "sha256": "ab0c2a8aec9bf3f0b80c9efdeff9eee52c377a6d3a4b37632e89621ce1015cec"
+    },
+    "native/DF1/Data-Fabric.xml": {
+      "bytes": 292503,
+      "sha256": "d7e2d1b349c1ff8331133da2383a59227697d09520216ef3ff483ab894647c35"
+    },
+    "native/DF1/Device.kicad_sym": {
+      "bytes": 1920031,
+      "sha256": "b4a86e2469df9e0c0da8050d6ae5f3cb1a14149fcfcb5bd47533fbeebdfae4a6"
+    },
+    "native/DF1/Device.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/DF1/comparison.json": {
+      "bytes": 541,
+      "sha256": "6a04842e579bb80052e7d50bc75393b952865009bcd19f68801f35fc9ac9ada8"
+    },
+    "native/DF1/libraries.json": {
+      "bytes": 837,
+      "sha256": "b62d4c88e8862b130b06ff726c4977a145b80dc04953d6148df4e37caeb7ffbd"
+    },
+    "native/MA1/74xx.kicad_sym": {
+      "bytes": 1138558,
+      "sha256": "73c2d2c1480c9cbc7d1ea0144a01a6357d0ec76b8d2294adee1470553df04e73"
+    },
+    "native/MA1/74xx.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/MA1/Connector_Generic.kicad_sym": {
+      "bytes": 4552404,
+      "sha256": "a92ca91d305591649e47dd0525175db1c6746ac1751567af6dd9a6fd604fa818"
+    },
+    "native/MA1/Connector_Generic.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/MA1/Data-MA1.kicad_sch": {
+      "bytes": 632089,
+      "sha256": "bd435178160f16dd20173559f9194885f40f16153f1ebf19e5b3d9f69ea2af75"
+    },
+    "native/MA1/Data-MA1.log": {
+      "bytes": 5061,
+      "sha256": "ab0c2a8aec9bf3f0b80c9efdeff9eee52c377a6d3a4b37632e89621ce1015cec"
+    },
+    "native/MA1/Data-MA1.xml": {
+      "bytes": 284622,
+      "sha256": "63d82d5c4d23a9f8c73b9dbf6bd40059e2139196fb2d8a38a6b5de3b0c40113d"
+    },
+    "native/MA1/Device.kicad_sym": {
+      "bytes": 1920031,
+      "sha256": "b4a86e2469df9e0c0da8050d6ae5f3cb1a14149fcfcb5bd47533fbeebdfae4a6"
+    },
+    "native/MA1/Device.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/MA1/comparison.json": {
+      "bytes": 537,
+      "sha256": "48e1e48fb4b9259b9febf97b9c15384d8722336a554847f05e983b878f5192e0"
+    },
+    "native/MA1/libraries.json": {
+      "bytes": 837,
+      "sha256": "b62d4c88e8862b130b06ff726c4977a145b80dc04953d6148df4e37caeb7ffbd"
+    },
+    "native/ME1/74xx.kicad_sym": {
+      "bytes": 1138558,
+      "sha256": "73c2d2c1480c9cbc7d1ea0144a01a6357d0ec76b8d2294adee1470553df04e73"
+    },
+    "native/ME1/74xx.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/ME1/Connector_Generic.kicad_sym": {
+      "bytes": 4552404,
+      "sha256": "a92ca91d305591649e47dd0525175db1c6746ac1751567af6dd9a6fd604fa818"
+    },
+    "native/ME1/Connector_Generic.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/ME1/DM02-Memory.kicad_sym": {
+      "bytes": 9150,
+      "sha256": "362f1c01c7c5e97b92e062be7d2786a1b5fdfe4e7453406420a706f6d121c952"
+    },
+    "native/ME1/DM02-Memory.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/ME1/Data-ME1.kicad_sch": {
+      "bytes": 447657,
+      "sha256": "c77542e032f67885936ffc8fa085fb51036e98cf78b435c9489d2fcc1a650f5e"
+    },
+    "native/ME1/Data-ME1.log": {
+      "bytes": 5061,
+      "sha256": "ab0c2a8aec9bf3f0b80c9efdeff9eee52c377a6d3a4b37632e89621ce1015cec"
+    },
+    "native/ME1/Data-ME1.xml": {
+      "bytes": 176901,
+      "sha256": "eb1c04b03beaa4d912e5c09875bc4635acb2aeae163e192ae607b002a29643f1"
+    },
+    "native/ME1/Device.kicad_sym": {
+      "bytes": 1920031,
+      "sha256": "b4a86e2469df9e0c0da8050d6ae5f3cb1a14149fcfcb5bd47533fbeebdfae4a6"
+    },
+    "native/ME1/Device.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/ME1/Memory_EPROM.kicad_sym": {
+      "bytes": 81903,
+      "sha256": "97bc09e5204e507602f2b9c2ffb55762898fc4d47c4b30ff447054b4270fd23e"
+    },
+    "native/ME1/Memory_EPROM.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/ME1/comparison.json": {
+      "bytes": 537,
+      "sha256": "531c8acbb4297bd9a2a511b3ea3c072e7f6efbe02b7a6560b464bb4e8155585d"
+    },
+    "native/ME1/libraries.json": {
+      "bytes": 1401,
+      "sha256": "0ae145547bc3e3288d7e27fdd6651684a0c587cf393a86e5c55a90f20a7719a4"
+    },
+    "native/PC1/74xx.kicad_sym": {
+      "bytes": 1138558,
+      "sha256": "73c2d2c1480c9cbc7d1ea0144a01a6357d0ec76b8d2294adee1470553df04e73"
+    },
+    "native/PC1/74xx.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/PC1/Connector_Generic.kicad_sym": {
+      "bytes": 4552404,
+      "sha256": "a92ca91d305591649e47dd0525175db1c6746ac1751567af6dd9a6fd604fa818"
+    },
+    "native/PC1/Connector_Generic.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/PC1/Data-PC1.kicad_sch": {
+      "bytes": 258063,
+      "sha256": "fe9d7d4b1e4723034bec62c528dc56950a8192b550ab27e9f023944c4d7a799a"
+    },
+    "native/PC1/Data-PC1.log": {
+      "bytes": 5061,
+      "sha256": "ab0c2a8aec9bf3f0b80c9efdeff9eee52c377a6d3a4b37632e89621ce1015cec"
+    },
+    "native/PC1/Data-PC1.xml": {
+      "bytes": 103816,
+      "sha256": "8d228fe92d81782822a23b084108d21b412edbdb445590a9016cc88e28a98181"
+    },
+    "native/PC1/Device.kicad_sym": {
+      "bytes": 1920031,
+      "sha256": "b4a86e2469df9e0c0da8050d6ae5f3cb1a14149fcfcb5bd47533fbeebdfae4a6"
+    },
+    "native/PC1/Device.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/PC1/comparison.json": {
+      "bytes": 536,
+      "sha256": "e2f099764131be31bb642bd29d6a82732b1ac314ee9adb4ddeca6d57b25febac"
+    },
+    "native/PC1/libraries.json": {
+      "bytes": 837,
+      "sha256": "b62d4c88e8862b130b06ff726c4977a145b80dc04953d6148df4e37caeb7ffbd"
+    },
+    "native/RD1/74xx.kicad_sym": {
+      "bytes": 1138558,
+      "sha256": "73c2d2c1480c9cbc7d1ea0144a01a6357d0ec76b8d2294adee1470553df04e73"
+    },
+    "native/RD1/74xx.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/RD1/Connector_Generic.kicad_sym": {
+      "bytes": 4552404,
+      "sha256": "a92ca91d305591649e47dd0525175db1c6746ac1751567af6dd9a6fd604fa818"
+    },
+    "native/RD1/Connector_Generic.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/RD1/Device.kicad_sym": {
+      "bytes": 1920031,
+      "sha256": "b4a86e2469df9e0c0da8050d6ae5f3cb1a14149fcfcb5bd47533fbeebdfae4a6"
+    },
+    "native/RD1/Device.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/RD1/Reset-Distribution.kicad_sch": {
+      "bytes": 49848,
+      "sha256": "b90cf47c41bb8bb9842286988e900982abc0ca541d700699d8d4ecd27d91763e"
+    },
+    "native/RD1/Reset-Distribution.log": {
+      "bytes": 5061,
+      "sha256": "ab0c2a8aec9bf3f0b80c9efdeff9eee52c377a6d3a4b37632e89621ce1015cec"
+    },
+    "native/RD1/Reset-Distribution.xml": {
+      "bytes": 25137,
+      "sha256": "3563f9c56a4a163aa1e8b269ffe2f59c15aaf6a1a4b6a7fd279facadef79991f"
+    },
+    "native/RD1/comparison.json": {
+      "bytes": 543,
+      "sha256": "1e27778331488e8a566672897583c8826b8378c67094643c0088252a824ba5a1"
+    },
+    "native/RD1/libraries.json": {
+      "bytes": 837,
+      "sha256": "b62d4c88e8862b130b06ff726c4977a145b80dc04953d6148df4e37caeb7ffbd"
+    },
+    "native/RG1/74xx.kicad_sym": {
+      "bytes": 1138558,
+      "sha256": "73c2d2c1480c9cbc7d1ea0144a01a6357d0ec76b8d2294adee1470553df04e73"
+    },
+    "native/RG1/74xx.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/RG1/Connector_Generic.kicad_sym": {
+      "bytes": 4552404,
+      "sha256": "a92ca91d305591649e47dd0525175db1c6746ac1751567af6dd9a6fd604fa818"
+    },
+    "native/RG1/Connector_Generic.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/RG1/Data-RG1.kicad_sch": {
+      "bytes": 391860,
+      "sha256": "27805e5967d774bbb5d4d0c72c334e63d22657f685d52be7c7a9e4dcc711a003"
+    },
+    "native/RG1/Data-RG1.log": {
+      "bytes": 5061,
+      "sha256": "ab0c2a8aec9bf3f0b80c9efdeff9eee52c377a6d3a4b37632e89621ce1015cec"
+    },
+    "native/RG1/Data-RG1.xml": {
+      "bytes": 172987,
+      "sha256": "1791e198cd5b2c8a42880a59ccef7a3a35d24b9696aaef838f31dbd8d2bc15af"
+    },
+    "native/RG1/Device.kicad_sym": {
+      "bytes": 1920031,
+      "sha256": "b4a86e2469df9e0c0da8050d6ae5f3cb1a14149fcfcb5bd47533fbeebdfae4a6"
+    },
+    "native/RG1/Device.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/RG1/comparison.json": {
+      "bytes": 537,
+      "sha256": "4444a49d7f3d27ca8b62198cc92406e3fcd75bde5ff96a9484d57b81df5d4989"
+    },
+    "native/RG1/libraries.json": {
+      "bytes": 837,
+      "sha256": "b62d4c88e8862b130b06ff726c4977a145b80dc04953d6148df4e37caeb7ffbd"
+    },
+    "native/SEL/74xx.kicad_sym": {
+      "bytes": 1138558,
+      "sha256": "73c2d2c1480c9cbc7d1ea0144a01a6357d0ec76b8d2294adee1470553df04e73"
+    },
+    "native/SEL/74xx.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/SEL/Connector_Generic.kicad_sym": {
+      "bytes": 4552404,
+      "sha256": "a92ca91d305591649e47dd0525175db1c6746ac1751567af6dd9a6fd604fa818"
+    },
+    "native/SEL/Connector_Generic.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/SEL/Data-Selector.kicad_sch": {
+      "bytes": 57169,
+      "sha256": "3f90b9e150cc0e00fadd48b27166b80976f31e209b6a89651f225bc6f573749e"
+    },
+    "native/SEL/Data-Selector.log": {
+      "bytes": 5061,
+      "sha256": "ab0c2a8aec9bf3f0b80c9efdeff9eee52c377a6d3a4b37632e89621ce1015cec"
+    },
+    "native/SEL/Data-Selector.xml": {
+      "bytes": 22168,
+      "sha256": "b071482683199f1d4d726cba42088c717b56a05ee9b04156cfa569b62e4ad03f"
+    },
+    "native/SEL/Device.kicad_sym": {
+      "bytes": 1920031,
+      "sha256": "b4a86e2469df9e0c0da8050d6ae5f3cb1a14149fcfcb5bd47533fbeebdfae4a6"
+    },
+    "native/SEL/Device.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/SEL/comparison.json": {
+      "bytes": 538,
+      "sha256": "aa8b92f80ca43f812365c423dd1f4e8dddb921bc8e6e50081405483318fec136"
+    },
+    "native/SEL/libraries.json": {
+      "bytes": 837,
+      "sha256": "b62d4c88e8862b130b06ff726c4977a145b80dc04953d6148df4e37caeb7ffbd"
+    },
+    "native/SP1/74xx.kicad_sym": {
+      "bytes": 1138558,
+      "sha256": "73c2d2c1480c9cbc7d1ea0144a01a6357d0ec76b8d2294adee1470553df04e73"
+    },
+    "native/SP1/74xx.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/SP1/Connector_Generic.kicad_sym": {
+      "bytes": 4552404,
+      "sha256": "a92ca91d305591649e47dd0525175db1c6746ac1751567af6dd9a6fd604fa818"
+    },
+    "native/SP1/Connector_Generic.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/SP1/Data-SP1.kicad_sch": {
+      "bytes": 385280,
+      "sha256": "9d49b18a5bec4f9cf29c9a6eb3510f118e8ba72740c6e524e7c48e5312afb4f4"
+    },
+    "native/SP1/Data-SP1.log": {
+      "bytes": 5061,
+      "sha256": "ab0c2a8aec9bf3f0b80c9efdeff9eee52c377a6d3a4b37632e89621ce1015cec"
+    },
+    "native/SP1/Data-SP1.xml": {
+      "bytes": 172295,
+      "sha256": "27ffb1e626b125dff8e85d019f69bd4f764c359f9a50b9d45244472a316de891"
+    },
+    "native/SP1/Device.kicad_sym": {
+      "bytes": 1920031,
+      "sha256": "b4a86e2469df9e0c0da8050d6ae5f3cb1a14149fcfcb5bd47533fbeebdfae4a6"
+    },
+    "native/SP1/Device.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/SP1/comparison.json": {
+      "bytes": 537,
+      "sha256": "639ce6c3b8b6595d288be72a236e63202e6c882b3d69a275c83cafcc2e085f98"
+    },
+    "native/SP1/libraries.json": {
+      "bytes": 837,
+      "sha256": "b62d4c88e8862b130b06ff726c4977a145b80dc04953d6148df4e37caeb7ffbd"
+    },
+    "native/SQ1/74xx.kicad_sym": {
+      "bytes": 1138558,
+      "sha256": "73c2d2c1480c9cbc7d1ea0144a01a6357d0ec76b8d2294adee1470553df04e73"
+    },
+    "native/SQ1/74xx.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/SQ1/Connector_Generic.kicad_sym": {
+      "bytes": 4552404,
+      "sha256": "a92ca91d305591649e47dd0525175db1c6746ac1751567af6dd9a6fd604fa818"
+    },
+    "native/SQ1/Connector_Generic.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/SQ1/Device.kicad_sym": {
+      "bytes": 1920031,
+      "sha256": "b4a86e2469df9e0c0da8050d6ae5f3cb1a14149fcfcb5bd47533fbeebdfae4a6"
+    },
+    "native/SQ1/Device.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native/SQ1/Reset-SQ1.kicad_sch": {
+      "bytes": 409009,
+      "sha256": "0423c4a7a261cac8d216f5848ff4df2ee4f187487167c57840dd3138fbf43faa"
+    },
+    "native/SQ1/Reset-SQ1.log": {
+      "bytes": 5061,
+      "sha256": "ab0c2a8aec9bf3f0b80c9efdeff9eee52c377a6d3a4b37632e89621ce1015cec"
+    },
+    "native/SQ1/Reset-SQ1.xml": {
+      "bytes": 130764,
+      "sha256": "80b898bdc20b50231d249e4f841160902e782bbc999f7a8384bcf9d760462413"
+    },
+    "native/SQ1/comparison.json": {
+      "bytes": 538,
+      "sha256": "371690707df29c1fb0f709244fd3d06d0d246fe388f710016295c4c6dac29af8"
+    },
+    "native/SQ1/libraries.json": {
+      "bytes": 837,
+      "sha256": "b62d4c88e8862b130b06ff726c4977a145b80dc04953d6148df4e37caeb7ffbd"
+    },
+    "packages.json": {
+      "bytes": 168596,
+      "sha256": "8b9972b6da2a1c618f1191d6e510770b5cc1db5ec44480060ebea4b10d73e00e"
+    },
+    "publish.py": {
+      "bytes": 12423,
+      "sha256": "bb94ac37ebc353f46c47ef028e0f4779adb81239929337f592d72600722bde42"
+    },
+    "register-review.json": {
+      "bytes": 17485,
+      "sha256": "08a4d5ea340260d865c95a604d32d7990569d7ae032fced232976c8f9f49b6aa"
+    },
+    "sources/cd74act175-source.json": {
+      "bytes": 212,
+      "sha256": "921717de6d8bec3cd53127e61d4b6ead13d9d086c09b83a70d581112c44804e4"
+    },
+    "sources/cd74act175.pdf": {
+      "bytes": 1002256,
+      "sha256": "410a32a2b9e9c08f3ac24ea95c3f93e72c350e312fefc3052b1c22a3bf2af45a"
+    },
+    "sources/cd74act175.txt": {
+      "bytes": 45477,
+      "sha256": "07fcdd7a953914945b0a79a03144e86e2fe03669c5dba109a678bf146fd8e177"
+    },
+    "sources/cd74hct154.txt": {
+      "bytes": 36710,
+      "sha256": "5b649a75e89b39ea2629372ccb27f551c791b79be642df7d1446c0d05a458eb4"
+    },
+    "sources/cd74hct161.txt": {
+      "bytes": 35166,
+      "sha256": "fded125bb151b7c5d3d5c009a0d9786d7c9f8685b6a28f860ab99832a24d2adb"
+    },
+    "sources/cd74hct377.txt": {
+      "bytes": 41407,
+      "sha256": "dfb3ad1c3585d303d771afb77b087e7ab58172678b8c10d15bbc301ea4feb8e9"
+    },
+    "sources/original/Circuits/KiCad/Backplane/candidates/Backplane.sch": {
+      "bytes": 57460,
+      "sha256": "45a1372e2face90b475b64470b0ccd257d7f1ba1aa2ddf44f27bb038af0de577"
+    },
+    "sources/original/Circuits/KiCad/Distribution/candidates/Clock-Distribution.sch": {
+      "bytes": 5616,
+      "sha256": "724b3d3239256d6578027fa503ed4d7717eef002d303400795af643afbd3e403"
+    },
+    "sources/original/Circuits/KiCad/Distribution/candidates/Data-AL1.sch": {
+      "bytes": 73743,
+      "sha256": "8222923c2187898b2e5dfcb2cb75f6f080bc8971235dcaae51192b197ade8877"
+    },
+    "sources/original/Circuits/KiCad/Distribution/candidates/Data-CW1.sch": {
+      "bytes": 32167,
+      "sha256": "e117c7ae35b59571f180530f9007baacf9cbf98461c7fc2c89973d422ca63a18"
+    },
+    "sources/original/Circuits/KiCad/Distribution/candidates/Data-Fabric.sch": {
+      "bytes": 62712,
+      "sha256": "0aa88a4e7e4536696c4e37d963bbd1a47ccf18b47665ca9c725e1636ad904859"
+    },
+    "sources/original/Circuits/KiCad/Distribution/candidates/Data-MA1.sch": {
+      "bytes": 62842,
+      "sha256": "5c8f228aac203e630c83a32c4f9d60fca4d6fd027f28c15f29f54f55e7c77cca"
+    },
+    "sources/original/Circuits/KiCad/Distribution/candidates/Data-ME1.sch": {
+      "bytes": 43794,
+      "sha256": "b1d26e2417fc4ae6e35d6223e6cf57dd218dba10024ed74fcfc35e611f6bf1b7"
+    },
+    "sources/original/Circuits/KiCad/Distribution/candidates/Data-PC1.sch": {
+      "bytes": 25562,
+      "sha256": "90021dbcb699be2b8daa54718ddc708250c921235b0e0eace27a79c3a79695fe"
+    },
+    "sources/original/Circuits/KiCad/Distribution/candidates/Data-RG1.sch": {
+      "bytes": 39536,
+      "sha256": "ada7c03705448a11dc6f31d6d8a667bc0cd4f0064575cd8a4ffc4a573bee0037"
+    },
+    "sources/original/Circuits/KiCad/Distribution/candidates/Data-SP1.sch": {
+      "bytes": 38272,
+      "sha256": "3d08e7d3d8ce5c88c81f994beb8f86ebc1d9458b4eb7957d8205c348f2a87a66"
+    },
+    "sources/original/Circuits/KiCad/Distribution/candidates/Data-Selector.sch": {
+      "bytes": 5609,
+      "sha256": "32341a868aab5cde6c9ae9fa0d4b81e9734ef91ac7e9e6595d9e15c040b60f18"
+    },
+    "sources/original/Circuits/KiCad/Distribution/candidates/Reset-C1.sch": {
+      "bytes": 21527,
+      "sha256": "e99ca761a20d113b1bd11dc0aa68c0f1c956f723da45757612eed59b113d95e2"
+    },
+    "sources/original/Circuits/KiCad/Distribution/candidates/Reset-Distribution.sch": {
+      "bytes": 5106,
+      "sha256": "420ec96f5ee27d78db49047976373a49d12ade725f25b4d977e3a4ba601c3c2d"
+    },
+    "sources/original/Circuits/KiCad/Distribution/candidates/Reset-SQ1.sch": {
+      "bytes": 39713,
+      "sha256": "bd143b80a1600fba527b84c1bed9a0238147fef4ecf9c06a2e06a7967279f062"
+    },
+    "sources/original/Circuits/KiCad/Libraries/DM02-Clock.lib": {
+      "bytes": 404,
+      "sha256": "a4923fba7511b412277c31d47a4e4ca3fd24b9109bc74b060b71d03863b8a52d"
+    },
+    "sources/original/Circuits/KiCad/Libraries/DM02-Flash.lib": {
+      "bytes": 1421,
+      "sha256": "58a759fdaeb7fabd411d78477f205cf50ec55be1fdc6c9c07649d4cdd28ca18a"
+    },
+    "sources/original/Circuits/KiCad/Libraries/DM02-Memory.lib": {
+      "bytes": 1400,
+      "sha256": "40f49c6fbe67ea3e9b362685e561dae7f64f241a428ce1ab0fb752cfdc83bf24"
+    },
+    "sources/original/Verification/vendor/kicad5/74xx.lib": {
+      "bytes": 173423,
+      "sha256": "b07606526ccab450344194f37e5c4564a6147f7b9cb3e0a8467137e0840a2adb"
+    },
+    "sources/original/Verification/vendor/kicad5/Connector_Generic.lib": {
+      "bytes": 762357,
+      "sha256": "ebee787e339d021d726e15d20d3f46ce9e49eb47976a7f32569bd8723319a16a"
+    },
+    "sources/original/Verification/vendor/kicad5/Device.lib": {
+      "bytes": 343123,
+      "sha256": "f81265d31f1006db065d213a376e7ed857e043c9ca1e9419249225cab366f84f"
+    },
+    "sources/original/Verification/vendor/kicad5/Memory_EPROM.lib": {
+      "bytes": 11947,
+      "sha256": "8150b59ee4acd4413f9279a8daecbf2bce3c7e2a2948b7c9bc3b003244e9eab7"
+    },
+    "sources/sn74ahct00.txt": {
+      "bytes": 42421,
+      "sha256": "04718da1edbc3dbc954e616de7c2abd122ac8961615f5cfb11449e2004a7956d"
+    },
+    "sources/sn74ahct08.txt": {
+      "bytes": 26329,
+      "sha256": "224da1faa4ce013179ba62f661f16349e550c115c059c903ae71403b59558492"
+    },
+    "summary.json": {
+      "bytes": 37400,
+      "sha256": "bea9b8dec5f1fe851b374a0405cc7952ee059a7da4742f0dc64a44f17341cb90"
+    },
+    "verify.py": {
+      "bytes": 381,
+      "sha256": "a7e315f7343266ae9be3afbf1c47972db2d683761e57e7453e4444630047580b"
+    },
+    "workbook-validation.json": {
+      "bytes": 332,
+      "sha256": "6319f8424362b20250cba2ed13d007691fee3a80b8c826dccc0be9bba1ac4e4a"
+    }
+  }
+}

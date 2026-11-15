@@ -1,0 +1,389 @@
+Source: https://www.ti.com/lit/ds/symlink/sn74ahct08.pdf
+Retrieved: 2026-11-14
+PDF pages: [3, 4, 5, 6, 13, 15]
+
+--- PDF page 3 ---
+                                                                                                       SN54AHCT08, SN74AHCT08
+www.ti.com                                                                           SCLS237P – OCTOBER 1995 – REVISED OCTOBER 2023
+
+5 Pin Configuration and Functions
+
+
+
+
+
+
+
+
+
+
+
+       Figure 5-1. SN54AHCT08 J or W Package,
+                     14-Pin CDIP or CFP
+  SN74AHCT08 D, DB, DGV, N, NS, or PW Package,
+   14-Pin SOIC, SSOP, TVSOP, PDIP, SO, or TSSOP                      Figure 5-2. SN7AHCT08 RGY or BQA Package, 14-
+                           (Top View)                                            Pin VQFN or WQFN (Top View)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            Figure 5-3. SN54HACT08 FK Package, 20-Pin LCCC (Top View)
+
+                                                    Table 5-1. Pin Functions
+                                  PIN
+                    SN74AHCT08                    SN54AHCT08             TYPE                       DESCRIPTION
+ NAME          D, DB, DGV,                                                (1)
+                N, NS, PW      RGY, BQA        J, W            FK
+
+ 1A                  1             1             1             2           I    1A Input
+ 1B                  2             2             2             3           I    1B Input
+ 1Y                  3             3             3             4           O    1Y Output
+ 2A                  4             4             4             6           I    2A Input
+ 2B                  5             5             5             8           I    2B Input
+ 2Y                  6             6             6             9           O    2Y Output
+ 3Y                  8             8             8             12          O    3Y Output
+ 3A                  9             9             9             13          I    3A Input
+ 3B                 10             10           10             14          I    3B Input
+ 4Y                 11             11           11             16          O    4Y Output
+ 4A                 12             12           12             18          I    4A Input
+ 4B                 13             13           13             19          I    4B Input
+ GND                 7             7             7             10         —     Ground Pin
+
+
+
+
+
+
+
+Copyright © 2023 Texas Instruments Incorporated                                                      Submit Document Feedback         3
+                                           Product Folder Links: SN54AHCT08 SN74AHCT08
+--- PDF page 4 ---
+SN54AHCT08, SN74AHCT08
+SCLS237P – OCTOBER 1995 – REVISED OCTOBER 2023                                                                                       www.ti.com
+                                                Table 5-1. Pin Functions (continued)
+                                     PIN
+                      SN74AHCT08                      SN54AHCT08              TYPE                         DESCRIPTION
+ NAME           D, DB, DGV,                                                     (1)
+                 N, NS, PW       RGY, BQA          J, W            FK
+
+                                                                    1
+                                                                    5
+ NC                   —              —              —               7           —     No Connection
+                                                                    11
+                                                                    15
+                                                                    17
+ VCC                 14              14             14              20          —     Power Pin
+
+(1)   I = input, O = output
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4      Submit Document Feedback                                                                      Copyright © 2023 Texas Instruments Incorporated
+                                              Product Folder Links: SN54AHCT08 SN74AHCT08
+--- PDF page 5 ---
+                                                                                                                           SN54AHCT08, SN74AHCT08
+www.ti.com                                                                                           SCLS237P – OCTOBER 1995 – REVISED OCTOBER 2023
+
+6 Specifications
+6.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted)(1)
+                                                                                                                MIN              MAX                UNIT
+ VCC        Supply voltage range                                                                                –0.5               7                   V
+ VI         Input voltage range(2)                                                                              –0.5               7                   V
+ VO         Output voltage range(2)                                                                             –0.5          VCC + 0.5                V
+
+ IIK        Input clamp current                                         VI < 0                                                    –20                mA
+ IOK        Output clamp current                                        VO < 0 or VO > VCC                                        ±20                mA
+ IO         Continuous output current                                   VO = 0 to VCC                                             ±25                mA
+            Continuous current through VCC or GND                                                                                 ±50                mA
+ Tstg       Storage temperature range                                                                            –65              150                 °C
+ TJ         Junction temperature                                                                                                  150                 °C
+
+(1)    Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress
+       ratings only, which do not imply functional operation of the device at these or any other conditions beyond those indicated under
+       Recommended Operating Conditions. Exposure to absolute-maximum-rated conditions for extended periods may affect device
+       reliability.
+(2)    The input and output voltage ratings may be exceeded if the input and output current ratings are observed.
+6.2 ESD Ratings
+
+                                                                                                                                     VALUE            UNIT
+                                               Human-body model (HBM), per ANSI/ESDA/JEDEC JS-001(1)                                  ±2000
+ V(ESD)      Electrostatic discharge           Charged-device model (CDM), per JEDEC specification JESD22-                            ±1000             V
+                                               C101(2)
+
+(1)    JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process. Manufacturing with
+       less than 500-V HBM is possible with the necessary precautions.
+(2)    JEDEC document JEP157 states that 250-V CDM allows safe manufacturing with a standard ESD control process. Manufacturing with
+       less than 250-V CDM is possible with the necessary precautions.
+6.3 Recommended Operating Conditions
+over operating free-air temperature range (unless otherwise noted)(1)
+
+                                                                                               SN54AHCT08                  SN74AHCT08                 UNIT
+                                                                                                  MIN          MAX            MIN          MAX
+ VCC         Supply voltage                                                                        4.5           5.5           4.5            5.5       V
+ VIH         High-level input voltage                                                                2                           2                      V
+ VIL         Low-level input voltage                                                                             0.8                          0.8       V
+ VI          Input voltage                                                                           0           5.5             0            5.5       V
+ VO          Output voltage                                                                          0          VCC              0           VCC        V
+ IOH         High-level output current                                                                            –8                          –8       mA
+ IOL         Low-level output current                                                                              8                            8      mA
+ Δt/Δv       Input transition rise or fall rate                                                                   20                          20       ns/V
+ TA          Operating free-air temperature                                                       –55           125            –40           125        °C
+
+(1)    All unused inputs of the device must be held at VCC or GND to ensure proper device operation. Refer to the TI Application Report,
+       Implications of Slow or Floating CMOS Inputs, (SCBA004).
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2023 Texas Instruments Incorporated                                                                          Submit Document Feedback               5
+                                                   Product Folder Links: SN54AHCT08 SN74AHCT08
+--- PDF page 6 ---
+SN54AHCT08, SN74AHCT08
+SCLS237P – OCTOBER 1995 – REVISED OCTOBER 2023                                                                                                 www.ti.com
+
+6.4 Thermal Information
+
+                                                                                                   SNx4AHCT08
+                      THERMAL METRIC(1)                                D (SOIC)       DB (SSOP)           DGV           N (PDIP)      BQA          UNIT
+                                                                                                       (TVSOP)                        (WQFN)
+                                                                        14 PINS         14 PINS         14 PINS         14 PINS       14 PINS
+ RθJA         Junction-to-ambient thermal resistance                     124.5           109.5           133.3             59.7         88.3       °C/W
+ RθJC(top)    Junction-to-case (top) thermal resistance                   78.8            62.1            55.6             47.3         90.9       °C/W
+ RθJB         Junction-to-board thermal resistance                         81             56.9            66.3             39.5         56.8       °C/W
+ ψJT          Junction-to-top characterization parameter                   37             22.6             7.8             32.4          9.9       °C/W
+ ψJB          Junction-to-board characterization parameter                80.6            56.3            56.6             39.4         56.7       °C/W
+ RθJC(bot)    Junction-to-case (bottom) thermal resistance                 N/A            N/A             N/A              N/A           N/A       °C/W
+
+(1)    For more information about traditional and new thermal metrics, see the IC Package Thermal Metrics application report, (SPRA953).
+6.5 Electrical Characteristics
+
+over recommended operating free-air temperature range (unless otherwise noted)
+   PARAMETER                  TEST CONDITIONS                     V                 TA = 25°C              SN54AHCT08          SN74AHCT08           UNIT
+                                                                   CC
+                                                                                MIN      TYP      MAX        MIN      MAX          MIN      MAX
+ V                     IOH = –50 µA                              4.5 V           4.4      4.5                 4.4                   4.4               V
+   OH
+                       IOH = –8 mA                                              3.94                          3.8                   3.8
+ V                     IOL = 50 µA                               4.5 V                              0.1                  0.1                  0.1     V
+   OL
+                       IOL = 8 mA                                                                  0.36                0.44                 0.44
+ I                     V  = 5.5 V or GND                         0 V to                            ±0.1                ±1(1)                   ±1    µA
+  I                     I                                        5.5 V
+
+ ICC                   VI = VCC or GND, IO = 0                   5.5 V                                 2                 20                    20    µA
+ ΔI    (2)             One input at 3.4 V,                       5.5 V                             1.35                  1.5                  1.5    mA
+   CC                  Other inputs at VCC or GND
+
+ Ci                    VI = VCC or GND                            5 V                       4        10                                        10    pF
+
+(1)    On products compliant to MIL-PRF-38535, this parameter is not production tested at VCC = 0 V.
+(2)    This is the increase in supply current for each input at one of the specified TTL voltage levels, rather than 0 V or VCC.
+6.6 Switching Characteristics, VCC = 5 V ± 0.5 V
+
+over recommended operating free-air temperature range (unless otherwise noted) (see Figure 7-1)
+  PARAMETER             FROM             TO              LOAD                    TA = 25°C                SN54AHCT08           SN74AHCT08           UNIT
+                       (INPUT)       (OUTPUT)       CAPACITANCE             MIN       TYP        MAX        MIN        MAX        MIN      MAX
+ tPLH                                                                                  5(1)     6.9(1)      1(1)         8(1)        1         8
+ t                      A or B            Y            CL = 15 pF                      5(1)     6.9(1)      1(1)         8(1)        1         8     ns
+  PHL
+ tPLH                   A or B            Y            C   = 50 pF                      5.5        7.9         1           9         1         9     ns
+                                                         L
+ tPHL                                                                                   5.5        7.9         1           9         1         9
+
+(1)    On products compliant to MIL-PRF-38535, this parameter is not production tested.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6      Submit Document Feedback                                                                             Copyright © 2023 Texas Instruments Incorporated
+                                                  Product Folder Links: SN54AHCT08 SN74AHCT08
+--- PDF page 13 ---
+                                                                                                                                                                    PACKAGE OPTION ADDENDUM
+
+
+
+    www.ti.com                                                                                                                                                                                                      10-Nov-2026
+
+
+
+PACKAGING INFORMATION
+
+   Orderable part number           Status     Material type      Package | Pins        Package qty | Carrier        RoHS            Lead finish/             MSL rating/              Op temp (°C)              Part marking
+                                     (1)            (2)                                                               (3)           Ball material            Peak reflow                                              (6)
+                                                                                                                                          (4)                      (5)
+      5962-9682101Q2A              Active      Production         LCCC (FK) | 20             55 | TUBE               No                 SNPB               N/A for Pkg Type            -55 to 125                   5962-
+                                                                                                                                                                                                                9682101Q2A
+                                                                                                                                                                                                                 SNJ54AHCT
+                                                                                                                                                                                                                     08FK
+      5962-9682101QCA              Active      Production          CDIP (J) | 14             25 | TUBE               No                 SNPB               N/A for Pkg Type            -55 to 125             5962-9682101QC
+                                                                                                                                                                                                                       A
+                                                                                                                                                                                                               SNJ54AHCT08J
+      5962-9682101QDA              Active      Production          CFP (W) | 14              25 | TUBE               No                 SNPB               N/A for Pkg Type            -55 to 125             5962-9682101QD
+                                                                                                                                                                                                                       A
+                                                                                                                                                                                                              SNJ54AHCT08W
+      5962-9682101VDA              Active      Production          CFP (W) | 14              25 | TUBE               No                 SNPB               N/A for Pkg Type            -55 to 125             5962-9682101VD
+                                                                                                                                                                                                                       A
+                                                                                                                                                                                                              SNV54AHCT08W
+     5962-9682101VDA.A             Active      Production          CFP (W) | 14              25 | TUBE               No                 SNPB               N/A for Pkg Type            -55 to 125             5962-9682101VD
+                                                                                                                                                                                                                       A
+                                                                                                                                                                                                              SNV54AHCT08W
+     SN74AHCT08BQAR                Active      Production       WQFN (BQA) | 14         3000 | LARGE T&R             Yes                  SN             Level-1-260C-UNLIM            -40 to 125                  AHCT08
+    SN74AHCT08BQAR.A               Active      Production       WQFN (BQA) | 14         3000 | LARGE T&R             Yes                  SN             Level-1-260C-UNLIM            -40 to 125                  AHCT08
+        SN74AHCT08D               Obsolete     Production         SOIC (D) | 14                   -                   -                 Call TI                  Call TI               -40 to 125                  AHCT08
+      SN74AHCT08DBR                Active      Production        SSOP (DB) | 14         2000 | LARGE T&R             Yes               NIPDAU            Level-1-260C-UNLIM            -40 to 125                   HB08
+     SN74AHCT08DBR.A               Active      Production        SSOP (DB) | 14         2000 | LARGE T&R             Yes               NIPDAU            Level-1-260C-UNLIM            -40 to 125                   HB08
+     SN74AHCT08DGVR                Active      Production       TVSOP (DGV) | 14        2000 | LARGE T&R             Yes               NIPDAU            Level-1-260C-UNLIM            -40 to 125                   HB08
+    SN74AHCT08DGVR.A               Active      Production       TVSOP (DGV) | 14        2000 | LARGE T&R             Yes               NIPDAU            Level-1-260C-UNLIM            -40 to 125                   HB08
+       SN74AHCT08DR                Active      Production         SOIC (D) | 14         2500 | LARGE T&R             Yes               NIPDAU            Level-1-260C-UNLIM            -40 to 125                  AHCT08
+      SN74AHCT08DR.A               Active      Production         SOIC (D) | 14         2500 | LARGE T&R             Yes               NIPDAU            Level-1-260C-UNLIM            -40 to 125                  AHCT08
+        SN74AHCT08N                NRND        Production          PDIP (N) | 14             25 | TUBE               Yes               NIPDAU              N/A for Pkg Type            -40 to 125              SN74AHCT08N
+       SN74AHCT08N.A               NRND        Production          PDIP (N) | 14             25 | TUBE               Yes               NIPDAU              N/A for Pkg Type            -40 to 125              SN74AHCT08N
+      SN74AHCT08NSR                NRND        Production         SOP (NS) | 14         2000 | LARGE T&R             Yes               NIPDAU            Level-1-260C-UNLIM            -40 to 125                  AHCT08
+     SN74AHCT08NSR.A               NRND        Production         SOP (NS) | 14         2000 | LARGE T&R             Yes               NIPDAU            Level-1-260C-UNLIM            -40 to 125                  AHCT08
+       SN74AHCT08PW               Obsolete     Production       TSSOP (PW) | 14                   -                   -                 Call TI                  Call TI               -40 to 125                   HB08
+      SN74AHCT08PWR                Active      Production       TSSOP (PW) | 14         2000 | LARGE T&R             Yes            NIPDAU | SN          Level-1-260C-UNLIM            -40 to 125                   HB08
+     SN74AHCT08PWR.A               Active      Production       TSSOP (PW) | 14         2000 | LARGE T&R             Yes               NIPDAU            Level-1-260C-UNLIM            -40 to 125                   HB08
+
+
+                                                                                                         Addendum-Page 1
+--- PDF page 15 ---
+                                                                                                                                                                                                 PACKAGE OPTION ADDENDUM
+
+
+
+    www.ti.com                                                                                                                                                                                                                                            10-Nov-2026
+
+
+
+
+
+
+
+(5) MSL rating/Peak reflow:  The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+
+(6) Part marking:  There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+
+ OTHER QUALIFIED VERSIONS OF SN54AHCT08, SN54AHCT08-SP, SN74AHCT08 :
+• Catalog : SN74AHCT08, SN54AHCT08
+• Enhanced Product : SN74AHCT08-EP, SN74AHCT08-EP
+• Military : SN54AHCT08
+• Space : SN54AHCT08-SP
+
+ NOTE: Qualified Version Definitions:
+         • Catalog - TI's standard catalog product
+         • Enhanced Product - Supports Defense, Aerospace and Medical Applications
+         • Military - QML certified for Military and Defense Applications
+         • Space - Radiation tolerant, ceramic packaging and qualified for use in Space-based application
+
+
+
+
+
+
+
+
+
+
+                                                                                                                            Addendum-Page 3

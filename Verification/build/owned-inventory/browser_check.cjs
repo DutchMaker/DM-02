@@ -10,6 +10,7 @@ const base='https://ruud-macbook-pro-2023.tail668f59.ts.net:8020/build/owned-inv
    assert.equal((await page.goto(base,{waitUntil:'networkidle'})).status(),200);
    assert.equal(await page.locator('#parts tbody tr').count(),12);
    assert.match(await page.locator('#construction').innerText(),/no SOIC/);
+   assert.match(await page.locator('#dip-bom').innerText(),/48 CD74ACT175E/);
    assert.match(await page.locator('#scope').innerText(),/not yet been simulated or promoted/);
    const stock=await(await context.request.get(base+'stock.json')).json();
    assert.equal(stock.parts.length,12);assert.equal(stock.allow_soic,false);
@@ -19,6 +20,8 @@ const base='https://ruud-macbook-pro-2023.tail668f59.ts.net:8020/build/owned-inv
    const validation=await(await context.request.get(base+'validation.json')).json();
    assert(validation.passed);assert.equal(validation.changed_cells.length,37);
    assert.deepEqual(validation.known_owned_quantities,{'74HCT157':1});
+   assert.deepEqual(validation.added_sheets,['DIP candidate guide','DIP candidate BOM','DIP substitutions']);
+   assert.equal(validation.renamed_reference_sheet,'Reference FD1 BOM');
    assert.equal(validation.normal_sources_modified,false);
    assert((await(await context.request.get(base+'remote-validation.json')).json()).passed);
    const links=await page.locator('a[href]').evaluateAll(ns=>ns.map(n=>n.href));

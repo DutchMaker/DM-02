@@ -1,0 +1,823 @@
+{
+  "positions": [
+    {
+      "board": "C1",
+      "reference": "U1",
+      "clock": [
+        "CLK_P"
+      ],
+      "reset": [
+        "RESET_P_n"
+      ],
+      "complement_pins_used": [
+        3,
+        6,
+        11,
+        14
+      ],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "C1",
+      "reference": "U2",
+      "clock": [
+        "CLK_N"
+      ],
+      "reset": [
+        "RESET_N_n"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "CW1",
+      "reference": "U10",
+      "clock": [
+        "WORD_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "SQ1",
+      "reference": "U1",
+      "clock": [
+        "CAPTURE"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "SQ1",
+      "reference": "U2",
+      "clock": [
+        "ADVANCE"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "SQ1",
+      "reference": "U3",
+      "clock": [
+        "MODE_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "complement_pins_used": [
+        3,
+        6
+      ],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "SQ1",
+      "reference": "U5",
+      "clock": [
+        "CAPTURE"
+      ],
+      "reset": [
+        "HALT_RESET_n"
+      ],
+      "complement_pins_used": [
+        3
+      ],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "PC1",
+      "reference": "U11",
+      "clock": [
+        "CARRY_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "AL1",
+      "reference": "U2",
+      "clock": [
+        "A_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "AL1",
+      "reference": "U3",
+      "clock": [
+        "A_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF1"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "AL1",
+      "reference": "U10",
+      "clock": [
+        "FLAG_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "RG1",
+      "reference": "U3",
+      "clock": [
+        "B_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF3"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "RG1",
+      "reference": "U4",
+      "clock": [
+        "B_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF3"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "RG1",
+      "reference": "U8",
+      "clock": [
+        "C_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF3"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "RG1",
+      "reference": "U9",
+      "clock": [
+        "C_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF3"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "RG1",
+      "reference": "U13",
+      "clock": [
+        "H_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "RG1",
+      "reference": "U14",
+      "clock": [
+        "H_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "RG1",
+      "reference": "U18",
+      "clock": [
+        "L_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "RG1",
+      "reference": "U19",
+      "clock": [
+        "L_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "SP1",
+      "reference": "U3",
+      "clock": [
+        "LOW_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF1"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "SP1",
+      "reference": "U4",
+      "clock": [
+        "SHADOW_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF1"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "SP1",
+      "reference": "U5",
+      "clock": [
+        "LOW_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF1"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "SP1",
+      "reference": "U6",
+      "clock": [
+        "SHADOW_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF2"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "SP1",
+      "reference": "U7",
+      "clock": [
+        "HIGH_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF2"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "SP1",
+      "reference": "U8",
+      "clock": [
+        "SHADOW_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF2"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "SP1",
+      "reference": "U9",
+      "clock": [
+        "HIGH_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF2"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "SP1",
+      "reference": "U10",
+      "clock": [
+        "SHADOW_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "MA1",
+      "reference": "U3",
+      "clock": [
+        "LOW_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF2"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "MA1",
+      "reference": "U4",
+      "clock": [
+        "SHADOW_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF2"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "MA1",
+      "reference": "U5",
+      "clock": [
+        "LOW_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF3"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "MA1",
+      "reference": "U6",
+      "clock": [
+        "SHADOW_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF4"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "MA1",
+      "reference": "U7",
+      "clock": [
+        "HIGH_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF4"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "MA1",
+      "reference": "U8",
+      "clock": [
+        "SHADOW_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF4"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "MA1",
+      "reference": "U9",
+      "clock": [
+        "HIGH_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF4"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "MA1",
+      "reference": "U10",
+      "clock": [
+        "SHADOW_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "MA1",
+      "reference": "U11",
+      "clock": [
+        "PC_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "MA1",
+      "reference": "U12",
+      "clock": [
+        "SP_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "MA1",
+      "reference": "U13",
+      "clock": [
+        "PC_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "MA1",
+      "reference": "U14",
+      "clock": [
+        "SP_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF1"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "MA1",
+      "reference": "U15",
+      "clock": [
+        "PC_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF1"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "MA1",
+      "reference": "U16",
+      "clock": [
+        "SP_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF1"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "MA1",
+      "reference": "U17",
+      "clock": [
+        "PC_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF1"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "MA1",
+      "reference": "U18",
+      "clock": [
+        "SP_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF2"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "ME1",
+      "reference": "U11",
+      "clock": [
+        "DATA_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "ME1",
+      "reference": "U13",
+      "clock": [
+        "DATA_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "ME1",
+      "reference": "U15",
+      "clock": [
+        "ADDR_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "ME1",
+      "reference": "U17",
+      "clock": [
+        "ADDR_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    },
+    {
+      "board": "ME1",
+      "reference": "U19",
+      "clock": [
+        "DATA_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF1"
+      ],
+      "complement_pins_used": [],
+      "direct_574_substitution": false,
+      "reason": "Asynchronous clear is connected; HCT574 has no clear input."
+    }
+  ],
+  "same_clock_reset_pairs": [
+    {
+      "board": "RG1",
+      "clock": [
+        "B_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF3"
+      ],
+      "references": [
+        "U3",
+        "U4"
+      ]
+    },
+    {
+      "board": "RG1",
+      "clock": [
+        "C_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF3"
+      ],
+      "references": [
+        "U8",
+        "U9"
+      ]
+    },
+    {
+      "board": "RG1",
+      "clock": [
+        "H_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "references": [
+        "U13",
+        "U14"
+      ]
+    },
+    {
+      "board": "RG1",
+      "clock": [
+        "L_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "references": [
+        "U18",
+        "U19"
+      ]
+    },
+    {
+      "board": "SP1",
+      "clock": [
+        "LOW_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF1"
+      ],
+      "references": [
+        "U3",
+        "U5"
+      ]
+    },
+    {
+      "board": "SP1",
+      "clock": [
+        "SHADOW_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF2"
+      ],
+      "references": [
+        "U6",
+        "U8"
+      ]
+    },
+    {
+      "board": "SP1",
+      "clock": [
+        "HIGH_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF2"
+      ],
+      "references": [
+        "U7",
+        "U9"
+      ]
+    },
+    {
+      "board": "MA1",
+      "clock": [
+        "SHADOW_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF4"
+      ],
+      "references": [
+        "U6",
+        "U8"
+      ]
+    },
+    {
+      "board": "MA1",
+      "clock": [
+        "HIGH_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF4"
+      ],
+      "references": [
+        "U7",
+        "U9"
+      ]
+    },
+    {
+      "board": "MA1",
+      "clock": [
+        "PC_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "references": [
+        "U11",
+        "U13"
+      ]
+    },
+    {
+      "board": "MA1",
+      "clock": [
+        "SP_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF1"
+      ],
+      "references": [
+        "U14",
+        "U16"
+      ]
+    },
+    {
+      "board": "MA1",
+      "clock": [
+        "PC_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF1"
+      ],
+      "references": [
+        "U15",
+        "U17"
+      ]
+    },
+    {
+      "board": "ME1",
+      "clock": [
+        "DATA_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "references": [
+        "U11",
+        "U13"
+      ]
+    },
+    {
+      "board": "ME1",
+      "clock": [
+        "ADDR_CLOCK"
+      ],
+      "reset": [
+        "RD_LEAF0"
+      ],
+      "references": [
+        "U15",
+        "U17"
+      ]
+    }
+  ],
+  "scope": "Connectivity screen for possible eight-bit resettable-register consolidation; requires rewiring, exact 273 part/timing/load review. HCT574 cannot preserve asynchronous reset."
+}

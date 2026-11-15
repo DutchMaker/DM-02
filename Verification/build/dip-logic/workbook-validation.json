@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "sha256": "45f49f9369b3f3340aa93f94f05b9abb9b1765b6edc07d32ef9d0986b69be34a",
+  "bom_rows": 163,
+  "formula_count": 0,
+  "formula_errors": [],
+  "replaced_packages": 91,
+  "remaining_soic": 0,
+  "remaining_plcc": 8,
+  "source_stock_sha256": "a026cca6500332c1bbb4934648b51cfe108d8219db76d079b2a55e76574e2d38"
+}

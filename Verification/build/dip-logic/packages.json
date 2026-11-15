@@ -1,0 +1,8346 @@
+[
+  {
+    "board": "C1",
+    "ref": "Y1",
+    "value": "ECS-100AX-080",
+    "lib_id": "DM02-Clock:ECS-100AX",
+    "footprint": "Oscillator:Oscillator_DIP-14",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "U3",
+    "value": "SN74AHCT04N",
+    "lib_id": "74xx:74HCT04",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "U10",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "U1",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "U2",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "U4",
+    "value": "SN74AHC32N",
+    "lib_id": "74xx:74LS32",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "U5",
+    "value": "SN74AHC08N",
+    "lib_id": "74xx:74LS08",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "U6",
+    "value": "SN74AHC74N",
+    "lib_id": "74xx:74HC74",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "U7",
+    "value": "SN74AHC74N",
+    "lib_id": "74xx:74HC74",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "U8",
+    "value": "SN74AHC74N",
+    "lib_id": "74xx:74HC74",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "U9",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "J1",
+    "value": "CONTROL",
+    "lib_id": "Connector_Generic:Conn_01x08",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "J2",
+    "value": "PHASES",
+    "lib_id": "Connector_Generic:Conn_01x08",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "R1",
+    "value": "10k",
+    "lib_id": "Device:R",
+    "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "R2",
+    "value": "10k",
+    "lib_id": "Device:R",
+    "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "R3",
+    "value": "10k",
+    "lib_id": "Device:R",
+    "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "C1",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "C2",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "C3",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "C4",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "C5",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "C6",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "C7",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "C8",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "C9",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "C10",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "C11",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "U900",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "C1",
+    "ref": "C900",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "U1",
+    "value": "AT27C512R-70PU",
+    "lib_id": "Memory_EPROM:27C512",
+    "footprint": "Package_DIP:DIP-28_W15.24mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "U3",
+    "value": "SN74HCT574N",
+    "lib_id": "74xx:74HCT574",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "U2",
+    "value": "AT27C512R-70PU",
+    "lib_id": "Memory_EPROM:27C512",
+    "footprint": "Package_DIP:DIP-28_W15.24mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "U4",
+    "value": "SN74HCT574N",
+    "lib_id": "74xx:74HCT574",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "U5",
+    "value": "CD74HCT154E",
+    "lib_id": "74xx:74LS154",
+    "footprint": "Package_DIP:DIP-24_W15.24mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "U6",
+    "value": "CD74HCT154E",
+    "lib_id": "74xx:74LS154",
+    "footprint": "Package_DIP:DIP-24_W15.24mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "U7",
+    "value": "CD74HCT154E",
+    "lib_id": "74xx:74LS154",
+    "footprint": "Package_DIP:DIP-24_W15.24mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "U8",
+    "value": "CD74HCT154E",
+    "lib_id": "74xx:74LS154",
+    "footprint": "Package_DIP:DIP-24_W15.24mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "U9",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "U10",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "U11",
+    "value": "SN74AHCT08N",
+    "lib_id": "74xx:74LS08",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "U13",
+    "value": "SN74AHCT00N",
+    "lib_id": "74xx:74LS00",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "U14",
+    "value": "SN74AHCT00N",
+    "lib_id": "74xx:74LS00",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "U15",
+    "value": "SN74AHCT00N",
+    "lib_id": "74xx:74LS00",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "U12",
+    "value": "SN74AHCT04N",
+    "lib_id": "74xx:74HCT04",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "J1",
+    "value": "J1",
+    "lib_id": "Connector_Generic:Conn_01x06",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "J2",
+    "value": "J2",
+    "lib_id": "Connector_Generic:Conn_01x18",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "J3",
+    "value": "J3",
+    "lib_id": "Connector_Generic:Conn_01x16",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "J4",
+    "value": "J4",
+    "lib_id": "Connector_Generic:Conn_01x16",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "J5",
+    "value": "J5",
+    "lib_id": "Connector_Generic:Conn_01x14",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "J6",
+    "value": "J6",
+    "lib_id": "Connector_Generic:Conn_01x09",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "C1",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "C2",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "C3",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "C4",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "C5",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "C6",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "C7",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "C8",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "C9",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "C10",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "C11",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "C12",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "C13",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "C14",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "C15",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "U900",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "C900",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "U901",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "C901",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CW1",
+    "ref": "J900",
+    "value": "J900",
+    "lib_id": "Connector_Generic:Conn_01x08",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "U1",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "U2",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "U3",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "U4",
+    "value": "CD74HCT161E",
+    "lib_id": "74xx:74LS161",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "U5",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "U6",
+    "value": "SN74HCT574N",
+    "lib_id": "74xx:74HCT574",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "U7",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "U8",
+    "value": "SN74AHCT08N",
+    "lib_id": "74xx:74LS08",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "U9",
+    "value": "SN74AHCT08N",
+    "lib_id": "74xx:74LS08",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "U10",
+    "value": "SN74AHCT08N",
+    "lib_id": "74xx:74LS08",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "U11",
+    "value": "SN74AHCT08N",
+    "lib_id": "74xx:74LS08",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "U12",
+    "value": "SN74AHCT00N",
+    "lib_id": "74xx:74LS00",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "U13",
+    "value": "SN74AHCT00N",
+    "lib_id": "74xx:74LS00",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "U14",
+    "value": "SN74AHCT00N",
+    "lib_id": "74xx:74LS00",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "U15",
+    "value": "SN74AHCT00N",
+    "lib_id": "74xx:74LS00",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "U16",
+    "value": "SN74AHCT00N",
+    "lib_id": "74xx:74LS00",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "U17",
+    "value": "SN74AHCT00N",
+    "lib_id": "74xx:74LS00",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "U18",
+    "value": "SN74AHCT00N",
+    "lib_id": "74xx:74LS00",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "U19",
+    "value": "SN74AHCT04N",
+    "lib_id": "74xx:74HCT04",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "U20",
+    "value": "SN74AHCT04N",
+    "lib_id": "74xx:74HCT04",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "J1",
+    "value": "J1",
+    "lib_id": "Connector_Generic:Conn_01x15",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x15_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "J2",
+    "value": "J2",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "J3",
+    "value": "J3",
+    "lib_id": "Connector_Generic:Conn_01x14",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "J4",
+    "value": "J4",
+    "lib_id": "Connector_Generic:Conn_01x11",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "C1",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "C2",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "C3",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "C4",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "C5",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "C6",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "C7",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "C8",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "C9",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "C10",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "C11",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "C12",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "C13",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "C14",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "C15",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "C16",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "C17",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "C18",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "C19",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "C20",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "U900",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SQ1",
+    "ref": "C900",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "U1",
+    "value": "CD74HCT161E",
+    "lib_id": "74xx:74LS161",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "U2",
+    "value": "CD74HCT161E",
+    "lib_id": "74xx:74LS161",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "U3",
+    "value": "CD74HCT161E",
+    "lib_id": "74xx:74LS161",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "U4",
+    "value": "CD74HCT161E",
+    "lib_id": "74xx:74LS161",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "U5",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "U6",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "U7",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "U8",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "U9",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "U10",
+    "value": "SN74AHCT04N",
+    "lib_id": "74xx:74HCT04",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "U11",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "U12",
+    "value": "SN74AHCT08N",
+    "lib_id": "74xx:74LS08",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "U13",
+    "value": "SN74AHCT08N",
+    "lib_id": "74xx:74LS08",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "U14",
+    "value": "SN74AHCT32N",
+    "lib_id": "74xx:74LS32",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "J1",
+    "value": "J1",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "J2",
+    "value": "J2",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "J3",
+    "value": "J3",
+    "lib_id": "Connector_Generic:Conn_01x18",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "C1",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "C2",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "C3",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "C4",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "C5",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "C6",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "C7",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "C8",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "C9",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "C10",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "C11",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "C12",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "C13",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "C14",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "U900",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "C900",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "J912",
+    "value": "J912",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "PC1",
+    "ref": "J911",
+    "value": "J911",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U2",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U3",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U4",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U5",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U6",
+    "value": "CD74HCT377E",
+    "lib_id": "74xx:74LS377",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U7",
+    "value": "CD74HCT377E",
+    "lib_id": "74xx:74LS377",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U8",
+    "value": "SN74HCT574N",
+    "lib_id": "74xx:74HCT574",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U9",
+    "value": "SN74HCT574N",
+    "lib_id": "74xx:74HCT574",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U10",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U11",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U12",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U13",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U14",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U15",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U16",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U17",
+    "value": "SN74AHCT04N",
+    "lib_id": "74xx:74HCT04",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U18",
+    "value": "SN74AHCT04N",
+    "lib_id": "74xx:74HCT04",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U19",
+    "value": "SN74AHCT08N",
+    "lib_id": "74xx:74LS08",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U20",
+    "value": "SN74AHCT00N",
+    "lib_id": "74xx:74LS00",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U21",
+    "value": "SN74AHCT00N",
+    "lib_id": "74xx:74LS00",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "J1",
+    "value": "J1",
+    "lib_id": "Connector_Generic:Conn_01x15",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x15_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "J2",
+    "value": "J2",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "J3",
+    "value": "J3",
+    "lib_id": "Connector_Generic:Conn_01x11",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C2",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C3",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C4",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C5",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C6",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C7",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C8",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C9",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C10",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C11",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C12",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C13",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C14",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C15",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C16",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C17",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C18",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C19",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C20",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C21",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U101",
+    "value": "SST39SF040-70-4I-NHE",
+    "lib_id": "DM02-Flash:SST39SF040",
+    "footprint": "Package_LCC:PLCC-32_THT-Socket",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U102",
+    "value": "SST39SF040-70-4I-NHE",
+    "lib_id": "DM02-Flash:SST39SF040",
+    "footprint": "Package_LCC:PLCC-32_THT-Socket",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U103",
+    "value": "SST39SF040-70-4I-NHE",
+    "lib_id": "DM02-Flash:SST39SF040",
+    "footprint": "Package_LCC:PLCC-32_THT-Socket",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U104",
+    "value": "SST39SF040-70-4I-NHE",
+    "lib_id": "DM02-Flash:SST39SF040",
+    "footprint": "Package_LCC:PLCC-32_THT-Socket",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U105",
+    "value": "SST39SF040-70-4I-NHE",
+    "lib_id": "DM02-Flash:SST39SF040",
+    "footprint": "Package_LCC:PLCC-32_THT-Socket",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U106",
+    "value": "SST39SF040-70-4I-NHE",
+    "lib_id": "DM02-Flash:SST39SF040",
+    "footprint": "Package_LCC:PLCC-32_THT-Socket",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U107",
+    "value": "SST39SF040-70-4I-NHE",
+    "lib_id": "DM02-Flash:SST39SF040",
+    "footprint": "Package_LCC:PLCC-32_THT-Socket",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U108",
+    "value": "SST39SF040-70-4I-NHE",
+    "lib_id": "DM02-Flash:SST39SF040",
+    "footprint": "Package_LCC:PLCC-32_THT-Socket",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U109",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U110",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U111",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U112",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U113",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U114",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U115",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U116",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U117",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U118",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U119",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U120",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U121",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U122",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U123",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U124",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U125",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U126",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U127",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C101",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C102",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C103",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C104",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C105",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C106",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C107",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C108",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C109",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C110",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C111",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C112",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C113",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C114",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C115",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C116",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C117",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C118",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C119",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C120",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C121",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C122",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C123",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C124",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C125",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C126",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C127",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "U900",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "C900",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "J901",
+    "value": "J901",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "J906",
+    "value": "J906",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "AL1",
+    "ref": "J907",
+    "value": "J907",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U1",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U2",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U3",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U5",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U4",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U6",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U7",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U8",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U10",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U9",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U11",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U12",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U13",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U15",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U14",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U16",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U17",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U18",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U20",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U19",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U21",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U22",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U23",
+    "value": "SN74AHCT04N",
+    "lib_id": "74xx:74HCT04",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U24",
+    "value": "SN74AHCT04N",
+    "lib_id": "74xx:74HCT04",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U25",
+    "value": "SN74AHCT08N",
+    "lib_id": "74xx:74LS08",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U26",
+    "value": "SN74AHCT00N",
+    "lib_id": "74xx:74LS00",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "J1",
+    "value": "J1",
+    "lib_id": "Connector_Generic:Conn_01x12",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x12_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "J2",
+    "value": "J2",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C1",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C2",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C3",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C4",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C5",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C6",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C7",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C8",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C9",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C10",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C11",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C12",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C13",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C14",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C15",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C16",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C17",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C18",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C19",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C20",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C21",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C22",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C23",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C24",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C25",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C26",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "U900",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "C900",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "J902",
+    "value": "J902",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "J903",
+    "value": "J903",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "J904",
+    "value": "J904",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RG1",
+    "ref": "J905",
+    "value": "J905",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U1",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U2",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U3",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U4",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U5",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U6",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U7",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U8",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U9",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U10",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U11",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U12",
+    "value": "CD74ACT283E",
+    "lib_id": "74xx:74LS283",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U13",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U14",
+    "value": "CD74ACT283E",
+    "lib_id": "74xx:74LS283",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U15",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U16",
+    "value": "CD74ACT283E",
+    "lib_id": "74xx:74LS283",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U17",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U18",
+    "value": "CD74ACT283E",
+    "lib_id": "74xx:74LS283",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U19",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U20",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U21",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U22",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U23",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "J1",
+    "value": "J1",
+    "lib_id": "Connector_Generic:Conn_01x11",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "J2",
+    "value": "J2",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "J3",
+    "value": "J3",
+    "lib_id": "Connector_Generic:Conn_01x18",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U24",
+    "value": "SN74AHCT04N",
+    "lib_id": "74xx:74HCT04",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U25",
+    "value": "SN74AHCT08N",
+    "lib_id": "74xx:74LS08",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U26",
+    "value": "SN74AHCT00N",
+    "lib_id": "74xx:74LS00",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C1",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C2",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C3",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C4",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C5",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C6",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C7",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C8",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C9",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C10",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C11",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C12",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C13",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C14",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C15",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C16",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C17",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C18",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C19",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C20",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C21",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C22",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C23",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C24",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C25",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C26",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "U900",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "C900",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "J914",
+    "value": "J914",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SP1",
+    "ref": "J913",
+    "value": "J913",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U1",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U2",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U3",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U4",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U5",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U6",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U7",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U8",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U9",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U10",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U11",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U12",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U13",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U14",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U15",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U16",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U17",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U18",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U19",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U20",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U21",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U22",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U23",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U24",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U25",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U26",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U27",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U28",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U29",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U30",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U31",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U32",
+    "value": "CD74ACT283E",
+    "lib_id": "74xx:74LS283",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U33",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U34",
+    "value": "CD74ACT283E",
+    "lib_id": "74xx:74LS283",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U35",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U36",
+    "value": "CD74ACT283E",
+    "lib_id": "74xx:74LS283",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U37",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U38",
+    "value": "CD74ACT283E",
+    "lib_id": "74xx:74LS283",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U39",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U40",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U41",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "J1",
+    "value": "J1",
+    "lib_id": "Connector_Generic:Conn_01x13",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x13_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "J2",
+    "value": "J2",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "J3",
+    "value": "J3",
+    "lib_id": "Connector_Generic:Conn_01x18",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "J4",
+    "value": "J4",
+    "lib_id": "Connector_Generic:Conn_01x18",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "J5",
+    "value": "J5",
+    "lib_id": "Connector_Generic:Conn_01x18",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U42",
+    "value": "SN74AHCT04N",
+    "lib_id": "74xx:74HCT04",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U43",
+    "value": "SN74AHCT08N",
+    "lib_id": "74xx:74LS08",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U44",
+    "value": "SN74AHCT00N",
+    "lib_id": "74xx:74LS00",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U45",
+    "value": "SN74AHCT32N",
+    "lib_id": "74xx:74LS32",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C1",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C2",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C3",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C4",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C5",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C6",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C7",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C8",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C9",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C10",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C11",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C12",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C13",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C14",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C15",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C16",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C17",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C18",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C19",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C20",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C21",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C22",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C23",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C24",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C25",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C26",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C27",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C28",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C29",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C30",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C31",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C32",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C33",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C34",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C35",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C36",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C37",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C38",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C39",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C40",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C41",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C42",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C43",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C44",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C45",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "U900",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "C900",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "J909",
+    "value": "J909",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "MA1",
+    "ref": "J908",
+    "value": "J908",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U1",
+    "value": "AT27C512R-70PU",
+    "lib_id": "Memory_EPROM:27C512",
+    "footprint": "Package_DIP:DIP-28_W15.24mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U2",
+    "value": "AS6C1008-55PCN",
+    "lib_id": "DM02-Memory:AS6C1008",
+    "footprint": "Package_DIP:DIP-32_W15.24mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U3",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U4",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U5",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U6",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U7",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U8",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U9",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U10",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U11",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U12",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U13",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U14",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U15",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U16",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U17",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U18",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U19",
+    "value": "CD74ACT175E",
+    "lib_id": "74xx:74LS175",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "J1",
+    "value": "J1",
+    "lib_id": "Connector_Generic:Conn_01x08",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "J2",
+    "value": "J2",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "J3",
+    "value": "J3",
+    "lib_id": "Connector_Generic:Conn_01x18",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "J4",
+    "value": "J4",
+    "lib_id": "Connector_Generic:Conn_01x19",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x19_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "J5",
+    "value": "J5",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U20",
+    "value": "SN74AHCT04N",
+    "lib_id": "74xx:74HCT04",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U21",
+    "value": "SN74AHCT08N",
+    "lib_id": "74xx:74LS08",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U22",
+    "value": "SN74AHCT08N",
+    "lib_id": "74xx:74LS08",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U23",
+    "value": "SN74AHCT08N",
+    "lib_id": "74xx:74LS08",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U24",
+    "value": "SN74AHCT08N",
+    "lib_id": "74xx:74LS08",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U25",
+    "value": "SN74AHCT00N",
+    "lib_id": "74xx:74LS00",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U26",
+    "value": "SN74AHCT32N",
+    "lib_id": "74xx:74LS32",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C1",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C2",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C3",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C4",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C5",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C6",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C7",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C8",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C9",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C10",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C11",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C12",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C13",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C14",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C15",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C16",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C17",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C18",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C19",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C20",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C21",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C22",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C23",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C24",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C25",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C26",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "U900",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "C900",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "ME1",
+    "ref": "J910",
+    "value": "J910",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CD1",
+    "ref": "U1",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CD1",
+    "ref": "U2",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CD1",
+    "ref": "U3",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CD1",
+    "ref": "J1",
+    "value": "J1",
+    "lib_id": "Connector_Generic:Conn_01x06",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CD1",
+    "ref": "J2",
+    "value": "J2",
+    "lib_id": "Connector_Generic:Conn_01x18",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CD1",
+    "ref": "C1",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CD1",
+    "ref": "C2",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "CD1",
+    "ref": "C3",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RD1",
+    "ref": "U1",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RD1",
+    "ref": "U2",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RD1",
+    "ref": "U3",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RD1",
+    "ref": "J1",
+    "value": "J1",
+    "lib_id": "Connector_Generic:Conn_01x03",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RD1",
+    "ref": "J2",
+    "value": "J2",
+    "lib_id": "Connector_Generic:Conn_01x11",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RD1",
+    "ref": "C1",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RD1",
+    "ref": "C2",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "RD1",
+    "ref": "C3",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U1",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U2",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U3",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U4",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U5",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U6",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U7",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U8",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U9",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U10",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U11",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U12",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U13",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U14",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U15",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U16",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U17",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U18",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U19",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U20",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U21",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U22",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U23",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U24",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U25",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U26",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U27",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U28",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U29",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U30",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U31",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U32",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U33",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U34",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U35",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U36",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U37",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U38",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U39",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "U40",
+    "value": "SN74AHCT244N",
+    "lib_id": "74xx:74HCT244",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "J1",
+    "value": "J1",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "J2",
+    "value": "J2",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "J3",
+    "value": "J3",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "J4",
+    "value": "J4",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "J5",
+    "value": "J5",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "J6",
+    "value": "J6",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "J7",
+    "value": "J7",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "J8",
+    "value": "J8",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "J9",
+    "value": "J9",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "J10",
+    "value": "J10",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "J11",
+    "value": "J11",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "J12",
+    "value": "J12",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "J13",
+    "value": "J13",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "J14",
+    "value": "J14",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "J21",
+    "value": "J21",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "J22",
+    "value": "J22",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "J23",
+    "value": "J23",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "J24",
+    "value": "J24",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "J25",
+    "value": "J25",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "J26",
+    "value": "J26",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "J27",
+    "value": "J27",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "J30",
+    "value": "J30",
+    "lib_id": "Connector_Generic:Conn_01x06",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C1",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C2",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C3",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C4",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C5",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C6",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C7",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C8",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C9",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C10",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C11",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C12",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C13",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C14",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C15",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C16",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C17",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C18",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C19",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C20",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C21",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C22",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C23",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C24",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C25",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C26",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C27",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C28",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C29",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C30",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C31",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C32",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C33",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C34",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C35",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C36",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C37",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C38",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C39",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "DF1",
+    "ref": "C40",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SEL",
+    "ref": "U1",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SEL",
+    "ref": "U2",
+    "value": "SN74AHCT157N",
+    "lib_id": "74xx:74LS157",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SEL",
+    "ref": "J1",
+    "value": "J1",
+    "lib_id": "Connector_Generic:Conn_01x09",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SEL",
+    "ref": "J2",
+    "value": "J2",
+    "lib_id": "Connector_Generic:Conn_01x06",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SEL",
+    "ref": "U3",
+    "value": "SN74AHCT08N",
+    "lib_id": "74xx:74LS08",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SEL",
+    "ref": "C1",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SEL",
+    "ref": "C2",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "SEL",
+    "ref": "C3",
+    "value": "100nF",
+    "lib_id": "Device:C",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J1",
+    "value": "C1_J1",
+    "lib_id": "Connector_Generic:Conn_01x08",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J2",
+    "value": "C1_J2",
+    "lib_id": "Connector_Generic:Conn_01x08",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J3",
+    "value": "CW1_J1",
+    "lib_id": "Connector_Generic:Conn_01x06",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J4",
+    "value": "CW1_J2",
+    "lib_id": "Connector_Generic:Conn_01x18",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J5",
+    "value": "CW1_J3",
+    "lib_id": "Connector_Generic:Conn_01x16",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J6",
+    "value": "CW1_J4",
+    "lib_id": "Connector_Generic:Conn_01x16",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J7",
+    "value": "CW1_J5",
+    "lib_id": "Connector_Generic:Conn_01x14",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J8",
+    "value": "CW1_J6",
+    "lib_id": "Connector_Generic:Conn_01x09",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J9",
+    "value": "CW1_J900",
+    "lib_id": "Connector_Generic:Conn_01x08",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J10",
+    "value": "SQ1_J1",
+    "lib_id": "Connector_Generic:Conn_01x15",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x15_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J11",
+    "value": "SQ1_J2",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J12",
+    "value": "SQ1_J3",
+    "lib_id": "Connector_Generic:Conn_01x14",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J13",
+    "value": "SQ1_J4",
+    "lib_id": "Connector_Generic:Conn_01x11",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J14",
+    "value": "PC1_J1",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J15",
+    "value": "PC1_J2",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J16",
+    "value": "PC1_J3",
+    "lib_id": "Connector_Generic:Conn_01x18",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J17",
+    "value": "PC1_J911",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J18",
+    "value": "PC1_J912",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J19",
+    "value": "AL1_J1",
+    "lib_id": "Connector_Generic:Conn_01x15",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x15_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J20",
+    "value": "AL1_J2",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J21",
+    "value": "AL1_J3",
+    "lib_id": "Connector_Generic:Conn_01x11",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J22",
+    "value": "AL1_J901",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J23",
+    "value": "AL1_J906",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J24",
+    "value": "AL1_J907",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J25",
+    "value": "RG1_J1",
+    "lib_id": "Connector_Generic:Conn_01x12",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x12_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J26",
+    "value": "RG1_J2",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J27",
+    "value": "RG1_J902",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J28",
+    "value": "RG1_J903",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J29",
+    "value": "RG1_J904",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J30",
+    "value": "RG1_J905",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J31",
+    "value": "SP1_J1",
+    "lib_id": "Connector_Generic:Conn_01x11",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J32",
+    "value": "SP1_J2",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J33",
+    "value": "SP1_J3",
+    "lib_id": "Connector_Generic:Conn_01x18",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J34",
+    "value": "SP1_J913",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J35",
+    "value": "SP1_J914",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J36",
+    "value": "MA1_J1",
+    "lib_id": "Connector_Generic:Conn_01x13",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x13_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J37",
+    "value": "MA1_J2",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J38",
+    "value": "MA1_J3",
+    "lib_id": "Connector_Generic:Conn_01x18",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J39",
+    "value": "MA1_J4",
+    "lib_id": "Connector_Generic:Conn_01x18",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J40",
+    "value": "MA1_J5",
+    "lib_id": "Connector_Generic:Conn_01x18",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J41",
+    "value": "MA1_J908",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J42",
+    "value": "MA1_J909",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J43",
+    "value": "ME1_J1",
+    "lib_id": "Connector_Generic:Conn_01x08",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J44",
+    "value": "ME1_J2",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J45",
+    "value": "ME1_J3",
+    "lib_id": "Connector_Generic:Conn_01x18",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J46",
+    "value": "ME1_J4",
+    "lib_id": "Connector_Generic:Conn_01x19",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x19_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J47",
+    "value": "ME1_J5",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J48",
+    "value": "ME1_J910",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J49",
+    "value": "DF1_J1",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J50",
+    "value": "DF1_J2",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J51",
+    "value": "DF1_J3",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J52",
+    "value": "DF1_J4",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J53",
+    "value": "DF1_J5",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J54",
+    "value": "DF1_J6",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J55",
+    "value": "DF1_J7",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J56",
+    "value": "DF1_J8",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J57",
+    "value": "DF1_J9",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J58",
+    "value": "DF1_J10",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J59",
+    "value": "DF1_J11",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J60",
+    "value": "DF1_J12",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J61",
+    "value": "DF1_J13",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J62",
+    "value": "DF1_J14",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J63",
+    "value": "DF1_J21",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J64",
+    "value": "DF1_J22",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J65",
+    "value": "DF1_J23",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J66",
+    "value": "DF1_J24",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J67",
+    "value": "DF1_J25",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J68",
+    "value": "DF1_J26",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J69",
+    "value": "DF1_J27",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J70",
+    "value": "DF1_J30",
+    "lib_id": "Connector_Generic:Conn_01x06",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J71",
+    "value": "SEL_J1",
+    "lib_id": "Connector_Generic:Conn_01x09",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J72",
+    "value": "SEL_J2",
+    "lib_id": "Connector_Generic:Conn_01x06",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J73",
+    "value": "CD1_J1",
+    "lib_id": "Connector_Generic:Conn_01x06",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J74",
+    "value": "CD1_J2",
+    "lib_id": "Connector_Generic:Conn_01x18",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J75",
+    "value": "RD1_J1",
+    "lib_id": "Connector_Generic:Conn_01x03",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J76",
+    "value": "RD1_J2",
+    "lib_id": "Connector_Generic:Conn_01x11",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J77",
+    "value": "EXTERNAL_POWER",
+    "lib_id": "Connector_Generic:Conn_01x02",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J78",
+    "value": "EXTERNAL_FRONT_PANEL",
+    "lib_id": "Connector_Generic:Conn_01x06",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J79",
+    "value": "EXTERNAL_STATUS",
+    "lib_id": "Connector_Generic:Conn_01x08",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J80",
+    "value": "EXTERNAL_DISPLAY_OUTPUT",
+    "lib_id": "Connector_Generic:Conn_01x19",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x19_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  },
+  {
+    "board": "BP1",
+    "ref": "J81",
+    "value": "EXTERNAL_DISPLAY_INPUT",
+    "lib_id": "Connector_Generic:Conn_01x10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "procurement": "unresolved"
+  }
+]
