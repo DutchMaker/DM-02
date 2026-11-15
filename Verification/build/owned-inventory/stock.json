@@ -1,6 +1,6 @@
 {
   "source": "User inventory report in this conversation, 2026-11-15",
-  "verification": "Ownership and DIP logic/memory packages confirmed by user; one 74HCT157 confirmed, other exact counts and physical testing pending",
+  "verification": "User confirms one 74HCT157 and zero CD74ACT175E; other owned quantities and physical testing pending. Latest exact SN74HC377N marking supersedes the earlier generic HCT377 report; no separate HCT377 stock inferred.",
   "construction_constraint": "Through-hole construction required. All owned logic and memory ICs are DIP; no SOIC. MCP100-450D is a through-hole TO-92 supervisor.",
   "allow_soic": false,
   "duplicate_note": "W27C512-45Z was listed twice; recorded once without inferring two devices",
@@ -9,13 +9,17 @@
     {"reported_marking":"M27C1024-10F1","owned":true,"package":"FDIP40W","access_time_ns":100,"quantity":null,"quantity_description":"not specified","missing":"Count and programmer support"},
     {"reported_marking":"UM61512AK-15","owned":true,"package":"Skinny DIP-32","quantity":null,"quantity_description":"not specified","missing":"Count"},
     {"reported_marking":"W27C512-45Z","owned":true,"package":"DIP-28","quantity":null,"quantity_description":"not specified; duplicate mention deduplicated","missing":"Count and programmer support"},
-    {"reported_marking":"74HCT377","owned":true,"package":"DIP","quantity":null,"quantity_description":"not specified","missing":"Manufacturer, full suffix, count"},
+    {"reported_marking":"SN74HC377N","owned":true,"package":"PDIP-20","quantity":null,"quantity_description":"not specified; corrects earlier HCT377 report","missing":"Count"},
     {"reported_marking":"74HCT245","owned":true,"package":"DIP","quantity":null,"quantity_description":"a lot","missing":"Manufacturer, full suffix, count"},
     {"reported_marking":"244","owned":true,"package":"DIP","quantity":null,"quantity_description":"scarcer than 74HCT245","missing":"Logic family, manufacturer, full suffix, count"},
     {"reported_marking":"74HCT157","owned":true,"package":"DIP","quantity":1,"quantity_description":"one; user can obtain more if needed","missing":"Manufacturer and full suffix"},
     {"reported_marking":"74HCT574","owned":true,"package":"DIP","quantity":null,"quantity_description":"not specified","missing":"Manufacturer, full suffix, count"},
     {"reported_marking":"74HCT191","owned":true,"package":"DIP","quantity":null,"quantity_description":"not specified","missing":"Manufacturer, full suffix, count"},
-    {"reported_marking":"74HCT161","owned":true,"package":"DIP","quantity":null,"quantity_description":"not specified","missing":"Manufacturer, full suffix, count"},
-    {"reported_marking":"MCP100-450D","owned":true,"package":"TO-92","quantity":null,"quantity_description":"confirmed in stock; count not specified","missing":"Count"}
+    {"reported_marking":"CD74HCT161E","owned":true,"package":"PDIP-16","quantity":null,"quantity_description":"not specified","missing":"Count"},
+    {"reported_marking":"MCP100-450D","owned":true,"package":"TO-92","quantity":null,"quantity_description":"confirmed in stock; count not specified","missing":"Count"},
+    {"reported_marking":"74HCT154N","owned":true,"package":"DIP-24","quantity":null,"quantity_description":"not specified","missing":"Manufacturer/logo and count; historical Philips package evidence is not identification of owned vendor"},
+    {"reported_marking":"SN74HCT00N","owned":true,"package":"PDIP-14","quantity":null,"quantity_description":"not specified","missing":"Count"},
+    {"reported_marking":"SN74HCT08N","owned":true,"package":"PDIP-14","quantity":null,"quantity_description":"not specified","missing":"Count"},
+    {"reported_marking":"CD74ACT175E","owned":false,"package":"PDIP-16","quantity":0,"quantity_description":"none owned; user will need to source them","missing":"Source for 48 devices in current DL1 candidate"}
   ]
 }

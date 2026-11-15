@@ -1,24 +1,40 @@
 {
   "files": {
     "DM-02-BOM-owned-stock-update.xlsx": {
-      "bytes": 97415,
-      "sha256": "ab2662f6c8cbf9e560ac15050b1792e1f8b21cf16416ab20878df1e3bbea83a0"
+      "bytes": 101698,
+      "sha256": "f47ea5ab7651c58ee6d4e739f70e9eb7d483ff01dac9ab4a99a7330bc24fe361"
     },
     "assessment.json": {
-      "bytes": 7440,
-      "sha256": "8c9aecc5067fc4244e8454de8c63e4c5957bee261eb94e17e3ed42aaf3532320"
+      "bytes": 9424,
+      "sha256": "bef2c7b4e17fde82fd60b2bcfd8b7f9a87c6e715e5caf7dbc9587e084eeb2ddd"
     },
     "browser_check.cjs": {
-      "bytes": 2844,
-      "sha256": "014614dcc8b6348c84fd6517554b72305019e6b40d5a1571053771112b650a2a"
+      "bytes": 3519,
+      "sha256": "f0058f33a3e974390fcabf48b79d9ef71ecd1fea4f5529c09823e853e0e29f5c"
+    },
+    "fetch_logic_sources.py": {
+      "bytes": 1388,
+      "sha256": "d72f86be7fdb09338b1cd5e3d2b00bf96e6fd9072997e8f3f548df0977bdb8ef"
     },
     "fetch_sources.py": {
       "bytes": 1888,
       "sha256": "4e5d748c54451dc04663d518de432eaf89a700b347d940882ffbec6a8c4ce619"
     },
     "index.html": {
-      "bytes": 8993,
-      "sha256": "c8c23b125b410b4551e64a8d4f409b8c4394c0b889d37644b3ee1222692699bb"
+      "bytes": 11007,
+      "sha256": "d785d4133a388eed71a4c11899c6ca2cced40abcbe6457517172eed58ce4e55f"
+    },
+    "logic-review.json": {
+      "bytes": 65262,
+      "sha256": "557937f87ebea125c01878cfe01d77d1b6b1219e220a5a05c5476ae86e782838"
+    },
+    "logic-sources.json": {
+      "bytes": 1025,
+      "sha256": "674f2885fb555338ec63e215a74f37d666134cf90c0aa4341f1a560ef6b54455"
+    },
+    "review_logic.py": {
+      "bytes": 4665,
+      "sha256": "5dca6eb66962404fe54d6c89f4d2755a67c01b34d4b8711bcbc571b1bb222a31"
     },
     "sources/m27c1024-source.json": {
       "bytes": 483,
@@ -31,6 +47,38 @@
     "sources/m27c1024.txt": {
       "bytes": 56628,
       "sha256": "724410ec1d2d923a95a6f9caf4ebd4a59070d67a48e0bc69a3c50aa3d5f5614e"
+    },
+    "sources/philips-74hct154.pdf": {
+      "bytes": 32244,
+      "sha256": "03c6579d4ccaaff66e5b85cf05eb8a41a44267a583f958e15295059ef285440e"
+    },
+    "sources/philips-74hct154.txt": {
+      "bytes": 15953,
+      "sha256": "363ee5da0c00cad6dc90e67efacbeb148a905862e667f45f8c1e0f141b1947e1"
+    },
+    "sources/sn74hc377.pdf": {
+      "bytes": 1733082,
+      "sha256": "b22acd7e22c3c90494921cb7c8e98cb53570d57e0612d01ad6d3f29ad70a2d53"
+    },
+    "sources/sn74hc377.txt": {
+      "bytes": 59191,
+      "sha256": "82434674f505498dc61445c0c59034cc66ff9558eb08690daca1e57e44468699"
+    },
+    "sources/sn74hct00.pdf": {
+      "bytes": 1264387,
+      "sha256": "711e8e486a058652797470f14f5ab76bf8c77436611cd18e32e851ba82ac220a"
+    },
+    "sources/sn74hct00.txt": {
+      "bytes": 66429,
+      "sha256": "63cbb21d2b88bf1a005d18fcbd80e8a2877669937e3f818af5b708444f1b6816"
+    },
+    "sources/sn74hct08.pdf": {
+      "bytes": 1266777,
+      "sha256": "51145ae3e1e254c147bdc1d6b062acf2893cd734643276fcb7839541811f5d8c"
+    },
+    "sources/sn74hct08.txt": {
+      "bytes": 71207,
+      "sha256": "109be4c182867b786b95d6174066a407e0983bbd644df7381584c1db691f593a"
     },
     "sources/um61512a-source.json": {
       "bytes": 506,
@@ -61,16 +109,16 @@
       "sha256": "7b5cb4eb2b1a9dc6cd9b429d3ce2902707a09903efb8ad2ff7b4da59c728d5dd"
     },
     "stock.json": {
-      "bytes": 2615,
-      "sha256": "a026cca6500332c1bbb4934648b51cfe108d8219db76d079b2a55e76574e2d38"
+      "bytes": 3433,
+      "sha256": "eb8f3cf9dfc55ae74f8d859bec3abfbc065d8b728d017ed5c20f0cd37892d55e"
     },
     "update.py": {
-      "bytes": 11720,
-      "sha256": "a4c50576f9132dfa89a7206deef62b4e4743e55aaf1bb67a273f7ce0e89056b7"
+      "bytes": 13066,
+      "sha256": "0e67a8724a95e6bbd2aad68e4144b3e370ca967dd5eb2ead97725b6f68fdb0de"
     },
     "validation.json": {
-      "bytes": 1223,
-      "sha256": "a013be3f37072f87635760e1997c5ff1bc7794c79856eb0f58f8bf10c519cb0e"
+      "bytes": 1361,
+      "sha256": "7a3fffa57b18dca10274838311434b99529d9b3d3d16085f0848c61225c200c0"
     },
     "verify.py": {
       "bytes": 387,

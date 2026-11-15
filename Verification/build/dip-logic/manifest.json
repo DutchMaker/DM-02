@@ -1,25 +1,25 @@
 {
-  "created_at": "2026-11-15T20:16:26.593376+00:00",
+  "created_at": "2026-11-15T20:29:04.667064+00:00",
   "files": {
     "DM-02-DIP-logic-candidate-BOM.xlsx": {
-      "bytes": 29278,
-      "sha256": "45f49f9369b3f3340aa93f94f05b9abb9b1765b6edc07d32ef9d0986b69be34a"
+      "bytes": 31681,
+      "sha256": "5e36a2bdbceb906efee59ee1712664d23efd0f620c89955310f75a2ee8734df0"
     },
     "browser_check.cjs": {
-      "bytes": 2406,
-      "sha256": "290bc89f8e6825e83189506f802d973378d972cd5b14a7f687e1002ba12e6783"
+      "bytes": 2693,
+      "sha256": "9630b2568e4989deaa344b7a5eedc5f7e4fb31eb459b152bfa536862dc53103d"
     },
     "candidate-BOM.csv": {
-      "bytes": 43421,
-      "sha256": "515008823396b799aaa9404b1ec7ce98bb197cd444aa210457e767238bd8994c"
+      "bytes": 43856,
+      "sha256": "2756a6d651fd05676e12a374e06134e596d97442b769c8496d4a0d7e41784cf5"
     },
     "check.py": {
       "bytes": 9314,
       "sha256": "164c25447ca2618a947350615b8c7345944efaf7d49682bd05d6bb03faa4733d"
     },
     "choices.json": {
-      "bytes": 3745,
-      "sha256": "432b10d93fdd4607040fc98367d3a33b66871f0d4eeae78afd62ca99a4df9d75"
+      "bytes": 4174,
+      "sha256": "35098459b06f18b5a8d4a4d4b197e4c0d6e555a55971d920a1ae16cb1f141c3e"
     },
     "circuits/Backplane.sch": {
       "bytes": 57460,
@@ -98,8 +98,8 @@
       "sha256": "af97eb233f980466643d3d4f300f4aa666c86ba3abd452dcc0f4afc27efaa13c"
     },
     "index.html": {
-      "bytes": 4685,
-      "sha256": "c263070b5e392ae8ddecdcc2e82d318207f437d21cf8baf11ec0221f8220a6bd"
+      "bytes": 5672,
+      "sha256": "94657412aa1bd97e63de868b7f3527db4b7a5f481ce3db5d0383fd47a5ad2a23"
     },
     "native/AL1/74xx.kicad_sym": {
       "bytes": 1138558,
@@ -750,8 +750,8 @@
       "sha256": "8b9972b6da2a1c618f1191d6e510770b5cc1db5ec44480060ebea4b10d73e00e"
     },
     "publish.py": {
-      "bytes": 12423,
-      "sha256": "bb94ac37ebc353f46c47ef028e0f4779adb81239929337f592d72600722bde42"
+      "bytes": 14148,
+      "sha256": "9f53cf1844260719ad9a3159aaab8004219e9948d7f483b3aaf678a464ddb787"
     },
     "register-review.json": {
       "bytes": 17485,
@@ -883,7 +883,7 @@
     },
     "workbook-validation.json": {
       "bytes": 332,
-      "sha256": "6319f8424362b20250cba2ed13d007691fee3a80b8c826dccc0be9bba1ac4e4a"
+      "sha256": "dd8dff7c3d634ecf79d013e13fd34415eff90c93231424cfab7168bc8ca96224"
     }
   }
 }

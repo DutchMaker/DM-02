@@ -1,0 +1,252 @@
+
+--- PDF page 1 ---
+Philips Semiconductors                                                                                                               Product speciﬁcation
+
+   4-to-16 line decoder/demultiplexer                            74HC154; 74HCT154
+
+
+
+FEATURES                                                                     DESCRIPTION
+•  16-line demultiplexing capability                                         The 74HC154; 74HCT154 are high-speed Si-gate CMOS
+•  Decodes 4 binary-coded inputs into one 16 mutually                        devices and are pin compatible with low power Schottky
+  exclusive outputs                                                          TTL (LSTTL). They are specified in compliance with
+•  Complies with JEDEC standard no. 8-1 B                                    JEDEC standard no. 7A.
+•  ESD protection:                                                           The 74HC154; 74HCT154 decoders accept four active
+  HBM EIA/JESD22-A114-B exceeds 2000 V                                       HIGH binary address inputs and provide 16 mutually
+  MM EIA/JESD22-A115-A exceeds 200 V.                                        exclusive active LOW outputs. The two-input enable gate
+•  Specified from −40 °C to +85 °C and −40 °C to +125 °C.                    can be used to strobe the decoder to eliminate the normal
+                                                                             decoding “glitches” on the outputs, or can be used for the
+                                                                             expansion of the decoder.
+                                                                             The enable gate has two ANDed inputs which must be
+                                                                             LOW to enable the outputs.
+                                                                             The 74HC154; 74HCT154 can be used as a 1-to-16
+                                                                             demultiplexer by using one of the enable inputs as the
+                                                                             multiplexed data input.
+                                                                             When the other enable input is LOW, the addressed output
+                                                                             will follow the state of the applied data.
+
+QUICK REFERENCE DATA
+GND = 0 V; Tamb=25°C; tr =tf = 6 ns.
+
+ SYMBOL                        PARAMETER                               CONDITIONS                          TYPICAL                   UNIT74HC154        74HCT154
+
+ tPHL/tPLH     propagation delay An,        En to   Yn                  CL = 15 pF; RL =1kΩ;          11                    13                    ns
+                                                                      VCC =5V
+ CI                input capacitance                                                                                3.5                   3.5                   pF
+ CPD             power dissipation capacitance per gate     notes 1 and 2                   60                    60                    pF
+
+Notes
+1.   CPD is used to determine the dynamic power dissipation (PD in μW).
+     PD=CPD × VCC2 × fi × N+Σ(CL × VCC2 × fo) where:
+     fi = input frequency in MHz;
+     fo = output frequency in MHz;
+     CL = output load capacitance in pF;
+     VCC = supply voltage in Volts;
+     N = total load switching outputs;
+     Σ(CL × VCC2 × fo) = sum of the outputs.
+2.   For 74HC154 the condition is VI = GND to VCC
+     For 74HCT154 the condition is VI = GND to VCC − 1.5 V.
+
+
+
+
+
+
+
+
+
+2004 Oct 12                                                                          2
+
+--- PDF page 2 ---
+Philips Semiconductors                                                                                                                      Product speciﬁcation
+
+ 4-to-16 line decoder/demultiplexer                                74HC154; 74HCT154
+
+
+
+FUNCTION TABLE
+See note 1.
+     INPUT                                                                                  OUTPUT
+E0E1    A0    A1    A2    A3Y0Y1Y2Y3Y4Y6Y7Y8Y2Y9Y10Y11Y12Y13Y14Y15
+HHXXXXHHHHHHHHHHHHHHHH
+HLXXXXHHHHHHHHHHHHHHHH
+LHXXXXHHHHHHHHHHHHHHHH
+LLLLLLLHHHHHHHHHHHHHHH
+     HLLLHLHHHHHHHHHHHHHH
+     LHLLHHLHHHHHHHHHHHHH
+     HHLLHHHLHHHHHHHHHHHH
+     LLHLHHHHLHHHHHHHHHHH
+     HLHLHHHHHLHHHHHHHHHH
+     LHHLHHHHHHLHHHHHHHHH
+     HHHLHHHHHHHLHHHHHHHH
+     LLLHHHHHHHHHLHHHHHHH
+     HLLHHHHHHHHHHLHHHHHH
+     LHLHHHHHHHHHHHLHHHHH
+     HHLHHHHHHHHHHHHLHHHH
+     LLHHHHHHHHHHHHHHLHHH
+     HLHHHHHHHHHHHHHHHLHH
+     LHHHHHHHHHHHHHHHHHLH
+     HHHHHHHHHHHHHHHHHHHL
+
+Note
+1.   H = HIGH voltage level
+ L = LOW voltage level
+ X = don’t care.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2004 Oct 12                                                                          3
+
+--- PDF page 3 ---
+Philips Semiconductors                                                                                                                      Product speciﬁcation
+
+   4-to-16 line decoder/demultiplexer                                74HC154; 74HCT154
+
+
+
+ORDERING INFORMATION
+
+     TYPE NUMBER           TEMPERATURE                                                                          PACKAGE
+                                             RANGE                           PINS               PACKAGE           MATERIAL              CODE
+
+ 74HC154N                      −40 °C to +125 °C                   24                     DIP24                  plastic               SOT101-1
+ 74HCT154N                    −40 °C to +125 °C                   24                     DIP24                  plastic               SOT101-1
+ 74HC154D                      −40 °C to +125 °C                   24                      SO24                   plastic               SOT137-1
+ 74HCT154D                    −40 °C to +125 °C                   24                      SO24                   plastic               SOT137-1
+ 74HC154DB                    −40 °C to +125 °C                   24                   SSOP24                plastic               SOT340-1
+ 74HCT154DB                 −40 °C to +125 °C                   24                   SSOP24                plastic               SOT340-1
+ 74HC154PW                   −40 °C to +125 °C                   24                  TSSOP24               plastic               SOT355-1
+ 74HCT154PW                −40 °C to +125 °C                   24                  TSSOP24               plastic               SOT355-1
+ 74HC154BQ                   −40 °C to +125 °C                   24                 DHVQFN24              plastic               SOT815-1
+ 74HCT154BQ                 −40 °C to +125 °C                   24                 DHVQFN24              plastic               SOT815-1
+
+PINNING
+
+   PIN        SYMBOL                                                                    DESCRIPTION
+     1       Y0                    data output (active LOW)
+     2       Y1                    data output (active LOW)
+     3       Y2                    data output (active LOW)
+     4       Y3                    data output (active LOW)
+     5       Y4                    data output (active LOW)
+     6       Y5                    data output (active LOW)
+     7       Y6                    data output (active LOW)
+     8       Y7                    data output (active LOW)
+     9       Y8                    data output (active LOW)
+    10       Y9                    data output (active LOW)
+    11       Y10                  data output (active LOW)
+    12      GND                ground (0 V)
+    13       Y11                  data output (active LOW)
+    14       Y12                  data output (active LOW)
+    15       Y13                  data output (active LOW)
+    16       Y14                  data output (active LOW)
+    17       Y15                  data output (active LOW)
+    18       E0                    enable input
+    19       E1                    enable input
+    20      A3                    data input
+    21      A2                    data input
+    22      A1                    data input
+    23      A0                    data input
+    24      VCC                  positive supply voltage
+
+
+
+
+2004 Oct 12                                                                          4
+
+--- PDF page 4 ---
+Philips Semiconductors                                                                                                                      Product speciﬁcation
+
+    4-to-16 line decoder/demultiplexer                                74HC154; 74HCT154
+
+
+
+
+
+
+
+                                                                                                                           terminal 1
+                                                                                                                          index area
+
+                         Y0                                                      VCC124                                               Y1                                                     A0223
+                         Y1                                                      A0223                                                Y2                                                     A1322
+                         Y2                                                      A1322                                                Y3                                                     A2421
+                         Y3                                                      A2421                                                Y4                                                     A3520
+                         Y4                                                      A3520                                                Y5                                                     E1615419
+                         Y5                                                      E1619                                                Y6                                                     E0718
+                         Y6                                                      E0715418                                             Y7                                                     Y15817
+                         Y7                                                      Y15817                                               Y8                                                     Y14916
+                         Y8                                                      Y14916                                               Y9    10             VCC(1)              15    Y13
+                         Y9                                                      Y131015                                            Y10     11                                 14    Y12
+
+                       Y10                                                      Y121114
+                      GND                                                      Y111213                                                                                            001aab068
+
+                                                     001aab067                                                                                    Transparent top view
+
+
+                                                                                                                (1)   The die substrate is attached to this pad using conductive die
+                                                                                                                      attach material. It can not be used as a supply pin or input.
+     Fig.1    Pin configuration SO24, DIP24 and
+                   (T)SSOP24.                                                                                                Fig.2  Pin configuration DHVQFN24.
+
+
+
+
+
+
+                                                                                                                                      DX                                       X/Y
+                                                                                                                       23       001                            23       1               0      1
+
+                                                                                                                       22            G  0       1      2       22       2               1      2
+                                                                                                                       21               15      2      3       21       4               2      3
+
+                                                                                                                       20       3               3      4       20       8               3      4
+
+                   23                 A0                         Y0           1                                                                 4      5                                4      5
+
+                                                                 Y1           2                                                                 5      6                                5      6
+                   22                 A1                                                                                                        6      7                                6      7
+
+                   21                 A2                                                                                                        7      8                                7      8
+
+                                                                                                                                                8      9                                8      9
+                   20                 A3                                                                                                        9      10                               9      10
+
+                   18        E0                                 Y14           16                                                              10       11                             10       11
+                   19        E1                                 Y15           17
+                                                                                                                                              11       13                             11       13
+
+                                                                    001aab069                                                                 12       14                             12       14
+
+                                                                                                                                              13       15                             13       15
+                                                                                                                       18        &            14       16      18        &            14       16
+                                                                                                                                      EN                                       EN
+                                                                                                                       19                     15       17      19                     15       17
+
+                                                                                                                                                                                     001aab070
+
+                                Fig.3  Logic symbol.                                                                                    Fig.4  IEC logic symbol.
+
+
+2004 Oct 12                                                                          5

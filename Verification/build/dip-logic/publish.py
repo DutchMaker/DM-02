@@ -64,11 +64,15 @@ def main():
         ['Verification','Native KiCad pin/net parity, package identity and through-hole pad coverage passed. Integrated timing and physical qualification are pending.'],
         ['574 reuse','All 48 positions use asynchronous reset; three use complementary outputs. A 574 has neither feature. Reuse requires a register redesign.'],
         ['Count reduction',f"{summary['potential_273_pairs']} pairs share a clock and physical reset net with no used complementary outputs. These are possible 273-style consolidation sites; no chip-count reduction has been implemented."],
-        ['Decoder sourcing','Four CD74HCT154E wide-DIP parts are historically documented but absent from current TI orderables. Verified stock or a DIP-decoder redesign is still needed.'],
+        ['Decoder stock','74HCT154N DIP decoders are owned. Four positions; count and manufacturer/logo still needed for exact vendor pin/timing review. CD74HCT154E remains the staged selected identity.'],
+        ['Flip-flop sourcing','Zero CD74ACT175E owned. Source 48 for the current DL1 candidate; supplier availability unconfirmed.'],
+        ['Exact counter stock','CD74HCT161E is owned and matches the selected DIP part. Five positions; owned count unknown.'],
+        ['Register stock correction','Owned SN74HC377N corrects the earlier HCT377 report. CMOS-output drivers make reuse plausible, but input/load/timing checks remain pending for the two positions.'],
+        ['Gate stock','Owned SN74HCT00N and SN74HCT08N have 25 ns / 30 ns delay bounds at 4.5 V, 50 pF, -40..85 C. The selected AHCT models use 9 ns; substitution requires a timing review.'],
         ['Remaining DIP requirement','Eight PLCC flash ICs remain in this stage. The owned M27C322 ALU conversion removes that architecture; it has not been implemented here.'],
         ['Owned memories','M27C322-100F1, M27C1024-10F1, UM61512AK-15 and W27C512-45Z remain the preferred owned-memory path.'],
         ['Quantities','Candidate quantities are extracted from physical board/reference pairs, with multi-unit symbols counted once. They are not a purchase order.'],
-        ['Inventory','Owned stock is copied from the confirmed inventory. One HCT157 is known; other numeric counts remain blank. Generic HCT stock does not establish exact TI suffix ownership.'],
+        ['Inventory','Reported stock includes one HCT157 and zero ACT175. Other numeric counts remain blank. Literal HC/HCT/AHCT markings are retained; ownership does not establish interchangeability.'],
         ['Reproduce','python3 Verification/build/dip-logic/check.py, then publish.py, verify.py and browser_check.cjs.'],
         ['Evidence','https://ruud-macbook-pro-2023.tail668f59.ts.net:8020/build/dip-logic/'],
     ]
@@ -83,8 +87,10 @@ def main():
     add_sheet(wb,'175 positions',['Board','Reference','Clock net','Reset net','Used inverted output pins','574 substitution'],
         [[r['board'],r['reference'],', '.join(r['clock']),', '.join(r['reset']),', '.join(map(str,r['complement_pins_used'])),r['reason']] for r in review['positions']],[12,15,30,30,25,85])
     stock=json.loads((HERE.parent/'owned-inventory/stock.json').read_text())
-    add_sheet(wb,'Owned stock',['Reported marking','Package','Owned quantity','Quantity description','Remaining details'],
-        [[p['reported_marking'],p['package'],p['quantity'],p['quantity_description'],p['missing']] for p in stock['parts']],[30,22,18,65,70])
+    stock_sheet=add_sheet(wb,'Owned stock',['Reported marking','Package','Owned','Owned quantity','Quantity description','Remaining details'],
+        [[p['reported_marking'],p['package'],'Yes' if p['owned'] else 'No',p['quantity'],p['quantity_description'],p['missing']] for p in stock['parts']],[30,22,12,18,65,70])
+    for row in range(2,stock_sheet.max_row+1):
+        stock_sheet.cell(row,4).comment=Comment('Source: '+stock['source']+'. Blank means unknown; zero means explicitly none owned.','DM-02')
     source_rows=[[b['board'],b['candidate'],b['sha256']] for b in summary['boards']]
     source_rows += [[r['part'],r['source'],r['sha256']] for r in summary['manufacturer_evidence']]
     source_rows += [['Owned stock','Verification/build/owned-inventory/stock.json',sha(HERE.parent/'owned-inventory/stock.json')]]
@@ -98,6 +104,10 @@ def main():
     assert not any('SOIC' in r[3] for r in bom)
     totals={r[0]:r[1] for r in bom}
     assert all(totals[c['part']]==c['quantity'] for c in choices.values())
+    actual_stock={r[0]:r for r in check['Owned stock'].iter_rows(min_row=2,values_only=True)}
+    assert actual_stock['CD74ACT175E'][2:4]==('No',0)
+    assert actual_stock['74HCT157'][3]==1
+    assert 'SN74HC377N' in actual_stock and '74HCT377' not in actual_stock
     write('workbook-validation.json',dict(passed=True,sha256=sha(output),bom_rows=len(bom),formula_count=0,formula_errors=[],
         replaced_packages=91,remaining_soic=0,remaining_plcc=summary['remaining_non_dip_memory'],
         source_stock_sha256=sha(HERE.parent/'owned-inventory/stock.json')))
@@ -115,7 +125,8 @@ def main():
 <p>The reviewed ACT limits are 2.9–11.5 ns clock-to-Q, 3.3–13 ns clear-to-Q, 2 ns setup/hold and 1 ns reset recovery, at 4.5–5.5 V and −55 to 125 °C with a 50 pF load. ACT input thresholds are 2.0/0.8 V. Existing AC175 timing and analogue results do not establish ACT receiver behaviour.</p>
 <p>All 48 positions have reset connected; C1:U1, SQ1:U3 and SQ1:U5 also use complementary outputs. Your HCT574 has no asynchronous clear or complementary outputs, so it cannot directly replace these devices. The netlist has {summary['potential_273_pairs']} pairs with the same clock/reset and no used complementary outputs, worth examining for eight-bit resettable 273-style registers. That requires rewiring and timing/load checks.</p>
 <table id="roles"><thead><tr><th>Board</th><th>175 packages</th></tr></thead><tbody>{board_rows}</tbody></table>
-<h2>Remaining decisions</h2><p>The four DIP HCT154 decoders need verified stock or a redesign using obtainable DIP decoders. Owned HCT161/HCT377 parts need vendor/suffix matching. HCT191 counter reuse and HCT574 register redesign may reduce the final package count; the quantities here describe the checked package-conversion stage.</p>
+<h2>Latest stock</h2><p id="stock-update">Zero CD74ACT175E owned: source 48 for this candidate. CD74HCT161E is an exact owned match, count unknown. Owned 74HCT154N provides a decoder option for four positions; manufacturer/logo and count remain pending. The owned registers are SN74HC377N. Their CMOS-output drivers make reuse plausible, with input/load/timing checks still needed. Owned SN74HCT00N and SN74HCT08N gates require slower timing models than the selected AHCT parts. See the <a href="../owned-inventory/logic-review.json">pin-derived stock review</a>.</p>
+<h2>Remaining decisions</h2><p>Exact owned alternatives need integration checks before changing the selected decoder, register and gate identities. HCT191 counter reuse and HCT574 register redesign may reduce the final package count; the quantities here describe the checked package-conversion stage.</p>
 <h2>Evidence</h2><p><a href="summary.json">Native checks and fault detections</a> · <a href="choices.json">Part selections and ACT limits</a> · <a href="register-review.json">All 48 register connections</a> · <a href="packages.json">Schematic-derived packages</a> · <a href="sources/cd74act175.pdf">TI ACT175 datasheet</a> · <a href="workbook-validation.json">Workbook checks</a> · <a href="manifest.json">Publication hashes</a></p></html>''')
     excluded={'manifest.json','remote-validation.json','browser-check.json','desktop.png','mobile.png'}
     files={str(p.relative_to(HERE)):dict(bytes=p.stat().st_size,sha256=sha(p)) for p in sorted(HERE.rglob('*')) if p.is_file() and '__pycache__' not in p.parts and not(p.parent==HERE and p.name in excluded)}

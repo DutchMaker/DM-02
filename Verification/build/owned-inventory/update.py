@@ -25,20 +25,25 @@ def write(path,data):path.write_text(json.dumps(data,indent=2)+'\n')
 def main():
     before=sources();original_hash=sha(BASE);wb=load_workbook(BASE)
     stock=read(HERE/'stock.json');assessment=read(HERE/'assessment.json')
-    assert len(stock['parts'])==12 and len({p['reported_marking'] for p in stock['parts']})==12
+    assert len(stock['parts'])==16 and len({p['reported_marking'] for p in stock['parts']})==16
+    assert {p['part'] for p in assessment['parts']}=={p['reported_marking'] for p in stock['parts']}
     known={p['reported_marking']:p['quantity'] for p in stock['parts'] if p['quantity'] is not None}
-    assert known=={'74HCT157':1} and stock['allow_soic'] is False
+    assert known=={'74HCT157':1,'CD74ACT175E':0} and stock['allow_soic'] is False
     updates={
         'AS6C1008-55PCN':('UM61512AK-15','Owned alternative, not AS6C stock. 64K x8/15 ns; skinny DIP and pin 2 NC require changes. Count unknown.'),
         'AT27C512R-70PU':('W27C512-45Z; M27C1024-10F1','Owned DIP ROM alternatives. W27C512 for program/byte lanes; M27C1024-10F1 (100 ns, FDIP40W) could replace both control lanes. Counts unknown.'),
-        'CD74HCT161M96':('74HCT161','DIP ownership confirmed; vendor/suffix and count pending. Five reference PC/sequencer positions. SOIC excluded.'),
-        'CD74HCT377M96':('74HCT377','DIP ownership confirmed; vendor/suffix and count pending. Two reference operand registers. SOIC excluded.'),
+        'CD74AC175M96':('CD74ACT175E','Zero ACT175 owned; source 48 for DL1. Quantity refers to selected DIP alternative, not original AC/SOIC stock.'),
+        'CD74HCT154M96':('74HCT154N','Owned DIP alternative; count and manufacturer/logo pending. Four positions; exact vendor pin/timing review needed.'),
+        'CD74HCT161M96':('CD74HCT161E','Exact selected DIP marking owned; count unknown. Five reference PC/sequencer positions.'),
+        'CD74HCT377M96':('SN74HC377N','Latest HC marking corrects earlier HCT377 report. CMOS-output drivers traced; full-supply/load and timing checks pending. Count unknown.'),
+        'SN74AHCT00DR':('SN74HCT00N','Owned HCT alternative; count unknown. 25 ns bound versus selected AHCT 9 ns at 4.5 V/50 pF; timing review required.'),
+        'SN74AHCT08DR':('SN74HCT08N','Owned HCT alternative; count unknown. 30 ns bound versus selected AHCT 9 ns at 4.5 V/50 pF; timing review required.'),
         'SN74HCT574N':('74HCT574','DIP ownership confirmed; vendor/suffix and count pending. Five reference positions; assess simpler register bank.'),
         'SN74AHCT244N':('74HCT245; 244 (family unknown)','245 plentiful; 244 scarcer. Alternatives, not confirmed AHCT244 stock. Different pinout/OE/timing; assess per role.'),
         'SN74AHCT157N':('74HCT157','One DIP HCT157 owned; more obtainable if needed. Quantity refers to HCT alternative, not AHCT stock. Vendor/suffix and HCT timing review pending.'),
         'SST39SF040-70-4I-NHE':('M27C322-100F1','Multiple owned; 100 ns FDIP42W exactly matches AL1 ROM model. Supporting logic must become DIP-only; programmer/integration review pending.'),
         'CD74ACT283E':('74HCT191','Owned counter alternative for stack/address architecture; not an ACT283 pin substitute. Count/vendor pending.'),
-        '74HCT377':('74HCT377','DIP ownership confirmed; vendor/suffix/count pending. Same stock as candidate alternative, not additive.'),
+        '74HCT377':('SN74HC377N','Corrected exact marking is HC, not HCT. Same stock as candidate alternative, not additive. Count and integration checks pending.'),
         '74HCT574':('74HCT574','DIP ownership confirmed; vendor/suffix/count pending. Same stock as candidate alternative, not additive.'),
         '74HCT191':('74HCT191','DIP ownership confirmed; vendor/suffix/count pending. Review cascaded stack/address use.'),
         '74LS191':('74HCT191','Owned HCT alternative; LS ownership not reported. Counter behaviour and timing need review.'),
@@ -55,9 +60,10 @@ def main():
         matched.add(part)
         values=dict(zip((8,10),updates[part]))
         if part=='SN74AHCT157N':values[9]=known['74HCT157']
+        if part=='CD74AC175M96':values[9]=known['CD74ACT175E']
         for column,value in values.items():
             cell=sheet.cell(row,column);assert cell.value is None,'Preserve existing user entry: '+cell.coordinate
-            cell.value=value;cell.comment=Comment('Source: '+stock['source']+'. '+stock['construction_constraint']+' One 74HCT157 is confirmed; other numeric quantities remain unknown. Owned alternatives require timing verification. See assessment.json.','DM-02')
+            cell.value=value;cell.comment=Comment('Source: '+stock['source']+'. '+stock['construction_constraint']+' One 74HCT157 and zero CD74ACT175E are confirmed; other numeric quantities remain unknown. Owned alternatives require timing verification. See assessment.json.','DM-02')
             changed.append(cell.coordinate)
     assert matched==set(updates)
     wb.save(OUTPUT)
@@ -76,7 +82,7 @@ def main():
         assert {k:old.tables[k].ref for k in old.tables}=={k:new.tables[k].ref for k in new.tables}
     assert formulas==0 and not errors
     quantities={check['IC inventory'].cell(row,2).value:check['IC inventory'].cell(row,9).value for row in range(2,sheet.max_row+1) if check['IC inventory'].cell(row,9).value is not None}
-    assert quantities=={'SN74AHCT157N':1}
+    assert quantities=={'SN74AHCT157N':1,'CD74AC175M96':0}
     assert sha(BASE)==original_hash and sources()==before
     # The active workbook now opens on actual staged DIP selections rather than
     # the earlier SOIC reference BOM. Preserve all reference cell contents.
@@ -85,7 +91,8 @@ def main():
     assert dip_validation['passed'] and sha(dip_path)==dip_validation['sha256']
     dip=load_workbook(dip_path)
     check['Current BOM'].title='Reference FD1 BOM'
-    for position,(source_name,title) in enumerate([('Start','DIP candidate guide'),('Candidate BOM','DIP candidate BOM'),('SOIC replacements','DIP substitutions')]):
+    added_sheets=['DIP candidate guide','DIP candidate BOM','DIP substitutions','Reported stock']
+    for position,(source_name,title) in enumerate(zip(['Start','Candidate BOM','SOIC replacements','Owned stock'],added_sheets)):
         src=dip[source_name];dst=check.create_sheet(title,position)
         for row in src:
             for cell in row:
@@ -104,28 +111,31 @@ def main():
                 if name!='IC inventory' or cell.coordinate not in changed:assert got.value==cell.value
                 assert got._style==cell._style
     assert not any(c.data_type in ('f','e') for s in final for row in s for c in row)
+    reported={r[0]:r for r in final['Reported stock'].iter_rows(min_row=2,values_only=True)}
+    assert reported['CD74ACT175E'][2:4]==('No',0)
+    assert reported['SN74HC377N'][2:4]==('Yes',None) and '74HCT377' not in reported
     assert sha(BASE)==original_hash and sources()==before
     write(HERE/'validation.json',dict(passed=True,created_at=datetime.now(timezone.utc).isoformat(),
         original_workbook_sha256=original_hash,updated_workbook_sha256=sha(OUTPUT),
         changed_cells=changed,changed_rows=len(matched),all_other_cell_values_and_styles_preserved=True,
         formula_count=formulas,formula_errors=errors,known_owned_quantities=known,other_quantity_cells_left_unknown=True,allow_soic=False,normal_sources_modified=False,
-        dip_candidate_workbook_sha256=sha(dip_path),added_sheets=['DIP candidate guide','DIP candidate BOM','DIP substitutions'],renamed_reference_sheet='Reference FD1 BOM'))
+        dip_candidate_workbook_sha256=sha(dip_path),added_sheets=added_sheets,renamed_reference_sheet='Reference FD1 BOM'))
     entries=''.join(f'<tr><td>{html.escape(r["part"])}</td><td><strong>{html.escape(r["assessment"])}</strong><p>{html.escape(r["detail"])}</p></td></tr>' for r in assessment['parts'])
     (HERE/'index.html').write_text(f'''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DM-02 · owned inventory update</title><link rel="icon" href="data:,">
 <style>:root{{color-scheme:dark}}body{{margin:24px auto;padding:0 16px;max-width:1100px;background:#0c1420;color:#e2e8f0;font:16px/1.6 system-ui}}a{{color:#8acfff;overflow-wrap:anywhere}}table{{width:100%;table-layout:fixed;border-collapse:collapse}}td,th{{vertical-align:top;text-align:left;border-bottom:1px solid #304156;padding:10px;overflow-wrap:anywhere}}th:first-child{{width:21%}}.note{{color:#ffd082}}@media(max-width:650px){{table,tbody,tr,td{{display:block}}thead{{display:none}}td:first-child{{font-weight:bold}}td{{padding:10px 0}}}}</style>
 <nav><a href="/">Dashboard</a> · <a href="../bom-inventory/">Original BOM publication</a></nav><h1>Owned inventory changes the preferred parts</h1>
 <p><a id="workbook" href="{OUTPUT.name}">Download the BOM with your stock notes</a></p>
 <p id="dip-bom">The workbook now opens with the <a href="../dip-logic/">DIP logic candidate</a>: all 91 SOIC logic positions have staged DIP replacements, including 48 CD74ACT175E flip-flops. The earlier component list is labelled “Reference FD1 BOM”.</p>
-<p>Twelve reported stock types are recorded; the repeated W27C512 mention is counted once. One 74HCT157 is confirmed; other numeric quantities remain blank. The workbook records this HCT alternative against the reference AHCT157 row. Selected FD1 parts and design counts remain the original reference.</p>
+<p id="stock-update">Fifteen owned types and one explicitly unowned type are recorded. One 74HCT157 and zero CD74ACT175E are confirmed; other numeric quantities remain blank. Source 48 ACT175s for the current DL1 candidate. The latest SN74HC377N marking replaces the earlier HCT377 stock report. Exact markings and ownership appear in the Reported stock tab and in the active DIP tabs.</p>
 <p id="construction" class="note">{html.escape(stock['construction_constraint'])} DL1 has zero SOIC logic packages; eight PLCC flash ICs still await the owned-M27C322 conversion. Integrated timing and physical qualification remain pending.</p>
 <p id="scope" class="note">This is a suitability review and inventory update. An owned-parts circuit has not yet been simulated or promoted.</p>
-<p>{html.escape(assessment['recommendation'])}</p><table id="parts"><thead><tr><th>Owned part</th><th>Recommended use and required changes</th></tr></thead><tbody>{entries}</tbody></table>
+<p>{html.escape(assessment['recommendation'])}</p><table id="parts"><thead><tr><th>Reported part</th><th>Recommended use and required changes</th></tr></thead><tbody>{entries}</tbody></table>
 <h2>Remaining inventory details</h2><p>{html.escape('; '.join(assessment['needed_from_user']))}.</p>
-<p><a href="stock.json">Reported stock</a> · <a href="assessment.json">Assessment</a> · <a href="validation.json">Workbook validation</a> · <a href="sources/um61512a.pdf">UMC SRAM datasheet</a> · <a href="sources/w27c512.pdf">Winbond ROM datasheet</a> · <a href="sources/m27c1024.pdf">27C1024 family datasheet</a> · <a href="sources.json">Source hashes</a> · <a href="manifest.json">Publication hashes</a></p></html>''')
+<p><a href="stock.json">Reported stock</a> · <a href="assessment.json">Assessment</a> · <a href="logic-review.json">HC377 input traces and gate limits</a> · <a href="logic-sources.json">Logic datasheet sources</a> · <a href="validation.json">Workbook validation</a> · <a href="sources/um61512a.pdf">UMC SRAM datasheet</a> · <a href="sources/w27c512.pdf">Winbond ROM datasheet</a> · <a href="sources/m27c1024.pdf">27C1024 family datasheet</a> · <a href="sources.json">Source hashes</a> · <a href="manifest.json">Publication hashes</a></p></html>''')
     excluded={'manifest.json','remote-validation.json','browser-check.json','desktop.png','mobile.png'}
     files={str(p.relative_to(HERE)):dict(bytes=p.stat().st_size,sha256=sha(p)) for p in sorted(HERE.rglob('*')) if p.is_file() and not(p.parent==HERE and p.name in excluded) and '__pycache__' not in p.parts}
     write(HERE/'manifest.json',dict(files=files))
-    print('Updated',len(matched),'inventory rows;',len(changed),'input cells; one HCT157 confirmed; all other cell values/styles unchanged')
+    print('Updated',len(matched),'inventory rows;',len(changed),'input cells; one HCT157 and zero ACT175 confirmed; reference values/styles preserved')
 
 
 if __name__=='__main__':main()

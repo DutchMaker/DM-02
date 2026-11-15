@@ -12,6 +12,9 @@ const base='https://ruud-macbook-pro-2023.tail668f59.ts.net:8020/build/dip-logic
    assert.match(await page.locator('#scope').innerText(),/zero SOIC/);
    assert.match(await page.locator('#scope').innerText(),/integrated timing and physical qualification are pending/);
    assert.match(await page.locator('#scope').innerText(),/Eight PLCC/);
+   assert.match(await page.locator('#stock-update').innerText(),/Zero CD74ACT175E owned/);
+   const replacements=await page.locator('#replacements').innerText();
+   for(const part of ['74HCT154N','CD74HCT161E','SN74HC377N','SN74HCT00N','SN74HCT08N'])assert(replacements.includes(part));
    const summary=await(await context.request.get(base+'summary.json')).json();
    assert(summary.passed);assert.equal(summary.changed_packages,91);assert.equal(summary.remaining_soic,0);
    assert.equal(summary.boards.length,14);assert.equal(summary.integrated_timing_qualified,false);

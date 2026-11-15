@@ -1,0 +1,30 @@
+[
+  {
+    "name": "sn74hc377",
+    "url": "https://www.ti.com/lit/ds/symlink/sn74hc377.pdf",
+    "sha256": "b22acd7e22c3c90494921cb7c8e98cb53570d57e0612d01ad6d3f29ad70a2d53",
+    "pages": 24,
+    "archived_at": "2026-11-15T20:25:20.543526+00:00"
+  },
+  {
+    "name": "sn74hct00",
+    "url": "https://www.ti.com/lit/ds/symlink/sn74hct00.pdf",
+    "sha256": "711e8e486a058652797470f14f5ab76bf8c77436611cd18e32e851ba82ac220a",
+    "pages": 26,
+    "archived_at": "2026-11-15T20:25:22.399121+00:00"
+  },
+  {
+    "name": "sn74hct08",
+    "url": "https://www.ti.com/lit/ds/symlink/sn74hct08.pdf",
+    "sha256": "51145ae3e1e254c147bdc1d6b062acf2893cd734643276fcb7839541811f5d8c",
+    "pages": 27,
+    "archived_at": "2026-11-15T20:25:24.371106+00:00"
+  },
+  {
+    "name": "philips-74hct154",
+    "url": "https://datasheet.octopart.com/74HC154N-Philips-datasheet-26590.pdf",
+    "sha256": "03c6579d4ccaaff66e5b85cf05eb8a41a44267a583f958e15295059ef285440e",
+    "pages": 4,
+    "archived_at": "2026-11-15T20:25:26.589355+00:00"
+  }
+]

@@ -1,26 +1,26 @@
 {
   "passed": true,
-  "checked_at": "2026-11-15T20:16:33.252566+00:00",
+  "checked_at": "2026-11-15T20:29:12.829170+00:00",
   "base_url": "https://ruud-macbook-pro-2023.tail668f59.ts.net:8020/build/dip-logic/",
-  "manifest_sha256": "a92d230527936e0944510b31b3be6dbbb5d1c7736d6079c5b5436e98a942c7e1",
+  "manifest_sha256": "75abe3c1aeaff6378b4f5ec54516ef8d408ef268df6fec845efb2a060965a910",
   "files_checked": 221,
   "files": [
     {
       "file": "DM-02-DIP-logic-candidate-BOM.xlsx",
-      "sha256": "45f49f9369b3f3340aa93f94f05b9abb9b1765b6edc07d32ef9d0986b69be34a",
-      "bytes": 29278,
+      "sha256": "5e36a2bdbceb906efee59ee1712664d23efd0f620c89955310f75a2ee8734df0",
+      "bytes": 31681,
       "matched": true
     },
     {
       "file": "browser_check.cjs",
-      "sha256": "290bc89f8e6825e83189506f802d973378d972cd5b14a7f687e1002ba12e6783",
-      "bytes": 2406,
+      "sha256": "9630b2568e4989deaa344b7a5eedc5f7e4fb31eb459b152bfa536862dc53103d",
+      "bytes": 2693,
       "matched": true
     },
     {
       "file": "candidate-BOM.csv",
-      "sha256": "515008823396b799aaa9404b1ec7ce98bb197cd444aa210457e767238bd8994c",
-      "bytes": 43421,
+      "sha256": "2756a6d651fd05676e12a374e06134e596d97442b769c8496d4a0d7e41784cf5",
+      "bytes": 43856,
       "matched": true
     },
     {
@@ -31,8 +31,8 @@
     },
     {
       "file": "choices.json",
-      "sha256": "432b10d93fdd4607040fc98367d3a33b66871f0d4eeae78afd62ca99a4df9d75",
-      "bytes": 3745,
+      "sha256": "35098459b06f18b5a8d4a4d4b197e4c0d6e555a55971d920a1ae16cb1f141c3e",
+      "bytes": 4174,
       "matched": true
     },
     {
@@ -151,8 +151,8 @@
     },
     {
       "file": "index.html",
-      "sha256": "c263070b5e392ae8ddecdcc2e82d318207f437d21cf8baf11ec0221f8220a6bd",
-      "bytes": 4685,
+      "sha256": "94657412aa1bd97e63de868b7f3527db4b7a5f481ce3db5d0383fd47a5ad2a23",
+      "bytes": 5672,
       "matched": true
     },
     {
@@ -1129,8 +1129,8 @@
     },
     {
       "file": "publish.py",
-      "sha256": "bb94ac37ebc353f46c47ef028e0f4779adb81239929337f592d72600722bde42",
-      "bytes": 12423,
+      "sha256": "9f53cf1844260719ad9a3159aaab8004219e9948d7f483b3aaf678a464ddb787",
+      "bytes": 14148,
       "matched": true
     },
     {
@@ -1327,7 +1327,7 @@
     },
     {
       "file": "workbook-validation.json",
-      "sha256": "6319f8424362b20250cba2ed13d007691fee3a80b8c826dccc0be9bba1ac4e4a",
+      "sha256": "dd8dff7c3d634ecf79d013e13fd34415eff90c93231424cfab7168bc8ca96224",
       "bytes": 332,
       "matched": true
     }

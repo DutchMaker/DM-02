@@ -1,19 +1,28 @@
 {
   "passed": true,
-  "created_at": "2026-11-15T20:16:35.606292+00:00",
+  "created_at": "2026-11-15T20:29:15.211424+00:00",
   "original_workbook_sha256": "d493a8e55cee418346068ef4bfea4ef6a61acaf1dc08e8b20889d1c751fe6d1a",
-  "updated_workbook_sha256": "ab2662f6c8cbf9e560ac15050b1792e1f8b21cf16416ab20878df1e3bbea83a0",
+  "updated_workbook_sha256": "f47ea5ab7651c58ee6d4e739f70e9eb7d483ff01dac9ab4a99a7330bc24fe361",
   "changed_cells": [
     "H2",
     "J2",
     "H3",
     "J3",
+    "H4",
+    "J4",
+    "I4",
     "H5",
     "J5",
+    "H6",
+    "J6",
     "H7",
     "J7",
     "H8",
     "J8",
+    "H13",
+    "J13",
+    "H15",
+    "J15",
     "H16",
     "J16",
     "I16",
@@ -42,21 +51,23 @@
     "H42",
     "J42"
   ],
-  "changed_rows": 18,
+  "changed_rows": 22,
   "all_other_cell_values_and_styles_preserved": true,
   "formula_count": 0,
   "formula_errors": [],
   "known_owned_quantities": {
-    "74HCT157": 1
+    "74HCT157": 1,
+    "CD74ACT175E": 0
   },
   "other_quantity_cells_left_unknown": true,
   "allow_soic": false,
   "normal_sources_modified": false,
-  "dip_candidate_workbook_sha256": "45f49f9369b3f3340aa93f94f05b9abb9b1765b6edc07d32ef9d0986b69be34a",
+  "dip_candidate_workbook_sha256": "5e36a2bdbceb906efee59ee1712664d23efd0f620c89955310f75a2ee8734df0",
   "added_sheets": [
     "DIP candidate guide",
     "DIP candidate BOM",
-    "DIP substitutions"
+    "DIP substitutions",
+    "Reported stock"
   ],
   "renamed_reference_sheet": "Reference FD1 BOM"
 }
