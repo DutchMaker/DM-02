@@ -1,0 +1,1205 @@
+
+--- PDF page 1 ---
+                                                                                                                UM61512A Series
+
+
+                                                                            64K X 8 BIT HIGH SPEED CMOS SRAM
+
+
+Features
+
+   Single +5V power supply                                                                Common I/O using three-state output
+   Access times: 15/20/25ns (max.)                                                        Output enable and two chip enable inputs for easy
+   Current: Operating: 160mA (max.)                                                       application
+               Standby:    10mA (max.)                                                    Data retention voltage: 3V (min.)
+   Full static operation, no clock or refreshing required                                 Available in 32-pin SKINNY DIP, TSOP, SOP, SOJ
+   All inputs and outputs are directly TTL compatible                                     and both 300/400 mil packages
+
+
+General Description
+
+The UM61512A is a low operating current 524,288-bit                                   Two chip enable inputs are provided for POWER-DOWN
+static random access memory organized as 65,536                                       and device enable and an output enable input is included
+words by 8 bits and operates on a single 5V power                                     for easy interfacing.
+supply. It is built using UMC's high performance CMOS                                 Data retention is guaranteed at a power supply voltage
+process.                                                                              as low as 3V.
+Inputs and three-state outputs are TTL compatible and
+allow for direct interfacing with common system bus
+structures.
+
+Pin Configurations
+
+   SKINNY/SOJ/SOP                                           TSOP (forward type)                              Pin No.       Pin           Pin No.       Pin
+                                                                                                                            Name                        Name
+
+      NC      1              32     VCC                                                                           1             A11            17             A3
+      NC                     31     A15                     16                   1                                2              A9             18             A2
+              2                                                                                                   3              A8             19             A1
+     A14      3              30     CE2
+     A12                            WE                                                                            4             A13            20             A0
+              4              29                                                                                   5
+       A7     5              28     A13                                                                                       WE            21            I/O1
+       A6     6              27     A8                                                                            6             CE2            22            I/O2
+       A5     7              26     A9                                                                            7             A15            23            I/O3
+       A4     8              25     A11                                                                           8            VCC           24           GND
+       A3     9              24     OE                                                                            9             NC             25            I/O4
+       A2     10             23     A10                                                                          10            NC             26            I/O5
+
+       A1     11             22     CE1                                                                          11            A14            27            I/O6
+       A0     12             21     I/O8                                                                         12            A12            28            I/O7
+      I/O1    13             20     I/O7                                                                         13             A7             29            I/O8
+
+      I/O2    14             19     I/O6                                                                         14             A6             30        CE1
+      I/O3    15             18     I/O5                    17                                  32               15             A5             31            A10
+     GND      16                        17I/O4                                                                   16             A4             32
+                                                                                                                                                          OE
+
+
+
+
+
+
+
+
+
+                                                                               1
+
+--- PDF page 2 ---
+                                                                                                                                                 UM61512A
+
+
+Block Diagram
+
+
+
+                                          A0                                                                            VCC
+                                                                                                                        GND
+
+                                                                                          512 X 2048
+                                                               DECODER                 MEMORY ARRAY
+
+                                         A13
+                                         A14
+
+                                         A15
+
+
+
+                                          I/O1
+
+                                                                 INPUT
+                                                                  DATA                   COLUMN I/O
+                                                                CIRCUIT
+
+                                          I/O8
+
+
+
+
+
+
+
+
+                                         CE2
+                                         CE1         CONTROL
+                                          OE          CIRCUIT
+                                         WE
+
+
+Pin Descriptions     SKINNY/SOJ/SOP                                                        Pin Description     TSOP
+
+       Pin No.               Symbol              Description                                      Pin No.               Symbol              Description
+          1, 2                       NC             No Connection                                 1 - 4, 7,               A0 - A15         Address Inputs
+     3 - 12, 23,              A0 - A15         Address Inputs                                   11 - 20, 31
+     25 - 28, 31                                                                                      5                      WE             Write Enable
+  13 - 15, 17 - 21         I/O1 - I/O8        Data Input/Outputs                                      6                        CE2            Chip Enable
+          16                      GND            Ground                                               8                       VCC            Power Supply
+          22                      CE1            Chip Enable                                        9, 10                      NC             No Connection
+
+          24                      OE             Output Enable                               21 - 23, 25 - 29         I/O1 - I/O8        Data Input/Outputs
+          29                      WE             Write Enable                                         24                      GND            Ground
+          30                       CE2            Chip Enable                                         30                     CE1            Chip Enable
+
+          32                      VCC            Power Supply                                         32                     OE             Output Enable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                     2
+
+--- PDF page 3 ---
+                                                                                                                                                         UM61512A
+
+
+Recommended DC Operating Conditions (TA = 0°C to + 70°C)
+
+    Symbol                   Parameter                  Min.               Typ.              Max.              Unit
+      VCC             Supply Voltage                        4.75                 5.0                 5.25                  V
+      GND             Ground                                       0                     0                     0                    V
+        VIH              Input High Voltage                   2.2                  3.5            VCC + 0.3             V
+        VIL               Input Low Voltage                    -0.3                   0                   +0.8                  V
+        CL               Output Load                               -                     -                     30                   pF
+       TTL              Output Load                               -                     -                      1                     -
+
+Absolute Maximum Ratings*                                                                      *Comments
+
+VCC to GND . . . . . . . . . . . . . . . . . . . . . . -0.5V to +7.0V                          Stresses above those listed under "Absolute Maximum
+IN, IN/OUT Volt to GND . . . . . . . . .  -0.5V to VCC +0.5V                                   Ratings" may cause permanent damage to this device.
+Operating Temperature, Topr . . . . . . . . . .  0 °C to +70°C                                 These are stress ratings only. Functional operation of
+Storage Temperature, Tstg . . . . . . . . . . -55 °C to +125°C                                 this device at these or any other conditions above
+Temperature Under Bias, Tbias . . . . . . .  -10 °C to +85°C                                   those indicated in the operational sections of this
+Power Dissipation, Pt . . . . . . . . . . . . . . . . . . . . . .  1.0W                        specification is not implied or intended. Exposure to
+Soldering Temp. & Time . . . . . . . . . . . . .  260 °C, 10 sec                               the absolute maximum rating conditions for extended
+                                                                                               periods may affect device reliability.
+
+DC Electrical Characteristics     (TA = 0°C to + 70°C, VCC = 5V ± 5%, GND = 0V)
+
+    Symbol                   Parameter                     UM61512A-15/20/25             Unit                          Conditions
+
+                                                                       Min.               Max.
+      ILI          Input Leakage Current                      -                       2                      μA             VIN = GND to VCC
+
+      ILO         Output Leakage Current                    -                       2                      μA                   CE1 = VIH or CE2 = VIL or
+                                                                                                                                  OE  = VIH or       WE  = VIL
+                                                                                                                                   VI/O = GND to VCC
+     ICC1 (1)        Dynamic Operating Current              -                     160                  mA                         CE1 = VIL, CE2 = VIH
+                                                                                                                                   II/O = 0 mA
+        ISB                                                                     -                      30                   mA    CE1 = VIH or CE2 = VIL
+
+       ISB1                                                               -                      20                   mA          CE1 ≥ VCC - 0.2V,
+                      Standby Power                                                                                               CE2 ≥ VCC - 0.2V,
+                      Supply Current                                                                                              VIN ≤ 0.2V or VIN ≥ VCC - 0.2V
+
+       ISB2                                                                    -                      20                   mA     CE1 ≤ 0.2V, CE2 ≤ 0.2V
+                                                                                                                                  VIN ≤ 0.2V or VIN ≥ VCC - 0.2V
+       VOL          Output Low Voltage                          -                     0.4                   V             IOL = 8 mA
+       VOH          Output High Voltage                        2.4                     -                     V             IOH = -4 mA
+
+Note: 1. ICC1 is dependent on output loading, cycle rates, and Read/Write patterns.
+
+
+
+
+
+
+
+
+
+                                                                                         3
+
+--- PDF page 4 ---
+                                                                                                                                                                              UM61512A
+
+
+Truth Table
+
+               Mode                           CE1              CE2               OE                WE                     I/O Operation                   Supply Current
+
+     Standby                            H              X              X              X                     High Z                                     ISB, ISB1
+                                                X               L               X              X                     High Z                                     ISB, ISB2
+     Output Disable                  L               H              H              H                     High Z                                     ICC1
+     Read                                  L               H               L               H                     DOUT                                       ICC1
+     Write                                  L               H              X               L                      DIN                                          ICC1
+
+Note: X = H or L
+
+Capacitance  (TA = 25°C, f = 1.0 MHz)
+
+       Symbol                          Parameter                          Min.              Max.              Unit                    Conditions
+          CIN *                   Input Capacitance                                                      8                    pF                       VIN = 0V
+          CI/O *                  Input/Output Capacitance                                         10                   pF                       VI/O = 0V
+
+* These parameters are sampled and not 100% tested.
+
+AC Characteristics  (TA = 0°C to +70°C, VCC = 5V ± 10%)
+
+  Symbol                            Parameter                            UM61512A-15     UM61512A-20     UM61512A-25       Unit
+                                                                                               Min.       Max.       Min.       Max.       Min.       Max.
+
+  Read Cycle
+
+    tRC            Read Cycle Time                                                15            -            20            -            25            -              ns
+
+    tAA           Address Access Time                                         -            15            -             20            -            25            ns
+
+    tACE1        Chip Enable Access Time                                        CE1          -            15            -             20            -            25            ns
+
+    tACE2                                                                   CE2           -            15            -             20            -            25            ns
+
+    tOE           Output Enable to Output Valid                            -              7             -              9             -            12            ns
+
+    tCLZ1         Chip Enable to Output in Low Z                                CE1          5             -              5             -              5             -              ns
+
+    tCLZ2                                                                   CE2           5             -              5             *             5             -              ns
+
+    tOLZ          Output Enable to Output in Low Z                       2             -              2             -              2             -              ns
+
+    tCHZ1         Chip Disable to Output in High Z                              CE1          -            10            -             10            -            15            ns
+
+    tCHZ2                                                                   CE2           -            10            -             10            -            15            ns
+
+    tOHZ          Output Disable to Output in High Z                      2             9             2             9             2            10            ns
+
+    tOH           Output Hold from Address Change                     3             -              5             -              5             -              ns
+
+
+
+
+
+
+
+
+
+                                                                                                    4
+
+--- PDF page 5 ---
+                                                                                                                                                                         UM61512A
+
+
+AC Characteristics  (continued)
+
+  Symbol                            Parameter                            UM61512A-15     UM61512A-20     UM61512A-25       Unit
+                                                                                             Min.       Max.       Min.       Max.       Min.       Max.
+
+  Write Cycle
+
+  tWC            Write Cycle Time                                                 15           20           20           25           25            -              ns
+
+  tCW            Chip Enable to End of Write                               12           15           15           20           20            -              ns
+
+  tAS             Address Setup Time of Write                               0             0             0             0             0             -              ns
+
+  tAW            Address Valid to End of Write                             12           15           15           20           20            -              ns
+
+  tWP            Write Pulse Width                                                9             -            11            -             -             -              ns
+
+  tWR            Write Recovery Time                                           0             -              0             -             -             -              ns
+
+  tWHZ           Write to Output in High Z                                     0             8             0            13           13           13            ns
+
+  tDW            Data to Write Time Overlap                                 7             -              7             -             -             -              ns
+
+  tDH             Data Hold from Write Time                                  0             -              0             -             -             -              ns
+
+  tOW            Output Active from End of Write                          5             -              5             -             -             -              ns
+
+Notes: tCHZ1, tCHZ2, tOHZ and tWHZ are defined as the time at which the outputs achieve the open circuit condition and are not
+           referred to output voltage levels.
+
+Timing Waveforms
+
+Read Cycle 1(1,2,4)
+
+
+
+
+
+                                                                                                   tRC
+
+
+            Address
+
+
+
+                                                                                    tAA
+
+                                                                                                                                                               tOH
+                                                                    tOH
+
+
+
+                DOUT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                  5
+
+--- PDF page 6 ---
+                                                                                                                                  UM61512A
+
+
+Timing Waveforms  (continued)
+
+Read Cycle 2(1,3,4,6)
+
+
+
+
+
+
+
+            CE1
+
+
+                                                    tACE1
+
+                                          tCLZ15                                                                      tCHZ15
+
+
+
+            DOUT
+
+
+
+
+
+Read Cycle 3(1,4,7,8)
+
+
+
+
+
+
+
+
+            CE2
+
+
+                                                    tACE2
+
+                                          tCLZ25                                                                      tCHZ25
+
+
+
+            DOUT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                           6
+
+--- PDF page 7 ---
+                                                                                                                                       UM61512A
+
+
+Timing Waveforms  (continued)
+
+Read Cycle 4(1)
+
+
+                                                                               tRC
+
+          Address
+
+
+                                                                 tAA
+
+
+
+              OE
+
+
+
+                                                                         tOE                                               tOH
+
+                                                                 tOLZ5
+             CE1
+
+
+                                                               tACE1
+                                                         tCLZ25                                                         tCHZ15
+
+
+
+             CE2
+
+
+                                                               tACE2                                                         tOHZ5
+
+                                                         tCLZ25                                                           tCHZ25
+
+
+             DOUT
+
+
+
+Notes: 1.   WE  is high for Read Cycle.
+         2.  Device is continuously enabled           CE1 = VIL and CE2 = VIH.
+         3.  Address valid prior to or coincident with          CE1 transition low.
+         4. OE  = VIL.
+         5.  Transition is measured  ±500mV from steady state. This parameter is sampled and not 100% tested.
+         6.  CE2 is high.
+         7. CE1 is low.
+         8.  Address valid prior to or coincident with CE2 transition high.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                              7
+
+--- PDF page 8 ---
+                                                                                                                              UM61512A
+
+
+Timing Waveforms  (continued)
+
+Write Cycle 1(6)
+(Write Enable Controlled)
+
+
+
+                                                                          tWC
+
+         Address
+
+
+                                                                   tAW                               tWR3
+
+                                                                        tCW5
+            CE1                                        (4)
+
+
+
+
+            CE2                                        (4)
+
+
+                                                 tAS1                              tWP2
+
+
+            WE
+
+
+                                                                                       tDW                      tDH
+
+
+             DIN
+
+                                                                           tWHZ
+
+                                                                                                                tOW
+
+            DOUT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                         8
+
+--- PDF page 9 ---
+                                                                                                                                   UM61512A
+
+
+Timing Waveforms  (continued)
+
+Write Cycle 2
+(Chip Enable Controlled)
+
+
+
+
+                                                                            tWC
+
+
+         Address
+
+                                                                      tAW                               tWR3
+
+                                                                           tCW5
+            CE1                                tAS1      (4)
+
+
+
+
+            CE2                                          (4)
+
+                                                                           tCW5
+
+                                                                           tWP2
+
+             WE
+
+
+                                                                                     tDW                        tDH
+
+
+              DIN
+
+
+                                                                      tWHZ7
+
+
+            DOUT
+
+
+
+Notes: 1.  tAS is measured from the address valid to the beginning of Write.
+        2.  A Write occurs during the overlap (t WP) of a low           CE1, a high CE2 and a low          WE .
+        3.  tWR is measured from the earliest of CE1 or                WE  going high or CE2 going low to the end of the Write cycle.
+        4.  If the   CE1 low transition or the CE2 high transition occurs simultaneously with the                      WE  low  transition or after
+            the  WE  transition, outputs remain in a high impedance state.
+        5.  tCW is measured from the later of         CE  going low or CE2 going high to the end of Write.
+        6.  OE  is continuously low. (      OE  = VIL)
+        7.  Transition is measured  ±500mV from steady state. This parameter is sampled and not 100% tested.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                           9
+
+--- PDF page 10 ---
+                                                                                                                                                              UM61512A
+
+
+AC Test Conditions
+
+     Input Pulse Levels                                                                              0V to 3.0V
+
+     Input Rise and Fall Time                                                                    5 ns
+
+     Input and Output Timing Reference Levels                                         1.5V
+
+     Output Load                                                                                       See Figures 1 and 2
+
+
+
+
+                                                    +5V                                                               +5V
+
+                                                       480Ω                                                              480Ω
+
+                                       I/O                                                               I/O
+
+
+                                                       255Ω           30pF*                                              255Ω            5pF*
+
+
+
+
+                                              * Including scope and jig.                                         * Including scope and jig.
+
+
+                                       Figure 1.Output Load                        Figure 2. Output Load for  tCLZ1,
+                                                                                                                  tCLZ2, tOLZ, tCHZ1, tCHZ2,
+                                                                                                                  tOHZ, tWHZ, and tOW
+
+Data Retention Characteristics   (TA = 0°C to 70°C)
+
+   Symbol                      Parameter                          Min.              Max.              Unit                        Conditions
+  VDR1                                                                           3                   5.25                  V              CE1 ≥ VCC - 0.2V
+                     VCC for Data Retention                                                                                               CE2 ≥ VCC - 0.2V or
+                                                                                                                                          CE2 ≤ 0.2V
+  VDR2                                                                               3                   5.25                  V             CE2 ≤ 0.2V
+                                                                                                                                          CE1 ≥ VCC - 0.2V or
+                                                                                                                                          CE1 ≤ 0.2V
+  ICCDR1                                                                          -                      5                   mA            VCC = 3.0V
+                                                                                                                                          CE1 ≥ VCC - 0.2V
+                                                                                                                                          CE2 ≥ VCC - 0.2V
+                     Data Retention Current                                                                                               VIN  ≥ VCC - 0.2V or
+                                                                                                                                          VIN   ≤ 0.2V
+  ICCDR2                                                                           -                      5                   mA            VCC = 3.0V
+                                                                                                                                          CE2 ≤ 0.2V
+                                                                                                                                          CE1 ≤ 0.2V
+                                                                                                                                          VIN  ≥ VCC - 0.2V or
+                                                                                                                                          VIN  ≤ 0.2V
+  tCDR             Chip Disable to Data Retention                                0                     -                     ns
+                     Time                                                                                                                 See Retention Waveform
+  tR                 Operation Recovery Time                         5                     -                    ms
+
+
+
+
+
+
+
+
+
+                                                                                          10
+
+--- PDF page 11 ---
+                                                                                                                                                                 UM61512A
+
+
+
+Low VCC Data Retention Waveform (1)  (CE1 Controlled)
+
+
+
+
+                                                                      DATA RETENTION MODE
+
+
+    VCC                           4.75V                                                                                        4.75V
+
+                                   tCDR                                       VDR ≥  3V                                          tR
+
+
+
+     CE1                        VIH                                                                                                VIH
+
+                                                                        CE1 ≥ VDR - 0.2V
+
+
+Low VCC Data Retention Waveform (2)  (CE2 Controlled)
+
+
+
+
+                                                                      DATA RETENTION MODE
+
+
+    VCC                           4.75V                                                                                        4.75V
+
+                                   tCDR                                       VDR ≥  3V                                          tR
+
+
+
+     CE2                        VIL                                                                                                VIL
+
+
+                                                                           CE2 ≤ 0.2V
+
+
+
+Ordering Information
+
+                Part No.               Access Time (ns)     Operating Current                                         Standby Current
+                                                                                      Max. (mA)                            Max.  (mA)                      Package
+
+        UM61512AK-15                           15                                 160                                    10                       32L SKINNY
+
+        UM61512AK-20                           20                                 160                                    10                       32L SKINNY
+
+        UM61512AS-15                           15                                 160                                    10                       32L SOJ (300 mil)
+
+        UM61512AS-20                           20                                 160                                    10                       32L SOJ (300 mil)
+
+        UM61512ASW-15                        15                                 160                                    10                       32L SOJ (400 mil)
+
+        UM61512ASW-20                        20                                 160                                    10                       32L SOJ (400 mil)
+
+        UM61512AM-25                           25                                 160                                    10                       32L SOP
+
+        UM61512AV-15                           15                                 160                                    10                       32L TSOP
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                            11
+
+--- PDF page 12 ---
+                                                                                                                                                                                   UM61512A
+
+
+Package Information
+
+SKINNY 32L Outline Dimensions                                                                                                    unit: inches/mm
+
+
+
+                                                    D
+
+                 32                                                                      17
+
+
+
+
+
+
+
+
+
+
+
+                 1                                                                                                        16
+                      S                                                                                                                            E
+
+
+
+
+                                                                                                               Base Plane
+
+
+                                                                                                              Seating Plane
+                                               B
+                                               B1                                     e1                                        £\                 eA
+
+
+
+
+
+                                                       Symbol        Dimensions in inches          Dimensions in mm
+                                                            A                       0.200 Max.                             5.08 Max.
+                                                           A1                       0.015 Min.                              0.38 Min.
+                                                           A2                     0.130¡Ó0.010                           3.30¡Ó0.25
+                                                            B                       0.018 +0.004                           0.46 +0.10
+                                                                                              -0.002                                    -0.05
+                                                           B1                      0.050 +0.004                           1.27 +0.10
+                                                                                              -0.002                                    -0.05
+                                                            C                       0.010 +0.004                           0.25 +0.10
+                                                                                              -0.002                                    -0.05
+                                                            D             1.600 Typ. (1.620 Max.)        40.64 Typ. (41.15 Max.)
+                                                            E                      0.310¡Ó0.010                           7.87¡Ó0.25
+                                                           E1            0.288 Typ. (0.300 Max.)          7.32 Typ. (7.62 Max.)
+                                                            e1                      0.100¡Ó0.007                           2.54¡Ó0.18
+                                                            L                      0.130¡Ó0.010                           3.30¡Ó0.25
+                                                            £\                        0° ~ 15°                                  0° ~ 15°
+                                                            eA                     0.355¡Ó0.035                           9.02¡Ó0.89
+                                                            S                       0.059 Max.                             1.50 Max.
+
+                                                  Notes:
+                                                  1.  The maximum value of dimension D  includes end flash.
+                                                  2.  Dimension E1 does not include resin fins.
+                                                  3.  Dimension S includes end flash.
+
+
+
+
+
+
+
+
+
+
+                                                                                                      12
+
+--- PDF page 13 ---
+                                                                                                                                                                              UM61512A
+
+
+Package Information
+
+SOJ 32/32LD (300mil BODY) Outline Dimensions                                                                     unit: inches/mm
+
+
+                                            D                                                                                                 b
+
+                32                                                    17
+
+
+
+
+
+                                                                                                                      F
+                                                                                                                           F                    BASE METAL
+                                                                                                            DETAIL "A"                         WITH PLATING
+
+                                                                                                                                        SECTION F-F
+
+
+                 1                                                    16
+
+
+
+                                                                                                                         DETAIL "A"
+
+
+                                                                                                                                    HE
+                                             b1
+
+
+
+
+
+   y                s                                     e                                                                                                             e1y
+                                          b
+
+                  SEATING PLANE                                                   0.004   y
+
+
+
+
+                                                      Symbol        Dimensions in inches          Dimensions in mm
+                                                                         Min.       Nom.      Max.       Min.       Nom.      Max.
+                                                           A             0128       0.132      0.140        3.25        3.35        3.56
+                                                          A1            0.052           -              -           2.08            -              -
+                                                          A2            0.095      0.100      0.105        2.41        2.54        2.67
+                                                           b             0.016      0.018      0.020        0.41        0.46        0.51
+                                                          b1            0.026      0.028      0.032        0.66        0.71        0.81
+                                                           c             0.006      0.008      0.012        0.15        0.20        0.30
+                                                           D             0.820      0.825      0.830       20.83      20.96      21.08
+                                                          HE            0.330      0.335      0.340        8.39        8.51        8.63
+                                                           E             0.295      0.300      0.305        7.49        7.62        7.75
+                                                          e1            0.260      0.267      0.274        6.61        6.78        6.96
+                                                           e                 -          0.050           -               -           1.27            -
+                                                           s                 -              -          0.048           -              -           1.22
+                                                           y                 -              -          0.004           -              -           0.10
+
+                                                 Notes:
+                                                 1.  The maximum value of dimension D includes end flash.
+                                                 2.  Dimension E doesn't include resin fins.
+                                                 3.  Dimension e 1 is for PC Board surface mount pad pitch design
+                                                      reference only.
+                                                 4.  Dimension S includes end flash.
+
+
+
+
+
+
+
+
+
+
+                                                                                                   13
+
+--- PDF page 14 ---
+                                                                                                                                                                              UM61512A
+
+
+Package Information
+
+SOJ 32/32LD (400mil BODY) Outline Dimensions                                                                     unit: inches/mm
+
+
+                                           D                                                                                                  b
+                32                                                    17                                                                     b1
+
+
+
+
+
+                                                                                                                      F
+                                                                                                                           F                    BASE METAL
+                                                                                                            DETAIL "A"                         WITH PLATING
+
+                                                                                                                                        SECTION F-F
+
+
+                 1                                                    16
+
+
+
+                                                                                                                         DETAIL "A"
+
+
+                                                                                                                                    E
+                                             b2
+
+
+
+
+
+   y               S                                      e                                                                                                          E2y
+                                          b
+
+                  SEATING PLANE                                                   0.004   y
+
+
+
+
+
+                                                      Symbol        Dimensions in inches          Dimensions in mm
+                                                                         Min.       Nom.      Max.       Min.       Nom.      Max.
+                                                           A             0.131      0.138      0.145        3.35        3.51        3.68
+                                                          A1            0.082           -              -           2.08            -              -
+                                                          A2            0.105      0.110      0.115        2.67        2.79        2.91
+                                                           b             0.016      0.018      0.020        0.41        0.46        0.51
+                                                          b2            0.026      0.028      0.032        0.66        0.71        0.81
+                                                           c             0.006      0.008      0.011        0.15        0.20        0.28
+                                                           D             0.820      0.825      0.830       20.83      20.96      21.08
+                                                           E             0.435      0.440      0.445       11.05      11.18`      11.31
+                                                          E1            0.395      0.400      0.405       10.03      10.16      10.29
+                                                          E2            0.360      0.370      0.380        9.15        9.40        9.65
+                                                           e                 -          0.050           -               -           1.27            -
+                                                           S                 -              -          0.045           -              -           1.14
+                                                           y                 -              -          0.004           -              -           0.10
+
+                                                 Notes:
+                                                 1.  Dimension D includes end flash.
+                                                 2.  Dimension E doesn't include resin fins.
+                                                 3.  Dimension E1 is for PC Board surface mount pad pitch design
+                                                      reference only.
+                                                 4.  Dimension S includes end flash.
+
+
+
+
+
+
+
+
+
+                                                                                                   14
+
+--- PDF page 15 ---
+                                                                                                                                                                            UM61512A
+
+
+Package Information
+
+SOP (W.B.) 32L Outline Dimensions                                                                                              unit: inches/mm
+
+
+
+           32                                                          17
+                                                                                                                                                      e1
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                             L
+
+            1                                                   b      16
+                                                                                                                                   Detail F
+
+                                          D                                                                                               e1
+
+
+
+
+
+
+               s                                              e                                                                                                         LE
+
+        Seating  Plane                    y                                                                          See Detail F
+
+
+                                                     Symbol        Dimensions in inches          Dimensions in mm
+                                                          A                       0.118 Max.                             3.00 Max.
+                                                         A1                       0.004 Min.                              0.10 Min.
+                                                         A2                     0.106¡Ó0.005                           2.69¡Ó0.13
+                                                          b                       0.016 +0.004                           0.41 +0.10
+                                                                                          -0.002                                    -0.05
+                                                          c                        0.008 +0.004                           0.20 +0.10
+                                                                                          -0.002                                    -0.05
+                                                          D             0.805 Typ. (0.820 Max.)        20.45 Typ. (20.83 Max.)
+                                                          E                      0.445¡Ó0.010                          11.30¡Ó0.25
+                                                          e                     0.050 ¡Ó0.006                          1.27¡Ó0.15
+                                                          e1                      0.525 NOM.                          13.34 NOM.
+                                                         HE                     0.556¡Ó0.010                          14.12¡Ó0.25
+                                                          L                      0.031¡Ó0.008                           0.79¡Ó0.20
+                                                         LE                     0.055¡Ó0.008                           1.40¡Ó0.20
+                                                          S                       0.044 Max.                             1.12 Max.
+                                                          y                       0.004 Max.                             0.10 Max.
+                                                          θ                           0° ~ 10°                                  0° ~ 10°
+
+                                                Notes:
+                                                1.  The maximum value of dimension D includes end flash.
+                                                2.  Dimension E does not include resin fins.
+                                                3.  Dimension e 1 is for PC Board surface mount pad pitch design
+                                                     reference only.
+                                                4.  Dimension S includes end flash.
+
+
+
+
+
+
+
+
+                                                                                                  15
+
+--- PDF page 16 ---
+                                                                                                                                                                         UM61512A
+
+
+Package Information
+
+TSOP 32L TYPE I (8 X 20mm) Outline Dimensions                                                                   unit: inches/mm
+
+
+
+
+                                                             D
+
+
+
+
+
+
+                                                                                                                                                    12.0¢X
+
+
+
+
+                                                                                                                                   GAUGE PLANE
+
+                                                                                                                                                                      £c
+                                                                                                                                                            L
+
+
+                                                                                                                                                          LE
+                                                             HD
+                                                                                                                                                Detail "A"
+                                                                                                      Detail "A"
+
+
+
+
+
+                       y                                                                                                         S                        b
+                                                                                                                                                                 0.10(0.004)M
+
+
+
+
+
+
+                                                    Symbol        Dimensions in inches          Dimensions in mm
+                                                         A                       0.047 Max.                             1.20 Max.
+                                                        A1                     0.004¡Ó0.002                           0.10¡Ó0.05
+                                                        A2                     0.039¡Ó0.002                           1.00¡Ó0.05
+                                                         b                      0.008¡Ó0.001                           0.20¡Ó0.03
+                                                         c                      0.006¡Ó0.001                           0.15¡Ó0.02
+                                                         D                      0.724¡Ó0.004                          18.40¡Ó0.10
+                                                         E                      0.315¡Ó0.004                           8.00¡Ó0.10
+                                                         e                       0.020 TYP.                             0.50 TYP.
+                                                        HD                     0.787¡Ó0.007                          20.00¡Ó0.20
+                                                         L                      0.020¡Ó0.004                           0.50¡Ó0.10
+                                                        LE                      0.031 TYP.                             0.80 TYP.
+                                                         S                      0.0167 TYP.                           0.425 TYP.
+                                                         Y                       0.004 Max.                             0.10 Max.
+                                                         θ                            0° ~ 6°                                    0° ~ 6°
+
+                                                Notes:
+                                                1.  The maximum value of dimension D includes end flash.
+                                                2.  Dimension E does not include resin fins.
+                                                3.  Dimension e 1 is for PC Board surface mount pad pitch design
+                                                    reference only.
+                                                4.  Dimension S includes end flash.
+
+
+
+
+
+
+
+
+                                                                                                 16

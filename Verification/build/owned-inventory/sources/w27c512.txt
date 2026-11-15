@@ -1,0 +1,1260 @@
+
+--- PDF page 1 ---
+                                                                                                                                     W27C512
+
+
+                      64K  ×  8 ELECTRICALLY ERASABLE EPROM
+
+Table of Contents-
+
+1.         GENERAL DESCRIPTION ......................................................................................................... 2
+2.         FEATURES ................................................................................................................................. 2
+3.         PIN CONFIGURATIONS ............................................................................................................ 3
+4.         BLOCK DIAGRAM ...................................................................................................................... 4
+5.         PIN DESCRIPTION..................................................................................................................... 4
+6.         FUNCTIONAL DESCRIPTION ................................................................................................... 5
+7.         TABLE OF OPERATING MODES .............................................................................................. 7
+8.         DC CHARACTERISTICS............................................................................................................ 8
+9.         CAPACITANCE........................................................................................................................... 9
+10.       AC CHARACTERISTICS ............................................................................................................ 9
+11.       READ OPERATION DC CHARACTERISTICS ........................................................................ 10
+12.       READ OPERATION AC CHARACTERISTICS......................................................................... 10
+13.       DC PROGRAMMING CHARACTERISTICS............................................................................. 11
+14.       AC PROGRAMMING/ERASE CHARACTERISTICS................................................................ 12
+15.       TIMING WAVEFORMS............................................................................................................. 13
+16.       SMART PROGRAMMING ALGORITHM 1............................................................................... 15
+17.       SMART PROGRAMMING ALGORITHM 2............................................................................... 16
+18.       SMART ERASE ALGORITHM.................................................................................................. 17
+19.       ORDERING INFORMATION .................................................................................................... 18
+20.       PACKAGE DIMENSIONS......................................................................................................... 19
+21.       VERSION HISTORY................................................................................................................. 20
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                           Publication Release Date: January 9, 2006
+                                                                                - 1 -                                                                 Revision A6
+
+--- PDF page 2 ---
+                                                                                                  W27C512
+
+
+
+1. GENERAL DESCRIPTION
+The W27C512 is a high speed, low power Electrically Erasable and Programmable Read Only
+Memory organized as 65536 × 8 bits that operates on a single 5 volt power supply. The W27C512
+provides an electrical chip erase function.
+
+
+2. FEATURES
+y      High speed access time: 45/70/90/120 nS (max.)
+y      Read operating current: 30 mA (max.)
+y      Erase/Programming operating current: 30 mA (max.)
+y      Standby current: 1 mA (max.)
+y      Single 5V power supply
+y      +14V erase/+12V programming voltage
+y      Fully static operation
+y      All inputs and outputs directly TTL/CMOS compatible
+y Three-state outputs
+y      Available packages: 28-pin 600 mil DIP, 330 mil 32-pin PLCC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                        - 2 -
+
+--- PDF page 3 ---
+                                                                                                                  W27C512
+
+
+
+3. PIN CONFIGURATIONS
+
+
+
+
+
+                    A15                   1                                     28                    V  CC
+                    A12                    2                                    27                    A14
+                       A7                  3                                    26                    A13
+                      A6                   4                                    25                    A8
+                      A5                   5                                    24                    A9
+                      A4                   6            28-pin                  23                    A11
+                      A3                   7               DIP                  22                   OE/Vpp
+                      A2                   8                                              21          A10
+                      A1                  9                                     20                    CE
+                      A0                  10                                    19                   Q7
+                      Q0                  11                                    18                    Q6
+                      Q1                  12                                    17                    Q5
+                      Q2                  13                                     16                   Q4
+                 GND                      14                                           15                       Q3
+
+
+
+                                             A       A              V       A       A
+                                     A       1       1      N       C       1       1
+                                     7       2       5      C       C       4       3
+
+
+                                      4 321 32        31        3
+        A6                   5                                                       0      29                A8
+        A5                   6                                                             28                  A9
+        A4                   7                                                             27                 NCA11
+        A3                   8                          32-pin                             26
+        A2                   9                          PLCC                               25                 OE/Vpp
+        A1                   10                                                            24                 A10
+        A0                  11                                                             23                 CE
+        NC                   12              1              1       1                     22                   Q7
+        Q0                   13      14      5        16    7       8         19        20 21                 Q6
+
+
+                                     Q        Q               N        Q       Q       QG
+                                     1         2                C        3       4        5N
+                                                     D
+
+
+
+
+
+
+
+
+
+                                                                                                      Publication Release Date: January 9, 2006
+                                                                    - 3 -                                                                 Revision A6
+
+--- PDF page 4 ---
+                                                               W27C512
+
+
+
+4. BLOCK DIAGRAM
+
+                                                               Q0.
+              CE        CONTROL                                  OUTPUT
+                                              BUFFER            .
+         OE/V  PP                                              Q7
+
+
+
+
+              A0
+               .
+                        DECODER                                    COREARRAY
+               .
+             A15
+
+
+              V  CC
+
+             GND
+
+
+
+5. PIN DESCRIPTION
+
+        SYMBOL DESCRIPTION
+        A0−A15          Address Inputs
+        Q0−     Q7      Data Inputs/Outputs
+          CE            Chip Enable
+        OE/VPP          Output Enable, Program/Erase Supply Voltage
+          VCC Power Supply
+         GND Ground
+          NC No Connection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    - 4 -
+
+--- PDF page 5 ---
+                                                                                                       W27C512
+
+
+
+6. FUNCTIONAL DESCRIPTION
+
+Read Mode
+Like conventional UVEPROMs, the W27C512 has two control functions, both of which produce data at
+the outputs.    CE is for power control and chip select.           OE/VPP controls the output buffer to gate data
+to the output pins. When addresses are stable, the address access time (TACC) is equal to the delay
+from   CE  to output (TCE), and data are available at the outputs TOE after the falling edge of                   OE/VPP,
+if TACC and TCE timings are met.
+
+Erase Mode
+The erase operation is the only way to change data from "0" to "1." Unlike conventional UVEPROMs,
+which use ultraviolet light to erase the contents of the entire chip (a procedure that requires up to half
+an hour), the W27C512 uses electrical erasure. Generally, the chip can be erased within 100 mS by
+using an EPROM writer with a special erase algorithm.
+Erase mode is entered when           OE/VPP is raised to VPE (14V), VCC = VCE (5V), A9 = VPE (14V), A0
+low, and all other address pins low and data input pins high. Pulsing CE low starts the erase
+operation.
+
+Erase Verify Mode
+After an erase operation, all of the bytes in the chip must be verified to check whether they have been
+successfully erased to "1" or not. The erase verify mode ensures a substantial erase margin if V                                                                                                     CC =
+VCE (3.75V),    CE low, and OE/VPP low.
+
+Program Mode
+Programming is performed exactly as it is in conventional UVEPROMs, and programming is the only
+way to change cell data from "1" to "0." The program mode is entered when                     OE/VPP is raised to VPP
+(12V), VCC = VCP (5V), the address pins equal the desired addresses, and the input pins equal the
+desired inputs. Pulsing      CE  low starts the programming operation.
+
+Program Verify Mode
+All of the bytes in the chip must be verified to check whether they have been successfully
+programmed with the desired data or not. Hence, after each byte is programmed, a program verify
+operation should be performed. The program verify mode automatically ensures a substantial program
+margin. This mode will be entered after the program operation if               OE/VPP low and       CE low.
+
+Erase/Program Inhibit
+Erase or program inhibit mode allows parallel erasing or programming of multiple chips with different
+data. When     CE high, erasing or programming of non-target chips is inhibited, so that except for the
+CE and OE/VPP pins, the W27C512 may have common inputs.
+
+
+
+
+
+
+                                                                            Publication Release Date: January 9, 2006
+                                                             - 5 -                                                                 Revision A6
+
+--- PDF page 6 ---
+                                                                                                    W27C512
+
+
+
+Standby Mode
+The standby mode significantly reduces VCC current. This mode is entered when                   CE  high. In standby
+mode, all outputs are in a high impedance state, independent of             OE/VPP.
+
+Two-line Output Control
+Since EPROMs are often used in large memory arrays, the W27C512 provides two control inputs for
+multiple memory connections. Two-line control provides for lowest possible memory power dissipation
+and ensures that data bus contention will not occur.
+
+System Considerations
+An EPROM's power switching characteristics require careful device decoupling. System designers are
+interested in three supply current issues: standby current levels (ISB), active current levels (ICC), and
+transient current peaks produced by the falling and rising edges of             CE. Transient current magnitudes
+depend on the device output's capacitive and inductive loading. Two-line control and proper
+decoupling capacitor selection will suppress transient voltage peaks. Each device should have a 0.1 μ
+F ceramic capacitor connected between its VCC and GND. This high frequency, low inherent-
+inductance capacitor should be placed as close as possible to the device. Additionally, for every eight
+devices, a 4.7 μF electrolytic capacitor should be placed at the array's power supply connection
+between VCC and GND. The bulk capacitor will overcome voltage slumps caused by PC board trace
+inductances.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                          - 6 -
+
+--- PDF page 7 ---
+                                                       W27C512
+
+
+
+7.   TABLE OF OPERATING MODES
+(VPP = 12V, VPE = 14V, VHH = 12V, VCP = 5V, VCE = 5V, X = VIH or VIL)
+
+         MODE PINS
+                          CE      OE/VPP   A0 A9 VCC OUTPUTS
+Read VIL VIL X X VCC DOUT
+Output Disable            VIL VIH X X VCC High Z
+Standby (TTL)             VIH X X X VCC High Z
+Standby (CMOS)         VCC ±0.3V    X      X    X   VCC High Z
+Program VIL                        VPP X X VCP DIN
+Program Verify            VIL VIL X X VCC DOUT
+Program Inhibit           VIH      VPP X X VCP High Z
+Erase VIL                          VPE VIL VPE      VCE DIH
+Erase Verify              VIL VIL X X 3.75 DOUT
+Erase Inhibit             VIH      VPE X X VCE High Z
+Product Identifier-manufacturer VIL VIL VIL VHH     VCC DA (Hex)
+Product Identifier-device VIL VIL VIH VHH           VCC 08 (Hex)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                      Publication Release Date: January 9, 2006
+                                - 7 -                                                                 Revision A6
+
+--- PDF page 8 ---
+                                                                    W27C512
+
+
+
+8. DC CHARACTERISTICS
+Absolute Maximum Ratings
+
+                    PARAMETER RATING UNIT
+Operation Temperature                                     0 to +70         °C
+Storage Temperature                                     -65 to +125        °C
+Voltage on all Pins with Respect to Ground Except OE/VPP, -0.5 to VCC +0.5  V
+A9 and VCC Pins
+Voltage on OE/VPP Pin with Respect to Ground            -0.5 to +14.5       V
+Voltage on A9 Pin with Respect to Ground                -0.5 to +14.5       V
+Voltage VCC Pin with Respect to Ground                   -0.5 to +7         V
+
+Note: Exposure to conditions beyond those listed under Absolute Maximum Ratings may adversely affect the life and reliability
+          of the device.
+
+
+DC Erase Characteristics
+(TA = 25° C ±      5°  C, VCC = 5.0V ±5%)
+
+       PARAMETER SYM.                 CONDITIONS              LIMITS         UNIT
+                                                        MIN. TYP. MAX.
+ Input Load Current         ILI VIN = VIL or VIH -10 - 10 μA
+ VCC Erase Current          ICP  CE = VIL, OE/VPP =      - - 30 mA
+                                 VPE
+ VPP Erase Current          IPP  CE = VIL,               - - 30 mA
+                                 OE/VPP = VPE
+ Input Low Voltage          VIL - -0.3 - 0.8 V
+ Input High Voltage         VIH -                        2.4 - 5.5 V
+ Output Low Voltage (Verify)   VOLIOL = 2.1 mA           -      -     0.45    V
+ Output High Voltage (Verify)   VOHIOH = -0.4 mA         2.4      -    -      -
+ A9 Erase Voltage           VID - 13.75                         14 14.25 V
+ VPP Erase Voltage          VPE            - 13.75              14 14.25 V
+ VCC Supply Voltage (Erase)   VCE          - 4.75 5.0 5.25 V
+ VCC Supply Voltage        VCE             - 3.5 3.75 4.0 V
+ (Erase Verify)
+
+Note: VCC must be applied simultaneously or before VPP and removed simultaneously or after VPP.
+
+
+
+
+
+
+
+                                       - 8 -
+
+--- PDF page 9 ---
+                                                                                                          W27C512
+
+
+
+9. CAPACITANCE
+(VCC = 5V, TA = 25°  C, f = 1 MHz)
+           PARAMETER SYMBOL                                     CONDITIONS                     MAX. UNIT
+ Input Capacitance                          CIN VIN = 0V                                         6                 pF
+ Output Capacitance                         COUT VOUT = 0V                                       12                pF
+
+
+10. AC CHARACTERISTICS
+AC Test Conditions
+                   PARAMETER                                                       CONDITIONS
+                                                                   45/70 NS                           90/120 NS
+  Input Pulse Levels                                     0 to 3.0V                          0.45V to 2.4V
+  Input Rise and Fall Times                              5 nS                               10 nS
+  Input and Output Timing Reference Level                1.5V/1.5V                          0.8V/2.0V
+  Output Load                                            CL = 30 pF,                        CL = 100 pF,
+                                                         IOH/IOL = -0.4 mA/2.1 mA           IOH/IOL = -0.4 mA/2.1 mA
+
+AC Test Load and Waveforms
+
+
+                                                        +1.3V
+
+                                                               (IN914)
+
+
+
+
+
+                                                              3.3K ohm
+
+
+
+
+
+                    DOUT
+
+
+                                                                100 pF for 90/120 nS (Including Jig and Scope)
+                                                                 30 pF for 45/70 nS (Including Jig and Scope)
+
+
+
+                                        Input                               Output
+
+                                                     Test Points                     Test Points
+                                 2.4V
+                 For 90/120 nS                                    2.0V       2.0V
+                                 0.45V                            0.8V       0.8V
+
+                                         Input                               Output
+
+                                                      Test Point                      Test Point
+                                  3.0V
+                  For 45/70 nS                                1.5V               1.5V
+                                   0V
+
+
+
+
+                                                                                                   Publication Release Date: January 9, 2006
+                                                              - 9 -                                                                 Revision A6
+
+--- PDF page 10 ---
+                                                                  W27C512
+
+
+
+11. READ OPERATION DC CHARACTERISTICS
+(VCC = 5.0V ±5%, TA = 0 to 70° C)
+
+     PARAMETER SYM. CONDITIONS                            LIMITS          UNIT
+                                                   MIN. TYP.      MAX.
+ Input Load Current    ILI VIN = 0V to VCC -5 - 5 μA
+ Output Leakage Current ILO VOUT = 0V to VCC -10 - 10 μA
+ Standby VCC Current   ISB   CE = VIH               - -            1.0 mA
+ (TTL input)
+ Standby VCC Current   ISB1  CE = VCC ±0.3V         - 5 100 μA
+ (CMOS input)
+ VCC Operating Current ICC   CE = VIL               - -            30 mA
+                             IOUT = 0 mA, f = 5 MHz
+ Input Low Voltage     VIL - -0.3 - 0.8 V
+ Input High Voltage    VIH - 2.2 - VCC +0.5 V
+ Output Low Voltage    VOL IOL = 2.1 mA             -      -      0.45     V
+ Output High Voltage   VOH IOH = -0.4 mA           2.4     -        -      V
+
+
+12. READ OPERATION AC CHARACTERISTICS
+(VCC = 5.0V ±5%,  TA = 0 to 70° C)
+
+        PARAMETER SYM.          W27C512-45W27C512-70 W27C512-90 W27C512-12UNIT
+                                MIN. MAX. MIN. MAX.  MIN. MAX. MIN. MAX.
+ Read Cycle Time          TRC    45 - 70 - 90 - 120 -                      nS
+ Chip Enable Access Time  TCE    - 45 - 70 - 90 - 120 nS
+ Address Access Time       TACC  - 45 - 70 - 90 - 120 nS
+ Output Enable Access Time TOE   - 20 - 30 - 40 - 55 nS
+
+ OE/VPP High to High-Z Output TDF - 20 - 30 - 30 - 30 nS
+ Output Hold from Address Change TOH 0 - 0 - 0 - 0 - nS
+
+Note: VCC must be applied simultaneously or before VPP and removed simultaneously or after VPP.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                     - 10 -
+
+--- PDF page 11 ---
+                                                                      W27C512
+
+
+
+13. DC PROGRAMMING CHARACTERISTICS
+
+(VCC = 5.0V ±5%, TA = 25° C ±      5°  C)
+         PARAMETER SYM.                  CONDITIONS            LIMITS         UNIT
+                                                         MIN.  TYP. MAX.
+ Input Load Current             ILI VIN = VIL or VIH -10 - 10 μA
+ VCC Program Current            ICP   CE  = VIL,          - - 30 mA
+                                      OE / VPP = VPP
+ VPP Program Current            IPP   CE  = VIL,          - - 30 mA
+                                      OE / VPP = VPP
+ Input Low Voltage              VIL - -0.3 - 0.8 V
+ Input High Voltage             VIH - 2.4 - 5.5 V
+ Output Low Voltage (Verify)    VOL     IOL = 2.1 mA      -      -     0.45     V
+ Output High Voltage (Verify)  VOH      IOH = -0.4 mA    2.4     -       -      V
+ A9 Silicon I.D. Voltage        VID - 11.5                      12.0 12.5 V
+ VPP Program Voltage           VPP           - 11.75            12.0 12.25 V
+ VCC Supply Voltage (Program)  VCP           - 4.75             5.0 5.25 V
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                          Publication Release Date: January 9, 2006
+                                         - 11 -                                                               Revision A6
+
+--- PDF page 12 ---
+                                                                       W27C512
+
+
+
+14. AC PROGRAMMING/ERASE CHARACTERISTICS
+
+(VCC = 5.0V ±5%, TA = 25° C ±      5°  C)
+                   PARAMETER SYM. LIMITS                                        UNIT
+                                                           MIN.    TYP. MAX.
+ OE /VPP Pulse Rise Time                            TPRT    50 -           - nS
+ Data Setup Time                                    TDS     2.0 -          - μS
+ CE   Program Pulse Width                          TPWP     95 100 105 μS
+ CE   Erase Pulse Width                            TPWE     95 100 105 mS
+ Data Hold Time                                     TDH     2.0 -          - μS
+ OE /VPP Setup Time                                TOES     2.0 -          - μS
+ OE /VPP Hold Time                                 TOEH     2.0 -          - μS
+ Data Valid from CE                                 TDV1    25 -           1 μS
+ Data Valid from Address Change                     TDV2    25 -           1 μS
+ CE   High to Output High Z                         TDFP     0 - 130 nS
+ Address Setup Time                                 TAS     2.0 -          - μS
+ Address Hold Time                                  TAH      0 - - μS
+ Address Hold Time after CE High (Erase)           TAHC     2.0 -          - μS
+ OE /VPP Valid after CE High                        TVS     2.0 -          - μS
+ OE /VPP Recovery Time                              TVR     2.0 -          - μS
+ Address Access Time During Erase Verify (VCC = 3.75V)TACV   - - 250 nS
+ Output Enable Access Time during Erase Verify     TOEV      - - 150 nS
+ (VCC = 3.75V)
+
+Note: VCC must be applied simultaneously or before VPP and removed simultaneously or after VPP.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                         - 12 -
+
+--- PDF page 13 ---
+                                                                                                                                                                           W27C512
+
+
+
+15. TIMING WAVEFORMS
+AC Read Waveform
+
+
+
+
+
+
+                     VIH
+      Address        VIL                                                                    Address  Valid
+
+
+                     VIH
+              CE     VIL
+                     VIH                                                                           TCE
+
+       OE/Vpp                                                                                                                                                                  TDF
+                     VIL                                                                                  TOE
+                                             High Z                                      TACC                                                                                    TOH
+       Outputs                                                                                                                                       Valid Output
+                                                                                                                                                                                            High Z
+
+
+
+
+
+
+
+
+
+
+Erase Waveform
+
+
+
+
+
+                                         Read            Read
+                                         Company         Device                                                                                                     Blank Check
+                                         SID             SID                                                             Erase Verify                               Read Verify
+                                                                               Chip Erase
+                                              A9 = 12.0V                       A9 = 14.0V
+
+
+                                           Others = VIL
+  Address            VIH                  A0 = VI       A0 = VIH         Others = VIL
+                                                L     Others = VIL                                     Address Valid               Address Valid                             Address Valid                  Address Valid
+                     VIL                TACC         TACC              TAS                    TAHC           TACV
+                                                                                                                =250 nS                     =250 nSTACV                                      TACC
+
+      Data                                     DA              08                 Data All One                     DOUT                      DOUT                                             DOUT
+
+
+                                                                     TDS                      TDH
+        Vcc          5V                                                                             TVCS
+                                                                                                                              3.75V
+
+                    14.0V                                              TOES
+
+                                    TOE                 TOE                                                 TOEV   = 150 nS
+                     VIH                                                                                                                                 VIH            TOE
+  OE/Vpp                                                                                           VIH
+                     VIL                                                                  TOEH
+                     VIH               TCE                           TVSTPRT
+                                                                                                                       Always = VIL
+        CE           VIL
+
+                                                                                  TPWE            TVR
+
+
+
+
+
+
+
+
+                                                                                                                    Publication Release Date: January 9, 2006
+                                                                                                     - 13 -                                                               Revision A6
+
+--- PDF page 14 ---
+                                                                                                                                                                            W27C512
+
+
+
+
+
+Timing Waveforms, continued
+Programming Waveform
+
+
+
+
+
+
+                                                                            Program                                                      Program                            Read
+                                                                                                                                  Verify                                    Verify
+
+
+
+                   VIH
+    Address                                  Address Stable                                                                                                                      AddressAddressAddressAddress
+                                                                                Stable                 Stable          Valid                                   Valid
+                   VIL                                                                                                                 TOH      TDFP
+                                            TAS                          TAH        TAS                            TAH
+                   VIH
+        Data                                    Data In Stable                       Data In                               Data                                            Data
+                   VIL                                                               Stable                                Out                                            Out
+
+                                         TDS                         TDH           TDS                    TDH             TDV1          TDV2                   TACC            TOH
+
+                  12.0V
+
+    OE/Vpp         VIH
+                                            TOES                                                       TOEH      VIL
+
+                   VIL              TPRT
+
+                                                                                                             TVR                                                  TOE
+                                                         TPWP
+                   VIH
+          CE                                                                                                          VIL                                       TCE
+
+                   VIL
+
+                                                                                                                      CE should not be toggled
+                                                                                                                      during program verify period
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                  - 14 -
+
+--- PDF page 15 ---
+                                                                                                                            W27C512
+
+
+
+16. SMART PROGRAMMING ALGORITHM 1
+
+
+
+                                                                    Start
+
+
+                                                         Address = First Location
+
+
+                                                                Vcc = 5.0V
+                                                               OE/Vpp = 12V
+
+
+
+                                                      Program One 100   S Pulseμ
+
+
+
+
+                     Increment             No                       Last
+                     Address                                      Address?
+
+
+                                                                         Yes
+
+                                                         Address = First Location
+
+
+                    Increment                                       X = 0
+                     Address
+                              No
+
+                        Last                Pass                   Verify                  Fail                     Increment X
+                     Address?                                       Byte
+
+
+
+                                                       Program One 100   S Pulse                        No           X = 25 ?
+                                                                           μ
+                            Yes
+
+
+                                                                Vcc = 5.0V
+                                                                OE/Vpp = VIL
+                                                                                                                           Yes
+
+
+
+                                                                  Compare
+                                                                  All Bytes to                  Fail                 Device
+                                                                   Original                                           Failed
+                                                                     Data
+
+
+                                                                          Pass
+
+                                                                   Device
+                                                                   Passed
+
+
+
+
+
+                                                                                                        Publication Release Date: January 9, 2006
+                                                                          - 15 -                                                               Revision A6
+
+--- PDF page 16 ---
+                                                                                                               W27C512
+
+
+
+17. SMART PROGRAMMING ALGORITHM 2
+
+
+
+
+
+                                                                 Start
+
+
+                                                        Address = First Location
+
+
+                                                              Vcc = 5.0V
+
+
+                                                                 X = 0
+
+
+
+                                                     Program One 100   S Pulse   μ
+                                                             OE/V     = 12VPP
+
+
+                                                               Increment X
+
+
+                                                                X = 25?        Yes
+
+                                                                     No
+
+                                           Fail              Verify One Byte            Verify One Byte      Fail
+
+                                                             OE/V    = VPP        IL     OE/V    = VPP        IL
+
+                                                                      Pass                       Pass
+
+                       Increment                   No
+                        Address                              Last Address
+                                                                       ?
+
+                                                                       Yes
+
+
+                                                               Compare                Fail
+                                                              All Bytes to
+                                                                Original
+                                                                 Data
+
+                                                                       Pass
+
+                                                                 Device                                        Device
+                                                                 Passed                                        Failed
+
+
+
+
+
+
+
+
+
+
+                                                               - 16 -
+
+--- PDF page 17 ---
+                                                                                                                             W27C512
+
+
+
+18. SMART ERASE ALGORITHM
+
+
+
+                                                             Start
+
+
+                                                             X = 0
+
+
+                                                           Vcc = 5V
+                                                        OE/Vpp = 14V
+
+
+
+                                                    A9 = 14V; A0 = VIL
+
+
+                                                Chip Erase 100 mS Pulse
+
+
+                                                 Address = First Location
+
+
+                                                         Increment X
+
+
+                                                         Vcc = 3.75V
+                                                       OE/Vpp = VIL
+
+                                                                                                            No
+                                                             Erase         Fail
+                                                             Verify                                                       X = 20 ?
+
+                                                                  Pass
+                                               No                                                          Yes
+                            Increment                     Last
+                            Address                       Address?
+
+                                                                 Yes
+
+                                                          Vcc = 5V
+                                                        OE/Vpp = VIL
+
+
+
+                                                          Compare                  Fail
+                                                         All Bytes to
+                                                         FFs (HEX)
+
+                                                                  Pass
+                                                           Pass                                              Fail
+                                                           Device                                            Device
+
+
+
+
+
+                                                                                                        Publication Release Date: January 9, 2006
+                                                                          - 17 -                                                               Revision A6
+
+--- PDF page 18 ---
+                                                                             W27C512
+
+
+
+19. ORDERING INFORMATION
+
+                      ACCESS        OPERATING          STANDBY
+     PART NO.           TIME         CURRENT           CURRENT              PACKAGE
+                        (nS)         MAX. (mA)         MAX. (μA)
+ W27C512-45              45              30               100         600 mil DIP
+ W27C512-70              70              30               100         600 mil DIP
+ W27C512-90              90              30               100         600 mil DIP
+ W27C512-12             120              30               100         600 mil DIP
+ W27C512P-45 45                          30               100 32-pin PLCC
+ W27C512P-70 70                          30               100 32-pin PLCC
+ W27C512P-90 90                          30               100 32-pin PLCC
+ W27C512P-12 120                         30               100 32-pin PLCC
+ W27C512-45Z             45              30               100         600 mil DIP Lead Free
+ W27C512P-45Z            45              30               100         32-pin PLCC Lead Free
+
+Notes:
+1. Winbond reserves the right to make changes to its products without prior notice.
+2. Purchasers are responsible for performing appropriate quality assurance testing on products intended for use in applications
+    where personal injury might occur as a consequence of product failure.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            - 18 -
+
+--- PDF page 19 ---
+                                                                                                                                                                                                                               W27C512
+
+
+
+20. PACKAGE DIMENSIONS
+28-pin P-DIP
+
+
+
+
+                                                                                                                                                                                                       Dimension in Inches      Dimension in mm
+                                                                                                                                                                                         Symbol    Min.   Nom.   Max.                         Max.Min.Nom.
+                                                                                                                                                                                            A                             0.210                                5.33
+                                                                                                                                                                                            A1        0.010                          0.25
+                                                                                                                                                                                            A2        0.150     0.155     0.160     3.81      3.94      4.06
+                                                                                                                                                                                            B         0.016     0.018     0.022     0.41      0.46      0.56
+                                                                                                                                                                                            B 1       0.058     0.060                                 1.520.0641.471.63
+                                                                                                                                                                                            c         0.008     0.010     0.014      0.20     0.25      0.36
+
+                                                       D                                                                                                                                    D                   1.460     1.470                  37.08     37.34
+
+                    28                                                                   15                                                                                                 E          0.590                  0.6100.60014.99                  15.4915.24
+                                                                                                                                                                                            E 1        0.540                  0.5500.545                  13.72                  13.9713.84
+                                                                                                                                                                                            e1         0.090     0.100     0.110     2.29       2.54       2.79
+                                                                                                                                                                                             L         0.120    0.130     0.140      3.05      3.30     3.56
+
+        E1                                                                                                                                                                                   a           0150                                            15
+                                                                                                                                                                                             eA        0.630                               16.00     16.510.6500.67017.02
+                                                                                                                                                                                             S                            0.090                                 2.29
+                                                                                                                                                                                       Notes:
+                     1                                                                   14
+                                                                                                                                                                                         1. Dimensions D Max. & S include mold flash or
+                       S                                                                                                                  E                                                  tie bar burrs.
+                                                                                                                                                                                         2. Dimension E1 does not include interlead flash.
+                                                                                                                                                                    c                    3. Dimensions D & E1 include mold mismatch and
+           A A2                                                                                A1      Base Plane                                                                            are determined at the mold parting line.
+                                                                                                                                                                                         4. Dimension B1 does not include dambar
+           L                                                                                           Seating Plane                                                                         protrusion/intrusion.
+
+                                                 B                                                                                                                                       5. Controlling dimension: Inches.
+                                                                   e1                                                  a                  eA                                             6. General appearance spec. should be based on
+                                                  B1                                                                                                                                         final visual inspection spec.
+
+
+
+
+32-pin PLCC
+
+
+
+                                                  HE
+
+                                                  E
+
+                              4                   1    32            30
+                                                                                                                                                                                        Dimension in Inches         Dimension in mm
+                                                                                                                                                                           Symbol    Min.   Nom.   Max.                         Max.Min.Nom.
+
+               5                                                                    29                                                                                        A                             0.140                          3.56
+                                                                                                                                                                              A1         0.020                        0.50
+                                                                                                                                                                              A2         0.105         0.1100.115     2.67                             2.932.80
+                                                                                                                                                                              b  1       0.026         0.0280.032     0.66                             0.810.71
+                                                                                                                                                                              b          0.016     0.018    0.022     0.41           0.46           0.56
+                                                                                                                                                                              c          0.008     0.010    0.014     0.20           0.25           0.35
+                                                                                                                                      GD
+                                                                                         DHD                                                                                  D         0.547      0.550    0.553     13.89         13.97        14.05
+                                                                                                                                                                              E         0.447      0.450    0.453     11.35         11.43        11.51
+                                                                                                                                                                              e         0.044                           0.0560.0501.12                             1.421.27
+                                                                                                                                                                             G D        0.490      0.510    0.530     12.45         12.95         13.46
+                                                                                                                                                                              G E       0.390      0.410    0.430      9.91         10.41         10.92
+
+             13                                                                     21                                                                                        H D       0.585      0.590    0.595     14.86         14.99         15.11
+                                                                                                                                                                              H E       0.485      0.490    0.495     12.32         12.45         12.57
+                                                                                                                                                                              L         0.075      0.090    0.095      1.91           2.29 2.41
+                             14                                                           20                                 c                                                y                             0.004                          0.10
+                                                                                                                                                                              θ            0                             10 0              10
+
+
+            L                                                                                                                                                           Notes:
+
+                                                                                       A2     A                                                                           1. Dimension D & E do not include interlead flash.
+                                                                                                                                                                          2. Dimension b  does not include dambar protrusion/intrusion.
+                                                                                                                                                                          3. Controlling dimension: Inches.
+               θ                        e                     b                        A1                                                                                4. General appearance spec. should be based on final visual
+              Seating Plane                            b1                                                                                                                    inspection spec.
+                                                GE                                           y
+
+
+
+
+                                                                                                                                 Publication Release Date: January 9, 2006
+                                                                                                                                    - 19 -                                                               Revision A6
+
+--- PDF page 20 ---
+                                                                                           W27C512
+
+
+
+21. VERSION HISTORY
+
+VERSION DATE                    PAGE                                DESCRIPTION
+    A1         Mar. 1998                   Initial Issued
+    A2         Sep. 1998           6      Correct Imput High Voltage (VIH) from 2.0 (min) to 2.2 (max)
+                                 4 , 6     Correct VCC from 5.0 ±10% to 5.0 ±5%
+    A3         Aug. 1999      1, 5, 6, 13  Add 45 nS bining
+       2, 3 Modify function description (VIL and VIH):
+                                           VIL → Low; VIH → High
+    A4         Nov. 1999           6       Typo correction
+    A5       April 14, 2005       15       Adding important notice
+    A6       Jan. 9, 2006         18       Ordering Information:Add
+                                           W27C512-45Z and W27C512P-45Z Lead free part
+
+                                           Important Notice
+Winbond products are not designed, intended, authorized or warranted for use as components
+in systems or equipment intended for surgical implantation, atomic energy control
+instruments, airplane or spaceship instruments, transportation instruments, traffic signal
+instruments, combustion control instruments, or for other applications intended to support or
+sustain life. Further more, Winbond products are not intended for applications wherein failure
+of Winbond products could result or lead to a situation wherein personal injury, death or
+severe property or environmental damage could occur.
+Winbond customers using or selling these products for use in such applications do so at their
+own risk and agree to fully indemnify Winbond for any damages resulting from such improper
+use or sales.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                    - 20 -

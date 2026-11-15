@@ -1,0 +1,123 @@
+{
+  "passed": true,
+  "checked_at": "2026-11-15T19:39:29.984498+00:00",
+  "base_url": "https://ruud-macbook-pro-2023.tail668f59.ts.net:8020/build/owned-inventory/",
+  "manifest_sha256": "df9fc0b3df724c05b12a8b0bf7f3facd534ffc822cc4e9d756625f4af2e0b8fe",
+  "files_checked": 19,
+  "files": [
+    {
+      "file": "DM-02-BOM-owned-stock-update.xlsx",
+      "sha256": "529580a40af2f71134d984e5f2cbb81ddec338ff6a6bffa2a60b322d5d6336a2",
+      "bytes": 81783,
+      "matched": true
+    },
+    {
+      "file": "assessment.json",
+      "sha256": "b339fcb840d7c2b9465524fb31274bc1a293af53b807f46f1d1d0383f6d86494",
+      "bytes": 5927,
+      "matched": true
+    },
+    {
+      "file": "browser_check.cjs",
+      "sha256": "81358934dda5441f8cc7a5919e099bbb5f2437899e05338543cc3953dc8fdf17",
+      "bytes": 2095,
+      "matched": true
+    },
+    {
+      "file": "fetch_sources.py",
+      "sha256": "4e5d748c54451dc04663d518de432eaf89a700b347d940882ffbec6a8c4ce619",
+      "bytes": 1888,
+      "matched": true
+    },
+    {
+      "file": "index.html",
+      "sha256": "ca7b9298979b84b8ba2377d685882a67f828365feb3e9c1d74c73421ee94269a",
+      "bytes": 7018,
+      "matched": true
+    },
+    {
+      "file": "sources/m27c1024-source.json",
+      "sha256": "77cd1efeb0eb14dbbaae8e49a55202b63e41424855d3921975a541fcdb3d6a35",
+      "bytes": 483,
+      "matched": true
+    },
+    {
+      "file": "sources/m27c1024.pdf",
+      "sha256": "229d461b211eebf9bb0a0888f0a60a688ab89fed1aae1f109cedca618d7dccc2",
+      "bytes": 105385,
+      "matched": true
+    },
+    {
+      "file": "sources/m27c1024.txt",
+      "sha256": "724410ec1d2d923a95a6f9caf4ebd4a59070d67a48e0bc69a3c50aa3d5f5614e",
+      "bytes": 56628,
+      "matched": true
+    },
+    {
+      "file": "sources/um61512a-source.json",
+      "sha256": "9f9a57630bee34d4741263a3dc8c45967de403a3037e8c8a0963ef2314dc8fac",
+      "bytes": 506,
+      "matched": true
+    },
+    {
+      "file": "sources/um61512a.pdf",
+      "sha256": "16ca419ec211de799b6213efa768174c68128466ec3236c0869a777a3fa6f4db",
+      "bytes": 170007,
+      "matched": true
+    },
+    {
+      "file": "sources/um61512a.txt",
+      "sha256": "5c75b0240d2722e56715c7cacf37d688b536f517f52f99528b2b411d91c390f7",
+      "bytes": 56690,
+      "matched": true
+    },
+    {
+      "file": "sources/w27c512-source.json",
+      "sha256": "cb7e4d458e09db98328d2af2a6793341a4de66dee6a7cab64e33e18e3a76a9dd",
+      "bytes": 503,
+      "matched": true
+    },
+    {
+      "file": "sources/w27c512.pdf",
+      "sha256": "c455800df1f9755fabe1cc94a7756a0bf06e74b8ddf2e17720b294a778a90ffc",
+      "bytes": 197151,
+      "matched": true
+    },
+    {
+      "file": "sources/w27c512.txt",
+      "sha256": "96897ba0db5abbe71562c4f9ccf51f4056012c29d24b4dee9388b5e1ef8f942d",
+      "bytes": 56091,
+      "matched": true
+    },
+    {
+      "file": "sources.json",
+      "sha256": "7b5cb4eb2b1a9dc6cd9b429d3ce2902707a09903efb8ad2ff7b4da59c728d5dd",
+      "bytes": 1552,
+      "matched": true
+    },
+    {
+      "file": "stock.json",
+      "sha256": "c4a1eb190b0b68e9bdd137d350ce1fc646f78f2b2b265acf4e32765e320787f2",
+      "bytes": 2121,
+      "matched": true
+    },
+    {
+      "file": "update.py",
+      "sha256": "9ffc38140d1fa07a9b4cab5d28ef871882a4a46d4bf4a37308f16d666721d062",
+      "bytes": 8618,
+      "matched": true
+    },
+    {
+      "file": "validation.json",
+      "sha256": "36dde17494fabb76628e7885d3803edf3bd5f306237f00b7fb5a6661f96728b1",
+      "bytes": 854,
+      "matched": true
+    },
+    {
+      "file": "verify.py",
+      "sha256": "599e3ffcb0374baaa9869f4d47ccbb3f0266f6f327b063c6ab8c90a3a8c88975",
+      "bytes": 387,
+      "matched": true
+    }
+  ]
+}

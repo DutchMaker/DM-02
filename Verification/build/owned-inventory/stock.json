@@ -1,0 +1,18 @@
+{
+  "source": "User inventory report in this conversation, 2026-11-15",
+  "verification": "Ownership reported by user; exact counts, photographs and physical testing not yet supplied",
+  "duplicate_note": "W27C512-45Z was listed twice; recorded once without inferring two devices",
+  "parts": [
+    {"reported_marking":"27C322","owned":true,"quantity":null,"quantity_description":"multiple","missing":"Manufacturer, complete speed/package marking, count"},
+    {"reported_marking":"27C1024","owned":true,"quantity":null,"quantity_description":"not specified","missing":"Manufacturer, complete speed/package marking, count"},
+    {"reported_marking":"UM61512AK-15","owned":true,"quantity":null,"quantity_description":"not specified","missing":"Count and physical package/condition confirmation"},
+    {"reported_marking":"W27C512-45Z","owned":true,"quantity":null,"quantity_description":"not specified; duplicate mention deduplicated","missing":"Count and programmer support"},
+    {"reported_marking":"74HCT377","owned":true,"quantity":null,"quantity_description":"not specified","missing":"Manufacturer, full package marking, count"},
+    {"reported_marking":"74HCT245","owned":true,"quantity":null,"quantity_description":"a lot","missing":"Manufacturer, full package marking, count"},
+    {"reported_marking":"244","owned":true,"quantity":null,"quantity_description":"scarcer than 74HCT245","missing":"Logic family, manufacturer, full package marking, count"},
+    {"reported_marking":"157","owned":true,"quantity":null,"quantity_description":"scarcer than 74HCT245","missing":"Logic family, manufacturer, full package marking, count"},
+    {"reported_marking":"74HCT574","owned":true,"quantity":null,"quantity_description":"not specified","missing":"Manufacturer, full package marking, count"},
+    {"reported_marking":"74HCT191","owned":true,"quantity":null,"quantity_description":"not specified","missing":"Manufacturer, full package marking, count"},
+    {"reported_marking":"74HCT161","owned":true,"quantity":null,"quantity_description":"not specified","missing":"Manufacturer, full package marking, count"}
+  ]
+}

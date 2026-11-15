@@ -1,0 +1,29 @@
+[
+  {
+    "id": "um61512a",
+    "url": "https://www.silicon-ark.co.uk/datasheets/um61512ak%20datasheet%20umc.pdf",
+    "archived_at": "2026-11-15T19:33:59.665026+00:00",
+    "pages": 16,
+    "pdf_sha256": "16ca419ec211de799b6213efa768174c68128466ec3236c0869a777a3fa6f4db",
+    "text_sha256": "5c75b0240d2722e56715c7cacf37d688b536f517f52f99528b2b411d91c390f7",
+    "scope": "Manufacturer-origin archived datasheet via a third-party host. Family documentation does not establish exact markings or condition of owned parts."
+  },
+  {
+    "id": "w27c512",
+    "url": "https://media.digikey.com/pdf/Data%20Sheets/Winbond%20PDFs/W27C512.pdf",
+    "archived_at": "2026-11-15T19:33:59.565187+00:00",
+    "pages": 20,
+    "pdf_sha256": "c455800df1f9755fabe1cc94a7756a0bf06e74b8ddf2e17720b294a778a90ffc",
+    "text_sha256": "96897ba0db5abbe71562c4f9ccf51f4056012c29d24b4dee9388b5e1ef8f942d",
+    "scope": "Manufacturer-origin archived datasheet via a third-party host. Family documentation does not establish exact markings or condition of owned parts."
+  },
+  {
+    "id": "m27c1024",
+    "url": "https://futurlec.com/Datasheet/Memory/27C1024.pdf",
+    "archived_at": "2026-11-15T19:34:47.640275+00:00",
+    "pages": 15,
+    "pdf_sha256": "229d461b211eebf9bb0a0888f0a60a688ab89fed1aae1f109cedca618d7dccc2",
+    "text_sha256": "724410ec1d2d923a95a6f9caf4ebd4a59070d67a48e0bc69a3c50aa3d5f5614e",
+    "scope": "Manufacturer-origin archived datasheet via a third-party host. Family documentation does not establish exact markings or condition of owned parts."
+  }
+]

@@ -1,0 +1,1008 @@
+
+--- PDF page 1 ---
+                                                                                                       M27C1024
+
+                              1 Mbit (64Kb x16) UV EPROM and OTP EPROM
+
+
+  5V ± 10% SUPPLY VOLTAGE in READ
+  OPERATION
+  FASTACCESS TIME: 35ns
+  LOW POWER CONSUMPTION:
+  –  Active Current 35mA at 5MHz                                        40                            40
+  –  Standby Current 100μA                                                   1
+                                                                                                           1
+  PROGRAMMING VOLTAGE: 12.75V ± 0.25V                                        FDIP40W  (F)                   PDIP40  (B)
+  PROGRAMMING TIME: 100μs/byte (typical)
+  ELECTRONIC SIGNATURE
+  –  Manufacturer Code: 0020h
+  –  Device Code: 008Ch
+
+
+
+DESCRIPTION
+The M27C1024 is a 1 Mbit EPROM offered in the                                PLCC44  (C)                       TSOP40  (N)
+two ranges UV (ultra violet erase) and OTP (one                                                             10 x 14mm
+time programmable). It is ideally suited for micro-
+processorsystems requiring large data or program
+storage and is organized as 65,536 words of 16
+bits.                                                               Figure 1.  Logic Diagram
+The FDIP40W (window ceramic frit-seal package)
+has  a  transparent lid  which  allows  the  user  to
+expose the chip to ultraviolet light to erase the bit
+pattern. A new pattern can then be written to the                                           VCC      VPP
+device by following the programming procedure.
+For application where the content is programmed
+only  one  time  and  erasure  is  not  required,  the                               16                       16
+M27C1024  is  offered  in  PDIP40,  PLCC44  and
+TSOP40 (10 x 14mm) packages.                                              A0-A15                                     Q0-Q15
+
+Table 1.  Signal Names                                                          P
+                                                                                             M27C1024
+  A0-A15                  Address Inputs
+  Q0-Q15                 Data Outputs                                           E
+
+  E                            Chip Enable                                      G
+
+  G                           Output Enable
+
+  P                            Program
+  VPP                        Program Supply                                                  VSS
+                                                                                                                      AI00702B
+  VCC                        Supply Voltage
+  VSS                        Ground
+
+
+
+September 1998                                                                                                                                                              1/15
+
+--- PDF page 2 ---
+M27C1024
+
+
+Figure 2A.  DIP Pin Connections                                      Figure 2B.  LCC Pin Connections
+
+
+              VPP                                    VCC140
+                 E   2                39    P
+              Q15    3                38    NC
+              Q14    4                37    A15
+              Q13    5                36    A14                                                     1  44
+              Q12    6                35    A13                          Q12                                                A13
+              Q11    7                34    A12                          Q11                                                A12
+              Q10    8                33    A11                          Q10                                                A11
+               Q9    9                32    A10                           Q9                                                                     A10
+               Q8    10               31    A9                            Q8                                                A9
+              VSS    11  M27C1024     30    VSS                          VSS    12             M27C1024                34   VSS
+               Q7    12               29    A8                            NC                                                NC
+               Q6    13               28    A7                            Q7                                                A8
+               Q5    14               27    A6                            Q6                                                A7
+               Q4    15               26    A5                            Q5                                                A6
+               Q3    16               25    A4                            Q4                                                A5
+                                                                                                   23
+               Q2    17               24    A3
+               Q1    18               23    A2
+               Q0    19               22    A1                                                                             AI00704
+                 G   20               21    A0
+
+                                    AI00703
+
+Warning: NC = Not Connected.                                         Warning: NC = Not Connected.
+
+Figure 2C.  TSOP Pin Connections                                     DEVICE OPERATION
+                                                                     The modes  of  operations of  the M27C1024 are
+          A9       1                     40      VSS                 listed in the OperatingModes table. Asingle power
+         A10                                     A8                  supply is required in the read mode. All inputs are
+         A11                                     A7                  TTL  levels  except  for  Vpp  and  12V  on  A9  for
+                                                                     Electronic Signature.
+         A12                                                   A6    Read Mode
+         A13                                                   A5    The M27C1024 has two control functions, both of
+         A14                                     A4                  which must be  logically active in  order to obtain
+         A15                                     A3                  data at the outputs. Chip Enable (E) is the power
+          NC                                     A2                  control and  should be used for device selection.
+            P                                    A1                  Output Enable (G) is the output control and should
+        VCC        10    M27C1024        31      A0                  be  used  to  gate  data  to  the  output  pins,  inde-
+        VPP        11     (Normal)       30      G                   pendent of  device selection. Assuming  that  the
+            E                                    DQ0                 addresses are  stable, the  address  access  time
+       DQ15                                      DQ1                 (tAVQV) is equalto the delayfrom E tooutput (tELQV).
+                                                                     Data is available at the output after a delay of tOE
+       DQ14                                      DQ2                 from the falling edge of G, assuming that E has
+       DQ13                                      DQ3                 been low and the addresses have been stable for
+       DQ12                                                   DQ4    at least tAVQV-tGLQV.
+       DQ11                                                   DQ5    Standby Mode
+       DQ10                                      DQ6                 The M27C1024  has  a  standby  mode  which  re-
+        DQ9                                      DQ7                 duces the active current from 35mAto 100μA.
+        DQ8        20                            21VSS               The M27C1024 is placed in the standby mode by
+
+                                      AI01582                        applying a TTL high signal to the E input. When in
+                                                                     the standby mode, the outputs are in a high imped-
+Warning: NC = Not Connected.                                         ance state, independent of the G input.
+
+2/15
+
+--- PDF page 3 ---
+                                                                                                                                           M27C1024
+
+
+Table 2.  Absolute Maximum Ratings (1)
+
+   Symbol                                              Parameter                                                          Value                          Unit
+       TA            Ambient Operating Temperature (3)                                                     –40 to 125                       °C
+     TBIAS          Temperature Under Bias                                                                     –50 to 125                       °C
+     TSTG          Storage Temperature                                                                          –65 to 150                       °C
+     VIO (2)         Input or Output Voltages (except A9)                                                    –2 to 7                               V
+      VCC           Supply Voltage                                                                                      –2 to 7                               V
+     VA9 (2)         A9 Voltage                                                                                            –2 to 13.5                          V
+      VPP           Program Supply Voltage                                                                       –2 to 14                             V
+Notes: 1. Except for the rating ”Operating Temperature Range”, stresses above those listed in the Table ”Absolute Maximum Ratings”may cause permanent damage to the device. These are stress ratings only and operation of the device at these or any other
+
+           conditions above those indicated in the Operating sections of this specification is not implied. Exposure to Absolute Maximum
+           Rating conditions for extended periods may affect device reliability. Refer also to the STMicroelectronics SURE Program and other
+           relevant quality documents.
+        2. Minimum DC voltage on Input or Output is –0.5V with possible undershoot to –2.0V for a period less than 20ns. Maximum DC
+           voltage on Output is VCC +0.5V with possible overshoot to VCC +2V for a period less than 20ns.
+        3. Depends on range.
+
+
+
+Table 3.  Operating Modes
+
+             Mode                           E                      G                      P                      A9                    VPP               Q0 - Q15
+ Read                                         VIL                    VIL                    VIH XVCC or VSS       Data Output
+ Output Disable                         VIL                    VIH XXVCC or VSS             Hi-Z
+ Program                                   VIL XVIL Pulse                 X                     VPP              Data Input
+ Verify                                        VIL                    VIL                    VIH XVPP             Data Output
+ Program Inhibit                        VIH XXXVPP                   Hi-Z
+ Standby                                    VIH XXXVCC or VSS             Hi-Z
+ Electronic Signature                 VIL                    VIL                    VIH                    VID                   VCC                 Codes
+
+Note: X=VIH or VIL,VID = 12V ±0.5V
+
+
+Table 4.  Electronic Signature
+
+          Identifier                  A0          Q7          Q6          Q5          Q4          Q3          Q2          Q1          Q0       Hex Data
+
+ Manufacturer’s Code          VIL 0010000020h
+ Device Code                       VIH 100011008Ch
+
+Note:  Outputs Q8-Q15 are set to ’0’.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                        3/15
+
+--- PDF page 4 ---
+M27C1024
+
+
+Table 5.  AC Measurement Conditions
+
+                                                                   High Speed                                           Standard
+ Input Rise and Fall Times                                               ≤ 10ns                                            ≤ 20ns
+ Input Pulse Voltages                                                            0 to 3V                                             0.4V to 2.4V
+ Input and Output Timing Ref. Voltages                                  1.5V                                               0.8V and 2V
+
+
+Figure 3. AC Testing Input Output Waveform                                Figure 4. AC Testing Load Circuit
+
+                                                                                                        1.3V
+    High Speed
+
+        3V                                                                                                     1N914
+
+                                                        1.5V
+
+        0V                                                                                                     3.3kΩ
+
+                                                                                  DEVICE
+    Standard                                                                      UNDER                                        OUT
+                                                                                   TEST
+      2.4V                                              2.0V                                                     CL
+
+
+      0.4V                                              0.8V
+
+                                                                                CL = 30pF for High Speed
+                                                        AI01822
+                                                                                CL = 100pF for Standard
+                                                                                CL includes JIG capacitance                     AI01823B
+
+
+
+Table 6.  Capacitance (1)  (TA =25°C, f = 1 MHz )
+     Symbol                        Parameter                          Test Condition                 Min                 Max                Unit
+       CIN             Input Capacitance                                   VIN=0V                         6          pF
+      COUT            Output Capacitance                               VOUT =0V                        12          pF
+Note:   1.  Sampled only, not 100% tested.
+
+
+
+Two Line Output Control                                                   control bus. This ensures that all deselectedmem-
+BecauseEPROMs are usuallyused in largermem-                               ory devices are in their low power standby mode
+ory arrays,  this product features a  2  line control                     and that the output pins are only active when data
+function which accommodates the use of multiple                           is required from a particular memory device.
+memory connection. The two line control function                          System Considerations
+allows:                                                                   The power switching characteristics of Advanced
+a.  the lowest possible memory power dissipation,                         CMOS EPROMs require careful decoupling of the
+b.  complete assurance that output bus contention                         devices. The supply current, ICC,  has three seg-
+    will not occur.                                                       ments that are of interest to the system designer :
+                                                                          the standby current level, the active current level,
+For the most efficientuse of thesetwo controllines,                       and transient current peaks that are produced by
+E  should be  decoded and  used  as  the  primary                         the falling and rising edges of E. The magnitude of
+device selecting function,while G should be made                          transientcurrentpeaks isdependentonthe capaci-
+a common connection to all devices in  the array                          tive  and  inductive  loading  of  the  device  at  the
+and connected to the READ line from the system                            output.
+
+
+4/15
+
+--- PDF page 5 ---
+                                                                                                                                          M27C1024
+
+
+Table 7.  Read Mode DC Characteristics (1)
+(TA = 0 to 70 °C, –40 to 85 °C; –40 to 105 °C or –40 to 125 °C; VCC =5V±5% or 5V ± 10%; VPP =VCC)
+
+   Symbol                         Parameter                                 Test Condition                     Min                Max            Unit
+       ILI            Input Leakage Current                                 0V ≤ VIN ≤ VCC                                       ±10                μA
+       ILO           Output Leakage Current                             0V ≤ VOUT ≤ VCC                                  ±10                μA
+
+       ICC           Supply Current                     E=VIOUT = 0mA, f = 5MHz                                        35               mAIL,G=VIL,
+
+      ICC1          Supply Current (Standby) TTL                           E = VIH   1mA
+      ICC2          Supply Current (Standby) CMOS                E > VCC – 0.2V                                            100                μA
+       IPP           Program Current                                              VPP =VCC                                               100                μA
+       VIL           Input Low Voltage                                                                                     –0.3                0.8                V
+     VIH  (2)        Input High Voltage                                                                                      2               VCC+1     V
+      VOL          Output Low Voltage                                        IOL = 2.1mA                                               0.4                V
+
+      VOH          Output High Voltage TTL                              IOH = –400μA                       2.4                                      V
+                   Output High Voltage CMOS                          IOH = –100μAVCC – 0.7                                 V
+Notes: 1. VCC must be applied simultaneously with or before VPP and removed simultaneously with or after VPP.
+        2. Maximum DC voltage on Output is VCC +0.5V.
+
+
+
+Table 8A.  Read Mode AC Characteristics (1)
+(TA = 0 to 70 °C, –40 to 85 °C; –40 to 105 °C or –40 to 125 °C; VCC =5V±5% or 5V ± 10%; VPP =VCC)
+
+                                                                                                                  M27C1024
+  Symbol       Alt                        Parameter                      Test Condition              -35 (3)         -45 (3)         -55 (3)        Unit
+
+                                                                                                  Min    Max   Min    Max   Min    Max
+
+    tAVQV        tACC    Address Valid to Output Valid             E = VIL,G=VIL               35                45                55       ns
+
+    tELQV         tCE     Chip Enable Low to Output Valid              G = VIL                      35                45                55       ns
+
+    tGLQV         tOE     Output Enable Low to Output Valid           E = VIL                      20                25                30       ns
+
+  tEHQZ (2)       tDF     Chip Enable High to Output Hi-Z              G = VIL  030030030ns
+
+  tGHQZ (2)       tDF     Output Enable High to Output Hi-Z           E = VIL  030030030ns
+
+    tAXQX         tOH    Address Transition to OutputTransition                     E=VIL,G=VIL000ns
+
+Notes: 1. VCC must be applied simultaneously with or before VPP and removed simultaneously with or after VPP.
+        2. Sampled only, not 100% tested.
+        3. Speed obtained with High Speed AC measurementconditions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                       5/15
+
+--- PDF page 6 ---
+M27C1024
+
+
+Table 8B.  Read Mode AC Characteristics (1)
+(TA = 0 to 70 °C, –40 to 85 °C; –40 to 105 °C or –40 to 125 °C; VCC =5V±5% or 5V ± 10%; VPP =VCC)
+
+                                                                                                                M27C1024
+
+  Symbol       Alt                        Parameter                      Test Condition              -70            -80/-90        -10/-12/       Unit
+                                                                                                                                   -15/-20
+
+                                                                                                Min   Max   Min   Max   Min   Max
+
+    tAVQV        tACC    Address Valid to Output Valid             E = VIL,G=VIL               70                80               100      ns
+
+    tELQV         tCE     Chip Enable Low to Output Valid               G = VIL                      70                80               100      ns
+
+    tGLQV         tOE     Output Enable Low to Output Valid           E = VIL                      35                40                50       ns
+
+  tEHQZ (2)       tDF     Chip Enable High to Output Hi-Z               G = VIL            0       30       0       30       0       30       ns
+
+  tGHQZ (2)       tDF     Output Enable High to Output Hi-Z           E = VIL             0       30       0       30       0       30       ns
+
+    tAXQX         tOH    Address Transition to OutputTransition                       E=VIL,G=VIL000ns
+
+Notes: 1. VCC must be applied simultaneously with or before VPP and removed simultaneously with or after VPP.
+        2. Sampled only, not 100% tested.
+
+
+
+Figure 5.  Read Mode AC Waveforms
+
+
+
+
+
+
+              A0-A15                                      VALID                                              VALID
+
+                                                    tAVQV                                        tAXQX
+
+              E
+
+                                                          tGLQV                                             tEHQZ
+
+
+              G
+
+                                                    tELQV                                                   tGHQZ
+
+              Q0-Q15                                                                                                                   Hi-Z
+
+
+
+
+                                                                                                                                  AI00705B
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6/15
+
+--- PDF page 7 ---
+                                                                                                                                                                  M27C1024
+
+
+Table 9.  ProgrammingMode DC Characteristics (1)
+(TA =25°C; VCC = 6.25V ± 0.25V; VPP = 12.75V ± 0.25V)
+
+    Symbol                       Parameter                               Test Condition                    Min               Max              Unit
+         ILI            Input Leakage Current                               0 ≤ VIN ≤ VIH                                       ±10                  μA
+
+        ICC            Supply Current                                                                                                            50                mA
+        IPP            Program Current                                            E = VIL                                                 50                mA
+        VIL            Input Low Voltage                                                                                –0.3               0.8                 V
+
+        VIH            Input High Voltage                                                                                  2             VCC + 0.5            V
+        VOL           Output Low Voltage                                    IOL = 2.1mA                                             0.4                 V
+        VOH           Output High Voltage TTL                           IOH = –400μA                      2.4                                       V
+        VID            A9 Voltage                                                                                            11.5              12.5                V
+
+Note:   1. VCC must be applied simultaneously with or before VPP and removed simultaneously with or after VPP.
+
+
+Table 10.  ProgrammingMode AC Characteristics (1)
+(TA =25°C; VCC = 6.25V ± 0.25V; VPP = 12.75V ± 0.25V)
+
+    Symbol            Alt                             Parameter                         Test Condition          Min            Max            Unit
+
+       tAVPL               tAS         Address Valid to Program Low                                                   2                                       μs
+
+       tQVPL              tDS         Input Valid to Program Low                                                        2                                       μs
+
+      tVPHPL             tVPS        VPP High to Program Low                                                           2                                       μs
+
+      tVCHPL             tVCS        VCC High to Program Low                                                          2                                       μs
+
+       tELPL              tCES        Chip Enable Low to Program Low                                              2                                       μs
+
+       tPLPH              tPW         Program Pulse Width                                                                95              105               μs
+
+       tPHQX              tDH         Program High to Input Transition                                               2                                       μs
+
+       tQXGL              tOES        Input Transition to Output EnableLow                                                                                             2                                       μs
+
+       tGLQV              tOE         Output Enable Low to Output Valid                                                             100              ns
+
+     tGHQZ  (2)           tDFP         Output Enable High to Output Hi-Z                                            0               130              ns
+
+       tGHAX              tAH         Output Enable High to AddressTransition  0ns
+
+Notes: 1. VCC must be applied simultaneously with or before VPP and removed simultaneously with or after VPP.
+         2. Sampled only, not 100% tested.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                 7/15
+
+--- PDF page 8 ---
+M27C1024
+
+
+Figure 6.  Programmingand Verify Modes AC Waveforms
+
+
+
+
+
+
+              A0-A15                                        VALID
+
+                                       tAVPL
+
+              Q0-Q15                         DATA IN                                              DATA OUT
+
+                                      tQVPL                     tPHQX
+
+              VPP
+
+                                      tVPHPL                                   tGLQV                 tGHQZ
+
+              VCC
+
+                                      tVCHPL                                                         tGHAX
+
+              E
+
+                                       tELPL
+
+              P
+                                        tPLPH                          tQXGL
+
+              G
+
+
+                                                PROGRAM                                 VERIFY
+                                                                                                           AI00706
+
+
+
+
+
+DEVICE OPERATION (cont’d)                                          be  present  in  the  data  word.  The  only  way  to
+                                                                   changea ’0’ to a ’1’ is by die exposure to ultraviolet
+The  associated  transient  voltage  peaks  can  be                light (UV EPROM). The M27C1024 is in the pro-
+suppressed by complying with the two line output                   gramming mode when VPP input is at 12.75V, E is
+control and  by  properly selected decoupling ca-                  at  VIL  and  P  is  pulsed  to  VIL.  The  data  to  be
+pacitors. It is recommended that a 0.1μF ceramic                   programmed is applied to 16 bits in parallel to the
+capacitor be  used on every device between VCC                     data output pins. The levels required for the ad-
+and VSS. Thisshould be a high frequencycapacitor                   dress and data inputs are TTL. VCC is specified to
+of low inherent inductance and should be placed                    be 6.25V ±  0.25V.
+as close to the device as possible. In addition, a                 PRESTO II Programming Algorithm
+4.7μF  bulk electrolytic capacitor should be used
+between Vcc and VSS for every eight devices. The                   PRESTO  II  Programming  Algorithm  allows  pro-
+bulk capacitor should be  located near the power                   gramming of  the whole array with  a  guaranteed
+supply connection point. The purpose of the bulk                   margin, in a typical time of 6.5 seconds. Program-
+capacitor is to overcome the voltage drop caused                   ming with PRESTO II consists of applying a se-
+by the inductive effects of PCB traces.                            quenceof 100μs programpulses toeach worduntil
+Programming                                                        a correct verify occurs (see Figure 7). During pro-
+                                                                   gramming and verify operation, a MARGIN MODE
+Whendelivered (and aftereach ’1’s erasure for UV                   circuit is automaticallyactivatedin order to guaran-
+EPROM), all bits of the M27C1024 are in the ’1’                    tee  that  each  cell  is  programmed with  enough
+state. Data is introduced by selectively program-                  margin. No overprogrampulse is applied since the
+ming ’0’s into the  desired bit locations. Although                verify in MARGIN MODE provides necessary mar-
+only ’0’s will be programmed,both ’1’s and ’0’s can                gin to each programmed cell.
+
+
+
+
+8/15
+
+--- PDF page 9 ---
+                                                                                                              M27C1024
+
+
+Figure 7.  ProgrammingFlowchart                                  Electronic Signature
+                                                                 The  Electronic  Signature (ES)  mode  allows  the
+                                                                 reading out of a binary code from an EPROM that
+               VCC = 6.25V, VPP = 12.75V                         will identify its manufacturer and type. This mode
+                                                                 is intended for use by programming equipment to
+                          n=0                                    automatically match the device to be programmed
+                                                                 withits correspondingprogrammingalgorithm.The
+                                                                 ES mode is functional in the 25°C ±  5°C ambient
+                     P = 100μs Pulse                             temperaturerange that is required when program-
+                                                                 ming the M27C1024. To activatethe ES mode, the
+        NO                                                       programmingequipmentmust force11.5Vto 12.5V
+          ++n       NO                                           on address line A9 of the M27C1024 with VPP =
+          =25                                             ++ AddrVERIFYVCC = 5V.   Two identifier bytes may then be se-
+      YES                     YES                                quenced from the device outputs by toggling ad-
+                                                                 dressline A0 from VIL to VIH. All otheraddress lines
+                                                                 must be  held at  VIL  during Electronic  Signature
+          FAIL             Last   NO                             mode. Byte 0  (A0=VIL) represents the  manufac-
+                          Addr                                   turer code and byte 1 (A0=VIH) the device identifier
+                              YES                                code.  For  the  STMicroelectronics  M27C1024,
+                                                                 these two iden-tifier bytes are given in Table 4 and
+                   CHECK ALL WORDS                               can be read-out on outputs Q0 to Q7.
+                     1st: VCC =6V
+                     2nd: VCC = 4.2V                             ERASUREOPERATION (applies to UV EPROM)
+
+
+                                             AI00707C            The erasure characteristics of  the  M27C1024 is
+                                                                 such that erasure begins when the cells are ex-
+                                                                 posed to light with wavelengths shorter than ap-
+                                                                 proximately4000 Å. It shouldbe notedthat sunlight
+                                                                 and some type of fluorescent lamps have wave-
+Program Inhibit                                                  lengthsin the 3000-4000Årange.Research shows
+Programming of  multiple M27C1024s in  parallel                  that constant exposure to room level fluorescent
+with  different  data  is  also  easily  accomplished.           lighting could erase a typicalM27C1024 in about 3
+Except  for  E,  all  like  inputs  including  G  of  the        years, while it would take approximately 1 week to
+parallel M27C1024 may be common.   A TTL low                     cause erasure when exposed to direct sunlight. If
+level pulse applied to a M27C1024’s P input, with                the M27C1024 is to be exposed to these types of
+E low  and VPP  at  12.75V,  will  program  that                 lighting conditions for extended periods of time, it
+M27C1024.  A high level E input inhibits the other               is suggested that opaque labels be put over the
+M27C1024s from being programmed.                                 M27C1024 window to prevent unintentional era-
+                                                                 sure.The recommendederasure procedurefor the
+Program Verify                                                   M27C1024 is  exposure to short wave ultraviolet
+A verify (read) should be  performed on  the pro-                light which has wavelength 2537 Å. Theintegrated
+grammed bits to determinethat they were correctly                dose (i.e. UV intensityx exposuretime)for erasure
+programmed.   The verify is accomplished with E                  should be a minimum of 15 W-sec/cm2. The era-
+and G at VIL, P at VIH,VPP at 12.75V and VCC at                  sure time with this dosage is approximately 15 to
+6.25V.                                                           20 minutes using an ultraviolet lamp with
+On-Board Programming                                             12000 μW/cm2  power  rating.  The  M27C1024
+                                                                 should be placed within 2.5 cm (1 inch) of the lamp
+The M27C1024 can be directly programmed in the                   tubes during the erasure.Some lamps have a filter
+application  circuit.  See  the  relevant  Application           on  their tubes  which should be  removed before
+Note AN620.                                                      erasure.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                         9/15
+
+--- PDF page 10 ---
+M27C1024
+
+
+ORDERING INFORMATION SCHEME
+
+
+                      Example:      M27C1024   -12   X    C    1    X
+
+
+
+
+
+
+
+
+
+         Speed                   VCC Tolerance                    Package                Temperature Range                    Option
+-35 (1)        35ns           blank        ± 10%             F    FDIP40W                  1      0 to 70 °C            X       Additional
+-45 (1)        45ns             X          ± 5%              B    PDIP40                   6    –40 to 85 °C                   Burn-in
+-55 (1)        55ns                                          C    PLCC44                   7    –40 to 105 °C          TR      Tape & Reel
+                                                                                                                                Packing
+ -70           70ns                                          N    TSOP40                   3    –40 to 125 °C
+ -80           80ns                                               10 x 14mm
+
+ -90           90ns
+ -10          100ns
+ -12          120ns
+ -15          150ns
+ -20          200ns
+ -10          100ns
+
+
+Note:   1. High Speed, see AC Characteristics section for further information.
+
+
+For a list of availableoptions(Speed, Package,etc...)or for furtherinformationon anyaspect of this device,
+please contact the STMicroelectronics Sales Office nearest to you.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10/15
+
+--- PDF page 11 ---
+                                                                                                                                                                            M27C1024
+
+
+                                FDIP40W - 40 pin Ceramic Frit-seal DIP, with window
+
+
+
+         Symb                                               mm                                                                         inchesTyp                     Min                     Max                     Typ                     Min                     Max
+
+            A                                                                             5.72                                                                          0.225
+           A1                                                 0.51                    1.40                                               0.020                  0.055
+           A2                                                 3.91                    4.57                                               0.154                  0.180
+           A3                                                 3.89                    4.50                                               0.153                  0.177
+            B                                                  0.41                    0.56                                               0.016                  0.022
+           B1                      1.45                       –                         –                      0.057                      –                         –
+            C                                                  0.23                    0.30                                               0.009                  0.012
+            D                                                 51.79                  52.60                                              2.039                  2.071
+           D2                     48.26                      –                         –                      1.900                      –                         –
+            E                      15.24                      –                         –                      0.600                      –                         –
+           E1                                                13.06                  13.36                                              0.514                  0.526
+             e                       2.54                       –                         –                      0.100                      –                         –
+           eA                     14.99                      –                         –                      1.900                      –                         –
+           eB                                                16.18                  18.03                                              0.637                  0.710
+             L                                                  3.18                                                                          0.125
+            S                                                  1.52                    2.49                                               0.060                  0.098
+            ∅                      8.13                       –                         –                      0.320                      –                         –
+             α                                                    4°                             11°                                                               4°                             11°
+            N40 40
+
+
+
+
+
+
+                              A2                                                            A3       A
+
+
+                                                                                         A1           L                           α
+                                       B1                     B               e                                                         eA      C
+                                                                D2                                                                      eB
+
+                                                                  D
+                                                      S
+
+                                                N
+
+                                                                              ∅             E1    E
+
+
+                                                1
+                                                                                                                                               FDIPW-a
+
+
+
+
+
+Drawing is not to scale.
+
+                                                                                                                                                                                          11/15
+
+--- PDF page 12 ---
+M27C1024
+
+
+                                            PDIP40 - 40 pin Plastic DIP, 600 mils width
+
+
+
+        Symb                                               mm                                                                         inches
+                                      Typ                     Min                     Max                     Typ                     Min                     Max
+            A                       4.45                       –                         –                      0.175                      –                         –
+           A1                      0.64                    0.38                       –                      0.025                  0.015                      –
+           A2                                                 3.56                    3.91                                               0.140                  0.154
+            B                                                  0.38                    0.53                                               0.015                  0.021
+           B1                                                 1.14                    1.78                                               0.045                  0.070
+            C                                                  0.20                    0.31                                               0.008                  0.012
+            D                                                 51.78                  52.58                                              2.039                  2.070
+           D2                     48.26                      –                         –                      1.900                      –                         –
+            E                                                 14.80                  16.26                                              0.583                  0.640
+           E1                                                13.46                  13.99                                              0.530                  0.551
+           e1                      2.54                       –                         –                      0.100                      –                         –
+           eA                     15.24                      –                         –                      0.600                      –
+           eB                                                15.24                  17.78                                              0.600                  0.700
+            L                                                  3.05                    3.81                                               0.120                  0.150
+            S                                                  1.52                    2.29                                               0.060                  0.090
+            α                                                    0°                       15°                                                  0É                      15°
+            N40 40
+
+
+
+
+
+                                                                                          A2       A
+
+                                                                                       A1           L                          α
+                                      B1                     B             e1                                                        eA      C
+
+                                                               D2                                                                    eB
+
+                                                                D
+                                                    S
+
+                                               N
+
+                                                                                          E1    E
+
+
+                                               1
+                                                                                                                                                 PDIP
+
+
+
+
+
+Drawing is not to scale.
+
+12/15
+
+--- PDF page 13 ---
+                                                                                                                                                                   M27C1024
+
+
+                             PLCC44 - 44 lead Plastic Leaded Chip Carrier, square
+
+
+
+        Symb                                               mm                                                                         inches
+                                    Typ                     Min                     Max                     Typ                     Min                     Max
+            A                                                  4.20                    4.70                                               0.165                  0.185
+           A1                                                 2.29                    3.04                                               0.090                  0.120
+            B                                                  0.33                    0.53                                               0.013                  0.021
+           B1                                                 0.66                    0.81                                               0.026                  0.032
+            D                                                 17.40                  17.65                                              0.685                  0.695
+           D1                                                16.51                  16.66                                              0.650                  0.656
+           D2                                                14.99                  16.00                                              0.590                  0.630
+            E                                                 17.40                  17.65                                              0.685                  0.695
+           E1                                                16.51                  16.66                                              0.650                  0.656
+           E2                                                14.99                  16.00                                              0.590                  0.630
+            e                       1.27                       –                         –                      0.050                      –                         –
+             j                       0.89                       –                         –                      0.035                      –                         –
+            N44 44
+          CP                                                                            0.10                                                                          0.004
+
+
+
+
+
+
+                                        D                                                                                                                          A1
+                                       D1                                                                                                    A2
+
+
+                                         1N
+                                                                                                                                                                              B1
+
+
+
+
+     Ne                                                    E1  E                                           F                   D2/E2                               e
+                                                                                                         0.51 (.020)                           B
+
+
+                                                                                                               1.14 (.045)
+
+
+                                       Nd                                                                                                                     A
+
+
+                                                                                                R                                                CP
+                                PLCC
+
+
+
+Drawing is not to scale.
+
+                                                                                                                                                                                 13/15
+
+--- PDF page 14 ---
+M27C1024
+
+
+                          TSOP40 - 40 lead Plastic Thin Small Outline, 10 x 14mm
+
+
+
+        Symb                                               mm                                                                         inches
+                                    Typ                     Min                     Max                     Typ                     Min                     Max
+            A                                                                             1.20                                                                          0.047
+           A1                                                 0.05                    0.15                                               0.002                  0.006
+           A2                                                 0.95                    1.05                                               0.037                  0.041
+            B                                                  0.17                    0.27                                               0.007                  0.011
+           C                                                  0.10                    0.21                                               0.004                  0.008
+           D                                                 13.80                  14.20                                              0.543                  0.559
+           D1                                                12.30                  12.50                                              0.484                  0.492
+            E                                                  9.90                   10.10                                              0.390                  0.398
+            e                       0.50                       –                         –                      0.020                      –                         –
+            L                                                  0.50                    0.70                                               0.020                  0.028
+
+            α                                                    0°                        5°                                                   0°                        5°
+           N40 40
+          CP                                                                            0.10                                                                          0.004
+
+
+
+
+
+
+                                                                                                                                   A2
+
+
+                                        1N
+                                                                                                                                           e
+
+
+                                                                                            E
+
+                                                                                                                                           B
+
+                                        N/2
+
+                                                         D1                                                               A
+                                                          D                                                                               CP
+
+
+
+
+                                                         DIE
+
+                                                                                              C
+
+                                TSOP-a                                                                             A1        α             L
+
+Drawing is not to scale.
+
+14/15
+
+--- PDF page 15 ---
+                                                                                                                                                       M27C1024
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Information furnished is believed to be accurate and reliable. However, STMicroelectronics assumes no responsibility for the consequences
+of use of such information nor for any infringement of patents or other rights of third parties which may result from its use. No license is granted
+by implication or otherwise under any patent or patent rights of STMicroelectronics. Specifications mentioned in this publication are subject to
+change without notice. This publication supersedes  and replaces all information previously supplied. STMicroelectronics products are not
+authorized for use as critical components in life support devices or systems without express written approval of STMicroelectronics.
+
+
+                                                 The ST logo is a registered trademark of STMicroelectronics
+                                                        1998 STMicroelectronics - All Rights Reserved
+
+
+                                                         STMicroelectronics GROUP OF COMPANIES
+  Australia - Brazil - Canada - China - France - Germany - Italy - Japan - Korea - Malaysia - Malta - Mexico - Morocco - The Netherlands -
+                                Singapore - Spain - Sweden - Switzerland - Taiwan - Thailand - United Kingdom - U.S.A.
+
+
+                                                                                                                                                                    15/15
