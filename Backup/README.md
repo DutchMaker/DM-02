@@ -82,3 +82,13 @@ archived files matched locally and after downloading. The
 [receipt](analog-timeout-2026-11-15.json) includes asset hashes and retains the
 failed run's error status. Its stale ALU log and coverage are explicitly marked.
 A fresh unchanged full run was active when this backup was recorded.
+
+## SRAM turnaround review
+
+The [sram-turnaround-2026-11-15 release](https://github.com/DutchMaker/DM-02/releases/tag/sram-turnaround-2026-11-15)
+preserves the static review of ME1/FD1 SRAM loads and command-release paths.
+All 24 archive files were verified locally and after downloading; the
+[receipt](sram-turnaround-2026-11-15.json) records the hashes. Conditional
+blanking requirements are 56.5 ns read-to-write and 58 ns write-to-read.
+Actual command gaps, loaded release and full-temperature capacitance remain
+unqualified. Normal verification inputs were unchanged.

@@ -1,0 +1,30 @@
+{
+  "repository": "DutchMaker/DM-02",
+  "source_commit": "324a05e54875ef5b8abb5db88c3fc13595ac5166",
+  "release": "https://github.com/DutchMaker/DM-02/releases/tag/sram-turnaround-2026-11-15",
+  "release_author": "DutchMaker",
+  "asset_uploader": "DutchMaker",
+  "archived_files": 24,
+  "published_file_hashes_preserved": 19,
+  "verification": {
+    "local_archive_members": "all matched",
+    "downloaded_archive_members": "all matched",
+    "downloaded_manifest_matches_original": true,
+    "github_asset_digests_match_local": true,
+    "release_published": true,
+    "desktop_browser": "pass",
+    "mobile_browser": "pass"
+  },
+  "assets": {
+    "checkpoint-manifest.json": {
+      "bytes": 6344,
+      "sha256": "2d7eeb51f773be637a50874d0ddc6e9c1182fc80f430bc43a844871a2a4a88ee"
+    },
+    "studies-and-workbook.tar.gz": {
+      "bytes": 430952,
+      "files": 24,
+      "sha256": "7045071ebfeec9e9eed671231ac36bf5c6151bdfec18594a3001ed2423d8a30c"
+    }
+  },
+  "scope": "Static direction-specific SRAM load and release-path review. No simulation or normal-source modification. Electrical turnaround and MOD-08 remain unqualified; conditional blanking arithmetic requires physical load/edge bounds and actual command-gap verification."
+}
