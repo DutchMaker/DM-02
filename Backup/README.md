@@ -72,3 +72,13 @@ All 46 interval paths pass conditionally at 4 MHz. The publication's 1,855
 artifact hashes and desktop/mobile browser checks passed. Normal-source
 promotion awaits completion and archival of the analogue-integrated full run;
 physical-clock qualification remains open.
+
+## Preserved analogue timeout
+
+The [analog-timeout-2026-11-15 release](https://github.com/DutchMaker/DM-02/releases/tag/analog-timeout-2026-11-15)
+preserves the full run that hit the 180-second ALU-sequence limit, plus the
+isolated replay that passed all 145,536 rows in 156.126 seconds. All 3,812
+archived files matched locally and after downloading. The
+[receipt](analog-timeout-2026-11-15.json) includes asset hashes and retains the
+failed run's error status. Its stale ALU log and coverage are explicitly marked.
+A fresh unchanged full run was active when this backup was recorded.

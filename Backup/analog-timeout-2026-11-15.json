@@ -1,0 +1,48 @@
+{
+  "repository": "DutchMaker/DM-02",
+  "source_commit": "57c4474a9409cfc6e244c721bfac832809d96002",
+  "release": "https://github.com/DutchMaker/DM-02/releases/tag/analog-timeout-2026-11-15",
+  "release_author": "DutchMaker",
+  "asset_uploader": "DutchMaker",
+  "archived_files": 3812,
+  "published_file_hashes_preserved": 3802,
+  "verification": {
+    "local_archive_members": "all matched",
+    "downloaded_archive_members": "all matched",
+    "downloaded_manifest_matches_original": true,
+    "github_asset_digests_match_local": true,
+    "release_published": true
+  },
+  "assets": {
+    "checkpoint-manifest.json": {
+      "bytes": 1003545,
+      "sha256": "c0b70aad804b5dcd007db33835ae58812189193b7fa70039f65c355a8fb19ebd"
+    },
+    "completed-runs.tar.gz": {
+      "bytes": 158595655,
+      "files": 3795,
+      "sha256": "424f517094940bdef3179242974aeccf2158b1222897b9e2053fdecd6cc52ea8"
+    },
+    "studies-and-workbook.tar.gz": {
+      "bytes": 523013,
+      "files": 17,
+      "sha256": "e9896183994662516c572930e35e25e3f01563c1b6467a07f983a02f03936163"
+    }
+  },
+  "run_acceptance": {
+    "status": "error",
+    "failed_stage": "alu-sequences",
+    "reason": "Simulator exceeded 180 seconds",
+    "regressions_passed": 155,
+    "stale_failed_stage_artifacts": ["alu/sequences/slice.log", "alu/sequences/coverage.json"]
+  },
+  "isolated_replay": {
+    "passed": true,
+    "rows": 145536,
+    "wall_seconds": 156.12570087518543,
+    "cpu_seconds": 143.889012,
+    "diagnostic_timeout_seconds": 600,
+    "repairs_full_run": false
+  },
+  "scope": "Preserved failed analogue-integrated full run and isolated ALU replay diagnosis. Backup verification does not change run acceptance. A fresh unchanged full run was active when this receipt was recorded."
+}
