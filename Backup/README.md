@@ -1,5 +1,23 @@
 # Git and evidence checkpoints
 
+## CP1-TX1 autonomous serial text candidate
+
+`Verification/build/cp1-text/` is an additional bounded-replay dependency.
+The `cp1-text-2026-11-16` release preserves both development iterations,
+the 37-DIP native candidate, manufacturer sources and the final matrix:
+six standalone profiles, four detected faults and six CPU/BR1 profiles.
+Each standalone pass checks all 256 bytes. Five populated CPU runs finish
+the five-byte transcript after HALT; the sixth checks absence handling.
+
+The bounded replay passed **208 tests**. **349 remote hashes** and
+desktop/mobile browser checks passed at `/build/cp1-text/`.
+CP1-R2 remains accepted; milestone gates remain 3/5, 3/5 and 8/9.
+
+Download the release assets, run `Backup/verify_checkpoint.py`, then extract
+`studies-and-workbook.tar.gz` from the repository root. Restore R2, BR1,
+BI1 and the other dependencies below separately. TX1 is a digital candidate;
+physical terminal/CDC/timing qualification and autonomous boot remain open.
+
 ## CP1-BI1 CPU/bridge diagnostic
 
 The [cp1-io-cpu-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-io-cpu-2026-11-16)

@@ -58,6 +58,13 @@ function render() {
   }
   cpuIOPanel.hidden=!report.io_cpu;
   if(report.io_cpu) cpuIOPanel.innerHTML=`<div class="eyebrow">CP1-BI1 / CPU–BRIDGE DIAGNOSTIC</div><h2>29 passing profiles · endpoint latency boundary found</h2><p>The fetched diagnostic checks 14 echoed bytes through the complete CPU/bridge path. Three connection faults were detected. At 500 kHz, a 160 ns endpoint fixture passed; 200 ns failed setup reserve and 400 ns returned incorrect data. The 400 ns fixture passed at diagnostic 250 kHz.</p><p><strong>Conditional simulation with preloaded memory and behavioral endpoints.</strong> Real text circuitry, autonomous boot with BR1 and full physical timing remain open.</p><div class="links"><a href="/IO-CPU-integration.md">Diagnostic method and limits ↗</a><a href="/build/cp1-io-cpu/">Passing and failed runs ↗</a></div>`;
+  let textPanel=$('text-card');
+  if(!textPanel) {
+    textPanel=document.createElement('section');textPanel.id='text-card';textPanel.className='panel';
+    $('milestones').before(textPanel);
+  }
+  textPanel.hidden=!report.text_card;
+  if(report.text_card) textPanel.innerHTML=`<div class="eyebrow">CP1-TX1 / SERIAL TEXT CANDIDATE</div><h2>37 DIP ICs · all 256 bytes decoded</h2><p>Six standalone profiles passed mailbox, framing, overrun and reset checks; four injected faults were detected. Six CPU/bridge profiles passed, including absent-device handling. The five-byte TX1 transcript finished after CPU HALT.</p><p>Local 4 MHz oscillator, 9600-baud terminal setting, 5 V TTL TX/GND header. <strong>Physical terminal output and clock-domain crossing qualification remain open.</strong> The CPU diagnostic uses preloaded memory; R2 remains the accepted circuit.</p><div class="links"><a href="/Text-card.md">Circuit, timing and qualification scope ↗</a><a href="/build/cp1-text/">Native schematic and evidence ↗</a></div>`;
   const counts={}; report.checks.forEach(c=>counts[c.status]=(counts[c.status]||0)+1);
   $('counts').innerHTML=Object.entries(counts).map(([s,n])=>`<span>${n} ${badge(s)}</span>`).join('');
   renderChecks();

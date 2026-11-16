@@ -8,7 +8,7 @@ import traceback
 from pathlib import Path
 from .common import ROOT, VROOT, BUILD, digest, write_json, command, evidence
 from .reporting import sources, now, trace, milestones
-from . import operating_contract, io_contract, connector_plan, io_bridge_evidence, io_cpu_evidence
+from . import operating_contract, io_contract, connector_plan, io_bridge_evidence, io_cpu_evidence, text_evidence
 
 TARGET = VROOT/'targets/cp1'
 
@@ -245,6 +245,17 @@ def run(args, harness_check):
             artifacts=['cp1-io-cpu/matrix.json','cp1-io-cpu/profiles/endpoint-200/simulation.log',
                        'cp1-io-cpu/profiles/endpoint-400/simulation.log'],
             limitation='Preloaded diagnostic and behavioral endpoints. Sampled timing is conditional; real text, autonomous boot with BR1, full min/max qualification and native assembly promotion remain open.'))
+        text_lock,text_matrix,text_audit = text_evidence.load(BUILD)
+        report['artifact_hashes'].update(text_lock['artifacts'])
+        report['text_card'] = dict(revision='CP1-TX1',dip_count=text_audit['dip_count'],
+            serial_profiles=6,cpu_profiles=6,mutations_detected=4,physical_qualification=False,
+            promoted_into_R2=False,autonomous_rom_boot=False)
+        report['checks'].append(evidence('text-card','Native-pin autonomous serial text candidate','limited',
+            '37 DIP packages; six profiles each decoded all 256 bytes with busy-write/W1C/reset checks. '
+            'Four mutations detected. Six CPU/bridge profiles passed, including absent-device handling; '
+            'five emitted TX1 CR LF and finished transmission after CPU HALT. Fast CPU sample setup 81.476 ns.',
+            artifacts=['cp1-text/final/matrix.json','cp1-text/final/audit.json'],
+            limitation='DIP/THT candidate with 9600-baud TTL output. Preloaded CPU diagnostic; physical terminal, CDC/metastability, reset/min-max timing, load/slew and autonomous ROM boot remain open.'))
         boundaries = json.loads((archive/'physical-review.json').read_text())['open_items']
         report['risks'] = [dict(id=f'CP1-{i+1:02}',title=text,severity='open',
                                 action='Requires physical or manufacturer qualification.',evidence='timing') for i,text in enumerate(boundaries)]

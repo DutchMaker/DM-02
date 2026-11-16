@@ -1,0 +1,17 @@
+{
+  "revision": "CP1-TX1",
+  "status": "exact candidate devices; ownership, procurement and physical qualification open",
+  "base_parts": "bridge-parts.json",
+  "base_sha256": "5488a336a6d93b602678cb642c50eb7a3d384b0848b9f37032e6a9599f1b5d2a",
+  "test_conditions": {"vcc_v": 4.5, "temperature_c": [-40, 85], "load_pf": 50, "input_edge_ns": 6},
+  "minimum_delay_policy": "Zero is an uncharacterized sensitivity bound; passing simulation does not establish minimum delay or metastability reliability.",
+  "devices": {
+    "CD74HCT74E": {"pins": 14, "max_delay_ns": 50, "clock_q_max_ns": 44, "setup_ns": 15, "hold_ns": 3, "recovery_ns": 8, "pulse_ns": 23, "input_cap_max_pf": 10, "file": "cd74hct74.pdf", "sha256": "b68442e945cd3153294d4e16a239a5999fa1eae7dd994a6b3397d27f809e8161", "page": 5, "source": "https://www.ti.com/lit/ds/symlink/cd74hct74.pdf"},
+    "CD74HCT157E": {"pins": 16, "max_delay_ns": 36, "input_cap_max_pf": 10, "file": "cd74hct157.pdf", "sha256": "b538c939c02289e99e55470e5b5ee193766386d0c388e07a1f1927b93f8cb3f6", "page": 5, "source": "https://www.ti.com/lit/ds/symlink/cd74hct157.pdf"},
+    "CD74HCT151E": {"pins": 16, "max_delay_ns": 54, "input_cap_max_pf": 10, "file": "cd74hct151.pdf", "sha256": "da0c751bfcdc98d26dbfcbfbaac6cf20e4a0289ea2f7a6abfe774831e2f2f304", "page": 6, "source": "https://www.ti.com/lit/ds/symlink/cd74hct151.pdf"},
+    "CD74HCT161E": {"pins": 16, "max_delay_ns": 63, "clock_q_max_ns": 49, "clock_tc_max_ns": 53, "setup_ns": 16, "hold_ns": 5, "recovery_ns": 19, "pulse_ns": 25, "input_cap_max_pf": 10, "file": "cd74hct161.pdf", "sha256": "cfdc63695252f7148384e6488afc1a420f6fea3ef49fe6672f45600cda06800d", "page": [6, 8], "source": "https://www.ti.com/lit/ds/symlink/cd74hct161.pdf"},
+    "CD74HCT273E": {"pins": 20, "max_delay_ns": 42, "setup_ns": 25, "hold_ns": 3, "recovery_ns": 25, "pulse_ns": 25, "input_cap_max_pf": 10, "file": "cd74hct273.pdf", "sha256": "aac2ee3efca9489ecd375d9cb4f5c642a9fa8597f4cf1b8310e6e07f7f764aff", "source": "https://www.ti.com/lit/ds/symlink/cd74hct273.pdf", "note": "Conservative R2 sequential-model bounds retained; full arc and recovery qualification remains open."}
+  },
+  "oscillator": {"mpn": "ACH-4.000MHZ-EK", "pins": {"1": "NC", "4": "GND", "5": "OUT", "8": "5V"}, "frequency_hz": 4000000, "tolerance_ppm": 30, "startup_max_ms": 10, "rated_load_pf": 15, "divide": 416, "terminal_setting_baud": 9600, "nominal_baud": 9615.384615384615, "nominal_error_percent": 0.16025641025641024, "file": "abracon-ach-2016.pdf", "sha256": "2f4606e8cee9cc822e4e0a551dda82ae3fd24c31855b039a84646f26b443da86", "pages": [1,2], "note": "Separate local oscillator, same exact candidate as OC1; 25 ms valid-supply guard required. Half-size DIP pinout, not the old full-size ECS symbol."},
+  "terminal": {"connector": "J2 1x2 2.54 mm through-hole header", "pins": {"1": "GND", "2": "TX_5V_TTL"}, "format": "9600 8N1, LSB first, idle high", "series_resistance_ohm": 1000, "receiver": "External receive-only 5 V TTL-compatible terminal interface; no power or execution services supplied", "qualification": "Exact mated connector, receiver thresholds, cable capacitance, edge timing and powered-off behavior open; never connect directly to RS-232 or unqualified 3.3 V GPIO."}
+}
