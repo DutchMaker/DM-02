@@ -1,0 +1,38 @@
+{
+  "release": "https://github.com/DutchMaker/DM-02/releases/tag/cp1-io-cpu-2026-11-16",
+  "git_commit": "db0a585a803a06bd5d99add866050040a7df143c",
+  "download_verified": true,
+  "files_verified": 917,
+  "manifest_sha256": "add569a7cd67599c227274cfb095aa10399c6d0b4a01b2753a7a003dbcb7adaa",
+  "archives": {
+    "studies-and-workbook.tar.gz": {
+      "bytes": 15690683,
+      "sha256": "da40673806f5505d6727ceaf11654cf2e0d259a7636777ed0e40f2d851b5bf9b",
+      "files": 917
+    }
+  },
+  "design_revision": "CP1-R2",
+  "study_revision": "CP1-BI1",
+  "bridge_revision": "CP1-BR1",
+  "harness_tests_passed": 203,
+  "milestones_passed": [
+    3,
+    3,
+    8
+  ],
+  "matrix_profiles": 34,
+  "profiles_passed": 29,
+  "latency_failures_preserved": 2,
+  "connection_mutations_detected": 3,
+  "echoes_per_passing_profile": 14,
+  "io_captures_per_passing_profile": 12,
+  "microcycles_per_passing_profile": 334,
+  "physical_qualification": false,
+  "promoted_into_R2": false,
+  "autonomous_rom_boot": false,
+  "remote_publication_hashes_verified": 912,
+  "browser_viewports_passed": [
+    "desktop",
+    "mobile"
+  ]
+}

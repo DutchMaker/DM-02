@@ -2,6 +2,10 @@
 
 ## CP1-BI1 CPU/bridge diagnostic
 
+The [cp1-io-cpu-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-io-cpu-2026-11-16)
+archives source checkpoint `db0a585`. All **917 files** matched locally and
+after download; see the [receipt](cp1-io-cpu-2026-11-16.json).
+
 `Verification/build/cp1-io-cpu/` is an additional bounded-replay dependency.
 The `cp1-io-cpu-2026-11-16` release preserves 34 composed profiles, including
 two endpoint-latency failures and three detected wiring mutations. There are
