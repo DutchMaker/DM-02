@@ -58,20 +58,12 @@ This protocol applies when ending a Beads implementation workflow. It is subordi
 <!-- END BEADS INTEGRATION -->
 
 
-## Build & Test
+## DM-02 engineering context
 
-_Add your build and test commands here_
-
-```bash
-# Example:
-# npm install
-# npm test
-```
-
-## Architecture Overview
-
-_Add a brief overview of your project architecture_
-
-## Conventions & Patterns
-
-_Add your project-specific conventions here_
+- Goal: fabrication-ready PCB designs followed by a demonstrably working TTL computer. Beads task closure does not replace technical acceptance evidence.
+- Start from CP1-R2 and `Verification/CP1.md`. Preserve the locked overlay, archived evidence and failed runs; changes require affected verification and a new accepted revision.
+- All logic and memory must be DIP; other fitted components through-hole. Prefer owned parts, but never infer an exact manufacturer/suffix/count or substitute HCT/HC/AHCT/ACT without qualification.
+- The formal 1 MHz target remains unresolved against the conditional 500 kHz microcycle evidence. Do not silently lower requirements or claim physical qualification from digital simulations.
+- Use `work-owner`, `work-bench` and `work-reviewer` labels to identify decisions, physical measurements and independent review. Do not fabricate their evidence. Track remaining work only in Beads.
+- Normal bounded replay: `python3 Verification/run.py --allow-design-failures`. Harness: `PYTHONPATH=Verification python3 -m unittest discover -s Verification/tests -v`. Restore archived dependencies using `Backup/README.md` first. Do not repeat unchanged long boot simulations.
+- See `.beads/README.md` for workflow, issue labels, remote recovery and the two release gates. Code and Beads data use separate Git refs; publish both when authorised.
