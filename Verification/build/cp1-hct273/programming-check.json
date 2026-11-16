@@ -1,0 +1,18 @@
+{
+  "images": {
+    "M27C1024-little-endian.bin": {
+      "bytes": 131072,
+      "sha256": "e041265358399b05135afb3a5c7ba5fb9de096743234fa143fc44008ef92deb5"
+    },
+    "W27C512-45Z-boot.bin": {
+      "bytes": 65536,
+      "sha256": "2985923a419e33ef4fe65361a928e6224ebac9d8e35cfb559601972168c32fba"
+    },
+    "M27C322-little-endian.bin": {
+      "bytes": 4194304,
+      "sha256": "ac92ed24cc8a70bb1d24705586dc522607fa3bc3e41409771487ea4e59335b9c"
+    }
+  },
+  "physical_programming_readback": false,
+  "byte_order": "Little-endian words for M27C322/M27C1024; byte-addressed W27C512. Programmer/readback remains outstanding."
+}

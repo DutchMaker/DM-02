@@ -10,7 +10,6 @@ from .common import ROOT, VROOT, BUILD, digest, write_json, command, evidence
 from .reporting import sources, now, trace, milestones
 
 TARGET = VROOT/'targets/cp1'
-ARCHIVE = BUILD/'compact-design'
 
 
 def checked_path(root, name):
@@ -25,6 +24,10 @@ def verify_hashes(root, expected):
         path = checked_path(root, name)
         if not path.is_file() or digest(path) != value:
             raise ValueError('Missing or changed locked input: '+str(path))
+
+
+def archive_root(lock):
+    return checked_path(BUILD,lock.get('evidence_directory','compact-design'))
 
 
 def materialize(lock, destination):
@@ -44,7 +47,7 @@ def validated_evidence(lock, output):
     with tempfile.TemporaryDirectory(prefix='cp1-', dir=output) as temporary:
         workspace = Path(temporary)
         materialize(lock, workspace/'candidate')
-        code, log = command([sys.executable, TARGET/'replay.py', workspace, ARCHIVE,
+        code, log = command([sys.executable, TARGET/'replay.py', workspace, archive_root(lock),
                              output/'equivalence.json'], timeout=300)
         (output/'equivalence.log').write_text(log)
         if code:
@@ -56,9 +59,11 @@ def validated_evidence(lock, output):
 
 
 def checks_from_evidence(lock):
+    archive = archive_root(lock)
+    directory = str(archive.relative_to(BUILD.resolve()))
     def check(id, title, status, summary, *artifacts, **extra):
         return evidence(id, title, status, summary,
-                        artifacts=['compact-design/'+p for p in artifacts], **extra)
+                        artifacts=[directory+'/'+p for p in artifacts], **extra)
     checks = [check('cp1-equivalence','CP1 active source and evidence equivalence','pass',
                     'Checked-in CP1 overlay and shared sources reproduce accepted physical-pin HDL. Saved simulations are reused with pinned inputs, models, fixtures and logs.',
                     'acceptance.json','source-manifest.json',provenance='locked replay'),
@@ -95,9 +100,22 @@ def checks_from_evidence(lock):
               check('electrical-review','Independent electrical review','blocked','Independent review of the selected components and wiring is outstanding.'),
               check('pcb','PCB fabrication review','blocked','Compact schematics are verified digitally; routed PCB review is outstanding.'),
               check('bench','Hardware calibration','blocked','No measured prototype qualification yet.')]
+    specification = directory+'/part-qualification.json'
+    if lock.get('revision')=='CP1-R2':
+        if specification not in lock['artifacts']:
+            raise ValueError('CP1-R2 requires pinned component qualification')
+        verify_hashes(BUILD,{specification:lock['artifacts'][specification]})
+        part = json.loads((archive/'part-qualification.json').read_text())
+        if not part.get('passed') or not part.get('missing_hold_monitor_mutation_detected'):
+            raise ValueError('Component qualification did not pass')
+        checks.append(check('component-specification','CD74HCT273E specification and pin qualification','pass',
+            'Three DIP-20 registers have explicit 38/40 ns clock/clear limits at 4.5 V, -40..85 C and 50 pF. All 60 pins match; the required 3 ns data hold is monitored throughout the fresh digital suite, including full boot. Actual loads and input edges remain unqualified.',
+            'part-qualification.json','component-review.json','acceptance.json'))
+        next(c for c in checks if c['id']=='timing')['summary'] = (
+            'CP1-R2 has documented HCT273 delay limits. Actual loads/edges, HCT245 loading/release and SRAM turnaround remain unqualified; the stated 1 MHz envelope is not demonstrated.')
     # These gates concern the unchanged verification method / compiler / PC
     # oracle. Keep their original scope and their failed parent run visible.
-    reference = json.loads((BUILD/lock['reference_report']).read_text())
+    reference = json.loads(checked_path(BUILD,lock['reference_report']).read_text())
     prefix = str(Path(lock['reference_report']).parent)+'/'
     for id in ('pilot','mutations','analog','microcode','control-flow'):
         original = next(c for c in reference['checks'] if c['id']==id)
@@ -124,7 +142,7 @@ def run(args, harness_check):
     report = dict(schema_version=1, target='cp1', mode='locked-evidence-replay',
                   started_at=now(), state='running', source_hashes=sources(), checks=[],
                   requirements=requirements, models=dict(target='CP1',parameters='targets/cp1/overlay/Verification/dm02/compact_hardware.py',
-                                                        qualification='build/compact-design/component-review.json',
+                                                        qualification='Selected by the pinned evidence directory',
                                                         frequency='4 MHz oscillator / 500 kHz microcycles, conditional'),
                   risks=[], tools={'python':platform.python_version()},
                   release=dict(status='blocked',message='CP1 — DIGITAL ACCEPTANCE ONLY; physical qualification and PCB review remain open.'))
@@ -135,13 +153,18 @@ def run(args, harness_check):
     save()
     try:
         lock = json.loads((TARGET/'lock.json').read_text())
+        archive = archive_root(lock)
+        directory = str(archive.relative_to(BUILD.resolve()))
+        report['revision'] = lock.get('revision','CP1')
+        report['models']['qualification'] = 'build/'+directory+'/component-review.json'
+        report['models']['target'] = report['revision']
         print('Checking CP1 source, evidence and regenerated HDL equivalence…',flush=True)
         report['equivalence'] = validated_evidence(lock, output)
         report['checks'] = checks_from_evidence(lock)
         report['artifact_hashes'] = dict(lock['artifacts'])
         report['provenance'] = dict(release=lock['release'], reference_report=lock['reference_report'],
-                                   acceptance='compact-design/acceptance.json')
-        boundaries = json.loads((ARCHIVE/'physical-review.json').read_text())['open_items']
+                                   acceptance=directory+'/acceptance.json')
+        boundaries = json.loads((archive/'physical-review.json').read_text())['open_items']
         report['risks'] = [dict(id=f'CP1-{i+1:02}',title=text,severity='open',
                                action='Requires physical or manufacturer qualification.',evidence='timing') for i,text in enumerate(boundaries)]
     except Exception as err:
@@ -164,10 +187,6 @@ def run(args, harness_check):
             verify_hashes(BUILD,lock['artifacts'])
         except Exception as err:
             report['checks'].append(evidence('evidence-change','Evidence changed during verification','error',str(err)))
-    if any(c['status']=='error' for c in report['checks']):
-        for c in report['checks']:
-            if c['id']=='control':
-                c['requirement_status']='blocked'
     artifacts = {p for c in report['checks'] for p in c.get('artifacts',[])}
     if report.get('equivalence'):
         artifacts.update('cp1/'+p.name for p in output.glob('equivalence.*'))
@@ -178,6 +197,10 @@ def run(args, harness_check):
             report['checks'].append(evidence('missing-'+p,'Missing artifact','error',p))
         elif p not in report['artifact_hashes']:
             report['artifact_hashes'][p] = digest(BUILD/p)
+    if any(c['status']=='error' for c in report['checks']):
+        for c in report['checks']:
+            if c['id']=='control':
+                c['requirement_status']='blocked'
     report.update(state='complete',finished_at=now())
     save()
     for m in report['milestones']:

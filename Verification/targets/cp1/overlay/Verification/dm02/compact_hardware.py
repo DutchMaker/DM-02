@@ -22,8 +22,11 @@ def parts():
     devices['CD74ACT175E'].update(max_delay_ns=13,source='cd74act175',pulse_ns=5,clear_pulse_ns=4)
     devices['SN74HC377N']=dict(function='377',source='sn74hc377',package='DIP-20',max_delay_ns=40,
         setup_ns=25,hold_ns=5,enable_hold_ns=5,pulse_ns=25,input_cap_pf=10,vih_min_v=3.15,vil_max_v=1.35)
-    devices['SN74HCT273N']=dict(function='273',source='sn74hct273',package='DIP-20',max_delay_ns=42,
-        setup_ns=25,hold_ns=0,recovery_ns=25,pulse_ns=25,clear_pulse_ns=20,input_cap_pf=10)
+    devices['CD74HCT273E']=dict(function='273',source='cd74hct273',package='DIP-20',max_delay_ns=42,
+        setup_ns=25,hold_ns=3,recovery_ns=25,pulse_ns=25,clear_pulse_ns=20,input_cap_pf=10,timing_load_pf=50,
+        clock_q_max_ns=38,clear_q_max_ns=40,datasheet_setup_ns=15,datasheet_clear_pulse_ns=15,
+        datasheet_reset_removal_ns=13,
+        qualification='SCHS174D, 4.5 V, -40..85 C, 50 pF, input tr/tf=6 ns. Conservative 42 ns output delay, 25 ns setup/reset-release separation and 20 ns clear pulse retained; 3 ns data hold enforced. Physical loading and supply edges remain open.')
     devices['CD74HCT191E']=dict(function='191',source='cd74hct191',package='DIP-16',max_delay_ns=50,
         clock_q_ns=34,clock_rco_ns=44,clock_tc_ns=53,data_q_ns=48,load_q_ns=50,
         data_setup_ns=15,data_hold_ns=2,enable_setup_ns=15,enable_hold_ns=2,direction_setup_ns=23,
@@ -58,7 +61,7 @@ class Circuit(Word):
 
     def extra_hdl(self,ref,kind,d,delay):
         n=self.n;v=self.vector
-        if kind=='273':return [f'cp273 #({delay(d["max_delay_ns"])}) {ref} '
+        if kind=='273':return [f'cp273 #({delay(d["max_delay_ns"])},{d["hold_ns"]}) {ref} '
             f'({v(ref,[3,4,7,8,13,14,17,18])},{n(ref,11)},{n(ref,1)},{v(ref,[2,5,6,9,12,15,16,19])});']
         if kind=='377':return [f'al1_377 #({delay(d["max_delay_ns"])},25,5,5,25) {ref} '
             f'({v(ref,[3,4,7,8,13,14,17,18])},{n(ref,11)},{n(ref,1)},{v(ref,[2,5,6,9,12,15,16,19])},reset_n);']

@@ -100,7 +100,8 @@ class Board:
         assert len(a)==len(q)==8
         if kind=='574':ns={1:control,11:clock,10:'GND',20:'5V',**dict(zip(range(2,10),a)),**dict(zip(range(19,11,-1),q))}
         else:ns={1:control,11:clock,10:'GND',20:'5V',**dict(zip(INPUT377,a)),**dict(zip(OUTPUT377,q))}
-        return self.ic('74xx:74LS'+kind,'SN74HC377N' if kind=='377' else 'SN74HCT'+kind+'N',ns,20,ref)
+        part='SN74HC377N' if kind=='377' else 'CD74HCT273E' if kind=='273' else 'SN74HCT'+kind+'N'
+        return self.ic('74xx:74LS'+kind,part,ns,20,ref)
     def ff(self,d,clock,q,nq,clear='RESET_n',ref=None):
         if ref is None:self.serial+=1;ref='U'+str(self.serial)
         self.add('74xx:74HC74',ref,'SN74AHC74N',{1:clear,2:d,3:clock,4:'5V',5:q,6:nq},DIP(14),1)

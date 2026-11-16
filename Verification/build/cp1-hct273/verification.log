@@ -1,0 +1,288 @@
+DONE CP counter rows=131584 full=1
+tb.sv:36: $finish called at 263170715000 (1ps)
+
+DONE CP counter rows=131584 full=1
+tb.sv:36: $finish called at 263170715000 (1ps)
+
+DONE CP counter rows=131584 full=1
+tb.sv:36: $finish called at 263170715000 (1ps)
+
+FATAL: tb.sv:16: CP counter mismatch row=32 got=0021/0021 want=001f
+       Time: 67915000  Scope: compact_counter_tb.cycle
+
+DONE RG1 captures=2052 transfers=4096 resets=4
+tb.sv:67: $finish called at 12327850000 (1ps)
+
+DONE RG1 captures=2052 transfers=4096 resets=4
+tb.sv:67: $finish called at 12327890500 (1ps)
+
+DONE RG1 captures=2052 transfers=4096 resets=4
+tb.sv:67: $finish called at 12327877500 (1ps)
+
+FATAL: tb.sv:26: RG1 stored state got=xx000000 want=00000000
+       Time: 1000000  Scope: register_hardware_tb.check
+
+FATAL: tb.sv:26: RG1 stored state got=xxxxxxxx want=00000000
+       Time: 1000000  Scope: register_hardware_tb.check
+
+DONE AL1 vectors=8192 F=256 commands=64
+tb.sv:71: $finish called at 66823340500 (1ps)
+CP273 hold alu_hardware_tb.dut.U2 events=40689 minimum_ns=243.000
+
+DONE memory-io reads=131073 writes=48897 protected=16384 io=256
+tb.sv:68: $finish called at 393235228000 (1ps)
+CP273 hold memory_hardware_tb.dut.U11 events=768 minimum_ns=252.500
+CP273 hold memory_hardware_tb.dut.U15 events=255 minimum_ns=1288.000
+
+DONE AL1 vectors=256 F=256 commands=64
+tb.sv:71: $finish called at 3335332000 (1ps)
+CP273 hold alu_hardware_tb.dut.U2 events=2456 minimum_ns=244.000
+
+DONE memory-io reads=768 writes=192 protected=64 io=256
+tb.sv:68: $finish called at 2575199000 (1ps)
+CP273 hold memory_hardware_tb.dut.U11 events=1283 minimum_ns=253.500
+CP273 hold memory_hardware_tb.dut.U15 events=318 minimum_ns=1253.000
+
+DONE CP MAR rows=197376 full=1
+tb.sv:35: $finish called at 444098715000 (1ps)
+
+DONE CP MAR rows=1312 full=0
+tb.sv:35: $finish called at 2954715000 (1ps)
+
+FATAL: tb.sv:14: CP MAR mismatch row=15 got=0000 want=0010
+       Time: 37915000  Scope: mar_tb.cycle
+
+{"corner": 0, "cases": false, "demo": null, "boot": false, "duty": 0.5, "ppm": 0, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 3.553764082491398, "log": "candidate/Verification/build/compact/c0-cases0/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2959005000 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=78 minimum_ns=1250.000
+CP1 physical bus handovers=628 minimum_disabled_ns=1000.000
+
+{"corner": 1, "cases": false, "demo": null, "boot": false, "duty": 0.5, "ppm": 0, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 3.5739813754335046, "log": "candidate/Verification/build/compact/c1-cases0/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2959045500 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=79 minimum_ns=1340.000
+CP1 physical bus handovers=628 minimum_disabled_ns=1006.000
+
+{"corner": 2, "cases": false, "demo": null, "boot": false, "duty": 0.5, "ppm": 0, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 3.695939375087619, "log": "candidate/Verification/build/compact/c2-cases0/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2959037000 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=180 minimum_ns=1270.000
+CP1 physical bus handovers=628 minimum_disabled_ns=941.500
+
+{"corner": 3, "cases": false, "demo": null, "boot": false, "duty": 0.5, "ppm": 0, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 4.170883917249739, "log": "candidate/Verification/build/compact/c3-cases0/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2959032500 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=211 minimum_ns=1266.500
+CP1 physical bus handovers=628 minimum_disabled_ns=940.000
+
+{"corner": 4, "cases": false, "demo": null, "boot": false, "duty": 0.5, "ppm": 0, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 3.8578483341261744, "log": "candidate/Verification/build/compact/c4-cases0/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2959024000 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=157 minimum_ns=1297.500
+CP1 physical bus handovers=628 minimum_disabled_ns=1009.000
+
+{"corner": 5, "cases": false, "demo": null, "boot": false, "duty": 0.5, "ppm": 0, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 4.1171594159677625, "log": "candidate/Verification/build/compact/c5-cases0/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2959032500 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=176 minimum_ns=1286.000
+CP1 physical bus handovers=628 minimum_disabled_ns=929.000
+
+{"corner": 6, "cases": false, "demo": null, "boot": false, "duty": 0.5, "ppm": 0, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 4.673567041754723, "log": "candidate/Verification/build/compact/c6-cases0/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2959274000 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=174 minimum_ns=1238.500
+CP1 physical bus handovers=628 minimum_disabled_ns=967.500
+
+{"corner": 7, "cases": false, "demo": null, "boot": false, "duty": 0.5, "ppm": 0, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 4.117037666961551, "log": "candidate/Verification/build/compact/c7-cases0/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2959032500 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=196 minimum_ns=1267.500
+CP1 physical bus handovers=628 minimum_disabled_ns=947.000
+
+{"corner": 8, "cases": false, "demo": null, "boot": false, "duty": 0.5, "ppm": 0, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 4.297960541211069, "log": "candidate/Verification/build/compact/c8-cases0/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2959037000 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=211 minimum_ns=1258.000
+CP1 physical bus handovers=628 minimum_disabled_ns=941.000
+
+{"corner": 9, "cases": false, "demo": null, "boot": false, "duty": 0.5, "ppm": 0, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 3.6363464575260878, "log": "candidate/Verification/build/compact/c9-cases0/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2959045500 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=227 minimum_ns=257.500
+CP1 physical bus handovers=628 minimum_disabled_ns=931.500
+
+{"corner": 10, "cases": false, "demo": null, "boot": false, "duty": 0.5, "ppm": 0, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 3.6497826669365168, "log": "candidate/Verification/build/compact/c10-cases0/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2959024000 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=282 minimum_ns=249.000
+CP1 physical bus handovers=628 minimum_disabled_ns=897.500
+
+{"corner": 11, "cases": false, "demo": null, "boot": false, "duty": 0.5, "ppm": 0, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 3.8620162084698677, "log": "candidate/Verification/build/compact/c11-cases0/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2959032500 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=272 minimum_ns=1266.500
+CP1 physical bus handovers=628 minimum_disabled_ns=932.000
+
+{"corner": 1, "cases": false, "demo": null, "boot": false, "duty": 0.37, "ppm": -30, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 3.535723582841456, "log": "candidate/Verification/build/compact/c1-cases0-d0.37-ppm-30/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2959137348 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=79 minimum_ns=1340.040
+CP1 physical bus handovers=628 minimum_disabled_ns=1006.032
+
+{"corner": 1, "cases": false, "demo": null, "boot": false, "duty": 0.37, "ppm": 30, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 3.5626877499744296, "log": "candidate/Verification/build/compact/c1-cases0-d0.37-ppm30/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2958953652 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=79 minimum_ns=1339.960
+CP1 physical bus handovers=628 minimum_disabled_ns=1005.968
+
+{"corner": 1, "cases": false, "demo": null, "boot": false, "duty": 0.63, "ppm": -30, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 3.6294755414128304, "log": "candidate/Verification/build/compact/c1-cases0-d0.63-ppm-30/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2959887372 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=79 minimum_ns=1340.040
+CP1 physical bus handovers=628 minimum_disabled_ns=1006.032
+
+{"corner": 1, "cases": false, "demo": null, "boot": false, "duty": 0.63, "ppm": 30, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 3.6204331247135997, "log": "candidate/Verification/build/compact/c1-cases0-d0.63-ppm30/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2959703628 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=79 minimum_ns=1339.960
+CP1 physical bus handovers=628 minimum_disabled_ns=1005.968
+
+{"corner": 4, "cases": false, "demo": null, "boot": false, "duty": 0.37, "ppm": -30, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 3.8818671656772494, "log": "candidate/Verification/build/compact/c4-cases0-d0.37-ppm-30/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2959115848 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=213 minimum_ns=1297.540
+CP1 physical bus handovers=628 minimum_disabled_ns=1009.032
+
+{"corner": 4, "cases": false, "demo": null, "boot": false, "duty": 0.37, "ppm": 30, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 3.847728000022471, "log": "candidate/Verification/build/compact/c4-cases0-d0.37-ppm30/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2958932152 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=213 minimum_ns=1297.460
+CP1 physical bus handovers=628 minimum_disabled_ns=1008.968
+
+{"corner": 4, "cases": false, "demo": null, "boot": false, "duty": 0.63, "ppm": -30, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 3.8368501253426075, "log": "candidate/Verification/build/compact/c4-cases0-d0.63-ppm-30/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2959115848 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=157 minimum_ns=1297.540
+CP1 physical bus handovers=628 minimum_disabled_ns=1009.032
+
+{"corner": 4, "cases": false, "demo": null, "boot": false, "duty": 0.63, "ppm": 30, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 3.8763390416279435, "log": "candidate/Verification/build/compact/c4-cases0-d0.63-ppm30/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2958932152 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=157 minimum_ns=1297.460
+CP1 physical bus handovers=628 minimum_disabled_ns=1008.968
+
+{"corner": 7, "cases": false, "demo": null, "boot": false, "duty": 0.37, "ppm": -30, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 4.117295499891043, "log": "candidate/Verification/build/compact/c7-cases0-d0.37-ppm-30/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2959124348 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=209 minimum_ns=1267.540
+CP1 physical bus handovers=628 minimum_disabled_ns=947.032
+
+{"corner": 7, "cases": false, "demo": null, "boot": false, "duty": 0.37, "ppm": 30, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 4.158735875040293, "log": "candidate/Verification/build/compact/c7-cases0-d0.37-ppm30/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2958940652 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=209 minimum_ns=1267.460
+CP1 physical bus handovers=628 minimum_disabled_ns=946.968
+
+{"corner": 7, "cases": false, "demo": null, "boot": false, "duty": 0.63, "ppm": -30, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 4.121753083541989, "log": "candidate/Verification/build/compact/c7-cases0-d0.63-ppm-30/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2959124348 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=196 minimum_ns=1267.540
+CP1 physical bus handovers=628 minimum_disabled_ns=947.032
+
+{"corner": 7, "cases": false, "demo": null, "boot": false, "duty": 0.63, "ppm": 30, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 4.115593457594514, "log": "candidate/Verification/build/compact/c7-cases0-d0.63-ppm30/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2958940652 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=196 minimum_ns=1267.460
+CP1 physical bus handovers=628 minimum_disabled_ns=946.968
+
+{"corner": 0, "cases": true, "demo": null, "boot": false, "duty": 0.5, "ppm": 0, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 100.20311254262924, "log": "candidate/Verification/build/compact/c0-cases1/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE fetched-opcodes cases=454 cycles=23002
+tb.sv:287: $finish called at 48160750000 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=4054 minimum_ns=1250.000
+CP1 physical bus handovers=10837 minimum_disabled_ns=1000.000
+
+{"corner": 1, "cases": true, "demo": null, "boot": false, "duty": 0.5, "ppm": 0, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 98.88312937505543, "log": "candidate/Verification/build/compact/c1-cases1/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE fetched-opcodes cases=454 cycles=23002
+tb.sv:287: $finish called at 48274040500 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=4246 minimum_ns=1340.000
+CP1 physical bus handovers=10837 minimum_disabled_ns=1006.000
+
+{"corner": 7, "cases": true, "demo": null, "boot": false, "duty": 0.5, "ppm": 0, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 110.42289141658694, "log": "candidate/Verification/build/compact/c7-cases1/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE fetched-opcodes cases=454 cycles=23002
+tb.sv:287: $finish called at 48274027500 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=10352 minimum_ns=1267.500
+CP1 physical bus handovers=10837 minimum_disabled_ns=896.500
+
+{"corner": 1, "cases": false, "demo": "hello_world", "boot": false, "duty": 0.5, "ppm": 0, "passed": true, "exit_code": 0, "timeout_seconds": 3600, "wall_seconds": 2.425543582998216, "log": "candidate/Verification/build/compact/c1-hello_world/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "7bda1081af7b58fb9cb2ec4b104cad6aac7971f7abba3b687c2ec9bba2337605", "io-expected.txt": "b05f5a4bb4804ec0576888d27787032b1991e3d502ea3f3be82845ea5706ce6e", "program.hex": "e911498a9943786831d72b8c5c3b2225d2002653d83243430f5999f537f3b657"}, "output": {"passed": true, "text": "Hello world\r:-)", "io_events": 15, "pixels_checked": 0, "pixel_errors": 0, "pixel_sha256": "bb918147fe10391b43adeba4bd21b9ef32e5bd6c5076c3517733a05ed6dd0569"}}
+DONE hardware-demo cycles=825 io=15
+tb.sv:296: $finish called at 1655790500 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=45 minimum_ns=1367.500
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=153 minimum_ns=1340.000
+CP1 physical bus handovers=463 minimum_disabled_ns=1006.000
+
+{"corner": 1, "cases": false, "demo": null, "boot": true, "duty": 0.5, "ppm": 0, "passed": true, "exit_code": 0, "timeout_seconds": 30525, "wall_seconds": 5676.090804291889, "log": "candidate/Verification/build/compact/c1-boot/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "boot-rom.hex": "ff7db8f27a7a42068a10549700b08846bac9a0111e069a70c70044d6277009ae", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "df1cffce7b220bcbbdcc13ffa6ac3a7aeb3a49fbe3a92c39e18a18b99b4e429c", "io-expected.txt": "bef4a15142094d11010a5a921f5f71e540360eb2c2fbcfb34b2a4b0ae2abec49", "loader-target.hex": "d0525bca389b35ba2ec2af1735030412b29429ca80fb748f230d3d622b3ce6c3", "program.hex": "dce270f5d64c7193562d948aeb50e59513645b47b66750ebd83ecdab2fedcb6d", "sram-power-on.hex": "b302f48cffde3b8e6dc024193ae3539ccc4c42b8d1bc445d6c67adec5b10a970"}, "output": {"passed": true, "text": "Hello world\r:-)", "io_events": 43829, "pixels_checked": 48000, "pixel_errors": 0, "pixel_sha256": "e11d5df9f9ce7a06febad97cf50e170aa4487bced5da42d10864de1ee754b691"}, "boot_check": {"boot_verified": true, "cycles_and_io_verified": true, "passed": true}}
+DONE BL1 payload_bytes=16542 writes=24326
+DONE hardware-demo cycles=2840175 io=43829
+tb.sv:314: $finish called at 5680355790500 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=131487 minimum_ns=1367.500
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=29294 minimum_ns=1367.500
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=325045 minimum_ns=1340.000
+CP1 physical bus handovers=1538375 minimum_disabled_ns=1006.000
+
+CP1 serial regression complete

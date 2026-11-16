@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "runs": [
+    {
+      "corner": 0,
+      "fault": null,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/registers-c0-valid/simulation.log",
+      "model_hashes": {
+        "registers.sv": "687399b2f422fd5704244374b286f3a3cf72e157ef03deaa7f2fd06ca28f4b33",
+        "support.sv": "b9b43332544b85121a18cf674696843f388e898a799b612f08b7f5eb037c7518",
+        "fabric.sv": "cba2ffbb90a1f499c5a9397d8639421335ca69b28102151cc51b10a3d8b74442",
+        "tb.sv": "31c51f2631ab899be627485d5526408c096f9675c388000cdc886adc89d287e1",
+        "clock.sv": "c642a6f4109197eb6b1854e2b782bf4f1e3da604afed29a855b51fcd07ee61eb"
+      }
+    },
+    {
+      "corner": 1,
+      "fault": null,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/registers-c1-valid/simulation.log",
+      "model_hashes": {
+        "registers.sv": "1c9df64151234f4785996e5e06373ceb620faabed39fbc8fba07f9a82ce4d0ea",
+        "support.sv": "b9b43332544b85121a18cf674696843f388e898a799b612f08b7f5eb037c7518",
+        "fabric.sv": "9c195c33ea2830d8df7dee889c4d94286592d6bca4d5694d01c8d9b340e5af11",
+        "tb.sv": "31c51f2631ab899be627485d5526408c096f9675c388000cdc886adc89d287e1",
+        "clock.sv": "3fe5fdb06d626e932e6f7ca33345fb57834b283ebab585c947173676175800e5"
+      }
+    },
+    {
+      "corner": 5,
+      "fault": null,
+      "passed": true,
+      "log": "candidate/Verification/build/compact/registers-c5-valid/simulation.log",
+      "model_hashes": {
+        "registers.sv": "9e2d13dd827b89249249dff01fdae80530898d0dc949ab8f30001a984c336a09",
+        "support.sv": "b9b43332544b85121a18cf674696843f388e898a799b612f08b7f5eb037c7518",
+        "fabric.sv": "e47178e3c5ca1c6d25a299a07130e01fdfbae3927b62882ad83f114e6007e8ab",
+        "tb.sv": "31c51f2631ab899be627485d5526408c096f9675c388000cdc886adc89d287e1",
+        "clock.sv": "a65197ad9211fbd0eab49e978cde5c3cbfd003b3e29b41b9322cd9f91930bad0"
+      }
+    },
+    {
+      "corner": 1,
+      "fault": "enable",
+      "passed": true,
+      "log": "candidate/Verification/build/compact/registers-c1-enable/simulation.log",
+      "model_hashes": {
+        "registers.sv": "3ec0d3b9555e40a6f886509a9e8093fe3b4f7350e773235c792c12a8c61b3a04",
+        "support.sv": "b9b43332544b85121a18cf674696843f388e898a799b612f08b7f5eb037c7518",
+        "fabric.sv": "9c195c33ea2830d8df7dee889c4d94286592d6bca4d5694d01c8d9b340e5af11",
+        "tb.sv": "31c51f2631ab899be627485d5526408c096f9675c388000cdc886adc89d287e1",
+        "clock.sv": "3fe5fdb06d626e932e6f7ca33345fb57834b283ebab585c947173676175800e5"
+      }
+    },
+    {
+      "corner": 1,
+      "fault": "init-clock",
+      "passed": true,
+      "log": "candidate/Verification/build/compact/registers-c1-init-clock/simulation.log",
+      "model_hashes": {
+        "registers.sv": "0c7ae6d282827e2a1e450f64632a7276d579696b7d231cb07d6879c8482ca12b",
+        "support.sv": "b9b43332544b85121a18cf674696843f388e898a799b612f08b7f5eb037c7518",
+        "fabric.sv": "9c195c33ea2830d8df7dee889c4d94286592d6bca4d5694d01c8d9b340e5af11",
+        "tb.sv": "31c51f2631ab899be627485d5526408c096f9675c388000cdc886adc89d287e1",
+        "clock.sv": "3fe5fdb06d626e932e6f7ca33345fb57834b283ebab585c947173676175800e5"
+      }
+    }
+  ]
+}

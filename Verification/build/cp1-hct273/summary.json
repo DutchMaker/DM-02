@@ -1,0 +1,42 @@
+{
+  "revision": "CP1-R2",
+  "digital_verification_passed": true,
+  "physical_qualification": false,
+  "logic_memory_packages": 192,
+  "baseline_packages": 288,
+  "saving": 96,
+  "all_logic_memory_dip": true,
+  "native_boards": 12,
+  "part_changes": "CD74HCT273E",
+  "minimum_observed_hold_ns": 243.0,
+  "boot_microcycles": 2840175,
+  "boot_io_events": 43829,
+  "pixel_errors": 0,
+  "milestones": [
+    {
+      "number": 1,
+      "passed": 3,
+      "total": 5
+    },
+    {
+      "number": 2,
+      "passed": 3,
+      "total": 5
+    },
+    {
+      "number": 3,
+      "passed": 8,
+      "total": 9
+    }
+  ],
+  "open_items": [
+    "No guaranteed HCT245 IO capacitance; 10 pF per port is a stated allocation.",
+    "HCT245 data/enable timing is taken at 150 pF; disable timing is only guaranteed at 50 pF.",
+    "CD74HCT273E clock/clear delays have explicit SCHS174D bounds at 4.5 V, -40..85 C and 50 pF. Actual output loads and input edges remain unqualified.",
+    "SRAM read table uses 30 pF; output release uses 5 pF. Actual DQ load and turnaround require qualification.",
+    "HC377 DC compatibility checked at 4.5 V only; full-supply loaded edges remain open.",
+    "MCP100-450D does not establish valid 4.75 V startup; the staged system retains an external qualified reset input.",
+    "Oscillator startup, duty at receiver thresholds, power integrity, routing and external IO electronics remain open.",
+    "Owned 191/245/574 manufacturer/suffix/counts and EPROM programmer/readback remain unresolved."
+  ]
+}

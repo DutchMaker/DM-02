@@ -80,6 +80,51 @@ class CP1AcceptanceTests(unittest.TestCase):
             self.assertEqual(report['checks'][0]['status'],'error')
             self.assertTrue(all(m['passed']==0 for m in report['milestones']))
 
+    def test_archive_selection_supports_legacy_and_rejects_escape(self):
+        self.assertEqual(cp1.archive_root({}),(cp1.BUILD/'compact-design').resolve())
+        self.assertEqual(cp1.archive_root({'evidence_directory':'revision-x'}),(cp1.BUILD/'revision-x').resolve())
+        with self.assertRaisesRegex(ValueError,'escapes'):
+            cp1.archive_root({'evidence_directory':'../outside'})
+
+    def test_revision_evidence_routes_to_pinned_directory(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root=Path(temporary);archive=root/'revision-x';archive.mkdir()
+            part=archive/'part-qualification.json'
+            part.write_text(json.dumps(dict(passed=True,missing_hold_monitor_mutation_detected=True)))
+            ref=root/'reference/report.json';ref.parent.mkdir()
+            ref.write_text(json.dumps(dict(checks=[dict(id=id,title=id,status='pass',artifacts=['method.json'])
+                for id in ('pilot','mutations','analog','microcode','control-flow')])))
+            key='revision-x/part-qualification.json'
+            lock=dict(revision='CP1-R2',evidence_directory='revision-x',reference_report='reference/report.json',artifacts={key:digest(part)})
+            with patch.object(cp1,'BUILD',root):
+                checks={c['id']:c for c in cp1.checks_from_evidence(lock)}
+                self.assertIn('revision-x/native-audit.json',checks['migration']['artifacts'])
+                self.assertEqual(checks['component-specification']['status'],'pass')
+                self.assertEqual(checks['timing']['status'],'blocked')
+                self.assertEqual(checks['pilot']['artifacts'],['reference/method.json'])
+                part.write_text(json.dumps(dict(passed=False,missing_hold_monitor_mutation_detected=True)))
+                with self.assertRaisesRegex(ValueError,'changed locked input'):
+                    cp1.checks_from_evidence(lock)
+                lock['artifacts'][key]=digest(part)
+                with self.assertRaisesRegex(ValueError,'qualification did not pass'):
+                    cp1.checks_from_evidence(lock)
+                lock['artifacts']={}
+                with self.assertRaisesRegex(ValueError,'requires pinned'):
+                    cp1.checks_from_evidence(lock)
+
+    def test_missing_declared_artifact_withholds_control_acceptance(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root=Path(temporary);target=root/'target';target.mkdir()
+            archive=root/'revision-x';archive.mkdir()
+            (archive/'physical-review.json').write_text('{"open_items":[]}')
+            (target/'lock.json').write_text(json.dumps(dict(artifacts={},evidence_directory='revision-x',release='fixture',reference_report='reference.json')))
+            checks=[dict(id='control',status='pass',artifacts=['missing.json'])]
+            with patch.object(cp1,'BUILD',root),patch.object(cp1,'TARGET',target),patch.object(cp1,'sources',return_value={'test':'fixed'}),patch.object(cp1,'validated_evidence',return_value={'passed':True}),patch.object(cp1,'checks_from_evidence',return_value=checks):
+                status=cp1.run(SimpleNamespace(browser=False,allow_design_failures=True),lambda:dict(id='harness',status='pass'))
+            report=json.loads((root/'report.json').read_text())
+            self.assertEqual(status,2)
+            self.assertEqual(next(c for c in report['checks'] if c['id']=='control')['requirement_status'],'blocked')
+
 
 if __name__=='__main__':
     unittest.main()

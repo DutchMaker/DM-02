@@ -1,9 +1,20 @@
 `timescale 1ns/1ps
 // Timing-table models at 4.5 V, -40..85 C. No assumed power-on zero state.
-module cp273 #(parameter real TQ=42)(input [7:0] d,input clk,clear_n,output [7:0] q);
+// CD74HCT273E: SCHS174D clock/clear maxima 38/40 ns at 4.5 V,
+// -40..85 C and 50 pF. Retain the conservative CP1 42 ns envelope.
+module cp273 #(parameter real TQ=42,TH=3)(input [7:0] d,input clk,clear_n,output [7:0] q);
  reg [7:0] stored;real ld=-10000,lc=-10000,lf=-10000,lr=-10000,la=-10000;
+ real minimum_data_hold=1.0e9;integer hold_events=0;
  assign #(TQ) q=stored;
- always @(d) ld=$realtime;
+ always @(d) begin
+   if(clear_n && lc>=0) begin
+     if($realtime-lc<minimum_data_hold) minimum_data_hold=$realtime-lc;
+     hold_events=hold_events+1;
+     if($realtime-lc<TH) $fatal(1,"CP273 data hold %m");
+   end
+   ld=$realtime;
+ end
+ final $display("CP273 hold %m events=%0d minimum_ns=%0.3f",hold_events,minimum_data_hold);
  always @(negedge clk) begin
    if(clear_n && $realtime-lc<25) $fatal(1,"CP273 clock high pulse %m");lf=$realtime;
  end

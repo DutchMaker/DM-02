@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "promoted": false,
+  "results": [
+    {
+      "viewport": "desktop",
+      "passed": true,
+      "links": 28
+    },
+    {
+      "viewport": "mobile",
+      "passed": true,
+      "links": 28
+    }
+  ]
+}

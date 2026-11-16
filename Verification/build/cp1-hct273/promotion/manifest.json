@@ -1,0 +1,10 @@
+{
+  "files": {
+    "original-report.json": "df81eb515701f42d09883bf2abcb22f96e99a1560b5bd4615269612bca688ab3",
+    "report.json": "29c8dc5a406a87f871c21b09a8fd2e38c60d3c41c74e89f7e5d2269218ca8c23",
+    "equivalence.json": "f6d3df2a162710abed096799eda8ff421d1b8c04563f0ea84af6d5bb14fdd808",
+    "smoke.log": "72bb2ee2179c3162913ed8105390ddc0e75c039e0bff25d0164cddba50c91332",
+    "equivalence.log": "7b23a3e59f7d737222dbaeb92155d1a328dbc4c732310d5d19c0485fceed32be",
+    "tests.log": "ba3dcb6c33eb323bfdbf85a10a336d38f537b543d3ef6bf1d23d04bc985d8e39"
+  }
+}

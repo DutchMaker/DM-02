@@ -1,0 +1,6 @@
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2959045500 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=79 minimum_ns=1340.000
+CP1 physical bus handovers=628 minimum_disabled_ns=1006.000

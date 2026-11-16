@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "budget": {
+    "expected_microcycles": 2840175,
+    "oscillator_period_ns": 250.0,
+    "nominal_schedule_ns": 5680350000.0,
+    "watchdog_ns": 11361700000.0,
+    "headroom_factor": 2,
+    "startup_allowance_ns": 1000000
+  },
+  "decoded_sram_sha256": "92637c8cb225bd128b795e12c87eb7a42d069e0fb0b9f4ffeee185770f5312b9",
+  "decoded_sram_bytes": 65536,
+  "fresh_full_boot": true
+}

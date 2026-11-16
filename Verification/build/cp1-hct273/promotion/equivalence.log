@@ -1,0 +1,38 @@
+Generated CP1 11 boards
+{"corner": 1, "cases": false, "demo": null, "boot": false, "duty": 0.5, "ppm": 0, "passed": true, "exit_code": 0, "timeout_seconds": 300, "wall_seconds": 3.6374952914193273, "log": "candidate/Verification/build/compact/c1-cases0/simulation.log", "fixture_hashes": {"alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad", "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e", "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68", "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921", "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c", "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2"}}
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2959045500 (1ps)
+CP273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000
+CP273 hold sequencer_tb.physical_alu.alu.U2 events=79 minimum_ns=1340.000
+CP1 physical bus handovers=628 minimum_disabled_ns=1006.000
+
+{
+  "passed": true,
+  "model_hashes_compared": 446,
+  "clock_models_compared": 10,
+  "regenerated_sources": [
+    "Circuits/KiCad/Compact/candidates/AL1.sch",
+    "Circuits/KiCad/Compact/candidates/BF1.sch",
+    "Circuits/KiCad/Compact/candidates/BP1.sch",
+    "Circuits/KiCad/Compact/candidates/C1.sch",
+    "Circuits/KiCad/Compact/candidates/CW1.sch",
+    "Circuits/KiCad/Compact/candidates/DT1.sch",
+    "Circuits/KiCad/Compact/candidates/MA1.sch",
+    "Circuits/KiCad/Compact/candidates/ME1.sch",
+    "Circuits/KiCad/Compact/candidates/PC1.sch",
+    "Circuits/KiCad/Compact/candidates/RG1.sch",
+    "Circuits/KiCad/Compact/candidates/SP1.sch",
+    "Circuits/KiCad/Compact/candidates/SQ1.sch",
+    "Circuits/KiCad/Compact/candidates/boards.json",
+    "Circuits/KiCad/Compact/candidates/connections.json"
+  ],
+  "source_files_checked": 430,
+  "fresh_smoke": {
+    "passed": true,
+    "corner": 1,
+    "log": "cp1/smoke.log",
+    "wall_seconds": 3.6374952914193273
+  },
+  "full_simulations": "Reused pinned accepted evidence; full boot not rerun."
+}

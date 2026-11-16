@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "alu_addresses": 2097152,
+  "control_words": 65536,
+  "counter_conflicting_words": 0,
+  "images": {
+    "M27C1024-little-endian.bin": {
+      "bytes": 131072,
+      "sha256": "e041265358399b05135afb3a5c7ba5fb9de096743234fa143fc44008ef92deb5"
+    },
+    "M27C322-little-endian.bin": {
+      "bytes": 4194304,
+      "sha256": "ac92ed24cc8a70bb1d24705586dc522607fa3bc3e41409771487ea4e59335b9c"
+    }
+  },
+  "physical_programming_readback": false,
+  "word_format": "16-bit word address order, low byte first; programmer adapter/byte convention must be checked against readback."
+}

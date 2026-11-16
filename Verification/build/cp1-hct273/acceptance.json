@@ -1,0 +1,292 @@
+{
+  "passed": true,
+  "revision": "CP1-R2",
+  "digital_only": true,
+  "physical_qualification": false,
+  "cpu_profiles": 29,
+  "clock_profiles": 150,
+  "full_counter_profiles": 3,
+  "standalone_module_profiles": 4,
+  "mar_profiles": 3,
+  "verified_model_artifact_hashes": 446,
+  "selected_273": "CD74HCT273E",
+  "full_digital_rerun": true,
+  "hold_observations": [
+    {
+      "log": "candidate/Verification/build/compact/c0-cases0/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 78,
+      "minimum_hold_ns": 1250.0
+    },
+    {
+      "log": "candidate/Verification/build/compact/c1-cases0/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 79,
+      "minimum_hold_ns": 1340.0
+    },
+    {
+      "log": "candidate/Verification/build/compact/c2-cases0/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 180,
+      "minimum_hold_ns": 1270.0
+    },
+    {
+      "log": "candidate/Verification/build/compact/c3-cases0/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 211,
+      "minimum_hold_ns": 1266.5
+    },
+    {
+      "log": "candidate/Verification/build/compact/c4-cases0/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 157,
+      "minimum_hold_ns": 1297.5
+    },
+    {
+      "log": "candidate/Verification/build/compact/c5-cases0/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 176,
+      "minimum_hold_ns": 1286.0
+    },
+    {
+      "log": "candidate/Verification/build/compact/c6-cases0/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 174,
+      "minimum_hold_ns": 1238.5
+    },
+    {
+      "log": "candidate/Verification/build/compact/c7-cases0/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 196,
+      "minimum_hold_ns": 1267.5
+    },
+    {
+      "log": "candidate/Verification/build/compact/c8-cases0/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 211,
+      "minimum_hold_ns": 1258.0
+    },
+    {
+      "log": "candidate/Verification/build/compact/c9-cases0/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 227,
+      "minimum_hold_ns": 257.5
+    },
+    {
+      "log": "candidate/Verification/build/compact/c10-cases0/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 282,
+      "minimum_hold_ns": 249.0
+    },
+    {
+      "log": "candidate/Verification/build/compact/c11-cases0/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 272,
+      "minimum_hold_ns": 1266.5
+    },
+    {
+      "log": "candidate/Verification/build/compact/c1-cases0-d0.37-ppm-30/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 79,
+      "minimum_hold_ns": 1340.04
+    },
+    {
+      "log": "candidate/Verification/build/compact/c1-cases0-d0.37-ppm30/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 79,
+      "minimum_hold_ns": 1339.96
+    },
+    {
+      "log": "candidate/Verification/build/compact/c1-cases0-d0.63-ppm-30/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 79,
+      "minimum_hold_ns": 1340.04
+    },
+    {
+      "log": "candidate/Verification/build/compact/c1-cases0-d0.63-ppm30/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 79,
+      "minimum_hold_ns": 1339.96
+    },
+    {
+      "log": "candidate/Verification/build/compact/c4-cases0-d0.37-ppm-30/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 213,
+      "minimum_hold_ns": 1297.54
+    },
+    {
+      "log": "candidate/Verification/build/compact/c4-cases0-d0.37-ppm30/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 213,
+      "minimum_hold_ns": 1297.46
+    },
+    {
+      "log": "candidate/Verification/build/compact/c4-cases0-d0.63-ppm-30/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 157,
+      "minimum_hold_ns": 1297.54
+    },
+    {
+      "log": "candidate/Verification/build/compact/c4-cases0-d0.63-ppm30/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 157,
+      "minimum_hold_ns": 1297.46
+    },
+    {
+      "log": "candidate/Verification/build/compact/c7-cases0-d0.37-ppm-30/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 209,
+      "minimum_hold_ns": 1267.54
+    },
+    {
+      "log": "candidate/Verification/build/compact/c7-cases0-d0.37-ppm30/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 209,
+      "minimum_hold_ns": 1267.46
+    },
+    {
+      "log": "candidate/Verification/build/compact/c7-cases0-d0.63-ppm-30/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 196,
+      "minimum_hold_ns": 1267.54
+    },
+    {
+      "log": "candidate/Verification/build/compact/c7-cases0-d0.63-ppm30/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 196,
+      "minimum_hold_ns": 1267.46
+    },
+    {
+      "log": "candidate/Verification/build/compact/c0-cases1/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 4054,
+      "minimum_hold_ns": 1250.0
+    },
+    {
+      "log": "candidate/Verification/build/compact/c1-cases1/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 4246,
+      "minimum_hold_ns": 1340.0
+    },
+    {
+      "log": "candidate/Verification/build/compact/c7-cases1/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 10352,
+      "minimum_hold_ns": 1267.5
+    },
+    {
+      "log": "candidate/Verification/build/compact/c1-hello_world/simulation.log",
+      "device": "sequencer_tb.physical_memory.memory.U11",
+      "events": 45,
+      "minimum_hold_ns": 1367.5
+    },
+    {
+      "log": "candidate/Verification/build/compact/c1-hello_world/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 153,
+      "minimum_hold_ns": 1340.0
+    },
+    {
+      "log": "candidate/Verification/build/compact/c1-boot/simulation.log",
+      "device": "sequencer_tb.physical_memory.memory.U11",
+      "events": 131487,
+      "minimum_hold_ns": 1367.5
+    },
+    {
+      "log": "candidate/Verification/build/compact/c1-boot/simulation.log",
+      "device": "sequencer_tb.physical_memory.memory.U15",
+      "events": 29294,
+      "minimum_hold_ns": 1367.5
+    },
+    {
+      "log": "candidate/Verification/build/compact/c1-boot/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 325045,
+      "minimum_hold_ns": 1340.0
+    },
+    {
+      "log": "candidate/Verification/build/compact/alu-module-c1-quick0/simulation.log",
+      "device": "alu_hardware_tb.dut.U2",
+      "events": 40689,
+      "minimum_hold_ns": 243.0
+    },
+    {
+      "log": "candidate/Verification/build/compact/memory-module-c1-quick0/simulation.log",
+      "device": "memory_hardware_tb.dut.U11",
+      "events": 768,
+      "minimum_hold_ns": 252.5
+    },
+    {
+      "log": "candidate/Verification/build/compact/memory-module-c1-quick0/simulation.log",
+      "device": "memory_hardware_tb.dut.U15",
+      "events": 255,
+      "minimum_hold_ns": 1288.0
+    },
+    {
+      "log": "candidate/Verification/build/compact/alu-module-c4-quick1/simulation.log",
+      "device": "alu_hardware_tb.dut.U2",
+      "events": 2456,
+      "minimum_hold_ns": 244.0
+    },
+    {
+      "log": "candidate/Verification/build/compact/memory-module-c4-quick1/simulation.log",
+      "device": "memory_hardware_tb.dut.U11",
+      "events": 1283,
+      "minimum_hold_ns": 253.5
+    },
+    {
+      "log": "candidate/Verification/build/compact/memory-module-c4-quick1/simulation.log",
+      "device": "memory_hardware_tb.dut.U15",
+      "events": 318,
+      "minimum_hold_ns": 1253.0
+    }
+  ],
+  "minimum_observed_hold_ns": 243.0,
+  "boot_hold_observations": [
+    {
+      "log": "candidate/Verification/build/compact/c1-boot/simulation.log",
+      "device": "sequencer_tb.physical_memory.memory.U11",
+      "events": 131487,
+      "minimum_hold_ns": 1367.5
+    },
+    {
+      "log": "candidate/Verification/build/compact/c1-boot/simulation.log",
+      "device": "sequencer_tb.physical_memory.memory.U15",
+      "events": 29294,
+      "minimum_hold_ns": 1367.5
+    },
+    {
+      "log": "candidate/Verification/build/compact/c1-boot/simulation.log",
+      "device": "sequencer_tb.physical_alu.alu.U2",
+      "events": 325045,
+      "minimum_hold_ns": 1340.0
+    }
+  ],
+  "specification_gap_closed": "The selected 273 now has explicit clock/clear delay limits in SCHS174D; 3 ns hold is monitored in every new simulation.",
+  "physical_boundary": [
+    "No guaranteed HCT245 IO capacitance; 10 pF per port is a stated allocation.",
+    "HCT245 data/enable timing is taken at 150 pF; disable timing is only guaranteed at 50 pF.",
+    "CD74HCT273E clock/clear delays have explicit SCHS174D bounds at 4.5 V, -40..85 C and 50 pF. Actual output loads and input edges remain unqualified.",
+    "SRAM read table uses 30 pF; output release uses 5 pF. Actual DQ load and turnaround require qualification.",
+    "HC377 DC compatibility checked at 4.5 V only; full-supply loaded edges remain open.",
+    "MCP100-450D does not establish valid 4.75 V startup; the staged system retains an external qualified reset input.",
+    "Oscillator startup, duty at receiver thresholds, power integrity, routing and external IO electronics remain open.",
+    "Owned 191/245/574 manufacturer/suffix/counts and EPROM programmer/readback remain unresolved."
+  ],
+  "key_receipt_sha256": {
+    "verification-state.json": "648e6b0945bee9ddbe45c9a70a5a7aa2d8201ee4625e7a0056830a18252faa69",
+    "module-check.json": "8061788bb9d88888b8828c4e902a9d1ac965d78b0c446a1491e2bb0c09506aaa",
+    "mar-check.json": "29c87c73bc25ab051fc286fd5fda8693c4d7488c06f45147ea7ad8b89e8a590b",
+    "register-check.json": "9a681c75541291e565380bbd43cf1c69d471e5d268897bd6c8f9adc329976a3d",
+    "clock-check.json": "47727a0a9671a800524380985dfe31d6c95b419c32b04e6c0649dc4fd0d13353",
+    "fault-check.json": "8e6b62a195bf464d080906234335cced7a973acfd58725db01832570a96f2962",
+    "part-qualification.json": "ec49e6b746e4a71e32ab0fba7a4b4243ddccc3d35f4abb8df77e5773af4c5d01",
+    "native-audit.json": "fecd3bf024a215f40685c399f20fe38bf12a0e2bf4afa873c4ad513580ddb5d6",
+    "interconnect-check.json": "c8d869faedb5706158ccffc5cb0126b72189d77091e6079925b52aab3a8764b2",
+    "physical-review.json": "70723ae365a27e8445cb2788e2ee01a1681e76db9bc127e47fec1e1f113f19c3",
+    "component-review.json": "eb2247b3c157073b4e641e260adb6356bc0dc5f0d62e4e2e382b839acae9d379",
+    "rom-check.json": "26d723e0e3a9f0a99415b1b708792650934722e18f58ad68157b01452fd6ba51",
+    "workbook-validation.json": "9a754bc0d0c751419c2e1ce33be2a1d392de6f472ddc3faafd63a3d47aa89c35",
+    "source-manifest.json": "de7045339f05986979d0d6cb256310b41584852e6c8c3cf6151addc8aec36f68"
+  }
+}
