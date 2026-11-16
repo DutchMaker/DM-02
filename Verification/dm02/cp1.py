@@ -8,7 +8,7 @@ import traceback
 from pathlib import Path
 from .common import ROOT, VROOT, BUILD, digest, write_json, command, evidence
 from .reporting import sources, now, trace, milestones
-from . import operating_contract
+from . import operating_contract, io_contract
 
 TARGET = VROOT/'targets/cp1'
 
@@ -188,9 +188,29 @@ def run(args, harness_check):
         report['provenance'] = dict(release=lock['release'], reference_report=lock['reference_report'],
                                    acceptance=directory+'/acceptance.json', operating_contract=contract['revision'],
                                    historical_requirements='Verification/requirements.json')
+        io = io_contract.evaluate()
+        report['io_contract'] = io['contract']
+        requirements['scope_revision'] = io['contract']['scope']['revision']
+        requirements['scope'] = ('Autonomous ROM-booted DIP/through-hole stack/backplane computer; '
+            'text-first expandable IO, local controls and a separate optional ESP32/LCD debugger. '
+            'Physical graphics, keyboard and storage are later peripheral additions.')
+        report['provenance']['first_machine_scope'] = requirements['scope_revision']
+        report['provenance']['io_contract'] = io['contract']['revision']
+        report['artifact_hashes'].update(io['boundary']['source_hashes'])
+        write_json(output/'io-contract-check.json', io)
+        write_json(output/'io-interface.json', io['contract'])
+        report['checks'].append(evidence('io-contract','First-machine scope and logical expansion interface','limited',
+            f'{requirements["scope_revision"]} / {io["contract"]["revision"]}: '
+            f'{io["protocol"]["full_address_reads"]:,} address reads and {io["protocol"]["io_write_cases"]:,} write cases passed. '
+            'Native R2 audit confirms the existing connector lacks a live read address/qualifier; physical bridge and endpoints remain open.',
+            artifacts=['cp1/io-contract-check.json','cp1/io-interface.json'],
+            limitation='Logical transaction/reference-model and native-boundary evidence only. No physical IO or connector timing acceptance.'))
         boundaries = json.loads((archive/'physical-review.json').read_text())['open_items']
         report['risks'] = [dict(id=f'CP1-{i+1:02}',title=text,severity='open',
-                               action='Requires physical or manufacturer qualification.',evidence='timing') for i,text in enumerate(boundaries)]
+                                action='Requires physical or manufacturer qualification.',evidence='timing') for i,text in enumerate(boundaries)]
+        report['risks'].append(dict(id='CP1-IO1',title='Expansion reads need live address and qualified selection',
+            severity='open',action='Implement and qualify the CP1-IO1 bridge, private returns and text endpoint under dm02-57n.4.1/.4.2.',
+            evidence='io-contract'))
     except Exception as err:
         (output/'error.log').write_text(traceback.format_exc())
         report['checks'] = [evidence('cp1-equivalence','CP1 acceptance replay','error',str(err),artifacts=['cp1/error.log'])]

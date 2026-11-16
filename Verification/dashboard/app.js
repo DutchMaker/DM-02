@@ -26,6 +26,14 @@ function render() {
     const clock=contract.clock;
     contractPanel.innerHTML=`<div class="eyebrow">${esc(contract.revision)} / SELECTED OPERATING CONTRACT</div><h2>${esc(clock.microcycle_nominal_hz/1000)} kHz microcycles · ${esc(clock.oscillator_nominal_hz/1000000)} MHz oscillator</h2><p>${esc(contract.supply.min_v)}–${esc(contract.supply.max_v)} V at IC pins · ${esc(contract.ambient.min_c)}–${esc(contract.ambient.max_c)} °C ambient. The preferred ${esc(clock.preferred_microcycle_hz/1000000)} MHz microcycle rate is optional.</p><p><strong>Physical qualification pending.</strong> Startup, reset, loaded edges and complete min/max timing still require acceptance. The historical requirements and R2 simulation inputs remain preserved.</p><div class="links"><a href="/Operating-contract.md">Operating contract and acceptance rules ↗</a><a href="/build/cp1/qualification-matrix.json">Specified qualification matrix ↗</a><a href="/build/cp1-readiness/">Clock-selection evidence ↗</a></div>`;
   }
+  let ioPanel=$('io-contract');
+  if(!ioPanel) {
+    ioPanel=document.createElement('section');ioPanel.id='io-contract';ioPanel.className='panel';
+    $('milestones').before(ioPanel);
+  }
+  const io=report.io_contract;
+  ioPanel.hidden=!io;
+  if(io) ioPanel.innerHTML=`<div class="eyebrow">${esc(io.scope.revision)} / FIRST MACHINE · ${esc(io.revision)} / LOGICAL IO</div><h2>Text-first computer with peripheral expansion</h2><p>Autonomous ROM boot · stack/backplane · local reset/run/halt/step · separate ESP32/LCD debugger. Computer and peripheral cards remain DIP/through-hole.</p><p><strong>Physical interface implementation pending.</strong> The current output connector carries a registered write address. Expansion reads need a separate live address, qualified selection and buffered return path.</p><div class="links"><a href="/IO-interface.md">Scope, address map and handshake ↗</a><a href="/build/cp1/io-contract-check.json">Logical checks and native connector audit ↗</a></div>`;
   $('milestones').innerHTML=(report.milestones||[]).map(m=>`<article class="milestone">${badge(m.status)}<span class="number">0${m.number}</span><h3>${esc(m.title)}</h3><p>${esc(m.summary)}</p><details><summary>Acceptance gates</summary><ul>${(m.gates||[]).map(g=>`<li>${badge(g.status)} <a href="#check-${esc(g.gate)}">${esc(g.id)}</a>: ${esc(g.text)}</li>`).join('')}</ul></details></article>`).join('');
   const counts={}; report.checks.forEach(c=>counts[c.status]=(counts[c.status]||0)+1);
   $('counts').innerHTML=Object.entries(counts).map(([s,n])=>`<span>${n} ${badge(s)}</span>`).join('');

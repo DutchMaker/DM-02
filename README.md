@@ -10,6 +10,8 @@ The current hardware candidate is **CP1-R2: 192 DIP logic/memory packages**, dow
 
 The selected first-build [operating contract, CP1-OC1](./Verification/Operating-contract.md), specifies **500 kHz microcycles from a 4 MHz oscillator**, 4.75–5.25 V at IC pins and 0–50 °C ambient. The original 1 MHz goal is preferred rather than mandatory. The historical documentation and locked simulation inputs retain the earlier requirement; the active dashboard shows the versioned contract and remaining qualification gates.
 
+The agreed [first-machine scope and expansion interface](./Verification/IO-interface.md) use a stack/backplane, autonomous ROM boot, real text output and future peripheral cards. A separate ESP32/LCD debugger is permitted; the computer and peripheral cards retain their DIP/through-hole requirements. The logical IO contract is checked, with physical bridge, connector and endpoint implementation still open.
+
 Remaining work is tracked in [Beads](./.beads/README.md), with dependencies and acceptance criteria through PCB fabrication and measured hardware qualification. Run `bd bootstrap --yes` on a fresh clone, then `bd ready` to find unblocked work.
 
 **[Start by reading the introduction](./Documentation/)**

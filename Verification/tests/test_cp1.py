@@ -119,7 +119,9 @@ class CP1AcceptanceTests(unittest.TestCase):
             archive=root/'revision-x';archive.mkdir()
             (archive/'physical-review.json').write_text('{"open_items":[]}')
             (target/'lock.json').write_text(json.dumps(dict(revision='CP1-R2',artifacts={},evidence_directory='revision-x',release='fixture',reference_report='reference.json')))
-            for name in cp1.operating_contract.load()['evidence']:
+            names = list(cp1.operating_contract.load()['evidence']) + [
+                'Verification/build/'+cp1.io_contract.NATIVE.format(board=b) for b in ('ME1','BP1')]
+            for name in names:
                 if name.startswith('Verification/build/'):
                     relative=name.removeprefix('Verification/build/');destination=root/relative
                     destination.parent.mkdir(parents=True,exist_ok=True)
@@ -139,7 +141,9 @@ class CP1AcceptanceTests(unittest.TestCase):
             (archive/'physical-review.json').write_text('{"open_items":[]}')
             (target/'lock.json').write_text(json.dumps(dict(revision='CP1-R2',artifacts={},evidence_directory='revision-x',release='fixture',reference_report='reference.json')))
             contract=cp1.operating_contract.load()
-            for name in contract['evidence']:
+            names = list(contract['evidence']) + [
+                'Verification/build/'+cp1.io_contract.NATIVE.format(board=b) for b in ('ME1','BP1')]
+            for name in names:
                 if name.startswith('Verification/build/'):
                     relative=name.removeprefix('Verification/build/');destination=root/relative
                     destination.parent.mkdir(parents=True,exist_ok=True)

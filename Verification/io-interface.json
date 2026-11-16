@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "revision": "CP1-IO1",
+  "status": "logical interface specification; physical implementation pending",
+  "baseline_revision": "CP1-R2",
+  "operating_contract": "CP1-OC1",
+  "physical_qualification": false,
+  "scope": {
+    "revision": "CP1-SC1",
+    "decision_issue": "dm02-57n.1.3",
+    "owner_approval": "Agreed, continue, following the text-first expandable IO and separate debugger recommendation, 2026-11-16.",
+    "format": "stack/backplane",
+    "boot": "Autonomous execution from physically programmed and readback-verified ROM, with RAM initialized by the computer.",
+    "first_endpoint": "Real text output through a computer-side peripheral; engineer a serial transmitter to an external terminal as the initial implementation.",
+    "operator_controls": ["reset", "run-resume", "halt", "microcycle-step"],
+    "expansion": "Buffered memory-mapped peripheral interface with documented addressing, readiness, timing, loading and power limits.",
+    "debugger": "Separate ESP32/LCD-class equipment; non-74xxx and surface-mount parts permitted only outside the computer. Observe bus/control state and request qualified operator actions.",
+    "computer_packages": "Logic and memory DIP; all other fitted components through-hole, including peripheral cards and computer-side debugger interface.",
+    "independent_operation": "Boot and run with debugger disconnected; no host-provided clock, emulated memory, bootstrap injection or execution service.",
+    "later_peripherals": ["physical graphics", "keyboard", "storage/program loader"],
+    "deferred_features": ["interrupt handling", "DMA/bus mastering", "hot plug"],
+    "regression": "Retain the archived full digital graphics and instruction evidence. Text-first physical scope does not qualify a physical graphics endpoint."
+  },
+  "addressing": {
+    "io_base": 65280,
+    "io_size": 256,
+    "registers": [
+      {"name": "text_data", "offset": 0, "access": "write", "owner": "text"},
+      {"name": "graphics_data", "offset": 1, "access": "write", "owner": "graphics-reserved"},
+      {"name": "graphics_command", "offset": 2, "access": "write", "owner": "graphics-reserved"},
+      {"name": "text_status", "offset": 3, "access": "read", "owner": "text"},
+      {"name": "text_control", "offset": 4, "access": "write", "owner": "text"}
+    ],
+    "reserved_offsets": [5, 15],
+    "expansion_offsets": [16, 255],
+    "unmapped_read_value": 0,
+    "unmapped_write": "ignore",
+    "allocation": "Exact address decoding; each allocated address/direction has one owner. Expansion addresses are unassigned, not tied to an assumed slot count."
+  },
+  "text": {
+    "ready_mask": 1,
+    "overrun_mask": 2,
+    "present_mask": 128,
+    "control_w1c_mask": 2,
+    "mailbox_capacity_bytes": 1,
+    "protocol": "Poll PRESENT and READY, then write one byte. READY grants one credit to the sole CPU writer and remains valid until that write or reset. No timeout silently consumes the credit.",
+    "busy_write": "Discard the new byte and set sticky OVERRUN; preserve the queued byte. Software treats OVERRUN as a failed diagnostic.",
+    "reset": "Reset overrides reads, writes and transmitter handoff; discard pending data and clear OVERRUN. READY stays low until endpoint initialization completes. Interrupted serial output must be discarded by the receiver at restart.",
+    "reads": "Side-effect-free status; unimplemented bits read zero. An absent endpoint returns zero, including PRESENT and READY.",
+    "transmitter_handoff": "Consume a queued byte only when the serializer can accept it. The reference model has no baud clock or physical serializer.",
+    "poll_timeout": "Boot diagnostics use a bounded poll count and expose a local fault if the endpoint is absent or remains busy. The count is selected with the implemented baud rate and worst-case service latency."
+  },
+  "signals": [
+    {"name": "W_ADDR[7:0]", "direction": "bridge-to-card", "meaning": "Registered write-event address, derived from J902 IO_ADDRESS; never use for CPU reads."},
+    {"name": "W_DATA[7:0]", "direction": "bridge-to-card", "meaning": "Registered write-event data, derived from J902 IO_DATA."},
+    {"name": "W_STROBE", "direction": "bridge-to-card", "meaning": "One rising edge commits one decoded write; reset masks it. Derive from registered IO_STROBE, not raw changing MAR decode."},
+    {"name": "R_ADDR[7:0]", "direction": "bridge-to-card", "meaning": "Live MAR address for the current CPU read, separately buffered from the write-event address."},
+    {"name": "R_VALID", "direction": "bridge-to-card", "meaning": "Qualified IO read with valid supply/reset and stable address. Logical condition is IO page selected and memory read active and memory write inactive. Glitch/timing closure is required."},
+    {"name": "R_DATA[7:0]", "direction": "card-to-bridge-private", "meaning": "Dedicated return per card. Central selection/multiplexing drives the single ME1 IO_INPUT byte; card outputs are never tied together."},
+    {"name": "RESET_n", "direction": "bridge-to-card", "meaning": "Qualified reset; forces inactive transaction state and clears endpoint state."},
+    {"name": "+5V/GND", "direction": "power", "meaning": "Defined power and return contacts; voltage at IC pins follows CP1-OC1. Per-slot current/contact/return budget pending."}
+  ],
+  "read_architecture": "Separate private card returns selected by a central multiplexer; a single bridge output drives ME1 IO_INPUT. Define zero for absent/unallocated endpoints and reset. Reads have no side effects, so asynchronous address changes cannot pop a FIFO; future consumption uses explicit acknowledged writes.",
+  "timing_boundary": "Logical events only. New capture paths require >=10 ns setup reserve and positive hold/release/pulse margin under CP1-OC1. Calculate live MAR-to-card-to-mux-to-ME1-to-BF1-to-destination timing, including same-microcycle MAR transfer, before accepting a pinout or circuitry.",
+  "physical_contract_status": "not-selected",
+  "remaining_contract_owners": {
+    "partition_dimensions_slots": "dm02-57n.1.2",
+    "connector_pinout_and_timing": "dm02-57n.4.1",
+    "loading_and_edges": "dm02-57n.3.2",
+    "power": "dm02-57n.3.8",
+    "text_endpoint": "dm02-57n.4.2",
+    "debugger": "dm02-57n.4.3",
+    "diagnostic_rom": "dm02-57n.5.3",
+    "physical_demonstration": "dm02-57n.8.6"
+  }
+}
