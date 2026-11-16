@@ -25,3 +25,10 @@ Code/Assembler/app/*
 .flightdeck/agent-status
 .flightdeck/runtime/
 .flightdeck/hooks.toml
+
+# Beads / Dolt files (added by bd init)
+.dolt/
+*.db
+.beads-credential-key
+.beads/proxieddb/
+*.gate.lock*
