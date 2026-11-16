@@ -2,6 +2,13 @@
 
 ## CP1-CA1 native CPU connector assembly
 
+The [cp1-connector-assembly-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-connector-assembly-2026-11-16)
+archives source checkpoint `af40aa3`. All **287 files** matched locally and
+after download; see the [receipt](cp1-connector-assembly-2026-11-16.json).
+
+The bounded replay passed **223 tests**. **282 remote hashes** and
+desktop/mobile browser checks passed at `/build/cp1-connector-assembly/`.
+
 `Verification/build/cp1-connector-assembly/` is an additional bounded-replay
 dependency. It preserves separate-card and mated graph checks, four mutations,
 the first development iteration and sixteen SVG sheet views. The checked-in

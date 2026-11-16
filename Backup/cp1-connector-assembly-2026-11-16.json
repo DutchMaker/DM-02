@@ -1,0 +1,37 @@
+{
+  "release": "https://github.com/DutchMaker/DM-02/releases/tag/cp1-connector-assembly-2026-11-16",
+  "git_commit": "af40aa3703c8d2322b25af2d37b58fd1794737f6",
+  "download_verified": true,
+  "files_verified": 287,
+  "manifest_sha256": "a733b57a4f7dd934205fd0a085eb457ed7ebc591ea6d86ed243645f3eb7bba8d",
+  "archives": {
+    "studies-and-workbook.tar.gz": {
+      "bytes": 25120050,
+      "sha256": "fe06f2fbc50910724b5ec5d262b48a15ca5edaa716bc2b6f9662f1fab58bcec7",
+      "files": 287
+    }
+  },
+  "design_revision": "CP1-R2",
+  "study_revision": "CP1-CA1",
+  "harness_tests_passed": 223,
+  "milestones_passed": [3, 3, 8],
+  "dip_logic_memory_count": 270,
+  "candidate_fitted_components": 606,
+  "fitted_cpu_connectors": 16,
+  "contact_pairs_checked": 768,
+  "connector_pins_checked": 1536,
+  "memory_extensions_checked": 17,
+  "native_pins_checked": 7324,
+  "unmated_net_groups": 2420,
+  "preserved_functional_pins": 5788,
+  "preserved_functional_net_groups": 1755,
+  "removed_boundary_markers": 58,
+  "wiring_mutations_detected": 4,
+  "global_bypass_unmated_differences": 713,
+  "global_bypass_mated_functional_differences": 0,
+  "physical_qualification": false,
+  "promoted_into_R2": false,
+  "new_dynamic_simulation": false,
+  "remote_publication_hashes_verified": 282,
+  "browser_viewports_passed": ["desktop", "mobile"]
+}
