@@ -131,7 +131,49 @@ This is an incremental archive. Restore `compact-design-2026-11-16` and
 The active source overlay and replay entry point are tracked in Git. See
 [`Verification/CP1.md`](../Verification/CP1.md) for execution and source locations.
 
-The alternative HCT273 passed eight sampled CPU/memory profiles with an added
+At this checkpoint, the alternative HCT273 passed eight sampled CPU/memory profiles with an added
 3 ns hold monitor, with a smallest observed hold interval of 252.5 ns. The
-alternative has not been adopted; physical loading and full qualification remain
+alternative had not been adopted; physical loading and full qualification remained
 open. This study does not close a physical milestone gate.
+
+## CP1-R2 active revision
+
+The [cp1-hct273-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-hct273-2026-11-16)
+preserves the accepted revision at commit
+`606d816ad4a9888dc60b7fe4c5e68cb9526c4317`. All **1,906 files** matched locally
+and after downloading from GitHub. The [receipt](cp1-hct273-2026-11-16.json)
+records the archive and manifest hashes. The archive includes the complete
+candidate, simulations, updated BOM, programming images, failed native-audit
+attempt and final promotion report.
+
+Three CD74HCT273E DIP registers replace SN74HCT273N at AL1 U2 and ME1 U11/U15.
+Their documented clock/clear delay bounds resolve the earlier specification
+ambiguity. The full fresh digital suite passed with a 3 ns data-hold monitor;
+the smallest sampled interval was 243 ns. ROM boot completed 2,840,175
+microcycles and 43,829 IO events, with exact text and zero errors across
+48,000 pixels. All **164 harness tests** passed.
+
+CP1-R2 remains at 192 DIP logic/memory ICs, saving 96 against the 288-package
+baseline. Milestone totals remain **3/5, 3/5 and 8/9**. Exact stock/sourcing,
+independent electrical review, actual loads and input edges, bus/SRAM release,
+HC377 supply compatibility, reset/oscillator behaviour, programming/readback
+and PCB/bench qualification remain open.
+
+### Restoration dependencies
+
+For default locked-evidence replay, restore this release and
+`analog-retry-timeout-2026-11-15` into the repository root. The latter supplies
+the pinned reference evidence. The active overlay and runner are tracked in
+Git; run `python3 Verification/run.py --allow-design-failures` after restoration.
+
+For full study reproduction, also restore `compact-design-2026-11-16` for the
+comparative pin/net audit and original workbook. The R2 `run.py --prepare`
+expects `Verification/build/microcode/microcode.rom` and
+`Verification/build/alu/alu0.rom` through `alu7.rom`. Matching archived copies
+are under `Verification/build/cp1-hct273/candidate/Verification/build/`;
+copy them to those normal input paths before preparation. Full simulation
+commands are in the archived `Verification/build/cp1-hct273/README.md`.
+
+The [live dashboard](https://ruud-macbook-pro-2023.tail668f59.ts.net:8020/)
+and [R2 evidence](https://ruud-macbook-pro-2023.tail668f59.ts.net:8020/build/cp1-hct273/)
+are available through Tailscale.

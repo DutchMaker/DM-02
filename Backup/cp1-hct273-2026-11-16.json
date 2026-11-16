@@ -1,0 +1,30 @@
+{
+  "release": "https://github.com/DutchMaker/DM-02/releases/tag/cp1-hct273-2026-11-16",
+  "git_commit": "606d816ad4a9888dc60b7fe4c5e68cb9526c4317",
+  "download_verified": true,
+  "files_verified": 1906,
+  "manifest_sha256": "2583a700436c4dd7cee1ea95401a8d2aa4ba6b57cca39252826e8aa48b737d1d",
+  "archives": {
+    "studies-and-workbook.tar.gz": {
+      "bytes": 71597396,
+      "sha256": "991f54d1f754019ca36a2e654d5b58090acb8438fbbfad9cd3a38a0e6abd0242",
+      "files": 1906
+    }
+  },
+  "revision": "CP1-R2",
+  "selected_273": "CD74HCT273E",
+  "full_digital_rerun": true,
+  "harness_tests_passed": 164,
+  "minimum_sampled_hold_ns": 243.0,
+  "milestones_passed": [
+    3,
+    3,
+    8
+  ],
+  "milestones_total": [
+    5,
+    5,
+    9
+  ],
+  "physical_qualification": false
+}
