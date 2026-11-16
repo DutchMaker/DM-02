@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "revision": "CP1-MC1",
+  "baseline_revision": "CP1-R2",
+  "status": "owner-selected mechanical target",
+  "owner_approved": true,
+  "approval": {"date": "2026-11-16", "quote": "Agreed, continue", "issue": "dm02-57n.1.2", "context": "Approval of the four-card 250 x 200 mm / eight-position 270 x 270 mm active-backplane proposal."},
+  "physical_qualification": false,
+  "cpu_card_mm": [250, 200],
+  "backplane_mm": [270, 270],
+  "electronics_envelope_mm": [270, 270, 230],
+  "envelope_excludes": ["enclosure walls", "external cables", "card extraction space"],
+  "card_pitch_mm": 30,
+  "positions": ["control", "compute", "counters", "memory", "text", "expansion-1", "expansion-2", "expansion-3"],
+  "partition": {
+    "control": ["CW1", "SQ1"],
+    "compute": ["AL1", "RG1"],
+    "counters": ["PC1", "SP1"],
+    "memory": ["MA1", "ME1"],
+    "active-backplane": ["C1", "DT1", "BF1", "BP1"]
+  },
+  "layers": 4,
+  "nominal_thickness_mm": 1.6,
+  "planning_keepouts_mm": {"side_rail_each": 5, "top_access": 10, "bottom_connector": 25},
+  "orientation": "Removable vertical cards mating into a horizontal active backplane; positive role-specific mechanical keying required.",
+  "socket_access": "Remove a card with power off to reach socketed ICs. Extraction clearance and component height require actual socket/connector/guide dimensions.",
+  "power_entry": "Single external regulated 5 V input at an accessible backplane edge, through a polarised through-hole connector; protection, rating and wire gauge follow the power budget.",
+  "cost_constraint": "No owner price ceiling supplied. Obtain vendor quotes before fabrication.",
+  "legacy_reuse": "No legacy PCB reuse accepted without pad-net and mechanical equivalence checks.",
+  "connector_provision": {"cpu_contacts": [96, 96], "peripheral_contacts": [96], "status": "engineering candidate; exact fit and coding pending"},
+  "evidence": {"Verification/build/cp1-partition/screen.json": "90f6a2852a63a5fae67bae46859fef92eac7da0479147fac436d47f7acc9c4e3"},
+  "qualification_owners": {"hardware_bom": "dm02-57n.2.3", "loading": "dm02-57n.3.2", "power": "dm02-57n.3.8", "connector_contract": "dm02-57n.4.1", "mechanical_qualification": "dm02-57n.6.3"}
+}

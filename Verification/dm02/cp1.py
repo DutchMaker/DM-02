@@ -8,7 +8,7 @@ import traceback
 from pathlib import Path
 from .common import ROOT, VROOT, BUILD, digest, write_json, command, evidence
 from .reporting import sources, now, trace, milestones
-from . import operating_contract, io_contract
+from . import operating_contract, io_contract, connector_plan
 
 TARGET = VROOT/'targets/cp1'
 
@@ -205,6 +205,22 @@ def run(args, harness_check):
             'Native R2 audit confirms the existing connector lacks a live read address/qualifier; physical bridge and endpoints remain open.',
             artifacts=['cp1/io-contract-check.json','cp1/io-interface.json'],
             limitation='Logical transaction/reference-model and native-boundary evidence only. No physical IO or connector timing acceptance.'))
+        mechanical = connector_plan.mechanical()
+        pins = connector_plan.generate()
+        pin_check = connector_plan.validate(pins)
+        report['mechanical_contract'] = mechanical
+        report['provenance']['mechanical_contract'] = mechanical['revision']
+        report['artifact_hashes'].update(pins['source_hashes'])
+        report['artifact_hashes'].update({name.removeprefix('Verification/build/'):sha
+            for name,sha in mechanical['evidence'].items()})
+        write_json(output/'mechanical-contract.json',mechanical)
+        write_json(output/'connector-plan.json',pins)
+        write_json(output/'connector-check.json',pin_check)
+        report['checks'].append(evidence('connector-plan','Selected geometry and draft connector assignment','limited',
+            f'{mechanical["revision"]} owner-selected; {pin_check["contacts_checked"]} contacts checked against native boundaries. '
+            'Memory uses 109/112 signal positions including 17 circuit additions. Footprint fit and electrical implementation remain open.',
+            artifacts=['cp1/mechanical-contract.json','cp1/connector-plan.json','cp1/connector-check.json'],
+            limitation='Pin allocation is not fabrication, circuit timing or physical qualification.'))
         boundaries = json.loads((archive/'physical-review.json').read_text())['open_items']
         report['risks'] = [dict(id=f'CP1-{i+1:02}',title=text,severity='open',
                                 action='Requires physical or manufacturer qualification.',evidence='timing') for i,text in enumerate(boundaries)]

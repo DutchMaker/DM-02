@@ -121,6 +121,8 @@ class CP1AcceptanceTests(unittest.TestCase):
             (target/'lock.json').write_text(json.dumps(dict(revision='CP1-R2',artifacts={},evidence_directory='revision-x',release='fixture',reference_report='reference.json')))
             names = list(cp1.operating_contract.load()['evidence']) + [
                 'Verification/build/'+cp1.io_contract.NATIVE.format(board=b) for b in ('ME1','BP1')]
+            names += ['Verification/build/'+n for n in cp1.connector_plan.native_boundary()['source_hashes']]
+            names += list(cp1.connector_plan.mechanical()['evidence'])
             for name in names:
                 if name.startswith('Verification/build/'):
                     relative=name.removeprefix('Verification/build/');destination=root/relative
@@ -143,6 +145,8 @@ class CP1AcceptanceTests(unittest.TestCase):
             contract=cp1.operating_contract.load()
             names = list(contract['evidence']) + [
                 'Verification/build/'+cp1.io_contract.NATIVE.format(board=b) for b in ('ME1','BP1')]
+            names += ['Verification/build/'+n for n in cp1.connector_plan.native_boundary()['source_hashes']]
+            names += list(cp1.connector_plan.mechanical()['evidence'])
             for name in names:
                 if name.startswith('Verification/build/'):
                     relative=name.removeprefix('Verification/build/');destination=root/relative

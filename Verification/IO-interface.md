@@ -39,7 +39,7 @@ Reads are side-effect-free. A future receive FIFO exposes its head and status th
 
 A pending registered write and a current CPU read may be visible together. Their addresses remain independent. The bridge/card implementation must define and verify coincident state changes, particularly status sampling while a serializer accepts a byte. The logical model serializes events and makes no metastability claim.
 
-Physical pin numbers, connector family/orientation, slot count, stub length, current per slot and capacitive limits are not selected by this logical specification. `.1.2`, `.2.3`, `.3.2`, `.3.8` and `.4.1` own those decisions. Do not manufacture a connector from the signal-list order in the JSON.
+Physical assignments are developed separately in the [CP1-CN1 draft connector plan](Connector-plan.md), following the owner-selected [CP1-MC1 eight-position geometry](Mechanical-contract.md). Stub length, current per slot and capacitive limits remain unqualified under `.3.2`, `.3.8` and `.4.1`; exact hardware belongs to `.2.3`. Do not manufacture a connector from the signal-list order in the IO1 JSON.
 
 ## Address map
 

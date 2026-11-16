@@ -32,6 +32,14 @@ function render() {
     $('milestones').before(ioPanel);
   }
   const io=report.io_contract;
+  let mechanicalPanel=$('mechanical-contract');
+  if(!mechanicalPanel) {
+    mechanicalPanel=document.createElement('section');mechanicalPanel.id='mechanical-contract';mechanicalPanel.className='panel';
+    $('milestones').before(mechanicalPanel);
+  }
+  const mechanical=report.mechanical_contract;
+  mechanicalPanel.hidden=!mechanical;
+  if(mechanical) mechanicalPanel.innerHTML=`<div class="eyebrow">${esc(mechanical.revision)} / OWNER-SELECTED GEOMETRY</div><h2>Four 250 × 200 mm CPU cards · eight positions</h2><p>270 × 270 mm active backplane · 30 mm pitch · four layers. Draft connector plan checks 1,242 contacts against native R2 boundaries.</p><p><strong>Connector fit and physical qualification pending.</strong> The memory card uses 109 of 112 signal positions, including the new live-address/read interface.</p><div class="links"><a href="/Mechanical-contract.md">Selected mechanical contract ↗</a><a href="/Connector-plan.md">Connector semantics and candidates ↗</a><a href="/build/cp1-connectors/">Contact tables and checks ↗</a></div>`;
   ioPanel.hidden=!io;
   if(io) ioPanel.innerHTML=`<div class="eyebrow">${esc(io.scope.revision)} / FIRST MACHINE · ${esc(io.revision)} / LOGICAL IO</div><h2>Text-first computer with peripheral expansion</h2><p>Autonomous ROM boot · stack/backplane · local reset/run/halt/step · separate ESP32/LCD debugger. Computer and peripheral cards remain DIP/through-hole.</p><p><strong>Physical interface implementation pending.</strong> The current output connector carries a registered write address. Expansion reads need a separate live address, qualified selection and buffered return path.</p><div class="links"><a href="/IO-interface.md">Scope, address map and handshake ↗</a><a href="/build/cp1/io-contract-check.json">Logical checks and native connector audit ↗</a></div>`;
   $('milestones').innerHTML=(report.milestones||[]).map(m=>`<article class="milestone">${badge(m.status)}<span class="number">0${m.number}</span><h3>${esc(m.title)}</h3><p>${esc(m.summary)}</p><details><summary>Acceptance gates</summary><ul>${(m.gates||[]).map(g=>`<li>${badge(g.status)} <a href="#check-${esc(g.gate)}">${esc(g.id)}</a>: ${esc(g.text)}</li>`).join('')}</ul></details></article>`).join('');

@@ -1,5 +1,7 @@
 # CP1 active verification
 
+[CP1-MC1](Mechanical-contract.md) records the approved four-card/eight-position geometry. The [CP1-CN1 draft connector study](Connector-plan.md) maps native crossing nets onto candidate contacts and adds the live-read/debugger paths. The bounded replay checks this allocation separately from circuit and physical acceptance.
+
 The active revision is **CP1-R2**. Three CD74HCT273E DIP registers replace SN74HCT273N at AL1 U2 and ME1 U11/U15. TI SCHS174D provides explicit clock/clear delay bounds of 38/40 ns at 4.5 V, −40 to 85 °C and 50 pF. The model retains the conservative 42 ns envelope and now enforces 3 ns data hold. A fresh complete digital suite, including ROM boot, passed before promotion. Evidence and the updated BOM are in `build/cp1-hct273/`.
 
 `python3 Verification/run.py` now selects CP1. It writes the normal dashboard report with the existing milestone requirements. `--allow-design-failures` allows exit 0 while physical acceptance gates are open; missing or changed evidence still exits 2.
