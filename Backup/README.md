@@ -2,6 +2,13 @@
 
 ## CP1-TB1 ROM-only serial startup
 
+The [cp1-text-boot-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-text-boot-2026-11-16)
+archives source checkpoint `9b0e4bc`. All **364 files** matched locally and
+after download; see the [receipt](cp1-text-boot-2026-11-16.json).
+
+The bounded replay passed **213 tests**. **359 remote hashes** and
+desktop/mobile browser checks passed at `/build/cp1-text-boot/`.
+
 `Verification/build/cp1-text-boot/` is an additional bounded-replay dependency.
 It preserves six passing ROM-startup profiles, three detected loader faults and
 two development elaboration failures. `Verification/text-boot-evidence.json`

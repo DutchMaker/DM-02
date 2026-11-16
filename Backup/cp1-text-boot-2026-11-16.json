@@ -1,0 +1,33 @@
+{
+  "release": "https://github.com/DutchMaker/DM-02/releases/tag/cp1-text-boot-2026-11-16",
+  "git_commit": "9b0e4bc79b36f0459f1c6802bb228a72db8297b5",
+  "download_verified": true,
+  "files_verified": 364,
+  "manifest_sha256": "184c420d8982d76e4e1fef3e05b68680684337a3cae9b7ed85112560b6eafe40",
+  "archives": {
+    "studies-and-workbook.tar.gz": {
+      "bytes": 8774093,
+      "sha256": "5f3c245d8edf657308d863d7553e93a8a005899e0beff8d8dc761eeddb608bac",
+      "files": 364
+    }
+  },
+  "design_revision": "CP1-R2",
+  "study_revision": "CP1-TB1",
+  "harness_tests_passed": 213,
+  "milestones_passed": [3, 3, 8],
+  "startup_profiles_passed": 6,
+  "mutations_detected": 3,
+  "preserved_elaboration_failures": 2,
+  "loader_bytes": 806,
+  "payload_bytes": 160,
+  "loader_instructions": 322,
+  "transcript_hex": "5458310d0a",
+  "minimum_sampled_cpu_setup_ns": 81.5,
+  "minimum_sampled_cpu_hold_ns": 250,
+  "physical_qualification": false,
+  "promoted_into_R2": false,
+  "rom_only_startup": true,
+  "host_boot_injected": false,
+  "remote_publication_hashes_verified": 359,
+  "browser_viewports_passed": ["desktop", "mobile"]
+}
