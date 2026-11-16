@@ -1,5 +1,26 @@
 # Git and evidence checkpoints
 
+## CP1-SC1 scope and CP1-IO1 logical expansion interface
+
+The [cp1-io-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-io-2026-11-16)
+preserves the approved first-machine scope, logical IO specification, native
+connector audit and fresh replay at `1fc82eb`. All **29 files** matched locally
+and after download; see the [receipt](cp1-io-2026-11-16.json).
+
+The replay passed **182 harness tests**. The logical model checked 65,536
+address reads and 1,024 write cases; the boundary audit checked 139 native
+connector/storage pins. Desktop/mobile checks and 24 publication hashes passed
+at `/build/cp1-io/` on the Tailscale dashboard.
+
+The new addressed-read bridge, physical connectors and real text endpoint
+remain unimplemented. These results do not promote a circuit revision or close
+physical gates. The separate PCB partition proposal and reproducible area
+screen are tracked in Git under `Verification/build/cp1-partition`; they await
+owner approval and placement/routing checks.
+
+This release is an optional report snapshot. Default replay still requires
+the R2, reference and readiness releases described below.
+
 ## CP1-OC1 selected operating contract
 
 The [cp1-contract-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-contract-2026-11-16)

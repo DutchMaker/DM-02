@@ -1,0 +1,26 @@
+{
+  "release": "https://github.com/DutchMaker/DM-02/releases/tag/cp1-io-2026-11-16",
+  "git_commit": "1fc82ebe98307c0dc8eed12b8443000720d4e03d",
+  "download_verified": true,
+  "files_verified": 29,
+  "manifest_sha256": "f62d5be65523de960c9a5630c382034bf39dd05302ddbe2b0da1e0b3ff1b0f7f",
+  "archives": {
+    "studies-and-workbook.tar.gz": {
+      "bytes": 3026482,
+      "sha256": "2b1a59fbca451e347acad1a53e16e5ec2cd26207fd9524cafbe9b6c45f95957a",
+      "files": 29
+    }
+  },
+  "scope_revision": "CP1-SC1",
+  "io_revision": "CP1-IO1",
+  "design_revision": "CP1-R2",
+  "harness_tests_passed": 182,
+  "milestones_passed": [3, 3, 8],
+  "logical_address_reads": 65536,
+  "logical_write_cases": 1024,
+  "native_pins_checked": 139,
+  "physical_qualification": false,
+  "remote_publication_hashes_verified": 24,
+  "browser_viewports_passed": ["desktop", "mobile"],
+  "mechanical_proposal": "Tracked separately in Git under Verification/build/cp1-partition; not owner-approved or physically qualified."
+}
