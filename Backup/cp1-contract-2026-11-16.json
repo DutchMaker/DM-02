@@ -1,0 +1,23 @@
+{
+  "release": "https://github.com/DutchMaker/DM-02/releases/tag/cp1-contract-2026-11-16",
+  "git_commit": "cb896229421bc258862615aff6d193089bd03988",
+  "download_verified": true,
+  "files_verified": 27,
+  "manifest_sha256": "be1f8cf2e37240941715d902ecb05720bf749b60bfa17cf6d453339f49cf64c4",
+  "archives": {
+    "studies-and-workbook.tar.gz": {
+      "bytes": 2812263,
+      "sha256": "70ffbbf6363b2838346dba18387f5294de8423e9b6962071e086be74815687fd",
+      "files": 27
+    }
+  },
+  "contract_revision": "CP1-OC1",
+  "design_revision": "CP1-R2",
+  "harness_tests_passed": 172,
+  "milestones_passed": [3, 3, 8],
+  "physical_rows_specified": 54,
+  "digital_coverage_requests": 90,
+  "physical_qualification": false,
+  "remote_publication_hashes_verified": 22,
+  "browser_viewports_passed": ["desktop", "mobile"]
+}

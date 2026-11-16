@@ -1,5 +1,23 @@
 # Git and evidence checkpoints
 
+## CP1-OC1 selected operating contract
+
+The [cp1-contract-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-contract-2026-11-16)
+preserves the selected operating contract, generated qualification matrix,
+fresh replay report and source snapshots at `cb89622`. All **27 files** were
+verified locally and after download; see the [receipt](cp1-contract-2026-11-16.json).
+The replay passed **172 harness tests**. Desktop/mobile dashboard checks and
+22 publication hashes passed.
+
+CP1-OC1 selects 500 kHz microcycles, 4 MHz oscillator, 4.75–5.25 V at IC pins
+and 0–50 °C ambient. Its 54 physical rows and 90 digital coverage requests
+specify future qualification; they do not record completed measurements.
+The circuit remains CP1-R2 and physical gates remain open. The publication is
+at `/build/cp1-contract/` on the Tailscale dashboard.
+
+This archive is a report snapshot. Default replay still needs the R2,
+reference and readiness releases listed under restoration dependencies below.
+
 ## CP1-R2 clock and electrical readiness study
 
 The [cp1-readiness-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-readiness-2026-11-16)
