@@ -65,6 +65,13 @@ function render() {
   }
   textPanel.hidden=!report.text_card;
   if(report.text_card) textPanel.innerHTML=`<div class="eyebrow">CP1-TX1 / SERIAL TEXT CANDIDATE</div><h2>37 DIP ICs · all 256 bytes decoded</h2><p>Six standalone profiles passed mailbox, framing, overrun and reset checks; four injected faults were detected. Six CPU/bridge profiles passed, including absent-device handling. The five-byte TX1 transcript finished after CPU HALT.</p><p>Local 4 MHz oscillator, 9600-baud terminal setting, 5 V TTL TX/GND header. <strong>Physical terminal output and clock-domain crossing qualification remain open.</strong> The CPU diagnostic uses preloaded memory; R2 remains the accepted circuit.</p><div class="links"><a href="/Text-card.md">Circuit, timing and qualification scope ↗</a><a href="/build/cp1-text/">Native schematic and evidence ↗</a></div>`;
+  let bootPanel=$('text-boot');
+  if(!bootPanel) {
+    bootPanel=document.createElement('section');bootPanel.id='text-boot';bootPanel.className='panel';
+    $('milestones').before(bootPanel);
+  }
+  bootPanel.hidden=!report.text_boot;
+  if(report.text_boot) bootPanel.innerHTML=`<div class="eyebrow">CP1-TB1 / ROM-ONLY SERIAL STARTUP</div><h2>Six startup profiles · three loader faults detected</h2><p>From reset PC zero, an 806-byte ROM loader deposits the 160-byte text diagnostic into poisoned SRAM at $4000. All six runs emit TX1 CR LF; the serializer finishes after CPU HALT. The architectural oracle checks all 160 writes and 322 loader instructions.</p><p>Four SRAM poison seeds, maximum/zero/mixed delay profiles and a 25 ms reset guard. Lowest sampled CPU setup: 81.5 ns. <strong>Physical startup and terminal/CDC qualification remain open.</strong> R2 remains the accepted circuit.</p><div class="links"><a href="/Text-boot.md">ROM image, method and scope ↗</a><a href="/build/cp1-text-boot/">Startup and mutation evidence ↗</a></div>`;
   const counts={}; report.checks.forEach(c=>counts[c.status]=(counts[c.status]||0)+1);
   $('counts').innerHTML=Object.entries(counts).map(([s,n])=>`<span>${n} ${badge(s)}</span>`).join('');
   renderChecks();

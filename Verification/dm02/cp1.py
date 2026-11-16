@@ -8,7 +8,7 @@ import traceback
 from pathlib import Path
 from .common import ROOT, VROOT, BUILD, digest, write_json, command, evidence
 from .reporting import sources, now, trace, milestones
-from . import operating_contract, io_contract, connector_plan, io_bridge_evidence, io_cpu_evidence, text_evidence
+from . import operating_contract, io_contract, connector_plan, io_bridge_evidence, io_cpu_evidence, text_evidence, text_boot_evidence
 
 TARGET = VROOT/'targets/cp1'
 
@@ -256,6 +256,18 @@ def run(args, harness_check):
             'five emitted TX1 CR LF and finished transmission after CPU HALT. Fast CPU sample setup 81.476 ns.',
             artifacts=['cp1-text/final/matrix.json','cp1-text/final/audit.json'],
             limitation='DIP/THT candidate with 9600-baud TTL output. Preloaded CPU diagnostic; physical terminal, CDC/metastability, reset/min-max timing, load/slew and autonomous ROM boot remain open.'))
+        boot_lock,boot_matrix = text_boot_evidence.load(BUILD)
+        report['artifact_hashes'].update(boot_lock['artifacts'])
+        report['text_boot'] = dict(revision='CP1-TB1',passing_profiles=6,mutations_detected=3,
+            payload_bytes=160,loader_bytes=806,rom_only_startup=True,host_boot_injected=False,
+            physical_qualification=False,promoted_into_R2=False)
+        report['checks'].append(evidence('text-boot','ROM-only startup into the serial text diagnostic','limited',
+            'Six profiles started at reset PC zero, deposited 160 bytes into poisoned SRAM and emitted TX1 CR LF. '
+            'All transcripts finished after HALT. Three loader mutations detected; architectural oracle checks 322 instructions. '
+            'Lowest sampled CPU setup 81.5 ns; reset request held for 25 ms.',
+            artifacts=['cp1-text-boot/matrix.json','cp1-text-boot/guarded-max/oracle.json',
+                       'cp1-text-boot/guarded-max/simulation.log'],
+            limitation='Composed R2/BR1/TX1 simulation with stable clocks and supply assumed. Physical ROM programming/readback, startup supervision, terminal/CDC qualification and native assembly promotion remain open.'))
         boundaries = json.loads((archive/'physical-review.json').read_text())['open_items']
         report['risks'] = [dict(id=f'CP1-{i+1:02}',title=text,severity='open',
                                 action='Requires physical or manufacturer qualification.',evidence='timing') for i,text in enumerate(boundaries)]

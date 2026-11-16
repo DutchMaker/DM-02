@@ -14,6 +14,8 @@ The active revision is **CP1-R2**. Three CD74HCT273E DIP registers replace SN74H
 
 The active source overlay is in `targets/cp1/overlay/`. `targets/cp1/lock.json` maps its files and shared repository sources to the accepted 430-file CP1 input set. The overlay includes the ACH clock configuration, so the reference clock remains independently runnable. Historical copies of the runner, dashboard and reference documentation keep the accepted snapshot reproducible; the current runner and dashboard are fingerprinted separately.
 
+[CP1-TB1](Text-boot.md) composes R2/BR1/TX1 for ROM-only startup. Six profiles reconstruct a 160-byte text diagnostic in poisoned SRAM from an 806-byte ROM loader and finish the transcript after HALT; three loader faults are detected. `text-boot-evidence.json` pins the study, including two preserved elaboration failures. Restore `build/cp1-text-boot/` as an additional bounded-replay dependency. This supplements TX1's preloaded-memory results with simulated autonomous boot; physical startup, terminal/CDC qualification and native assembly promotion remain open.
+
 ## What a run checks
 
 1. Verify the pinned evidence hashes, including receipts, fixtures, logs, HDL, programming images and the preserved reference report.

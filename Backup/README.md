@@ -1,5 +1,20 @@
 # Git and evidence checkpoints
 
+## CP1-TB1 ROM-only serial startup
+
+`Verification/build/cp1-text-boot/` is an additional bounded-replay dependency.
+It preserves six passing ROM-startup profiles, three detected loader faults and
+two development elaboration failures. `Verification/text-boot-evidence.json`
+pins the source, original R2 models, fixtures and logs.
+
+Restore R2, BR1, BI1 and TX1 from their releases below, then restore the TB1
+`studies-and-workbook.tar.gz` from the repository root after verifying its
+checkpoint manifest with `Backup/verify_checkpoint.py`.
+
+The CPU reconstructs the 160-byte diagnostic from ROM and emits `TX1\r\n` in
+simulation. Physical startup, terminal/CDC qualification and native integrated
+assembly promotion remain open. CP1-R2 remains the accepted digital circuit.
+
 ## CP1-TX1 autonomous serial text candidate
 
 The [cp1-text-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-text-2026-11-16)

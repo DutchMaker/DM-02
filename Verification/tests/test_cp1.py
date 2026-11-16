@@ -126,6 +126,7 @@ class CP1AcceptanceTests(unittest.TestCase):
             names += ['Verification/build/'+n for n in json.loads(cp1.io_bridge_evidence.LOCK.read_text())['artifacts']]
             names += ['Verification/build/'+n for n in json.loads(cp1.io_cpu_evidence.LOCK.read_text())['artifacts']]
             names += ['Verification/build/'+n for n in json.loads(cp1.text_evidence.LOCK.read_text())['artifacts']]
+            names += ['Verification/build/'+n for n in json.loads(cp1.text_boot_evidence.LOCK.read_text())['artifacts']]
             for name in names:
                 if name.startswith('Verification/build/'):
                     relative=name.removeprefix('Verification/build/');destination=root/relative
@@ -153,6 +154,7 @@ class CP1AcceptanceTests(unittest.TestCase):
             names += ['Verification/build/'+n for n in json.loads(cp1.io_bridge_evidence.LOCK.read_text())['artifacts']]
             names += ['Verification/build/'+n for n in json.loads(cp1.io_cpu_evidence.LOCK.read_text())['artifacts']]
             names += ['Verification/build/'+n for n in json.loads(cp1.text_evidence.LOCK.read_text())['artifacts']]
+            names += ['Verification/build/'+n for n in json.loads(cp1.text_boot_evidence.LOCK.read_text())['artifacts']]
             for name in names:
                 if name.startswith('Verification/build/'):
                     relative=name.removeprefix('Verification/build/');destination=root/relative
