@@ -1,0 +1,15 @@
+{
+  "revision": "CP1-BR1",
+  "status": "candidate parts; ownership, physical qualification and full-link timing open",
+  "test_conditions": {"vcc_v": 4.5, "temperature_c": [-40,85], "output_load_pf": 50, "input_edge_ns": 6},
+  "minimum_delay_policy": "Use zero as an uncharacterized lower bound; never infer a positive hold margin from typical delays.",
+  "devices": {
+    "CD74HCT00E": {"pins":14,"max_delay_ns":25,"input_cap_max_pf":10,"file":"cd74hct00.pdf","sha256":"1a0630bdef3224dae0829c22bf61af801801520ee1344b79a5ea778168c52357","document":"SCHS398","page":5},
+    "CD74HCT04E": {"pins":14,"max_delay_ns":24,"input_cap_max_pf":10,"file":"cd74hct04.pdf","sha256":"fff19b21da9f89efe744d3bacd2f481e8e6dc70fe77ec73cd236bf5af07636c3","document":"SCHS401","page":5},
+    "CD74HCT08E": {"pins":14,"max_delay_ns":31,"input_cap_max_pf":10,"file":"cd74hct08.pdf","sha256":"d129e9b8a969d0e39230e641e56a893909c9813c6c7c5e6ff8d2c3442e670e1b","document":"SCHS403A","page":5},
+    "CD74HCT32E": {"pins":14,"max_delay_ns":30,"input_cap_max_pf":10,"file":"cd74hct32.pdf","sha256":"a19efe3fa678cc6d682f1bbf758915d47f618a4a6abfac8d06f5acdb6c974b29","document":"SCHS407","page":5},
+    "CD74HCT154E": {"pins":24,"max_delay_ns":44,"input_cap_max_pf":10,"file":"cd74hct154.pdf","sha256":"280e5cce6eb56861d775f57e6646fea2035bf98a727be62db6d13860f3fb2734","document":"SCHS152D","page":5},
+    "CD74HCT244E": {"pins":20,"max_delay_ns":31,"input_cap_max_pf":10,"file":"cd74hct244.pdf","sha256":"ef9da4133acd5a75702d54d57f4e8a099ec58dc2d6d58c0e39d80dca258ca97a","document":"SCHS167G","page":10},
+    "CD74HCT153E": {"pins":16,"max_delay_ns":43,"input_cap_max_pf":10,"file":"cd74hct153.pdf","sha256":"df2d8c425e3d1da2e28b619baad64171aba648b2cf5a42d30fdb765d60bf2509","document":"SCHS151C","page":5,"note":"Conservative maximum across select/data/enable rows; duplicate I-to-Y rows retained by taking the larger limit."}
+  }
+}

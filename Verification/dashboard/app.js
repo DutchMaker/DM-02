@@ -43,6 +43,14 @@ function render() {
   ioPanel.hidden=!io;
   if(io) ioPanel.innerHTML=`<div class="eyebrow">${esc(io.scope.revision)} / FIRST MACHINE · ${esc(io.revision)} / LOGICAL IO</div><h2>Text-first computer with peripheral expansion</h2><p>Autonomous ROM boot · stack/backplane · local reset/run/halt/step · separate ESP32/LCD debugger. Computer and peripheral cards remain DIP/through-hole.</p><p><strong>Physical interface implementation pending.</strong> The current output connector carries a registered write address. Expansion reads need a separate live address, qualified selection and buffered return path.</p><div class="links"><a href="/IO-interface.md">Scope, address map and handshake ↗</a><a href="/build/cp1/io-contract-check.json">Logical checks and native connector audit ↗</a></div>`;
   $('milestones').innerHTML=(report.milestones||[]).map(m=>`<article class="milestone">${badge(m.status)}<span class="number">0${m.number}</span><h3>${esc(m.title)}</h3><p>${esc(m.summary)}</p><details><summary>Acceptance gates</summary><ul>${(m.gates||[]).map(g=>`<li>${badge(g.status)} <a href="#check-${esc(g.gate)}">${esc(g.id)}</a>: ${esc(g.text)}</li>`).join('')}</ul></details></article>`).join('');
+  let bridgePanel=$('io-bridge');
+  if(!bridgePanel) {
+    bridgePanel=document.createElement('section');bridgePanel.id='io-bridge';bridgePanel.className='panel';
+    $('milestones').before(bridgePanel);
+  }
+  const bridge=report.io_bridge;
+  bridgePanel.hidden=!bridge;
+  if(bridge) bridgePanel.innerHTML=`<div class="eyebrow">${esc(bridge.revision)} / SEPARATE CIRCUIT CANDIDATE</div><h2>Four private I/O returns · ${esc(bridge.dip_count)} added DIP packages</h2><p>Four delay profiles: 70,020 read cases and 256 writes each. Four injected faults detected. Native bindings cover 17 memory-card extensions and 384 peripheral contacts.</p><p><strong>CPU integration and physical qualification pending.</strong> Internal load screening passes. The conditional 379 ns return-path sum excludes the endpoint and full CPU path; minimum delays and actual loading/edges remain unqualified.</p><div class="links"><a href="/IO-bridge.md">Circuit and evidence limits ↗</a><a href="/build/cp1-bridge/">Bridge candidate evidence ↗</a><a href="/build/cp1-bridge/boundary-audit.json">Native boundary bindings ↗</a></div>`;
   const counts={}; report.checks.forEach(c=>counts[c.status]=(counts[c.status]||0)+1);
   $('counts').innerHTML=Object.entries(counts).map(([s,n])=>`<span>${n} ${badge(s)}</span>`).join('');
   renderChecks();

@@ -8,7 +8,7 @@ import traceback
 from pathlib import Path
 from .common import ROOT, VROOT, BUILD, digest, write_json, command, evidence
 from .reporting import sources, now, trace, milestones
-from . import operating_contract, io_contract, connector_plan
+from . import operating_contract, io_contract, connector_plan, io_bridge_evidence
 
 TARGET = VROOT/'targets/cp1'
 
@@ -221,6 +221,19 @@ def run(args, harness_check):
             'Memory uses 109/112 signal positions including 17 circuit additions. Footprint fit and electrical implementation remain open.',
             artifacts=['cp1/mechanical-contract.json','cp1/connector-plan.json','cp1/connector-check.json'],
             limitation='Pin allocation is not fabrication, circuit timing or physical qualification.'))
+        bridge_lock, bridge = io_bridge_evidence.load(BUILD)
+        report['io_bridge'] = dict(revision=bridge['revision'],
+            dip_count=bridge['package_load_audit']['dip_count'],physical_qualification=False,
+            integrated_into_R2=False,profiles=4,mutations_detected=4,
+            conditional_paths=bridge['package_load_audit']['conditional_paths'])
+        report['artifact_hashes'].update(bridge_lock['artifacts'])
+        report['provenance']['io_bridge_candidate'] = bridge['revision']
+        report['checks'].append(evidence('io-bridge','Native-pin four-slot IO bridge candidate','limited',
+            'CP1-BR1: 41 added DIP packages; four profiles each passed 70,020 read cases and 256 writes. '
+            'Four mutations detected; 17 memory extensions and 384 peripheral contacts audited. '
+            'Internal load screen passes; full CPU/endpoint timing and physical operation remain open.',
+            artifacts=['cp1-bridge/summary.json','cp1-bridge/boundary-audit.json'],
+            limitation='Separate candidate, not integrated into CP1-R2. Conditional 379 ns internal return-path sum excludes CPU/endpoint/routing terms and assumes characterized load/slew.'))
         boundaries = json.loads((archive/'physical-review.json').read_text())['open_items']
         report['risks'] = [dict(id=f'CP1-{i+1:02}',title=text,severity='open',
                                 action='Requires physical or manufacturer qualification.',evidence='timing') for i,text in enumerate(boundaries)]

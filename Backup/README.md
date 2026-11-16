@@ -1,5 +1,24 @@
 # Git and evidence checkpoints
 
+## CP1-BR1 native-pin bridge candidate
+
+The bridge study is an additional bounded-replay dependency at
+`Verification/build/cp1-bridge/`. It contains the native MQ1/BR1 sheets and
+netlists, four passing simulation profiles, four detected mutations, seven TI
+datasheets, explicit R2/CN1 bindings and both earlier iterations. The checked-in
+`Verification/bridge-evidence.json` pins its sources and evidence.
+
+The bounded replay passed **197 tests**; desktop/mobile browser checks and
+**225 remote hashes** passed at `/build/cp1-bridge/`. Each of four bridge
+profiles passed 70,020 read cases and 256 writes; all four injected faults
+were detected. Earlier load-overage and common-reset runs remain preserved.
+
+Restore the `cp1-bridge-2026-11-16` release assets using
+`Backup/verify_checkpoint.py`, then extract `studies-and-workbook.tar.gz` from
+the repository root. The R2, reference and readiness releases below are still
+required. The bridge is a separate 41-DIP candidate; physical qualification
+and incorporation into the CPU remain open.
+
 ## CP1-MC1 mechanical selection and CP1-CN1 draft connectors
 
 The [cp1-connectors-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-connectors-2026-11-16)
