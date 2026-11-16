@@ -9,6 +9,7 @@ from pathlib import Path
 from .common import ROOT, VROOT, BUILD, digest, write_json, command, evidence
 from .reporting import sources, now, trace, milestones
 from . import operating_contract, io_contract, connector_plan, io_bridge_evidence, io_cpu_evidence, text_evidence, text_boot_evidence, native_assembly_evidence, connector_assembly_evidence, link_loads_evidence, mar_distribution_evidence, release_evidence, oscillator_evidence
+from . import hct_evidence
 
 TARGET = VROOT/'targets/cp1'
 
@@ -333,6 +334,15 @@ def run(args, harness_check):
             '14 pF raw planning targets leave 1 pF; six conditioned links checked. Six topology/assumption faults and synthetic extra/missing-clock faults detected.',
             artifacts=['cp1-oscillator/summary.json'],
             limitation='81 synthetic waveform analyses and measurement specification only. Actual load, edge, threshold-duty, jitter, startup and full-chain timing remain unqualified; no hardware change.'))
+        hct_lock,hct = hct_evidence.load(BUILD)
+        report['artifact_hashes'].update(hct_lock['artifacts'])
+        report['hct_preference'] = dict(revision='CP1-HP1/HB1',reviewed_packages=142,
+            candidate_hct_packages=128,replaced_ahct_packages=2,boot_profiles=4,physical_qualification=False,promoted_into_R2=False)
+        report['checks'].append(evidence('hct-preference','HCT sourcing review and memory-buffer candidate','limited',
+            '142 non-HCT references reviewed against nine exact DIP alternatives. HB1 replaces two AHCT244 address buffers with SN74HCT244N. '
+            'Four exhaustive address profiles, full memory exercise and four ROM/text boots pass; native, mapping and boot wiring faults detected.',
+            artifacts=['cp1-hct-preference/review.json','cp1-hct-buffers/iteration-1/summary.json','cp1-hct-buffers/iteration-1/loads.json'],
+            limitation='42 ns table-fixture model and zero/mixed-delay sensitivity only. Actual load, slew, minimum hold and full OC1 qualification remain open. R2 remains accepted.'))
         boundaries = json.loads((archive/'physical-review.json').read_text())['open_items']
         report['risks'] = [dict(id=f'CP1-{i+1:02}',title=text,severity='open',
                                 action='Requires physical or manufacturer qualification.',evidence='timing') for i,text in enumerate(boundaries)]

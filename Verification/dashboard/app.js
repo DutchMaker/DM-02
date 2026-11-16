@@ -107,6 +107,13 @@ function render() {
   }
   releasePanel.hidden=!report.release_requirements;
   if(report.release_requirements) releasePanel.innerHTML=`<div class="eyebrow">CP1-RR1 / DATA AND SRAM RELEASE</div><h2>Driver ownership and release requirements traced</h2><p>DATA has one driver; the private SRAM bus has two. Native OE/WE paths, 8,192 control states and four instrumented ROM/text boots checked. Same-data contention, early capture and late-release faults detected.</p><p>Smallest sampled SRAM control gaps: 4,981 ns read-to-write and 4,947.5 ns write-to-read. <strong>Physical release and hold remain unqualified.</strong> A 48-driver measurement specification covers actual loads and the OC1 voltage/temperature grid.</p><div class="links"><a href="/Release-requirements.md">Paths, assumptions and measurement procedure ↗</a><a href="/build/cp1-release/">Experiments and event logs ↗</a></div>`;
+  let hctPanel=$('hct-preference');
+  if(!hctPanel){
+    hctPanel=document.createElement('section');hctPanel.id='hct-preference';hctPanel.className='panel';
+    $('milestones').before(hctPanel);
+  }
+  hctPanel.hidden=!report.hct_preference;
+  if(report.hct_preference) hctPanel.innerHTML=`<div class="eyebrow">CP1-HP1 / HB1</div><h2>Two memory-address buffers tested with HCT</h2><p>142 non-HCT references reviewed against nine exact DIP alternatives. HB1 replaces two AHCT244 buffers with SN74HCT244N, bringing HCT use to 128 packages. Four exhaustive address profiles, the full memory exercise and four ROM/text boots passed; wiring faults were detected.</p><p>The 42 ns fixture-based model and zero/mixed-delay sensitivity support this separate candidate. <strong>Physical load, slew and full-envelope timing remain unqualified.</strong></p><div class="links"><a href="/HCT-preference.md">Part decisions and conditions ↗</a><a href="/build/cp1-hct-preference/">Sources and candidate evidence ↗</a></div>`;
   let oscillatorPanel=$('oscillator-interface');
   if(!oscillatorPanel) {
     oscillatorPanel=document.createElement('section');oscillatorPanel.id='oscillator-interface';oscillatorPanel.className='panel';

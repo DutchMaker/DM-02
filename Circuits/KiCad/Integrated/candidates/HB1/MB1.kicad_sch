@@ -1,0 +1,670 @@
+(kicad_sch (version 20250114) (generator "dm02_md1")
+(uuid e09eb874-9709-52f7-93a9-224c777ed622)
+(paper "A3") (title_block (title "HB1 memory address isolation") (rev "CP1-HB1")
+(comment 1 "Two always-enabled SN74HCT244N; conditional planning loads only"))
+(lib_symbols (symbol "HB1:AHCT244"
+(exclude_from_sim no)
+(in_bom yes)
+(on_board yes)
+(in_pos_files yes)
+(duplicate_pin_numbers_are_jumpers no)
+(symbol "AHCT244_1_0"
+			(polyline
+				(pts
+					(xy 1.27 0) (xy -1.27 1.27) (xy -1.27 -1.27) (xy 1.27 0)
+				)
+				(stroke
+					(width 0.1524)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin input inverted
+				(at -12.7 -10.16 0)
+				(length 5.08)
+				(name "1OE"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -12.7 12.7 0)
+				(length 5.08)
+				(name "1A0"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin tri_state line
+				(at 12.7 2.54 180)
+				(length 5.08)
+				(name "2Y0"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -12.7 10.16 0)
+				(length 5.08)
+				(name "1A1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin tri_state line
+				(at 12.7 0 180)
+				(length 5.08)
+				(name "2Y1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -12.7 7.62 0)
+				(length 5.08)
+				(name "1A2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin tri_state line
+				(at 12.7 -2.54 180)
+				(length 5.08)
+				(name "2Y2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -12.7 5.08 0)
+				(length 5.08)
+				(name "1A3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin tri_state line
+				(at 12.7 -5.08 180)
+				(length 5.08)
+				(name "2Y3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 -20.32 90)
+				(length 5.08)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -12.7 -5.08 0)
+				(length 5.08)
+				(name "2A3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin tri_state line
+				(at 12.7 5.08 180)
+				(length 5.08)
+				(name "1Y3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -12.7 -2.54 0)
+				(length 5.08)
+				(name "2A2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin tri_state line
+				(at 12.7 7.62 180)
+				(length 5.08)
+				(name "1Y2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "14"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -12.7 0 0)
+				(length 5.08)
+				(name "2A1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "15"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin tri_state line
+				(at 12.7 10.16 180)
+				(length 5.08)
+				(name "1Y1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "16"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -12.7 2.54 0)
+				(length 5.08)
+				(name "2A0"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "17"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin tri_state line
+				(at 12.7 12.7 180)
+				(length 5.08)
+				(name "1Y0"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "18"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input inverted
+				(at -12.7 -12.7 0)
+				(length 5.08)
+				(name "2OE"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "19"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 20.32 270)
+				(length 5.08)
+				(name "VCC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "20"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+(symbol "AHCT244_1_1"
+			(rectangle
+				(start -7.62 15.24)
+				(end 7.62 -15.24)
+				(stroke
+					(width 0.254)
+					(type solid)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+(property "Reference" "U"
+			(at -7.62 16.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+(property "Value" "74HCT244"
+			(at -7.62 -16.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+(property "Description" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+(property "ki_fp_filters" "TSSOP*4.4x6.5mm*P0.65mm* SSOP*4.4x6.5mm*P0.65mm*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+(embedded_fonts no))
+(symbol "HB1:C"
+(pin_numbers
+			(hide yes)
+		)
+(pin_names
+			(offset 0.254)
+		)
+(exclude_from_sim no)
+(in_bom yes)
+(on_board yes)
+(in_pos_files yes)
+(duplicate_pin_numbers_are_jumpers no)
+(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+(property "Value" "C"
+			(at 0.635 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+(property "Description" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+(symbol "C_0_1"
+			(polyline
+				(pts
+					(xy -2.032 0.762) (xy 2.032 0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -0.762) (xy 2.032 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+(symbol "C_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+(embedded_fonts no)))
+(symbol (lib_id "HB1:AHCT244") (at 70 60 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid f056808c-676f-590e-8d87-18d0463aebc8)
+ (property "Reference" "U17001" (at 70 53 0) (effects (font (size 1.27 1.27))))
+ (property "Value" "SN74HCT244N" (at 70 56 0) (effects (font (size 1.27 1.27))))
+ (property "Footprint" "Package_DIP:DIP-20_W7.62mm" (at 70 60 0) (effects (font (size 1 1)) (hide yes)))
+ (instances (project "HB1" (path "/1f66f68a-0baf-51ad-9596-05286cdc1677/a420a15c-a63b-5a6f-a998-1f89d121d1b2" (reference "U17001") (unit 1)))))
+(global_label "CA1_memory__NA1_GND" (shape bidirectional) (at 57.3 70.16 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 1ea2d586-6fc7-56e3-9fb3-22e3f2c2967a))
+(global_label "CA1_memory__NA1_MA1__STATE0" (shape bidirectional) (at 57.3 47.3 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 160634a6-3caf-5aa1-9846-6052627dab97))
+(global_label "HB1_memory__ADDRESS4" (shape bidirectional) (at 82.7 57.46 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 05583c5d-3b63-5e3e-b8b6-156da380963a))
+(global_label "CA1_memory__NA1_MA1__STATE1" (shape bidirectional) (at 57.3 49.84 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 14ff87fe-564f-5091-b44d-29df6f67a77a))
+(global_label "HB1_memory__ADDRESS5" (shape bidirectional) (at 82.7 60.0 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 8eced1e2-f0d6-5a37-8fe8-f2f287c2a736))
+(global_label "CA1_memory__NA1_MA1__STATE2" (shape bidirectional) (at 57.3 52.38 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid d8addbf7-622a-5037-adde-d3fa9072cc74))
+(global_label "HB1_memory__ADDRESS6" (shape bidirectional) (at 82.7 62.54 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 57bf8aa2-775a-5e63-90b1-80fc830eb0ae))
+(global_label "CA1_memory__NA1_MA1__STATE3" (shape bidirectional) (at 57.3 54.92 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid cac2838e-c9a5-5137-a862-f31f0f840718))
+(global_label "HB1_memory__ADDRESS7" (shape bidirectional) (at 82.7 65.08 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 1efe6136-9783-5554-b6e8-456744216e32))
+(global_label "CA1_memory__NA1_GND" (shape bidirectional) (at 70.0 80.32 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid f1ea9e60-02f7-5c25-8fd9-27ac576213b9))
+(global_label "CA1_memory__NA1_MA1__STATE7" (shape bidirectional) (at 57.3 65.08 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid a0d09ceb-d18f-5656-acfe-97bec81ade77))
+(global_label "HB1_memory__ADDRESS3" (shape bidirectional) (at 82.7 54.92 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid c6e23617-4122-5e6a-bd28-dfc8b4334348))
+(global_label "CA1_memory__NA1_MA1__STATE6" (shape bidirectional) (at 57.3 62.54 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 84ae1cbc-4d67-558b-b2f1-bc27eafc49d7))
+(global_label "HB1_memory__ADDRESS2" (shape bidirectional) (at 82.7 52.38 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid eb2dddaf-04f7-5b6c-a91f-9e56a749c07d))
+(global_label "CA1_memory__NA1_MA1__STATE5" (shape bidirectional) (at 57.3 60.0 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid ebc94f1b-b072-5ddd-a436-5996f2a47fe9))
+(global_label "HB1_memory__ADDRESS1" (shape bidirectional) (at 82.7 49.84 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 222061e1-4692-542b-a04b-198fd9b10678))
+(global_label "CA1_memory__NA1_MA1__STATE4" (shape bidirectional) (at 57.3 57.46 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 9f12df02-1708-55fc-96de-5c4003a7e810))
+(global_label "HB1_memory__ADDRESS0" (shape bidirectional) (at 82.7 47.3 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 5c05f84c-ab00-517f-af61-a10596801f90))
+(global_label "CA1_memory__NA1_GND" (shape bidirectional) (at 57.3 72.7 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 59328dcc-f8d2-51c3-a769-fafdf9e2cc35))
+(global_label "CA1_memory__NA1_5V" (shape bidirectional) (at 70.0 39.68 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid d70735dd-c883-51a8-9dd9-1c061c532e85))
+(symbol (lib_id "HB1:C") (at 120 60 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 5e1634a7-0b0d-5b22-a81b-c99cf7929605)
+ (property "Reference" "C17001" (at 120 53 0) (effects (font (size 1.27 1.27))))
+ (property "Value" "100nF" (at 120 56 0) (effects (font (size 1.27 1.27))))
+ (property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" (at 120 60 0) (effects (font (size 1 1)) (hide yes)))
+ (instances (project "HB1" (path "/1f66f68a-0baf-51ad-9596-05286cdc1677/a420a15c-a63b-5a6f-a998-1f89d121d1b2" (reference "C17001") (unit 1)))))
+(global_label "CA1_memory__NA1_5V" (shape bidirectional) (at 120.0 56.19 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid bf5c556a-a1e6-577a-9fad-7f2dc2197d90))
+(global_label "CA1_memory__NA1_GND" (shape bidirectional) (at 120.0 63.81 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 540ae299-f834-5f46-9863-42207c2c9a22))
+(symbol (lib_id "HB1:AHCT244") (at 260 60 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 789976fc-7b44-55a1-9639-b791f3068be8)
+ (property "Reference" "U17002" (at 260 53 0) (effects (font (size 1.27 1.27))))
+ (property "Value" "SN74HCT244N" (at 260 56 0) (effects (font (size 1.27 1.27))))
+ (property "Footprint" "Package_DIP:DIP-20_W7.62mm" (at 260 60 0) (effects (font (size 1 1)) (hide yes)))
+ (instances (project "HB1" (path "/1f66f68a-0baf-51ad-9596-05286cdc1677/a420a15c-a63b-5a6f-a998-1f89d121d1b2" (reference "U17002") (unit 1)))))
+(global_label "CA1_memory__NA1_GND" (shape bidirectional) (at 247.3 70.16 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 770316bb-6a9c-5512-a46a-d693ffa9145b))
+(global_label "CA1_memory__NA1_MA1__STATE8" (shape bidirectional) (at 247.3 47.3 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 649e656f-c9dc-52d8-a89a-49f512c0c2c9))
+(global_label "HB1_memory__ADDRESS12" (shape bidirectional) (at 272.7 57.46 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 6abb797e-5f41-551d-bb65-6eac59368583))
+(global_label "CA1_memory__NA1_MA1__STATE9" (shape bidirectional) (at 247.3 49.84 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 03f8a824-b95e-53c5-8004-97aed76c473b))
+(global_label "HB1_memory__ADDRESS13" (shape bidirectional) (at 272.7 60.0 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 76da72a2-5b84-5baa-a5d5-cdd7defdc6c9))
+(global_label "CA1_memory__NA1_MA1__STATE10" (shape bidirectional) (at 247.3 52.38 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 9a2fcadd-38f4-5a4f-9abc-a8f5b3159dca))
+(global_label "HB1_memory__ADDRESS14" (shape bidirectional) (at 272.7 62.54 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 4c564f50-3ad6-5fdc-92b1-9171d24db0a9))
+(global_label "CA1_memory__NA1_MA1__STATE11" (shape bidirectional) (at 247.3 54.92 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid be60f8f5-136d-5e3c-badb-38e4107ee367))
+(global_label "HB1_memory__ADDRESS15" (shape bidirectional) (at 272.7 65.08 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 9a9af879-6001-5fd2-9bc6-24b33b120d12))
+(global_label "CA1_memory__NA1_GND" (shape bidirectional) (at 260.0 80.32 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid e51c48a2-ff35-53cd-9159-d81055f0f6ce))
+(global_label "CA1_memory__NA1_MA1__STATE15" (shape bidirectional) (at 247.3 65.08 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 3d28e404-6b13-50db-b3d0-2f36c9b8fae8))
+(global_label "HB1_memory__ADDRESS11" (shape bidirectional) (at 272.7 54.92 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 7ef535e7-f3a6-510a-8740-6edc9dc915fb))
+(global_label "CA1_memory__NA1_MA1__STATE14" (shape bidirectional) (at 247.3 62.54 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 272d1270-892f-5f92-8084-7d23221d03c1))
+(global_label "HB1_memory__ADDRESS10" (shape bidirectional) (at 272.7 52.38 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 5e80856f-37bc-5e2a-87d5-fe27b8c19b38))
+(global_label "CA1_memory__NA1_MA1__STATE13" (shape bidirectional) (at 247.3 60.0 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 4373bce1-4244-5edb-82e5-ec74007dc510))
+(global_label "HB1_memory__ADDRESS9" (shape bidirectional) (at 272.7 49.84 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 8ccd64f7-feba-5536-8eb9-ef6ff6aaa107))
+(global_label "CA1_memory__NA1_MA1__STATE12" (shape bidirectional) (at 247.3 57.46 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 6af5910f-0441-5456-a1a7-af31f2bd468a))
+(global_label "HB1_memory__ADDRESS8" (shape bidirectional) (at 272.7 47.3 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 9fdad146-24ab-5983-84ea-35524a54ae90))
+(global_label "CA1_memory__NA1_GND" (shape bidirectional) (at 247.3 72.7 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 1ef87399-77c2-5c90-8375-ef9cd616a4f5))
+(global_label "CA1_memory__NA1_5V" (shape bidirectional) (at 260.0 39.68 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid ec06fb77-c6c2-523d-8382-69c95ba9eb08))
+(symbol (lib_id "HB1:C") (at 310 60 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 1b38313c-d3da-5056-bee7-e575b2ded636)
+ (property "Reference" "C17002" (at 310 53 0) (effects (font (size 1.27 1.27))))
+ (property "Value" "100nF" (at 310 56 0) (effects (font (size 1.27 1.27))))
+ (property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" (at 310 60 0) (effects (font (size 1 1)) (hide yes)))
+ (instances (project "HB1" (path "/1f66f68a-0baf-51ad-9596-05286cdc1677/a420a15c-a63b-5a6f-a998-1f89d121d1b2" (reference "C17002") (unit 1)))))
+(global_label "CA1_memory__NA1_5V" (shape bidirectional) (at 310.0 56.19 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 996e6258-e931-5374-a720-77c2f68799f4))
+(global_label "CA1_memory__NA1_GND" (shape bidirectional) (at 310.0 63.81 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid 7e14a191-9a60-5d9c-baaa-cbffb5ac02cf))
+)

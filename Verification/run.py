@@ -73,7 +73,7 @@ def main():
     args=parser.parse_args()
     if args.target=='cp1':
         from dm02.cp1 import run
-        return run(args,harness_check)
+        return run(args,lambda:harness_check(timeout=900))
     BUILD.mkdir(parents=True,exist_ok=True)
     requirements=json.loads((VROOT/'requirements.json').read_text())
     report=dict(schema_version=1,started_at=now(),state='running',source_hashes=sources(),checks=[],

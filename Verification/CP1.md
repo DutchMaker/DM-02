@@ -18,6 +18,8 @@ The active source overlay is in `targets/cp1/overlay/`. `targets/cp1/lock.json` 
 
 ## What a run checks
 
+[CP1-HP1/HB1](HCT-preference.md) reviews all 142 non-HCT MD1 logic packages and tests a separate two-buffer SN74HCT244N candidate. Four exhaustive address profiles, full memory exercise and four ROM/text boots pass, with native/dynamic wiring faults detected. `hct-evidence.json` pins the source conditions, per-reference paths and candidate evidence. HB1 has 128 HCT packages; physical load/slew/hold and full-envelope timing remain unqualified.
+
 [CP1-OS1](Oscillator-interface.md) traces both independent oscillator front ends: one AHCT04 receiver for CPU (≤3 ns timing input fixture), one HCT244 receiver for text (6 ns). Explicit raw planning loads are 14 pF against the selected 15 pF oscillator rating. `oscillator-evidence.json` pins six conditioned links, 81 synthetic waveform analyses, faults and an unmeasured qualification plan. Actual edges, jitter, threshold duty and full-envelope loads remain open; no hardware changed.
 
 [CP1-RR1](Release-requirements.md) traces DATA/SRAM release obligations on MD1, including 8,192 native control states, four short passes/five detected faults, four instrumented ROM/text boots, always-enabled DATA sensitivity and a detected late-SRAM-release fault. `release-evidence.json` pins the evidence and 48 per-driver measurement specifications. Sampled gaps and conditional release assumptions do not qualify physical operation.

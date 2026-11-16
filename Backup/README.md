@@ -1,5 +1,14 @@
 # Git and evidence checkpoints
 
+## CP1-HP1/HB1 HCT review and memory buffers
+
+HP1/HB1 adds a later HCT sourcing review and two-buffer candidate. Its replay
+requires both `Verification/build/cp1-hct-preference/` and
+`Verification/build/cp1-hct-buffers/`, in addition to the MD1/TB1 dependencies
+below. `Verification/hct-evidence.json` pins the review, manufacturer sources,
+native files and affected digital results; `Verification/HCT-preference.md`
+documents the scope. Physical qualification remains open.
+
 ## CP1-OS1 oscillator interfaces
 
 The [cp1-oscillator-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-oscillator-2026-11-16)
