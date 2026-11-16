@@ -8,7 +8,7 @@ import traceback
 from pathlib import Path
 from .common import ROOT, VROOT, BUILD, digest, write_json, command, evidence
 from .reporting import sources, now, trace, milestones
-from . import operating_contract, io_contract, connector_plan, io_bridge_evidence, io_cpu_evidence, text_evidence, text_boot_evidence, native_assembly_evidence, connector_assembly_evidence, link_loads_evidence
+from . import operating_contract, io_contract, connector_plan, io_bridge_evidence, io_cpu_evidence, text_evidence, text_boot_evidence, native_assembly_evidence, connector_assembly_evidence, link_loads_evidence, mar_distribution_evidence
 
 TARGET = VROOT/'targets/cp1'
 
@@ -300,6 +300,17 @@ def run(args, harness_check):
             'Sixteen IC-only allocation subtotals exceed release fixtures; two MAR paths also exceed 50 pF with the old 5 pF allowance.',
             artifacts=['cp1-link-loads/final/inventory.json','cp1-link-loads/final/mutations.json'],
             limitation='Conditional capacitance maxima and allocations only. All complete physical totals remain unknown; socket/contact/routing/cable/probe, edge-rate and release timing qualification remain open.'))
+        mar_lock,mar = mar_distribution_evidence.load(BUILD)
+        report['artifact_hashes'].update(mar_lock['artifacts'])
+        report['mar_distribution'] = dict(revision='CP1-MD1',dip_count=272,physical_pins=7368,
+            raw_ic_pf=30,buffered_ic_max_pf=28,raw_planning_margin_pf=5,buffered_planning_margin_min_pf=7,
+            boot_profiles_passed=4,physical_qualification=False,promoted_into_R2=False)
+        report['checks'].append(evidence('mar-distribution','Buffered MAR-to-memory native candidate','limited',
+            'Two SN74AHCT244N packages isolate ME1 address loads. Raw MAR subtotal 30 pF; buffered outputs 24/28 pF. '
+            'Explicit socket/routing/probe allocations leave 5/7 pF minimum planning margins. '
+            'All 65,536 address words, full memory exercise and four ROM/text boot profiles pass; native and dynamic faults detected.',
+            artifacts=['cp1-mar-distribution/final/summary.json','cp1-mar-distribution/final/loads.json','cp1-mar-distribution/simulation-1/matrix.json'],
+            limitation='Separate 272-DIP candidate. Capacitance and parasitic allowances remain conditional; loaded slew, full min/max timing and physical qualification remain open. R2 is not promoted.'))
         boundaries = json.loads((archive/'physical-review.json').read_text())['open_items']
         report['risks'] = [dict(id=f'CP1-{i+1:02}',title=text,severity='open',
                                 action='Requires physical or manufacturer qualification.',evidence='timing') for i,text in enumerate(boundaries)]

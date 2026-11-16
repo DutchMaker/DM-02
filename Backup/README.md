@@ -1,5 +1,14 @@
 # Git and evidence checkpoints
 
+## CP1-MD1 buffered memory address candidate
+
+`Verification/build/cp1-mar-distribution/` adds the MD1 native topology,
+explicit load allocations and affected memory/ROM-text simulation evidence.
+Restore LL1, CA1 and their earlier dependencies below before bounded replay.
+The checked-in root is `Circuits/KiCad/Integrated/candidates/MD1/MD1.kicad_sch`.
+Its 272-DIP candidate reduces raw MAR IC-only load to 30 pF per bit; complete
+physical load and timing qualification remain open.
+
 ## CP1-LL1 whole-link load inventory
 
 The [cp1-link-loads-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-link-loads-2026-11-16)

@@ -93,7 +93,14 @@ function render() {
   }
   loadsPanel.hidden=!report.link_loads;
   if(report.link_loads) loadsPanel.innerHTML=`<div class="eyebrow">CP1-LL1 / WHOLE-LINK LOAD INVENTORY</div><h2>7,324 pins · 1,708 driver scenarios</h2><p>All fitted contacts and pull resistors counted. MAR bits 14–15 reach 48 pF before wiring, or 53 pF with the old 5 pF allowance. Eight DATA lines exceed the HCT245 disable fixture; eight SRAM lines exceed its output-release fixture.</p><p>Both oscillators have 5 pF remaining after the input-capacitance subtotal. <strong>Complete physical loads remain unknown.</strong> Manufacturer conditions, allocation-only terms and socket/connector/routing/cable/probe gaps are recorded per path.</p><div class="links"><a href="/Link-loads.md">Method and electrical findings ↗</a><a href="/build/cp1-link-loads/">Pin matrix and manufacturer evidence ↗</a></div>`;
-  const counts={}; report.checks.forEach(c=>counts[c.status]=(counts[c.status]||0)+1);
+  let marPanel=$('mar-distribution');
+  if(!marPanel) {
+    marPanel=document.createElement('section');marPanel.id='mar-distribution';marPanel.className='panel';
+    $('milestones').before(marPanel);
+  }
+  marPanel.hidden=!report.mar_distribution;
+  if(report.mar_distribution) marPanel.innerHTML=`<div class="eyebrow">CP1-MD1 / BUFFERED MEMORY ADDRESS CANDIDATE</div><h2>MAR loading reduced to 30 pF per bit</h2><p>Two added DIP buffers isolate the memory-side address loads. Their outputs drive 24–28 pF. Explicit socket/routing/probe allocations leave at least 5 pF planning margin on raw MAR paths and 7 pF on buffered paths.</p><p>Four ROM/text startup profiles and the full memory exercise pass. All 65,536 address words checked; swapped-address and disabled-buffer faults detected. <strong>Physical loads and timing remain unqualified.</strong> MD1 is a separate 272-DIP candidate; R2 remains accepted.</p><div class="links"><a href="/MAR-distribution.md">Topology, budgets and affected checks ↗</a><a href="/build/cp1-mar-distribution/">Native source and simulation evidence ↗</a></div>`;
+  const counts={}; report.checks.forEach(c=>counts[c.status] = (counts[c.status]||0)+1);
   $('counts').innerHTML=Object.entries(counts).map(([s,n])=>`<span>${n} ${badge(s)}</span>`).join('');
   renderChecks();
   const budget=report.checks.find(c=>c.id==='timing')?.budget;

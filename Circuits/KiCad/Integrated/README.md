@@ -1,5 +1,11 @@
 # Native integrated candidate
 
+`candidates/MD1/MD1.kicad_sch` adds two DIP buffers and two decoupling capacitors
+to isolate the ME1 address loads from the raw MAR bus. The seventeen-sheet,
+272-DIP candidate has fresh affected memory and ROM/text boot evidence.
+See `Verification/MAR-distribution.md` for conditional load allocations and
+physical qualification scope. CA1 and NA1 remain preserved below.
+
 `candidates/CA1/CA1.kicad_sch` adds the CN1 CPU-card/backplane connector pairs.
 It separates the four CPU net domains and verifies all 768 mating contacts
 before and after analytical mating. Its sixteen native files remove NA1's
