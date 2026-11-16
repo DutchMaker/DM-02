@@ -8,7 +8,7 @@ import traceback
 from pathlib import Path
 from .common import ROOT, VROOT, BUILD, digest, write_json, command, evidence
 from .reporting import sources, now, trace, milestones
-from . import operating_contract, io_contract, connector_plan, io_bridge_evidence, io_cpu_evidence, text_evidence, text_boot_evidence
+from . import operating_contract, io_contract, connector_plan, io_bridge_evidence, io_cpu_evidence, text_evidence, text_boot_evidence, native_assembly_evidence
 
 TARGET = VROOT/'targets/cp1'
 
@@ -268,6 +268,18 @@ def run(args, harness_check):
             artifacts=['cp1-text-boot/matrix.json','cp1-text-boot/guarded-max/oracle.json',
                        'cp1-text-boot/guarded-max/simulation.log'],
             limitation='Composed R2/BR1/TX1 simulation with stable clocks and supply assumed. Physical ROM programming/readback, startup supervision, terminal/CDC qualification and native assembly promotion remain open.'))
+        assembly_lock,assembly,assembly_binding = native_assembly_evidence.load(BUILD)
+        report['artifact_hashes'].update(assembly_lock['artifacts'])
+        report['native_assembly'] = dict(revision='CP1-NA1',dip_count=270,physical_pins=6491,
+            net_groups=1762,mutations_detected=3,boundary_markers=58,physical_qualification=False,
+            promoted_into_R2=False,new_dynamic_simulation=False)
+        report['checks'].append(evidence('native-assembly','Native R2/BR1/TX1 assembly connectivity','limited',
+            '270 DIP ICs; 6,491 physical pins in 1,762 net groups match the independently composed graph. '
+            'Component values, footprints, pin metadata and fitted flags checked. Three wiring mutations detected; '
+            'the preserved initial library-ID collision is rejected. 134 explicit TB1 boundary bindings checked.',
+            artifacts=['cp1-native-assembly/final/summary.json','cp1-native-assembly/final/native/model-bindings.json',
+                       'cp1-native-assembly/iteration-1/metadata-recheck.json'],
+            limitation='Static native connectivity candidate. Existing TB1 simulation is reused by pin/port equivalence. CPU DIN implementation, production source/PCB promotion, ERC closure and physical timing remain open.'))
         boundaries = json.loads((archive/'physical-review.json').read_text())['open_items']
         report['risks'] = [dict(id=f'CP1-{i+1:02}',title=text,severity='open',
                                 action='Requires physical or manufacturer qualification.',evidence='timing') for i,text in enumerate(boundaries)]

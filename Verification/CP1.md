@@ -18,6 +18,8 @@ The active source overlay is in `targets/cp1/overlay/`. `targets/cp1/lock.json` 
 
 ## What a run checks
 
+[CP1-NA1](Native-assembly.md) adds a checked-in native R2/BR1/TX1 hierarchy with 270 DIP ICs. Independent KiCad export checks all 6,491 physical pins, component identities, pin metadata and fitted flags. Three wiring mutations are detected; the original library-ID collision is preserved and rejected. `native-assembly-evidence.json` pins the hierarchy and static TB1 port bindings; restore `build/cp1-native-assembly/` for replay. Production-source promotion, CPU DIN implementation and physical qualification remain open.
+
 1. Verify the pinned evidence hashes, including receipts, fixtures, logs, HDL, programming images and the preserved reference report.
 2. Materialize the active source set in a temporary isolated directory. A source mismatch requires new verification; the runner never updates its lock automatically.
 3. Regenerate all 12 schematics and the assembly indices, then compare all 430 source files with the accepted snapshot.

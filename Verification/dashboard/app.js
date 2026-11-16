@@ -72,6 +72,13 @@ function render() {
   }
   bootPanel.hidden=!report.text_boot;
   if(report.text_boot) bootPanel.innerHTML=`<div class="eyebrow">CP1-TB1 / ROM-ONLY SERIAL STARTUP</div><h2>Six startup profiles · three loader faults detected</h2><p>From reset PC zero, an 806-byte ROM loader deposits the 160-byte text diagnostic into poisoned SRAM at $4000. All six runs emit TX1 CR LF; the serializer finishes after CPU HALT. The architectural oracle checks all 160 writes and 322 loader instructions.</p><p>Four SRAM poison seeds, maximum/zero/mixed delay profiles and a 25 ms reset guard. Lowest sampled CPU setup: 81.5 ns. <strong>Physical startup and terminal/CDC qualification remain open.</strong> R2 remains the accepted circuit.</p><div class="links"><a href="/Text-boot.md">ROM image, method and scope ↗</a><a href="/build/cp1-text-boot/">Startup and mutation evidence ↗</a></div>`;
+  let assemblyPanel=$('native-assembly');
+  if(!assemblyPanel) {
+    assemblyPanel=document.createElement('section');assemblyPanel.id='native-assembly';assemblyPanel.className='panel';
+    $('milestones').before(assemblyPanel);
+  }
+  assemblyPanel.hidden=!report.native_assembly;
+  if(report.native_assembly) assemblyPanel.innerHTML=`<div class="eyebrow">CP1-NA1 / NATIVE ASSEMBLY CANDIDATE</div><h2>270 DIP ICs · 6,491 physical pins checked</h2><p>A checked-in KiCad hierarchy joins R2, MQ1/BR1 and TX1. The independent export matches 1,762 net groups and checks component values, pin metadata and fitted flags. Three wiring mutations are detected. The first iteration's library-ID collision is preserved and rejected.</p><p>134 explicit TB1 boundary bindings checked; 58 logical boundary markers are excluded from BOM and board transfer. <strong>Production-source and physical qualification remain open.</strong> R2 remains accepted; the existing TB1 simulation is reused by static pin/port equivalence.</p><div class="links"><a href="/Native-assembly.md">Native source, verification and scope ↗</a><a href="/build/cp1-native-assembly/">Hierarchy views and evidence ↗</a></div>`;
   const counts={}; report.checks.forEach(c=>counts[c.status]=(counts[c.status]||0)+1);
   $('counts').innerHTML=Object.entries(counts).map(([s,n])=>`<span>${n} ${badge(s)}</span>`).join('');
   renderChecks();

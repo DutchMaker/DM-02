@@ -1,5 +1,17 @@
 # Git and evidence checkpoints
 
+## CP1-NA1 native R2/BR1/TX1 assembly candidate
+
+`Verification/build/cp1-native-assembly/` is an additional bounded-replay
+dependency. It preserves the final native hierarchy, three detected wiring
+mutations, three development iterations and SVG sheet views. The checked-in
+candidate is `Circuits/KiCad/Integrated/candidates/NA1/NA1.kicad_sch`.
+
+Restore the R2, BR1, BI1, TX1 and TB1 releases below, then verify and extract
+NA1's `studies-and-workbook.tar.gz` from the repository root. Its evidence lock
+checks all 6,491 pins across 270 DIP ICs, component/pin metadata and fitted flags.
+Physical and production-source acceptance remain open; CP1-R2 remains accepted.
+
 ## CP1-TB1 ROM-only serial startup
 
 The [cp1-text-boot-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-text-boot-2026-11-16)
