@@ -2,6 +2,10 @@
 
 ## CP1-TX1 autonomous serial text candidate
 
+The [cp1-text-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-text-2026-11-16)
+archives source checkpoint `78fa71b`. All **354 files** matched locally
+and after download; see the [receipt](cp1-text-2026-11-16.json).
+
 `Verification/build/cp1-text/` is an additional bounded-replay dependency.
 The `cp1-text-2026-11-16` release preserves both development iterations,
 the 37-DIP native candidate, manufacturer sources and the final matrix:

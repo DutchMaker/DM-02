@@ -1,0 +1,38 @@
+{
+  "release": "https://github.com/DutchMaker/DM-02/releases/tag/cp1-text-2026-11-16",
+  "git_commit": "78fa71bab748d93bafdb34e097545ccfe7602079",
+  "download_verified": true,
+  "files_verified": 354,
+  "manifest_sha256": "0344180882c55b88620d818dbfc449d9a81f09d744c7f1d84c2024f848067fd7",
+  "archives": {
+    "studies-and-workbook.tar.gz": {
+      "bytes": 19238775,
+      "sha256": "ca6f2855134f43f8d57dc4f78af32de6ba187f7545e4f5ee9f4dfb131c772527",
+      "files": 354
+    }
+  },
+  "design_revision": "CP1-R2",
+  "study_revision": "CP1-TX1",
+  "harness_tests_passed": 208,
+  "milestones_passed": [
+    3,
+    3,
+    8
+  ],
+  "candidate_dip_count": 37,
+  "standalone_profiles_passed": 6,
+  "bytes_per_standalone_profile": 256,
+  "mutations_detected": 4,
+  "cpu_profiles_passed": 6,
+  "populated_cpu_transcripts": 5,
+  "transcript_hex": "5458310d0a",
+  "fast_cpu_sample_setup_ns": 81.476,
+  "physical_qualification": false,
+  "promoted_into_R2": false,
+  "autonomous_rom_boot": false,
+  "remote_publication_hashes_verified": 349,
+  "browser_viewports_passed": [
+    "desktop",
+    "mobile"
+  ]
+}
