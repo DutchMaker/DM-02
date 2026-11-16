@@ -1,5 +1,15 @@
 # Git and evidence checkpoints
 
+## CP1-LL1 whole-link load inventory
+
+`Verification/build/cp1-link-loads/` is an additional bounded-replay dependency.
+Restore CA1 and its earlier dependencies below before replaying LL1. The study
+contains the complete 7,324-pin inventory, 864 mating pairs, 1,708 per-driver
+scenarios, manufacturer extracts, five fault checks and preserved attempts.
+`Verification/Link-loads.md` explains the conditional capacitance values and
+the MAR, DATA-release, SRAM-release and oscillator findings. All complete
+physical load totals remain unknown.
+
 ## CP1-CA1 native CPU connector assembly
 
 The [cp1-connector-assembly-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-connector-assembly-2026-11-16)

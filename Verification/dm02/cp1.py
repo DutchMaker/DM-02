@@ -8,7 +8,7 @@ import traceback
 from pathlib import Path
 from .common import ROOT, VROOT, BUILD, digest, write_json, command, evidence
 from .reporting import sources, now, trace, milestones
-from . import operating_contract, io_contract, connector_plan, io_bridge_evidence, io_cpu_evidence, text_evidence, text_boot_evidence, native_assembly_evidence, connector_assembly_evidence
+from . import operating_contract, io_contract, connector_plan, io_bridge_evidence, io_cpu_evidence, text_evidence, text_boot_evidence, native_assembly_evidence, connector_assembly_evidence, link_loads_evidence
 
 TARGET = VROOT/'targets/cp1'
 
@@ -291,6 +291,15 @@ def run(args, harness_check):
             'Four mutations detected; shared-label bypass passes the mated graph but fails isolation.',
             artifacts=['cp1-connector-assembly/final/summary.json','cp1-connector-assembly/final/global-bypass/comparison.json'],
             limitation='Static native graph equivalence to NA1/TB1. Exact mating/orientation, connector loading, physical timing, production redraw/ERC and PCB release remain open.'))
+        load_lock,load_inventory = link_loads_evidence.load(BUILD)
+        report['artifact_hashes'].update(load_lock['artifacts'])
+        report['link_loads'] = dict(revision='CP1-LL1',**load_inventory['summary'],physical_qualification=False)
+        report['checks'].append(evidence('link-loads','Whole-link native pin and load inventory','limited',
+            'All 7,324 CA1 pins, 2,018 fitted contact pins and 864 mating pairs accounted for. '
+            '1,708 driver scenarios; five omission/alias/guarantee mutations detected. '
+            'Sixteen IC-only allocation subtotals exceed release fixtures; two MAR paths also exceed 50 pF with the old 5 pF allowance.',
+            artifacts=['cp1-link-loads/final/inventory.json','cp1-link-loads/final/mutations.json'],
+            limitation='Conditional capacitance maxima and allocations only. All complete physical totals remain unknown; socket/contact/routing/cable/probe, edge-rate and release timing qualification remain open.'))
         boundaries = json.loads((archive/'physical-review.json').read_text())['open_items']
         report['risks'] = [dict(id=f'CP1-{i+1:02}',title=text,severity='open',
                                 action='Requires physical or manufacturer qualification.',evidence='timing') for i,text in enumerate(boundaries)]

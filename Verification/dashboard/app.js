@@ -86,6 +86,13 @@ function render() {
   }
   connectorPanel.hidden=!report.connector_assembly;
   if(report.connector_assembly) connectorPanel.innerHTML=`<div class="eyebrow">CP1-CA1 / CPU CONNECTOR ASSEMBLY</div><h2>768 mating contacts · four separate CPU net domains</h2><p>Sixteen DIN96 candidates replace 58 logical boundary markers. The native export checks 7,324 pins and all 17 memory extensions. Applying the declared mating pairs preserves NA1's functional graph exactly.</p><p>Four wiring mutations detected. A shared-global-label bypass passes the mated graph but fails the separate-card check. <strong>Physical connector and production qualification remain open.</strong> R2 remains accepted; this is static connectivity evidence.</p><div class="links"><a href="/Connector-assembly.md">Contact mapping, isolation and scope ↗</a><a href="/build/cp1-connector-assembly/">Native hierarchy and mutation evidence ↗</a></div>`;
+  let loadsPanel=$('link-loads');
+  if(!loadsPanel) {
+    loadsPanel=document.createElement('section');loadsPanel.id='link-loads';loadsPanel.className='panel';
+    $('milestones').before(loadsPanel);
+  }
+  loadsPanel.hidden=!report.link_loads;
+  if(report.link_loads) loadsPanel.innerHTML=`<div class="eyebrow">CP1-LL1 / WHOLE-LINK LOAD INVENTORY</div><h2>7,324 pins · 1,708 driver scenarios</h2><p>All fitted contacts and pull resistors counted. MAR bits 14–15 reach 48 pF before wiring, or 53 pF with the old 5 pF allowance. Eight DATA lines exceed the HCT245 disable fixture; eight SRAM lines exceed its output-release fixture.</p><p>Both oscillators have 5 pF remaining after the input-capacitance subtotal. <strong>Complete physical loads remain unknown.</strong> Manufacturer conditions, allocation-only terms and socket/connector/routing/cable/probe gaps are recorded per path.</p><div class="links"><a href="/Link-loads.md">Method and electrical findings ↗</a><a href="/build/cp1-link-loads/">Pin matrix and manufacturer evidence ↗</a></div>`;
   const counts={}; report.checks.forEach(c=>counts[c.status]=(counts[c.status]||0)+1);
   $('counts').innerHTML=Object.entries(counts).map(([s,n])=>`<span>${n} ${badge(s)}</span>`).join('');
   renderChecks();
