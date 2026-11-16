@@ -1,0 +1,12 @@
+body { max-width: 76rem; margin: 2rem auto; padding: 0 1.2rem; font: 17px/1.6 system-ui, sans-serif; color: #172b38; background: #fafcfd; }
+h1, h2, h3 { line-height: 1.2; }
+h2 { margin-top: 2.5rem; border-bottom: 1px solid #b7cbd5; padding-bottom: .4rem; }
+a { color: #075985; }
+p, li { overflow-wrap: anywhere; }
+table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; font-size: .9rem; }
+td, th { padding: .6rem; border: 1px solid #b7cbd5; text-align: left; }
+th { background: #e5eef3; }
+pre { overflow-x: auto; }
+code { font-size: .88em; }
+#TOC { background: #e5eef3; padding: 1rem; border-radius: .4rem; }
+@media (max-width: 600px) { body { margin: 1rem auto; font-size: 16px; } h1 { font-size: 1.8rem; } }

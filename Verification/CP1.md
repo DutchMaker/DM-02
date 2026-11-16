@@ -32,4 +32,6 @@ CP1 has 192 DIP logic/memory packages, down from 288. Digital acceptance covers 
 
 Milestone gates are 3/5, 3/5 and 8/9 when replay and harness checks pass. MOD-03 is now satisfied by CP1's complete instruction-contract evidence. BASE-02/05, PILOT-04/05 and MOD-08 remain open. The conditional 4 MHz oscillator / 500 kHz microcycle result does not demonstrate the unchanged 1 MHz operating envelope.
 
+The owner clarified on 16 November 2026 that 1 MHz is preferred rather than mandatory. The [clock and electrical readiness study](CP1-readiness.md) recommends 500 kHz microcycles for the first build, with measured electrical qualification still required. Beads `dm02-57n.1.1` owns versioning the fabrication operating envelope; the locked R2 requirements retain their historical values.
+
 The selected HCT273's delay-table ambiguity is resolved. Its physical output loads and input edges still need qualification, alongside HCT245 IO loading/release, SRAM DQ loading/turnaround, full-supply HC377 compatibility and reset/oscillator behaviour. Hardware identities/counts, independent electrical review, programming/readback, PCB review and bench measurements are also outstanding.
