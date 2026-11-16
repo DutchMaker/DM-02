@@ -1,5 +1,12 @@
 # Native integrated candidate
 
+`candidates/CA1/CA1.kicad_sch` adds the CN1 CPU-card/backplane connector pairs.
+It separates the four CPU net domains and verifies all 768 mating contacts
+before and after analytical mating. Its sixteen native files remove NA1's
+non-fitted boundary markers and add sixteen fitted candidate DIN96 connectors.
+See `Verification/Connector-assembly.md`; physical/production acceptance remains
+open. NA1 below is preserved as the preceding integration candidate.
+
 Open `candidates/NA1/NA1.kicad_sch` in KiCad. Its fourteen child sheets combine
 the R2 CPU with MQ1/BR1 and TX1. All fifteen native schematic files are tracked
 source; symbols are embedded and component/library identities are unique across

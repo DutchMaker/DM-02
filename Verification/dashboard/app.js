@@ -79,6 +79,13 @@ function render() {
   }
   assemblyPanel.hidden=!report.native_assembly;
   if(report.native_assembly) assemblyPanel.innerHTML=`<div class="eyebrow">CP1-NA1 / NATIVE ASSEMBLY CANDIDATE</div><h2>270 DIP ICs · 6,491 physical pins checked</h2><p>A checked-in KiCad hierarchy joins R2, MQ1/BR1 and TX1. The independent export matches 1,762 net groups and checks component values, pin metadata and fitted flags. Three wiring mutations are detected. The first iteration's library-ID collision is preserved and rejected.</p><p>134 explicit TB1 boundary bindings checked; 58 logical boundary markers are excluded from BOM and board transfer. <strong>Production-source and physical qualification remain open.</strong> R2 remains accepted; the existing TB1 simulation is reused by static pin/port equivalence.</p><div class="links"><a href="/Native-assembly.md">Native source, verification and scope ↗</a><a href="/build/cp1-native-assembly/">Hierarchy views and evidence ↗</a></div>`;
+  let connectorPanel=$('connector-assembly');
+  if(!connectorPanel) {
+    connectorPanel=document.createElement('section');connectorPanel.id='connector-assembly';connectorPanel.className='panel';
+    $('milestones').before(connectorPanel);
+  }
+  connectorPanel.hidden=!report.connector_assembly;
+  if(report.connector_assembly) connectorPanel.innerHTML=`<div class="eyebrow">CP1-CA1 / CPU CONNECTOR ASSEMBLY</div><h2>768 mating contacts · four separate CPU net domains</h2><p>Sixteen DIN96 candidates replace 58 logical boundary markers. The native export checks 7,324 pins and all 17 memory extensions. Applying the declared mating pairs preserves NA1's functional graph exactly.</p><p>Four wiring mutations detected. A shared-global-label bypass passes the mated graph but fails the separate-card check. <strong>Physical connector and production qualification remain open.</strong> R2 remains accepted; this is static connectivity evidence.</p><div class="links"><a href="/Connector-assembly.md">Contact mapping, isolation and scope ↗</a><a href="/build/cp1-connector-assembly/">Native hierarchy and mutation evidence ↗</a></div>`;
   const counts={}; report.checks.forEach(c=>counts[c.status]=(counts[c.status]||0)+1);
   $('counts').innerHTML=Object.entries(counts).map(([s,n])=>`<span>${n} ${badge(s)}</span>`).join('');
   renderChecks();

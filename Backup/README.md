@@ -1,5 +1,17 @@
 # Git and evidence checkpoints
 
+## CP1-CA1 native CPU connector assembly
+
+`Verification/build/cp1-connector-assembly/` is an additional bounded-replay
+dependency. It preserves separate-card and mated graph checks, four mutations,
+the first development iteration and sixteen SVG sheet views. The checked-in
+root is `Circuits/KiCad/Integrated/candidates/CA1/CA1.kicad_sch`.
+
+Restore NA1 and its earlier dependencies below, then verify and extract CA1's
+`studies-and-workbook.tar.gz` from the repository root. The study checks 768
+contact pairs, including all 17 memory extensions, and preserves the functional
+NA1 graph after mating. Physical and production acceptance remain open.
+
 ## CP1-NA1 native R2/BR1/TX1 assembly candidate
 
 The [cp1-native-assembly-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-native-assembly-2026-11-16)

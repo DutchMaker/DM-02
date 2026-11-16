@@ -18,6 +18,8 @@ The active source overlay is in `targets/cp1/overlay/`. `targets/cp1/lock.json` 
 
 ## What a run checks
 
+[CP1-CA1](Connector-assembly.md) implements the CN1 CPU connectors as a separate native candidate with four isolated CPU net domains. All 768 contact pairs and 7,324 native pins are checked; mating reproduces NA1's functional graph exactly. Four mutations include a shared-global-label bypass that only the unmated check detects. `connector-assembly-evidence.json` pins this study; restore `build/cp1-connector-assembly/` for bounded replay. Physical connector qualification and production/PCB release remain open.
+
 [CP1-NA1](Native-assembly.md) adds a checked-in native R2/BR1/TX1 hierarchy with 270 DIP ICs. Independent KiCad export checks all 6,491 physical pins, component identities, pin metadata and fitted flags. Three wiring mutations are detected; the original library-ID collision is preserved and rejected. `native-assembly-evidence.json` pins the hierarchy and static TB1 port bindings; restore `build/cp1-native-assembly/` for replay. Production-source promotion, CPU DIN implementation and physical qualification remain open.
 
 1. Verify the pinned evidence hashes, including receipts, fixtures, logs, HDL, programming images and the preserved reference report.
