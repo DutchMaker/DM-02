@@ -1,0 +1,1035 @@
+{
+  "passed": true,
+  "revision": "CP1-R2",
+  "changed_parts": [
+    {
+      "board": "AL1",
+      "ref": "U2",
+      "old": "SN74HCT273N",
+      "new": "CD74HCT273E"
+    },
+    {
+      "board": "ME1",
+      "ref": "U11",
+      "old": "SN74HCT273N",
+      "new": "CD74HCT273E"
+    },
+    {
+      "board": "ME1",
+      "ref": "U15",
+      "old": "SN74HCT273N",
+      "new": "CD74HCT273E"
+    }
+  ],
+  "identical_connectivity_boards": 12,
+  "pins_checked": 60,
+  "package": "PDIP-20, 7.62 mm row spacing",
+  "monitor_runs": [
+    {
+      "gap_ns": 2,
+      "hold_ns": 3,
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "gap_ns": 3,
+      "hold_ns": 3,
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "gap_ns": 4,
+      "hold_ns": 3,
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "gap_ns": 2,
+      "hold_ns": 0,
+      "rejected": false,
+      "passed": true
+    }
+  ],
+  "missing_hold_monitor_mutation_detected": true,
+  "outputs": [
+    {
+      "labels": [
+        "AL1:A7"
+      ],
+      "drivers": [
+        {
+          "board": "AL1",
+          "ref": "U2",
+          "pin": "19",
+          "part": "CD74HCT273E",
+          "role": "O",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 50
+        }
+      ],
+      "receivers": [
+        {
+          "board": "AL1",
+          "ref": "U1",
+          "pin": "34",
+          "part": "M27C322-100F1",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 100
+        },
+        {
+          "board": "AL1",
+          "ref": "U5",
+          "pin": "14",
+          "part": "SN74AHCT157N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 50
+        },
+        {
+          "board": "AL1",
+          "ref": "U13",
+          "pin": "9",
+          "part": "SN74HCT245N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 150
+        }
+      ],
+      "allocated_load_pf": 35,
+      "timing_table_load_pf": 50,
+      "within_allocation": true,
+      "cap_guaranteed": false,
+      "scope": "Routing allowance is unmeasured; 245 IO capacitance is an allocation, not a datasheet maximum."
+    },
+    {
+      "labels": [
+        "AL1:A6"
+      ],
+      "drivers": [
+        {
+          "board": "AL1",
+          "ref": "U2",
+          "pin": "16",
+          "part": "CD74HCT273E",
+          "role": "O",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 50
+        }
+      ],
+      "receivers": [
+        {
+          "board": "AL1",
+          "ref": "U1",
+          "pin": "35",
+          "part": "M27C322-100F1",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 100
+        },
+        {
+          "board": "AL1",
+          "ref": "U5",
+          "pin": "11",
+          "part": "SN74AHCT157N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 50
+        },
+        {
+          "board": "AL1",
+          "ref": "U13",
+          "pin": "8",
+          "part": "SN74HCT245N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 150
+        }
+      ],
+      "allocated_load_pf": 35,
+      "timing_table_load_pf": 50,
+      "within_allocation": true,
+      "cap_guaranteed": false,
+      "scope": "Routing allowance is unmeasured; 245 IO capacitance is an allocation, not a datasheet maximum."
+    },
+    {
+      "labels": [
+        "AL1:A5"
+      ],
+      "drivers": [
+        {
+          "board": "AL1",
+          "ref": "U2",
+          "pin": "15",
+          "part": "CD74HCT273E",
+          "role": "O",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 50
+        }
+      ],
+      "receivers": [
+        {
+          "board": "AL1",
+          "ref": "U1",
+          "pin": "36",
+          "part": "M27C322-100F1",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 100
+        },
+        {
+          "board": "AL1",
+          "ref": "U5",
+          "pin": "5",
+          "part": "SN74AHCT157N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 50
+        },
+        {
+          "board": "AL1",
+          "ref": "U13",
+          "pin": "7",
+          "part": "SN74HCT245N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 150
+        }
+      ],
+      "allocated_load_pf": 35,
+      "timing_table_load_pf": 50,
+      "within_allocation": true,
+      "cap_guaranteed": false,
+      "scope": "Routing allowance is unmeasured; 245 IO capacitance is an allocation, not a datasheet maximum."
+    },
+    {
+      "labels": [
+        "AL1:A4"
+      ],
+      "drivers": [
+        {
+          "board": "AL1",
+          "ref": "U2",
+          "pin": "12",
+          "part": "CD74HCT273E",
+          "role": "O",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 50
+        }
+      ],
+      "receivers": [
+        {
+          "board": "AL1",
+          "ref": "U1",
+          "pin": "37",
+          "part": "M27C322-100F1",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 100
+        },
+        {
+          "board": "AL1",
+          "ref": "U5",
+          "pin": "2",
+          "part": "SN74AHCT157N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 50
+        },
+        {
+          "board": "AL1",
+          "ref": "U13",
+          "pin": "6",
+          "part": "SN74HCT245N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 150
+        }
+      ],
+      "allocated_load_pf": 35,
+      "timing_table_load_pf": 50,
+      "within_allocation": true,
+      "cap_guaranteed": false,
+      "scope": "Routing allowance is unmeasured; 245 IO capacitance is an allocation, not a datasheet maximum."
+    },
+    {
+      "labels": [
+        "AL1:A3"
+      ],
+      "drivers": [
+        {
+          "board": "AL1",
+          "ref": "U2",
+          "pin": "9",
+          "part": "CD74HCT273E",
+          "role": "O",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 50
+        }
+      ],
+      "receivers": [
+        {
+          "board": "AL1",
+          "ref": "U1",
+          "pin": "38",
+          "part": "M27C322-100F1",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 100
+        },
+        {
+          "board": "AL1",
+          "ref": "U4",
+          "pin": "14",
+          "part": "SN74AHCT157N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 50
+        },
+        {
+          "board": "AL1",
+          "ref": "U13",
+          "pin": "5",
+          "part": "SN74HCT245N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 150
+        }
+      ],
+      "allocated_load_pf": 35,
+      "timing_table_load_pf": 50,
+      "within_allocation": true,
+      "cap_guaranteed": false,
+      "scope": "Routing allowance is unmeasured; 245 IO capacitance is an allocation, not a datasheet maximum."
+    },
+    {
+      "labels": [
+        "AL1:A2"
+      ],
+      "drivers": [
+        {
+          "board": "AL1",
+          "ref": "U2",
+          "pin": "6",
+          "part": "CD74HCT273E",
+          "role": "O",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 50
+        }
+      ],
+      "receivers": [
+        {
+          "board": "AL1",
+          "ref": "U1",
+          "pin": "39",
+          "part": "M27C322-100F1",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 100
+        },
+        {
+          "board": "AL1",
+          "ref": "U4",
+          "pin": "11",
+          "part": "SN74AHCT157N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 50
+        },
+        {
+          "board": "AL1",
+          "ref": "U13",
+          "pin": "4",
+          "part": "SN74HCT245N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 150
+        }
+      ],
+      "allocated_load_pf": 35,
+      "timing_table_load_pf": 50,
+      "within_allocation": true,
+      "cap_guaranteed": false,
+      "scope": "Routing allowance is unmeasured; 245 IO capacitance is an allocation, not a datasheet maximum."
+    },
+    {
+      "labels": [
+        "AL1:A1"
+      ],
+      "drivers": [
+        {
+          "board": "AL1",
+          "ref": "U2",
+          "pin": "5",
+          "part": "CD74HCT273E",
+          "role": "O",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 50
+        }
+      ],
+      "receivers": [
+        {
+          "board": "AL1",
+          "ref": "U1",
+          "pin": "40",
+          "part": "M27C322-100F1",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 100
+        },
+        {
+          "board": "AL1",
+          "ref": "U4",
+          "pin": "5",
+          "part": "SN74AHCT157N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 50
+        },
+        {
+          "board": "AL1",
+          "ref": "U13",
+          "pin": "3",
+          "part": "SN74HCT245N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 150
+        }
+      ],
+      "allocated_load_pf": 35,
+      "timing_table_load_pf": 50,
+      "within_allocation": true,
+      "cap_guaranteed": false,
+      "scope": "Routing allowance is unmeasured; 245 IO capacitance is an allocation, not a datasheet maximum."
+    },
+    {
+      "labels": [
+        "AL1:A0"
+      ],
+      "drivers": [
+        {
+          "board": "AL1",
+          "ref": "U2",
+          "pin": "2",
+          "part": "CD74HCT273E",
+          "role": "O",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 50
+        }
+      ],
+      "receivers": [
+        {
+          "board": "AL1",
+          "ref": "U1",
+          "pin": "41",
+          "part": "M27C322-100F1",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 100
+        },
+        {
+          "board": "AL1",
+          "ref": "U4",
+          "pin": "2",
+          "part": "SN74AHCT157N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 50
+        },
+        {
+          "board": "AL1",
+          "ref": "U13",
+          "pin": "2",
+          "part": "SN74HCT245N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 150
+        }
+      ],
+      "allocated_load_pf": 35,
+      "timing_table_load_pf": 50,
+      "within_allocation": true,
+      "cap_guaranteed": false,
+      "scope": "Routing allowance is unmeasured; 245 IO capacitance is an allocation, not a datasheet maximum."
+    },
+    {
+      "labels": [
+        "ME1:IO_DATA6"
+      ],
+      "drivers": [
+        {
+          "board": "ME1",
+          "ref": "U11",
+          "pin": "16",
+          "part": "CD74HCT273E",
+          "role": "O",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 50
+        }
+      ],
+      "receivers": [
+        {
+          "board": "ME1",
+          "ref": "U14",
+          "pin": "11",
+          "part": "SN74AHCT157N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 50
+        }
+      ],
+      "allocated_load_pf": 20,
+      "timing_table_load_pf": 50,
+      "within_allocation": true,
+      "cap_guaranteed": true,
+      "scope": "Routing allowance is unmeasured; 245 IO capacitance is an allocation, not a datasheet maximum."
+    },
+    {
+      "labels": [
+        "ME1:IO_DATA7"
+      ],
+      "drivers": [
+        {
+          "board": "ME1",
+          "ref": "U11",
+          "pin": "19",
+          "part": "CD74HCT273E",
+          "role": "O",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 50
+        }
+      ],
+      "receivers": [
+        {
+          "board": "ME1",
+          "ref": "U14",
+          "pin": "14",
+          "part": "SN74AHCT157N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 50
+        }
+      ],
+      "allocated_load_pf": 20,
+      "timing_table_load_pf": 50,
+      "within_allocation": true,
+      "cap_guaranteed": true,
+      "scope": "Routing allowance is unmeasured; 245 IO capacitance is an allocation, not a datasheet maximum."
+    },
+    {
+      "labels": [
+        "ME1:IO_ADDR0"
+      ],
+      "drivers": [
+        {
+          "board": "ME1",
+          "ref": "U15",
+          "pin": "2",
+          "part": "CD74HCT273E",
+          "role": "O",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 50
+        }
+      ],
+      "receivers": [
+        {
+          "board": "ME1",
+          "ref": "U16",
+          "pin": "2",
+          "part": "SN74AHCT157N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 50
+        }
+      ],
+      "allocated_load_pf": 20,
+      "timing_table_load_pf": 50,
+      "within_allocation": true,
+      "cap_guaranteed": true,
+      "scope": "Routing allowance is unmeasured; 245 IO capacitance is an allocation, not a datasheet maximum."
+    },
+    {
+      "labels": [
+        "ME1:IO_ADDR1"
+      ],
+      "drivers": [
+        {
+          "board": "ME1",
+          "ref": "U15",
+          "pin": "5",
+          "part": "CD74HCT273E",
+          "role": "O",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 50
+        }
+      ],
+      "receivers": [
+        {
+          "board": "ME1",
+          "ref": "U16",
+          "pin": "5",
+          "part": "SN74AHCT157N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 50
+        }
+      ],
+      "allocated_load_pf": 20,
+      "timing_table_load_pf": 50,
+      "within_allocation": true,
+      "cap_guaranteed": true,
+      "scope": "Routing allowance is unmeasured; 245 IO capacitance is an allocation, not a datasheet maximum."
+    },
+    {
+      "labels": [
+        "ME1:IO_ADDR2"
+      ],
+      "drivers": [
+        {
+          "board": "ME1",
+          "ref": "U15",
+          "pin": "6",
+          "part": "CD74HCT273E",
+          "role": "O",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 50
+        }
+      ],
+      "receivers": [
+        {
+          "board": "ME1",
+          "ref": "U16",
+          "pin": "11",
+          "part": "SN74AHCT157N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 50
+        }
+      ],
+      "allocated_load_pf": 20,
+      "timing_table_load_pf": 50,
+      "within_allocation": true,
+      "cap_guaranteed": true,
+      "scope": "Routing allowance is unmeasured; 245 IO capacitance is an allocation, not a datasheet maximum."
+    },
+    {
+      "labels": [
+        "ME1:IO_ADDR3"
+      ],
+      "drivers": [
+        {
+          "board": "ME1",
+          "ref": "U15",
+          "pin": "9",
+          "part": "CD74HCT273E",
+          "role": "O",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 50
+        }
+      ],
+      "receivers": [
+        {
+          "board": "ME1",
+          "ref": "U16",
+          "pin": "14",
+          "part": "SN74AHCT157N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 50
+        }
+      ],
+      "allocated_load_pf": 20,
+      "timing_table_load_pf": 50,
+      "within_allocation": true,
+      "cap_guaranteed": true,
+      "scope": "Routing allowance is unmeasured; 245 IO capacitance is an allocation, not a datasheet maximum."
+    },
+    {
+      "labels": [
+        "ME1:IO_ADDR4"
+      ],
+      "drivers": [
+        {
+          "board": "ME1",
+          "ref": "U15",
+          "pin": "12",
+          "part": "CD74HCT273E",
+          "role": "O",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 50
+        }
+      ],
+      "receivers": [
+        {
+          "board": "ME1",
+          "ref": "U18",
+          "pin": "2",
+          "part": "SN74AHCT157N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 50
+        }
+      ],
+      "allocated_load_pf": 20,
+      "timing_table_load_pf": 50,
+      "within_allocation": true,
+      "cap_guaranteed": true,
+      "scope": "Routing allowance is unmeasured; 245 IO capacitance is an allocation, not a datasheet maximum."
+    },
+    {
+      "labels": [
+        "ME1:IO_ADDR5"
+      ],
+      "drivers": [
+        {
+          "board": "ME1",
+          "ref": "U15",
+          "pin": "15",
+          "part": "CD74HCT273E",
+          "role": "O",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 50
+        }
+      ],
+      "receivers": [
+        {
+          "board": "ME1",
+          "ref": "U18",
+          "pin": "5",
+          "part": "SN74AHCT157N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 50
+        }
+      ],
+      "allocated_load_pf": 20,
+      "timing_table_load_pf": 50,
+      "within_allocation": true,
+      "cap_guaranteed": true,
+      "scope": "Routing allowance is unmeasured; 245 IO capacitance is an allocation, not a datasheet maximum."
+    },
+    {
+      "labels": [
+        "ME1:IO_ADDR6"
+      ],
+      "drivers": [
+        {
+          "board": "ME1",
+          "ref": "U15",
+          "pin": "16",
+          "part": "CD74HCT273E",
+          "role": "O",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 50
+        }
+      ],
+      "receivers": [
+        {
+          "board": "ME1",
+          "ref": "U18",
+          "pin": "11",
+          "part": "SN74AHCT157N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 50
+        }
+      ],
+      "allocated_load_pf": 20,
+      "timing_table_load_pf": 50,
+      "within_allocation": true,
+      "cap_guaranteed": true,
+      "scope": "Routing allowance is unmeasured; 245 IO capacitance is an allocation, not a datasheet maximum."
+    },
+    {
+      "labels": [
+        "ME1:IO_ADDR7"
+      ],
+      "drivers": [
+        {
+          "board": "ME1",
+          "ref": "U15",
+          "pin": "19",
+          "part": "CD74HCT273E",
+          "role": "O",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 50
+        }
+      ],
+      "receivers": [
+        {
+          "board": "ME1",
+          "ref": "U18",
+          "pin": "14",
+          "part": "SN74AHCT157N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 50
+        }
+      ],
+      "allocated_load_pf": 20,
+      "timing_table_load_pf": 50,
+      "within_allocation": true,
+      "cap_guaranteed": true,
+      "scope": "Routing allowance is unmeasured; 245 IO capacitance is an allocation, not a datasheet maximum."
+    },
+    {
+      "labels": [
+        "ME1:IO_DATA0"
+      ],
+      "drivers": [
+        {
+          "board": "ME1",
+          "ref": "U11",
+          "pin": "2",
+          "part": "CD74HCT273E",
+          "role": "O",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 50
+        }
+      ],
+      "receivers": [
+        {
+          "board": "ME1",
+          "ref": "U12",
+          "pin": "2",
+          "part": "SN74AHCT157N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 50
+        }
+      ],
+      "allocated_load_pf": 20,
+      "timing_table_load_pf": 50,
+      "within_allocation": true,
+      "cap_guaranteed": true,
+      "scope": "Routing allowance is unmeasured; 245 IO capacitance is an allocation, not a datasheet maximum."
+    },
+    {
+      "labels": [
+        "ME1:IO_DATA1"
+      ],
+      "drivers": [
+        {
+          "board": "ME1",
+          "ref": "U11",
+          "pin": "5",
+          "part": "CD74HCT273E",
+          "role": "O",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 50
+        }
+      ],
+      "receivers": [
+        {
+          "board": "ME1",
+          "ref": "U12",
+          "pin": "5",
+          "part": "SN74AHCT157N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 50
+        }
+      ],
+      "allocated_load_pf": 20,
+      "timing_table_load_pf": 50,
+      "within_allocation": true,
+      "cap_guaranteed": true,
+      "scope": "Routing allowance is unmeasured; 245 IO capacitance is an allocation, not a datasheet maximum."
+    },
+    {
+      "labels": [
+        "ME1:IO_DATA2"
+      ],
+      "drivers": [
+        {
+          "board": "ME1",
+          "ref": "U11",
+          "pin": "6",
+          "part": "CD74HCT273E",
+          "role": "O",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 50
+        }
+      ],
+      "receivers": [
+        {
+          "board": "ME1",
+          "ref": "U12",
+          "pin": "11",
+          "part": "SN74AHCT157N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 50
+        }
+      ],
+      "allocated_load_pf": 20,
+      "timing_table_load_pf": 50,
+      "within_allocation": true,
+      "cap_guaranteed": true,
+      "scope": "Routing allowance is unmeasured; 245 IO capacitance is an allocation, not a datasheet maximum."
+    },
+    {
+      "labels": [
+        "ME1:IO_DATA3"
+      ],
+      "drivers": [
+        {
+          "board": "ME1",
+          "ref": "U11",
+          "pin": "9",
+          "part": "CD74HCT273E",
+          "role": "O",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 50
+        }
+      ],
+      "receivers": [
+        {
+          "board": "ME1",
+          "ref": "U12",
+          "pin": "14",
+          "part": "SN74AHCT157N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 50
+        }
+      ],
+      "allocated_load_pf": 20,
+      "timing_table_load_pf": 50,
+      "within_allocation": true,
+      "cap_guaranteed": true,
+      "scope": "Routing allowance is unmeasured; 245 IO capacitance is an allocation, not a datasheet maximum."
+    },
+    {
+      "labels": [
+        "ME1:IO_DATA4"
+      ],
+      "drivers": [
+        {
+          "board": "ME1",
+          "ref": "U11",
+          "pin": "12",
+          "part": "CD74HCT273E",
+          "role": "O",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 50
+        }
+      ],
+      "receivers": [
+        {
+          "board": "ME1",
+          "ref": "U14",
+          "pin": "2",
+          "part": "SN74AHCT157N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 50
+        }
+      ],
+      "allocated_load_pf": 20,
+      "timing_table_load_pf": 50,
+      "within_allocation": true,
+      "cap_guaranteed": true,
+      "scope": "Routing allowance is unmeasured; 245 IO capacitance is an allocation, not a datasheet maximum."
+    },
+    {
+      "labels": [
+        "ME1:IO_DATA5"
+      ],
+      "drivers": [
+        {
+          "board": "ME1",
+          "ref": "U11",
+          "pin": "15",
+          "part": "CD74HCT273E",
+          "role": "O",
+          "capacitance_pf": 10,
+          "cap_guaranteed": false,
+          "limit_pf": 50
+        }
+      ],
+      "receivers": [
+        {
+          "board": "ME1",
+          "ref": "U14",
+          "pin": "5",
+          "part": "SN74AHCT157N",
+          "role": "I",
+          "capacitance_pf": 10,
+          "cap_guaranteed": true,
+          "limit_pf": 50
+        }
+      ],
+      "allocated_load_pf": 20,
+      "timing_table_load_pf": 50,
+      "within_allocation": true,
+      "cap_guaranteed": true,
+      "scope": "Routing allowance is unmeasured; 245 IO capacitance is an allocation, not a datasheet maximum."
+    }
+  ],
+  "load_scope": "Allocated values only. AL1 includes unguaranteed HCT245 IO capacitance; external IO/routing remain unqualified.",
+  "datasheet_sha256": "aac2ee3efca9489ecd375d9cb4f5c642a9fa8597f4cf1b8310e6e07f7f764aff",
+  "physical_qualification": false
+}

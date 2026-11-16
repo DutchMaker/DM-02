@@ -1,0 +1,288 @@
+{
+  "boards": {
+    "C1": {
+      "source_sha256": "b52927c04b6cab5815c3836dbac9c2a8c01a2e6ae3b274d83e5c50ca1cb6fb70",
+      "structure": {
+        "sheet": "C1",
+        "source": "Circuits/KiCad/Compact/candidates/C1.sch",
+        "packages": 10,
+        "findings": [],
+        "counts": {}
+      },
+      "native": {
+        "sheet": "C1",
+        "status": "pass",
+        "components": 28,
+        "net_groups": 66,
+        "connected_nets": 45,
+        "physical_pins": 208,
+        "differences": [],
+        "source_hash": "b52927c04b6cab5815c3836dbac9c2a8c01a2e6ae3b274d83e5c50ca1cb6fb70",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    },
+    "CW1": {
+      "source_sha256": "84c98f545bc21b27c37d41ea4527f3c7e16f264ca3e7f3ff5e55499b4c10da47",
+      "structure": {
+        "sheet": "CW1",
+        "source": "Circuits/KiCad/Compact/candidates/CW1.sch",
+        "packages": 14,
+        "findings": [],
+        "counts": {}
+      },
+      "native": {
+        "sheet": "CW1",
+        "status": "pass",
+        "components": 34,
+        "net_groups": 156,
+        "connected_nets": 125,
+        "physical_pins": 389,
+        "differences": [],
+        "source_hash": "84c98f545bc21b27c37d41ea4527f3c7e16f264ca3e7f3ff5e55499b4c10da47",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    },
+    "SQ1": {
+      "source_sha256": "f397af2400bbe38fdf3ba1d895b2d010ad9d601589d4705d210d4dfe80eac3b9",
+      "structure": {
+        "sheet": "SQ1",
+        "source": "Circuits/KiCad/Compact/candidates/SQ1.sch",
+        "packages": 21,
+        "findings": [],
+        "counts": {}
+      },
+      "native": {
+        "sheet": "SQ1",
+        "status": "pass",
+        "components": 46,
+        "net_groups": 140,
+        "connected_nets": 106,
+        "physical_pins": 414,
+        "differences": [],
+        "source_hash": "f397af2400bbe38fdf3ba1d895b2d010ad9d601589d4705d210d4dfe80eac3b9",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    },
+    "PC1": {
+      "source_sha256": "58826429e2bd2ceefdd1816050eca1ef9b99a3a7f3e42d2dc49ec9c046c591f7",
+      "structure": {
+        "sheet": "PC1",
+        "source": "Circuits/KiCad/Compact/candidates/PC1.sch",
+        "packages": 15,
+        "findings": [],
+        "counts": {}
+      },
+      "native": {
+        "sheet": "PC1",
+        "status": "pass",
+        "components": 34,
+        "net_groups": 104,
+        "connected_nets": 78,
+        "physical_pins": 334,
+        "differences": [],
+        "source_hash": "58826429e2bd2ceefdd1816050eca1ef9b99a3a7f3e42d2dc49ec9c046c591f7",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    },
+    "AL1": {
+      "source_sha256": "94d3e3127b337a32b7e47896b9a1b48feb1b9263ec1c013fc30dcbf41a7953be",
+      "structure": {
+        "sheet": "AL1",
+        "source": "Circuits/KiCad/Compact/candidates/AL1.sch",
+        "packages": 21,
+        "findings": [],
+        "counts": {}
+      },
+      "native": {
+        "sheet": "AL1",
+        "status": "pass",
+        "components": 46,
+        "net_groups": 156,
+        "connected_nets": 133,
+        "physical_pins": 480,
+        "differences": [],
+        "source_hash": "94d3e3127b337a32b7e47896b9a1b48feb1b9263ec1c013fc30dcbf41a7953be",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    },
+    "RG1": {
+      "source_sha256": "d05d21d35137625c8deaa24f7bbf4963c97f95ded7c3d5b9e1e4fc79386112f8",
+      "structure": {
+        "sheet": "RG1",
+        "source": "Circuits/KiCad/Compact/candidates/RG1.sch",
+        "packages": 17,
+        "findings": [],
+        "counts": {}
+      },
+      "native": {
+        "sheet": "RG1",
+        "status": "pass",
+        "components": 38,
+        "net_groups": 111,
+        "connected_nets": 101,
+        "physical_pins": 379,
+        "differences": [],
+        "source_hash": "d05d21d35137625c8deaa24f7bbf4963c97f95ded7c3d5b9e1e4fc79386112f8",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    },
+    "ME1": {
+      "source_sha256": "36a195d0ca142e94c9b1530761212bfb0242294b8bce2237e65a50ebf20a99ba",
+      "structure": {
+        "sheet": "ME1",
+        "source": "Circuits/KiCad/Compact/candidates/ME1.sch",
+        "packages": 25,
+        "findings": [],
+        "counts": {}
+      },
+      "native": {
+        "sheet": "ME1",
+        "status": "pass",
+        "components": 56,
+        "net_groups": 176,
+        "connected_nets": 152,
+        "physical_pins": 567,
+        "differences": [],
+        "source_hash": "36a195d0ca142e94c9b1530761212bfb0242294b8bce2237e65a50ebf20a99ba",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    },
+    "SP1": {
+      "source_sha256": "c55e5861bb491ef35bc8ec82ae8f508e3e4a4be2e2bf2e0b30588657ae585f40",
+      "structure": {
+        "sheet": "SP1",
+        "source": "Circuits/KiCad/Compact/candidates/SP1.sch",
+        "packages": 20,
+        "findings": [],
+        "counts": {}
+      },
+      "native": {
+        "sheet": "SP1",
+        "status": "pass",
+        "components": 45,
+        "net_groups": 129,
+        "connected_nets": 107,
+        "physical_pins": 421,
+        "differences": [],
+        "source_hash": "c55e5861bb491ef35bc8ec82ae8f508e3e4a4be2e2bf2e0b30588657ae585f40",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    },
+    "MA1": {
+      "source_sha256": "f419d576b0309d7fff7635e231dafaa344a7f9baf390f0c813d693919608b8e5",
+      "structure": {
+        "sheet": "MA1",
+        "source": "Circuits/KiCad/Compact/candidates/MA1.sch",
+        "packages": 33,
+        "findings": [],
+        "counts": {}
+      },
+      "native": {
+        "sheet": "MA1",
+        "status": "pass",
+        "components": 73,
+        "net_groups": 223,
+        "connected_nets": 206,
+        "physical_pins": 699,
+        "differences": [],
+        "source_hash": "f419d576b0309d7fff7635e231dafaa344a7f9baf390f0c813d693919608b8e5",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    },
+    "BF1": {
+      "source_sha256": "76f6d83c712e7be921d41f326ca903f710454c9277eb42ef3818f305b36f5fda",
+      "structure": {
+        "sheet": "BF1",
+        "source": "Circuits/KiCad/Compact/candidates/BF1.sch",
+        "packages": 11,
+        "findings": [],
+        "counts": {}
+      },
+      "native": {
+        "sheet": "BF1",
+        "status": "pass",
+        "components": 29,
+        "net_groups": 91,
+        "connected_nets": 80,
+        "physical_pins": 275,
+        "differences": [],
+        "source_hash": "76f6d83c712e7be921d41f326ca903f710454c9277eb42ef3818f305b36f5fda",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    },
+    "DT1": {
+      "source_sha256": "a794712b3580b079e18bb7a935a53da4eb3000338bc274df591971a413519f30",
+      "structure": {
+        "sheet": "DT1",
+        "source": "Circuits/KiCad/Compact/candidates/DT1.sch",
+        "packages": 5,
+        "findings": [],
+        "counts": {}
+      },
+      "native": {
+        "sheet": "DT1",
+        "status": "pass",
+        "components": 12,
+        "net_groups": 48,
+        "connected_nets": 48,
+        "physical_pins": 150,
+        "differences": [],
+        "source_hash": "a794712b3580b079e18bb7a935a53da4eb3000338bc274df591971a413519f30",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    },
+    "BP1": {
+      "source_sha256": "5bd190847273346873a52f9c7100dbe45f35c641728bd53e2ed584e338904b40",
+      "structure": {
+        "sheet": "BP1",
+        "source": "Circuits/KiCad/Compact/candidates/BP1.sch",
+        "packages": 0,
+        "findings": [],
+        "counts": {}
+      },
+      "native": {
+        "sheet": "BP1",
+        "status": "pass",
+        "components": 56,
+        "net_groups": 231,
+        "connected_nets": 230,
+        "physical_pins": 651,
+        "differences": [],
+        "source_hash": "5bd190847273346873a52f9c7100dbe45f35c641728bd53e2ed584e338904b40",
+        "scope": "KiCad imports original legacy library geometry; native rotations, mirrors, unit placement and hidden supplies. All pin groups, including unconnected singletons, are compared. Source placement/wire/label parsing is shared; annotation graphics and fabrication approval are excluded."
+      }
+    }
+  },
+  "logic_memory_packages": 192,
+  "by_part": {
+    "CD74ACT175E": 10,
+    "CD74HCT154E": 4,
+    "CD74HCT161E": 5,
+    "CD74HCT191E": 8,
+    "CD74HCT273E": 3,
+    "M27C1024-10F1": 1,
+    "M27C322-100F1": 1,
+    "SN74AHC08N": 1,
+    "SN74AHC32N": 1,
+    "SN74AHC74N": 7,
+    "SN74AHCT00N": 16,
+    "SN74AHCT04N": 14,
+    "SN74AHCT08N": 21,
+    "SN74AHCT157N": 29,
+    "SN74AHCT244N": 29,
+    "SN74AHCT32N": 6,
+    "SN74HC377N": 6,
+    "SN74HCT245N": 19,
+    "SN74HCT574N": 9,
+    "UM61512AK-15": 1,
+    "W27C512-45Z": 1
+  },
+  "baseline_packages": 288,
+  "saving": 96,
+  "all_ic_dip": true,
+  "structure_passed": true,
+  "native_passed": true,
+  "load_over_allocations": [],
+  "load_scope": "Allocation check, not guaranteed full-envelope electrical qualification.",
+  "physical_qualification": false
+}

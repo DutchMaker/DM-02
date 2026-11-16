@@ -1,0 +1,476 @@
+{
+  "passed": true,
+  "remaining_act175": [
+    {
+      "board": "C1",
+      "ref": "U1",
+      "clock_net": [
+        "CLK_P"
+      ],
+      "reset_net": [
+        "RESET_P_n"
+      ],
+      "used_complement_pins": [
+        "3",
+        "14"
+      ]
+    },
+    {
+      "board": "C1",
+      "ref": "U2",
+      "clock_net": [
+        "CLK_N"
+      ],
+      "reset_net": [
+        "RESET_N_n"
+      ],
+      "used_complement_pins": []
+    },
+    {
+      "board": "CW1",
+      "ref": "U10",
+      "clock_net": [
+        "WORD_CLOCK"
+      ],
+      "reset_net": [
+        "~RESET"
+      ],
+      "used_complement_pins": []
+    },
+    {
+      "board": "SQ1",
+      "ref": "U1",
+      "clock_net": [
+        "CAPTURE"
+      ],
+      "reset_net": [
+        "RESET_n_FAN0"
+      ],
+      "used_complement_pins": []
+    },
+    {
+      "board": "SQ1",
+      "ref": "U2",
+      "clock_net": [
+        "ADVANCE"
+      ],
+      "reset_net": [
+        "RESET_n_FAN0"
+      ],
+      "used_complement_pins": []
+    },
+    {
+      "board": "SQ1",
+      "ref": "U3",
+      "clock_net": [
+        "MODE_CLOCK"
+      ],
+      "reset_net": [
+        "RESET_n_FAN0"
+      ],
+      "used_complement_pins": [
+        "3",
+        "6"
+      ]
+    },
+    {
+      "board": "SQ1",
+      "ref": "U5",
+      "clock_net": [
+        "CAPTURE"
+      ],
+      "reset_net": [
+        "HALT_RESET_n"
+      ],
+      "used_complement_pins": [
+        "3"
+      ]
+    },
+    {
+      "board": "PC1",
+      "ref": "U11",
+      "clock_net": [
+        "CARRY_CLOCK"
+      ],
+      "reset_net": [
+        "~RESET_FAN1"
+      ],
+      "used_complement_pins": []
+    },
+    {
+      "board": "AL1",
+      "ref": "U10",
+      "clock_net": [
+        "FLAG_CLOCK"
+      ],
+      "reset_net": [
+        "RESET_n_FAN0"
+      ],
+      "used_complement_pins": []
+    },
+    {
+      "board": "ME1",
+      "ref": "U19",
+      "clock_net": [
+        "DATA_CLOCK"
+      ],
+      "reset_net": [
+        "RESET_n_FAN0"
+      ],
+      "used_complement_pins": []
+    }
+  ],
+  "remaining_compatible_273_pairs": 0,
+  "selected_models": {
+    "SN74AHC74N": {
+      "function": "74",
+      "package": "PDIP-14",
+      "source": "sn74ahc74",
+      "source_pages": [
+        6,
+        7
+      ],
+      "max_delay_ns": 11,
+      "clock_q_max_ns": 10.5,
+      "setup_ns": 5,
+      "hold_ns": 0.5,
+      "reset_setup_ns": 3,
+      "pulse_ns": 5,
+      "input_cap_pf": 10
+    },
+    "SN74AHCT04N": {
+      "function": "04",
+      "package": "PDIP-14",
+      "source": "sn74ahct04",
+      "source_pages": [
+        5
+      ],
+      "max_delay_ns": 8.5,
+      "input_cap_pf": 10,
+      "pages": [
+        5
+      ]
+    },
+    "SN74AHC32N": {
+      "function": "32",
+      "package": "PDIP-14",
+      "source": "sn74ahc32",
+      "source_pages": [
+        7
+      ],
+      "max_delay_ns": 8.5,
+      "max_delay_15pf_ns": 6.5,
+      "input_cap_pf": 10
+    },
+    "SN74AHC08N": {
+      "function": "08",
+      "package": "PDIP-14",
+      "source": "sn74ahc08",
+      "source_pages": [
+        8
+      ],
+      "max_delay_ns": 9,
+      "max_delay_15pf_ns": 7,
+      "input_cap_pf": 10
+    },
+    "SN74AHCT244N": {
+      "function": "244",
+      "package": "PDIP-20",
+      "source": "sn74ahct244",
+      "source_pages": [
+        5
+      ],
+      "max_delay_ns": 9.5,
+      "input_cap_pf": 10,
+      "pages": [
+        5
+      ],
+      "enable_max_ns": 13,
+      "disable_max_ns": 13
+    },
+    "SN74HCT574N": {
+      "function": "574",
+      "package": "PDIP-20",
+      "source": "sn74hct574",
+      "pages": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "max_delay_ns": 45,
+      "setup_ns": 25,
+      "hold_ns": 5,
+      "pulse_ns": 20,
+      "input_cap_pf": 10
+    },
+    "M27C322-100F1": {
+      "function": "M27C322",
+      "source": "m27c322",
+      "package": "FDIP42W",
+      "pages": [
+        4,
+        5,
+        6,
+        14,
+        15,
+        16,
+        19,
+        22
+      ],
+      "max_delay_ns": 100,
+      "input_cap_pf": 10,
+      "output_hold_ns": 5,
+      "timing_load_pf": 100,
+      "status": "Obsolete; legacy timing-study part, not a procurement selection",
+      "capacitance_note": "Maximum CIN specified at 25 C only; full-temperature loading remains unqualified."
+    },
+    "SN74AHCT157N": {
+      "function": "157",
+      "source": "sn74ahct157",
+      "package": "PDIP-16",
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        12
+      ],
+      "max_delay_ns": 12,
+      "input_cap_pf": 10
+    },
+    "SN74AHCT32N": {
+      "function": "32",
+      "package": "PDIP-14",
+      "source": "sn74ahct32",
+      "pages": [
+        5
+      ],
+      "max_delay_ns": 10,
+      "input_cap_pf": 10
+    },
+    "CD74ACT175E": {
+      "function": "175",
+      "package": "DIP",
+      "source": "cd74act175",
+      "source_pages": [
+        6,
+        7
+      ],
+      "max_delay_ns": 13,
+      "setup_ns": 2,
+      "hold_ns": 2,
+      "reset_setup_ns": 1,
+      "pulse_ns": 5,
+      "input_cap_pf": 10,
+      "pages": [
+        6,
+        7
+      ],
+      "recovery_ns": 1,
+      "clear_pulse_ns": 4
+    },
+    "CD74HCT161E": {
+      "function": "161",
+      "package": "DIP",
+      "source": "cd74hct161",
+      "pages": [
+        2,
+        3,
+        7,
+        8,
+        11
+      ],
+      "clock_q_max_ns": 59,
+      "clock_tc_max_ns": 63,
+      "clear_max_ns": 75,
+      "data_setup_ns": 15,
+      "data_hold_ns": 5,
+      "enable_setup_ns": 20,
+      "enable_hold_ns": 3,
+      "load_setup_ns": 18,
+      "load_hold_ns": 3,
+      "recovery_ns": 22,
+      "reset_pulse_ns": 30,
+      "clock_low_ns": 24,
+      "input_cap_pf": 10
+    },
+    "CD74HCT154E": {
+      "function": "154",
+      "package": "DIP",
+      "source": "cd74hct154",
+      "pages": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "max_delay_ns": 53,
+      "input_cap_pf": 10
+    },
+    "SN74AHCT00N": {
+      "function": "00",
+      "package": "DIP",
+      "source": "sn74ahct00",
+      "pages": [
+        5,
+        6
+      ],
+      "max_delay_ns": 9,
+      "input_cap_pf": 10
+    },
+    "SN74AHCT08N": {
+      "function": "08",
+      "package": "DIP",
+      "source": "sn74ahct08",
+      "pages": [
+        6
+      ],
+      "max_delay_ns": 9,
+      "input_cap_pf": 10
+    },
+    "SN74HC377N": {
+      "function": "377",
+      "source": "sn74hc377",
+      "package": "DIP-20",
+      "max_delay_ns": 40,
+      "setup_ns": 25,
+      "hold_ns": 5,
+      "enable_hold_ns": 5,
+      "pulse_ns": 25,
+      "input_cap_pf": 10,
+      "vih_min_v": 3.15,
+      "vil_max_v": 1.35
+    },
+    "CD74HCT273E": {
+      "function": "273",
+      "source": "cd74hct273",
+      "package": "DIP-20",
+      "max_delay_ns": 42,
+      "setup_ns": 25,
+      "hold_ns": 3,
+      "recovery_ns": 25,
+      "pulse_ns": 25,
+      "clear_pulse_ns": 20,
+      "input_cap_pf": 10,
+      "timing_load_pf": 50,
+      "clock_q_max_ns": 38,
+      "clear_q_max_ns": 40,
+      "datasheet_setup_ns": 15,
+      "datasheet_clear_pulse_ns": 15,
+      "datasheet_reset_removal_ns": 13,
+      "qualification": "SCHS174D, 4.5 V, -40..85 C, 50 pF, input tr/tf=6 ns. Conservative 42 ns output delay, 25 ns setup/reset-release separation and 20 ns clear pulse retained; 3 ns data hold enforced. Physical loading and supply edges remain open.",
+      "clock_delay_scope": "SCHS174D explicitly bounds clock/clear to Q at 38/40 ns at 4.5 V, -40..85 C and 50 pF. Model retains a conservative 42 ns envelope and enforces 3 ns data hold; physical load/supply qualification remains open."
+    },
+    "CD74HCT191E": {
+      "function": "191",
+      "source": "cd74hct191",
+      "package": "DIP-16",
+      "max_delay_ns": 50,
+      "clock_q_ns": 34,
+      "clock_rco_ns": 44,
+      "clock_tc_ns": 53,
+      "data_q_ns": 48,
+      "load_q_ns": 50,
+      "data_setup_ns": 15,
+      "data_hold_ns": 2,
+      "enable_setup_ns": 15,
+      "enable_hold_ns": 2,
+      "direction_setup_ns": 23,
+      "recovery_ns": 15,
+      "load_pulse_ns": 20,
+      "pulse_ns": 25,
+      "input_cap_pf": 10
+    },
+    "SN74HCT245N": {
+      "function": "245",
+      "source": "sn74hct245",
+      "package": "DIP-20",
+      "max_delay_ns": 38,
+      "enable_max_ns": 74,
+      "disable_max_ns": 50,
+      "input_cap_pf": 10,
+      "io_cap_pf": null,
+      "timing_load_pf": 150,
+      "limitation": "150 pF data/enable bounds; disable table is 50 pF only. No guaranteed IO-port capacitance provided."
+    },
+    "M27C1024-10F1": {
+      "function": "M27C1024",
+      "source": "m27c1024",
+      "package": "DIP-40",
+      "max_delay_ns": 100,
+      "input_cap_pf": 6,
+      "timing_load_pf": 100
+    },
+    "W27C512-45Z": {
+      "function": "27C512",
+      "source": "w27c512",
+      "package": "DIP-28",
+      "max_delay_ns": 45,
+      "input_cap_pf": 6,
+      "output_hold_ns": 0
+    },
+    "UM61512AK-15": {
+      "function": "UM61512",
+      "source": "um61512a",
+      "package": "DIP-32",
+      "max_delay_ns": 15,
+      "disable_max_ns": 10,
+      "input_cap_pf": 8,
+      "io_cap_pf": 10,
+      "timing_load_pf": 30,
+      "write_cycle_ns": 15,
+      "address_write_setup_ns": 12,
+      "write_pulse_ns": 9,
+      "write_data_setup_ns": 7,
+      "write_data_hold_ns": 0
+    }
+  },
+  "additional_archived_sources": {
+    "m27c1024.pdf": {
+      "original": "Verification/build/owned-inventory/sources/m27c1024.pdf",
+      "sha256": "229d461b211eebf9bb0a0888f0a60a688ab89fed1aae1f109cedca618d7dccc2"
+    },
+    "m27c1024-source.json": {
+      "original": "Verification/build/owned-inventory/sources/m27c1024-source.json",
+      "sha256": "77cd1efeb0eb14dbbaae8e49a55202b63e41424855d3921975a541fcdb3d6a35"
+    },
+    "m27c1024.txt": {
+      "original": "Verification/build/owned-inventory/sources/m27c1024.txt",
+      "sha256": "724410ec1d2d923a95a6f9caf4ebd4a59070d67a48e0bc69a3c50aa3d5f5614e"
+    },
+    "um61512a.txt": {
+      "original": "Verification/build/owned-inventory/sources/um61512a.txt",
+      "sha256": "5c75b0240d2722e56715c7cacf37d688b536f517f52f99528b2b411d91c390f7"
+    },
+    "um61512a.pdf": {
+      "original": "Verification/build/owned-inventory/sources/um61512a.pdf",
+      "sha256": "16ca419ec211de799b6213efa768174c68128466ec3236c0869a777a3fa6f4db"
+    },
+    "um61512a-source.json": {
+      "original": "Verification/build/owned-inventory/sources/um61512a-source.json",
+      "sha256": "9f9a57630bee34d4741263a3dc8c45967de403a3037e8c8a0963ef2314dc8fac"
+    },
+    "w27c512.pdf": {
+      "original": "Verification/build/owned-inventory/sources/w27c512.pdf",
+      "sha256": "c455800df1f9755fabe1cc94a7756a0bf06e74b8ddf2e17720b294a778a90ffc"
+    },
+    "w27c512-source.json": {
+      "original": "Verification/build/owned-inventory/sources/w27c512-source.json",
+      "sha256": "cb7e4d458e09db98328d2af2a6793341a4de66dee6a7cab64e33e18e3a76a9dd"
+    },
+    "w27c512.txt": {
+      "original": "Verification/build/owned-inventory/sources/w27c512.txt",
+      "sha256": "96897ba0db5abbe71562c4f9ccf51f4056012c29d24b4dee9388b5e1ef8f942d"
+    },
+    "sn74hc377.txt": {
+      "original": "Verification/build/owned-inventory/sources/sn74hc377.txt",
+      "sha256": "82434674f505498dc61445c0c59034cc66ff9558eb08690daca1e57e44468699"
+    },
+    "sn74hc377.pdf": {
+      "original": "Verification/build/owned-inventory/sources/sn74hc377.pdf",
+      "sha256": "b22acd7e22c3c90494921cb7c8e98cb53570d57e0612d01ad6d3f29ad70a2d53"
+    }
+  },
+  "scope": "No further pair of remaining 175s shares the physical clock/reset nets with unused complemented outputs. Not a global minimum-IC proof."
+}

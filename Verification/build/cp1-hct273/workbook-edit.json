@@ -1,0 +1,57 @@
+{
+  "source_sha256": "3fe390ca37e814be905f3fc672e68b66e0dac154bf86d6ca908598a88469180c",
+  "changed_cells": [
+    [
+      "Compact BOM",
+      "A19"
+    ],
+    [
+      "Compact BOM",
+      "F19"
+    ],
+    [
+      "Compact guide",
+      "A1"
+    ],
+    [
+      "Compact guide",
+      "B10"
+    ],
+    [
+      "Compact guide",
+      "B13"
+    ],
+    [
+      "Compact instances",
+      "C163"
+    ],
+    [
+      "Compact instances",
+      "C254"
+    ],
+    [
+      "Compact instances",
+      "C255"
+    ]
+  ],
+  "sheets": [
+    "Compact guide",
+    "Compact BOM",
+    "Compact instances",
+    "DIP candidate guide",
+    "DIP candidate BOM",
+    "DIP substitutions",
+    "Reported stock",
+    "Start",
+    "IC inventory",
+    "Reference FD1 BOM",
+    "IC replacements",
+    "Reviewed baseline",
+    "THT paths",
+    "Options and gaps",
+    "References",
+    "Sources"
+  ],
+  "formulas_preserved": true,
+  "stock_preserved": true
+}

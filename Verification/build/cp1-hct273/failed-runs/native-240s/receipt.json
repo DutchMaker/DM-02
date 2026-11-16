@@ -1,0 +1,7 @@
+{
+  "status": "timeout",
+  "timeout_seconds": 240,
+  "command": "python3 Verification/build/cp1-hct273/audit.py --native",
+  "acceptance": false,
+  "reason": "Outer execution budget expired before the aggregate receipt; partial native exports preserved."
+}

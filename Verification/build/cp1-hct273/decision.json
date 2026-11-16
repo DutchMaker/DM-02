@@ -1,0 +1,9 @@
+{
+  "goal": "Adopt CD74HCT273E for the three 273 registers and remove the ambiguous clock-delay source.",
+  "parent": "cp1-promotion-2026-11-16",
+  "revision": "CP1-R2",
+  "route": "Isolated complete source set; explicit part identity; conservative 42 ns delay envelope plus a 3 ns hold monitor; full digital rerun before promotion.",
+  "evidence": "SCHS174D explicitly specifies 38 ns clock-to-Q and 40 ns clear-to-Q at 4.5 V, -40..85 C and 50 pF. Eight earlier sampled profiles passed the additional hold requirement.",
+  "physical_boundary": "No claim about unqualified loads, supply edges, minimum silicon delays, or full physical operating envelope.",
+  "jev": "Installed guidance unavailable; no advisory result claimed."
+}

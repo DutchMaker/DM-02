@@ -1,0 +1,5747 @@
+[
+  {
+    "board": "C1",
+    "ref": "Y1",
+    "value": "ACH-4.000MHZ-EK",
+    "footprint": "Oscillator:Oscillator_DIP-8",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": true
+  },
+  {
+    "board": "C1",
+    "ref": "U3",
+    "value": "SN74AHCT04N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "U10",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "U1",
+    "value": "CD74ACT175E",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "U2",
+    "value": "CD74ACT175E",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "U4",
+    "value": "SN74AHC32N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "U5",
+    "value": "SN74AHC08N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "U6",
+    "value": "SN74AHC74N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "U7",
+    "value": "SN74AHC74N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "U8",
+    "value": "SN74AHC74N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "U9",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "J1",
+    "value": "CONTROL",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "J2",
+    "value": "PHASES",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "R1",
+    "value": "10k",
+    "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "R2",
+    "value": "10k",
+    "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "R3",
+    "value": "10k",
+    "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "J90",
+    "value": "J90",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "C1",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "C2",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "C3",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "C4",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "C5",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "C6",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "C7",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "C8",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "C9",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "C10",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "C1",
+    "ref": "C11",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "U3",
+    "value": "SN74HCT574N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "U4",
+    "value": "SN74HCT574N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "U5",
+    "value": "CD74HCT154E",
+    "footprint": "Package_DIP:DIP-24_W15.24mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "U6",
+    "value": "CD74HCT154E",
+    "footprint": "Package_DIP:DIP-24_W15.24mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "U7",
+    "value": "CD74HCT154E",
+    "footprint": "Package_DIP:DIP-24_W15.24mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "U8",
+    "value": "CD74HCT154E",
+    "footprint": "Package_DIP:DIP-24_W15.24mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "U9",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "U10",
+    "value": "CD74ACT175E",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "U11",
+    "value": "SN74AHCT08N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "U13",
+    "value": "SN74AHCT00N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "U14",
+    "value": "SN74AHCT00N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "U15",
+    "value": "SN74AHCT00N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "U12",
+    "value": "SN74AHCT04N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "J1",
+    "value": "J1",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "J2",
+    "value": "J2",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "J3",
+    "value": "J3",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "J4",
+    "value": "J4",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "J5",
+    "value": "J5",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "J6",
+    "value": "J6",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "U1",
+    "value": "M27C1024-10F1",
+    "footprint": "Package_DIP:DIP-40_W15.24mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "C1",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "C2",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "C3",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "C4",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "C5",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "C6",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "C7",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "C8",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "C9",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "C10",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "C11",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "C12",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "C13",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "CW1",
+    "ref": "C14",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "U1",
+    "value": "CD74ACT175E",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "U2",
+    "value": "CD74ACT175E",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "U3",
+    "value": "CD74ACT175E",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "U4",
+    "value": "CD74HCT161E",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "U5",
+    "value": "CD74ACT175E",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "U6",
+    "value": "SN74HCT574N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "U7",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "U8",
+    "value": "SN74AHCT08N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "U9",
+    "value": "SN74AHCT08N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "U10",
+    "value": "SN74AHCT08N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "U11",
+    "value": "SN74AHCT08N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "U12",
+    "value": "SN74AHCT00N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "U13",
+    "value": "SN74AHCT00N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "U14",
+    "value": "SN74AHCT00N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "U15",
+    "value": "SN74AHCT00N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "U16",
+    "value": "SN74AHCT00N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "U17",
+    "value": "SN74AHCT00N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "U18",
+    "value": "SN74AHCT00N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "U19",
+    "value": "SN74AHCT04N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "U20",
+    "value": "SN74AHCT04N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "J1",
+    "value": "J1",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x15_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "J2",
+    "value": "J2",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "J3",
+    "value": "J3",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "J4",
+    "value": "J4",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "U101",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "C1",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "C2",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "C3",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "C4",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "C5",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "C6",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "C7",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "C8",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "C9",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "C10",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "C11",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "C12",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "C13",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "C14",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "C15",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "C16",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "C17",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "C18",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "C19",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "C20",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SQ1",
+    "ref": "C21",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "U1",
+    "value": "CD74HCT161E",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "U2",
+    "value": "CD74HCT161E",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "U3",
+    "value": "CD74HCT161E",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "U4",
+    "value": "CD74HCT161E",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "U7",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "U8",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "U9",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "U10",
+    "value": "SN74AHCT04N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "U11",
+    "value": "CD74ACT175E",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "U12",
+    "value": "SN74AHCT08N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "U13",
+    "value": "SN74AHCT08N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "U14",
+    "value": "SN74AHCT32N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "J1",
+    "value": "J1",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "J2",
+    "value": "J2",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "J3",
+    "value": "J3",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "U5",
+    "value": "SN74HCT245N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "U6",
+    "value": "SN74HCT245N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "J91",
+    "value": "J91",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "U101",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "C1",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "C2",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "C3",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "C4",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "C5",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "C6",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "C7",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "C8",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "C9",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "C10",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "C11",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "C12",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "C13",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "C14",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "PC1",
+    "ref": "C15",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "U1",
+    "value": "M27C322-100F1",
+    "footprint": "Package_DIP:DIP-42_W15.24mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "U4",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "U5",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "U6",
+    "value": "SN74HC377N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "U7",
+    "value": "SN74HC377N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "U8",
+    "value": "SN74HCT574N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "U9",
+    "value": "SN74HCT574N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "U10",
+    "value": "CD74ACT175E",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "U11",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "U12",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "U16",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "U17",
+    "value": "SN74AHCT04N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "U18",
+    "value": "SN74AHCT04N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "U19",
+    "value": "SN74AHCT08N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "U20",
+    "value": "SN74AHCT00N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "U21",
+    "value": "SN74AHCT00N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "J1",
+    "value": "J1",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x15_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "J2",
+    "value": "J2",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "J3",
+    "value": "J3",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "U2",
+    "value": "CD74HCT273E",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "U13",
+    "value": "SN74HCT245N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "U14",
+    "value": "SN74HCT245N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "U15",
+    "value": "SN74HCT245N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "J91",
+    "value": "J91",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "U101",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "C1",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "C2",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "C3",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "C4",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "C5",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "C6",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "C7",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "C8",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "C9",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "C10",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "C11",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "C12",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "C13",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "C14",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "C15",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "C16",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "C17",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "C18",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "C19",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "C20",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "AL1",
+    "ref": "C21",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "U1",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "U2",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "J1",
+    "value": "J1",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x12_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "J2",
+    "value": "J2",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "U101",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "U102",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "U103",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "U3",
+    "value": "SN74HC377N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "U8",
+    "value": "SN74HC377N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "U13",
+    "value": "SN74HC377N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "U18",
+    "value": "SN74HC377N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "J90",
+    "value": "J90",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "U7",
+    "value": "SN74HCT245N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "U12",
+    "value": "SN74HCT245N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "U17",
+    "value": "SN74HCT245N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "U22",
+    "value": "SN74HCT245N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "J91",
+    "value": "J91",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "U104",
+    "value": "SN74AHCT08N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "U105",
+    "value": "SN74AHCT04N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "U106",
+    "value": "SN74AHCT00N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "U107",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "C1",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "C2",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "C3",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "C4",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "C5",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "C6",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "C7",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "C8",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "C9",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "C10",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "C11",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "C12",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "C13",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "C14",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "C15",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "C16",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "RG1",
+    "ref": "C17",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U1",
+    "value": "W27C512-45Z",
+    "footprint": "Package_DIP:DIP-28_W15.24mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U2",
+    "value": "UM61512AK-15",
+    "footprint": "Package_DIP:DIP-32_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U3",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U4",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U5",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U6",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U7",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U8",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U10",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U12",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U14",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U16",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U18",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U19",
+    "value": "CD74ACT175E",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "J1",
+    "value": "J1",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "J2",
+    "value": "J2",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "J3",
+    "value": "J3",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "J4",
+    "value": "J4",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x19_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "J5",
+    "value": "J5",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U20",
+    "value": "SN74AHCT04N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U21",
+    "value": "SN74AHCT08N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U22",
+    "value": "SN74AHCT08N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U23",
+    "value": "SN74AHCT08N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U24",
+    "value": "SN74AHCT08N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U25",
+    "value": "SN74AHCT00N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U26",
+    "value": "SN74AHCT32N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U11",
+    "value": "CD74HCT273E",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U15",
+    "value": "CD74HCT273E",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U9",
+    "value": "SN74HCT245N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "J91",
+    "value": "J91",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "U101",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C1",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C2",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C3",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C4",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C5",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C6",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C7",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C8",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C9",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C10",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C11",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C12",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C13",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C14",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C15",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C16",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C17",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C18",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C19",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C20",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C21",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C22",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C23",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C24",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "ME1",
+    "ref": "C25",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "U1",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "U2",
+    "value": "SN74AHC74N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "U8",
+    "value": "SN74AHC74N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "U101",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "U102",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "U22",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "U23",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "U3",
+    "value": "CD74HCT191E",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "U4",
+    "value": "CD74HCT191E",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "U5",
+    "value": "CD74HCT191E",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "U6",
+    "value": "CD74HCT191E",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "J1",
+    "value": "J1",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "J2",
+    "value": "J2",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "J3",
+    "value": "J3",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "J90",
+    "value": "J90",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "U20",
+    "value": "SN74HCT245N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "U21",
+    "value": "SN74HCT245N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "J91",
+    "value": "J91",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "U103",
+    "value": "SN74AHCT04N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "U104",
+    "value": "SN74AHCT04N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "U105",
+    "value": "SN74AHCT32N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "U106",
+    "value": "SN74AHCT08N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "U107",
+    "value": "SN74AHCT08N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "U108",
+    "value": "SN74AHCT00N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "U109",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "C1",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "C2",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "C3",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "C4",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "C5",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "C6",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "C7",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "C8",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "C9",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "C10",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "C11",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "C12",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "C13",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "C14",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "C15",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "C16",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "C17",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "C18",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "C19",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "SP1",
+    "ref": "C20",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U1",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U2",
+    "value": "SN74AHC74N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U8",
+    "value": "SN74AHC74N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U101",
+    "value": "SN74HCT574N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U102",
+    "value": "SN74HCT574N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U103",
+    "value": "SN74HCT574N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U104",
+    "value": "SN74HCT574N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U105",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U106",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U107",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U108",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U109",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U110",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U111",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U112",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U113",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U114",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U115",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U116",
+    "value": "SN74AHCT157N",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U3",
+    "value": "CD74HCT191E",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U4",
+    "value": "CD74HCT191E",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U5",
+    "value": "CD74HCT191E",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U6",
+    "value": "CD74HCT191E",
+    "footprint": "Package_DIP:DIP-16_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "J1",
+    "value": "J1",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x13_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "J2",
+    "value": "J2",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "J3",
+    "value": "J3",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "J4",
+    "value": "J4",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "J5",
+    "value": "J5",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "J90",
+    "value": "J90",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U20",
+    "value": "SN74HCT245N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U21",
+    "value": "SN74HCT245N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "J91",
+    "value": "J91",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U117",
+    "value": "SN74AHCT04N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U118",
+    "value": "SN74AHCT04N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U119",
+    "value": "SN74AHCT32N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U120",
+    "value": "SN74AHCT32N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U121",
+    "value": "SN74AHCT08N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U122",
+    "value": "SN74AHCT08N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U123",
+    "value": "SN74AHCT00N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "U124",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C1",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C2",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C3",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C4",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C5",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C6",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C7",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C8",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C9",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C10",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C11",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C12",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C13",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C14",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C15",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C16",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C17",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C18",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C19",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C20",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C21",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C22",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C23",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C24",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C25",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C26",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C27",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C28",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C29",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C30",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C31",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C32",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "MA1",
+    "ref": "C33",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "U101",
+    "value": "SN74HCT245N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "J1",
+    "value": "J1",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "U102",
+    "value": "SN74HCT245N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "J2",
+    "value": "J2",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "U103",
+    "value": "SN74HCT245N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "J3",
+    "value": "J3",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "U104",
+    "value": "SN74HCT245N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "J4",
+    "value": "J4",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "U105",
+    "value": "SN74HCT245N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "J5",
+    "value": "J5",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "J6",
+    "value": "J6",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "J7",
+    "value": "J7",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "U106",
+    "value": "SN74AHCT08N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "U107",
+    "value": "SN74AHCT08N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "U108",
+    "value": "SN74AHCT08N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "U109",
+    "value": "SN74AHCT08N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "U110",
+    "value": "SN74AHCT04N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "U111",
+    "value": "SN74AHCT32N",
+    "footprint": "Package_DIP:DIP-14_W7.62mm",
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "C1",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "C2",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "C3",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "C4",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "C5",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "C6",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "C7",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "C8",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "C9",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "C10",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BF1",
+    "ref": "C11",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "DT1",
+    "ref": "U101",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "DT1",
+    "ref": "U102",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "DT1",
+    "ref": "U103",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "DT1",
+    "ref": "U104",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "DT1",
+    "ref": "U105",
+    "value": "SN74AHCT244N",
+    "footprint": "Package_DIP:DIP-20_W7.62mm",
+    "units": [
+      1
+    ],
+    "ic": true,
+    "oscillator": false
+  },
+  {
+    "board": "DT1",
+    "ref": "J1",
+    "value": "J1",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "DT1",
+    "ref": "J2",
+    "value": "J2",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x32_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "DT1",
+    "ref": "C1",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "DT1",
+    "ref": "C2",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "DT1",
+    "ref": "C3",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "DT1",
+    "ref": "C4",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "DT1",
+    "ref": "C5",
+    "value": "100nF",
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J1",
+    "value": "J1",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J2",
+    "value": "J2",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J3",
+    "value": "J3",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J4",
+    "value": "J4",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J5",
+    "value": "J5",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J6",
+    "value": "J6",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J7",
+    "value": "J7",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J8",
+    "value": "J8",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J9",
+    "value": "J9",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J10",
+    "value": "J10",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J11",
+    "value": "J11",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J12",
+    "value": "J12",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J13",
+    "value": "J13",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J14",
+    "value": "J14",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J15",
+    "value": "J15",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J16",
+    "value": "J16",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J17",
+    "value": "J17",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J18",
+    "value": "J18",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J19",
+    "value": "J19",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J20",
+    "value": "J20",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J21",
+    "value": "J21",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J22",
+    "value": "J22",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J23",
+    "value": "J23",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x15_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J24",
+    "value": "J24",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J25",
+    "value": "J25",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J26",
+    "value": "J26",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J27",
+    "value": "J27",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J28",
+    "value": "J28",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x15_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J29",
+    "value": "J29",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J30",
+    "value": "J30",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x12_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J31",
+    "value": "J31",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J32",
+    "value": "J32",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J33",
+    "value": "J33",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J34",
+    "value": "J34",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J35",
+    "value": "J35",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x13_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J36",
+    "value": "J36",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J37",
+    "value": "J37",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J38",
+    "value": "J38",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J39",
+    "value": "J39",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J40",
+    "value": "J40",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J41",
+    "value": "J41",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J42",
+    "value": "J42",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x19_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J43",
+    "value": "J43",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J44",
+    "value": "J44",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J45",
+    "value": "J45",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J46",
+    "value": "J46",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J47",
+    "value": "J47",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J48",
+    "value": "J48",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J49",
+    "value": "J49",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J50",
+    "value": "J50",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J51",
+    "value": "J51",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J52",
+    "value": "J52",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x32_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J901",
+    "value": "J901",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J902",
+    "value": "J902",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x19_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J903",
+    "value": "J903",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  },
+  {
+    "board": "BP1",
+    "ref": "J904",
+    "value": "J904",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "units": [
+      1
+    ],
+    "ic": false,
+    "oscillator": false
+  }
+]

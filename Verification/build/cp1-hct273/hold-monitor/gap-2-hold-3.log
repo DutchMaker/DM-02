@@ -1,0 +1,3 @@
+FATAL: model.sv:10: CP273 data hold tb.dut
+       Time: 63000  Scope: tb.dut
+CP273 hold tb.dut events=1 minimum_ns=2.000

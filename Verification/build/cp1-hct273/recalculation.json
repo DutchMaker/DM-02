@@ -1,0 +1,9 @@
+{
+  "status": "success",
+  "engine": "LibreOffice 26.8.3 aarch64, isolated read-only temporary image",
+  "total_formulas": 46,
+  "total_errors": 0,
+  "prior_attempts": [
+    "Skill recalculator could not find soffice; retried with the existing verified LibreOffice mount on PATH."
+  ]
+}

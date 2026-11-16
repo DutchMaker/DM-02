@@ -1,0 +1,3 @@
+DONE hold fixture
+tb.sv:6: $finish called at 144000 (1ps)
+CP273 hold tb.dut events=1 minimum_ns=3.000

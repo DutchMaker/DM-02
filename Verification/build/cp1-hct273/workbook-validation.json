@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "sha256": "a20f411f84cc07bd8fae55e162cce0ea3f953533596d1c1c51b085f3a5fb5c35",
+  "source_workbook_sha256": "3fe390ca37e814be905f3fc672e68b66e0dac154bf86d6ca908598a88469180c",
+  "preserved_sheets": [
+    "Compact guide",
+    "Compact BOM",
+    "Compact instances",
+    "DIP candidate guide",
+    "DIP candidate BOM",
+    "DIP substitutions",
+    "Reported stock",
+    "Start",
+    "IC inventory",
+    "Reference FD1 BOM",
+    "IC replacements",
+    "Reviewed baseline",
+    "THT paths",
+    "Options and gaps",
+    "References",
+    "Sources"
+  ],
+  "formula_errors": [],
+  "logic_memory_packages": 192,
+  "changed_parts": 3,
+  "unknown_quantities_preserved": true
+}
