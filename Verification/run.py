@@ -69,7 +69,11 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--allow-design-failures',action='store_true',help='Exit 0 after a complete run with known design gaps, but never suppress tool/harness errors')
     parser.add_argument('--browser',action='store_true',help='Also run the real-browser demo regression (requires Playwright and Chrome)')
+    parser.add_argument('--target',choices=('cp1','reference'),default='cp1',help='CP1 validates locked evidence against active sources; reference reruns the original AL1/FD1 pipeline')
     args=parser.parse_args()
+    if args.target=='cp1':
+        from dm02.cp1 import run
+        return run(args,harness_check)
     BUILD.mkdir(parents=True,exist_ok=True)
     requirements=json.loads((VROOT/'requirements.json').read_text())
     report=dict(schema_version=1,started_at=now(),state='running',source_hashes=sources(),checks=[],

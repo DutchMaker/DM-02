@@ -14,7 +14,7 @@ function renderChecks() {
   $('checks').innerHTML=checks.map(c=>`<article class="check" id="check-${esc(c.id)}">${badge(c.status)}<div class="eyebrow">${esc(c.id)}</div><h3>${esc(c.title)}</h3><p>${esc(c.summary)}</p>${c.contract_validation?`<p class="contract-acceptance"><strong>MOD-03 functional contract: ${esc(c.requirement_status)}.</strong> ${esc(c.contract_validation.boundary)}</p>`:''}${c.limitation?`<p><strong>Scope:</strong> ${esc(c.limitation)}</p>`:''}${controlProfiles(c)}<div class="links">${(c.artifacts||[]).map(p=>`<a href="${link(p)}">${esc(p.split('/').pop())} ↗</a>`).join('')}</div><details><summary>Inspect structured evidence</summary><pre>${esc(JSON.stringify(c,null,2))}</pre></details></article>`).join('') || '<p class="empty">No checks match this filter.</p>';
 }
 function render() {
-  $('run').textContent=`${report.state.toUpperCase()} · ${new Date(report.finished_at||report.started_at).toLocaleString()} · ${Object.keys(report.source_hashes).length} source files fingerprinted`;
+  $('run').textContent=`${(report.target||'reference').toUpperCase()} · ${report.mode||'full execution'} · ${report.state.toUpperCase()} · ${new Date(report.finished_at||report.started_at).toLocaleString()} · ${Object.keys(report.source_hashes).length} source files fingerprinted`;
   $('milestones').innerHTML=(report.milestones||[]).map(m=>`<article class="milestone">${badge(m.status)}<span class="number">0${m.number}</span><h3>${esc(m.title)}</h3><p>${esc(m.summary)}</p><details><summary>Acceptance gates</summary><ul>${(m.gates||[]).map(g=>`<li>${badge(g.status)} <a href="#check-${esc(g.gate)}">${esc(g.id)}</a>: ${esc(g.text)}</li>`).join('')}</ul></details></article>`).join('');
   const counts={}; report.checks.forEach(c=>counts[c.status]=(counts[c.status]||0)+1);
   $('counts').innerHTML=Object.entries(counts).map(([s,n])=>`<span>${n} ${badge(s)}</span>`).join('');
@@ -26,7 +26,7 @@ function render() {
     $('timing').innerHTML=`<div class="budgetbar">${segments.map(([n,v,c])=>`<span title="${n}: ${v} ns" style="flex:${v};background:${c}">${v}</span>`).join('')}</div><div class="budgetlegend">${segments.map(([n,v])=>`${n} ${v}`).join(' + ')} = <strong>${budget.required_ns} ns</strong></div><div class="margin bad"><span>Documented · ${p.documented_phase_ns} ns</span><strong>${budget.documented_margin_ns} ns</strong></div><div class="margin good"><span>Candidate · ${p.candidate_phase_ns} ns</span><strong>+${budget.candidate_margin_ns} ns</strong></div>`;
     const counted=report.checks.find(c=>c.id==='clock-candidate')?.budget;
     if(counted) $('timing').innerHTML+=`<div class="margin ${counted.passing?'good':'bad'}"><span>C1 conditional lower bound · ${counted.phase_min_ns.toFixed(2)} ns</span><strong>${counted.pilot_margin_ns.toFixed(2)} ns</strong></div><p><a href="#check-clock-candidate">Counted-clock circuit, bounds and corner tests ↗</a></p>`;
-  } else $('timing').textContent='Timing results unavailable.';
+  } else $('timing').textContent=report.checks.find(c=>c.id==='timing')?.summary||'Timing results unavailable.';
   const cases=report.checks.find(c=>c.id==='pilot')?.cases||[];
   $('mutations').innerHTML=cases.map(c=>`<tr><td>${esc(c.name)}</td><td>${esc(c.observed.join(', ')||'No violations')}</td><td>${badge(c.status)}</td></tr>`).join('');
   $('wavecase').innerHTML=cases.map(c=>`<option value="${esc(c.waveform)}">${esc(c.name)}</option>`).join('');
@@ -34,7 +34,7 @@ function render() {
   $('alu').innerHTML=(report.checks.find(c=>c.id==='alu')?.rows||[]).map(r=>`<details><summary><span class="${r.data_errors||r.flag_errors?'errors':'ok'}">${r.op.toString(16).padStart(2,'0').toUpperCase()} / ${esc(r.name)}</span><small>${r.data_errors.toLocaleString()} data · ${r.flag_errors.toLocaleString()} flags</small></summary><pre>${esc(JSON.stringify({data:r.data_examples,words:r.examples},null,2))}</pre></details>`).join('') || '<p>ALU results unavailable.</p>';
   $('risklist').innerHTML=report.risks.map(r=>`<article class="risk"><div class="id">${esc(r.id)}</div><div><h3>${esc(r.title)} ${badge(r.severity)}</h3><p>${esc(r.action)} <a href="#check-${esc(r.evidence)}" data-check="${esc(r.evidence)}">Evidence ↗</a></p></div></article>`).join('');
   $('trace').innerHTML=report.traceability.map(r=>`<tr><td>${esc(r.id)}</td><td>${esc(r.text)}</td><td>${badge(r.status)}</td></tr>`).join('');
-  $('provenance').textContent=JSON.stringify({tools:report.tools,models:report.models,requirements:report.requirements,source_hashes:report.source_hashes},null,2);
+  $('provenance').textContent=JSON.stringify({target:report.target,mode:report.mode,provenance:report.provenance,equivalence:report.equivalence,tools:report.tools,models:report.models,requirements:report.requirements,source_hashes:report.source_hashes},null,2);
 }
 async function drawWave() {
   const path=$('wavecase').value;

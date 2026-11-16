@@ -1,6 +1,8 @@
 # DM-02 verification
 
-This workflow collects reproducible pre-fabrication evidence. The original KiCad sheets remain the design source. Generated review drawings live in `build/`.
+The default target is now **CP1**, the 192-package DIP design. Read [CP1 active verification](CP1.md) for source locations, locked-evidence replay, archive restoration and current milestone accounting. The original AL1/FD1 pipeline is available with `--target reference`.
+
+The detailed sections below describe that preserved reference pipeline. Generated review drawings live in `build/`.
 
 ## Run it
 
@@ -15,7 +17,7 @@ From the repository root:
 ```sh
 python3 Verification/bootstrap.py
 python3 Verification/prepare_analog.py
-python3 Verification/run.py
+python3 Verification/run.py --target reference
 python3 Verification/serve.py
 ```
 

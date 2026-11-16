@@ -1,0 +1,972 @@
+[
+  {
+    "board": "SQ1",
+    "connector": "J2",
+    "backplane": "J1",
+    "signals": [
+      "5V",
+      "GND",
+      "DATA0",
+      "DATA1",
+      "DATA2",
+      "DATA3",
+      "DATA4",
+      "DATA5",
+      "DATA6",
+      "DATA7"
+    ]
+  },
+  {
+    "board": "PC1",
+    "connector": "J2",
+    "backplane": "J2",
+    "signals": [
+      "5V",
+      "GND",
+      "DATA0",
+      "DATA1",
+      "DATA2",
+      "DATA3",
+      "DATA4",
+      "DATA5",
+      "DATA6",
+      "DATA7"
+    ]
+  },
+  {
+    "board": "AL1",
+    "connector": "J2",
+    "backplane": "J3",
+    "signals": [
+      "5V",
+      "GND",
+      "DATA0",
+      "DATA1",
+      "DATA2",
+      "DATA3",
+      "DATA4",
+      "DATA5",
+      "DATA6",
+      "DATA7"
+    ]
+  },
+  {
+    "board": "RG1",
+    "connector": "J2",
+    "backplane": "J4",
+    "signals": [
+      "5V",
+      "GND",
+      "DATA0",
+      "DATA1",
+      "DATA2",
+      "DATA3",
+      "DATA4",
+      "DATA5",
+      "DATA6",
+      "DATA7"
+    ]
+  },
+  {
+    "board": "SP1",
+    "connector": "J2",
+    "backplane": "J5",
+    "signals": [
+      "5V",
+      "GND",
+      "DATA0",
+      "DATA1",
+      "DATA2",
+      "DATA3",
+      "DATA4",
+      "DATA5",
+      "DATA6",
+      "DATA7"
+    ]
+  },
+  {
+    "board": "MA1",
+    "connector": "J2",
+    "backplane": "J6",
+    "signals": [
+      "5V",
+      "GND",
+      "DATA0",
+      "DATA1",
+      "DATA2",
+      "DATA3",
+      "DATA4",
+      "DATA5",
+      "DATA6",
+      "DATA7"
+    ]
+  },
+  {
+    "board": "ME1",
+    "connector": "J2",
+    "backplane": "J7",
+    "signals": [
+      "5V",
+      "GND",
+      "DATA0",
+      "DATA1",
+      "DATA2",
+      "DATA3",
+      "DATA4",
+      "DATA5",
+      "DATA6",
+      "DATA7"
+    ]
+  },
+  {
+    "board": "AL1",
+    "connector": "J91",
+    "backplane": "J8",
+    "signals": [
+      "5V",
+      "GND",
+      "BRANCH0_0",
+      "BRANCH0_1",
+      "BRANCH0_2",
+      "BRANCH0_3",
+      "BRANCH0_4",
+      "BRANCH0_5",
+      "BRANCH0_6",
+      "BRANCH0_7"
+    ]
+  },
+  {
+    "board": "RG1",
+    "connector": "J91",
+    "backplane": "J9",
+    "signals": [
+      "5V",
+      "GND",
+      "BRANCH1_0",
+      "BRANCH1_1",
+      "BRANCH1_2",
+      "BRANCH1_3",
+      "BRANCH1_4",
+      "BRANCH1_5",
+      "BRANCH1_6",
+      "BRANCH1_7"
+    ]
+  },
+  {
+    "board": "PC1",
+    "connector": "J91",
+    "backplane": "J10",
+    "signals": [
+      "5V",
+      "GND",
+      "BRANCH2_0",
+      "BRANCH2_1",
+      "BRANCH2_2",
+      "BRANCH2_3",
+      "BRANCH2_4",
+      "BRANCH2_5",
+      "BRANCH2_6",
+      "BRANCH2_7"
+    ]
+  },
+  {
+    "board": "SP1",
+    "connector": "J91",
+    "backplane": "J11",
+    "signals": [
+      "5V",
+      "GND",
+      "BRANCH2_0",
+      "BRANCH2_1",
+      "BRANCH2_2",
+      "BRANCH2_3",
+      "BRANCH2_4",
+      "BRANCH2_5",
+      "BRANCH2_6",
+      "BRANCH2_7"
+    ]
+  },
+  {
+    "board": "MA1",
+    "connector": "J91",
+    "backplane": "J12",
+    "signals": [
+      "5V",
+      "GND",
+      "BRANCH3_0",
+      "BRANCH3_1",
+      "BRANCH3_2",
+      "BRANCH3_3",
+      "BRANCH3_4",
+      "BRANCH3_5",
+      "BRANCH3_6",
+      "BRANCH3_7"
+    ]
+  },
+  {
+    "board": "ME1",
+    "connector": "J91",
+    "backplane": "J13",
+    "signals": [
+      "5V",
+      "GND",
+      "BRANCH3_0",
+      "BRANCH3_1",
+      "BRANCH3_2",
+      "BRANCH3_3",
+      "BRANCH3_4",
+      "BRANCH3_5",
+      "BRANCH3_6",
+      "BRANCH3_7"
+    ]
+  },
+  {
+    "board": "C1",
+    "connector": "J1",
+    "backplane": "J14",
+    "signals": [
+      "5V",
+      "GND",
+      "RESET_REQUEST_n",
+      "REQUEST",
+      "ACTIVE",
+      "READY",
+      "GND",
+      "STEP"
+    ]
+  },
+  {
+    "board": "C1",
+    "connector": "J2",
+    "backplane": "J15",
+    "signals": [
+      "5V",
+      "GND",
+      "PH0",
+      "PH1",
+      "PH2",
+      "PH3",
+      "GND",
+      null
+    ]
+  },
+  {
+    "board": "C1",
+    "connector": "J90",
+    "backplane": "J16",
+    "signals": [
+      "5V",
+      "GND",
+      "INIT_CLK",
+      "RESET_n"
+    ]
+  },
+  {
+    "board": "CW1",
+    "connector": "J1",
+    "backplane": "J17",
+    "signals": [
+      "5V",
+      "GND",
+      "CW1_PH1",
+      "CW_PH2",
+      "CW1_RESET_n",
+      "VALID"
+    ]
+  },
+  {
+    "board": "CW1",
+    "connector": "J2",
+    "backplane": "J18",
+    "signals": [
+      "5V",
+      "GND",
+      "FLAG0",
+      "FLAG1",
+      "FLAG2",
+      "FLAG3",
+      "T0",
+      "T1",
+      "T2",
+      "T3",
+      "OP0",
+      "OP1",
+      "OP2",
+      "OP3",
+      "OP4",
+      "OP5",
+      "OP6",
+      "OP7"
+    ]
+  },
+  {
+    "board": "CW1",
+    "connector": "J3",
+    "backplane": "J19",
+    "signals": [
+      "5V",
+      "GND",
+      "OUT_n1",
+      "OUT_n2",
+      "OUT_n3",
+      "OUT_n4",
+      "OUT_n5",
+      "OUT_n6",
+      "OUT_n7",
+      "OUT_n8",
+      "OUT_n9",
+      "OUT_n10",
+      "OUT_n11",
+      "OUT_n12",
+      "OUT_n13",
+      "OUT_n14"
+    ]
+  },
+  {
+    "board": "CW1",
+    "connector": "J4",
+    "backplane": "J20",
+    "signals": [
+      "5V",
+      "GND",
+      "LOAD_n1",
+      "LOAD_n2",
+      "LOAD_n3",
+      "LOAD_n4",
+      "LOAD_n5",
+      "LOAD_n6",
+      "LOAD_n7",
+      "LOAD_n8",
+      "LOAD_n9",
+      "LOAD_n10",
+      "LOAD_n11",
+      "LOAD_n12",
+      "LOAD_n13",
+      "LOAD_n14"
+    ]
+  },
+  {
+    "board": "CW1",
+    "connector": "J5",
+    "backplane": "J21",
+    "signals": [
+      "5V",
+      "GND",
+      "FUN1",
+      "FUN2",
+      "FUN3",
+      "FUN4",
+      "FUN5",
+      "FUN6",
+      "FUN7",
+      "FUN8",
+      "FUN9",
+      "FUN10",
+      "FUN11",
+      "FUN12"
+    ]
+  },
+  {
+    "board": "CW1",
+    "connector": "J6",
+    "backplane": "J22",
+    "signals": [
+      "5V",
+      "GND",
+      "ALU_OP0",
+      "ALU_OP1",
+      "ALU_OP2",
+      "ALU_OP3",
+      "ALU_OP4",
+      "CW_PC_n",
+      "ALU_ENABLE"
+    ]
+  },
+  {
+    "board": "SQ1",
+    "connector": "J1",
+    "backplane": "J23",
+    "signals": [
+      "5V",
+      "GND",
+      "SQ1_PH0",
+      "SQ1_PH1",
+      "SQ1_PH2",
+      "SQ1_PH3",
+      "SQ1_RESET_n",
+      "RUN",
+      "RESUME",
+      "VALID",
+      "FUN1",
+      "FUN2",
+      "FUN5",
+      "CW_PC_n",
+      "OUT_n10"
+    ]
+  },
+  {
+    "board": "SQ1",
+    "connector": "J3",
+    "backplane": "J24",
+    "signals": [
+      "5V",
+      "GND",
+      "T0",
+      "T1",
+      "T2",
+      "T3",
+      "OP0",
+      "OP1",
+      "OP2",
+      "OP3",
+      "OP4",
+      "OP5",
+      "OP6",
+      "OP7"
+    ]
+  },
+  {
+    "board": "SQ1",
+    "connector": "J4",
+    "backplane": "J25",
+    "signals": [
+      "5V",
+      "GND",
+      "CW_PH2",
+      "REQUEST",
+      "HALTED",
+      "FETCH0",
+      "FETCH1",
+      "EXECUTING",
+      "PC_INC",
+      "PC_ADDRESS_n",
+      "MEM_n"
+    ]
+  },
+  {
+    "board": "PC1",
+    "connector": "J1",
+    "backplane": "J26",
+    "signals": [
+      "5V",
+      "GND",
+      "PC1_PH3",
+      "PC1_RESET_n",
+      "PC_INC",
+      "LOAD_n12",
+      "LOAD_n11",
+      "OUT_n12",
+      "OUT_n11",
+      "GND"
+    ]
+  },
+  {
+    "board": "PC1",
+    "connector": "J3",
+    "backplane": "J27",
+    "signals": [
+      "5V",
+      "GND",
+      "PC_ADDRESS0",
+      "PC_ADDRESS1",
+      "PC_ADDRESS2",
+      "PC_ADDRESS3",
+      "PC_ADDRESS4",
+      "PC_ADDRESS5",
+      "PC_ADDRESS6",
+      "PC_ADDRESS7",
+      "PC_ADDRESS8",
+      "PC_ADDRESS9",
+      "PC_ADDRESS10",
+      "PC_ADDRESS11",
+      "PC_ADDRESS12",
+      "PC_ADDRESS13",
+      "PC_ADDRESS14",
+      "PC_ADDRESS15"
+    ]
+  },
+  {
+    "board": "AL1",
+    "connector": "J1",
+    "backplane": "J28",
+    "signals": [
+      "5V",
+      "GND",
+      "AL1_PH1",
+      "AL1_PH3",
+      "AL1_RESET_n",
+      "LOAD_n1",
+      "LOAD_n6",
+      "LOAD_n7",
+      "OUT_n1",
+      "OUT_n6",
+      "OUT_n7",
+      "FUN10",
+      "FUN9",
+      "FUN12",
+      "FUN11"
+    ]
+  },
+  {
+    "board": "AL1",
+    "connector": "J3",
+    "backplane": "J29",
+    "signals": [
+      "5V",
+      "GND",
+      "ALU_OP0",
+      "ALU_OP1",
+      "ALU_OP2",
+      "ALU_OP3",
+      "ALU_OP4",
+      "FLAG0",
+      "FLAG1",
+      "FLAG2",
+      "FLAG3"
+    ]
+  },
+  {
+    "board": "RG1",
+    "connector": "J1",
+    "backplane": "J30",
+    "signals": [
+      "5V",
+      "GND",
+      "RG1_PH3",
+      "RG1_RESET_n",
+      "LOAD_n2",
+      "LOAD_n3",
+      "LOAD_n4",
+      "LOAD_n5",
+      "OUT_n2",
+      "OUT_n3",
+      "OUT_n4",
+      "OUT_n5"
+    ]
+  },
+  {
+    "board": "RG1",
+    "connector": "J90",
+    "backplane": "J31",
+    "signals": [
+      "5V",
+      "GND",
+      "RG1_INIT_CLK"
+    ]
+  },
+  {
+    "board": "SP1",
+    "connector": "J1",
+    "backplane": "J32",
+    "signals": [
+      "5V",
+      "GND",
+      "SP1_PH1",
+      "SP1_PH3",
+      "SP1_RESET_n",
+      "FUN3",
+      "FUN4",
+      "LOAD_n14",
+      "LOAD_n13",
+      "OUT_n14",
+      "OUT_n13"
+    ]
+  },
+  {
+    "board": "SP1",
+    "connector": "J3",
+    "backplane": "J33",
+    "signals": [
+      "5V",
+      "GND",
+      "SP_ADDRESS0",
+      "SP_ADDRESS1",
+      "SP_ADDRESS2",
+      "SP_ADDRESS3",
+      "SP_ADDRESS4",
+      "SP_ADDRESS5",
+      "SP_ADDRESS6",
+      "SP_ADDRESS7",
+      "SP_ADDRESS8",
+      "SP_ADDRESS9",
+      "SP_ADDRESS10",
+      "SP_ADDRESS11",
+      "SP_ADDRESS12",
+      "SP_ADDRESS13",
+      "SP_ADDRESS14",
+      "SP_ADDRESS15"
+    ]
+  },
+  {
+    "board": "SP1",
+    "connector": "J90",
+    "backplane": "J34",
+    "signals": [
+      "5V",
+      "GND",
+      "SP1_INIT_CLK",
+      "SP1_PH2"
+    ]
+  },
+  {
+    "board": "MA1",
+    "connector": "J1",
+    "backplane": "J35",
+    "signals": [
+      "5V",
+      "GND",
+      "MA1_PH1",
+      "MA1_PH3",
+      "MA1_RESET_n",
+      "FUN8",
+      "FETCH0",
+      "FUN6",
+      "FUN7",
+      "LOAD_n9",
+      "LOAD_n8",
+      "OUT_n9",
+      "OUT_n8"
+    ]
+  },
+  {
+    "board": "MA1",
+    "connector": "J3",
+    "backplane": "J36",
+    "signals": [
+      "5V",
+      "GND",
+      "ADDRESS0",
+      "ADDRESS1",
+      "ADDRESS2",
+      "ADDRESS3",
+      "ADDRESS4",
+      "ADDRESS5",
+      "ADDRESS6",
+      "ADDRESS7",
+      "ADDRESS8",
+      "ADDRESS9",
+      "ADDRESS10",
+      "ADDRESS11",
+      "ADDRESS12",
+      "ADDRESS13",
+      "ADDRESS14",
+      "ADDRESS15"
+    ]
+  },
+  {
+    "board": "MA1",
+    "connector": "J4",
+    "backplane": "J37",
+    "signals": [
+      "5V",
+      "GND",
+      "PC_ADDRESS0",
+      "PC_ADDRESS1",
+      "PC_ADDRESS2",
+      "PC_ADDRESS3",
+      "PC_ADDRESS4",
+      "PC_ADDRESS5",
+      "PC_ADDRESS6",
+      "PC_ADDRESS7",
+      "PC_ADDRESS8",
+      "PC_ADDRESS9",
+      "PC_ADDRESS10",
+      "PC_ADDRESS11",
+      "PC_ADDRESS12",
+      "PC_ADDRESS13",
+      "PC_ADDRESS14",
+      "PC_ADDRESS15"
+    ]
+  },
+  {
+    "board": "MA1",
+    "connector": "J5",
+    "backplane": "J38",
+    "signals": [
+      "5V",
+      "GND",
+      "SP_ADDRESS0",
+      "SP_ADDRESS1",
+      "SP_ADDRESS2",
+      "SP_ADDRESS3",
+      "SP_ADDRESS4",
+      "SP_ADDRESS5",
+      "SP_ADDRESS6",
+      "SP_ADDRESS7",
+      "SP_ADDRESS8",
+      "SP_ADDRESS9",
+      "SP_ADDRESS10",
+      "SP_ADDRESS11",
+      "SP_ADDRESS12",
+      "SP_ADDRESS13",
+      "SP_ADDRESS14",
+      "SP_ADDRESS15"
+    ]
+  },
+  {
+    "board": "MA1",
+    "connector": "J90",
+    "backplane": "J39",
+    "signals": [
+      "5V",
+      "GND",
+      "MA1_INIT_CLK",
+      "MA1_PH2"
+    ]
+  },
+  {
+    "board": "ME1",
+    "connector": "J1",
+    "backplane": "J40",
+    "signals": [
+      "5V",
+      "GND",
+      "ME1_PH0",
+      "ME1_PH2",
+      "ME1_PH3",
+      "ME1_RESET_n",
+      "MEM_n",
+      "LOAD_n10"
+    ]
+  },
+  {
+    "board": "ME1",
+    "connector": "J3",
+    "backplane": "J41",
+    "signals": [
+      "5V",
+      "GND",
+      "ADDRESS0",
+      "ADDRESS1",
+      "ADDRESS2",
+      "ADDRESS3",
+      "ADDRESS4",
+      "ADDRESS5",
+      "ADDRESS6",
+      "ADDRESS7",
+      "ADDRESS8",
+      "ADDRESS9",
+      "ADDRESS10",
+      "ADDRESS11",
+      "ADDRESS12",
+      "ADDRESS13",
+      "ADDRESS14",
+      "ADDRESS15"
+    ]
+  },
+  {
+    "board": "ME1",
+    "connector": "J4",
+    "backplane": "J42",
+    "signals": [
+      "5V",
+      "GND",
+      "IO_STROBE",
+      "IO_DATA0",
+      "IO_DATA1",
+      "IO_DATA2",
+      "IO_DATA3",
+      "IO_DATA4",
+      "IO_DATA5",
+      "IO_DATA6",
+      "IO_DATA7",
+      "IO_ADDRESS0",
+      "IO_ADDRESS1",
+      "IO_ADDRESS2",
+      "IO_ADDRESS3",
+      "IO_ADDRESS4",
+      "IO_ADDRESS5",
+      "IO_ADDRESS6",
+      "IO_ADDRESS7"
+    ]
+  },
+  {
+    "board": "ME1",
+    "connector": "J5",
+    "backplane": "J43",
+    "signals": [
+      "5V",
+      "GND",
+      "IO_INPUT0",
+      "IO_INPUT1",
+      "IO_INPUT2",
+      "IO_INPUT3",
+      "IO_INPUT4",
+      "IO_INPUT5",
+      "IO_INPUT6",
+      "IO_INPUT7"
+    ]
+  },
+  {
+    "board": "BF1",
+    "connector": "J1",
+    "backplane": "J44",
+    "signals": [
+      "5V",
+      "GND",
+      "BRANCH0_0",
+      "BRANCH0_1",
+      "BRANCH0_2",
+      "BRANCH0_3",
+      "BRANCH0_4",
+      "BRANCH0_5",
+      "BRANCH0_6",
+      "BRANCH0_7"
+    ]
+  },
+  {
+    "board": "BF1",
+    "connector": "J2",
+    "backplane": "J45",
+    "signals": [
+      "5V",
+      "GND",
+      "BRANCH1_0",
+      "BRANCH1_1",
+      "BRANCH1_2",
+      "BRANCH1_3",
+      "BRANCH1_4",
+      "BRANCH1_5",
+      "BRANCH1_6",
+      "BRANCH1_7"
+    ]
+  },
+  {
+    "board": "BF1",
+    "connector": "J3",
+    "backplane": "J46",
+    "signals": [
+      "5V",
+      "GND",
+      "BRANCH2_0",
+      "BRANCH2_1",
+      "BRANCH2_2",
+      "BRANCH2_3",
+      "BRANCH2_4",
+      "BRANCH2_5",
+      "BRANCH2_6",
+      "BRANCH2_7"
+    ]
+  },
+  {
+    "board": "BF1",
+    "connector": "J4",
+    "backplane": "J47",
+    "signals": [
+      "5V",
+      "GND",
+      "BRANCH3_0",
+      "BRANCH3_1",
+      "BRANCH3_2",
+      "BRANCH3_3",
+      "BRANCH3_4",
+      "BRANCH3_5",
+      "BRANCH3_6",
+      "BRANCH3_7"
+    ]
+  },
+  {
+    "board": "BF1",
+    "connector": "J5",
+    "backplane": "J48",
+    "signals": [
+      "5V",
+      "GND",
+      "DATA0",
+      "DATA1",
+      "DATA2",
+      "DATA3",
+      "DATA4",
+      "DATA5",
+      "DATA6",
+      "DATA7"
+    ]
+  },
+  {
+    "board": "BF1",
+    "connector": "J6",
+    "backplane": "J49",
+    "signals": [
+      "5V",
+      "GND",
+      "OUT_n1",
+      "OUT_n2",
+      "OUT_n3",
+      "OUT_n4",
+      "OUT_n5",
+      "OUT_n6",
+      "OUT_n7",
+      "OUT_n8",
+      "OUT_n9",
+      "MEM_n",
+      "OUT_n11",
+      "OUT_n12",
+      "OUT_n13",
+      "OUT_n14"
+    ]
+  },
+  {
+    "board": "BF1",
+    "connector": "J7",
+    "backplane": "J50",
+    "signals": [
+      "5V",
+      "GND",
+      "BF1_RESET_n"
+    ]
+  },
+  {
+    "board": "DT1",
+    "connector": "J1",
+    "backplane": "J51",
+    "signals": [
+      "5V",
+      "GND",
+      "PH0",
+      "PH1",
+      "PH2",
+      "PH3",
+      "INIT_CLK",
+      "RESET_n"
+    ]
+  },
+  {
+    "board": "DT1",
+    "connector": "J2",
+    "backplane": "J52",
+    "signals": [
+      "5V",
+      "GND",
+      "CW1_PH1",
+      "SQ1_PH0",
+      "SQ1_PH1",
+      "SQ1_PH2",
+      "SQ1_PH3",
+      "PC1_PH3",
+      "AL1_PH1",
+      "AL1_PH3",
+      "RG1_PH3",
+      "SP1_PH1",
+      "SP1_PH2",
+      "SP1_PH3",
+      "MA1_PH1",
+      "MA1_PH2",
+      "MA1_PH3",
+      "ME1_PH0",
+      "ME1_PH2",
+      "ME1_PH3",
+      "RG1_INIT_CLK",
+      "SP1_INIT_CLK",
+      "MA1_INIT_CLK",
+      "CW1_RESET_n",
+      "SQ1_RESET_n",
+      "PC1_RESET_n",
+      "AL1_RESET_n",
+      "RG1_RESET_n",
+      "SP1_RESET_n",
+      "MA1_RESET_n",
+      "ME1_RESET_n",
+      "BF1_RESET_n"
+    ]
+  }
+]

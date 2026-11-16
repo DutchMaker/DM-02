@@ -1,0 +1,33 @@
+{
+  "url": "https://www.ti.com/lit/ds/symlink/cd74hct273.pdf",
+  "revision": "SCHS174D, October 2025",
+  "sha256": "aac2ee3efca9489ecd375d9cb4f5c642a9fa8597f4cf1b8310e6e07f7f764aff",
+  "selected_for_study": "CD74HCT273E, PDIP-20; ordering table lists Active / Production",
+  "conditions": {
+    "vcc_v": 4.5,
+    "ambient_c": [
+      -40,
+      85
+    ],
+    "load_pf": 50,
+    "input_edge_ns": 6
+  },
+  "bounds_ns": {
+    "clock_to_q_max": 38,
+    "clear_to_q_max": 40,
+    "setup_min": 15,
+    "hold_min": 3,
+    "clock_pulse_min": 25,
+    "clear_pulse_min": 15,
+    "reset_removal_min": 13
+  },
+  "cp1_assumptions_ns": {
+    "clock_and_clear_delay": 42,
+    "setup": 25,
+    "hold": 0,
+    "clock_pulse": 25,
+    "clear_pulse": 20,
+    "reset_recovery": 25
+  },
+  "decision": "Evaluate the additional 3 ns hold requirement before any substitution. No part or accepted CP1 source changed."
+}

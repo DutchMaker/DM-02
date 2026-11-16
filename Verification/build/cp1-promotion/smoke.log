@@ -1,0 +1,3 @@
+DONE sequencer cycles=1424 halts=3 stepped=12
+tb.sv:309: $finish called at 2959045500 (1ps)
+CP1 physical bus handovers=628 minimum_disabled_ns=1006.000

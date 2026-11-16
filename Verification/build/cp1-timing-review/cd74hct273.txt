@@ -1,0 +1,2293 @@
+                                                                                                             CD54HC273, CD74HC273
+                                                                                                          CD54HCT273, CD74HCT273
+                                                                                      SCHS174D – FEBRUARY 1998 – REVISED OCTOBER 2025
+         CDx4HC(T)273 High-Speed CMOS Logic Octal D-Type Flip-Flop with Reset
+
+1 Features                                                             3 Description
+•  Common clock and asynchronous controller reset                      The  CD54HC273,  CD74HC273,  CD54HCT273,  and
+•  Positive edge triggering                                            CD74HCT273 high speed octal D-Type flip-flops with
+•  Buffered inputs                                                     a  direct  clear  input  are  manufactured  with  silicon-
+•  Fanout (over temperature range)                                     gate  CMOS  technology.  The  devices  possess  the
+   –   Standard outputs: 10 LSTTL loads                                low power consumption of standard CMOS integrated
+   –   Bus driver outputs: 15 LSTTL loads                              circuits.
+•  Wide operating temperature range: –55℃ to 125℃                      Information at the D input transfers to the Q outputs
+•  Balanced propagation delay and transition times                     on the positive-going edge of the clock pulse. All eight
+•  Significant power reduction compared to LSTTL                       flip-flops are controlled by a common clock (CLK) and
+   Logic ICs                                                           a common reset (CLR). Resetting is accomplished by
+•  HC types:                                                           a low voltage level independent of the clock. All eight
+   –   2V to 6V operation                                              Q outputs reset to a logic 0.
+   –   High noise immunity: NIL = 30%, NIH = 30% of                                        Package Information
+       VCC at VCC = 5V
+•  HCT types:                                                             PART NUMBER             PACKAGE(1)          PACKAGE SIZE(2)
+   –   4.5V to 5.5V operation                                           CD54HC273F            J (CDIP, 20)           26.92mm × 6.92mm
+   –   Direct LSTTL input logic compatibility, VIL =                    CD74HC273M            DW (SOIC, 20)          12.80mm × 7.50mm
+       0.8V (maximum), VIH = 2V (minimum)                               CD74HC273E            N (PDIP, 20)           25.40mm × 6.35mm
+   –   CMOS input compatibility, II ≤ 1μA at VOL,VOH                    CD74HCT273M           DW (SOIC, 20)          12.80mm × 7.50mm
+2 Applications                                                          CD74HCT273            N (PDIP, 20)           25.40mm × 6.35mm
+•  Synchronize data to clock                                           (1)   For all available packages, see the orderable addendum at
+•  Simple memory – 8 bits                                                    the end of the data sheet.
+                                                                       (2)   The package size (length × width) is a nominal value and
+                                                                             includes pins, where applicable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                    Functional Block Diagram
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications,
+      intellectual property matters and other important disclaimers. PRODUCTION DATA.
+CD54HC273, CD74HC273
+CD54HCT273, CD74HCT273
+SCHS174D – FEBRUARY 1998 – REVISED OCTOBER 2025                                                                                                                                www.ti.com
+
+                                                                             Table of Contents
+
+ 1 Features............................................................................1               7.4 Device Functional Modes..........................................14
+ 2 Applications.....................................................................1              8 Application and Implementation..................................15
+ 3 Description.......................................................................1                 8.1 Application Information.............................................            15
+ 4 Pin Configuration and Functions...................................3                                 8.2 Typical Application....................................................         15
+ 5 Specifications..................................................................4                   8.3 Power Supply Recommendations.............................19
+    5.1 Absolute Maximum Ratings........................................4                              8.4 Layout.......................................................................   19
+    5.2 Recommended Operating Conditions.........................4                                 9 Device and Documentation Support............................21
+    5.3 Thermal Information....................................................4                       9.1 Documentation Support............................................               21
+    5.4 Electrical Characteristics.............................................5                       9.2 Receiving Notification of Documentation Updates....21
+    5.5 Timing Requirements..................................................6                         9.3 Support Resources...................................................            21
+    5.6 Switching Characteristics............................................7                         9.4 Trademarks...............................................................21
+    5.7 Typical Characteristics................................................8                       9.5 Electrostatic Discharge Caution................................21
+ 6 Parameter Measurement Information............................9                                      9.6 Glossary....................................................................21
+ 7 Detailed Description......................................................11                    10 Revision History..........................................................           21
+    7.1 Overview...................................................................      11        11 Mechanical, Packaging, and Orderable
+    7.2 Functional Block Diagram.........................................                11            Information....................................................................     22
+    7.3 Feature Description...................................................12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2        Submit Document Feedback                                                                                                    Copyright © 2025 Texas Instruments Incorporated
+                                           Product Folder Links: CD54HC273 CD74HC273 CD54HCT273 CD74HCT273
+                                                                                                                         CD54HC273, CD74HC273
+                                                                                                                      CD54HCT273, CD74HCT273
+www.ti.com                                                                                     SCHS174D – FEBRUARY 1998 – REVISED OCTOBER 2025
+
+4 Pin Configuration and Functions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                              J, DW, or N package
+                                                         20-Pin CDIP, PDIP, or SOIC
+                                                                      Top View
+
+                                                                   Pin Functions
+               PIN                    TYPE(1)                                                 DESCRIPTION
+     NAME               NO.
+ 1D               3                       I         Input for channel 1
+ 1Q               2                       O         Output for channel 1
+ 2D               4                       I         Input for channel 2
+ 2Q               5                       O         Output for channel 2
+ 3D               7                       I         Input for channel 3
+ 3Q               6                       O         Output for channel 3
+ 4D               8                       I         Input for channel 4
+ 4Q               9                       O         Output for channel 4
+ 5D               13                      I         Input for channel 5
+ 5Q               12                      O         Output for channel 5
+ 6D               14                      I         Input for channel 6
+ 6Q               15                      O         Output for channel 6
+ 7D               17                      I         Input for channel 7
+ 7Q               16                      O         Output for channel 7
+ 8D               18                      I         Input for channel 8
+ 8Q               19                      O         Output for channel 8
+ CLK              11                      I         Clock for all channels, rising edge triggered
+ CLR              1                       I         Clear for all channels, active low
+ GND              10                      G         Ground
+ VCC              20                      P         Positive supply
+
+(1)    I = input, O = output, G = ground, P = power
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2025 Texas Instruments Incorporated                                                                    Submit Document Feedback              3
+                                  Product Folder Links: CD54HC273 CD74HC273 CD54HCT273 CD74HCT273
+CD54HC273, CD74HC273
+CD54HCT273, CD74HCT273
+SCHS174D – FEBRUARY 1998 – REVISED OCTOBER 2025                                                                                                  www.ti.com
+
+5 Specifications
+
+5.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted) (1)
+
+                                                                                                                           MIN             MAX       UNIT
+ VCC          Supply voltage                                                                                              – 0.5                7       V
+ IIK          Input clamp diode current                              For VI < –0.5V or VI > VCC + 0.5V                                       ±20      mA
+ IOK          Output clamp diode current                             For VO < –0.5V or VO > VCC + 0.5V                                       ±20      mA
+ IO           Drain current, per output                              For –0.5V < VO < VCC + 0.5V                                             ±25      mA
+ IO           Output source or sink current per output pin           For VO > –0.5V or VO < VCC + 0.5V                                       ±25      mA
+              Continuous current through VCC or ground current                                                                               ±50      mA
+ TJ           Junction temperature                                                                                                          150       °C
+ Tstg         Storage temperature range                                                                                    – 65             150       °C
+              Lead temperature (Soldering 10s) (SOIC - Lead Tips Only)                                                                      300       °C
+
+(1)    Operation outside the Absolute Maximum Ratings may cause permanent device damage. Absolute Maximum Ratings do not imply
+       functional operation of the device at these or any other conditions beyond those listed under Recommended Operating Conditions.
+       If used outside the Recommended Operating Conditions but within the Absolute Maximum Ratings, the device may not be fully
+       functional, and this may affect device reliability, functionality, performance, and shorten the device lifetime.
+
+5.2 Recommended Operating Conditions
+                                                                                                                        MIN            MAX         UNIT
+ TA               Temperature range                                                                                     –55              125         ℃
+ V                Supply voltage range                                      HC types                                       2                6        V
+   CC                                                                       HCT types                                    4.5             5.5
+
+ VI, VO           DC input or output voltage                                                                               0             VCC         V
+                                                                            2V                                                         1000
+ tt               Input rise and fall time                                  4.5V                                                         500         ns
+                                                                            6V                                                           400
+
+5.3 Thermal Information
+
+                                                                                      DW (SOIC)                   N (PDIP)
+ THERMAL METRIC                                                                         20 PINS                   20 PINS                     UNIT
+ R                     Junction-to-ambient thermal resistance (1)                          58                        69                       °C/W
+   θJA
+
+(1)    For more information about traditional and new thermal metrics, see the Semiconductor and IC package thermal metrics application
+       note.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4      Submit Document Feedback                                                                               Copyright © 2025 Texas Instruments Incorporated
+                                    Product Folder Links: CD54HC273 CD74HC273 CD54HCT273 CD74HCT273
+                                                                                                                             CD54HC273, CD74HC273
+                                                                                                                         CD54HCT273, CD74HCT273
+www.ti.com                                                                                        SCHS174D – FEBRUARY 1998 – REVISED OCTOBER 2025
+
+5.4 Electrical Characteristics
+          PARAMETER                 TEST CONDITIONS (2)      V    (V)               25℃                   –40℃ to 85℃          –55℃ to 125℃          UNIT
+                                                              CC            MIN       TYP        MAX         MIN      MAX         MIN       MAX
+
+ HC TYPES
+                                                                2            1.5                              1.5                  1.5
+ V          High level input                                   4.5          3.15                            3.15                  3.15                 V
+   IH       voltage
+                                                                6            4.2                              4.2                  4.2
+                                                                2                                  0.5                   0.5                  0.5
+ V          Low level input                                    4.5                               1.35                  1.35                  1.35      V
+   IL       voltage
+                                                                6                                  1.8                   1.8                  1.8
+            High level output           IOH = – 20μA            2            1.9                              1.9                  1.9
+            voltage                     IOH = – 20μA           4.5           4.4                              4.4                  4.4                 V
+            CMOS loads                  IOH = – 20μA            6            5.9                              5.9                  5.9
+ VOH
+            High level output            IOH = – 4mA           4.5          3.98                            3.84                   3.7
+            voltage                     I   = – 5.2mA           6           5.48                            5.34                   5.2                 V
+            TTL loads                   OH
+
+            Low level output              IOL = 20μA            2                                  0.1                   0.1                  0.1
+            voltage                       IOL = 20μA           4.5                                 0.1          -        0.1          -       0.1      V
+            CMOS loads                    IOL = 20μA            6                                  0.1                   0.1                  0.1
+ VOL
+            Low level output              IOL = 4mA            4.5                               0.26                  0.33                   0.4
+            voltage                      I   = 5.2mA            6                                0.26                  0.33                   0.4      V
+            TTL loads                     OL
+
+ I          Input leakage             V = V      or GND         6                                ±0.1                    ±1                    ±1     mA
+  I         current                     I    CC
+
+ I          Quiescent device          V = V      or GND         6                                    8                   80                   160     mA
+  CC        current                     I    CC
+
+ HCT TYPES
+ V          High level input                                  4.5 to           2                                2                     2                V
+   IH       voltage                                            5.5
+
+ V          Low level input                                   4.5 to                               0.8                   0.8                  0.8      V
+   IL       voltage                                            5.5
+
+            High level output
+            voltage                     IOH = – 20μA           4.5           4.4                              4.4                  4.4
+            CMOS loads
+ VOH                                                                                                                                                   V
+            High level output
+            voltage                      IOH = – 4mA           4.5          3.98                            3.84                   3.7
+            TTL loads
+
+            Low level output
+            voltage                       IOL = 20μA           4.5                                 0.1                   0.1                  0.1
+            CMOS loads
+ VOL                                                                                                                                                   V
+            Low level output
+            voltage                       IOL = 4mA            4.5                               0.26                  0.33                   0.4
+            TTL loads
+ I          Input leakage             V = V      or GND        5.5                               ±0.1                    ±1                    ±1     μA
+  I         current                     I    CC
+
+ I          Quiescent device          V = V      or GND        5.5                                   8                   80                   160     μA
+  CC        current                     I    CC
+
+
+
+
+
+
+Copyright © 2025 Texas Instruments Incorporated                                                                        Submit Document Feedback              5
+                                   Product Folder Links: CD54HC273 CD74HC273 CD54HCT273 CD74HCT273
+CD54HC273, CD74HC273
+CD54HCT273, CD74HCT273
+SCHS174D – FEBRUARY 1998 – REVISED OCTOBER 2025                                                                                            www.ti.com
+5.4 Electrical Characteristics (continued)
+          PARAMETER                TEST CONDITIONS (2)     VCC (V)               25℃                  –40℃ to 85℃         –55℃ to 125℃          UNIT
+                                                                         MIN       TYP       MAX         MIN      MAX         MIN      MAX
+                                    CLR input held at       4.5 to                  100       540                  675                   735     μA
+                                         VCC –2.1            5.5
+           Additional quiescent     Data inputs held at     4.5 to
+ ΔICC (1)  device current per            V    –2.1           5.5                    100       144                  180                   196     μA
+           input pin                       CC
+                                    CLK inputs held at      4.5 to                  100       540                  675                   735     μA
+                                         VCC –2.1            5.5
+
+(1)    For dual-supply systems theoretical worst case (VI = 2.4V, VCC = 5.5V) specification is 1.8mA.
+(2)    VI = VIH or VIL, unless otherwise noted.
+
+5.5 Timing Requirements
+See Parameter Measurement Information
+
+                PARAMETER                        V    (V)                25℃                     –40℃ to 85℃            –55℃ to 125℃           UNIT
+                                                  CC
+                                                                 MIN         TYP       MAX          MIN        MAX         MIN        MAX
+ HC TYPES
+                                                    2               6                                  5                      4
+ fMAX        Maximum clock frequency               4.5             30                                 25                     20                MHz
+                                                    6              35                                 29                     23
+                                                    2              60                                 75                     90
+ tW          CLR pulse width                       4.5             12                                 15                     18                  ns
+                                                    6              10                                 13                     15
+                                                    2              80                               100                     120
+ tW          Clock pulse width                     4.5             16                                 20                     24                  ns
+                                                    6              14                                 17                     20
+                                                    2              60                                 75                     70
+ tSU         Set-up time data to clock             4.5             12                                 15                     18                  ns
+                                                    6              10                                 13                     15
+                                                    2               3                                  3                      3
+ tH          Hold time, data to clock              4.5              3                                  3                      3                  ns
+                                                    6               3                                  3                      3
+                                                    2              50                                 65                     75
+ tREM        Removal time, CLR to clock            4.5             10                                 13                     15                  ns
+                                                    6               9                                 11                     13
+ HCT TYPES
+ fMAX        Maximum clock frequency               4.5             25                                 20                     16                MHz
+
+ tw          CLR pulse width                       4.5             12                                 15                     18                  ns
+
+ tw          Clock pulse width                     4.5             20                                 25                     30                  ns
+
+ tSU         Set-up time data to clock             4.5             12                                 15                     18                  ns
+
+ tH          Hold time, data to clock              4.5              3                                  3                      3                  ns
+ tREM        Removal time, CLR to clock            4.5             10                                 13                     15                  ns
+
+
+
+
+
+
+
+
+
+
+6      Submit Document Feedback                                                                           Copyright © 2025 Texas Instruments Incorporated
+                                  Product Folder Links: CD54HC273 CD74HC273 CD54HCT273 CD74HCT273
+                                                                                                                          CD54HC273, CD74HC273
+                                                                                                                       CD54HCT273, CD74HCT273
+www.ti.com                                                                                      SCHS174D – FEBRUARY 1998 – REVISED OCTOBER 2025
+
+5.6 Switching Characteristics
+Input tr, tf = 6ns (See Parameter Measurement Information)
+                   PARAMETER                               TEST           V   (V)           25℃           –40℃ to 85℃       –55℃ to 125℃          UNIT
+                                                      CONDITIONS           CC           TYP        MAX               MAX                MAX
+
+ HC TYPES
+                                                                             2                       150              190                225
+ t   , t     Propagation delay                        CL = 50pF             4.5                       30               38                  45      ns
+  PLH  PHL   Clock to output
+                                                                             6                        26               30                  38
+                                                      CL = 15pF              5            12
+                                                                             2                       150              190                225
+ t           Propagation delay                        C  = 50pF             4.5                       30               38                  45      ns
+  PHL        CLR to output                             L
+                                                                             6                        26               30                  38
+                                                                             2                        75               95                 110
+ tTLH, tTHL  Output transition time                   CL = 50pF             4.5                       15               19                  22      ns
+                                                                             6                        13               16                  19
+ CIN         Input capacitance                                                                        10               10                  10      pF
+ fMAX        Maximum clock frequency                  CL = 15pF              5            60                                                      MHz
+ CPD         Power dissipation capacitance(1) (2)                            5            25                                                       pF
+
+ HCT TYPES
+ t   , t     Propagation delay,                       CL = 50pF             4.5                       30               38                  45      ns
+  PLH  PHL   Clock to output                          C  = 15pF              5            12
+                                                       L
+ t           Propagation delay,                       C  = 50pF             4.5                       32               40                  48      ns
+  PHL        CLR to output                             L
+
+ tTLH, tTHL  Output transition time                   CL = 50pF             4.5                       15               19                  22      ns
+ CIN         Input capacitance                                                                        10               10                  10      pF
+ fMAX        Maximum clock frequency                  CL = 15pF              5            50                                                      MHz
+ CPD         Power dissipation capacitance(1) (2)                            5            25                                                       pF
+
+(1)    CPD is used to determine the dynamic power consumption, per flip-flop
+
+(2)        PD = CPDVCC2fi + ∑        CLVCC2fO                                                                                                    (1)
+
+       where
+       •   fi = input frequency
+       •   fO = output frequency
+       •   CL = output load capacitance
+       •   VCC = supply voltage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2025 Texas Instruments Incorporated                                                                     Submit Document Feedback              7
+                                   Product Folder Links: CD54HC273 CD74HC273 CD54HCT273 CD74HCT273
+CD54HC273, CD74HC273
+CD54HCT273, CD74HCT273
+SCHS174D – FEBRUARY 1998 – REVISED OCTOBER 2025                                                                                          www.ti.com
+
+5.7 Typical Characteristics
+
+TA = 25°C
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     Figure 5-1. Typical Output Voltage in the High State (VOH)                 Figure 5-2. Typical Output Voltage in the Low State (VOL)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8      Submit Document Feedback                                                                         Copyright © 2025 Texas Instruments Incorporated
+                                  Product Folder Links: CD54HC273 CD74HC273 CD54HCT273 CD74HCT273
+                                                                                                               CD54HC273, CD74HC273
+                                                                                                           CD54HCT273, CD74HCT273
+www.ti.com                                                                             SCHS174D – FEBRUARY 1998 – REVISED OCTOBER 2025
+
+6 Parameter Measurement Information
+Phase  relationships  between  waveforms  were  chosen  arbitrarily.  All  input  pulses  are  supplied  by  generators
+having the following characteristics: PRR ≤ 1MHz, ZO = 50Ω, tt < 6ns.
+For clock inputs, fmax is measured when the input duty cycle is 50%.
+The outputs are measured one at a time with one input transition per measurement.
+
+
+
+
+
+
+
+
+
+
+
+
+
+      (1) CL includes probe and test-fixture capacitance.
+                                        Figure 6-1. Load Circuit for Push-Pull Outputs
+
+
+
+
+
+
+
+   Figure 6-2. Voltage Waveforms, Standard CMOS
+                     Inputs Pulse Duration
+
+                                                                         Figure 6-3. Voltage Waveforms, Standard CMOS
+                                                                                      Inputs Setup and Hold Times
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                            (1) The greater between tr and tf is the same as tt.
+                                                                         Figure 6-5. Voltage Waveforms, Input and Output
+                                                                            Transition Times for Standard CMOS Inputs
+
+      (1) The greater between tPLH and tPHL is the same as tpd.
+      Figure 6-4. Voltage Waveforms, Propagation
+             Delays for Standard CMOS Inputs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2025 Texas Instruments Incorporated                                                          Submit Document Feedback          9
+                               Product Folder Links: CD54HC273 CD74HC273 CD54HCT273 CD74HCT273
+CD54HC273, CD74HC273
+CD54HCT273, CD74HCT273
+SCHS174D – FEBRUARY 1998 – REVISED OCTOBER 2025                                                                                www.ti.com
+
+
+
+
+
+
+   Figure 6-6. Voltage Waveforms, TTL-Compatible
+                CMOS Inputs Pulse Duration
+
+
+                                                                        Figure 6-7. Voltage Waveforms, TTL-Compatible
+                                                                                CMOS Inputs Setup and Hold Times
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      (1) The greater between tPLH and tPHL is the same as tpd.
+                  Figure 6-8. Voltage Waveforms, Propagation Delays for TTL-Compatible Inputs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10    Submit Document Feedback                                                                  Copyright © 2025 Texas Instruments Incorporated
+                               Product Folder Links: CD54HC273 CD74HC273 CD54HCT273 CD74HCT273
+                                                                                                                 CD54HC273, CD74HC273
+                                                                                                              CD54HCT273, CD74HCT273
+www.ti.com                                                                               SCHS174D – FEBRUARY 1998 – REVISED OCTOBER 2025
+
+7 Detailed Description
+7.1 Overview
+The CDxHC(T)273 contains 8 positive-edge-triggered D-type flip-flops with shared direct active low clear (CLR)
+input.
+Information at the data (D) inputs meeting the setup time requirements is transferred to the (Q) outputs on the
+positive-going  edge  of  the  clock  (CLK)  pulse.  Clock  triggering  occurs  at  a  particular  voltage  level  and  is  not
+related directly to the transition time of the positive-going pulse. When CLK is at either the high or low level or
+transitioning from a high level to a low level, the D input has no effect at the output.
+Information at the data (Q) outputs can be asynchronously cleared with a low level input through the clear (CLR)
+pin.
+7.2 Functional Block Diagram
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2025 Texas Instruments Incorporated                                                             Submit Document Feedback         11
+                                Product Folder Links: CD54HC273 CD74HC273 CD54HCT273 CD74HCT273
+CD54HC273, CD74HC273
+CD54HCT273, CD74HCT273
+SCHS174D – FEBRUARY 1998 – REVISED OCTOBER 2025                                                                                 www.ti.com
+
+7.3 Feature Description
+7.3.1 Balanced CMOS Push-Pull Outputs
+This device includes balanced CMOS push-pull outputs. The term balanced indicates that the device can sink
+and source similar currents. The drive capability of this device may create fast edges into light loads, so routing
+and load conditions should be considered to prevent ringing. Additionally, the outputs of this device are capable
+of driving larger currents than the device can sustain without being damaged. It is important to limit the output
+power of the device to avoid damage due to overcurrent. The electrical and thermal limits defined in the Absolute
+Maximum Ratings must be followed at all times.
+Unused push-pull CMOS outputs must be left disconnected.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12     Submit Document Feedback                                                                  Copyright © 2025 Texas Instruments Incorporated
+                               Product Folder Links: CD54HC273 CD74HC273 CD54HCT273 CD74HCT273
+                                                                                                                  CD54HC273, CD74HC273
+                                                                                                               CD54HCT273, CD74HCT273
+www.ti.com                                                                               SCHS174D – FEBRUARY 1998 – REVISED OCTOBER 2025
+
+7.3.2 Standard CMOS Inputs
+This  device  includes  standard  CMOS  inputs.  Standard  CMOS  inputs  are  high  impedance  and  are  typically
+modeled  as  a  resistor  in  parallel  with  the  input  capacitance  given  in  the Electrical  Characteristics.  The  worst
+case resistance is calculated with the maximum input voltage, given in the Absolute Maximum Ratings, and the
+maximum input leakage current, given in the Electrical Characteristics, using Ohm's law (R = V ÷ I).
+Standard  CMOS  inputs  require  that  input  signals  transition  between  valid  logic  states  quickly,  as  defined
+by  the  input  transition  time  or  rate  in  the       Recommended  Operating  Conditions  table.  Failing  to  meet  this
+specification will result in excessive power consumption and could cause oscillations. More details can be found
+in Implications of Slow or Floating CMOS Inputs.
+Do not leave standard CMOS inputs floating at any time during operation. Unused inputs must be terminated at
+VCC or GND. If a system will not be actively driving an input at all times, then a pull-up or pull-down resistor can
+be added to provide a valid input voltage during these times. The resistor value will depend on multiple factors; a
+10kΩ resistor, however, is recommended and will typically meet all requirements.
+7.3.3 TTL-Compatible CMOS Inputs
+This device includes TTL-compatible CMOS inputs. These inputs are specifically designed to interface with TTL
+logic devices by having a reduced input voltage threshold.
+TTL-compatible  CMOS  inputs  are  high  impedance  and  are  typically  modeled  as  a  resistor  in  parallel  with
+the  input  capacitance  given  in  the       Electrical  Characteristics.  The  worst  case  resistance  is  calculated  with  the
+maximum input voltage, given in the Absolute Maximum Ratings, and the maximum input leakage current, given
+in the Electrical Characteristics, using Ohm's law (R = V ÷ I).
+TTL-compatible CMOS inputs require that input signals transition between valid logic states quickly, as defined
+by  the  input  transition  time  or  rate  in  the       Recommended  Operating  Conditions  table.  Failing  to  meet  this
+specification will result in excessive power consumption and could cause oscillations. More details can be found
+in the Implications of Slow or Floating CMOS Inputs application report.
+Do  not  leave  TTL-compatible  CMOS  inputs  floating  at  any  time  during  operation.  Unused  inputs  must  be
+terminated at VCC or GND. If a system will not be actively driving an input at all times, a pull-up or pull-down
+resistor  can  be  added  to  provide  a  valid  input  voltage  during  these  times.  The  resistor  value  will  depend  on
+multiple factors; however, a 10kΩ resistor is recommended and typically will meet all requirements.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2025 Texas Instruments Incorporated                                                             Submit Document Feedback          13
+                                Product Folder Links: CD54HC273 CD74HC273 CD54HCT273 CD74HCT273
+CD54HC273, CD74HC273
+CD54HCT273, CD74HCT273
+SCHS174D – FEBRUARY 1998 – REVISED OCTOBER 2025                                                                                     www.ti.com
+
+7.3.4 Clamp Diode Structure
+As shown in Figure 7-1, the inputs and outputs to this device have both positive and negative clamping diodes.
+
+                                                                 CAUTION
+        Voltages beyond the values specified in the                Absolute Maximum Ratings table can cause damage
+        to the device. The input and output voltage ratings may be exceeded if the input and output clamp-
+        current ratings are observed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  Figure 7-1. Electrical Placement of Clamping Diodes for Each Input and Output
+
+7.4 Device Functional Modes
+                                                       Table 7-1. Function Table
+                                                       INPUTS(1)                          OUTPUT(2)
+
+                                          CLR             CLK              D                   Q
+                                           L               X               X                   L
+                                           H             L, H, ↓           X                  Q0
+                                           H               ↑               L                   L
+                                           H               ↑               H                   H
+
+                                    (1)   L = input low, H = input high, ↑ = input transitioning from low to
+                                          high, ↓ = input transitioning from high to low, X = do not care
+                                    (2)   L = output low, H = output high, Q0 = previous state
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14     Submit Document Feedback                                                                     Copyright © 2025 Texas Instruments Incorporated
+                                Product Folder Links: CD54HC273 CD74HC273 CD54HCT273 CD74HCT273
+                                                                                                                CD54HC273, CD74HC273
+                                                                                                             CD54HCT273, CD74HCT273
+www.ti.com                                                                              SCHS174D – FEBRUARY 1998 – REVISED OCTOBER 2025
+
+8 Application and Implementation
+
+                                                                    Note
+       Information  in  the  following  applications  sections  is  not  part  of  the  TI  component  specification,
+       and   TI   does   not   warrant   its   accuracy   or   completeness.   TI’s   customers   are   responsible   for
+       determining suitability of components for their purposes, as well as validating and testing their design
+       implementation to confirm system functionality.
+
+8.1 Application Information
+The CDxHC(T)273 is used to synchronize incoming data to the system clock on an 8-bit bus.
+
+8.2 Typical Application
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            Figure 8-1. Typical Application Diagram
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2025 Texas Instruments Incorporated                                                            Submit Document Feedback         15
+                                Product Folder Links: CD54HC273 CD74HC273 CD54HCT273 CD74HCT273
+CD54HC273, CD74HC273
+CD54HCT273, CD74HCT273
+SCHS174D – FEBRUARY 1998 – REVISED OCTOBER 2025                                                                                  www.ti.com
+
+8.2.1 Design Requirements
+8.2.1.1 Power Considerations
+Ensure that the desired supply voltage is within the range specified in the Electrical Characteristics. The supply
+voltage  sets  the  device  electrical  characteristics  of  the  device,  as  described  in  the             Electrical  Characteristics
+section.
+The positive voltage supply must be capable of sourcing current equal to the total current to be sourced by all
+outputs of the CDxHC(T)273 plus the maximum static supply current, ICC, listed in the Electrical Characteristics,
+and  any  transient  current  required  for  switching.          The  logic  device  can  only  source  as  much  current  that  is
+provided by the positive supply source. Ensure the maximum total current through VCC listed in the Absolute
+Maximum Ratings is not exceeded.
+The  ground  must  be  capable  of  sinking  current  equal  to  the  total  current  to  be  sunk  by  all  outputs  of  the
+CDxHC(T)273 plus the maximum supply current, ICC, listed in the                       Electrical Characteristics, and any transient
+current required for switching. The logic device can only sink as much current that can be sunk into its ground
+connection.  Ensure  the  maximum  total  current  through  GND  listed  in  the                 Absolute  Maximum  Ratings  is  not
+exceeded.
+The CDxHC(T)273 can drive a load with a total capacitance less than or equal to 50pF while still meeting all of
+the data sheet specifications. Larger capacitive loads can be applied; however, it is not recommended to exceed
+50pF.
+The CDxHC(T)273 can drive a load with total resistance described by RL ≥ VO / IO, with the output voltage and
+current defined in the Electrical Characteristics table with VOH and VOL. When outputting in the HIGH state, the
+output voltage in the equation is defined as the difference between the measured output voltage and the supply
+voltage at the VCC pin.
+Total power consumption can be calculated using the information provided in the CMOS Power Consumption
+and Cpd Calculation application note.
+Thermal increase can be calculated using the information provided in the Thermal Characteristics of Standard
+Linear and Logic (SLL) Packages and Devices application note.
+
+                                                                CAUTION
+        The maximum junction temperature, TJ(max) listed in the Absolute Maximum Ratings, is an additional
+        limitation to prevent damage to the device. Do not violate any values listed in the Absolute Maximum
+        Ratings. These limits are provided to prevent damage to the device.
+
+8.2.1.2 Input Considerations
+Input signals must cross VIL(max) to be considered a logic LOW, and VIH(min) to be considered a logic HIGH. Do
+not exceed the maximum input voltage range found in the Absolute Maximum Ratings.
+Unused inputs must be terminated to either VCC or ground. The unused inputs can be directly terminated if the
+input is completely unused, or they can be connected with a pull-up or pull-down resistor if the input will be used
+sometimes, but not always. A pull-up resistor is used for a default state of HIGH, and a pull-down resistor is
+used for a default state of LOW. The drive current of the controller, leakage current into the CDxHC(T)273 (as
+specified in the Electrical Characteristics), and the desired input transition rate limits the resistor size. A 10kΩ
+resistor value is often used due to these factors.
+The CDxHC(T)273 has CMOS inputs and thus requires fast input transitions to operate correctly, as defined in
+the Electrical Characteristics table. Slow input transitions can cause oscillations, additional power consumption,
+and reduction in device reliability.
+Refer to the Feature Description for additional information regarding the inputs for this device.
+
+
+
+
+
+
+
+16     Submit Document Feedback                                                                   Copyright © 2025 Texas Instruments Incorporated
+                                Product Folder Links: CD54HC273 CD74HC273 CD54HCT273 CD74HCT273
+                                                                                                                 CD54HC273, CD74HC273
+                                                                                                              CD54HCT273, CD74HCT273
+www.ti.com                                                                               SCHS174D – FEBRUARY 1998 – REVISED OCTOBER 2025
+
+8.2.1.3 Output Considerations
+The positive supply voltage is used to produce the output HIGH voltage. Drawing current from the output will
+decrease the output voltage as specified by the VOH specification in the Electrical Characteristics. The ground
+voltage  is  used  to  produce  the  output  LOW  voltage.  Sinking  current  into  the  output  will  increase  the  output
+voltage as specified by the VOL specification in the Electrical Characteristics.
+Push-pull outputs that could be in opposite states, even for a very short time period, should never be connected
+directly together. This can cause excessive current and damage to the device.
+Two channels within the same device with the same input signals can be connected in parallel for additional
+output drive strength.
+Unused outputs can be left floating. Do not connect outputs directly to VCC or ground.
+Refer to the Feature Description section for additional information regarding the outputs for this device.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2025 Texas Instruments Incorporated                                                             Submit Document Feedback         17
+                                Product Folder Links: CD54HC273 CD74HC273 CD54HCT273 CD74HCT273
+CD54HC273, CD74HC273
+CD54HCT273, CD74HCT273
+SCHS174D – FEBRUARY 1998 – REVISED OCTOBER 2025                                                                                 www.ti.com
+
+8.2.2 Detailed Design Procedure
+1.   Add a decoupling capacitor from VCC to GND. The capacitor needs to be placed physically close to the
+     device and electrically close to both the VCC and GND pins. An example layout is shown in the Layout
+     section.
+2.   Verify that the capacitive load at the output is ≤ 50pF. This is not a hard limit; by design, however, it will
+     optimize performance. This can be accomplished by providing short, appropriately sized traces from the
+     CDxHC(T)273 to one or more of the receiving devices.
+3.   Verify that the resistive load at the output is larger than (VCC / IO(max))Ω. Doing this prevents the maximum
+     output current from the Absolute Maximum Ratings from being violated. Most CMOS inputs have a resistive
+     load measured in MΩ; much larger than the minimum calculated previously.
+4.   Thermal issues are rarely a concern for logic gates; the power consumption and thermal increase, however,
+     can be calculated using the steps provided in the CMOS Power Consumption and Cpd Calculation
+     application note.
+
+8.2.3 Application Curve
+
+
+
+
+
+
+
+
+                          Figure 8-2. Application Timing Diagram, One Data Channel Shown
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+18     Submit Document Feedback                                                                  Copyright © 2025 Texas Instruments Incorporated
+                               Product Folder Links: CD54HC273 CD74HC273 CD54HCT273 CD74HCT273
+                                                                                                             CD54HC273, CD74HC273
+                                                                                                          CD54HCT273, CD74HCT273
+www.ti.com                                                                           SCHS174D – FEBRUARY 1998 – REVISED OCTOBER 2025
+
+8.3 Power Supply Recommendations
+The power supply can be any voltage between the minimum and maximum supply voltage rating listed in the
+Recommended Operating Conditions.
+Verify that each VCC terminal has a good bypass capacitor to prevent power disturbance. For the CDxHC(T)273,
+a  0.1μF  bypass  capacitor  is  recommended.  To  reject  different  frequencies  of  noise,  use  multiple  bypass
+capacitors in parallel. Capacitors with values of 0.1μF and 1μF are commonly used in parallel.
+8.4 Layout
+8.4.1 Layout Guidelines
+•   Bypass capacitor placement
+    –   Place near the positive supply terminal of the device
+    –   Provide an electrically short ground return path
+    –   Use wide traces to minimize impedance
+    –   Keep the device, capacitors, and traces on the same side of the board whenever possible
+•   Signal trace geometry
+    –   8mil to 12mil trace width
+    –   Lengths less than 12cm to minimize transmission line effects
+    –   Avoid 90° corners for signal traces
+    –   Use an unbroken ground plane below signal traces
+    –   Flood fill areas around signal traces with ground
+    –   Parallel traces must be separated by at least 3x dielectric thickness
+    –   For traces longer than 12cm
+        •   Use impedance controlled traces
+        •   Source-terminate using a series damping resistor near the output
+        •   Avoid branches; buffer each signal that must branch separately
+8.4.2 Layout Example
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                           Figure 8-3. Example Trace Corners for Improved Signal Integrity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2025 Texas Instruments Incorporated                                                        Submit Document Feedback         19
+                               Product Folder Links: CD54HC273 CD74HC273 CD54HCT273 CD74HCT273
+CD54HC273, CD74HC273
+CD54HCT273, CD74HCT273
+SCHS174D – FEBRUARY 1998 – REVISED OCTOBER 2025                                                                           www.ti.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Figure 8-4. Example Bypass Capacitor Placement
+             for TSSOP and Similar Packages
+
+
+
+                                                                    Figure 8-5. Example Bypass Capacitor Placement
+                                                                               for WQFN and Similar Packages
+
+
+
+
+
+
+
+            Figure 8-6. Example Bypass Capacitor Placement for SOT, SC70 and Similar Packages
+
+
+
+
+
+
+                 Figure 8-7. Example Damping Resistor Placement for Improved Signal Integrity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+20    Submit Document Feedback                                                              Copyright © 2025 Texas Instruments Incorporated
+                              Product Folder Links: CD54HC273 CD74HC273 CD54HCT273 CD74HCT273
+                                                                                                                         CD54HC273, CD74HC273
+                                                                                                                      CD54HCT273, CD74HCT273
+www.ti.com                                                                                     SCHS174D – FEBRUARY 1998 – REVISED OCTOBER 2025
+
+9 Device and Documentation Support
+TI offers an extensive line of development tools. Tools and software to evaluate the performance of the device,
+generate code, and develop solutions are listed below.
+9.1 Documentation Support
+9.1.1 Related Documentation
+For related documentation, see the following:
+•    Texas Instruments, CMOS Power Consumption and Cpd Calculation application note
+•    Texas Instruments, Designing With Logic application note
+•    Texas Instruments, Thermal Characteristics of Standard Linear and Logic (SLL) Packages and Devices
+     application note
+9.2 Receiving Notification of Documentation Updates
+To  receive  notification  of  documentation  updates,  navigate  to  the  device  product  folder  on                             ti.com.  Click  on
+Notifications to register and receive a weekly digest of any product information that has changed. For change
+details, review the revision history included in any revised document.
+9.3 Support Resources
+TI E2E™ support forums are an engineer's go-to source for fast, verified answers and design help — straight
+from the experts. Search existing answers or ask your own question to get the quick design help you need.
+Linked content is provided "AS IS" by the respective contributors. They do not constitute TI specifications and do
+not necessarily reflect TI's views; see TI's Terms of Use.
+9.4 Trademarks
+TI E2E™ is a trademark of Texas Instruments.
+All trademarks are the property of their respective owners.
+9.5 Electrostatic Discharge Caution
+                    This integrated circuit can be damaged by ESD. Texas Instruments recommends that all integrated circuits be handled
+                    with appropriate precautions. Failure to observe proper handling and installation procedures can cause damage.
+                    ESD damage can range from subtle performance degradation to complete device failure. Precision integrated circuits may
+                    be more susceptible to damage because very small parametric changes could cause the device not to meet its published
+                    specifications.
+
+9.6 Glossary
+ TI Glossary             This glossary lists and explains terms, acronyms, and definitions.
+
+10 Revision History
+NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+Changes from Revision C (January 2022) to Revision D (October 2025)                                                                               Page
+•    Updated the numbering format for tables, figures, and cross-references throughout the document.................                                   1
+•    Added Applications, Application and Implementation, Typical Characteristics, and Typical Application
+     Example sections................................................................................................................................................1
+•    Updated Power Supply Recommendations .......................................................................................................1
+•    Updated Layout Guidelines ...............................................................................................................................1
+•    Moved Layout to Application and Implementation section.................................................................................           1
+•    Added Pin Functions table..................................................................................................................................3
+•    Updated Pin Configuration figure.......................................................................................................................3
+•    Updated from: Prerequisite for Switching Specifications to: Timing Requirements ...........................................6
+•    Moved Detailed Description after Parameter Measurement Information .........................................................10
+
+
+
+
+Copyright © 2025 Texas Instruments Incorporated                                                                    Submit Document Feedback            21
+                                  Product Folder Links: CD54HC273 CD74HC273 CD54HCT273 CD74HCT273
+CD54HC273, CD74HC273
+CD54HCT273, CD74HCT273
+SCHS174D – FEBRUARY 1998 – REVISED OCTOBER 2025                                                                                              www.ti.com
+•    Added Feature Description ..............................................................................................................................10
+•    Moved Device Functional Modes after Feature Description ............................................................................10
+
+
+
+Changes from Revision B (May 2003) to Revision C (January 2022)                                                                                    Page
+•    Updated the numbering, formatting, tables, figures, and cross-references throughout the document to reflect
+     modern data sheet standards.............................................................................................................................1
+•    Updated pin names to match current TI naming conventions. MR is now CLR, Q0 is now 1Q, D0 is now 1D,
+     D1 is now 2D, Q1 is now 2Q, Q2 is now 3Q, D2 is now 3Q, D3 is now 4D, Q3 is now 4Q, CP is now CLK, Q4
+     is now 5Q, D4 is now 5D, D5 is now D6, Q5 is now 6Q, Q6 is now 7Q, D6 is now 7D, D7 is now 8D, Q7 is
+     now 8Q...............................................................................................................................................................1
+
+
+11 Mechanical, Packaging, and Orderable Information
+The  following  pages  include  mechanical,  packaging,  and  orderable  information.  This  information  is  the  most
+current data available for the designated devices. This data is subject to change without notice and revision of
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+22     Submit Document Feedback                                                                            Copyright © 2025 Texas Instruments Incorporated
+                                   Product Folder Links: CD54HC273 CD74HC273 CD54HCT273 CD74HCT273
+                                                                                                                                                                       PACKAGE OPTION ADDENDUM
+
+
+
+    www.ti.com                                                                                                                                                                                                           18-Sep-2026
+
+
+
+PACKAGING INFORMATION
+
+   Orderable part number            Status     Material type       Package | Pins        Package qty | Carrier        RoHS             Lead finish/              MSL rating/              Op temp (°C)               Part marking
+                                      (1)            (2)                                                                (3)            Ball material             Peak reflow                                               (6)
+                                                                                                                                             (4)                       (5)
+       5962-8772501RA               Active      Production          CDIP (J) | 20              20 | TUBE                No                 SNPB                N/A for Pkg Type             -55 to 125             5962-8772501RA
+                                                                                                                                                                                                                   CD54HCT273F3A
+         CD54HC273F                 Active      Production          CDIP (J) | 20              20 | TUBE                No                 SNPB                N/A for Pkg Type             -55 to 125               CD54HC273F
+        CD54HC273F.A                Active      Production          CDIP (J) | 20              20 | TUBE                No                 SNPB                N/A for Pkg Type             -55 to 125               CD54HC273F
+       CD54HC273F3A                 Active      Production          CDIP (J) | 20              20 | TUBE                No                 SNPB                N/A for Pkg Type             -55 to 125                8409901RA
+                                                                                                                                                                                                                   CD54HC273F3A
+      CD54HC273F3A.A                Active      Production          CDIP (J) | 20              20 | TUBE                No                 SNPB                N/A for Pkg Type             -55 to 125                8409901RA
+                                                                                                                                                                                                                   CD54HC273F3A
+        CD54HCT273F                 Active      Production          CDIP (J) | 20              20 | TUBE                No                 SNPB                N/A for Pkg Type             -55 to 125              CD54HCT273F
+       CD54HCT273F.A                Active      Production          CDIP (J) | 20              20 | TUBE                No                 SNPB                N/A for Pkg Type             -55 to 125              CD54HCT273F
+       CD54HCT273F3A                Active      Production          CDIP (J) | 20              20 | TUBE                No                 SNPB                N/A for Pkg Type             -55 to 125             5962-8772501RA
+                                                                                                                                                                                                                   CD54HCT273F3A
+      CD54HCT273F3A.A               Active      Production          CDIP (J) | 20              20 | TUBE                No                 SNPB                N/A for Pkg Type             -55 to 125             5962-8772501RA
+                                                                                                                                                                                                                   CD54HCT273F3A
+         CD74HC273E                 Active      Production          PDIP (N) | 20              20 | TUBE               Yes                NIPDAU               N/A for Pkg Type             -55 to 125               CD74HC273E
+        CD74HC273E.A                Active      Production          PDIP (N) | 20              20 | TUBE               Yes                NIPDAU               N/A for Pkg Type             -55 to 125               CD74HC273E
+         CD74HC273M                Obsolete     Production         SOIC (DW) | 20                   -                    -                 Call TI                  Call TI                 -55 to 125                 HC273M
+       CD74HC273M96                 Active      Production         SOIC (DW) | 20         2000 | LARGE T&R             Yes                NIPDAU            Level-1-260C-UNLIM              -55 to 125                 HC273M
+      CD74HC273M96.A                Active      Production         SOIC (DW) | 20         2000 | LARGE T&R             Yes                NIPDAU            Level-1-260C-UNLIM              -55 to 125                 HC273M
+      CD74HC273M96E4                Active      Production         SOIC (DW) | 20         2000 | LARGE T&R             Yes                NIPDAU            Level-1-260C-UNLIM              -55 to 125                 HC273M
+        CD74HCT273E                 Active      Production          PDIP (N) | 20              20 | TUBE               Yes                NIPDAU               N/A for Pkg Type             -55 to 125              CD74HCT273E
+       CD74HCT273E.A                Active      Production          PDIP (N) | 20              20 | TUBE               Yes                NIPDAU               N/A for Pkg Type             -55 to 125              CD74HCT273E
+       CD74HCT273EE4                Active      Production          PDIP (N) | 20              20 | TUBE               Yes                NIPDAU               N/A for Pkg Type             -55 to 125              CD74HCT273E
+        CD74HCT273M                Obsolete     Production         SOIC (DW) | 20                   -                    -                 Call TI                  Call TI                 -55 to 125                 HCT273M
+       CD74HCT273M96                Active      Production         SOIC (DW) | 20         2000 | LARGE T&R             Yes                NIPDAU            Level-1-260C-UNLIM              -55 to 125                 HCT273M
+     CD74HCT273M96.A                Active      Production         SOIC (DW) | 20         2000 | LARGE T&R             Yes                NIPDAU            Level-1-260C-UNLIM              -55 to 125                 HCT273M
+
+(1) Status:  For more details on status, see our product life cycle.
+
+
+
+
+
+
+                                                                                                           Addendum-Page 1
+                                                                                                                                                                                                     PACKAGE OPTION ADDENDUM
+
+
+
+    www.ti.com                                                                                                                                                                                                                                                 18-Sep-2026
+
+
+
+
+
+
+
+(2) Material type:  When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+
+(3) RoHS values:  Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+
+(4) Lead finish/Ball material:  Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+
+(5) MSL rating/Peak reflow:  The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+
+(6) Part marking:  There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+
+ OTHER QUALIFIED VERSIONS OF CD54HC273, CD54HCT273, CD74HC273, CD74HCT273 :
+• Catalog : CD74HC273, CD74HCT273
+• Military : CD54HC273, CD54HCT273
+
+ NOTE: Qualified Version Definitions:
+         • Catalog - TI's standard catalog product
+         • Military - QML certified for Military and Defense Applications
+
+
+
+
+
+
+
+                                                                                                                              Addendum-Page 2
+                                                                         PACKAGE MATERIALS INFORMATION
+
+
+
+
+
+
+www.ti.com                                                                                                                              10-Aug-2026
+
+TAPE AND REEL INFORMATION
+
+
+       REEL DIMENSIONS                                                           TAPE DIMENSIONS
+                                                                              K0      P1
+
+
+
+                                                                                                          B0   W
+
+                                        Reel
+                                      Diameter
+                                                                           Cavity         A0
+
+                                                         A0    Dimension designed to accommodate the component width
+                                                         B0    Dimension designed to accommodate the component length
+                                                         K0    Dimension designed to accommodate the component thickness
+                                                          W    Overall width of the carrier tape
+                                                         P1    Pitch between successive cavity centers
+
+
+                                        Reel Width (W1)
+                             QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+
+                                                                                           Sprocket Holes
+
+
+                                                Q1    Q2        Q1    Q2
+
+                                                Q3    Q4        Q3    Q4               User Direction of Feed
+
+
+
+                                                        Pocket Quadrants
+
+
+*All dimensions are nominal
+          Device            Package    Package    Pins    SPQ        Reel       Reel      A0      B0       K0      P1      W        Pin1
+                              Type     Drawing                     Diameter    Width     (mm)    (mm)    (mm)    (mm)     (mm)   Quadrant
+                                                                     (mm)    W1 (mm)
+     CD74HC273M96             SOIC        DW       20     2000       330.0      24.4     10.8     13.3    2.7     12.0    24.0       Q1
+     CD74HC273M96             SOIC        DW       20     2000       330.0      24.4     10.9     13.3    2.7     12.0    24.0       Q1
+    CD74HCT273M96             SOIC        DW       20     2000       330.0      24.4     10.9     13.3    2.7     12.0    24.0       Q1
+    CD74HCT273M96             SOIC        DW       20     2000       330.0      24.4     10.8     13.3    2.7     12.0    24.0       Q1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                               Pack Materials-Page 1
+                                                                   PACKAGE MATERIALS INFORMATION
+
+
+
+
+
+
+www.ti.com                                                                                                                   10-Aug-2026
+
+
+TAPE AND REEL BOX DIMENSIONS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                  Width (mm)  H
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 W                                            L
+
+
+
+
+
+
+
+*All dimensions are nominal
+         Device             Package Type      Package Drawing    Pins      SPQ      Length (mm)     Width (mm)    Height (mm)
+     CD74HC273M96                SOIC                DW            20      2000         356.0          356.0           45.0
+     CD74HC273M96                SOIC                DW            20      2000         356.0          356.0           45.0
+    CD74HCT273M96                SOIC                DW            20      2000         356.0          356.0           45.0
+    CD74HCT273M96                SOIC                DW            20      2000         356.0          356.0           45.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                          Pack Materials-Page 2
+                                                                  PACKAGE MATERIALS INFORMATION
+
+
+
+
+
+
+www.ti.com                                                                                                                 10-Aug-2026
+
+TUBE
+
+
+      T - Tube
+       height                                                      L - Tube length
+
+
+
+                W - Tube
+                   width
+
+
+        B - Alignment groove width
+
+
+
+*All dimensions are nominal
+         Device             Package Name     Package Type     Pins        SPQ      L (mm)     W (mm)      T (µm)       B (mm)
+      CD74HC273E                  N              PDIP           20         20        506        13.97     11230         4.32
+     CD74HC273E.A                 N              PDIP           20         20        506        13.97     11230         4.32
+     CD74HCT273E                  N              PDIP           20         20        506        13.97     11230         4.32
+    CD74HCT273E.A                 N              PDIP           20         20        506        13.97     11230         4.32
+    CD74HCT273EE4                 N              PDIP           20         20        506        13.97     11230         4.32
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                         Pack Materials-Page 3
+
+
+                                                                                                                   PACKAGE OUTLINE
+DW0020A                                                                                                       SOIC - 2.65 mm max height
+
+
+
+
+
+
+
+
+
+                                                                             SCALE  1.200
+                                                                                                                                                            SOIC
+
+
+
+
+                                                                                                                                        C
+
+                                           10.63 TYP                                                              SEATING PLANE
+                                           9.97
+           A                                        PIN 1 ID                                                                      0.1  C
+                                                    AREA
+                                                                                          18X  1.27
+                  1                                                                                    20
+
+
+
+
+
+
+
+
+
+         13.0                                                                             2X
+         12.6                                                                           11.43
+       NOTE 3
+
+
+
+
+
+
+
+
+
+
+                 10
+                                                                           11
+                                                                                      20X 0.510.31                     2.65 MAX
+                     B                                  7.67.4                              0.25      C  A  B
+                                             NOTE 4
+
+
+
+
+                                                                                        0.33 TYP
+                                                                                        0.10
+
+
+                                                                                                   0.25
+                                        SEE DETAIL A                                    GAGE PLANE
+
+
+
+                                                                                                                                    1.27                   0.3
+                                                                                               0  - 8                               0.40                   0.1
+
+                                                                                                                                    DETAIL A
+                                                                                                                                      TYPICAL
+
+
+                                                                                                                                           4220724/A   05/2016
+
+NOTES:
+
+1. All linear dimensions are in millimeters. Dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed 0.15 mm per side.
+4. This dimension does not include interlead flash. Interlead flash shall not exceed 0.43 mm per side.
+5. Reference JEDEC registration MS-013.
+
+
+
+
+
+                                                                                www.ti.com
+                                                                                    EXAMPLE BOARD LAYOUT
+DW0020A                                                                                       SOIC - 2.65 mm max height
+
+                                                                                                                                      SOIC
+
+
+
+
+
+
+                                 20X (2)                             SYMM
+
+                                           1
+                                                                                                    20
+
+                            20X (0.6)
+
+
+
+                               18X (1.27)
+
+
+
+                                                                                                        SYMM
+
+
+
+
+
+
+                              (R       )0.05
+                              TYP
+
+
+
+
+                                         10                                                                                           11
+
+
+                                                                      (9.3)
+
+                                                       LAND PATTERN EXAMPLE
+                                                                   SCALE:6X
+
+
+
+
+
+                 SOLDER MASK                          METAL             METAL UNDER                             SOLDER MASK
+                 OPENING                                                SOLDER MASK                             OPENING
+
+
+
+
+
+                                     0.07 MAX                                                  0.07 MIN
+                                     ALL AROUND                                                ALL AROUND
+
+                                NON SOLDER MASK                                               SOLDER MASK
+                                      DEFINED                                                    DEFINED
+
+                                                            SOLDER MASK DETAILS
+
+                                                                                                                       4220724/A   05/2016
+NOTES: (continued)
+
+6. Publication IPC-7351 may have alternate designs.
+7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+
+
+
+
+
+
+
+
+
+
+
+                                                                    www.ti.com
+                                                                                        EXAMPLE STENCIL DESIGN
+DW0020A                                                                                             SOIC - 2.65 mm max height
+
+                                                                                                                                               SOIC
+
+
+
+
+
+
+
+
+                                     20X (2)                              SYMM
+
+                                              1
+                                                                                                           20
+
+                               20X (0.6)
+
+
+
+                                 18X (1.27)
+
+
+
+                                                                                                                SYMM
+
+
+
+
+
+
+
+
+
+
+
+
+                                             10                                                                                          11
+
+                                                                           (9.3)
+
+
+                                                           SOLDER PASTE EXAMPLE
+                                                         BASED ON 0.125 mm THICK STENCIL
+                                                                        SCALE:6X
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                4220724/A   05/2016
+NOTES: (continued)
+
+8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.
+9. Board assembly site may have different recommendations for stencil design.
+
+
+
+
+
+
+
+
+
+
+                                                                         www.ti.com
+                                            IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS”
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale,                       TI’s General Quality Guidelines, or other applicable terms available either on
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+
+
+                                                    Copyright © 2026, Texas Instruments Incorporated
+                                                                     Last updated 10/2025

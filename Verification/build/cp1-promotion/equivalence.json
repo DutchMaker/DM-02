@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "model_hashes_compared": 446,
+  "clock_models_compared": 10,
+  "regenerated_sources": [
+    "Circuits/KiCad/Compact/candidates/AL1.sch",
+    "Circuits/KiCad/Compact/candidates/BF1.sch",
+    "Circuits/KiCad/Compact/candidates/BP1.sch",
+    "Circuits/KiCad/Compact/candidates/C1.sch",
+    "Circuits/KiCad/Compact/candidates/CW1.sch",
+    "Circuits/KiCad/Compact/candidates/DT1.sch",
+    "Circuits/KiCad/Compact/candidates/MA1.sch",
+    "Circuits/KiCad/Compact/candidates/ME1.sch",
+    "Circuits/KiCad/Compact/candidates/PC1.sch",
+    "Circuits/KiCad/Compact/candidates/RG1.sch",
+    "Circuits/KiCad/Compact/candidates/SP1.sch",
+    "Circuits/KiCad/Compact/candidates/SQ1.sch",
+    "Circuits/KiCad/Compact/candidates/boards.json",
+    "Circuits/KiCad/Compact/candidates/connections.json"
+  ],
+  "source_files_checked": 430,
+  "fresh_smoke": {
+    "passed": true,
+    "corner": 1,
+    "log": "cp1/smoke.log",
+    "wall_seconds": 3.5941028334200382
+  },
+  "full_simulations": "Reused pinned accepted evidence; full boot not rerun."
+}

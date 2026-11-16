@@ -1,0 +1,236 @@
+{
+  "completed": true,
+  "adopted": false,
+  "part": "CD74HCT273E",
+  "unit_checks": [
+    {
+      "gap_ns": 2,
+      "expected": "fault",
+      "detected": true
+    },
+    {
+      "gap_ns": 3,
+      "expected": "pass",
+      "detected": true
+    },
+    {
+      "gap_ns": 4,
+      "expected": "pass",
+      "detected": true
+    }
+  ],
+  "runs": [
+    {
+      "profile": "c0-cases0",
+      "passed": true,
+      "exit_code": 0,
+      "wall_seconds": 3.5794546250253916,
+      "hold_fault": false,
+      "observed_hold_lines": [
+        "CD273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000",
+        "CD273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000",
+        "CD273 hold sequencer_tb.physical_alu.alu.U2 events=78 minimum_ns=1250.000"
+      ],
+      "input_hashes": {
+        "CW1.sv": "6513e3f91947d3321e778c1c40081fd8416d7131a3953b5457fe6a98bf4e034a",
+        "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68",
+        "BF1.sv": "cba2ffbb90a1f499c5a9397d8639421335ca69b28102151cc51b10a3d8b74442",
+        "C1.sv": "c642a6f4109197eb6b1854e2b782bf4f1e3da604afed29a855b51fcd07ee61eb",
+        "support.sv": "cedc1088908342702904cc60caf4e58062a3604d259fb1c89328f69028344c60",
+        "AL1.sv": "0fccec4dcd093823c9daa788480982a068b68b38d710774275fad13e8a015c83",
+        "tb.sv": "6b64c81fc9f80b5a30473082a9dd21c724a63fce86a8522ee8afcd6abda3e87f",
+        "PC1.sv": "96797945cf1a6173aa28c6b1ecf433abf02644b5b68ec6a72275d5464fb74bce",
+        "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921",
+        "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c",
+        "DT1.sv": "82610f1c989151452df0a986c72a293fb49a2736bb7bbef3dbc9f7f6f0232f2e",
+        "SP1.sv": "fe44ea1e9b83be907e9b0a0593ea5ecfeebec109d7d4f4dc34a8be5b42535ecf",
+        "SQ1.sv": "63c7e8a8d79d0a90f80d38611ad94cafcf8ea0b92c048da43b37de7774bc5ba4",
+        "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2",
+        "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e",
+        "RG1.sv": "687399b2f422fd5704244374b286f3a3cf72e157ef03deaa7f2fd06ca28f4b33",
+        "MA1.sv": "3e6f36a105c9d42fd58a5b24bfa4a27b6c9c25bf19caf332621ad0d84a16d9de",
+        "alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad",
+        "ME1.sv": "5b90296d02508320750bab495b6b90c897e61438923da573f9bd4dc6fe993d44"
+      },
+      "modified_support_sha256": "6c257b360bf484bd077aa17e67418e79a7b1377e6a2f0fcaf5273bb2757c96ba",
+      "log": "c0-cases0/simulation.log"
+    },
+    {
+      "profile": "c1-cases0",
+      "passed": true,
+      "exit_code": 0,
+      "wall_seconds": 3.5738740414381027,
+      "hold_fault": false,
+      "observed_hold_lines": [
+        "CD273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000",
+        "CD273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000",
+        "CD273 hold sequencer_tb.physical_alu.alu.U2 events=79 minimum_ns=1340.000"
+      ],
+      "input_hashes": {
+        "CW1.sv": "a40d35f327bbd91f5556fae1fb21ae75b7dac1516698ebbf428ae024dccdc738",
+        "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68",
+        "BF1.sv": "9c195c33ea2830d8df7dee889c4d94286592d6bca4d5694d01c8d9b340e5af11",
+        "C1.sv": "3fe5fdb06d626e932e6f7ca33345fb57834b283ebab585c947173676175800e5",
+        "support.sv": "cedc1088908342702904cc60caf4e58062a3604d259fb1c89328f69028344c60",
+        "AL1.sv": "ec1c9d1e03fd85b2f08c75f87fe6f9762309fd1281c070616faecff10b6acec4",
+        "tb.sv": "6b64c81fc9f80b5a30473082a9dd21c724a63fce86a8522ee8afcd6abda3e87f",
+        "PC1.sv": "44ffc639a4ada265916803361ffdef3b0e7f4476b37eda896357ddc604192200",
+        "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921",
+        "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c",
+        "DT1.sv": "b1da7a7293d70ee6183b3c91d1460b1e8c31e4470b791235842db4868c5f68f8",
+        "SP1.sv": "ccc14fedfbbcdfce44b2236f9eb5649e11578ef65e57601b90a0b67fed17fe3c",
+        "SQ1.sv": "a0612d913daa199c7d698f0594ac0a3dfe7e06716e988073282702d8eaffb694",
+        "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2",
+        "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e",
+        "RG1.sv": "1c9df64151234f4785996e5e06373ceb620faabed39fbc8fba07f9a82ce4d0ea",
+        "MA1.sv": "bf2c1b034ba9dbd4625299f05e45dea8d012c1f12d1a971655cdac8eb57b9fd0",
+        "alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad",
+        "ME1.sv": "38c5acd12d23d44ca136f169e127fa60c80da85655271c468b2afe84ec750177"
+      },
+      "modified_support_sha256": "6c257b360bf484bd077aa17e67418e79a7b1377e6a2f0fcaf5273bb2757c96ba",
+      "log": "c1-cases0/simulation.log"
+    },
+    {
+      "profile": "c7-cases0",
+      "passed": true,
+      "exit_code": 0,
+      "wall_seconds": 4.122759332880378,
+      "hold_fault": false,
+      "observed_hold_lines": [
+        "CD273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000",
+        "CD273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000",
+        "CD273 hold sequencer_tb.physical_alu.alu.U2 events=196 minimum_ns=1267.500"
+      ],
+      "input_hashes": {
+        "CW1.sv": "b9b75a782b8194c46056e1273b1fea3a646ff6948bbf9d0bcbb1bddb70e6f590",
+        "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68",
+        "BF1.sv": "82bcecd8f277e31a83068535ef6c10ce674212c34c2edc3de214164219e86707",
+        "C1.sv": "170b975224c15cd9c4fb9fc0c18e808167842cec5a820bddcab9a554f33faf11",
+        "support.sv": "cedc1088908342702904cc60caf4e58062a3604d259fb1c89328f69028344c60",
+        "AL1.sv": "f8428bea3e586cce1d5833c2985d9017c5b6b4fc6a594cfd5356347fbe71c400",
+        "tb.sv": "6b64c81fc9f80b5a30473082a9dd21c724a63fce86a8522ee8afcd6abda3e87f",
+        "PC1.sv": "3ff5058c1155731cf610c953cccd6eb271449b4ca5ba086201661a431583e6d6",
+        "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921",
+        "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c",
+        "DT1.sv": "0de96e9b22cefedf7674c1d37d4008bbe485fef80ed9da165ce2958aa9d46a0a",
+        "SP1.sv": "70e0497deb8f50b21ec4d789b5dfeaf6b2cb58087789d263685a193a0280ee3b",
+        "SQ1.sv": "ee7c7ea4b4932bd0acace2c1e726cbec0de88a6a2c89f9673fe7dfb83ee85f11",
+        "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2",
+        "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e",
+        "RG1.sv": "5edf83188d26cc08be5c68e39300486eb16a15d5342248da95c61397aa244211",
+        "MA1.sv": "b5e11eecc6c36ea8dc8281ec1178e94aefc28bf7e6a0d5d86d8ef7fc5b77589e",
+        "alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad",
+        "ME1.sv": "fcdbb4e471717973597c59efd3819d246fcf96deaf15c76f2b609680320628dc"
+      },
+      "modified_support_sha256": "6c257b360bf484bd077aa17e67418e79a7b1377e6a2f0fcaf5273bb2757c96ba",
+      "log": "c7-cases0/simulation.log"
+    },
+    {
+      "profile": "c0-cases1",
+      "passed": true,
+      "exit_code": 0,
+      "wall_seconds": 99.32681058254093,
+      "hold_fault": false,
+      "observed_hold_lines": [
+        "CD273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000",
+        "CD273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000",
+        "CD273 hold sequencer_tb.physical_alu.alu.U2 events=4054 minimum_ns=1250.000"
+      ],
+      "input_hashes": {
+        "CW1.sv": "6513e3f91947d3321e778c1c40081fd8416d7131a3953b5457fe6a98bf4e034a",
+        "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68",
+        "BF1.sv": "cba2ffbb90a1f499c5a9397d8639421335ca69b28102151cc51b10a3d8b74442",
+        "C1.sv": "c642a6f4109197eb6b1854e2b782bf4f1e3da604afed29a855b51fcd07ee61eb",
+        "support.sv": "cedc1088908342702904cc60caf4e58062a3604d259fb1c89328f69028344c60",
+        "AL1.sv": "0fccec4dcd093823c9daa788480982a068b68b38d710774275fad13e8a015c83",
+        "tb.sv": "6b64c81fc9f80b5a30473082a9dd21c724a63fce86a8522ee8afcd6abda3e87f",
+        "PC1.sv": "96797945cf1a6173aa28c6b1ecf433abf02644b5b68ec6a72275d5464fb74bce",
+        "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921",
+        "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c",
+        "DT1.sv": "82610f1c989151452df0a986c72a293fb49a2736bb7bbef3dbc9f7f6f0232f2e",
+        "SP1.sv": "fe44ea1e9b83be907e9b0a0593ea5ecfeebec109d7d4f4dc34a8be5b42535ecf",
+        "SQ1.sv": "63c7e8a8d79d0a90f80d38611ad94cafcf8ea0b92c048da43b37de7774bc5ba4",
+        "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2",
+        "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e",
+        "RG1.sv": "687399b2f422fd5704244374b286f3a3cf72e157ef03deaa7f2fd06ca28f4b33",
+        "MA1.sv": "3e6f36a105c9d42fd58a5b24bfa4a27b6c9c25bf19caf332621ad0d84a16d9de",
+        "alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad",
+        "ME1.sv": "5b90296d02508320750bab495b6b90c897e61438923da573f9bd4dc6fe993d44"
+      },
+      "modified_support_sha256": "6c257b360bf484bd077aa17e67418e79a7b1377e6a2f0fcaf5273bb2757c96ba",
+      "log": "c0-cases1/simulation.log"
+    },
+    {
+      "profile": "c1-cases1",
+      "passed": true,
+      "exit_code": 0,
+      "wall_seconds": 99.10143020842224,
+      "hold_fault": false,
+      "observed_hold_lines": [
+        "CD273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000",
+        "CD273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000",
+        "CD273 hold sequencer_tb.physical_alu.alu.U2 events=4246 minimum_ns=1340.000"
+      ],
+      "input_hashes": {
+        "CW1.sv": "a40d35f327bbd91f5556fae1fb21ae75b7dac1516698ebbf428ae024dccdc738",
+        "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68",
+        "BF1.sv": "9c195c33ea2830d8df7dee889c4d94286592d6bca4d5694d01c8d9b340e5af11",
+        "C1.sv": "3fe5fdb06d626e932e6f7ca33345fb57834b283ebab585c947173676175800e5",
+        "support.sv": "cedc1088908342702904cc60caf4e58062a3604d259fb1c89328f69028344c60",
+        "AL1.sv": "ec1c9d1e03fd85b2f08c75f87fe6f9762309fd1281c070616faecff10b6acec4",
+        "tb.sv": "6b64c81fc9f80b5a30473082a9dd21c724a63fce86a8522ee8afcd6abda3e87f",
+        "PC1.sv": "44ffc639a4ada265916803361ffdef3b0e7f4476b37eda896357ddc604192200",
+        "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921",
+        "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c",
+        "DT1.sv": "b1da7a7293d70ee6183b3c91d1460b1e8c31e4470b791235842db4868c5f68f8",
+        "SP1.sv": "ccc14fedfbbcdfce44b2236f9eb5649e11578ef65e57601b90a0b67fed17fe3c",
+        "SQ1.sv": "a0612d913daa199c7d698f0594ac0a3dfe7e06716e988073282702d8eaffb694",
+        "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2",
+        "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e",
+        "RG1.sv": "1c9df64151234f4785996e5e06373ceb620faabed39fbc8fba07f9a82ce4d0ea",
+        "MA1.sv": "bf2c1b034ba9dbd4625299f05e45dea8d012c1f12d1a971655cdac8eb57b9fd0",
+        "alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad",
+        "ME1.sv": "38c5acd12d23d44ca136f169e127fa60c80da85655271c468b2afe84ec750177"
+      },
+      "modified_support_sha256": "6c257b360bf484bd077aa17e67418e79a7b1377e6a2f0fcaf5273bb2757c96ba",
+      "log": "c1-cases1/simulation.log"
+    },
+    {
+      "profile": "c7-cases1",
+      "passed": true,
+      "exit_code": 0,
+      "wall_seconds": 110.33344562537968,
+      "hold_fault": false,
+      "observed_hold_lines": [
+        "CD273 hold sequencer_tb.physical_memory.memory.U11 events=0 minimum_ns=1000000000.000",
+        "CD273 hold sequencer_tb.physical_memory.memory.U15 events=0 minimum_ns=1000000000.000",
+        "CD273 hold sequencer_tb.physical_alu.alu.U2 events=10352 minimum_ns=1267.500"
+      ],
+      "input_hashes": {
+        "CW1.sv": "b9b75a782b8194c46056e1273b1fea3a646ff6948bbf9d0bcbb1bddb70e6f590",
+        "control.hex": "fe35774588f607386b8406a0e69a49e8396f58ae6e7eca59eabf383e90a1de68",
+        "BF1.sv": "82bcecd8f277e31a83068535ef6c10ce674212c34c2edc3de214164219e86707",
+        "C1.sv": "170b975224c15cd9c4fb9fc0c18e808167842cec5a820bddcab9a554f33faf11",
+        "support.sv": "cedc1088908342702904cc60caf4e58062a3604d259fb1c89328f69028344c60",
+        "AL1.sv": "f8428bea3e586cce1d5833c2985d9017c5b6b4fc6a594cfd5356347fbe71c400",
+        "tb.sv": "6b64c81fc9f80b5a30473082a9dd21c724a63fce86a8522ee8afcd6abda3e87f",
+        "PC1.sv": "3ff5058c1155731cf610c953cccd6eb271449b4ca5ba086201661a431583e6d6",
+        "expected.txt": "10b3800a46afc940e57219da056cfcacdebee40179d2cf654e1585f56cb96921",
+        "instructions.txt": "08e68e1bb107fb38515426404184ae4e7a8bab479437206826789af3a37df43c",
+        "DT1.sv": "0de96e9b22cefedf7674c1d37d4008bbe485fef80ed9da165ce2958aa9d46a0a",
+        "SP1.sv": "70e0497deb8f50b21ec4d789b5dfeaf6b2cb58087789d263685a193a0280ee3b",
+        "SQ1.sv": "ee7c7ea4b4932bd0acace2c1e726cbec0de88a6a2c89f9673fe7dfb83ee85f11",
+        "program.hex": "8469396a6eb171642d985702003b9bca8920dd080ddfdd0972afd4c7777152c2",
+        "cases.txt": "060ddf4b748f43f71e1811c100d9e2077b674e09e44c6beb4b85af179a2b8d2e",
+        "RG1.sv": "5edf83188d26cc08be5c68e39300486eb16a15d5342248da95c61397aa244211",
+        "MA1.sv": "b5e11eecc6c36ea8dc8281ec1178e94aefc28bf7e6a0d5d86d8ef7fc5b77589e",
+        "alu.bin": "27b49bc47de71b27fb12b61aff0cd4da471b5e39925f4ce80b175f42450b72ad",
+        "ME1.sv": "fcdbb4e471717973597c59efd3819d246fcf96deaf15c76f2b609680320628dc"
+      },
+      "modified_support_sha256": "6c257b360bf484bd077aa17e67418e79a7b1377e6a2f0fcaf5273bb2757c96ba",
+      "log": "c7-cases1/simulation.log"
+    }
+  ],
+  "all_sampled_profiles_passed": true,
+  "scope": "Six CP1 profiles with an added 3 ns data-hold monitor. Original 42 ns propagation, 25 ns setup/recovery/clock pulse and 20 ns clear pulse retained as conservative bounds at 4.5 V, -40..85 C, 50 pF. This study does not establish minimum silicon delays, physical loading, all profiles, or full boot qualification."
+}

@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "viewport": "desktop",
+      "passed": true,
+      "links": 47
+    },
+    {
+      "viewport": "mobile",
+      "passed": true,
+      "links": 47
+    }
+  ]
+}
