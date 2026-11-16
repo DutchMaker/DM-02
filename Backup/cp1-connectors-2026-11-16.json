@@ -1,0 +1,25 @@
+{
+  "release": "https://github.com/DutchMaker/DM-02/releases/tag/cp1-connectors-2026-11-16",
+  "git_commit": "3c3704b506d82156c4610b20c89dedb5ee132b7d",
+  "download_verified": true,
+  "files_verified": 47,
+  "manifest_sha256": "2772c27abb3a1e7b113737e7ce7c286f070fefadd2de091425ed5a6250fcf778",
+  "archives": {
+    "studies-and-workbook.tar.gz": {
+      "bytes": 30210455,
+      "sha256": "eb686c6c29ca2e1157e0f44a640e479bc07442ec7e25817b4accdf2e559c059c",
+      "files": 47
+    }
+  },
+  "mechanical_revision": "CP1-MC1",
+  "connector_revision": "CP1-CN1-draft",
+  "design_revision": "CP1-R2",
+  "harness_tests_passed": 190,
+  "milestones_passed": [3, 3, 8],
+  "contacts_checked": 1242,
+  "candidate_footprint_contacts_screened": 192,
+  "physical_qualification": false,
+  "manufacturing_release": false,
+  "remote_publication_hashes_verified": 42,
+  "browser_viewports_passed": ["desktop", "mobile"]
+}

@@ -1,5 +1,27 @@
 # Git and evidence checkpoints
 
+## CP1-MC1 mechanical selection and CP1-CN1 draft connectors
+
+The [cp1-connectors-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-connectors-2026-11-16)
+preserves the approved mechanical target, native-linked contact tables, candidate
+footprints, manufacturer catalog and bounded replay at `3c3704b`. All **47 files**
+matched locally and after download; see the [receipt](cp1-connectors-2026-11-16.json).
+
+The replay passed **190 tests**. Allocation checks cover 1,242 contacts; the
+catalog/footprint screen covers 192 candidate contacts, mounting-hole spacings
+and offsets, and drill nominals. Desktop/mobile checks and 42 remote hashes
+passed at `/build/cp1-connectors/` on the Tailscale dashboard.
+
+The historical partition proposal remains unchanged. MC1 records the subsequent
+owner approval. CN1 remains a draft pin plan: exact mating/keying/stack-height,
+implemented bridge/service circuitry, load/current/timing and physical gates
+remain open. This release does not promote a circuit revision.
+
+Default replay uses the MC1 source files and tracked historical partition screen,
+plus the R2/reference/readiness evidence described below. This release is an
+optional publication snapshot. Reproduce pin planning with a new `--output`
+directory; preserve this published snapshot and its manifest.
+
 ## CP1-SC1 scope and CP1-IO1 logical expansion interface
 
 The [cp1-io-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-io-2026-11-16)
