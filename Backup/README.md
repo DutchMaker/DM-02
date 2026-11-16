@@ -2,6 +2,10 @@
 
 ## CP1-BR1 native-pin bridge candidate
 
+The [cp1-bridge-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-bridge-2026-11-16)
+archives source checkpoint `2ecbda7`. All **230 files** matched locally and
+after download; see the [receipt](cp1-bridge-2026-11-16.json).
+
 The bridge study is an additional bounded-replay dependency at
 `Verification/build/cp1-bridge/`. It contains the native MQ1/BR1 sheets and
 netlists, four passing simulation profiles, four detected mutations, seven TI

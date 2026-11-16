@@ -1,0 +1,36 @@
+{
+  "release": "https://github.com/DutchMaker/DM-02/releases/tag/cp1-bridge-2026-11-16",
+  "git_commit": "2ecbda7678469b507cd21a851d81c35b4c2efdb0",
+  "download_verified": true,
+  "files_verified": 230,
+  "manifest_sha256": "0df534d4491ccb948d902396ee470da4db4fb78f1d5e0bfd12ed0cb0b050f6a6",
+  "archives": {
+    "studies-and-workbook.tar.gz": {
+      "bytes": 12586390,
+      "sha256": "83edbfa60fcb307b0d9ba3b5c28b0682e137ca55ab9f61c8d46803c04afecc14",
+      "files": 230
+    }
+  },
+  "design_revision": "CP1-R2",
+  "candidate_revision": "CP1-BR1",
+  "candidate_dip_packages": 41,
+  "harness_tests_passed": 197,
+  "milestones_passed": [
+    3,
+    3,
+    8
+  ],
+  "profiles_passed": 4,
+  "read_cases_per_profile": 70020,
+  "write_cases_per_profile": 256,
+  "mutations_detected": 4,
+  "memory_extensions_checked": 17,
+  "peripheral_contacts_checked": 384,
+  "physical_qualification": false,
+  "integrated_into_R2": false,
+  "remote_publication_hashes_verified": 225,
+  "browser_viewports_passed": [
+    "desktop",
+    "mobile"
+  ]
+}
