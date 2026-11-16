@@ -51,6 +51,13 @@ function render() {
   const bridge=report.io_bridge;
   bridgePanel.hidden=!bridge;
   if(bridge) bridgePanel.innerHTML=`<div class="eyebrow">${esc(bridge.revision)} / SEPARATE CIRCUIT CANDIDATE</div><h2>Four private I/O returns · ${esc(bridge.dip_count)} added DIP packages</h2><p>Four delay profiles: 70,020 read cases and 256 writes each. Four injected faults detected. Native bindings cover 17 memory-card extensions and 384 peripheral contacts.</p><p><strong>CPU integration and physical qualification pending.</strong> Internal load screening passes. The conditional 379 ns return-path sum excludes the endpoint and full CPU path; minimum delays and actual loading/edges remain unqualified.</p><div class="links"><a href="/IO-bridge.md">Circuit and evidence limits ↗</a><a href="/build/cp1-bridge/">Bridge candidate evidence ↗</a><a href="/build/cp1-bridge/boundary-audit.json">Native boundary bindings ↗</a></div>`;
+  let cpuIOPanel=$('io-cpu');
+  if(!cpuIOPanel) {
+    cpuIOPanel=document.createElement('section');cpuIOPanel.id='io-cpu';cpuIOPanel.className='panel';
+    $('milestones').before(cpuIOPanel);
+  }
+  cpuIOPanel.hidden=!report.io_cpu;
+  if(report.io_cpu) cpuIOPanel.innerHTML=`<div class="eyebrow">CP1-BI1 / CPU–BRIDGE DIAGNOSTIC</div><h2>29 passing profiles · endpoint latency boundary found</h2><p>The fetched diagnostic checks 14 echoed bytes through the complete CPU/bridge path. Three connection faults were detected. At 500 kHz, a 160 ns endpoint fixture passed; 200 ns failed setup reserve and 400 ns returned incorrect data. The 400 ns fixture passed at diagnostic 250 kHz.</p><p><strong>Conditional simulation with preloaded memory and behavioral endpoints.</strong> Real text circuitry, autonomous boot with BR1 and full physical timing remain open.</p><div class="links"><a href="/IO-CPU-integration.md">Diagnostic method and limits ↗</a><a href="/build/cp1-io-cpu/">Passing and failed runs ↗</a></div>`;
   const counts={}; report.checks.forEach(c=>counts[c.status]=(counts[c.status]||0)+1);
   $('counts').innerHTML=Object.entries(counts).map(([s,n])=>`<span>${n} ${badge(s)}</span>`).join('');
   renderChecks();

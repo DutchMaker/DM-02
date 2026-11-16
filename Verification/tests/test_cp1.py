@@ -124,6 +124,7 @@ class CP1AcceptanceTests(unittest.TestCase):
             names += ['Verification/build/'+n for n in cp1.connector_plan.native_boundary()['source_hashes']]
             names += list(cp1.connector_plan.mechanical()['evidence'])
             names += ['Verification/build/'+n for n in json.loads(cp1.io_bridge_evidence.LOCK.read_text())['artifacts']]
+            names += ['Verification/build/'+n for n in json.loads(cp1.io_cpu_evidence.LOCK.read_text())['artifacts']]
             for name in names:
                 if name.startswith('Verification/build/'):
                     relative=name.removeprefix('Verification/build/');destination=root/relative
@@ -149,6 +150,7 @@ class CP1AcceptanceTests(unittest.TestCase):
             names += ['Verification/build/'+n for n in cp1.connector_plan.native_boundary()['source_hashes']]
             names += list(cp1.connector_plan.mechanical()['evidence'])
             names += ['Verification/build/'+n for n in json.loads(cp1.io_bridge_evidence.LOCK.read_text())['artifacts']]
+            names += ['Verification/build/'+n for n in json.loads(cp1.io_cpu_evidence.LOCK.read_text())['artifacts']]
             for name in names:
                 if name.startswith('Verification/build/'):
                     relative=name.removeprefix('Verification/build/');destination=root/relative

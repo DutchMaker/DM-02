@@ -1,5 +1,22 @@
 # Git and evidence checkpoints
 
+## CP1-BI1 CPU/bridge diagnostic
+
+`Verification/build/cp1-io-cpu/` is an additional bounded-replay dependency.
+The `cp1-io-cpu-2026-11-16` release preserves 34 composed profiles, including
+two endpoint-latency failures and three detected wiring mutations. There are
+29 passing profiles, each checking 14 echoes and 334 microcycles. Earlier
+development failures remain alongside the matrix.
+
+The bounded replay passed **203 tests**. Desktop/mobile browser checks and
+**912 remote hashes** passed at `/build/cp1-io-cpu/`. The accepted circuit
+remains CP1-R2, with milestone gates 3/5, 3/5 and 8/9.
+
+Download the release assets, run `Backup/verify_checkpoint.py` and extract
+`studies-and-workbook.tar.gz` from the repository root. Restore R2, BR1 and
+the other dependencies below separately. This diagnostic uses preloaded
+ROM/RAM and behavioral endpoints; it does not promote a circuit revision.
+
 ## CP1-BR1 native-pin bridge candidate
 
 The [cp1-bridge-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-bridge-2026-11-16)

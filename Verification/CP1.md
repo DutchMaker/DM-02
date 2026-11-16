@@ -4,6 +4,8 @@
 
 [CP1-BR1](IO-bridge.md) is a separate native-pin bridge candidate with 41 added DIP packages, four private returns and reset-safe write arming. The replay checks its pinned sources, regenerated HDL, R2/CN1 bindings and saved profile/mutation evidence through `bridge-evidence.json`. Restore `build/cp1-bridge/` from its release as an additional replay dependency. CPU integration, real text output and physical timing remain open.
 
+[CP1-BI1](IO-CPU-integration.md) composes BR1 with all R2 CPU modules for a fetched diagnostic. Its 34-run matrix contains 29 passes, two endpoint-latency failures and three detected wiring faults. `io-cpu-evidence.json` pins this separate study; restore `build/cp1-io-cpu/` for bounded replay. The test uses preloaded memories and behavioral endpoints. A native integrated revision, autonomous boot with BR1 and real text remain open.
+
 The active revision is **CP1-R2**. Three CD74HCT273E DIP registers replace SN74HCT273N at AL1 U2 and ME1 U11/U15. TI SCHS174D provides explicit clock/clear delay bounds of 38/40 ns at 4.5 V, −40 to 85 °C and 50 pF. The model retains the conservative 42 ns envelope and now enforces 3 ns data hold. A fresh complete digital suite, including ROM boot, passed before promotion. Evidence and the updated BOM are in `build/cp1-hct273/`.
 
 `python3 Verification/run.py` now selects CP1. It writes the normal dashboard report with the existing milestone requirements. `--allow-design-failures` allows exit 0 while physical acceptance gates are open; missing or changed evidence still exits 2.

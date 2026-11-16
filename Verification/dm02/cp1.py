@@ -8,7 +8,7 @@ import traceback
 from pathlib import Path
 from .common import ROOT, VROOT, BUILD, digest, write_json, command, evidence
 from .reporting import sources, now, trace, milestones
-from . import operating_contract, io_contract, connector_plan, io_bridge_evidence
+from . import operating_contract, io_contract, connector_plan, io_bridge_evidence, io_cpu_evidence
 
 TARGET = VROOT/'targets/cp1'
 
@@ -234,6 +234,17 @@ def run(args, harness_check):
             'Internal load screen passes; full CPU/endpoint timing and physical operation remain open.',
             artifacts=['cp1-bridge/summary.json','cp1-bridge/boundary-audit.json'],
             limitation='Separate candidate, not integrated into CP1-R2. Conditional 379 ns internal return-path sum excludes CPU/endpoint/routing terms and assumes characterized load/slew.'))
+        cpu_io_lock, cpu_io = io_cpu_evidence.load(BUILD)
+        report['artifact_hashes'].update(cpu_io_lock['artifacts'])
+        report['io_cpu'] = dict(revision='CP1-BI1',passing_profiles=29,latency_failures=2,
+            mutations_detected=3,physical_qualification=False,promoted_into_R2=False)
+        report['checks'].append(evidence('io-cpu','Fetched CPU/bridge diagnostic and latency screen','limited',
+            '29 profiles passed with 14 echoes, 12 IO captures and 334 microcycles each. '
+            'Three connection faults detected. At 500 kHz, 160 ns endpoint response passed the sampled setup check; '
+            '200 ns failed setup reserve and 400 ns returned wrong data. 400 ns passed at diagnostic 250 kHz.',
+            artifacts=['cp1-io-cpu/matrix.json','cp1-io-cpu/profiles/endpoint-200/simulation.log',
+                       'cp1-io-cpu/profiles/endpoint-400/simulation.log'],
+            limitation='Preloaded diagnostic and behavioral endpoints. Sampled timing is conditional; real text, autonomous boot with BR1, full min/max qualification and native assembly promotion remain open.'))
         boundaries = json.loads((archive/'physical-review.json').read_text())['open_items']
         report['risks'] = [dict(id=f'CP1-{i+1:02}',title=text,severity='open',
                                 action='Requires physical or manufacturer qualification.',evidence='timing') for i,text in enumerate(boundaries)]
