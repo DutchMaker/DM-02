@@ -1,0 +1,6 @@
+{
+  "timeout_seconds": 36658,
+  "microcycles": 2840175,
+  "observed_seconds_per_cycle": 0.00516268414518992,
+  "headroom_factor": 2.5
+}

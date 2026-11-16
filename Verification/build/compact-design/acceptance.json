@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "digital_only": true,
+  "cpu_profiles": 29,
+  "full_counter_profiles": 3,
+  "standalone_module_profiles": 4,
+  "mar_profiles": 3,
+  "verified_model_artifact_hashes": 446,
+  "clock_profiles": 150,
+  "normal_inputs_unchanged": 409,
+  "physical_qualification": false,
+  "physical_boundary": [
+    "No guaranteed HCT245 IO capacitance; 10 pF per port is a stated allocation.",
+    "HCT245 data/enable timing is taken at 150 pF; disable timing is only guaranteed at 50 pF.",
+    "SN74HCT273 SCLS068H switching tables label both delay rows CLR. The 42 ns clock-to-Q simulation value requires manufacturer clarification; it is not accepted as an unambiguous clock-delay guarantee.",
+    "SRAM read table uses 30 pF; output release uses 5 pF. Actual DQ load and turnaround require qualification.",
+    "HC377 DC compatibility checked at 4.5 V only; full-supply loaded edges remain open.",
+    "MCP100-450D does not establish valid 4.75 V startup; the staged system retains an external qualified reset input.",
+    "Oscillator startup, duty at receiver thresholds, power integrity, routing and external IO electronics remain open.",
+    "Owned 191/245/574 manufacturer/suffix/counts and EPROM programmer/readback remain unresolved."
+  ],
+  "acceptance_scope": "All CP1 digital acceptance suites completed. Existing physical and independent-review requirements remain open; no normal-run error was overwritten.",
+  "key_receipt_sha256": {
+    "verification-state.json": "6fae5ba4a0302b82587f56ecf5f924dd488da4aed6a69d34962f7d12548e7f65",
+    "module-check.json": "14a8f524585fc8a34a8b5d0134f1369f29c58922f95b42742240cdf2911a5a03",
+    "mar-check.json": "d1f47a786fa6cf7c6d7ac6deb0b149b02d95182a5d44e25b9b8b751892a7d2b3",
+    "native-audit.json": "7b1c5330ddd350870f2a0fe4f7e0a7e1ad4fa4e73f4d849ef19be0bfc7c259e5",
+    "interconnect-check.json": "5bc58e016552f87eba365692c6aeebc3630c00a2497f7ce0039fb04366b6df54",
+    "physical-review.json": "7294f967db14ce7e47d1eef8f65403bd7772d6166a9738d01b740db5f4728149",
+    "component-review.json": "435bc8e22467c07b6620722674ed7583ed445e2e17c6dc9d4f6488411d016d0a",
+    "rom-check.json": "26d723e0e3a9f0a99415b1b708792650934722e18f58ad68157b01452fd6ba51",
+    "clock-check.json": "47727a0a9671a800524380985dfe31d6c95b419c32b04e6c0649dc4fd0d13353",
+    "fault-check.json": "8e6b62a195bf464d080906234335cced7a973acfd58725db01832570a96f2962",
+    "register-check.json": "f2982e64b543db13d4bb7dc23b4fdfde38d95e64950bdae8d83637c103d51a1e",
+    "workbook-validation.json": "5667d183891dde040237c0d2e3acc3454b2401e9ecaf2b45bb66a9ff4c0ae34e"
+  }
+}

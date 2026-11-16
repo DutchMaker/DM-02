@@ -1,0 +1,8 @@
+{
+  "expected_microcycles": 2840175,
+  "oscillator_period_ns": 250.0,
+  "nominal_schedule_ns": 5680350000.0,
+  "watchdog_ns": 11361700000.0,
+  "headroom_factor": 2,
+  "startup_allowance_ns": 1000000
+}

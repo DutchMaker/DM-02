@@ -20,6 +20,15 @@ const base='https://ruud-macbook-pro-2023.tail668f59.ts.net:8020/build/'+(retry?
     assert.equal(summary.logic_memory_packages,192);assert.equal(summary.saving,96);
     assert(summary.all_logic_memory_dip);assert.equal(summary.physical_qualification,false);
     assert.equal(summary.interconnect.assembly_groups,230);assert.equal(summary.native_boards,12);
+    if(process.argv.includes('--complete')){
+     assert.equal(summary.digital_verification_passed,true);
+     assert.equal(summary.state,'digital-verification-complete');
+     assert.match(await page.locator('#boot-result').innerText(),/2,840,175 microcycles/);
+     const acceptance=await(await context.request.get(base+'acceptance.json')).json();
+     assert(acceptance.passed && acceptance.digital_only);assert.equal(acceptance.physical_qualification,false);
+     const boot=summary.runs.find(r=>r.boot);assert(boot.passed && boot.boot_check.passed);
+     assert.equal(boot.output.pixels_checked,48000);assert.equal(boot.output.pixel_errors,0);
+    }
     assert.equal(await page.locator('#milestones tbody tr').count(),3);
     assert.match(await page.locator('#state').innerText(),/Physical electrical qualification remains open/);
    }

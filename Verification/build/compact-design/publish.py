@@ -15,6 +15,9 @@ def main():
     state=read('verification-state.json');modules=read('module-check.json') if (HERE/'module-check.json').exists() else {}
     mar=read('mar-check.json') if (HERE/'mar-check.json').exists() else {}
     complete=bool(state.get('state')=='complete' and state.get('passed') is True and modules.get('passed') and modules.get('complete') and mar.get('passed') and mar.get('complete'))
+    if complete:
+        acceptance=read('acceptance.json');assert acceptance['passed'] and acceptance['digital_only']
+        for name,h in acceptance['key_receipt_sha256'].items():assert sha(HERE/name)==h,name
     assert audit['all_ic_dip'] and audit['structure_passed'] and not audit['load_over_allocations']
     assert native['native_passed'] and physical['passed']
     for board,b in native['boards'].items():assert sha(HERE/'candidate/Circuits/KiCad/Compact/candidates'/f'{board}.sch')==b['source_sha256']
@@ -63,6 +66,11 @@ def main():
     openitems=''.join('<li>'+esc(x)+'</li>' for x in physical['open_items'])
     profiles=''.join(f'<tr><td>{esc(Path(x["log"]).parent.name)}</td><td>{x.get("passed")}</td><td><a href="{esc(x["log"])}">Log</a></td></tr>' for x in runs)
     status='Digital regression complete' if complete else 'ROM-booted graphics verification running'
+    boot=next((x for x in runs if x.get('boot') and x.get('passed')),None)
+    boot_text=(f'<p id="boot-result">ROM boot through final HALT passed: {boot["coverage"]["microcycles"]:,} microcycles, '
+        f'{boot["output"]["io_events"]:,} IO events, exact text and zero errors across {boot["output"]["pixels_checked"]:,} pixels. '
+        'The CPU reconstructed the payload from ROM into poisoned SRAM; no host bootstrap jump was injected. '
+        '<a href="acceptance.json">Digital acceptance receipt</a> · <a href="programming-check.json">ROM image checks and programming boundary</a></p>') if complete else ''
     (HERE/'index.html').write_text(f'''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DM-02 · CP1 compact DIP design</title><link rel="icon" href="data:,"><style>
 :root{{color-scheme:dark}}body{{margin:24px auto;padding:0 16px;max-width:1100px;background:#0c1420;color:#e2e8f0;font:16px/1.6 system-ui}}a{{color:#8acfff;overflow-wrap:anywhere}}table{{width:100%;table-layout:fixed;border-collapse:collapse}}td,th{{text-align:left;vertical-align:top;padding:10px;border-bottom:1px solid #304156;overflow-wrap:anywhere}}.note{{background:#253245;color:#ffd082;padding:16px}}h1{{line-height:1.2}}@media(max-width:650px){{table,tbody,tr,td{{display:block}}thead{{display:none}}td{{padding:8px 0}}td:first-child{{font-weight:bold}}}}</style>
 <nav><a href="/">Dashboard</a> · <a href="../owned-inventory/">Owned inventory</a> · <a href="../dip-logic/">DL1 reference</a></nav>
@@ -72,6 +80,7 @@ def main():
 <h2>Implemented reductions</h2><p>One M27C322 ALU ROM; one M27C1024 control ROM; owned W27C512 and UM61512 memories; enabled HC377 general registers; HCT191 SP/MAR counters; HCT273 snapshot consolidation; four buffered source groups and one shared DATA receiver. ACT175 count falls from 48 to 10, and 157 mux count from 84 to 29.</p>
 <table><thead><tr><th>Board</th><th>Logic/memory ICs</th></tr></thead><tbody>{byboard}</tbody></table>
 <h2>Verification</h2><p>Native KiCad connectivity matches on all {len(native['boards'])} boards. The simulated assembly matches 230 physical backplane net groups. All 497 package footprints have through-hole pads. No merged net exceeds its stated load allocation; those allocations still require physical qualification.</p>
+{boot_text}
 <p>The earlier boot replay correctly reconstructed the ROM payload, then reached an inherited four-second simulated-time watchdog. Its <a href="failed-runs/boot-watchdog-4s/receipt.json">failed-run receipt</a> is preserved. The <a href="program-budget-check.json">corrected watchdog</a> is sized for the full 2,840,175-cycle boot and graphics program.</p>
 <p>150 clock profiles; full 16-bit increment/decrement and every byte-load value; 4,096 register transfers per register profile; explicit counter timing and same-data bus-contention negative controls. The all-opcode profiles cover 227 opcodes in 454 cases each. See the completed profiles below and <a href="verification-state.json">serial-run state</a>.</p>
 <p><a href="summary.json">Summary</a> · <a href="native-audit.json">Native parity</a> · <a href="interconnect-check.json">Backplane/HDL equivalence</a> · <a href="physical-review.json">Pins, pads and electrical boundary</a> · <a href="loads.json">Merged load allocations</a> · <a href="fault-check.json">Fault detections</a> · <a href="workbook-validation.json">Workbook checks</a></p>

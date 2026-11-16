@@ -4,12 +4,12 @@
     {
       "viewport": "desktop",
       "passed": true,
-      "links": 52
+      "links": 54
     },
     {
       "viewport": "mobile",
       "passed": true,
-      "links": 52
+      "links": 54
     }
   ]
 }

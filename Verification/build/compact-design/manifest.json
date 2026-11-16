@@ -1,14 +1,18 @@
 {
-  "created_at": "2026-11-15T23:06:40.655443+00:00",
-  "state": "verification-in-progress",
+  "created_at": "2026-11-16T00:39:25.275767+00:00",
+  "state": "digital-verification-complete",
   "files": {
     "DM-02-compact-BOM.xlsx": {
       "bytes": 122099,
       "sha256": "3fe390ca37e814be905f3fc672e68b66e0dac154bf86d6ca908598a88469180c"
     },
     "README.md": {
-      "bytes": 6485,
-      "sha256": "43f2152d58928dc2948891fd3f8ce0c34a7aef42ac11012d3c3d9b3397e3d07d"
+      "bytes": 6765,
+      "sha256": "264a4135620b12d0cb01a33c6dc51f60b220e5450debc1c1754543b33d4b16d3"
+    },
+    "acceptance.json": {
+      "bytes": 2592,
+      "sha256": "8a702363d302e2da99ef14bbbe666903db7376e12b027c4b7d6c3e23968507b1"
     },
     "audit.json": {
       "bytes": 4368,
@@ -23,8 +27,8 @@
       "sha256": "58a20248e6e270898de0cb03aaf2fec954946b7089831a06551d018fa49a3cb4"
     },
     "browser_check.cjs": {
-      "bytes": 2618,
-      "sha256": "2425cf914adf8657a6e36d68f56caf622392e04be658f44fe0f9ce5ea2280fb6"
+      "bytes": 3273,
+      "sha256": "d66e62c8927757b7388e660ca0af74f46b86ff2e7836d7a01b1a6c35ceeabe2c"
     },
     "candidate/Circuits/KiCad/ALU/ALU.kicad_pcb": {
       "bytes": 52327,
@@ -1098,6 +1102,14 @@
       "bytes": 153,
       "sha256": "0f58090568ec413980dc9b21560f46fa81e908794f81b278962de42e31b3eef0"
     },
+    "candidate/Verification/build/compact/c1-boot/result.json": {
+      "bytes": 9197,
+      "sha256": "9e521c228a4d9b43dfb734d0a7a65872204565038f3ae35e6dd72f17bbe9c7b8"
+    },
+    "candidate/Verification/build/compact/c1-boot/simulation.log": {
+      "bytes": 198,
+      "sha256": "8ca6f304405fb4d0c7740ccd298d66bbd98231f2f1c0921fd1b866af6e95ea64"
+    },
     "candidate/Verification/build/compact/c1-cases0/result.json": {
       "bytes": 2231,
       "sha256": "8d6f02372a9ad27e26f4119c50c49a6d0cfd34960291dda3ac2fc7d92ddf7dd7"
@@ -1313,14 +1325,6 @@
     "candidate/Verification/build/compact/counter-c0-full1-fault0/simulation.log": {
       "bytes": 82,
       "sha256": "8a4a078ee11e12cef28b19d7afe3853e73d867ecf574f78bbbba48ba113bbf43"
-    },
-    "candidate/Verification/build/compact/counter-c1-full0-fault0/result.json": {
-      "bytes": 518,
-      "sha256": "b9dbb3b1bff81a0e9ce6b24990c7552d079fba08fe9b8c8b4ededb7376346acb"
-    },
-    "candidate/Verification/build/compact/counter-c1-full0-fault0/simulation.log": {
-      "bytes": 77,
-      "sha256": "7120a18425e536d4c6d3d8ceba9bb327a32f29b0324d3f9e29727b2ac044dd1e"
     },
     "candidate/Verification/build/compact/counter-c1-full0-fault1/result.json": {
       "bytes": 517,
@@ -2235,8 +2239,8 @@
       "sha256": "58b4bad35c78cb7f33c76c99b8d8f08bb836b0ba742bcbbaffb6f7f73e5ffbe6"
     },
     "index.html": {
-      "bytes": 10666,
-      "sha256": "f7384a51d5b452e57a2009693fa1e8d9324967bdf2719093e5046f1017891a31"
+      "bytes": 11010,
+      "sha256": "77c48e7f5979319cc71ec3c908d614bde2967066262a8994b83c73196e886e11"
     },
     "interconnect-check.json": {
       "bytes": 1405,
@@ -2298,6 +2302,10 @@
       "bytes": 586,
       "sha256": "1eb91c140f0263ada7a1abef899aca5f89b3563c16d5b5803a186a666326d1d9"
     },
+    "programming-check.json": {
+      "bytes": 4507,
+      "sha256": "92d9c66acd9673de51e630ab369f466700aa962d22d56c17c8e2502c10635ee2"
+    },
     "programming-images/M27C1024-little-endian.bin": {
       "bytes": 131072,
       "sha256": "e041265358399b05135afb3a5c7ba5fb9de096743234fa143fc44008ef92deb5"
@@ -2306,9 +2314,13 @@
       "bytes": 4194304,
       "sha256": "ac92ed24cc8a70bb1d24705586dc522607fa3bc3e41409771487ea4e59335b9c"
     },
+    "programming-images/W27C512-45Z-boot.bin": {
+      "bytes": 65536,
+      "sha256": "2985923a419e33ef4fe65361a928e6224ebac9d8e35cfb559601972168c32fba"
+    },
     "publish.py": {
-      "bytes": 11482,
-      "sha256": "6f7fffe6a16d592d788c25c78d3eeb8bf7d65b68c18dfe9061329ba8059399c7"
+      "bytes": 12324,
+      "sha256": "80fbc6d0105e0733a7721f7f190d0087bef3aec90e2573b38f161a165620f055"
     },
     "recalculation.json": {
       "bytes": 431,
@@ -2423,12 +2435,12 @@
       "sha256": "96897ba0db5abbe71562c4f9ccf51f4056012c29d24b4dee9388b5e1ef8f942d"
     },
     "summary.json": {
-      "bytes": 91865,
-      "sha256": "1f1cc04f1c04f80f90312967ca2b719c64fa1d40675cde1f0314e1bf1134f1d2"
+      "bytes": 101720,
+      "sha256": "bf7f3d5ff52774202f3c34fd4191067e2957a972fd6470a87c008e27ae76af3f"
     },
     "verification-state.json": {
-      "bytes": 835,
-      "sha256": "0588ff79fcc2e041845fdd4b0b700141ae1724406d39d2d0d2ed158ab210e60d"
+      "bytes": 82031,
+      "sha256": "6fae5ba4a0302b82587f56ecf5f924dd488da4aed6a69d34962f7d12548e7f65"
     },
     "verify.py": {
       "bytes": 5703,

@@ -2,6 +2,8 @@
 
 CP1 implements the ROM, register, counter, snapshot and shared-bus reductions as a complete pin-derived candidate. It has **192 logic/memory ICs versus DL1's 288**, including the added reset, counter-control, fanout and bus support circuitry. The oscillator and passives are outside both IC totals.
 
+**Digital verification is complete.** The full ROM-booted program reached HALT after 2,840,175 microcycles and 43,829 IO writes, with exact text and zero errors across 48,000 pixels. `acceptance.json` records the checked evidence and the remaining physical-qualification limits.
+
 | Area | DL1 ICs | CP1 ICs |
 |---|---:|---:|
 | Clock | 11 | 10 |

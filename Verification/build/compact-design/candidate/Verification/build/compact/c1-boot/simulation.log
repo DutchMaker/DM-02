@@ -1,0 +1,4 @@
+DONE BL1 payload_bytes=16542 writes=24326
+DONE hardware-demo cycles=2840175 io=43829
+tb.sv:314: $finish called at 5680355790500 (1ps)
+CP1 physical bus handovers=1538375 minimum_disabled_ns=1006.000
