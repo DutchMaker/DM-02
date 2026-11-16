@@ -69,6 +69,10 @@ bd status
 bd ready --exclude-type epic
 ```
 
+Set your local Git role with `git config beads.role maintainer` if you maintain
+this repository, or `git config beads.role contributor` otherwise. Install the
+tracked hook integration on the new checkout with `bd hooks install --beads`.
+
 For an existing workspace, use `bd dolt pull` before editing shared work and
 `bd dolt push` when authorised to publish. Push code changes separately with
 Git. Do not reinitialise or import an old JSONL snapshot over live work.
@@ -79,6 +83,10 @@ never in configuration or issue descriptions. `bd init` installs Git and
 agent hooks. Full `bd doctor` is unavailable in 1.3.4 embedded mode; use the
 supported checks plus `bd ping`, `bd lint --status all`, `bd dep cycles` and
 a fresh-clone recovery check.
+
+The initial backlog was recovered from GitHub into a separate fresh clone on
+16 November 2026. All 61 issue records, dependencies, four project memories
+and ready-work results matched. Later backlog changes require their own push.
 
 For hardware evidence restoration, follow `Backup/README.md`. Beads recovery
 does not restore the large simulation release assets. The live evidence
