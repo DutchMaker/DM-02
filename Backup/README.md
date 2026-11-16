@@ -2,6 +2,13 @@
 
 ## CP1-MD1 buffered memory address candidate
 
+The [cp1-mar-distribution-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-mar-distribution-2026-11-16)
+archives source checkpoint `8753cb1`. All **415 files** matched locally and
+after download; see the [receipt](cp1-mar-distribution-2026-11-16.json).
+The bounded replay passed **239 tests** after the isolated-restore fixture
+dependency correction; the first failed run is preserved. **410 remote hashes**
+and desktop/mobile browser checks passed.
+
 `Verification/build/cp1-mar-distribution/` adds the MD1 native topology,
 explicit load allocations and affected memory/ROM-text simulation evidence.
 Restore LL1, CA1 and their earlier dependencies below before bounded replay.
