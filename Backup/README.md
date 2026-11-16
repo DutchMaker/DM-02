@@ -2,6 +2,13 @@
 
 ## CP1-NA1 native R2/BR1/TX1 assembly candidate
 
+The [cp1-native-assembly-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-native-assembly-2026-11-16)
+archives source checkpoint `cd37d05`. All **403 files** matched locally and
+after download; see the [receipt](cp1-native-assembly-2026-11-16.json).
+
+The bounded replay passed **218 tests**. **398 remote hashes** and
+desktop/mobile browser checks passed at `/build/cp1-native-assembly/`.
+
 `Verification/build/cp1-native-assembly/` is an additional bounded-replay
 dependency. It preserves the final native hierarchy, three detected wiring
 mutations, three development iterations and SVG sheet views. The checked-in

@@ -1,0 +1,34 @@
+{
+  "release": "https://github.com/DutchMaker/DM-02/releases/tag/cp1-native-assembly-2026-11-16",
+  "git_commit": "cd37d05b9e3592b6279018bd9eecff76073d0cfd",
+  "download_verified": true,
+  "files_verified": 403,
+  "manifest_sha256": "d2afd56fbeb2b70d059061c492eba46eb9356e834bf807b6343a5ba314c42d51",
+  "archives": {
+    "studies-and-workbook.tar.gz": {
+      "bytes": 28392982,
+      "sha256": "e66daba89e6b3ae2d148fee07a634a69a591e91416ae30fac6e08d00d6de6be6",
+      "files": 403
+    }
+  },
+  "design_revision": "CP1-R2",
+  "study_revision": "CP1-NA1",
+  "harness_tests_passed": 218,
+  "milestones_passed": [3, 3, 8],
+  "dip_logic_memory_count": 270,
+  "physical_pins_checked": 6491,
+  "net_groups_checked": 1762,
+  "component_records": 648,
+  "candidate_fitted_components": 590,
+  "excluded_boundary_markers": 58,
+  "slot5_contacts_checked": 96,
+  "tb1_boundary_bindings_checked": 134,
+  "wiring_mutations_detected": 3,
+  "preserved_development_iterations": 3,
+  "initial_library_collision_detected": true,
+  "physical_qualification": false,
+  "promoted_into_R2": false,
+  "new_dynamic_simulation": false,
+  "remote_publication_hashes_verified": 398,
+  "browser_viewports_passed": ["desktop", "mobile"]
+}
