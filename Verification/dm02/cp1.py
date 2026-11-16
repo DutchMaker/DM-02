@@ -8,7 +8,7 @@ import traceback
 from pathlib import Path
 from .common import ROOT, VROOT, BUILD, digest, write_json, command, evidence
 from .reporting import sources, now, trace, milestones
-from . import operating_contract, io_contract, connector_plan, io_bridge_evidence, io_cpu_evidence, text_evidence, text_boot_evidence, native_assembly_evidence, connector_assembly_evidence, link_loads_evidence, mar_distribution_evidence
+from . import operating_contract, io_contract, connector_plan, io_bridge_evidence, io_cpu_evidence, text_evidence, text_boot_evidence, native_assembly_evidence, connector_assembly_evidence, link_loads_evidence, mar_distribution_evidence, release_evidence
 
 TARGET = VROOT/'targets/cp1'
 
@@ -311,6 +311,18 @@ def run(args, harness_check):
             'All 65,536 address words, full memory exercise and four ROM/text boot profiles pass; native and dynamic faults detected.',
             artifacts=['cp1-mar-distribution/final/summary.json','cp1-mar-distribution/final/loads.json','cp1-mar-distribution/simulation-1/matrix.json'],
             limitation='Separate 272-DIP candidate. Capacitance and parasitic allowances remain conditional; loaded slew, full min/max timing and physical qualification remain open. R2 is not promoted.'))
+        release_lock,release = release_evidence.load(BUILD)
+        report['artifact_hashes'].update(release_lock['artifacts'])
+        report['release_requirements'] = dict(revision='CP1-RR1',native_truth_cases=release['audit']['truth_cases'],
+            short_passes=release['short_passes'],short_faults=release['short_faults'],
+            boot_profiles=4,measurement_driver_cases=len(release['measurement_plan']['driver_cases']),
+            physical_qualification=False,promoted_into_R2=False)
+        report['checks'].append(evidence('release-requirements','DATA/SRAM native release obligations','limited',
+            'DATA is sole-driver; SRAM has two competing drivers and shares OE with its SOURCE3 output. '
+            '8,192 native control states, four short passes/five detected faults and four instrumented ROM/text boots. '
+            'Always-enabled final DATA sensitivity passes; late SRAM release fault detected. 48 per-driver measurement cases specified.',
+            artifacts=['cp1-release/summary.json','cp1-release/iteration-2/boot-matrix.json','cp1-release/iteration-2/short-matrix.json'],
+            limitation='Sampled activity envelopes and conditional gate bounds; actual load, earliest invalid-data hold, loaded release and full OC1 qualification remain open.'))
         boundaries = json.loads((archive/'physical-review.json').read_text())['open_items']
         report['risks'] = [dict(id=f'CP1-{i+1:02}',title=text,severity='open',
                                 action='Requires physical or manufacturer qualification.',evidence='timing') for i,text in enumerate(boundaries)]

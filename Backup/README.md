@@ -1,5 +1,16 @@
 # Git and evidence checkpoints
 
+## CP1-RR1 DATA/SRAM release requirements
+
+`Verification/build/cp1-release/` holds native MD1 control-path analysis,
+fifteen targeted experiments, raw control-event logs and a 48-driver physical
+measurement specification. Restore MD1 and the dependencies below first.
+RR1 also pins the historical `sram-turnaround/review.py` and `review.json`;
+restore `sram-turnaround-2026-11-15` below for those comparison inputs.
+`Verification/release-evidence.json` declares the original simulation inputs;
+`Verification/Release-requirements.md` explains the conditional timing scope.
+RR1 changes no hardware and supplies no physical qualification.
+
 ## CP1-MD1 buffered memory address candidate
 
 The [cp1-mar-distribution-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-mar-distribution-2026-11-16)

@@ -18,6 +18,8 @@ The active source overlay is in `targets/cp1/overlay/`. `targets/cp1/lock.json` 
 
 ## What a run checks
 
+[CP1-RR1](Release-requirements.md) traces DATA/SRAM release obligations on MD1, including 8,192 native control states, four short passes/five detected faults, four instrumented ROM/text boots, always-enabled DATA sensitivity and a detected late-SRAM-release fault. `release-evidence.json` pins the evidence and 48 per-driver measurement specifications. Sampled gaps and conditional release assumptions do not qualify physical operation.
+
 [CP1-MD1](MAR-distribution.md) adds two DIP address buffers to isolate ME1 loads, reducing raw MAR IC-only loading to 30 pF per bit. The separate 272-DIP native candidate checks 7,368 pins, all 65,536 address words, the full memory exercise and four ROM/text boot profiles, with native and dynamic faults detected. `mar-distribution-evidence.json` pins the study; restore `build/cp1-mar-distribution/` for replay. The explicit planning margins do not qualify physical capacitance or timing, and R2 remains accepted.
 
 [CP1-LL1](Link-loads.md) inventories every CA1 physical pin after contact mating and derives 1,708 per-driver load scenarios. It retains manufacturer conditions, allocation-only data-port/output values and explicit unknown parasitics. MAR14–15 exceed the 50 pF planning screen with the old 5 pF allowance; DATA/SRAM release fixtures have separate gaps. `link-loads-evidence.json` pins the matrix and five fault checks; restore `build/cp1-link-loads/` for bounded replay. All complete physical loads and timing remain unqualified.

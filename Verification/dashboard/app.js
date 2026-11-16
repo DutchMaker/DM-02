@@ -100,6 +100,13 @@ function render() {
   }
   marPanel.hidden=!report.mar_distribution;
   if(report.mar_distribution) marPanel.innerHTML=`<div class="eyebrow">CP1-MD1 / BUFFERED MEMORY ADDRESS CANDIDATE</div><h2>MAR loading reduced to 30 pF per bit</h2><p>Two added DIP buffers isolate the memory-side address loads. Their outputs drive 24–28 pF. Explicit socket/routing/probe allocations leave at least 5 pF planning margin on raw MAR paths and 7 pF on buffered paths.</p><p>Four ROM/text startup profiles and the full memory exercise pass. All 65,536 address words checked; swapped-address and disabled-buffer faults detected. <strong>Physical loads and timing remain unqualified.</strong> MD1 is a separate 272-DIP candidate; R2 remains accepted.</p><div class="links"><a href="/MAR-distribution.md">Topology, budgets and affected checks ↗</a><a href="/build/cp1-mar-distribution/">Native source and simulation evidence ↗</a></div>`;
+  let releasePanel=$('release-requirements');
+  if(!releasePanel) {
+    releasePanel=document.createElement('section');releasePanel.id='release-requirements';releasePanel.className='panel';
+    $('milestones').before(releasePanel);
+  }
+  releasePanel.hidden=!report.release_requirements;
+  if(report.release_requirements) releasePanel.innerHTML=`<div class="eyebrow">CP1-RR1 / DATA AND SRAM RELEASE</div><h2>Driver ownership and release requirements traced</h2><p>DATA has one driver; the private SRAM bus has two. Native OE/WE paths, 8,192 control states and four instrumented ROM/text boots checked. Same-data contention, early capture and late-release faults detected.</p><p>Smallest sampled SRAM control gaps: 4,981 ns read-to-write and 4,947.5 ns write-to-read. <strong>Physical release and hold remain unqualified.</strong> A 48-driver measurement specification covers actual loads and the OC1 voltage/temperature grid.</p><div class="links"><a href="/Release-requirements.md">Paths, assumptions and measurement procedure ↗</a><a href="/build/cp1-release/">Experiments and event logs ↗</a></div>`;
   const counts={}; report.checks.forEach(c=>counts[c.status] = (counts[c.status]||0)+1);
   $('counts').innerHTML=Object.entries(counts).map(([s,n])=>`<span>${n} ${badge(s)}</span>`).join('');
   renderChecks();
