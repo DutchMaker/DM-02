@@ -1,0 +1,34 @@
+{
+  "release": "https://github.com/DutchMaker/DM-02/releases/tag/cp1-hct-2026-11-16",
+  "git_commit": "c86e23fcf02b261a616f8d7fe81e1a419fff780a",
+  "download_verified": true,
+  "files_verified": 375,
+  "manifest_sha256": "4a84a8126bc12d605befed4b4ee718a4f2be47815d00255f6e5b913557393562",
+  "archives": {
+    "studies-and-workbook.tar.gz": {
+      "bytes": 39287604,
+      "sha256": "dd1058f41fb7548806c75cb302d898afcf83a4ef8e1beada6296f4076772ce7a",
+      "files": 375
+    }
+  },
+  "accepted_revision": "CP1-R2",
+  "candidate_revision": "CP1-HB1",
+  "study_revision": "CP1-HP1",
+  "harness_tests_passed": 262,
+  "milestones_passed": [3, 3, 8],
+  "non_hct_references_reviewed": 142,
+  "exact_hct_alternatives": 9,
+  "replaced_ahct_buffers": 2,
+  "candidate_hct_packages": 128,
+  "candidate_dip_packages": 272,
+  "exhaustive_address_profiles": 4,
+  "rom_text_boot_profiles": 4,
+  "native_faults_detected": 3,
+  "mapping_faults_detected": 2,
+  "boot_faults_detected": 1,
+  "physical_qualification": false,
+  "promoted_into_R2": false,
+  "remote_publication_hashes_verified": 353,
+  "browser_viewports_passed": ["desktop", "mobile"],
+  "earlier_timeout_and_source_lock_rejection_preserved": true
+}

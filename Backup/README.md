@@ -2,6 +2,14 @@
 
 ## CP1-HP1/HB1 HCT review and memory buffers
 
+The [cp1-hct-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-hct-2026-11-16)
+archives source checkpoint `c86e23f`. All **375 files** matched after download;
+see the [receipt](cp1-hct-2026-11-16.json). Final bounded replay passed
+**262 tests**, with **353 remote hashes** and desktop/mobile browser checks.
+The earlier 600-second timeout, source-reference correction and source-lock
+rejection are preserved. The live CP1 runner now allows 900 seconds for the
+expanded harness while keeping the frozen R2 tests unchanged.
+
 HP1/HB1 adds a later HCT sourcing review and two-buffer candidate. Its replay
 requires both `Verification/build/cp1-hct-preference/` and
 `Verification/build/cp1-hct-buffers/`, in addition to the MD1/TB1 dependencies
