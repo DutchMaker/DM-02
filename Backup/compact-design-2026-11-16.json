@@ -1,0 +1,16 @@
+{
+  "release": "https://github.com/DutchMaker/DM-02/releases/tag/compact-design-2026-11-16",
+  "git_commit": "22fee582be739bc83ba69e5a4d8dd18601bbb300",
+  "download_verified": true,
+  "files_verified": 1784,
+  "manifest_sha256": "6db0f4fa91a8b825b507aed86f4ea57d7ebc718521bdb6d18beee0113233d096",
+  "archives": {
+    "studies-and-workbook.tar.gz": {
+      "bytes": 78545536,
+      "sha256": "7d77986e062c4a9771a18cd6abf4203dd9c31f12420328bedc35f551fcf72a4b",
+      "files": 1784
+    }
+  },
+  "digital_acceptance_complete": true,
+  "physical_qualification": false
+}

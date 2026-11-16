@@ -92,3 +92,23 @@ All 24 archive files were verified locally and after downloading; the
 blanking requirements are 56.5 ns read-to-write and 58 ns write-to-read.
 Actual command gaps, loaded release and full-temperature capacitance remain
 unqualified. Normal verification inputs were unchanged.
+
+## Compact DIP redesign
+
+The [compact-design-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/compact-design-2026-11-16)
+preserves the complete CP1 source snapshot, native KiCad evidence, simulations,
+BOM workbook and programming images at commit `22fee58`. All **1,784 files**
+matched locally and after downloading from GitHub. The
+[receipt](compact-design-2026-11-16.json) records the archive and manifest hashes.
+
+CP1 uses **192 logic/memory ICs versus 288**, with all logic and memories in DIP.
+Digital verification completed: 227 opcodes, exhaustive counter/address/memory
+checks, 150 clock profiles, and ROM boot through graphics HALT across 2,840,175
+microcycles. The observed 43,829 IO events produced exact text and zero errors
+across 48,000 pixels. The earlier simulated-time watchdog failure is preserved
+alongside the successful replay. Physical electrical qualification remains open.
+
+The separate [normal analogue retry archive](https://github.com/DutchMaker/DM-02/releases/tag/analog-retry-timeout-2026-11-15)
+preserves its graphics timeout and blocked boot dependency. All 3,796 files were
+downloaded and verified; see its [receipt](analog-retry-timeout-2026-11-15.json).
+CP1's staged results do not overwrite that run or its formal milestone totals.
