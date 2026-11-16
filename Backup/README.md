@@ -112,3 +112,26 @@ The separate [normal analogue retry archive](https://github.com/DutchMaker/DM-02
 preserves its graphics timeout and blocked boot dependency. All 3,796 files were
 downloaded and verified; see its [receipt](analog-retry-timeout-2026-11-15.json).
 CP1's staged results do not overwrite that run or its formal milestone totals.
+
+## CP1 active verification
+
+The [cp1-promotion-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-promotion-2026-11-16)
+preserves the promotion report and bounded CD74HCT273E timing study at commit
+`5fb7718`. All **176 files** matched locally and after downloading; the
+[receipt](cp1-promotion-2026-11-16.json) records the archive hashes.
+
+The default verification target is now CP1. Replay regenerates 446 HDL artifacts
+and ten clock models from 430 pinned source files, runs a fresh CPU profile and
+checks the current harness. All 161 tests passed. The unchanged milestone gates
+now read **3/5, 3/5 and 8/9**; MOD-03 is satisfied by CP1's instruction evidence.
+The reference run's timeout and boot error retain their original status.
+
+This is an incremental archive. Restore `compact-design-2026-11-16` and
+`analog-retry-timeout-2026-11-15` first for the reused evidence, then this archive.
+The active source overlay and replay entry point are tracked in Git. See
+[`Verification/CP1.md`](../Verification/CP1.md) for execution and source locations.
+
+The alternative HCT273 passed eight sampled CPU/memory profiles with an added
+3 ns hold monitor, with a smallest observed hold interval of 252.5 ns. The
+alternative has not been adopted; physical loading and full qualification remain
+open. This study does not close a physical milestone gate.

@@ -1,0 +1,30 @@
+{
+  "release": "https://github.com/DutchMaker/DM-02/releases/tag/cp1-promotion-2026-11-16",
+  "git_commit": "5fb7718d20ca9f980868ee4191e539137a5eace9",
+  "download_verified": true,
+  "files_verified": 176,
+  "manifest_sha256": "6f650480022bfbd2227270946f2b5ebae0be9e5d5c728f77cc7e90c9464cd33a",
+  "archives": {
+    "studies-and-workbook.tar.gz": {
+      "bytes": 7792853,
+      "sha256": "1f2c01495b0e71c63aabdd2108d825d4a15bdb38ba19e64f6cb17e719d7567d9",
+      "files": 176
+    }
+  },
+  "milestones_passed": [
+    3,
+    3,
+    8
+  ],
+  "milestones_total": [
+    5,
+    5,
+    9
+  ],
+  "harness_tests_passed": 161,
+  "reused_evidence_releases": [
+    "compact-design-2026-11-16",
+    "analog-retry-timeout-2026-11-15"
+  ],
+  "physical_qualification": false
+}
