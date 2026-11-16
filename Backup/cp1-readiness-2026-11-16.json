@@ -1,0 +1,25 @@
+{
+  "release": "https://github.com/DutchMaker/DM-02/releases/tag/cp1-readiness-2026-11-16",
+  "git_commit": "6ecedb2037ac3aecc8cb1db5ccdfc128c29aac53",
+  "download_verified": true,
+  "files_verified": 1610,
+  "manifest_sha256": "61e9961eee5cbd040e263a5672ff0a5be82bf0146c5a24722531ac1c3aee51df",
+  "archives": {
+    "studies-and-workbook.tar.gz": {
+      "bytes": 26194456,
+      "sha256": "52819d13f90ce05b305b79022e6126d500ee5a4734bdbf5564092fbf1c7b1c42",
+      "files": 1610
+    }
+  },
+  "baseline": "CP1-R2",
+  "frequency_experiments": 66,
+  "diagnostic_traces": 3,
+  "conditional_timing_rows": 35,
+  "recommended_oscillator_hz": 4000000,
+  "recommended_microcycle_hz": 500000,
+  "recommendation_status": "conditional engineering target; fabrication envelope remains open",
+  "physical_qualification": false,
+  "new_accepted_revision": false,
+  "remote_publication_hashes_verified": 1605,
+  "browser_viewports_passed": ["desktop", "mobile"]
+}

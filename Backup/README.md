@@ -1,5 +1,27 @@
 # Git and evidence checkpoints
 
+## CP1-R2 clock and electrical readiness study
+
+The [cp1-readiness-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-readiness-2026-11-16)
+preserves 66 frequency experiments, three diagnostic traces and 35 conditional
+timing rows at source commit `6ecedb2`. All **1,610 files** matched locally and
+after download; the [receipt](cp1-readiness-2026-11-16.json) records their hashes.
+Failed profiles and the source-drift rejection remain preserved.
+
+The study recommends a conditional 4 MHz oscillator / 500 kHz microcycle target.
+Its seven ranked electrical closure routes are documented in
+`Verification/CP1-readiness.md`. It does not promote a new design revision or
+close either physical release gate. The Tailscale publication is at
+`/build/cp1-readiness/`; desktop/mobile checks and 1,605 remote hashes passed.
+
+Download the release assets and verify them with `Backup/verify_checkpoint.py`,
+then extract `studies-and-workbook.tar.gz` from the repository root. Restore
+the CP1-R2 release separately for the pinned HDL/fixture dependencies. The
+archived `Verification/build/cp1-readiness/REPRODUCE.md` gives commands for a
+new isolated replay directory.
+
+## Source and evidence storage
+
 The project sources, verification harness, candidate schematics and authored
 study scripts are committed to `DutchMaker/DM-02`. Study scripts retain their
 original paths under `Verification/build/` so archived relative paths work.
