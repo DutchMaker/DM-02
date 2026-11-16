@@ -18,6 +18,8 @@ The active source overlay is in `targets/cp1/overlay/`. `targets/cp1/lock.json` 
 
 ## What a run checks
 
+[CP1-OS1](Oscillator-interface.md) traces both independent oscillator front ends: one AHCT04 receiver for CPU (≤3 ns timing input fixture), one HCT244 receiver for text (6 ns). Explicit raw planning loads are 14 pF against the selected 15 pF oscillator rating. `oscillator-evidence.json` pins six conditioned links, 81 synthetic waveform analyses, faults and an unmeasured qualification plan. Actual edges, jitter, threshold duty and full-envelope loads remain open; no hardware changed.
+
 [CP1-RR1](Release-requirements.md) traces DATA/SRAM release obligations on MD1, including 8,192 native control states, four short passes/five detected faults, four instrumented ROM/text boots, always-enabled DATA sensitivity and a detected late-SRAM-release fault. `release-evidence.json` pins the evidence and 48 per-driver measurement specifications. Sampled gaps and conditional release assumptions do not qualify physical operation.
 
 [CP1-MD1](MAR-distribution.md) adds two DIP address buffers to isolate ME1 loads, reducing raw MAR IC-only loading to 30 pF per bit. The separate 272-DIP native candidate checks 7,368 pins, all 65,536 address words, the full memory exercise and four ROM/text boot profiles, with native and dynamic faults detected. `mar-distribution-evidence.json` pins the study; restore `build/cp1-mar-distribution/` for replay. The explicit planning margins do not qualify physical capacitance or timing, and R2 remains accepted.

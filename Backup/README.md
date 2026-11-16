@@ -1,5 +1,13 @@
 # Git and evidence checkpoints
 
+## CP1-OS1 oscillator interfaces
+
+`Verification/build/cp1-oscillator/` holds the two-clock native audit,
+81 synthetic waveform analyses, faults and an unmeasured qualification plan.
+It includes the full AHCT04 data sheet and visually reviewed timing page.
+Restore MD1 and its dependencies below before replay. The source contract is
+`Verification/oscillator-interface.json`; no hardware or clock selection changed.
+
 ## CP1-RR1 DATA/SRAM release requirements
 
 The [cp1-release-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-release-2026-11-16)

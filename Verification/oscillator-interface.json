@@ -1,0 +1,55 @@
+{
+  "revision": "CP1-OS1",
+  "candidate": "CP1-MD1",
+  "operating_contract": "CP1-OC1",
+  "physical_qualification": false,
+  "hardware_changed": false,
+  "oscillator_mpn": "ACH-4.000MHZ-EK",
+  "oscillator_rating": {
+    "frequency_hz": 4000000,
+    "stability_ppm": 30,
+    "output_load_pf": 15,
+    "rise_fall_max_ns": 10,
+    "rise_fall_reference_levels": null,
+    "duty_reference": "Vdd/2",
+    "duty_min": 0.45,
+    "duty_max": 0.55,
+    "startup_max_ms": 10,
+    "jitter_max_ns": null,
+    "pin1": "NC: selected suffix has neither A tri-state nor 50 pF load option"
+  },
+  "raw_allocation": {
+    "socket_pf_per_attached_pin": 1,
+    "trace_via_pad_pf": 1,
+    "probe_pf": 1,
+    "scope": "Design targets only. Two attached IC pins; no raw-clock connector or testpoint stub is allocated. A probe must fit the 1 pF allowance including attachment. Actual socket/trace/probe values and full-envelope input capacitance are unqualified."
+  },
+  "conditioned_allocation": {
+    "socket_pf_per_attached_pin": 1,
+    "trace_via_pad_pf": 2,
+    "probe_pf": 1,
+    "scope": "Design targets for the listed local front-end links only; includes both ends of the INIT_CLK link. Verify actual routing/extraction before use. No length-to-capacitance conversion or layout qualification is implied."
+  },
+  "frontends": [
+    {
+      "name": "CPU",
+      "oscillator": "Y1001",
+      "receiver": "U1003.1",
+      "receiver_part": "SN74AHCT04N",
+      "timing_fixture_edge_ns": 3,
+      "recommended_input_transition": "20 ns/V maximum; distinct from the <=3 ns timing-generator condition",
+      "conditioned_outputs": ["U1003.2", "U1003.4", "U1010.18", "U1010.16", "U1010.14"],
+      "arcs": [["U1003.1", "U1003.2", "invert"], ["U1003.3", "U1003.4", "invert"], ["U1010.2", "U1010.18", "buffer"], ["U1010.4", "U1010.16", "buffer"], ["U1010.6", "U1010.14", "buffer"]]
+    },
+    {
+      "name": "TEXT",
+      "oscillator": "Y14001",
+      "receiver": "U14002.2",
+      "receiver_part": "CD74HCT244E",
+      "timing_fixture_edge_ns": 6,
+      "recommended_input_transition": "500 ns at 4.5 V; table also lists 400 ns at 6 V. No full-rail interpolation is claimed.",
+      "conditioned_outputs": ["U14002.18"],
+      "arcs": [["U14002.2", "U14002.18", "buffer"]]
+    }
+  ]
+}

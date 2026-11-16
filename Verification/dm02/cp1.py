@@ -8,7 +8,7 @@ import traceback
 from pathlib import Path
 from .common import ROOT, VROOT, BUILD, digest, write_json, command, evidence
 from .reporting import sources, now, trace, milestones
-from . import operating_contract, io_contract, connector_plan, io_bridge_evidence, io_cpu_evidence, text_evidence, text_boot_evidence, native_assembly_evidence, connector_assembly_evidence, link_loads_evidence, mar_distribution_evidence, release_evidence
+from . import operating_contract, io_contract, connector_plan, io_bridge_evidence, io_cpu_evidence, text_evidence, text_boot_evidence, native_assembly_evidence, connector_assembly_evidence, link_loads_evidence, mar_distribution_evidence, release_evidence, oscillator_evidence
 
 TARGET = VROOT/'targets/cp1'
 
@@ -323,6 +323,16 @@ def run(args, harness_check):
             'Always-enabled final DATA sensitivity passes; late SRAM release fault detected. 48 per-driver measurement cases specified.',
             artifacts=['cp1-release/summary.json','cp1-release/iteration-2/boot-matrix.json','cp1-release/iteration-2/short-matrix.json'],
             limitation='Sampled activity envelopes and conditional gate bounds; actual load, earliest invalid-data hold, loaded release and full OC1 qualification remain open.'))
+        oscillator_lock,oscillator = oscillator_evidence.load(BUILD)
+        report['artifact_hashes'].update(oscillator_lock['artifacts'])
+        report['oscillator_interface'] = dict(revision='CP1-OS1',raw_links=2,conditioned_links=6,
+            raw_planning_total_pf=14,raw_planning_margin_pf=1,cpu_fixture_edge_ns=3,text_fixture_edge_ns=6,
+            synthetic_cases=len(oscillator['waveforms']['cases']),physical_qualification=False,hardware_changed=False)
+        report['checks'].append(evidence('oscillator-interface','Independent oscillator loading and edge requirements','limited',
+            'Two single-receiver raw clocks traced: CPU AHCT04 uses <=3 ns input timing fixture; TEXT HCT244 uses 6 ns. '
+            '14 pF raw planning targets leave 1 pF; six conditioned links checked. Six topology/assumption faults and synthetic extra/missing-clock faults detected.',
+            artifacts=['cp1-oscillator/summary.json'],
+            limitation='81 synthetic waveform analyses and measurement specification only. Actual load, edge, threshold-duty, jitter, startup and full-chain timing remain unqualified; no hardware change.'))
         boundaries = json.loads((archive/'physical-review.json').read_text())['open_items']
         report['risks'] = [dict(id=f'CP1-{i+1:02}',title=text,severity='open',
                                 action='Requires physical or manufacturer qualification.',evidence='timing') for i,text in enumerate(boundaries)]

@@ -1,0 +1,25 @@
+{
+  "revision": "CP1-OS1",
+  "physical_qualification": false,
+  "source_hashes": {
+    "Verification/build/cp1-oscillator/lock_evidence.py": "60572698442133ff29ab5362440c56a57a76b9d3b31ccd0c66059150c5074032",
+    "Verification/dm02/oscillator_evidence.py": "1fa174eae33994a80dc7358e51a9ef12f973173bc48b1259c9157d43fe5c6eec",
+    "Verification/dm02/oscillator_interface.py": "a1ea73823df6a478e851067dff5504d46eaa7ae0fe5c01d94839d0b608bd3228",
+    "Verification/dm02/oscillator_waveforms.py": "4c93f6647fef445c2317cbaf569a6cba62c8c4eb44969dd90961cb6c1292d91d",
+    "Verification/mar-distribution-evidence.json": "8239b2b9d0bac237babd01872c47597b9d6f5d73c10ea8110afcab4181268b43",
+    "Verification/operating-contract.json": "8508fc6d1313234d4f84ecd66758021f0470ef317572318907f9d31699ca3ffc",
+    "Verification/oscillator-interface.json": "9cf9977fdade3582d974b9e393d442471e692d5e82aadf0c66b216c0a72f701d"
+  },
+  "artifacts": {
+    "cp1-link-loads/sources/abracon-ach-2016.txt": "f4969edb47aceb3d78bd25ebd6a64d8b3f87dffd765ab93bed71d842bc0f47c9",
+    "cp1-link-loads/sources/cd74hct244.txt": "b7b174a114f56c42269d70b2dcbf72474ed8c8595297eff1335b17e033e13477",
+    "cp1-link-loads/sources/manifest.json": "16215d8ac06ac12c4580d47eb692d4964b8f6ea65b061d9183b426fa7e7c65c6",
+    "cp1-link-loads/sources/sn74ahct04.txt": "a14032fc99f3b95e9c9da48e93ab882ee580c19f53e2cf2dd5180590dbc64c11",
+    "cp1-link-loads/sources/sn74ahct244.txt": "abadbb03897afac800e057c62f3b83afcd9705a47f56c8ef1248450a6331cf5d",
+    "cp1-oscillator/sources/retrieval.json": "6673106b586941fcb69fd55a8e3c852a4fc456e0311bbcaac893fd710b093bb4",
+    "cp1-oscillator/sources/sn74ahct04-full.pdf": "79e359c70a08e3a6a9318beea502f99e101b304f9ff1d4fe205c40c2d9c48c78",
+    "cp1-oscillator/sources/sn74ahct04-full.txt": "73816e466a71f069b6808093ce3fa2010fd08da3f7ced8bb96c748d1034f274f",
+    "cp1-oscillator/sources/sn74ahct04-waveform.pdf": "0126edd328299f4f5513f97ba16a6fc563397ae6a7a25d0d69f2315cb6ad41c0",
+    "cp1-oscillator/summary.json": "8396656c0c31ffc0330e1680c37df4b670dd2b2f316bf258b188f45e5b19f8d1"
+  }
+}
