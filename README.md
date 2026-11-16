@@ -8,6 +8,8 @@ Please refer to the [documentation](./Documentation) for the project status.
 
 The current hardware candidate is **CP1-R2: 192 DIP logic/memory packages**, down from 288. Its [active verification workflow](./Verification/CP1.md) covers all 227 opcodes and ROM boot through graphics output. Physical electrical qualification and PCB review are still open.
 
+The selected first-build [operating contract, CP1-OC1](./Verification/Operating-contract.md), specifies **500 kHz microcycles from a 4 MHz oscillator**, 4.75–5.25 V at IC pins and 0–50 °C ambient. The original 1 MHz goal is preferred rather than mandatory. The historical documentation and locked simulation inputs retain the earlier requirement; the active dashboard shows the versioned contract and remaining qualification gates.
+
 Remaining work is tracked in [Beads](./.beads/README.md), with dependencies and acceptance criteria through PCB fabrication and measured hardware qualification. Run `bd bootstrap --yes` on a fresh clone, then `bd ready` to find unblocked work.
 
 **[Start by reading the introduction](./Documentation/)**

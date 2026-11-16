@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "revision": "CP1-OC1",
+  "design_revision": "CP1-R2",
+  "status": "selected engineering contract; physical qualification pending",
+  "decision_issue": "dm02-57n.1.1",
+  "decision_date": "2026-11-16",
+  "authority": "Owner permits a lower rate when the chosen ICs cannot feasibly support 1 MHz; engineering selection follows the completed CP1-R2 readiness study.",
+  "physical_qualification": false,
+  "clock": {
+    "oscillator_mpn": "ACH-4.000MHZ-EK",
+    "oscillator_nominal_hz": 4000000,
+    "oscillator_tolerance_ppm": 30,
+    "oscillator_periods_per_microcycle": 8,
+    "microcycle_nominal_hz": 500000,
+    "preferred_microcycle_hz": 1000000,
+    "preferred_rate_is_mandatory": false,
+    "instruction_rate": "Variable: microcycle rate divided by the executed instruction's microcycle count.",
+    "rate_change_policy": "A different oscillator/rate requires a versioned contract and affected verification. No automatic fallback or live clock switching is accepted.",
+    "phase_separation_periods": 3,
+    "phase_pulse_periods": 4,
+    "oscillator_startup_max_ms": 10
+  },
+  "supply": {"min_v": 4.75, "nominal_v": 5.0, "max_v": 5.25, "measurement_point": "At each IC's supply and ground pins, including droop, ripple and distribution drop."},
+  "ambient": {"min_c": 0, "nominal_c": 25, "max_c": 50},
+  "startup_reset": {
+    "minimum_reset_request_ns": 1000,
+    "minimum_guard_after_valid_supply_ms": 25,
+    "boundary": "Externally qualified reset until the separate supervisor/write-inhibit design is accepted.",
+    "release_conditions": "Supply is continuously valid at every IC; oscillator startup has elapsed and its qualified waveform is stable. Any loss of validity restarts the guard.",
+    "abort": "Asynchronous reset may truncate a cycle. Inhibit writes and bus output enables; no partly executed operation may be treated as completed. RAM contents are unspecified after an interrupted write.",
+    "initialization": "Run the oscillator during reset so resetless registers initialize. Permit the documented first invalid microcycle; the first valid microcycle must be fetch-address, without skipping it.",
+    "power_invalid": "Write inhibition must become effective before any IC leaves the valid supply envelope; supervisor threshold, propagation and rail fall-rate headroom need separate qualification."
+  },
+  "modes": {
+    "allowed": ["continuous", "halt-resume", "single-step", "reset-abort"],
+    "idle_phase2": 0,
+    "idle_phase3": 0,
+    "maximum_stop_microcycles": 4,
+    "stop": "Finish an accepted cycle after synchronization; enter idle within four nominal microcycles after a valid stop request. HALT remains latched until explicit RESUME.",
+    "single_step": "One debounced STEP edge while READY and idle produces exactly one complete microcycle. Holding STEP must not repeat. STEP during ACTIVE is ignored.",
+    "mode_change": "Clock replacement or frequency changes only with power removed; qualify startup again. Raw mechanical switch bounce is not an accepted control input."
+  },
+  "timing_acceptance": {
+    "minimum_setup_reserve_ns": 10,
+    "setup_reserve_scope": "Design criterion for inter-register and connector capture paths after worst-case device delays, skew, routing, jitter and measurement uncertainty; not a measured margin.",
+    "hold_release": "Every device hold, recovery/removal and pulse requirement must pass with positive residual margin after uncertainty. Demonstrate break-before-make at shared drivers and SRAM handover; slowing the clock is not a substitute.",
+    "electrical": "Use guaranteed bounds at the actual supply, temperature, load and input slew, or explicitly reviewed sample-qualification bounds. Typical values and allocations alone cannot close qualification.",
+    "conditional_allocations": {"receiver_duty_min": 0.37, "receiver_duty_max": 0.63, "internal_routing_jitter_ns": 2, "phase_output_spread_ns": 32.5},
+    "allocation_scope": "Sensitivity/design limits only. ACH 45/55 duty at half supply does not guarantee receiver-threshold duty or jitter."
+  },
+  "qualification_matrix": {
+    "supply_points_v": [4.75, 5.0, 5.25],
+    "ambient_points_c": [0, 25, 50],
+    "digital_corners": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "digital_duties": [0.37, 0.5, 0.63],
+    "digital_ppm": [-30, 0, 30],
+    "digital_scope": "A requested future full matrix. Existing R2 CPU/clock matrices have their archived coverage; this contract does not claim all Cartesian combinations have run.",
+    "physical_tests": [
+      {"id": "supply-startup", "issue": "dm02-57n.3.5", "stimulus": "Cold start, slow and nonmonotonic rail ramps, brownout and reset release", "pass": "No writes before valid supply/clock and the full restartable guard; defined initialization; no spurious functional capture."},
+      {"id": "clock-modes", "issue": "dm02-57n.3.6", "stimulus": "Continuous clock, stop at each phase, HALT/RESUME, held STEP and STEP during ACTIVE", "pass": "Qualified frequency/duty/edges; no runt or extra phases outside explicit reset abort; safe idle; stop within the contract limit; exact single-step count."},
+      {"id": "data-timing", "issue": "dm02-57n.3.9", "stimulus": "Same-word PC/SP-to-MAR memory reads, ALU/register captures, counter ripple/load and all source/destination combinations", "pass": "At least the contract setup reserve after uncertainty; all hold, pulse and recovery/removal requirements have positive residual margin; correct captured data."},
+      {"id": "bus-release", "issue": "dm02-57n.3.3", "stimulus": "Opposing-data and same-data source/trunk handovers, DATA release, reset during drive", "pass": "No simultaneous enabled shared drivers; load-qualified release before reuse; connector hold maintained; no floating-input dependence."},
+      {"id": "sram-turnaround", "issue": "dm02-57n.3.4", "stimulus": "Read/write/read transitions, address changes, shortest writes and reset during writes at actual DQ loads", "pass": "No unintended write pulse or driver overlap; qualified loaded release; datasheet write/read limits with positive residual margin."},
+      {"id": "functional-repeat", "issue": "dm02-57n.8.7", "stimulus": "Repeated startup and the selected first-machine diagnostics/workload", "pass": "Exact documented register/memory/IO results without host bootstrap injection; no intermittent failure. IO scope and repetition counts are defined by their owning tasks before bench acceptance."}
+    ],
+    "measurement_record": ["board_revision", "contract_revision", "part_markings_and_lots", "instrument_identity_and_calibration", "actual_pin_supply_v", "ambient_c", "probe_and_fixture_load", "stimulus", "raw_waveforms", "measurement_uncertainty", "observed_margin", "pass_fail"]
+  },
+  "evidence": {
+    "Verification/requirements.json": "29db70c0be6859e4d81c89b2a6fd3376285f5d90276b4c00c9da8116b42b0140",
+    "Verification/targets/cp1/lock.json": "b91f6e5e948b6c8aba67e76cba1646308f11736647276f1d7dab7f229b6dc53d",
+    "Verification/build/cp1-readiness/study-validation.json": "72f99c43eea72e0d77954e96b9cebb86c099f9c8bc78e7e20f8dbb510b05b5c4",
+    "Verification/build/cp1-readiness/timing-screen.json": "9c51e92ad072092e167caf0d6d0f117c9ca09154ee581fa37bc18ab77c710659",
+    "Verification/build/cp1-readiness/sweep-capture/f5-c1-d0.37-cases1-ppm30/result.json": "0449b60c95921a2952d3cf669e693e720dd7caac3c0177686e1653fcc38f4bba"
+  }
+}

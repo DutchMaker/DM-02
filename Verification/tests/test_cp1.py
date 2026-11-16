@@ -1,4 +1,5 @@
 import json
+import shutil
 import tempfile
 import unittest
 from types import SimpleNamespace
@@ -117,12 +118,44 @@ class CP1AcceptanceTests(unittest.TestCase):
             root=Path(temporary);target=root/'target';target.mkdir()
             archive=root/'revision-x';archive.mkdir()
             (archive/'physical-review.json').write_text('{"open_items":[]}')
-            (target/'lock.json').write_text(json.dumps(dict(artifacts={},evidence_directory='revision-x',release='fixture',reference_report='reference.json')))
-            checks=[dict(id='control',status='pass',artifacts=['missing.json'])]
+            (target/'lock.json').write_text(json.dumps(dict(revision='CP1-R2',artifacts={},evidence_directory='revision-x',release='fixture',reference_report='reference.json')))
+            for name in cp1.operating_contract.load()['evidence']:
+                if name.startswith('Verification/build/'):
+                    relative=name.removeprefix('Verification/build/');destination=root/relative
+                    destination.parent.mkdir(parents=True,exist_ok=True)
+                    shutil.copyfile(cp1.BUILD/relative,destination)
+            (root/'cp1').mkdir();(root/'cp1/smoke.log').write_text('fixture smoke')
+            checks=[dict(id='control',status='pass',artifacts=['missing.json']),dict(id='timing',status='blocked',artifacts=[])]
             with patch.object(cp1,'BUILD',root),patch.object(cp1,'TARGET',target),patch.object(cp1,'sources',return_value={'test':'fixed'}),patch.object(cp1,'validated_evidence',return_value={'passed':True}),patch.object(cp1,'checks_from_evidence',return_value=checks):
                 status=cp1.run(SimpleNamespace(browser=False,allow_design_failures=True),lambda:dict(id='harness',status='pass'))
             report=json.loads((root/'report.json').read_text())
             self.assertEqual(status,2)
+            self.assertEqual(next(c for c in report['checks'] if c['id']=='control')['requirement_status'],'blocked')
+
+    def test_decision_evidence_changed_during_tests_withholds_acceptance(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root=Path(temporary);target=root/'target';target.mkdir()
+            archive=root/'revision-x';archive.mkdir()
+            (archive/'physical-review.json').write_text('{"open_items":[]}')
+            (target/'lock.json').write_text(json.dumps(dict(revision='CP1-R2',artifacts={},evidence_directory='revision-x',release='fixture',reference_report='reference.json')))
+            contract=cp1.operating_contract.load()
+            for name in contract['evidence']:
+                if name.startswith('Verification/build/'):
+                    relative=name.removeprefix('Verification/build/');destination=root/relative
+                    destination.parent.mkdir(parents=True,exist_ok=True)
+                    shutil.copyfile(cp1.BUILD/relative,destination)
+            def harness():
+                path=root/'cp1-readiness/study-validation.json'
+                path.write_text(path.read_text()+' ')
+                return dict(id='harness',status='pass')
+            (root/'cp1').mkdir();(root/'cp1/smoke.log').write_text('fixture smoke')
+            checks=[dict(id='control',status='pass',artifacts=[]),dict(id='timing',status='blocked',artifacts=[])]
+            with patch.object(cp1,'BUILD',root),patch.object(cp1,'TARGET',target),patch.object(cp1,'sources',return_value={'test':'fixed'}),patch.object(cp1,'validated_evidence',return_value={'passed':True}),patch.object(cp1,'checks_from_evidence',return_value=checks):
+                status=cp1.run(SimpleNamespace(browser=False,allow_design_failures=True),harness)
+            report=json.loads((root/'report.json').read_text())
+            self.assertEqual(status,2)
+            self.assertEqual(next(c for c in report['checks'] if c['id']=='evidence-change')['status'],'error')
+            self.assertEqual({c['id'] for c in report['checks'] if c['status']=='error'}, {'evidence-change'})
             self.assertEqual(next(c for c in report['checks'] if c['id']=='control')['requirement_status'],'blocked')
 
 

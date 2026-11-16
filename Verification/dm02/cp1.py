@@ -8,6 +8,7 @@ import traceback
 from pathlib import Path
 from .common import ROOT, VROOT, BUILD, digest, write_json, command, evidence
 from .reporting import sources, now, trace, milestones
+from . import operating_contract
 
 TARGET = VROOT/'targets/cp1'
 
@@ -162,8 +163,31 @@ def run(args, harness_check):
         report['equivalence'] = validated_evidence(lock, output)
         report['checks'] = checks_from_evidence(lock)
         report['artifact_hashes'] = dict(lock['artifacts'])
+        contract = operating_contract.load()
+        if contract['design_revision'] != report['revision']:
+            raise ValueError('Operating contract does not match the replayed revision')
+        requirements = operating_contract.effective_requirements(requirements, contract)
+        report['requirements'] = requirements
+        report['operating_contract'] = contract
+        qualification = operating_contract.matrix(contract)
+        write_json(output/'operating-contract.json', contract)
+        write_json(output/'qualification-matrix.json', qualification)
+        report['checks'].append(evidence('operating-contract','Selected first-build operating contract','pass',
+            f'{contract["revision"]}: {contract["clock"]["oscillator_nominal_hz"]/1e6:g} MHz oscillator / '
+            f'{contract["clock"]["microcycle_nominal_hz"]/1e3:g} kHz microcycles; 4.75–5.25 V at IC pins, 0–50 °C ambient.',
+            artifacts=['cp1/operating-contract.json','cp1/qualification-matrix.json'],
+            limitation='This check validates the selected engineering contract and its provenance. Physical qualification and release gates remain open.'))
+        next(c for c in report['checks'] if c['id']=='timing')['summary'] = (
+            f'{contract["revision"]} selects {contract["clock"]["microcycle_nominal_hz"]/1e3:g} kHz microcycles. '
+            'Actual loads/edges, minimum-delay timing, HCT245 release, SRAM turnaround and the MAR transfer window remain unqualified. '
+            'The historical 1 MHz requirement remains preserved; it is now a preferred rate, not a release minimum.')
+        # Decision evidence participates in the normal post-test hash recheck.
+        for name, expected in contract['evidence'].items():
+            if name.startswith('Verification/build/'):
+                report['artifact_hashes'][name.removeprefix('Verification/build/')] = expected
         report['provenance'] = dict(release=lock['release'], reference_report=lock['reference_report'],
-                                   acceptance=directory+'/acceptance.json')
+                                   acceptance=directory+'/acceptance.json', operating_contract=contract['revision'],
+                                   historical_requirements='Verification/requirements.json')
         boundaries = json.loads((archive/'physical-review.json').read_text())['open_items']
         report['risks'] = [dict(id=f'CP1-{i+1:02}',title=text,severity='open',
                                action='Requires physical or manufacturer qualification.',evidence='timing') for i,text in enumerate(boundaries)]
@@ -184,7 +208,7 @@ def run(args, harness_check):
     # Recheck after tests: changes during replay must never acquire a fresh hash.
     if report.get('artifact_hashes'):
         try:
-            verify_hashes(BUILD,lock['artifacts'])
+            verify_hashes(BUILD,report['artifact_hashes'])
         except Exception as err:
             report['checks'].append(evidence('evidence-change','Evidence changed during verification','error',str(err)))
     artifacts = {p for c in report['checks'] for p in c.get('artifacts',[])}

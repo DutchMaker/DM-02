@@ -183,10 +183,12 @@ and PCB/bench qualification remain open.
 
 ### Restoration dependencies
 
-For default locked-evidence replay, restore this release and
-`analog-retry-timeout-2026-11-15` into the repository root. The latter supplies
-the pinned reference evidence. The active overlay and runner are tracked in
-Git; run `python3 Verification/run.py --allow-design-failures` after restoration.
+For default locked-evidence replay, restore this release,
+`analog-retry-timeout-2026-11-15` and `cp1-readiness-2026-11-16` into the repository
+root. The reference release supplies the pinned method evidence; the readiness
+release supplies the hashed clock-selection evidence required by CP1-OC1.
+The active overlay, operating contract and runner are tracked in Git; run
+`python3 Verification/run.py --allow-design-failures` after restoration.
 
 For full study reproduction, also restore `compact-design-2026-11-16` for the
 comparative pin/net audit and original workbook. The R2 `run.py --prepare`

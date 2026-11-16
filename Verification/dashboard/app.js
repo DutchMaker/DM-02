@@ -15,6 +15,17 @@ function renderChecks() {
 }
 function render() {
   $('run').textContent=`${(report.revision||report.target||'reference').toUpperCase()} · ${report.mode||'full execution'} · ${report.state.toUpperCase()} · ${new Date(report.finished_at||report.started_at).toLocaleString()} · ${Object.keys(report.source_hashes).length} source files fingerprinted`;
+  let contractPanel=$('operating-contract');
+  if(!contractPanel) {
+    contractPanel=document.createElement('section');contractPanel.id='operating-contract';contractPanel.className='panel';
+    $('milestones').before(contractPanel);
+  }
+  const contract=report.operating_contract;
+  contractPanel.hidden=!contract;
+  if(contract) {
+    const clock=contract.clock;
+    contractPanel.innerHTML=`<div class="eyebrow">${esc(contract.revision)} / SELECTED OPERATING CONTRACT</div><h2>${esc(clock.microcycle_nominal_hz/1000)} kHz microcycles · ${esc(clock.oscillator_nominal_hz/1000000)} MHz oscillator</h2><p>${esc(contract.supply.min_v)}–${esc(contract.supply.max_v)} V at IC pins · ${esc(contract.ambient.min_c)}–${esc(contract.ambient.max_c)} °C ambient. The preferred ${esc(clock.preferred_microcycle_hz/1000000)} MHz microcycle rate is optional.</p><p><strong>Physical qualification pending.</strong> Startup, reset, loaded edges and complete min/max timing still require acceptance. The historical requirements and R2 simulation inputs remain preserved.</p><div class="links"><a href="/Operating-contract.md">Operating contract and acceptance rules ↗</a><a href="/build/cp1/qualification-matrix.json">Specified qualification matrix ↗</a><a href="/build/cp1-readiness/">Clock-selection evidence ↗</a></div>`;
+  }
   $('milestones').innerHTML=(report.milestones||[]).map(m=>`<article class="milestone">${badge(m.status)}<span class="number">0${m.number}</span><h3>${esc(m.title)}</h3><p>${esc(m.summary)}</p><details><summary>Acceptance gates</summary><ul>${(m.gates||[]).map(g=>`<li>${badge(g.status)} <a href="#check-${esc(g.gate)}">${esc(g.id)}</a>: ${esc(g.text)}</li>`).join('')}</ul></details></article>`).join('');
   const counts={}; report.checks.forEach(c=>counts[c.status]=(counts[c.status]||0)+1);
   $('counts').innerHTML=Object.entries(counts).map(([s,n])=>`<span>${n} ${badge(s)}</span>`).join('');

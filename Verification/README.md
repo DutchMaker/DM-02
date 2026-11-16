@@ -259,3 +259,13 @@ To reproduce the graphics-demo binaries, run `dotnet build Code/Assembler/src/As
 Fault rows are checker qualifications: a pass means the expected fault was caught. The release gate stays blocked until complete schematics, exact parts, module/system correctness, physical timing, layout review and bench qualification are available. No overall pass percentage is used to infer release readiness.
 
 Generated files are ignored by Git. Preserve `build/` or download its report and evidence when archiving a run. The supplied dashboard is dependency-free; `dashboard-smoke.cjs` is an optional browser check requiring Playwright and Chrome.
+# Active operating contract
+
+CP1-OC1 selects 500 kHz microcycles from a 4 MHz oscillator, with 4.75–5.25 V at
+IC pins and 0–50 °C ambient. See [Operating-contract.md](Operating-contract.md)
+for startup, stop/reset rules and qualification criteria. The active CP1 report
+uses this versioned envelope; `requirements.json` remains the frozen historical
+reference/pilot input. Restore the readiness release in addition to the R2 and
+reference evidence as described in `Backup/README.md`. The generated
+`build/cp1/qualification-matrix.json` specifies future coverage, not completed
+measurements.
