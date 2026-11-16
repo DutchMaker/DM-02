@@ -1,0 +1,35 @@
+{
+  "release": "https://github.com/DutchMaker/DM-02/releases/tag/cp1-link-loads-2026-11-16",
+  "git_commit": "be6aa9590e4f1d7a270eb6d51296d08e3b337f2a",
+  "download_verified": true,
+  "files_verified": 140,
+  "manifest_sha256": "5a7528bc6c6a9fb2aba721ffa1d40a135fdad92a98e5497c950b4b20d07b829d",
+  "archives": {
+    "studies-and-workbook.tar.gz": {
+      "bytes": 35953470,
+      "sha256": "ebb3a56d6902a5d57334b9ea7842c4e8dceb8f8ba0acda2eaf5297e832504c2a",
+      "files": 140
+    }
+  },
+  "design_revision": "CP1-R2",
+  "study_revision": "CP1-LL1",
+  "harness_tests_passed": 231,
+  "milestones_passed": [3, 3, 8],
+  "candidate_components": 606,
+  "physical_pins": 7324,
+  "fitted_contact_pins": 2018,
+  "mating_pairs": 864,
+  "mated_groups_including_contacts": 1908,
+  "driver_scenarios": 1708,
+  "hct245_directions_checked": 19,
+  "pull_resistors": 39,
+  "series_resistors": 1,
+  "manufacturer_part_reviews": 31,
+  "mutations_detected": 5,
+  "ic_only_allocations_over_selected_fixtures": 16,
+  "allocations_plus_legacy_5pf_over_selected_fixtures": 18,
+  "physical_qualification": false,
+  "all_complete_physical_load_totals_unknown": true,
+  "remote_publication_hashes_verified": 134,
+  "browser_viewports_passed": ["desktop", "mobile"]
+}

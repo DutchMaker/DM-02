@@ -2,6 +2,12 @@
 
 ## CP1-LL1 whole-link load inventory
 
+The [cp1-link-loads-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-link-loads-2026-11-16)
+archives source checkpoint `be6aa95`. All **140 files** matched locally and
+after download; see the [receipt](cp1-link-loads-2026-11-16.json).
+The bounded replay passed **231 tests**. **134 remote hashes** and
+desktop/mobile browser checks passed, including the searchable driver matrix.
+
 `Verification/build/cp1-link-loads/` is an additional bounded-replay dependency.
 Restore CA1 and its earlier dependencies below before replaying LL1. The study
 contains the complete 7,324-pin inventory, 864 mating pairs, 1,708 per-driver
