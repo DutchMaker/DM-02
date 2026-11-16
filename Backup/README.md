@@ -2,6 +2,11 @@
 
 ## CP1-OS1 oscillator interfaces
 
+The [cp1-oscillator-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-oscillator-2026-11-16)
+archives source checkpoint `d99d0a8`. All **41 files** matched after download;
+see the [receipt](cp1-oscillator-2026-11-16.json). The bounded replay passed
+**255 tests**; **36 remote hashes** and desktop/mobile browser checks passed.
+
 `Verification/build/cp1-oscillator/` holds the two-clock native audit,
 81 synthetic waveform analyses, faults and an unmeasured qualification plan.
 It includes the full AHCT04 data sheet and visually reviewed timing page.
