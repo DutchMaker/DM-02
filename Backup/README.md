@@ -2,6 +2,12 @@
 
 ## CP1-RR1 DATA/SRAM release requirements
 
+The [cp1-release-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-release-2026-11-16)
+archives source checkpoint `5c716ca`. All **481 files** matched locally and
+after download; see the [receipt](cp1-release-2026-11-16.json). The bounded
+replay passed **247 tests**; **476 remote hashes** and desktop/mobile browser
+checks passed. The first monitor-placement compilation failure is preserved.
+
 `Verification/build/cp1-release/` holds native MD1 control-path analysis,
 fifteen targeted experiments, raw control-event logs and a 48-driver physical
 measurement specification. Restore MD1 and the dependencies below first.
