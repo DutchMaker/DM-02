@@ -10,6 +10,7 @@ from .common import ROOT, VROOT, BUILD, digest, write_json, command, evidence
 from .reporting import sources, now, trace, milestones
 from . import operating_contract, io_contract, connector_plan, io_bridge_evidence, io_cpu_evidence, text_evidence, text_boot_evidence, native_assembly_evidence, connector_assembly_evidence, link_loads_evidence, mar_distribution_evidence, release_evidence, oscillator_evidence
 from . import hct_evidence
+from . import hct_register_evidence
 
 TARGET = VROOT/'targets/cp1'
 
@@ -343,6 +344,15 @@ def run(args, harness_check):
             'Four exhaustive address profiles, full memory exercise and four ROM/text boots pass; native, mapping and boot wiring faults detected.',
             artifacts=['cp1-hct-preference/review.json','cp1-hct-buffers/iteration-1/summary.json','cp1-hct-buffers/iteration-1/loads.json'],
             limitation='42 ns table-fixture model and zero/mixed-delay sensitivity only. Actual load, slew, minimum hold and full OC1 qualification remain open. R2 remains accepted.'))
+        hr_lock,hr = hct_register_evidence.load(BUILD)
+        report['artifact_hashes'].update(hr_lock['artifacts'])
+        report['hct_registers'] = dict(revision='CP1-HR1',replaced_hc_packages=6,candidate_hct_packages=134,
+            boot_profiles=4,sampled_minimum_reserve_ns=hr['sampled_minimum_reserve_ns'],physical_qualification=False,promoted_into_R2=False)
+        report['checks'].append(evidence('hct-registers','Six resetless HCT377 replacements','limited',
+            'Separate 272-DIP candidate: ALU/register diagnostics, three full instruction profiles and four ROM/text boots. '
+            'Reset-transition timing violations poison storage; clean synchronous initialisation is required before register reset release.',
+            artifacts=[hct_register_evidence.PREFIX+'summary.json',hct_register_evidence.PREFIX+'path-review.json'],
+            limitation='48 ns conditional clock-Q and zero/mixed sensitivity; 42 ns HB1 buffers retained. Physical load, slew, metastability recovery and full OC1 timing remain unqualified.'))
         boundaries = json.loads((archive/'physical-review.json').read_text())['open_items']
         report['risks'] = [dict(id=f'CP1-{i+1:02}',title=text,severity='open',
                                 action='Requires physical or manufacturer qualification.',evidence='timing') for i,text in enumerate(boundaries)]

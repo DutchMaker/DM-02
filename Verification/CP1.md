@@ -18,6 +18,8 @@ The active source overlay is in `targets/cp1/overlay/`. `targets/cp1/lock.json` 
 
 ## What a run checks
 
+[CP1-HR1](HCT-registers.md) replaces six HC377s with CD74HCT377E in a separate 272-DIP candidate with 134 HCT packages. Three register, two ALU, three full instruction and four ROM/text profiles pass; startup, timing and native faults are detected. Reset-transition violations poison storage and require later clean synchronous initialisation. `hct-register-evidence.json` pins the study. Physical recovery, loaded slew and full-envelope timing remain open.
+
 [CP1-HP1/HB1](HCT-preference.md) reviews all 142 non-HCT MD1 logic packages and tests a separate two-buffer SN74HCT244N candidate. Four exhaustive address profiles, full memory exercise and four ROM/text boots pass, with native/dynamic wiring faults detected. `hct-evidence.json` pins the source conditions, per-reference paths and candidate evidence. HB1 has 128 HCT packages; physical load/slew/hold and full-envelope timing remain unqualified.
 
 [CP1-OS1](Oscillator-interface.md) traces both independent oscillator front ends: one AHCT04 receiver for CPU (≤3 ns timing input fixture), one HCT244 receiver for text (6 ns). Explicit raw planning loads are 14 pF against the selected 15 pF oscillator rating. `oscillator-evidence.json` pins six conditioned links, 81 synthetic waveform analyses, faults and an unmeasured qualification plan. Actual edges, jitter, threshold duty and full-envelope loads remain open; no hardware changed.
