@@ -1,5 +1,26 @@
 # Git and evidence checkpoints
 
+## CP1-HR1 HCT377 ALU/register candidate
+
+The [cp1-hct-registers-2026-11-17 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-hct-registers-2026-11-17)
+archives source checkpoint `4a50a5d`. All **855 files** matched after download;
+see the [receipt](cp1-hct-registers-2026-11-17.json). The final bounded replay
+passed **267 tests**, with **794 remote hashes** and desktop/mobile checks.
+
+Restore `Verification/build/cp1-hct-registers/` from this release alongside
+HP1/HB1, TB1, R2 and the supporting releases below. Verify the downloaded
+archive with `python3 Backup/verify_checkpoint.py <download-directory>` before
+extracting it from the repository root. `Verification/hct-register-evidence.json`
+pins 27 sources and 879 artifacts, including original replay dependencies.
+
+HR1 changes six HC377s to CD74HCT377E in a separate 272-DIP candidate with
+134 HCT packages. Three register, two ALU, three complete instruction and four
+ROM/text profiles pass. Reset-transition violations poison storage; later clean
+synchronous initialisation must precede register reset release. The smallest
+sampled enable-hold reserve is 1.5 ns before uncertainty, below OC1's separate
+2 ns routing/jitter allocation. Physical timing and recovery remain open.
+Development and isolated-restore failures are preserved. R2 remains accepted.
+
 ## CP1-HP1/HB1 HCT review and memory buffers
 
 The [cp1-hct-2026-11-16 release](https://github.com/DutchMaker/DM-02/releases/tag/cp1-hct-2026-11-16)

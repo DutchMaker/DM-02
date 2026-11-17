@@ -1,0 +1,36 @@
+{
+  "release": "https://github.com/DutchMaker/DM-02/releases/tag/cp1-hct-registers-2026-11-17",
+  "git_commit": "4a50a5d384fcd922f048a676e03551d32beec6c4",
+  "download_verified": true,
+  "files_verified": 855,
+  "manifest_sha256": "127cd174a79734c3e20db487dabf1f911c086861267898f177efcf35a63436d5",
+  "archives": {
+    "studies-and-workbook.tar.gz": {
+      "bytes": 26456511,
+      "sha256": "da3f5aced216134e1fe7fcc0c229f8dadfa0a64310a22f5fecc5abdb9564f343",
+      "files": 855
+    }
+  },
+  "accepted_revision": "CP1-R2",
+  "candidate_revision": "CP1-HR1",
+  "harness_tests_passed": 267,
+  "milestones_passed": [3, 3, 8],
+  "replaced_hc377_packages": 6,
+  "candidate_hct_packages": 134,
+  "candidate_dip_packages": 272,
+  "register_profiles": 3,
+  "alu_profiles": 2,
+  "full_instruction_profiles": 3,
+  "instruction_cases_per_profile": 454,
+  "rom_text_boot_profiles": 4,
+  "native_faults_detected": 3,
+  "cell_model_faults_detected": 9,
+  "register_faults_detected": 2,
+  "physical_qualification": false,
+  "promoted_into_R2": false,
+  "remote_publication_hashes_verified": 794,
+  "browser_viewports_passed": ["desktop", "mobile"],
+  "development_and_restore_failures_preserved": true,
+  "minimum_sampled_enable_hold_reserve_ns": 1.5,
+  "hold_scope": "Before unmodelled uncertainty; below OC1's separate 2 ns routing/jitter allocation. Reset-time violations poison storage and require later clean synchronous recovery; physical recovery remains unqualified."
+}
